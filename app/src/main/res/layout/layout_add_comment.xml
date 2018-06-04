@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView109"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="13dp"
+        android:textColor="#3c3c3c"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtname"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:textColor="#3c3c3c"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:text="Account No."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView110"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="13dp"
+        android:textColor="#3c3c3c"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtaccountno"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:textColor="#3c3c3c"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/editText5"
+        android:hint="Enter Note *"
+        android:layout_margin="10dp"
+        android:background="@android:drawable/edit_text"
+        android:padding="13dp"
+        android:textSize="14sp"
+        android:focusableInTouchMode="true"
+        />
+
+   <!-- <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText5"
+        android:hint="Add comment *"
+        android:layout_margin="10dp"
+        android:backgroundTint="@android:color/darker_gray"/>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ADD NOTE"
+        android:textSize="16sp"
+        android:id="@+id/textView15"
+        android:textColor="@color/ToolbarColor"
+        android:gravity="end"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

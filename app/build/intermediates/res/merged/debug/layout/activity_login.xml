@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        tools:context="com.mtaj.mtaj_08.cableplus_new.LoginActivity"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bluebackground"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:fitsSystemWindows="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/cableplus_128"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/border"
+            android:layout_marginTop="50dp"
+            android:alpha="0.6"
+            android:id="@+id/lllogin">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/editText"
+                android:hint="@string/hintusername"
+                android:textColorHint="@android:color/white"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_perm_identity_white_24dp"
+                android:drawablePadding="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/white"
+                android:layout_weight="1" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"></View>
+
+                <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                    android:id="@+id/passwordInTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/hintpassword"
+                    tools:ignore="HardcodedText"
+                    android:textColorHint="@android:color/white"
+                    app:drawable_hide="@drawable/hidepass"
+                    app:drawable_show="@drawable/showpass"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/password"
+                    android:drawablePadding="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:drawableRight="@drawable/showpass"
+                    android:layout_marginRight="20dp"
+                  android:layout_marginBottom="5dp"
+                    android:textColor="@android:color/white"
+                    android:inputType="textPassword"
+                    android:layout_weight="1"
+                    android:drawableTint="@android:color/white"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"></View>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/editText2"
+                android:hint="@string/hintopcode"
+                android:textColorHint="@android:color/white"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/opcode"
+                android:drawablePadding="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@android:color/white"
+                android:layout_weight="1"
+                android:drawableTint="@android:color/white"/>
+
+
+        </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:id="@+id/button"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="25dp"
+        android:background="@drawable/roundedcorners"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/lllogin"/>
+
+    </LinearLayout>
+    </RelativeLayout>
+
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/editText20"
+        android:layout_margin="13dp"
+        android:background="@drawable/border"
+        android:hint="Device No *"
+        android:paddingLeft="15dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/editText21"
+        android:hint="Smart Card No"
+        android:layout_margin="13dp"
+        android:background="@drawable/border"
+        android:paddingLeft="15dp"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner3"
+        android:layout_margin="13dp"/>
+
+    <CheckBox
+        android:text="Generate Bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_margin="13dp"
+        android:textSize="16sp"
+        android:layout_gravity="start"
+        android:paddingRight="10dp"
+        />
+
+
+</LinearLayout>

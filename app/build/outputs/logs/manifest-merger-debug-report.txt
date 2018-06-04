@@ -1,0 +1,844 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:2:1-365:12
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:2:1-365:12
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:2:1-365:12
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:2:1-365:12
+MERGED from [com.github.scottyab:showhidepasswordedittext:0.8] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\showhidepasswordedittext-0.8.aar\fa3a660bdde7576a3a3160b5209d0f62\AndroidManifest.xml:2:1-14:12
+MERGED from [cn.carbs.android:MDDialog:1.0.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\MDDialog-1.0.0.aar\10c1482a946d0387984aaccb0f504eb8\AndroidManifest.xml:2:1-17:12
+MERGED from [rebus:bottom-dialog:0.0.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-dialog-0.0.5.aar\212761a9d6da224a5d05366a11820f50\AndroidManifest.xml:25:1-36:12
+MERGED from [ua.com.crosp.solutions.library:presenter-layout:0.1.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\presenter-layout-0.1.1.aar\713536a341c46fc0366ddb04552bd002\AndroidManifest.xml:2:1-17:12
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-1.3.0.aar\2526b47023c62101bc8075707922c0f8\AndroidManifest.xml:2:1-15:12
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\f1da763a94c069b372eaeb4d373c75b5\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:design:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\design-24.2.1.aar\9ecd61a1ebf96aab7725bfd1d327211b\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\ca244433f23b6fe92d504e53419606c0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.baoyz.swipemenulistview:library:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\library-1.3.0.aar\8ccc4f3cabfff3be34105b5298265504\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.chrisbanes:PhotoView:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\PhotoView-1.3.0.aar\308d5f41a71ae3d387a5e076338cfb26\AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-gcm-10.2.0.aar\be246bb519e177a6d246728b36204f30\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:16:1-26:12
+MERGED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.0.aar\216eee67afa2fbdd8cd4943aae8cb015\AndroidManifest.xml:16:1-30:12
+MERGED from [com.google.firebase:firebase-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-auth-10.2.0.aar\8a122893207420533f27484029e55610\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.android.gms:play-services-location:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-location-10.2.0.aar\40fb9a1aa9052d3162299c65b9db088e\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-iid-10.2.0.aar\fc919d5e8b2fd8bffbdef38c1701f664\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-10.2.0.aar\83ffb89fd3bcad587570e159c9cdd88b\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.0.aar\6b2ae9d8469abb27224d1d536b1857a2\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-core:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-core-10.2.0.aar\4e41cca313bff8a753681d366ba2d4cc\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:16:1-34:12
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:16:1-29:12
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:16:1-51:12
+MERGED from [com.google.firebase:firebase-common:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.0.aar\22e5c103958fd7cd00f849c7d78c0743\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.0.aar\dac698e147246ae88cb354e21599b0fb\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.0.aar\e803a8ff62c38c57a86087e7adac2e10\AndroidManifest.xml:16:1-23:12
+MERGED from [com.joanzapata.iconify:android-iconify-fontawesome:2.2.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-iconify-fontawesome-2.2.2.aar\173353cf02bf5914748473dd87cfa638\AndroidManifest.xml:2:1-8:12
+MERGED from [com.joanzapata.iconify:android-iconify:2.2.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-iconify-2.2.2.aar\d71b478bd61d1a4dd8dfdbd4aea5e5c7\AndroidManifest.xml:2:1-8:12
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\78166a1ca72059967f568b999d5f0ea2\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:cardview-v7:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\cardview-v7-24.2.1.aar\130a06ddfef59f58d4ebebeee3624ad7\AndroidManifest.xml:17:1-24:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\1ada28531fd7a178546f1d7e73e35626\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.gcacace:signature-pad:1.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\signature-pad-1.2.0.aar\a57491c885c3347a23e1f32870a79c1d\AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.d-max:spots-dialog:0.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\spots-dialog-0.4.aar\036d2ca71890a3b02dabb30706c84e52\AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\a3e2d4a30bbfc7e47440db5429d38213\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.4.4.aar\73decd121b2a2a00bddc120ebc573c25\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7531d579d142351a6e6a11a3536a7487\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\f0250b967432b44463f144a60132891d\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\5d255b4e20425ae1c279397a6329ca86\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-24.2.1.aar\39887e9284a8e4e2047de35280d222fa\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\e220220517646c8370a5b2c594d36881\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\a870f97b9d0842b5572d02c5173f6d1b\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\9e7911a4ad4fd85cb5a0568d8e143953\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\3d23cd5ee40f2b390789266b46798a26\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\77298c54a653b0f46ecdb7fdf0450ade\AndroidManifest.xml:17:1-31:12
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:2:1-365:12
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:2:1-365:12
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:2:1-365:12
+	package
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:3:5-45
+		INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:2:1-365:12
+		INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:2:1-365:12
+		INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-gcm-10.2.0.aar\be246bb519e177a6d246728b36204f30\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-gcm-10.2.0.aar\be246bb519e177a6d246728b36204f30\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-iid-10.2.0.aar\fc919d5e8b2fd8bffbdef38c1701f664\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-iid-10.2.0.aar\fc919d5e8b2fd8bffbdef38c1701f664\AndroidManifest.xml:21:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.CALL_PHONE
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:6:5-69
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:6:22-66
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:8:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:9:5-79
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:9:22-76
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:10:5-73
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:10:22-70
+uses-permission#android.permission.WRITE_SECURE_SETTINGS
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:11:22-77
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:12:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:13:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:14:5-68
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:14:22-65
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:15:5-82
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-gcm-10.2.0.aar\be246bb519e177a6d246728b36204f30\AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-gcm-10.2.0.aar\be246bb519e177a6d246728b36204f30\AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-iid-10.2.0.aar\fc919d5e8b2fd8bffbdef38c1701f664\AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-iid-10.2.0.aar\fc919d5e8b2fd8bffbdef38c1701f664\AndroidManifest.xml:20:5-81
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:22:5-81
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:15:22-79
+uses-feature#android.hardware.camera
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:17:5-60
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:17:19-57
+permission#com.mtaj.mtaj_08.cableplus_new.permission.C2D_MESSAGE
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:19:5-21:47
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:21:9-44
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:20:9-77
+uses-permission#com.mtaj.mtaj_08.cableplus.permission.C2D_MESSAGE
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:23:5-89
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:23:22-86
+application
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:25:5-363:19
+MERGED from [com.github.scottyab:showhidepasswordedittext:0.8] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\showhidepasswordedittext-0.8.aar\fa3a660bdde7576a3a3160b5209d0f62\AndroidManifest.xml:11:5-12:19
+MERGED from [com.github.scottyab:showhidepasswordedittext:0.8] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\showhidepasswordedittext-0.8.aar\fa3a660bdde7576a3a3160b5209d0f62\AndroidManifest.xml:11:5-12:19
+MERGED from [cn.carbs.android:MDDialog:1.0.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\MDDialog-1.0.0.aar\10c1482a946d0387984aaccb0f504eb8\AndroidManifest.xml:11:5-15:19
+MERGED from [cn.carbs.android:MDDialog:1.0.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\MDDialog-1.0.0.aar\10c1482a946d0387984aaccb0f504eb8\AndroidManifest.xml:11:5-15:19
+MERGED from [rebus:bottom-dialog:0.0.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-dialog-0.0.5.aar\212761a9d6da224a5d05366a11820f50\AndroidManifest.xml:34:5-53
+MERGED from [rebus:bottom-dialog:0.0.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-dialog-0.0.5.aar\212761a9d6da224a5d05366a11820f50\AndroidManifest.xml:34:5-53
+MERGED from [ua.com.crosp.solutions.library:presenter-layout:0.1.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\presenter-layout-0.1.1.aar\713536a341c46fc0366ddb04552bd002\AndroidManifest.xml:11:5-15:19
+MERGED from [ua.com.crosp.solutions.library:presenter-layout:0.1.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\presenter-layout-0.1.1.aar\713536a341c46fc0366ddb04552bd002\AndroidManifest.xml:11:5-15:19
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-1.3.0.aar\2526b47023c62101bc8075707922c0f8\AndroidManifest.xml:11:5-13:38
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-1.3.0.aar\2526b47023c62101bc8075707922c0f8\AndroidManifest.xml:11:5-13:38
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\f1da763a94c069b372eaeb4d373c75b5\AndroidManifest.xml:11:5-20
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\f1da763a94c069b372eaeb4d373c75b5\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:design:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\design-24.2.1.aar\9ecd61a1ebf96aab7725bfd1d327211b\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\design-24.2.1.aar\9ecd61a1ebf96aab7725bfd1d327211b\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\ca244433f23b6fe92d504e53419606c0\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\ca244433f23b6fe92d504e53419606c0\AndroidManifest.xml:29:5-20
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-gcm-10.2.0.aar\be246bb519e177a6d246728b36204f30\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-gcm-10.2.0.aar\be246bb519e177a6d246728b36204f30\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.0.aar\216eee67afa2fbdd8cd4943aae8cb015\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.0.aar\216eee67afa2fbdd8cd4943aae8cb015\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-auth-10.2.0.aar\8a122893207420533f27484029e55610\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.firebase:firebase-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-auth-10.2.0.aar\8a122893207420533f27484029e55610\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.android.gms:play-services-location:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-location-10.2.0.aar\40fb9a1aa9052d3162299c65b9db088e\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-location-10.2.0.aar\40fb9a1aa9052d3162299c65b9db088e\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-iid-10.2.0.aar\fc919d5e8b2fd8bffbdef38c1701f664\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-iid-10.2.0.aar\fc919d5e8b2fd8bffbdef38c1701f664\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.0.aar\6b2ae9d8469abb27224d1d536b1857a2\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.0.aar\6b2ae9d8469abb27224d1d536b1857a2\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-core:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-core-10.2.0.aar\4e41cca313bff8a753681d366ba2d4cc\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-core-10.2.0.aar\4e41cca313bff8a753681d366ba2d4cc\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-common:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.0.aar\22e5c103958fd7cd00f849c7d78c0743\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.0.aar\22e5c103958fd7cd00f849c7d78c0743\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.0.aar\dac698e147246ae88cb354e21599b0fb\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.0.aar\dac698e147246ae88cb354e21599b0fb\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.0.aar\e803a8ff62c38c57a86087e7adac2e10\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.0.aar\e803a8ff62c38c57a86087e7adac2e10\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\78166a1ca72059967f568b999d5f0ea2\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\78166a1ca72059967f568b999d5f0ea2\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:cardview-v7:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\cardview-v7-24.2.1.aar\130a06ddfef59f58d4ebebeee3624ad7\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\cardview-v7-24.2.1.aar\130a06ddfef59f58d4ebebeee3624ad7\AndroidManifest.xml:22:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\1ada28531fd7a178546f1d7e73e35626\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\1ada28531fd7a178546f1d7e73e35626\AndroidManifest.xml:9:5-20
+MERGED from [com.github.gcacace:signature-pad:1.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\signature-pad-1.2.0.aar\a57491c885c3347a23e1f32870a79c1d\AndroidManifest.xml:11:5-20
+MERGED from [com.github.gcacace:signature-pad:1.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\signature-pad-1.2.0.aar\a57491c885c3347a23e1f32870a79c1d\AndroidManifest.xml:11:5-20
+MERGED from [com.github.d-max:spots-dialog:0.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\spots-dialog-0.4.aar\036d2ca71890a3b02dabb30706c84e52\AndroidManifest.xml:12:5-20
+MERGED from [com.github.d-max:spots-dialog:0.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\spots-dialog-0.4.aar\036d2ca71890a3b02dabb30706c84e52\AndroidManifest.xml:12:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.4.4.aar\73decd121b2a2a00bddc120ebc573c25\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.4.4.aar\73decd121b2a2a00bddc120ebc573c25\AndroidManifest.xml:7:5-11:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7531d579d142351a6e6a11a3536a7487\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7531d579d142351a6e6a11a3536a7487\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\f0250b967432b44463f144a60132891d\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\f0250b967432b44463f144a60132891d\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\5d255b4e20425ae1c279397a6329ca86\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\5d255b4e20425ae1c279397a6329ca86\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\e220220517646c8370a5b2c594d36881\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\e220220517646c8370a5b2c594d36881\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\a870f97b9d0842b5572d02c5173f6d1b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\a870f97b9d0842b5572d02c5173f6d1b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\9e7911a4ad4fd85cb5a0568d8e143953\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\9e7911a4ad4fd85cb5a0568d8e143953\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\3d23cd5ee40f2b390789266b46798a26\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\3d23cd5ee40f2b390789266b46798a26\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\77298c54a653b0f46ecdb7fdf0450ade\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\77298c54a653b0f46ecdb7fdf0450ade\AndroidManifest.xml:29:5-20
+	android:supportsRtl
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:32:9-35
+	android:label
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:30:9-41
+	android:hardwareAccelerated
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:28:9-44
+	android:largeHeap
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:31:9-33
+	android:icon
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:29:9-45
+	android:allowBackup
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:27:9-35
+	android:theme
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:33:9-40
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:26:9-38
+meta-data#com.google.android.gms.version
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:34:9-36:69
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.0.aar\e803a8ff62c38c57a86087e7adac2e10\AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.0.aar\e803a8ff62c38c57a86087e7adac2e10\AndroidManifest.xml:20:9-121
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.4.4.aar\73decd121b2a2a00bddc120ebc573c25\AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.4.4.aar\73decd121b2a2a00bddc120ebc573c25\AndroidManifest.xml:8:9-10:69
+	android:value
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:36:13-66
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:35:13-58
+activity#com.mtaj.mtaj_08.cableplus_new.LoginActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:38:9-43:55
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:41:13-49
+	android:hardwareAccelerated
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:40:13-47
+	android:windowSoftInputMode
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:43:13-52
+	android:theme
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:42:13-44
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:39:13-42
+activity#com.mtaj.mtaj_08.cableplus_new.DashBoard
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:45:9-49:55
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:48:13-49
+	android:label
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:47:13-62
+	android:windowSoftInputMode
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:49:13-52
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:46:13-38
+activity#com.mtaj.mtaj_08.cableplus_new.CustomerListActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:50:9-58:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:53:13-49
+	android:parentActivityName
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:52:13-52
+	android:windowSoftInputMode
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:54:13-70
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:51:13-49
+meta-data#android.app.searchable
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:55:13-57:54
+	android:resource
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:57:17-51
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:56:17-54
+activity#com.mtaj.mtaj_08.cableplus_new.CustomerDetails
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:59:9-66:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:61:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:62:13-70
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:60:13-44
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:63:13-65:87
+	android:value
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:65:17-84
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:64:17-63
+activity#com.mtaj.mtaj_08.cableplus_new.TransactionStatusActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:67:9-70:59
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:69:13-49
+	android:theme
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:70:13-56
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:68:13-54
+activity#com.mtaj.mtaj_08.cableplus_new.CustomerSignatureActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:71:9-77:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:73:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:72:13-54
+activity#com.mtaj.mtaj_08.cableplus_new.Collection_Area_Activity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:78:9-84:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:80:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:79:13-53
+activity#com.mtaj.mtaj_08.cableplus_new.activity_collection_customerdetail
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:85:9-95:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:87:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:88:13-70
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:86:13-63
+activity#com.mtaj.mtaj_08.cableplus_new.ComplainDetails
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:96:9-102:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:98:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:97:13-44
+activity#com.mtaj.mtaj_08.cableplus_new.SearchWithCustomerListInComplains
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:103:9-112:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:105:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:104:13-62
+activity#com.mtaj.mtaj_08.cableplus_new.ComplainListviaCustomerActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:113:9-119:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:115:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:114:13-60
+activity#com.mtaj.mtaj_08.cableplus_new.AreaListInCustomers
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:120:9-126:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:122:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:121:13-48
+activity#com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:127:9-134:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:129:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:130:13-52
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:128:13-58
+activity#com.mtaj.mtaj_08.cableplus_new.Sms_log
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:135:9-141:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:137:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:136:13-36
+activity#com.mtaj.mtaj_08.cableplus_new.Bill_details
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:142:9-148:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:144:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:143:13-41
+activity#com.mtaj.mtaj_08.cableplus_new.PackageDetails
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:149:9-155:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:151:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:150:13-43
+activity#com.mtaj.mtaj_08.cableplus_new.Contact_details
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:156:9-162:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:158:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:157:13-44
+activity#com.mtaj.mtaj_08.cableplus_new.Payment_details
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:163:9-169:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:165:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:164:13-44
+receiver#com.mtaj.mtaj_08.cableplus_new.ConnectivityReceiver
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:171:9-177:20
+	android:enabled
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:173:13-35
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:172:13-49
+intent-filter#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:174:13-176:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:175:17-79
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:175:25-76
+receiver#com.mtaj.mtaj_08.cableplus_new.ScreenReceiver
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:178:9-180:38
+	android:enabled
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:180:13-35
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:179:13-43
+service#com.mtaj.mtaj_08.cableplus_new.TestLocationService
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:188:9-190:55
+	android:process
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:190:13-52
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:189:13-48
+protected-broadcast
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:203:9-83
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:203:30-80
+activity#com.mtaj.mtaj_08.cableplus_new.NoConnectionActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:205:9-207:52
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:207:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:206:13-49
+activity#com.mtaj.mtaj_08.cableplus_new.AddCustomer_1
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:208:9-215:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:210:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:211:13-52
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:209:13-42
+activity#com.mtaj.mtaj_08.cableplus_new.AddCustomer_2
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:216:9-222:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:218:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:217:13-42
+activity#com.mtaj.mtaj_08.cableplus_new.AddCustomer_4
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:223:9-230:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:225:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:226:13-52
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:224:13-42
+activity#com.mtaj.mtaj_08.cableplus_new.AddCustomer_3
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:231:9-237:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:233:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:232:13-42
+activity#com.mtaj.mtaj_08.cableplus_new.Remider_details
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:238:9-244:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:240:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:239:13-44
+activity#com.mtaj.mtaj_08.cableplus_new.Attachment_details
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:245:9-251:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:247:13-49
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:246:13-47
+meta-data#com.google.android.geo.API_KEY
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:270:9-272:55
+	android:value
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:272:13-52
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:271:13-58
+activity#com.mtaj.mtaj_08.cableplus_new.MapsActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:274:9-281:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:277:13-49
+	android:label
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:276:13-56
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:275:13-41
+activity#com.mtaj.mtaj_08.cableplus_new.FullImageActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:282:9-55
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:282:19-52
+service#com.mtaj.mtaj_08.cableplus_new.MyFirebaseMessagingService
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:318:9-322:19
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:318:18-60
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:319:13-321:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:320:17-78
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:320:25-75
+service#com.mtaj.mtaj_08.cableplus_new.MyFirebaseInstanceIDService
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:323:9-327:19
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:323:18-61
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:324:13-326:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:325:17-80
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:325:25-77
+activity#com.mtaj.mtaj_08.cableplus_new.Comments_List_Activity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:329:9-335:39
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:334:13-49
+	android:excludeFromRecents
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:332:13-46
+	android:launchMode
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:333:13-44
+	android:allowTaskReparenting
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:331:13-48
+	android:taskAffinity
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:335:13-36
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:330:13-51
+activity#com.mtaj.mtaj_08.cableplus_new.ReminderListActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:336:9-58
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:336:19-55
+activity#com.mtaj.mtaj_08.cableplus_new.AlertListActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:337:9-55
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:337:19-52
+activity#com.mtaj.mtaj_08.cableplus_new.SyncData
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:338:9-46
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:338:19-43
+activity#com.mtaj.mtaj_08.cableplus_new.CustomerDetail_Offline
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:339:9-342:73
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:341:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:342:13-70
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:340:13-51
+receiver#com.mtaj.mtaj_08.cableplus_new.NetworkChangeReceiver
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:344:9-351:20
+	android:label
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:346:13-50
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:345:13-50
+intent-filter#android.net.conn.CONNECTIVITY_CHANGE+android.net.wifi.WIFI_STATE_CHANGED
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:347:13-350:29
+action#android.net.wifi.WIFI_STATE_CHANGED
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:349:17-78
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:349:25-75
+activity#com.mtaj.mtaj_08.cableplus_new.ComplainSignatureActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:353:9-63
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:353:19-60
+activity#com.mtaj.mtaj_08.cableplus_new.Map_User_Tracking
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:354:9-55
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:354:19-52
+activity#com.mtaj.mtaj_08.cableplus_new.CustomerCommentList
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:355:9-57
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:355:19-54
+activity#com.mtaj.mtaj_08.cableplus_new.SplashScreenActivity
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:356:9-362:20
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:356:19-55
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:357:13-361:29
+action#android.intent.action.MAIN
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:358:17-69
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:358:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:360:17-77
+	android:name
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml:360:27-74
+uses-sdk
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+MERGED from [com.github.scottyab:showhidepasswordedittext:0.8] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\showhidepasswordedittext-0.8.aar\fa3a660bdde7576a3a3160b5209d0f62\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.scottyab:showhidepasswordedittext:0.8] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\showhidepasswordedittext-0.8.aar\fa3a660bdde7576a3a3160b5209d0f62\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.carbs.android:MDDialog:1.0.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\MDDialog-1.0.0.aar\10c1482a946d0387984aaccb0f504eb8\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.carbs.android:MDDialog:1.0.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\MDDialog-1.0.0.aar\10c1482a946d0387984aaccb0f504eb8\AndroidManifest.xml:7:5-9:41
+MERGED from [rebus:bottom-dialog:0.0.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-dialog-0.0.5.aar\212761a9d6da224a5d05366a11820f50\AndroidManifest.xml:30:5-32:41
+MERGED from [rebus:bottom-dialog:0.0.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-dialog-0.0.5.aar\212761a9d6da224a5d05366a11820f50\AndroidManifest.xml:30:5-32:41
+MERGED from [ua.com.crosp.solutions.library:presenter-layout:0.1.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\presenter-layout-0.1.1.aar\713536a341c46fc0366ddb04552bd002\AndroidManifest.xml:7:5-9:41
+MERGED from [ua.com.crosp.solutions.library:presenter-layout:0.1.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\presenter-layout-0.1.1.aar\713536a341c46fc0366ddb04552bd002\AndroidManifest.xml:7:5-9:41
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-1.3.0.aar\2526b47023c62101bc8075707922c0f8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-1.3.0.aar\2526b47023c62101bc8075707922c0f8\AndroidManifest.xml:7:5-9:41
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\f1da763a94c069b372eaeb4d373c75b5\AndroidManifest.xml:7:5-9:41
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\f1da763a94c069b372eaeb4d373c75b5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\design-24.2.1.aar\9ecd61a1ebf96aab7725bfd1d327211b\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\design-24.2.1.aar\9ecd61a1ebf96aab7725bfd1d327211b\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\ca244433f23b6fe92d504e53419606c0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\ca244433f23b6fe92d504e53419606c0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.baoyz.swipemenulistview:library:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\library-1.3.0.aar\8ccc4f3cabfff3be34105b5298265504\AndroidManifest.xml:7:5-9:41
+MERGED from [com.baoyz.swipemenulistview:library:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\library-1.3.0.aar\8ccc4f3cabfff3be34105b5298265504\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.chrisbanes:PhotoView:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\PhotoView-1.3.0.aar\308d5f41a71ae3d387a5e076338cfb26\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.chrisbanes:PhotoView:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\PhotoView-1.3.0.aar\308d5f41a71ae3d387a5e076338cfb26\AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-gcm-10.2.0.aar\be246bb519e177a6d246728b36204f30\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-gcm-10.2.0.aar\be246bb519e177a6d246728b36204f30\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.0.aar\216eee67afa2fbdd8cd4943aae8cb015\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.0.aar\216eee67afa2fbdd8cd4943aae8cb015\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-auth-10.2.0.aar\8a122893207420533f27484029e55610\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-auth-10.2.0.aar\8a122893207420533f27484029e55610\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-location:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-location-10.2.0.aar\40fb9a1aa9052d3162299c65b9db088e\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-location-10.2.0.aar\40fb9a1aa9052d3162299c65b9db088e\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-iid-10.2.0.aar\fc919d5e8b2fd8bffbdef38c1701f664\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-iid-10.2.0.aar\fc919d5e8b2fd8bffbdef38c1701f664\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-10.2.0.aar\83ffb89fd3bcad587570e159c9cdd88b\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-10.2.0.aar\83ffb89fd3bcad587570e159c9cdd88b\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.0.aar\6b2ae9d8469abb27224d1d536b1857a2\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.0.aar\6b2ae9d8469abb27224d1d536b1857a2\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-core:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-core-10.2.0.aar\4e41cca313bff8a753681d366ba2d4cc\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-core-10.2.0.aar\4e41cca313bff8a753681d366ba2d4cc\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.0.aar\22e5c103958fd7cd00f849c7d78c0743\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.0.aar\22e5c103958fd7cd00f849c7d78c0743\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.0.aar\dac698e147246ae88cb354e21599b0fb\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.0.aar\dac698e147246ae88cb354e21599b0fb\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.0.aar\e803a8ff62c38c57a86087e7adac2e10\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.0.aar\e803a8ff62c38c57a86087e7adac2e10\AndroidManifest.xml:17:5-43
+MERGED from [com.joanzapata.iconify:android-iconify-fontawesome:2.2.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-iconify-fontawesome-2.2.2.aar\173353cf02bf5914748473dd87cfa638\AndroidManifest.xml:6:5-43
+MERGED from [com.joanzapata.iconify:android-iconify-fontawesome:2.2.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-iconify-fontawesome-2.2.2.aar\173353cf02bf5914748473dd87cfa638\AndroidManifest.xml:6:5-43
+MERGED from [com.joanzapata.iconify:android-iconify:2.2.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-iconify-2.2.2.aar\d71b478bd61d1a4dd8dfdbd4aea5e5c7\AndroidManifest.xml:6:5-43
+MERGED from [com.joanzapata.iconify:android-iconify:2.2.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-iconify-2.2.2.aar\d71b478bd61d1a4dd8dfdbd4aea5e5c7\AndroidManifest.xml:6:5-43
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\78166a1ca72059967f568b999d5f0ea2\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\78166a1ca72059967f568b999d5f0ea2\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:cardview-v7:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\cardview-v7-24.2.1.aar\130a06ddfef59f58d4ebebeee3624ad7\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\cardview-v7-24.2.1.aar\130a06ddfef59f58d4ebebeee3624ad7\AndroidManifest.xml:20:5-43
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\1ada28531fd7a178546f1d7e73e35626\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\1ada28531fd7a178546f1d7e73e35626\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.gcacace:signature-pad:1.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\signature-pad-1.2.0.aar\a57491c885c3347a23e1f32870a79c1d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.gcacace:signature-pad:1.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\signature-pad-1.2.0.aar\a57491c885c3347a23e1f32870a79c1d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.d-max:spots-dialog:0.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\spots-dialog-0.4.aar\036d2ca71890a3b02dabb30706c84e52\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.d-max:spots-dialog:0.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\spots-dialog-0.4.aar\036d2ca71890a3b02dabb30706c84e52\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\a3e2d4a30bbfc7e47440db5429d38213\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\a3e2d4a30bbfc7e47440db5429d38213\AndroidManifest.xml:18:5-42
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.4.4.aar\73decd121b2a2a00bddc120ebc573c25\AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.4.4.aar\73decd121b2a2a00bddc120ebc573c25\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7531d579d142351a6e6a11a3536a7487\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7531d579d142351a6e6a11a3536a7487\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\f0250b967432b44463f144a60132891d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\f0250b967432b44463f144a60132891d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\5d255b4e20425ae1c279397a6329ca86\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\5d255b4e20425ae1c279397a6329ca86\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-24.2.1.aar\39887e9284a8e4e2047de35280d222fa\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-24.2.1.aar\39887e9284a8e4e2047de35280d222fa\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\e220220517646c8370a5b2c594d36881\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\e220220517646c8370a5b2c594d36881\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\a870f97b9d0842b5572d02c5173f6d1b\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\a870f97b9d0842b5572d02c5173f6d1b\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\9e7911a4ad4fd85cb5a0568d8e143953\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\9e7911a4ad4fd85cb5a0568d8e143953\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\3d23cd5ee40f2b390789266b46798a26\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\3d23cd5ee40f2b390789266b46798a26\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\77298c54a653b0f46ecdb7fdf0450ade\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\77298c54a653b0f46ecdb7fdf0450ade\AndroidManifest.xml:21:5-23:58
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\ca244433f23b6fe92d504e53419606c0\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidProjects\CurrentProjects\CableApp\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\ca244433f23b6fe92d504e53419606c0\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\78166a1ca72059967f568b999d5f0ea2\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\78166a1ca72059967f568b999d5f0ea2\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\f0250b967432b44463f144a60132891d\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\f0250b967432b44463f144a60132891d\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\5d255b4e20425ae1c279397a6329ca86\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\5d255b4e20425ae1c279397a6329ca86\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\e220220517646c8370a5b2c594d36881\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\e220220517646c8370a5b2c594d36881\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\a870f97b9d0842b5572d02c5173f6d1b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\a870f97b9d0842b5572d02c5173f6d1b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\9e7911a4ad4fd85cb5a0568d8e143953\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\9e7911a4ad4fd85cb5a0568d8e143953\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\3d23cd5ee40f2b390789266b46798a26\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\3d23cd5ee40f2b390789266b46798a26\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\77298c54a653b0f46ecdb7fdf0450ade\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\77298c54a653b0f46ecdb7fdf0450ade\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\ca244433f23b6fe92d504e53419606c0\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\ca244433f23b6fe92d504e53419606c0\AndroidManifest.xml:26:9-47
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.0.aar\fd3cef139b3f13062fa6699742133f5b\AndroidManifest.xml:21:52-75
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:20:9-189
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:20:129-162
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:20:163-187
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:20:69-128
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:20:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:24:9-184
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:24:64-87
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:24:88-182
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.0.aar\cce1054268f0add7e67f4ac14e7e03ee\AndroidManifest.xml:24:18-63
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.0.aar\216eee67afa2fbdd8cd4943aae8cb015\AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.0.aar\216eee67afa2fbdd8cd4943aae8cb015\AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.0.aar\216eee67afa2fbdd8cd4943aae8cb015\AndroidManifest.xml:23:18-87
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.0.aar\6b2ae9d8469abb27224d1d536b1857a2\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.0.aar\6b2ae9d8469abb27224d1d536b1857a2\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.0.aar\6b2ae9d8469abb27224d1d536b1857a2\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.0.aar\6b2ae9d8469abb27224d1d536b1857a2\AndroidManifest.xml:19:19-85
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:27:162-184
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.0.aar\417d0baa255c3cf0487da2c44bff36bf\AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.0.aar\3414dd0743fb14957ca7ca4db75b6686\AndroidManifest.xml:32:16-87
+permission#${applicationId}.permission.C2D_MESSAGE
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:24:5-109
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:26:22-76
+uses-permission#com.mtaj.mtaj_08.cableplus_new.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:30:9-36:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:30:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:31:13-35:29
+intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+com.mtaj.mtaj_08.cableplus_new
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:31:13-35:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:32:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:32:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:33:17-85
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:33:25-83
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:34:27-58
+category#com.mtaj.mtaj_08.cableplus_new
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:34:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:40:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:40:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:40:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:44:9-48:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:44:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.0.aar\d22979873af75522414950c1d9fb66d6\AndroidManifest.xml:44:18-82
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.0.aar\22e5c103958fd7cd00f849c7d78c0743\AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.0.aar\22e5c103958fd7cd00f849c7d78c0743\AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.0.aar\22e5c103958fd7cd00f849c7d78c0743\AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.0.aar\22e5c103958fd7cd00f849c7d78c0743\AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:10.2.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.0.aar\22e5c103958fd7cd00f849c7d78c0743\AndroidManifest.xml:6:79-143

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_takephoto"
+        android:icon="@drawable/ic_add_a_photo_black_24dp"
+        android:title="Take Photo" />
+
+    <item
+        android:id="@+id/action_gallery"
+        android:icon="@drawable/ic_photo_library_black_24dp"
+        android:title="Gallery" />
+
+    <item
+        android:id="@+id/action_filebrowse"
+        android:icon="@drawable/file_browse"
+        android:title="Browse File" />
+
+</menu>

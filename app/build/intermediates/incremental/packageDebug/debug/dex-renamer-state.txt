@@ -1,0 +1,7 @@
+#Tue Jun 05 00:26:31 IST 2018
+base.0=D\:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=D\:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1

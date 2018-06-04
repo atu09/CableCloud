@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lldatesearch">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:inputType="none"
+                android:ems="6"
+                android:id="@+id/edtfromdate"
+                android:hint="From Date"
+                android:ellipsize="start"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:focusable="false"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="TO"
+                android:id="@+id/textView3"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:focusable="false"
+               />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:inputType="none"
+                android:ems="6"
+                android:id="@+id/edttodate"
+                android:hint="To Date"
+                android:ellipsize="start"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:focusable="false"
+                android:layout_weight="1" />
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:lv="http://schemas.android.com/apk/res-auto"
+    tools:context="com.mtaj.mtaj_08.cableplus_new.SyncData">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/ToolbarColor"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:collapseIcon="@drawable/ic_arrow_back_white_24dp" >
+        </android.support.v7.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/ToolbarColor"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView15"
+                android:src="@drawable/cloud_sync"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Sync Data"
+                android:id="@+id/textView105"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:typeface="serif"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="All Areas,Customers added to your device to take payment offline "
+                android:id="@+id/textView106"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textSize="14sp"
+                android:typeface="serif"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+       <!-- <me.wangyuwei.loadingview.LoadingView
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            lv:lv_duration="5"
+            lv:lv_start_color="#e63900"
+            lv:lv_end_color="#ff6633"
+            lv:lv_internal_radius="8dp"
+            lv:lv_external_radius="120dp"/>-->
+
+        <!--<me.wangyuwei.slackloadingview.SlackLoadingView
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:visibility="gone"
+            />-->
+
+
+        <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Start Sync"
+        android:id="@+id/button4"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shadow"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:layout_marginBottom="50dp"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>

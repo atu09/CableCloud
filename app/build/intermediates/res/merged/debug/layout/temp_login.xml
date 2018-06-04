@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:paddingTop="30dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/orange_cableplus"
+        android:transitionName="appLogo" />
+
+    <LinearLayout
+        android:id="@+id/layoutLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/border_white"
+            android:drawableLeft="@drawable/user"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:hint="@string/hintusername"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="13dp"
+            android:singleLine="true"
+            android:text="hjbrc"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+            android:id="@+id/passwordInTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:background="@drawable/border_white"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/showpass"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:hint="@string/hintpassword"
+            android:inputType="textPassword"
+            android:padding="13dp"
+            android:singleLine="true"
+            android:text="hjbrc@123"
+            android:textColorHint="@android:color/darker_gray"
+            app:drawable_hide="@drawable/hidepass"
+            app:drawable_show="@drawable/showpass" />
+
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/border_white"
+            android:drawableLeft="@drawable/op_code"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:hint="@string/hintopcode"
+            android:imeOptions="actionGo"
+            android:padding="13dp"
+            android:singleLine="true"
+            android:text="hjbrc"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorPrimaryDark"
+            android:padding="13dp"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_20" />
+    </LinearLayout>
+
+</RelativeLayout>

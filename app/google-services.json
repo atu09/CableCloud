@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "1058933468760",
+    "firebase_url": "https://cableplus-141313.firebaseio.com",
+    "project_id": "cableplus-141313",
+    "storage_bucket": "cableplus-141313.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058933468760:android:be0e85c80d28ec1c",
+        "android_client_info": {
+          "package_name": "com.example.mtaj_08.cableplus_new"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058933468760-nrusgqooii1notj0mu7ocd9m1dpdlvms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz75TK_1AVs0WKOptpqESUT66wP-hWv_E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058933468760:android:3731faa88ceb41fa",
+        "android_client_info": {
+          "package_name": "com.example.mtaj_08.bolsmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058933468760-nrusgqooii1notj0mu7ocd9m1dpdlvms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz75TK_1AVs0WKOptpqESUT66wP-hWv_E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058933468760:android:134f925b3aa6d1c1",
+        "android_client_info": {
+          "package_name": "com.mtaj.mtaj_08.bolsmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058933468760-nrusgqooii1notj0mu7ocd9m1dpdlvms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz75TK_1AVs0WKOptpqESUT66wP-hWv_E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058933468760:android:dde6de1cdb503483",
+        "android_client_info": {
+          "package_name": "com.mtaj.mtaj_08.cableplus_new"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058933468760-nrusgqooii1notj0mu7ocd9m1dpdlvms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz75TK_1AVs0WKOptpqESUT66wP-hWv_E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
