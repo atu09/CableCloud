@@ -23,14 +23,14 @@ public final class R {
         public static final int title_margin = 0x7f0a00d4;
     }
     public static final class drawable {
-        public static final int spot = 0x7f0200fe;
+        public static final int spot = 0x7f020105;
     }
     public static final class id {
-        public static final int progress = 0x7f100163;
-        public static final int title = 0x7f100067;
+        public static final int progress = 0x7f100176;
+        public static final int title = 0x7f100070;
     }
     public static final class layout {
-        public static final int dialog = 0x7f04005b;
+        public static final int dialog = 0x7f04005c;
     }
     public static final class style {
         public static final int SpotsDialogDefault = 0x7f0b008d;

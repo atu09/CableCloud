@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="ua.com.crosp.solutions.library:presenter-layout-0.1.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/presenter-layout-0.1.1.aar/713536a341c46fc0366ddb04552bd002/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/presenter-layout-0.1.1.aar/713536a341c46fc0366ddb04552bd002/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ua.com.crosp.solutions.library/presenter-layout/0.1.1/b9bc8044b87ab1bb2bb419bd2f112c8ccac82d6f/presenter-layout-0.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

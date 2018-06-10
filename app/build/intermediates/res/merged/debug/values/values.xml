@@ -136,10 +136,10 @@
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <color name="colorAccent">#669F36</color>
+    <color name="colorAccent">#5EC8F0</color>
     <color name="colorBlack">#000000</color>
-    <color name="colorPrimary">#89C34A</color>
-    <color name="colorPrimaryDark">#669F36</color>
+    <color name="colorPrimary">#5A8BE6</color>
+    <color name="colorPrimaryDark">#5A8BE6</color>
     <color name="colorPrimaryLight">#d3f4af</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
@@ -440,6 +440,7 @@
         </attr><attr name="elevation"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/><attr format="boolean" name="useCompatPadding"/></declare-styleable>
     <declare-styleable name="FloatingActionButton_Behavior_Layout"><attr format="boolean" name="behavior_autoHide"/></declare-styleable>
     <declare-styleable name="ForegroundLinearLayout"><attr name="android:foreground"/><attr name="android:foregroundGravity"/><attr format="boolean" name="foregroundInsidePadding"/></declare-styleable>
+    <declare-styleable name="HTextView"><attr format="boolean" name="isAnimate"/><attr format="enum" name="animateType"><enum name="scale" value="0"/><enum name="evaporate" value="1"/><enum name="fall" value="2"/><enum name="sparkle" value="3"/><enum name="anvil" value="4"/><enum name="line" value="5"/><enum name="pixelate" value="6"/><enum name="typer" value="7"/><enum name="rainbow" value="8"/></attr><attr format="string" name="fontAsset"/></declare-styleable>
     <declare-styleable name="LinearConstraintLayout"><attr name="android:orientation"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers">
             <flag name="none" value="0"/>
