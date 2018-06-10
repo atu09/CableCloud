@@ -1,42 +1,10 @@
 [
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout-v21\\notification_action_tombstone.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout-v21\\notification_template_custom_big.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout-v21\\notification_action_tombstone.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout-v21\\notification_action.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout-v21\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout-v21\\notification_template_custom_big.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout-v21\\notification_action.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout-v21\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout-v21\\notification_action.xml"
     },
     {

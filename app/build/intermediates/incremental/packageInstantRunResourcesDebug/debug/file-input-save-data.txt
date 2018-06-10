@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jun 10 17:20:47 IST 2018
+#Mon Jun 11 03:03:24 IST 2018
 4.path=font/mangal.ttf
 8.set=ASSET
 6.path=font/quicksend_regular.ttf

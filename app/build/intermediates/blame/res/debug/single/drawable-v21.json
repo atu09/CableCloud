@@ -1,67 +1,19 @@
 [
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_slideshow.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_manage.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_manage.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\progressanimation.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\progressanimation.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_send.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_send.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_manage.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_manage.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_share.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_share.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_gallery.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_gallery.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_slideshow.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_complaincomment_count.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\badge_icon_complaincomment_count.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\roundedborder.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\roundedborder.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_complain_count.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\badge_icon_complain_count.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_manage.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_manage.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\spot.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\spots-dialog-0.4.aar\\036d2ca71890a3b02dabb30706c84e52\\res\\drawable-v21\\spot.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\roundedborder.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\roundedborder.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_camera.xml",
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_camera.xml"
     },
     {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_manage.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_manage.xml"
+    },
+    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_alert.xml",
@@ -72,94 +24,6 @@
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_share.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\progressanimation.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\progressanimation.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\roundedborder.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\roundedborder.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_send.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_send.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_share.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_share.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_camera.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_camera.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\whiteborder.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\whiteborder.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\badge_icon.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\spot.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\spots-dialog-0.4.aar\\036d2ca71890a3b02dabb30706c84e52\\res\\drawable-v21\\spot.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\progressanimation.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\progressanimation.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_complain_count.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\badge_icon_complain_count.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\whiteborder.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\whiteborder.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_payment_comment_count.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\badge_icon_payment_comment_count.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_complaincomment_count.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\badge_icon_complaincomment_count.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_send.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_send.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\roundedborder.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\roundedborder.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\spot.xml",
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\spots-dialog-0.4.aar\\036d2ca71890a3b02dabb30706c84e52\\res\\drawable-v21\\spot.xml"
     },
@@ -168,63 +32,47 @@
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\badge_icon.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_complain_count.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\badge_icon_complain_count.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\progressanimation.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\progressanimation.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_camera.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_camera.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_gallery.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_gallery.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_payment_comment_count.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\badge_icon_payment_comment_count.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_slideshow.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_complaincomment_count.xml",
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\badge_icon_complaincomment_count.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_alert.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\badge_icon_alert.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\abc_edit_text_material.xml"
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_payment_comment_count.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\badge_icon_payment_comment_count.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_gallery.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_gallery.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\badge_icon.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_slideshow.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_gallery.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\ic_menu_gallery.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_payment_comment_count.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\badge_icon_payment_comment_count.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\whiteborder.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\whiteborder.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_complain_count.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\badge_icon_complain_count.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_alert.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\drawable-v21\\badge_icon_alert.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\whiteborder.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\whiteborder.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_send.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_send.xml"
     }
 ]

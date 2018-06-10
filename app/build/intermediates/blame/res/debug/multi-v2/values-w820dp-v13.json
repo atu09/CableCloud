@@ -1,28 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
-            "map": [
-                {
-                    "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "4",
-                        "startOffsets": "295",
-                        "endColumns": "57",
-                        "endOffsets": "348"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "57",
-                        "endOffsets": "108"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
@@ -45,76 +23,10 @@
             ]
         },
         {
-            "outputFile": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
-            "map": [
-                {
-                    "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "4",
-                        "startOffsets": "295",
-                        "endColumns": "57",
-                        "endOffsets": "348"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "57",
-                        "endOffsets": "108"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
-            "map": [
-                {
-                    "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "4",
-                        "startOffsets": "295",
-                        "endColumns": "57",
-                        "endOffsets": "348"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "57",
-                        "endOffsets": "108"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
                     "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "4",
-                        "startOffsets": "295",
-                        "endColumns": "57",
-                        "endOffsets": "348"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "57",
-                        "endOffsets": "108"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
-            "map": [
-                {
-                    "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",

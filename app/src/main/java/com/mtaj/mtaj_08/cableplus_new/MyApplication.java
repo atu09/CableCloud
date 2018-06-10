@@ -4,8 +4,6 @@ import android.content.Context;
 import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by MTAJ-08 on 8/13/2016.
@@ -23,15 +21,8 @@ public class MyApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
 
-        /*startUserInactivityDetectThread(); // start the thread to detect inactivity
-        new ScreenReceiver();*/
 
         mInstance = this;
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("font/quicksend_regular.ttf")
-                .setFontAttrId(R.attr.fontPath)
-                .build()
-        );
 
     }
 
@@ -45,7 +36,7 @@ public class MyApplication extends MultiDexApplication {
 
     @Override
     protected void attachBaseContext(Context base) {
-      super.attachBaseContext(base);
+        super.attachBaseContext(base);
 
         MultiDex.install(this);
     }

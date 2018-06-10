@@ -5,35 +5,31 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.0.1"
-    timestamp="1528631505844"
+    timestamp="1528666401271"
     token="3319345116176242314"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="3949" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="177" />
+        duration="0" />
     <task
         name="verifier"
-        duration="4" />
+        duration="0" />
 
-    <artifact
-        location="D:\AndroidProjects\CurrentProjects\CableApp\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
     <artifact
         location="D:\AndroidProjects\CurrentProjects\CableApp\app\build\outputs\apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1528630558546"
+        timestamp="1528664586035"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="D:\AndroidProjects\CurrentProjects\CableApp\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
@@ -74,20 +70,17 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1528631444162"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="D:\AndroidProjects\CurrentProjects\CableApp\app\build\outputs\apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1528631505844"
+        ir-eligibility="FIELD_TYPE_CHANGE"
+        timestamp="1528665900998"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\AndroidProjects\CurrentProjects\CableApp\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1528666401271"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\AndroidProjects\CurrentProjects\CableApp\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
