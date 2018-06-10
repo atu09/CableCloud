@@ -32,12 +32,12 @@
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\popup_hide.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\anim\\popup_hide.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\popup_hide.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\anim\\popup_hide.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
@@ -62,6 +62,10 @@
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_up.xml",
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\anim\\slide_up.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\bottom_up_anim.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\anim\\bottom_up_anim.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",

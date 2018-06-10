@@ -9,6 +9,7 @@ MERGED from [cn.carbs.android:MDDialog:1.0.0] C:\Users\Anish\.gradle\caches\tran
 MERGED from [rebus:bottom-dialog:0.0.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-dialog-0.0.5.aar\212761a9d6da224a5d05366a11820f50\AndroidManifest.xml:25:1-36:12
 MERGED from [ua.com.crosp.solutions.library:presenter-layout:0.1.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\presenter-layout-0.1.1.aar\713536a341c46fc0366ddb04552bd002\AndroidManifest.xml:2:1-17:12
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-1.3.0.aar\2526b47023c62101bc8075707922c0f8\AndroidManifest.xml:2:1-15:12
+MERGED from [hanks.xyz:htextview-library:0.1.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\htextview-library-0.1.5.aar\8b2027b3484263544ea2a2242f2a977b\AndroidManifest.xml:2:1-17:12
 MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\f1da763a94c069b372eaeb4d373c75b5\AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:design:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\design-24.2.1.aar\9ecd61a1ebf96aab7725bfd1d327211b\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\ca244433f23b6fe92d504e53419606c0\AndroidManifest.xml:17:1-31:12
@@ -168,6 +169,8 @@ MERGED from [ua.com.crosp.solutions.library:presenter-layout:0.1.1] C:\Users\Ani
 MERGED from [ua.com.crosp.solutions.library:presenter-layout:0.1.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\presenter-layout-0.1.1.aar\713536a341c46fc0366ddb04552bd002\AndroidManifest.xml:11:5-15:19
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-1.3.0.aar\2526b47023c62101bc8075707922c0f8\AndroidManifest.xml:11:5-13:38
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-1.3.0.aar\2526b47023c62101bc8075707922c0f8\AndroidManifest.xml:11:5-13:38
+MERGED from [hanks.xyz:htextview-library:0.1.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\htextview-library-0.1.5.aar\8b2027b3484263544ea2a2242f2a977b\AndroidManifest.xml:11:5-15:19
+MERGED from [hanks.xyz:htextview-library:0.1.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\htextview-library-0.1.5.aar\8b2027b3484263544ea2a2242f2a977b\AndroidManifest.xml:11:5-15:19
 MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\f1da763a94c069b372eaeb4d373c75b5\AndroidManifest.xml:11:5-20
 MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\f1da763a94c069b372eaeb4d373c75b5\AndroidManifest.xml:11:5-20
 MERGED from [com.android.support:design:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\design-24.2.1.aar\9ecd61a1ebf96aab7725bfd1d327211b\AndroidManifest.xml:22:5-20
@@ -598,6 +601,8 @@ MERGED from [ua.com.crosp.solutions.library:presenter-layout:0.1.1] C:\Users\Ani
 MERGED from [ua.com.crosp.solutions.library:presenter-layout:0.1.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\presenter-layout-0.1.1.aar\713536a341c46fc0366ddb04552bd002\AndroidManifest.xml:7:5-9:41
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-1.3.0.aar\2526b47023c62101bc8075707922c0f8\AndroidManifest.xml:7:5-9:41
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:1.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-1.3.0.aar\2526b47023c62101bc8075707922c0f8\AndroidManifest.xml:7:5-9:41
+MERGED from [hanks.xyz:htextview-library:0.1.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\htextview-library-0.1.5.aar\8b2027b3484263544ea2a2242f2a977b\AndroidManifest.xml:7:5-9:41
+MERGED from [hanks.xyz:htextview-library:0.1.5] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\htextview-library-0.1.5.aar\8b2027b3484263544ea2a2242f2a977b\AndroidManifest.xml:7:5-9:41
 MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\f1da763a94c069b372eaeb4d373c75b5\AndroidManifest.xml:7:5-9:41
 MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\f1da763a94c069b372eaeb4d373c75b5\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:design:24.2.1] C:\Users\Anish\.gradle\caches\transforms-1\files-1.1\design-24.2.1.aar\9ecd61a1ebf96aab7725bfd1d327211b\AndroidManifest.xml:20:5-43

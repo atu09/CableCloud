@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:htext="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.mtaj.mtaj_08.cableplus_new.SplashScreenActivity">
 
 
@@ -10,11 +12,24 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:paddingTop="20dp"
-        android:transitionName="appLogo"
         android:scaleType="fitXY"
-        android:src="@drawable/orange_cableplus" />
+        android:src="@drawable/orange_cableplus"
+        android:tint="@color/white"
+        android:transitionName="appLogo"
+        android:visibility="gone" />
 
+    <TextView
+        android:id="@+id/txtAnimate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dimen_8_dp"
+        android:gravity="center"
+        android:text="Cable Cloud"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp" />
 
 </RelativeLayout>

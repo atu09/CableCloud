@@ -308,6 +308,10 @@
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\gradient_blue_bg.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\drawable-xhdpi\\gradient_blue_bg.xml"
+    },
+    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },

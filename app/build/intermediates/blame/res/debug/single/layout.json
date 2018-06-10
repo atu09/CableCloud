@@ -64,12 +64,12 @@
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\reminder_dialog.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\reminder_dialog.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\amu_webview.xml",
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\android-maps-utils-0.4.4.aar\\73decd121b2a2a00bddc120ebc573c25\\res\\layout\\amu_webview.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\reminder_dialog.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\reminder_dialog.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
@@ -152,12 +152,12 @@
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_comments.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\layout\\layout_comments.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_comments.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\layout\\layout_comments.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\comments_dialog.xml",
@@ -204,12 +204,12 @@
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-24.2.1.aar\\9ecd61a1ebf96aab7725bfd1d327211b\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout\\abc_activity_chooser_view.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_complainbycustomer.xml",
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\layout\\layout_complainbycustomer.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_package_details.xml",
@@ -240,12 +240,12 @@
         "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\complaint_2.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\home.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_area_list_in_customers.xml",
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\layout\\activity_area_list_in_customers.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\home.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\no_access_layout.xml",
@@ -284,12 +284,12 @@
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\layout\\activity_transaction_status.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_map__user__tracking.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\activity_map__user__tracking.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_add_customer_4.xml",
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\layout\\activity_add_customer_4.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_map__user__tracking.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\activity_map__user__tracking.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
@@ -392,24 +392,24 @@
         "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\activity_sync_data.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_remiders_details.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\layout_remiders_details.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_customer_comments.xml",
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\layout\\layout_customer_comments.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\temp_login.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\temp_login.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_remiders_details.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\layout_remiders_details.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_view_photo_dialog.xml",
         "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\layout\\layout_view_photo_dialog.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\temp_login.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\temp_login.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
@@ -620,12 +620,12 @@
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\ca244433f23b6fe92d504e53419606c0\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_date_search.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\dialog_date_search.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
         "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-24.2.1.aar\\9ecd61a1ebf96aab7725bfd1d327211b\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_date_search.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\dialog_date_search.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
@@ -1398,6 +1398,10 @@
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_full_image.xml",
         "source": "D:\\AndroidProjects\\CurrentProjects\\Akshay_Cable_revised1\\app\\src\\main\\res\\layout\\activity_full_image.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login_revised.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\layout\\activity_login_revised.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\CurrentProjects\\ESmartComplain\\Akshay_Cable_revised1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",

@@ -9,31 +9,27 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.GradientDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.StrictMode;
-import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 import com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText;
 
 import org.apache.http.HttpEntity;
@@ -84,13 +80,12 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
     ArrayList<HashMap<String, String>> contractordetails = new ArrayList<>();
 
     String token = "-";
-    private RelativeLayout layoutMain;
     private ImageView imageView;
     private EditText editText;
     private ShowHidePasswordEditText passwordInTextInputLayout;
     private EditText editText2;
-    private Button button;
-    private android.widget.LinearLayout layoutLogin;
+    private CardView cardLogo;
+    private CardView cardLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,13 +95,12 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.temp_login);
-        this.layoutLogin = (LinearLayout) findViewById(R.id.layoutLogin);
-        this.layoutMain = (RelativeLayout) findViewById(R.id.layoutMain);
+        setContentView(R.layout.activity_login_revised);
+
 
         init();
+        initAnimation();
 
-        layoutLogin.setVisibility(View.VISIBLE);
 
     }
 
@@ -125,7 +119,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
             StrictMode.setThreadPolicy(policy);
         }
 
-        /*SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         //  SharedPreferences.Editor editor=pref.edit();
 
         if (pref.getString("LoginStatus", "").toString().equals("login")) {
@@ -134,11 +128,14 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
             finish();
         }
-*/
 
         edtusername = (EditText) findViewById(R.id.editText);
-        edtpassword = (EditText) findViewById(R.id.passwordInTextInputLayout);
-        edtuopcode = (EditText) findViewById(R.id.editText2);
+        edtpassword = (EditText) findViewById(R.id.edtPassword);
+        edtuopcode = (EditText) findViewById(R.id.OpCode);
+        cardLogo = (CardView) findViewById(R.id.cardLogo);
+        cardLogin = (CardView) findViewById(R.id.cardLogin);
+        btnlogin = (Button) findViewById(R.id.btnlogin);
+
 
         edtuopcode.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -168,7 +165,6 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         edtpassword.setHintTextColor(edtpassword.getHintTextColors().withAlpha(-3));
         edtuopcode.setHintTextColor(edtuopcode.getHintTextColors().withAlpha(-3));
 
-        btnlogin = (Button) findViewById(R.id.button);
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,6 +180,36 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
 
                 }
+
+            }
+        });
+    }
+
+    private void initAnimation() {
+        Animation bottomUpCardLogo = AnimationUtils.loadAnimation(LoginActivity.this,
+                R.anim.bottom_up_anim);
+
+
+        cardLogo.setVisibility(View.VISIBLE);
+        cardLogo.startAnimation(bottomUpCardLogo);
+
+        bottomUpCardLogo.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Animation bottomUp = AnimationUtils.loadAnimation(LoginActivity.this,
+                        R.anim.bottom_up_anim);
+                cardLogin.setVisibility(View.VISIBLE);
+                cardLogin.startAnimation(bottomUp);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
 
             }
         });
