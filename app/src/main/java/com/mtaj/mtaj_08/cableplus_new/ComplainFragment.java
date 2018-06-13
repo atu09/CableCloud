@@ -1,12 +1,10 @@
 package com.mtaj.mtaj_08.cableplus_new;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -35,7 +33,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-//import com.github.silvestrpredko.dotprogressbar.DotProgressBar;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -55,10 +53,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import dmax.dialog.SpotsDialog;
-
-import static com.ashokvarma.bottomnavigation.R.styleable.BottomNavigationBar;
-
 /**
  * Created by MTAJ-08 on 7/23/2016.
  */
@@ -68,16 +62,16 @@ public class ComplainFragment extends Fragment {
 
     ListView lstcomplain;
     BottomNavigationBar bottomNavigationBar;
-    ArrayList<HashMap<String,String>> complainlist=new ArrayList<>();
-   // StickyListHeadersListView lvcomplain;
+    ArrayList<HashMap<String, String>> complainlist = new ArrayList<>();
+    // StickyListHeadersListView lvcomplain;
 
     ListView lvcomplain;
 
-    List<ArrayList<HashMap<String,String>>> mergedlist=new ArrayList<>();
+    List<ArrayList<HashMap<String, String>>> mergedlist = new ArrayList<>();
 
     String url;
 
-    ArrayList<HashMap<String,String>> arealist=new ArrayList<>();
+    ArrayList<HashMap<String, String>> arealist = new ArrayList<>();
 
     MyExpandableListAdapter expandableListAdapter;
 
@@ -94,28 +88,28 @@ public class ComplainFragment extends Fragment {
 
     TextView tvtotalcomplaint;
 
-    ArrayList<HashMap<String,String>> customerlist=new ArrayList<>();
+    ArrayList<HashMap<String, String>> customerlist = new ArrayList<>();
 
-    List<ComplainLIstClass> details=new ArrayList<>();
+    List<ComplainLIstClass> details = new ArrayList<>();
 
-    List<AreaParent> explist=new ArrayList<>();
+    List<AreaParent> explist = new ArrayList<>();
 
-    ArrayList<JSONObject> areajsonlist=new ArrayList<>();
+    ArrayList<JSONObject> areajsonlist = new ArrayList<>();
 
-    ArrayList<JSONObject> customerjsonarraylist=new ArrayList<>();
+    ArrayList<JSONObject> customerjsonarraylist = new ArrayList<>();
 
     SwipeRefreshLayout swrefresh;
 
-    String siteurl,uid,cid,aid,eid,URL;
+    String siteurl, uid, cid, aid, eid, URL;
     RequestQueue requestQueue;
 
-     //SimpleAdapter da;
+    //SimpleAdapter da;
 
     ComplainDataAdapter da;
 
     ExpandableListView explistcomplain;
 
- SharedPreferences pref;
+    SharedPreferences pref;
 
     ComplainDataAdapter complainDataAdapter;
 
@@ -124,12 +118,10 @@ public class ComplainFragment extends Fragment {
     TextView tvnocomplaint;
 
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        Context con=getActivity();
         View vc;
 
          /*pref=con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
@@ -142,40 +134,38 @@ public class ComplainFragment extends Fragment {
         cid=pref.getString("Contracotrid","").toString();
         eid=pref.getString("Entityids", "").toString();*/
 
-       if(url.equals("-"))
-       {
-           vc = inflater.inflate(R.layout.layout_offline, null);
-       }
-        else {
+        if (url.equals("-")) {
+            vc = inflater.inflate(R.layout.layout_offline, null);
+        } else {
 
-           if (pref.getString("RoleId", "").toString().equals("2")) {
+            if (pref.getString("RoleId", "").equalsIgnoreCase("2")) {
 
-               vc = inflater.inflate(R.layout.complain, null);
+                vc = inflater.inflate(R.layout.complain, null);
 
-               URL = siteurl + "/GetComplainListByAreaForAdminCollectionApp";
-               CallVolley(URL);
+                URL = siteurl + "/GetComplainListByAreaForAdminCollectionApp";
+                CallVolley(URL);
 
-           } else {
-               if (pref.getBoolean("IsComplain", true)) {
+            } else {
+                if (pref.getBoolean("IsComplain", true)) {
 
-                   if (url.equals("-")) {
-                       vc = inflater.inflate(R.layout.layout_offline, null);
-                   } else {
-                       //new JSONAsynk().execute(new String[]{url});
+                    if (url.equals("-")) {
+                        vc = inflater.inflate(R.layout.layout_offline, null);
+                    } else {
+                        //new JSONAsynk().execute(new String[]{url});
 
-                       url=siteurl + "/GetComplainListByAreaForCollectionApp";
+                        url = siteurl + "/GetComplainListByAreaForCollectionApp";
 
-                       CallVolleyss(url);
+                        CallVolleyss(url);
 
-                       vc = inflater.inflate(R.layout.complaint_2, null);
-                   }
-               } else {
-                   vc = inflater.inflate(R.layout.no_access_layout, null);
-               }
-           }
-       }
+                        vc = inflater.inflate(R.layout.complaint_2, null);
+                    }
+                } else {
+                    vc = inflater.inflate(R.layout.no_access_layout, null);
+                }
+            }
+        }
 
-        return  vc;
+        return vc;
 
 
     }
@@ -185,18 +175,18 @@ public class ComplainFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Context con = getActivity();
-         pref= con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        if (pref.getString("RoleId", "").toString().equals("2") && !url.equals("-") ) {
+        if (pref.getString("RoleId", "").equalsIgnoreCase("2") && !url.equals("-")) {
 
             swrefresh = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
 
             lvcomplain = (ListView) view.findViewById(R.id.listView5);
-            tvnocomplaint=(TextView)view.findViewById(R.id.textView100);
+            tvnocomplaint = (TextView) view.findViewById(R.id.textView100);
 
-           // lvcomplain.setAdapter(complainDataAdapter);
+            // lvcomplain.setAdapter(complainDataAdapter);
 
-            bottomNavigationBar=(BottomNavigationBar)view.findViewById(R.id.bottom_navigation_bar);
+            bottomNavigationBar = (BottomNavigationBar) view.findViewById(R.id.bottom_navigation_bar);
 
             bottomNavigationBar
                     .addItem(new BottomNavigationItem(R.drawable.areaicon, "By Area").setActiveColorResource(R.color.ToolbarColor))
@@ -210,22 +200,18 @@ public class ComplainFragment extends Fragment {
                 public void onRefresh() {
 
                     swrefresh.setRefreshing(true);
-                    
-                    if(bottomNavigationBar.getCurrentSelectedPosition()==0)
-                    {
+
+                    if (bottomNavigationBar.getCurrentSelectedPosition() == 0) {
                         URL = siteurl + "/GetComplainListByAreaForAdminCollectionApp";
                         CallVolley(URL);
 
-                    }
-
-                    else if(bottomNavigationBar.getCurrentSelectedPosition()==1)
-                    {
+                    } else if (bottomNavigationBar.getCurrentSelectedPosition() == 1) {
                         URL = siteurl + "/GetComplainListByUserForAdminCollectionApp";
                         CallVolleys(URL);
                     }
 
-                  //  URL = siteurl + "/GetComplainListByAreaForAdminCollectionApp";
-                  // CallVolley(URL);
+                    //  URL = siteurl + "/GetComplainListByAreaForAdminCollectionApp";
+                    // CallVolley(URL);
                 }
             });
 
@@ -436,19 +422,15 @@ public class ComplainFragment extends Fragment {
             });
 
 
-
-
-        }
-
-        else {
+        } else {
 
             if (pref.getBoolean("IsComplain", true) && !url.equals("-")) {
 
-               // lvcomplain = (ListView) view.findViewById(R.id.listView5);
+                // lvcomplain = (ListView) view.findViewById(R.id.listView5);
 
-                rlmain=(RelativeLayout)view.findViewById(R.id.rlmain);
+                rlmain = (RelativeLayout) view.findViewById(R.id.rlmain);
 
-                explistcomplain=(ExpandableListView)view.findViewById(R.id.expandableListView1);
+                explistcomplain = (ExpandableListView) view.findViewById(R.id.expandableListView1);
 
                 //explistcomplain.setAdapter(expandableListAdapter);
 
@@ -456,7 +438,7 @@ public class ComplainFragment extends Fragment {
 
                 swrefresh = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
 
-                tvnocomplaint=(TextView)view.findViewById(R.id.textView100);
+                tvnocomplaint = (TextView) view.findViewById(R.id.textView100);
 
                 swrefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
@@ -464,7 +446,7 @@ public class ComplainFragment extends Fragment {
 
                         swrefresh.setRefreshing(true);
 
-                      //  new JSONAsynk().execute(new String[]{url});
+                        //  new JSONAsynk().execute(new String[]{url});
                         CallVolleyss(url);
 
                     }
@@ -490,17 +472,17 @@ public class ComplainFragment extends Fragment {
                     @Override
                     public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
-                        String cid=explist.get(groupPosition).getChildren().get(childPosition).getCmpid();
-                        String cmid=explist.get(groupPosition).getChildren().get(childPosition).getCustid();
+                        String cid = explist.get(groupPosition).getChildren().get(childPosition).getCmpid();
+                        String cmid = explist.get(groupPosition).getChildren().get(childPosition).getCustid();
 
                         //Toast.makeText(getContext(), cid, Toast.LENGTH_SHORT).show();
-                       // Toast.makeText(getContext(), cmid, Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(getContext(), cmid, Toast.LENGTH_SHORT).show();
 
 
-                        Intent i=new Intent(getContext(),ComplainDetails.class);
-                        i.putExtra("title",explist.get(groupPosition).getChildren().get(childPosition).getName());
-                        i.putExtra("customerId",explist.get(groupPosition).getChildren().get(childPosition).getCustid());
-                        i.putExtra("complainId",explist.get(groupPosition).getChildren().get(childPosition).getCmpid());
+                        Intent i = new Intent(getContext(), ComplainDetails.class);
+                        i.putExtra("title", explist.get(groupPosition).getChildren().get(childPosition).getName());
+                        i.putExtra("customerId", explist.get(groupPosition).getChildren().get(childPosition).getCustid());
+                        i.putExtra("complainId", explist.get(groupPosition).getChildren().get(childPosition).getCmpid());
                         startActivity(i);
 
                         return false;
@@ -511,7 +493,6 @@ public class ComplainFragment extends Fragment {
         }
 
 
-
     }
 
     @Override
@@ -520,7 +501,7 @@ public class ComplainFragment extends Fragment {
 
         requestQueue = Volley.newRequestQueue(getContext());
 
-        complainDataAdapter=new ComplainDataAdapter(getContext(),arealist);
+        complainDataAdapter = new ComplainDataAdapter(getContext(), arealist);
 
         final Context con = getActivity();
 
@@ -537,7 +518,7 @@ public class ComplainFragment extends Fragment {
     }
 
 
-    public static void hideKeyboard(View view,Context ctx) {
+    public static void hideKeyboard(View view, Context ctx) {
         InputMethodManager inputManager = (InputMethodManager) ctx
                 .getSystemService(Context.INPUT_METHOD_SERVICE);
 
@@ -550,21 +531,20 @@ public class ComplainFragment extends Fragment {
     }
 
 
-    public JSONObject makeHttpRequest(String url){
+    public JSONObject makeHttpRequest(String url) {
         DefaultHttpClient httpclient = new DefaultHttpClient();
-        HttpGet httppost=new HttpGet(url);
-        try{
+        HttpGet httppost = new HttpGet(url);
+        try {
             HttpResponse httpresponse = httpclient.execute(httppost);
             HttpEntity httpentity = httpresponse.getEntity();
             is = httpentity.getContent();
-        }catch (ClientProtocolException e){
+        } catch (ClientProtocolException e) {
             e.printStackTrace();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try{
-
+        try {
 
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
@@ -573,15 +553,13 @@ public class ComplainFragment extends Fragment {
 
             StringBuilder sb = new StringBuilder();
             String line = null;
-            try{
-                if(reader!=null) {
+            try {
+                if (reader != null) {
 
                     while ((line = reader.readLine()) != null) {
                         sb.append(line);
                     }
-                }
-                else
-                {
+                } else {
                     Toast.makeText(getActivity(), "No data", Toast.LENGTH_SHORT).show();
                 }
 
@@ -589,7 +567,7 @@ public class ComplainFragment extends Fragment {
                 json = sb.toString();
 
                 // json= sb.toString().substring(0, sb.toString().length()-1);
-                try{
+                try {
                     jobj = new JSONObject(json);
 
                     // JSONArray jarrays=new JSONArray(json);
@@ -600,14 +578,14 @@ public class ComplainFragment extends Fragment {
 
                     // jarr =(JSONArray)jsonparse.parse(json);
                     // jobj = jarr.getJSONObject(0);
-                }catch (JSONException e){
-                    Toast.makeText(getActivity(), "**"+e, Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
                 }
-            }catch(IOException e){
-                Toast.makeText(getActivity(), "**"+e, Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
             }
-        }catch (UnsupportedEncodingException e){
-            Toast.makeText(getActivity(), "**"+e, Toast.LENGTH_SHORT).show();
+        } catch (UnsupportedEncodingException e) {
+            Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
         }
        /* catch (ParseException e){
             Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
@@ -615,24 +593,16 @@ public class ComplainFragment extends Fragment {
         return jobj;
     }
 
-    private class JSONAsynk extends AsyncTask<String,String,JSONObject>
-    {
+    private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
 
-        private ProgressDialog pDialog;
-       // public DotProgressBar dtprogoress;
-
-        SpotsDialog spload;
-
-
-        JSONObject jsn1,jsn,jsnmain;
+        Dialog spload;
+        JSONObject jsn1, jsn, jsnmain;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload=new SpotsDialog(getActivity(),R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
+            spload = Utils.getLoader(getActivity());
             spload.show();
 
         }
@@ -641,40 +611,35 @@ public class ComplainFragment extends Fragment {
         protected JSONObject doInBackground(String... params) {
 
             try {
-
-                jsonobj=makeHttpRequest(params[0]);
+                jsonobj = makeHttpRequest(params[0]);
             } catch (Exception e) {
                 Toast.makeText(getActivity(), "--" + e, Toast.LENGTH_SHORT).show();
             }
 
-            return  jsonobj;
-
-
+            return jsonobj;
         }
 
         @Override
         protected void onPostExecute(JSONObject json) {
             spload.dismiss();
 
-            try
-            {
+            try {
 
-                if(json.getString("status").toString().equals("True"))
-                {
+                if (json.getString("status").toString().equals("True")) {
                     explist.clear();
 
                     Toast.makeText(getContext(), json.toString(), Toast.LENGTH_SHORT).show();
 
-                    tvtotalcomplaint.setText("TOTAL COMPLAINTS:  "+json.getString("totalComplain").toString());
+                    tvtotalcomplaint.setText("TOTAL COMPLAINTS:  " + json.getString("totalComplain").toString());
 
                     final JSONArray entityarray = json.getJSONArray("UserComplainInfoList");
 
-                   // Toast.makeText(getContext(), "area lenght="+entityarray.length(), Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(getContext(), "area lenght="+entityarray.length(), Toast.LENGTH_SHORT).show();
 
                     for (int i = 0; i < entityarray.length(); i++) {
                         JSONObject e = entityarray.getJSONObject(i);
 
-                       // Toast.makeText(getContext(),e.toString(), Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(getContext(),e.toString(), Toast.LENGTH_SHORT).show();
 
                         parent = new AreaParent();
 
@@ -687,24 +652,23 @@ public class ComplainFragment extends Fragment {
                         parent.setChildren(new ArrayList<CustomerChild>());
 
 
-                        JSONArray jsarr=e.getJSONArray("lstCustInfo");
+                        JSONArray jsarr = e.getJSONArray("lstCustInfo");
 
-                      //  Toast.makeText(getContext(), "cust lenght="+jsarr.length(), Toast.LENGTH_SHORT).show();
+                        //  Toast.makeText(getContext(), "cust lenght="+jsarr.length(), Toast.LENGTH_SHORT).show();
 
-                        for(int j=0;j<Integer.parseInt(acomplaincount);j++)
-                        {
-                              child = new CustomerChild();
+                        for (int j = 0; j < Integer.parseInt(acomplaincount); j++) {
+                            child = new CustomerChild();
 
                             JSONObject s = jsarr.getJSONObject(i);
 
-                         //   Toast.makeText(getContext(),s.toString(), Toast.LENGTH_SHORT).show();
+                            //   Toast.makeText(getContext(),s.toString(), Toast.LENGTH_SHORT).show();
 
-                            String cid=s.getString("customerId");
-                            String cname=s.getString("Name");
-                            String cacno=s.getString("AccNo");
-                            String cmqno=s.getString("MqNo");
-                            String cadd=s.getString("Address");
-                            String cmpid=s.getString("complainId");
+                            String cid = s.getString("customerId");
+                            String cname = s.getString("Name");
+                            String cacno = s.getString("AccNo");
+                            String cmqno = s.getString("MqNo");
+                            String cadd = s.getString("Address");
+                            String cmpid = s.getString("complainId");
 
                             child.setCustid(cid);
                             child.setCmpid(cmpid);
@@ -729,7 +693,7 @@ public class ComplainFragment extends Fragment {
                         }
 
 
-                       // details.add(new ComplainLIstClass(aid,aname,acomplaincount,customerlist));
+                        // details.add(new ComplainLIstClass(aid,aname,acomplaincount,customerlist));
 
                         explist.add(parent);
 
@@ -742,9 +706,7 @@ public class ComplainFragment extends Fragment {
 
                 }
 
-            }
-            catch (JSONException e)
-            {
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
 
@@ -752,26 +714,21 @@ public class ComplainFragment extends Fragment {
 
     }
 
-    public void CallVolley(String a)
-    {
+    public void CallVolley(String a) {
 
 
-        final SpotsDialog spload;
-        spload=new SpotsDialog(getActivity(),R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
+        final Dialog spload = Utils.getLoader(getActivity());
         spload.show();
 
         try {
-            //jsonobj=makeHttpRequest(params[0]);
 
-            HashMap<String,String> map=new HashMap<>();
-            map.put("contractorId",cid);
-            map.put("loginuserId",uid);
-            map.put("entityIds",eid);
+            HashMap<String, String> map = new HashMap<>();
+            map.put("contractorId", cid);
+            map.put("loginuserId", uid);
+            map.put("entityIds", eid);
 
             JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
@@ -779,66 +736,52 @@ public class ComplainFragment extends Fragment {
 
                                 spload.dismiss();
                                 arealist.clear();
-                                try
-                                {
-                                    if(response.getString("status").toString().equals("True"))
-                                    {
 
-                                       // Toast.makeText(getContext(), response.getString("message").toString(), Toast.LENGTH_SHORT).show();
+                                if (response.getString("status").equalsIgnoreCase("True")) {
 
-                                        final JSONArray entityarray = response.getJSONArray("UserComplainInfoList");
+                                    // Toast.makeText(getContext(), response.getString("message").toString(), Toast.LENGTH_SHORT).show();
 
-                                        for (int i = 0; i < entityarray.length(); i++) {
-                                            JSONObject e = (JSONObject) entityarray.get(i);
+                                    final JSONArray entityarray = response.getJSONArray("UserComplainInfoList");
 
-                                            HashMap<String,String> map=new HashMap<>();
-                                            map.put("type","Area");
-                                            map.put("areaId",e.getString("areaId").toString());
-                                            map.put("areaname",e.getString("areaname").toString());
-                                            map.put("newcomplaincount", e.getString("newcomplaincount").toString());
-                                            map.put("highcomplaincount",e.getString("highcomplaincount").toString());
-                                            map.put("activecomplaincount",e.getString("activecomplaincount").toString());
-                                            map.put("resolvecomplaincount",e.getString("resolvecomplaincount").toString());
-                                            map.put("newcomplaincommentcount",e.getString("newcomplaincommentcount").toString());
-                                            map.put("highcomplaincommentcount",e.getString("highcomplaincommentcount").toString());
-                                            map.put("activecomplaincommentcount",e.getString("activecomplaincommentcount").toString());
-                                            map.put("resolvecomplaincommentcount",e.getString("resolvecomplaincommentcount").toString());
+                                    for (int i = 0; i < entityarray.length(); i++) {
+                                        JSONObject e = (JSONObject) entityarray.get(i);
 
-                                            arealist.add(map);
+                                        HashMap<String, String> map = new HashMap<>();
+                                        map.put("type", "Area");
+                                        map.put("areaId", e.getString("areaId").toString());
+                                        map.put("areaname", e.getString("areaname").toString());
+                                        map.put("newcomplaincount", e.getString("newcomplaincount").toString());
+                                        map.put("highcomplaincount", e.getString("highcomplaincount").toString());
+                                        map.put("activecomplaincount", e.getString("activecomplaincount").toString());
+                                        map.put("resolvecomplaincount", e.getString("resolvecomplaincount").toString());
+                                        map.put("newcomplaincommentcount", e.getString("newcomplaincommentcount").toString());
+                                        map.put("highcomplaincommentcount", e.getString("highcomplaincommentcount").toString());
+                                        map.put("activecomplaincommentcount", e.getString("activecomplaincommentcount").toString());
+                                        map.put("resolvecomplaincommentcount", e.getString("resolvecomplaincommentcount").toString());
 
-                                        }
+                                        arealist.add(map);
 
-                                        if(arealist.size()==0)
-                                        {
-                                            tvnocomplaint.setVisibility(View.VISIBLE);
-                                        }
-
-                                       // complainDataAdapter.notifyDataSetChanged();
-
-                                        da = new ComplainDataAdapter(getContext(), arealist);
-                                        lvcomplain.setAdapter(da);
-
-                                        swrefresh.setRefreshing(false);
                                     }
-                                    else
-                                    {
-                                       // Toast.makeText(getContext(), response.getString("message").toString(), Toast.LENGTH_SHORT).show();
 
-                                        if(arealist.size()==0)
-                                        {
-                                            tvnocomplaint.setVisibility(View.VISIBLE);
-                                        }
+                                    if (arealist.size() == 0) {
+                                        tvnocomplaint.setVisibility(View.VISIBLE);
+                                    }
+
+                                    // complainDataAdapter.notifyDataSetChanged();
+
+                                    da = new ComplainDataAdapter(getContext(), arealist);
+                                    lvcomplain.setAdapter(da);
+
+                                    swrefresh.setRefreshing(false);
+                                } else {
+                                    // Toast.makeText(getContext(), response.getString("message").toString(), Toast.LENGTH_SHORT).show();
+
+                                    if (arealist.size() == 0) {
+                                        tvnocomplaint.setVisibility(View.VISIBLE);
                                     }
                                 }
-                                catch (JSONException e)
-                                {
-                                    Toast.makeText(getContext(), "JSON:++"+e, Toast.LENGTH_SHORT).show();
-                                }
 
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                            catch (Exception e)
-                            {
+                            } catch (Exception e) {
                                 //Toast.makeText(getContext(), "error--"+e, Toast.LENGTH_SHORT).show();
                                 e.printStackTrace();
                             }
@@ -847,8 +790,8 @@ public class ComplainFragment extends Fragment {
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-
-                           // Toast.makeText(getContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                            spload.dismiss();
+                            // Toast.makeText(getContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -859,33 +802,27 @@ public class ComplainFragment extends Fragment {
             // Adds the JSON object request "obreq" to the request queue
             requestQueue.add(obreq);
 
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Toast.makeText(getContext(), "--" + e, Toast.LENGTH_SHORT).show();
         }
 
     }
 
-    public void CallVolleys(String a)
-    {
+    public void CallVolleys(String a) {
 
 
-        final SpotsDialog spload;
-        spload=new SpotsDialog(getActivity(),R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(false);
+        final Dialog spload = Utils.getLoader(getActivity());
         spload.show();
 
         try {
-            //jsonobj=makeHttpRequest(params[0]);
 
-            HashMap<String,String> map=new HashMap<>();
-            map.put("contractorId",cid);
-            map.put("loginuserId",uid);
-            map.put("entityIds",eid);
+            HashMap<String, String> map = new HashMap<>();
+            map.put("contractorId", cid);
+            map.put("loginuserId", uid);
+            map.put("entityIds", eid);
 
             JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
@@ -895,71 +832,56 @@ public class ComplainFragment extends Fragment {
 
                                 arealist.clear();
 
-                                try
-                                {
-                                    if(response.getString("status").toString().equals("True"))
-                                    {
-                                        final JSONArray entityarray = response.getJSONArray("UserComplainInfoList");
+                                if (response.getString("status").toString().equals("True")) {
+                                    final JSONArray entityarray = response.getJSONArray("UserComplainInfoList");
 
-                                        for (int i = 0; i < entityarray.length(); i++) {
-                                            JSONObject e = (JSONObject) entityarray.get(i);
+                                    for (int i = 0; i < entityarray.length(); i++) {
+                                        JSONObject e = (JSONObject) entityarray.get(i);
 
-                                            HashMap<String,String> map=new HashMap<>();
-                                            map.put("type","User");
-                                            map.put("userId",e.getString("userId").toString());
-                                            map.put("userName",e.getString("userName").toString());
-                                            map.put("newcomplaincount", e.getString("newcomplaincount").toString());
-                                            map.put("highcomplaincount",e.getString("highcomplaincount").toString());
-                                            map.put("activecomplaincount",e.getString("activecomplaincount").toString());
-                                            map.put("resolvecomplaincount",e.getString("resolvecomplaincount").toString());
+                                        HashMap<String, String> map = new HashMap<>();
+                                        map.put("type", "User");
+                                        map.put("userId", e.getString("userId").toString());
+                                        map.put("userName", e.getString("userName").toString());
+                                        map.put("newcomplaincount", e.getString("newcomplaincount").toString());
+                                        map.put("highcomplaincount", e.getString("highcomplaincount").toString());
+                                        map.put("activecomplaincount", e.getString("activecomplaincount").toString());
+                                        map.put("resolvecomplaincount", e.getString("resolvecomplaincount").toString());
 
-                                            map.put("newcomplaincommentcount",e.getString("newcomplaincommentcount").toString());
-                                            map.put("highcomplaincommentcount",e.getString("highcomplaincommentcount").toString());
-                                            map.put("activecomplaincommentcount",e.getString("activecomplaincommentcount").toString());
-                                            map.put("resolvecomplaincommentcount",e.getString("resolvecomplaincommentcount").toString());
+                                        map.put("newcomplaincommentcount", e.getString("newcomplaincommentcount").toString());
+                                        map.put("highcomplaincommentcount", e.getString("highcomplaincommentcount").toString());
+                                        map.put("activecomplaincommentcount", e.getString("activecomplaincommentcount").toString());
+                                        map.put("resolvecomplaincommentcount", e.getString("resolvecomplaincommentcount").toString());
 
 
-                                            arealist.add(map);
+                                        arealist.add(map);
 
-                                        }
-
-                                        if(arealist.size()==0)
-                                        {
-                                            tvnocomplaint.setVisibility(View.VISIBLE);
-                                        }
-
-                                        da = new ComplainDataAdapter(getContext(), arealist);
-                                        lvcomplain.setAdapter(da);
-
-                                        swrefresh.setRefreshing(false);
-                                    }
-                                    else
-                                    {
-                                        if(arealist.size()==0)
-                                        {
-                                            tvnocomplaint.setVisibility(View.VISIBLE);
-                                        }
                                     }
 
-                                }
-                                catch (JSONException e)
-                                {
-                                    Toast.makeText(getContext(), "JSON:++"+e, Toast.LENGTH_SHORT).show();
+                                    if (arealist.size() == 0) {
+                                        tvnocomplaint.setVisibility(View.VISIBLE);
+                                    }
+
+                                    da = new ComplainDataAdapter(getContext(), arealist);
+                                    lvcomplain.setAdapter(da);
+
+                                    swrefresh.setRefreshing(false);
+                                } else {
+                                    if (arealist.size() == 0) {
+                                        tvnocomplaint.setVisibility(View.VISIBLE);
+                                    }
                                 }
 
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                            catch (Exception e)
-                            {
-                                Toast.makeText(getContext(), "error--"+e, Toast.LENGTH_SHORT).show();
+
+                            } catch (Exception e) {
+                                Toast.makeText(getContext(), "error--" + e, Toast.LENGTH_SHORT).show();
                             }
                         }
                     },
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-
-                            Toast.makeText(getContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                            spload.dismiss();
+                            Toast.makeText(getContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -970,48 +892,39 @@ public class ComplainFragment extends Fragment {
             // Adds the JSON object request "obreq" to the request queue
             requestQueue.add(obreq);
 
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Toast.makeText(getContext(), "--" + e, Toast.LENGTH_SHORT).show();
         }
 
     }
 
 
-    public void CallVolleyss(String a)
-    {
+    public void CallVolleyss(String a) {
         JsonObjectRequest obreqs;
 
-        final SpotsDialog spload;
-        spload=new SpotsDialog(getActivity(),R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(false);
+        final Dialog spload = Utils.getLoader(getActivity());
         spload.show();
 
         //URL=siteurl+"/GetComplainListByAreaForCollectionApp?contractorId="+cid+"&loginuserId="+uid+"&entityIds="+pref.getString("Entityids","").toString();
 
-        HashMap<String,String> map=new HashMap<>();
-        map.put("contractorId",cid);
-        map.put("loginuserId",uid);
-        map.put("entityIds",eid);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("contractorId", cid);
+        map.put("loginuserId", uid);
+        map.put("entityIds", eid);
 
-        obreqs = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+        obreqs = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                         try {
+                        try {
 
-                        spload.dismiss();
-
-                        try
-                        {
+                            spload.dismiss();
 
                             explist.clear();
 
                             //Toast.makeText(getContext(), response.toString(), Toast.LENGTH_SHORT).show();
 
-                            if(response.getString("status").toString().equals("True"))
-                            {
+                            if (response.getString("status").toString().equals("True")) {
 
                                 rlmain.setVisibility(View.VISIBLE);
 
@@ -1028,12 +941,12 @@ public class ComplainFragment extends Fragment {
 
                                     //areajsonlist.add(e);
 
-                                   parent = new AreaParent();
+                                    parent = new AreaParent();
 
                                     String aid = e.getString("areaId");
                                     String aname = e.getString("areaname");
                                     String acomplaincount = e.getString("areacomplaincount");
-                                    String commentcount=e.getString("areacommentcount");
+                                    String commentcount = e.getString("areacommentcount");
 
 
                                     parent.setName(aname);
@@ -1042,25 +955,24 @@ public class ComplainFragment extends Fragment {
                                     parent.setChildren(new ArrayList<CustomerChild>());
 
 
-                                    JSONArray jsarr=e.getJSONArray("lstCustInfo");
+                                    JSONArray jsarr = e.getJSONArray("lstCustInfo");
 
                                     //  Toast.makeText(getContext(), "cust lenght="+jsarr.length(), Toast.LENGTH_SHORT).show();
 
-                                    for(int j=0;j<jsarr.length();j++)
-                                    {
+                                    for (int j = 0; j < jsarr.length(); j++) {
                                         child = new CustomerChild();
 
                                         JSONObject s = jsarr.getJSONObject(j);
 
                                         //   Toast.makeText(getContext(),s.toString(), Toast.LENGTH_SHORT).show();
 
-                                        String cid=s.getString("customerId");
-                                        String cname=s.getString("Name");
-                                        String cacno=s.getString("AccNo");
-                                        String cmqno=s.getString("MqNo");
-                                        String cadd=s.getString("Address");
-                                        String cmpid=s.getString("complainId");
-                                        String commentcounts=s.getString("commentcount");
+                                        String cid = s.getString("customerId");
+                                        String cname = s.getString("Name");
+                                        String cacno = s.getString("AccNo");
+                                        String cmqno = s.getString("MqNo");
+                                        String cadd = s.getString("Address");
+                                        String cmpid = s.getString("complainId");
+                                        String commentcounts = s.getString("commentcount");
 
                                         child.setCustid(cid);
                                         child.setCmpid(cmpid);
@@ -1075,50 +987,39 @@ public class ComplainFragment extends Fragment {
                                     }
 
 
-
-
                                     explist.add(parent);
 
                                     //expandableListAdapter.notifyDataSetChanged();
 
                                 }
 
-                                expandableListAdapter=new MyExpandableListAdapter(getContext(),explist);
+                                expandableListAdapter = new MyExpandableListAdapter(getContext(), explist);
                                 explistcomplain.setAdapter(expandableListAdapter);
 
 
                                 swrefresh.setRefreshing(false);
 
 
-                            }
-                            else
-                            {
-                                if(explist.size()==0)
-                                {
+                            } else {
+                                if (explist.size() == 0) {
                                     tvnocomplaint.setVisibility(View.VISIBLE);
 
                                     swrefresh.setRefreshing(false);
                                 }
 
-                               //
-                               // Toast.makeText(getContext(),response.getString("message"), Toast.LENGTH_SHORT).show();
                             }
 
+
+                        } catch (Exception e) {
+                            Toast.makeText(getContext(), "error--" + e, Toast.LENGTH_LONG).show();
                         }
-                        catch (JSONException e)
-                        {
-                            e.printStackTrace();
-                        }
-                            } catch (Exception e) {
-                                Toast.makeText(getContext(), "error--" + e, Toast.LENGTH_LONG).show();
-                            }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
-                        Toast.makeText(getContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                        spload.dismiss();
+                        Toast.makeText(getContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }
                 });
@@ -1130,7 +1031,6 @@ public class ComplainFragment extends Fragment {
         requestQueue.add(obreqs);
 
     }
-
 
 
 }

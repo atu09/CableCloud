@@ -1,6 +1,7 @@
 package com.mtaj.mtaj_08.cableplus_new;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -38,6 +39,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -66,8 +68,6 @@ import dmax.dialog.SpotsDialog;
 public class CustomerFragment extends Fragment {
     private static final String PREF_NAME = "LoginPref";
 
-    SearchView searchView;
-
     CardView cvarea;
 
     LinearLayout llarea;
@@ -83,14 +83,14 @@ public class CustomerFragment extends Fragment {
 
     JSONObject jsonobj;
 
-    TextView tvtotalarea,tvtotalcustomer;
+    TextView tvtotalarea, tvtotalcustomer;
 
-    String siteurl,uid,cid,aid,eid,URL;
+    String siteurl, uid, cid, aid, eid, URL;
 
     SwipeRefreshLayout swrefresh;
     EditText etsearch;
 
-     SharedPreferences pref;
+    SharedPreferences pref;
 
     RequestQueue requestQueue;
 
@@ -98,39 +98,32 @@ public class CustomerFragment extends Fragment {
 
     SimpleAdapter da;
 
-    ArrayList<HashMap<String,String>> customerdetails=new ArrayList<>();
+    ArrayList<HashMap<String, String>> customerdetails = new ArrayList<>();
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        Context con=getActivity();
+        Context con = getActivity();
         View vc;
 
-        final SharedPreferences pref=con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        final SharedPreferences pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        url=getArguments().getString("url");
+        url = getArguments().getString("url");
 
-        if(pref.getBoolean("IsCustomer",true))
-        {
-           if(url.equals("-"))
-           {
-               vc = inflater.inflate(R.layout.layout_offline, null);
-           }
-            else {
-                      // new JSONAsynk().execute(new String[]{url});
-               CallVolleys(url);
-               vc= inflater.inflate(R.layout.customers, container,false);
-           }
+        if (pref.getBoolean("IsCustomer", true)) {
+            if (url.equals("-")) {
+                vc = inflater.inflate(R.layout.layout_offline, null);
+            } else {
+                // new JSONAsynk().execute(new String[]{url});
+                CallVolleys(url);
+                vc = inflater.inflate(R.layout.customers, container, false);
+            }
 
+        } else {
+            vc = inflater.inflate(R.layout.no_access_layout, container, false);
         }
-
-        else
-        {
-            vc= inflater.inflate(R.layout.no_access_layout,container,false);
-        }
-
 
 
         return vc;
@@ -143,17 +136,16 @@ public class CustomerFragment extends Fragment {
 
         final Context con = getActivity();
 
-       pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
 
-
-        if(pref.getBoolean("IsCustomer",true) && !url.equals("-")) {
+        if (pref.getBoolean("IsCustomer", true) && !url.equals("-")) {
 
             cvarea = (CardView) view.findViewById(R.id.card_view2);
 
             tvaddcustomer = (TextView) view.findViewById(R.id.textView30);
 
-            lvcustomer=(ListView)view.findViewById(R.id.listView7);
+            lvcustomer = (ListView) view.findViewById(R.id.listView7);
 
             /*searchView = (SearchView) view.findViewById(R.id.searchView);
             searchView.setQueryHint("Search Customers");
@@ -168,14 +160,14 @@ public class CustomerFragment extends Fragment {
 
             swrefresh = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
 
-            etsearch= (EditText) view.findViewById(R.id.editText20);
+            etsearch = (EditText) view.findViewById(R.id.editText20);
 
             swrefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                 @Override
                 public void onRefresh() {
 
                     swrefresh.setRefreshing(true);
-                           // new JSONAsynk().execute(new String[]{url});
+                    // new JSONAsynk().execute(new String[]{url});
                     CallVolleys(url);
                 }
             });
@@ -184,27 +176,25 @@ public class CustomerFragment extends Fragment {
                 @Override
                 public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 
-                    try{
+                    try {
 
-                    if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                        if (actionId == EditorInfo.IME_ACTION_SEARCH) {
 
-                        URL = siteurl + "/SearchCustomerForCollectionApp?startindex=0&noofrecords=10000000&contractorid=" + cid + "&userId=" + uid + "&entityId=" + eid + "&filterCustomer=" + URLEncoder.encode(v.getText().toString(), "UTF-8");
+                            URL = siteurl + "/SearchCustomerForCollectionApp?startindex=0&noofrecords=10000000&contractorid=" + cid + "&userId=" + uid + "&entityId=" + eid + "&filterCustomer=" + URLEncoder.encode(v.getText().toString(), "UTF-8");
 
-                        SharedPreferences.Editor editor = pref.edit();
-                        editor.remove("from");
-                        editor.putString("from", "Search");
-                        editor.putString("URL", URL);
-                        editor.commit();
+                            SharedPreferences.Editor editor = pref.edit();
+                            editor.remove("from");
+                            editor.putString("from", "Search");
+                            editor.putString("URL", URL);
+                            editor.commit();
 
-                        Intent i = new Intent(getContext(), CustomerListActivity.class);
-                        startActivity(i);
+                            Intent i = new Intent(getContext(), CustomerListActivity.class);
+                            startActivity(i);
 
-                        return true;
-                    }
+                            return true;
+                        }
 
-                    }
-                    catch (Exception e)
-                    {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
 
@@ -237,7 +227,6 @@ public class CustomerFragment extends Fragment {
                     return false;
                 }
             });*/
-
 
 
             lvcustomer.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -274,10 +263,10 @@ public class CustomerFragment extends Fragment {
 
         pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        siteurl=pref.getString("SiteURL","").toString();
-        uid=pref.getString("Userid","").toString();
-        cid=pref.getString("Contracotrid","").toString();
-        eid=pref.getString("Entityids","").toString();
+        siteurl = pref.getString("SiteURL", "").toString();
+        uid = pref.getString("Userid", "").toString();
+        cid = pref.getString("Contracotrid", "").toString();
+        eid = pref.getString("Entityids", "").toString();
     }
 
 
@@ -287,21 +276,20 @@ public class CustomerFragment extends Fragment {
         inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
     }
 
-    public JSONObject makeHttpRequest(String url){
+    public JSONObject makeHttpRequest(String url) {
         DefaultHttpClient httpclient = new DefaultHttpClient();
-        HttpGet httppost=new HttpGet(url);
-        try{
+        HttpGet httppost = new HttpGet(url);
+        try {
             HttpResponse httpresponse = httpclient.execute(httppost);
             HttpEntity httpentity = httpresponse.getEntity();
             is = httpentity.getContent();
-        }catch (ClientProtocolException e){
+        } catch (ClientProtocolException e) {
             e.printStackTrace();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try{
-
+        try {
 
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"), 8);
@@ -310,15 +298,13 @@ public class CustomerFragment extends Fragment {
 
             StringBuilder sb = new StringBuilder();
             String line = null;
-            try{
-                if(reader!=null) {
+            try {
+                if (reader != null) {
 
                     while ((line = reader.readLine()) != null) {
                         sb.append(line);
                     }
-                }
-                else
-                {
+                } else {
                     Toast.makeText(getActivity(), "No data", Toast.LENGTH_SHORT).show();
                 }
 
@@ -326,7 +312,7 @@ public class CustomerFragment extends Fragment {
                 json = sb.toString();
 
                 // json= sb.toString().substring(0, sb.toString().length()-1);
-                try{
+                try {
                     jobj = new JSONObject(json);
 
                     // JSONArray jarrays=new JSONArray(json);
@@ -337,14 +323,14 @@ public class CustomerFragment extends Fragment {
 
                     // jarr =(JSONArray)jsonparse.parse(json);
                     // jobj = jarr.getJSONObject(0);
-                }catch (JSONException e){
-                    Toast.makeText(getActivity(), "**"+e, Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
                 }
-            }catch(IOException e){
-                Toast.makeText(getActivity(), "**"+e, Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
             }
-        }catch (UnsupportedEncodingException e){
-            Toast.makeText(getActivity(), "**"+e, Toast.LENGTH_SHORT).show();
+        } catch (UnsupportedEncodingException e) {
+            Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
         }
        /* catch (ParseException e){
             Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
@@ -353,25 +339,21 @@ public class CustomerFragment extends Fragment {
     }
 
 
-
-    private class JSONAsynk extends AsyncTask<String,String,JSONObject>
-    {
+    private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
 
         private ProgressDialog pDialog;
-       // public DotProgressBar dtprogoress;
+        // public DotProgressBar dtprogoress;
 
-        SpotsDialog spload;
+        Dialog spload;
 
 
-        JSONObject jsn1,jsn,jsnmain;
+        JSONObject jsn1, jsn, jsnmain;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload=new SpotsDialog(getActivity(),R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
+            spload = Utils.getLoader(getActivity());
             spload.show();
 
         }
@@ -381,7 +363,7 @@ public class CustomerFragment extends Fragment {
 
             try {
 
-                jsonobj=makeHttpRequest(params[0]);
+                jsonobj = makeHttpRequest(params[0]);
 
 
             } catch (Exception e) {
@@ -391,7 +373,7 @@ public class CustomerFragment extends Fragment {
                 //Toast.makeText(getActivity(), "--" + e, Toast.LENGTH_SHORT).show();
             }
 
-            return  jsonobj;
+            return jsonobj;
 
 
         }
@@ -400,28 +382,20 @@ public class CustomerFragment extends Fragment {
         protected void onPostExecute(JSONObject json) {
             spload.dismiss();
 
-            try
-            {
+            try {
 
-                if(json.getString("status").toString().equals("True"))
-                {
+                if (json.getString("status").toString().equals("True")) {
 
                     ///Toast.makeText(getContext(), json.toString(), Toast.LENGTH_SHORT).show();
 
-                  String ta=json.getString("TotalArea").toString();
-                   String tc=json.getString("TotalCustomers").toString();
-
-
-
-
+                    String ta = json.getString("TotalArea").toString();
+                    String tc = json.getString("TotalCustomers").toString();
 
                     // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show();
 
                 }
 
-            }
-            catch (JSONException e)
-            {
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
 
@@ -429,57 +403,48 @@ public class CustomerFragment extends Fragment {
 
     }
 
-    public void CallVolleys(String a)
-    {
+    public void CallVolleys(String a) {
         JsonObjectRequest obreqs;
 
-        final SpotsDialog spload;
-        spload=new SpotsDialog(getActivity(),R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
+        final Dialog spload = Utils.getLoader(getActivity());
         spload.show();
 
-       // URL=siteurl+"/GetCustomerDashbordHomeForNewCollectionApp?contractorId="+cid+"&loginuserId="+uid+"&entityIds="+pref.getString("Entityids","").toString();
-
-        HashMap<String,String> map=new HashMap<>();
-        map.put("contractorId",cid);
-        map.put("loginuserId",uid);
-        map.put("entityIds",eid);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("contractorId", cid);
+        map.put("loginuserId", uid);
+        map.put("entityIds", eid);
 
 
-        obreqs = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+        obreqs = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                         try {
+                        try {
 
-                        spload.dismiss();
+                            spload.dismiss();
 
-                        try
-                        {
                             customerdetails.clear();
 
-                            if(response.getString("status").toString().equals("True"))
-                            {
+                            if (response.getString("status").toString().equals("True")) {
 
                                 ///Toast.makeText(getContext(), json.toString(), Toast.LENGTH_SHORT).show();
 
-                                String ta=response.getString("TotalArea").toString();
-                                String tc=response.getString("TotalCustomers").toString();
-                                String tab=response.getString("TotalAssignDevice").toString();
-                                String tuab=response.getString("TotalUnAssignDevice").toString();
+                                String ta = response.getString("TotalArea").toString();
+                                String tc = response.getString("TotalCustomers").toString();
+                                String tab = response.getString("TotalAssignDevice").toString();
+                                String tuab = response.getString("TotalUnAssignDevice").toString();
 
 
-                                HashMap<String,String> map=new HashMap<>();
+                                HashMap<String, String> map = new HashMap<>();
 
-                                map.put("TotalArea",ta);
+                                map.put("TotalArea", ta);
                                 map.put("TotalCustomers", tc);
                                 map.put("TotalAssignDevice", tab);
                                 map.put("TotalUnAssignDevice", tuab);
 
                                 customerdetails.add(map);
 
-                                da=new SimpleAdapter(getContext(),customerdetails,R.layout.layout_customer,new String[]{"TotalArea","TotalCustomers","TotalAssignDevice"},new int[]{R.id.textView65,R.id.textView8,R.id.textView10});
+                                da = new SimpleAdapter(getContext(), customerdetails, R.layout.layout_customer, new String[]{"TotalArea", "TotalCustomers", "TotalAssignDevice"}, new int[]{R.id.textView65, R.id.textView8, R.id.textView10});
 
                                 lvcustomer.setAdapter(da);
 
@@ -490,23 +455,18 @@ public class CustomerFragment extends Fragment {
 
                             }
 
-                        }
-                        catch (JSONException e)
-                        {
+                        } catch (Exception e) {
+                            // Toast.makeText(getContext(), "error--" + e, Toast.LENGTH_LONG).show();
                             e.printStackTrace();
                         }
-
-                    } catch (Exception e) {
-                               // Toast.makeText(getContext(), "error--" + e, Toast.LENGTH_LONG).show();
-                             e.printStackTrace();
-                            }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
-                        Toast.makeText(getContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                        spload.dismiss();
+                        Toast.makeText(getContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }
                 });

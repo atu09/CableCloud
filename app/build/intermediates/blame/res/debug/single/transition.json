@@ -1,10 +1,6 @@
 [
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\transition\\explode.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\transition\\explode.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\transition\\slide_right.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\transition\\slide_right.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\transition\\slide_right.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\transition\\slide_right.xml"
     }
 ]

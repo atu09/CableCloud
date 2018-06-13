@@ -1,5 +1,6 @@
 package com.mtaj.mtaj_08.cableplus_new;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -612,10 +613,7 @@ public class PaymentFragment extends Fragment {
     public void CallVolley(String a, String text) {
 
 
-        final SpotsDialog spload;
-        spload = new SpotsDialog(getActivity(), R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
+        final Dialog spload = Utils.getLoader(getActivity());
         spload.show();
 
         try {
@@ -638,33 +636,27 @@ public class PaymentFragment extends Fragment {
 
                                 spload.dismiss();
 
-                                try {
-                                    if (response.getString("status").toString().equals("True")) {
-                                        String title = null, acno = null, custid = null;
-                                        final JSONArray entityarray = response.getJSONArray("CustomerInfoList");
+                                if (response.getString("status").equalsIgnoreCase("True")) {
+                                    String title = null, acno = null, custid = null;
+                                    final JSONArray entityarray = response.getJSONArray("CustomerInfoList");
 
-                                        for (int i = 0; i < entityarray.length(); i++) {
-                                            JSONObject e = (JSONObject) entityarray.get(i);
+                                    for (int i = 0; i < entityarray.length(); i++) {
+                                        JSONObject e = (JSONObject) entityarray.get(i);
 
-                                            title = e.getString("Name");
-                                            acno = e.getString("AccountNo");
-                                            custid = e.getString("CustomerId");
-                                        }
-
-                                        Intent i = new Intent(getContext(), CustomerDetails.class);
-                                        i.putExtra("cname", title);
-                                        i.putExtra("A/cNo", acno);
-                                        i.putExtra("CustomerId", custid);
-                                        // i.putExtra("from","Payment");
-                                        // editor.putString("from", "Payment");
-                                        startActivity(i);
+                                        title = e.getString("Name");
+                                        acno = e.getString("AccountNo");
+                                        custid = e.getString("CustomerId");
                                     }
 
-                                } catch (JSONException e) {
-                                    Toast.makeText(getContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
+                                    Intent i = new Intent(getContext(), CustomerDetails.class);
+                                    i.putExtra("cname", title);
+                                    i.putExtra("A/cNo", acno);
+                                    i.putExtra("CustomerId", custid);
+                                    // i.putExtra("from","Payment");
+                                    // editor.putString("from", "Payment");
+                                    startActivity(i);
                                 }
 
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
                             } catch (Exception e) {
                                 Toast.makeText(getContext(), "error--" + e, Toast.LENGTH_SHORT).show();
                             }
@@ -673,7 +665,7 @@ public class PaymentFragment extends Fragment {
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-
+                            spload.dismiss();
                             Toast.makeText(getContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
@@ -693,21 +685,14 @@ public class PaymentFragment extends Fragment {
 
     private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
 
-        private ProgressDialog pDialog;
-        // public DotProgressBar dtprogoress;
-
-        SpotsDialog spload;
-
-
+        Dialog spload;
         JSONObject jsn1, jsn, jsnmain;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload = new SpotsDialog(getActivity(), R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
+            spload = Utils.getLoader(getActivity());
             spload.show();
 
         }
@@ -800,16 +785,8 @@ public class PaymentFragment extends Fragment {
     public void CallVolleys(String a) {
         JsonObjectRequest obreqs;
 
-        final SpotsDialog spload;
-        spload = new SpotsDialog(getActivity(), R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-
+        final Dialog spload = Utils.getLoader(getActivity());
         spload.show();
-
-        //jsonobj=makeHttpRequest(params[0]);
-        //  URL=siteurl+"/GetAreaByUserForCollectionApp?contractorId="+cid+"&userId="+uid+"&entityId="+pref.getString("Entityids","").toString();
-
 
         HashMap<String, String> map = new HashMap<>();
         map.put("contractorId", cid);
@@ -818,21 +795,15 @@ public class PaymentFragment extends Fragment {
         map.put("startindex", String.valueOf(mPage));
         map.put("noofrecords", "10");
 
-
         obreqs = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        //  try {
-
-                        spload.dismiss();
-
                         try {
 
+                            spload.dismiss();
 
-                            //  Toast.makeText(getContext(), response.toString(), Toast.LENGTH_SHORT).show();
-
-                            if (response.getString("status").toString().equals("True")) {
+                            if (response.getString("status").equalsIgnoreCase("True")) {
 
                                 rlmain.setVisibility(View.VISIBLE);
                                 DecimalFormat format = new DecimalFormat();
@@ -891,19 +862,16 @@ public class PaymentFragment extends Fragment {
                             }
 
 
-                        } catch (JSONException e) {
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
 
-                           /* } catch (Exception e) {
-                                Toast.makeText(getContext(), "error--" + e, Toast.LENGTH_LONG).show();
-                            }*/
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        spload.dismiss();
                         Toast.makeText(getContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }

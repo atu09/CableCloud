@@ -2,36 +2,28 @@
 <resources>
     <color name="colorPrimary">#5A8BE6</color>
     <color name="colorPrimaryDark">#5A8BE6</color>
-    <color name="colorPrimaryLight">#d3f4af</color>
     <color name="colorAccent">#5EC8F0</color>
     <color name="colorBlack">#000000</color>
-    <color name="statusBarColor">#4f9c0f</color>
 
-    <color name="login_bg">#174259</color>
-    <color name="HomeCardviewcolor1">#aa0000</color>
     <color name="HomeCardviewcolor2">#e59400</color>
-    <color name="Paymentcardviewcolor">#55ffff</color>
     <color name="ToolbarColor">#424242</color>
     <color name="TabColor">#e63900</color>
     <color name="purple">#6200EA</color>
 
-    <color name="grey_50">#FAFAFA</color>
-    <color name="grey_100">#F5F5F5</color>
-    <color name="grey_200">#EEEEEE</color>
     <color name="grey_300">#E0E0E0</color>
     <color name="grey_400">#BDBDBD</color>
     <color name="grey_500">#9E9E9E</color>
     <color name="grey_600">#757575</color>
-    <color name="grey_700">#616161</color>
-    <color name="grey_800">#424242</color>
     <color name="grey_900">#212121</color>
 
 
     <!--Anish-->
     <color name="green">#51A351</color>
 
+<!--
     android:centerColor="#89C34A"
     android:endColor="#669F36"
     android:startColor="#d3f4af"
+-->
 
 </resources>

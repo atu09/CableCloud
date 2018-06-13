@@ -1,58 +1,38 @@
 [
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_track_user.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_track_user.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_skip.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_skip.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_complain_assign.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_complain_assign.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_collection_detail.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_collection_detail.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_complains.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_complains.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_complains.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_complains.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_collection.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_collection.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\search.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\menu\\search.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\search.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\search.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_complain_assign.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_complain_assign.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_collection_detail.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_collection_detail.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_collection.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_collection.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_bottombar.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_bottombar.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_complain_assign1.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_complain_assign1.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_listview_longpress.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_listview_longpress.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_listview_longpress.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_listview_longpress.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_attachment.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_attachment.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\dash_board.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\dash_board.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_complain_assign1.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_complain_assign1.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_dash_board_drawer.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\activity_dash_board_drawer.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_skip.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_skip.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_reminder_complete.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_reminder_complete.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_reminder_complete.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\menu\\menu_reminder_complete.xml"
     }
 ]

@@ -8,8 +8,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -23,15 +25,18 @@ import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
 import com.mtaj.mtaj_08.cableplus_new.BuildConfig;
 import com.mtaj.mtaj_08.cableplus_new.R;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.Locale;
 import java.util.regex.Pattern;
@@ -168,6 +173,36 @@ public class Utils {
         } else {
             return context.getResources().getColor(color);
         }
+    }
+
+    public static Dialog getLoader(Context context) {
+
+        Dialog loaderDialog = new Dialog(context);
+
+        Window window = loaderDialog.getWindow();
+        window.requestFeature(Window.FEATURE_NO_TITLE);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        loaderDialog.setContentView(R.layout.dialog_loader);
+        window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        loaderDialog.setCancelable(false);
+
+        final AVLoadingIndicatorView loadingIndicatorView = (AVLoadingIndicatorView) loaderDialog.findViewById(R.id.loader);
+
+        loaderDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialog) {
+                loadingIndicatorView.show();
+            }
+        });
+
+        loaderDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                loadingIndicatorView.hide();
+            }
+        });
+
+        return loaderDialog;
     }
 
 }

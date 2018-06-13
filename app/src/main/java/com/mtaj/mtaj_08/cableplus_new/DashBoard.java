@@ -3,37 +3,39 @@ package com.mtaj.mtaj_08.cableplus_new;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Parcelable;
+import android.os.StrictMode;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
-import android.text.SpannableString;
-import android.text.style.TextAppearanceSpan;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
-import android.view.MenuInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -42,17 +44,16 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.LinearInterpolator;
-import android.view.animation.RotateAnimation;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -66,6 +67,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.mtaj.mtaj_08.cableplus_new.helpers.MenuData;
+import com.mtaj.mtaj_08.cableplus_new.helpers.MySquareImage;
+import com.mtaj.mtaj_08.cableplus_new.helpers.RvAdapter;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -87,14 +92,17 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import cn.carbs.android.library.MDDialog;
-import de.hdodenhof.circleimageview.CircleImageView;
-import dmax.dialog.SpotsDialog;
 
 public class DashBoard extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, OnCountAssignment {
+        implements OnCountAssignment {
+
+    RvAdapter menuAdapter;
+    List<MenuData> menuDataList = new ArrayList<>();
+    RecyclerView rv_drawer;
 
     String str = "\u20B9";
 
@@ -118,19 +126,9 @@ public class DashBoard extends AppCompatActivity
     public static NonSwipeableViewPager viewPager;
     public static int int_items = 5;
 
-    static Button notifCount;
-    static int mNotifCount = 0;
-
     static String siteurl, uid, cid;
-
-    ArrayList<HashMap<String, String>> Entitylist = new ArrayList<>();
-
-    // String[] edata=new String[]{"All Entities","Entity1","Entity2","Entity3"};
-
     ArrayList<String> enamelist = new ArrayList<>();
     ArrayList<String> eidlist = new ArrayList<>();
-
-    String temp = "";
 
     static String URL;
 
@@ -145,28 +143,35 @@ public class DashBoard extends AppCompatActivity
 
     DBHelper myDB;
 
-    private SQLiteDatabase database;
     public static boolean isOffline = false;
     private FrameLayout containerView;
     private RelativeLayout toolbarContainer;
+    private static final float END_SCALE = 0.7f;
+    SharedPreferences pref;
+    DrawerLayout drawer;
+    public Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_dash_board);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitNetwork().build();
+        StrictMode.setThreadPolicy(policy);
+
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         containerView = (FrameLayout) findViewById(R.id.containerView);
         toolbarContainer = (RelativeLayout) findViewById(R.id.toolbarContainer);
-        /*StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitNetwork().build();
-        StrictMode.setThreadPolicy(policy);*/
 
         mcount = this;
 
         myDB = new DBHelper(this);
 
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("");
-
-        ((TextView) findViewById(R.id.tvTitle)).setText("All Entities");
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Home");
 
         sb.append("All Entities,");
         setSupportActionBar(toolbar);
@@ -176,15 +181,14 @@ public class DashBoard extends AppCompatActivity
 
         toolbar.setTitleTextColor(getResources().getColor(R.color.colorAccent));
 
-        final SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-
+        pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         siteurl = pref.getString("SiteURL", "").toString();
         uid = pref.getString("Userid", "").toString();
         cid = pref.getString("Contracotrid", "").toString();
 
         requestQueue = Volley.newRequestQueue(getApplicationContext());
 
-        if (!pref.getString("RoleId", "").toString().equals("2")) {
+        if (!pref.getString("RoleId", "").equals("2")) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 checkAllPermissions();
             }
@@ -239,10 +243,6 @@ public class DashBoard extends AppCompatActivity
                 final JSONObject jsonobj = makeHttpRequest(URL);
                 if (jsonobj.getString("status").toString().equals("True")) {
 
-                    //database=myDB.getWritableDatabase();
-
-                    //myDB.onCreate(myDB.getWritableDatabase());
-
                     myDB.deleteEntityData();
 
                     enamelist.add("All Entities");
@@ -273,219 +273,38 @@ public class DashBoard extends AppCompatActivity
                 }
             }
 
-            /*for(int i=0;i<enamelist.size();i++)
-            {
-                HashMap<String,String> map=new HashMap<>();
-
-                map.put("entity",enamelist.get(i));
-
-                Entitylist.add(map);
-
-            }*/
         } catch (JSONException e) {
             e.printStackTrace();
         } catch (Exception ex) {
             Toast.makeText(DashBoard.this, "Something Went Wrong... Check Your Internet Connection...", Toast.LENGTH_LONG).show();
         }
 
-        ((TextView) findViewById(R.id.tvTitle)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View v) {
-
-                LayoutInflater li = getLayoutInflater();
-                View vd = li.inflate(R.layout.entitylist_checkbox, null);
-
-                final ListView lv = new ListView(DashBoard.this);
-                lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-                lv.setDividerHeight(0);
-
-                final ArrayAdapter<String> da = new ArrayAdapter<String>(DashBoard.this, android.R.layout.simple_list_item_multiple_choice, enamelist);
-                lv.setAdapter(da);
-
-                if (sb.length() > 0) {
-                    String[] animalsArray = sb.toString().split(",");
-
-                    for (int i = 0; i < animalsArray.length; i++) {
-                        if (animalsArray[i].equals("All Entities")) {
-                            for (int j = 0; j < lv.getCount(); j++) {
-                                lv.setItemChecked(j, true);
-                            }
-                        } else {
-                            lv.setItemChecked(da.getPosition(animalsArray[i]), true);
-                        }
-
-                    }
-                    sb.setLength(0);
-
-                }
-
-                lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                        if (lv.getItemAtPosition(position).equals("All Entities")) {
-                            if (lv.isItemChecked(position)) {
-                                for (int i = 1; i < lv.getCount(); i++) {
-                                    lv.setItemChecked(i, true);
-                                }
-                            } else {
-                                for (int i = 1; i < lv.getCount(); i++) {
-                                    lv.setItemChecked(i, false);
-                                }
-                            }
-                        } else {
-                            if (lv.isItemChecked(0)) {
-                                lv.setItemChecked(0, false);
-                            }
-                        }
-                    }
-                });
-
-                final AlertDialog.Builder builderDialog = new AlertDialog.Builder(DashBoard.this);
-                builderDialog.setView(lv);
-                builderDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        if (!isOffline) {
-
-                            String result = "";
-                            SparseBooleanArray checked = lv.getCheckedItemPositions();
-
-                            if (checked.size() == 0) {
-                                Snackbar.make(v, "Please Select Atleast one Entity...", Snackbar.LENGTH_LONG).show();
-                            } else {
-
-                                //  Toast.makeText(DashBoard.this, "iiii"+checked.size(), Toast.LENGTH_SHORT).show();
-                                //   Toast.makeText(DashBoard.this, da.getItem(checked.keyAt(0)), Toast.LENGTH_SHORT).show();
-
-                                for (int i = 0; i < checked.size(); i++) {
-                                    int position = checked.keyAt(i);
-
-                                    if (checked.valueAt(i) && lv.isItemChecked(position)) {
-                                        if (da.getItem(position).equals("All Entities")) {
-                                            //  toolbar.setTitle(da.getItem(position));
-                                            ((TextView) findViewById(R.id.tvTitle)).setText(da.getItem(position));
-                                            sb.append("All Entities,");
-                                            break;
-                                        } else {
-                                            if (sb.length() > 0)
-                                                sb.append(",");
-                                            sb.append(da.getItem(position));
-                                        }
-
-                                    }
-                                }
-
-                                if (!sb.toString().equals("All Entities,") && sb.length() > 0) {
-                                    //  toolbar.setTitle(sb.toString());
-                                    ((TextView) findViewById(R.id.tvTitle)).setText(sb.toString());
-
-                                    //sb1=sb;
-
-                                    sb1.setLength(0);
-
-                                    if (sb.length() > 0) {
-                                        String[] animalsArray = sb.toString().split(",");
-                                        for (int i = 0; i < animalsArray.length; i++) {
-                                            if (sb1.length() > 0)
-                                                sb1.append(",");
-                                            sb1.append(eidlist.get(da.getPosition(animalsArray[i]) - 1));
-                                        }
-
-
-                                    }
-
-                                    //Toast.makeText(DashBoard.this, sb1.toString(), Toast.LENGTH_SHORT).show();
-
-                                    URL = siteurl + "/GetDashbordHomeForNewCollectionApp?contractorId=" + cid + "&loginuserId=" + uid + "&entityIds=" + sb1.toString();
-
-                                    //bundle.putString("entity", sb1.toString());
-                                    bundle.putString("url", URL);
-
-                                    //SharedPreferences pref=getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-                                    SharedPreferences.Editor editor = pref.edit();
-                                    editor.remove("Entityids");
-                                    editor.putString("Entityids", sb1.toString());
-                                    editor.commit();
-
-                                    HomeFragment hf = new HomeFragment();
-                                    hf.setArguments(bundle);
-
-                                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                                    ft.detach(hf);
-                                    ft.attach(hf);
-                                    ft.replace(R.id.containerView, new TabFragment());
-                                    ft.commit();
-                                } else {
-                                    sb1.setLength(0);
-
-                                    for (int i = 0; i < eidlist.size(); i++) {
-                                        if (sb1.length() > 0)
-                                            sb1.append(",");
-                                        sb1.append(eidlist.get(i));
-                                    }
-
-                                    // Toast.makeText(DashBoard.this, sb1.toString(), Toast.LENGTH_SHORT).show();
-
-                                    URL = siteurl + "/GetDashbordHomeForNewCollectionApp?contractorId=" + cid + "&loginuserId=" + uid + "&entityIds=" + sb1.toString();
-
-                                    //bundle.putString("entity", sb1.toString());
-                                    bundle.putString("url", URL);
-
-                                    //SharedPreferences pref=getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-                                    SharedPreferences.Editor editor = pref.edit();
-                                    editor.remove("Entityids");
-                                    editor.putString("Entityids", sb1.toString());
-                                    editor.commit();
-
-                                    HomeFragment hf = new HomeFragment();
-                                    hf.setArguments(bundle);
-
-                                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                                    ft.detach(hf);
-                                    ft.attach(hf);
-                                    ft.replace(R.id.containerView, new TabFragment());
-                                    ft.commit();
-                                }
-
-
-                            }
-                        } else {
-                            Toast.makeText(DashBoard.this, "Sorry.. You are Offline..!! ", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
-                builderDialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
-
-                final AlertDialog alert = builderDialog.create();
-                alert.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
-                alert.show();
-
-            }
-        });
-
 
         // getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
+        drawer.setScrimColor(Color.TRANSPARENT);
         toggle.syncState();
 
         drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
+                // Scale the View based on current slide offset
+                final float diffScaledOffset = slideOffset * (1 - END_SCALE);
+
+/*
+                final float offsetScale = 1 - diffScaledOffset;
+                binding.layoutMap.mapView.setScaleX(offsetScale);
+                binding.layoutMap.mapView.setScaleY(offsetScale);
+*/
+
+                // Translate the View, accounting for the scaled width
                 final float xOffset = drawerView.getWidth() * slideOffset;
-                containerView.setTranslationX(xOffset);
+                //final float xOffsetDiff = containerView.getWidth() * diffScaledOffset / 2;
+                //final float xTranslation = xOffset - xOffsetDiff;
                 toolbarContainer.setTranslationX(xOffset);
+                containerView.setTranslationX(xOffset);
             }
 
             @Override
@@ -505,45 +324,352 @@ public class DashBoard extends AppCompatActivity
         });
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        rv_drawer = navigationView.findViewById(R.id.rv_navigationDrawer);
 
 
-        Menu menu = navigationView.getMenu();
+        menuDataList.add(new MenuData("Home", R.drawable.ic_home_black_x24dp));
+        menuDataList.add(new MenuData("Payments", R.drawable.rupee));
+        menuDataList.add(new MenuData("Collections", R.drawable.money_bag));
+        menuDataList.add(new MenuData("Complaints", R.drawable.complain_call));
+        menuDataList.add(new MenuData("Customers", R.drawable.group));
+        menuDataList.add(new MenuData("Sync", R.drawable.sync_icon));
+        menuDataList.add(new MenuData("Logout", R.drawable.logout_icon));
 
-      /*  *//*----Anish: for changin header item text color----*//*
-        MenuItem tools = menu.findItem(R.id.navMenuMainItem);
-        SpannableString s = new SpannableString(tools.getTitle());
-        s.setSpan(new TextAppearanceSpan(this, R.style.navigationHeaderTextStyle), 0, s.length(), 0);
-        tools.setTitle(s);
-        *//*----***---*/
 
-        View h = navigationView.getHeaderView(0);
-        TextView txtname = (TextView) h.findViewById(R.id.txtname);
-        ImageView cprofile = (ImageView) h.findViewById(R.id.profile_image);
-//        cprofile.setBorderColor(Color.TRANSPARENT);
+        menuAdapter = new RvAdapter(new RvAdapter.AdapterListener() {
+            @Override
+            public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                View itemView = getLayoutInflater().inflate(R.layout.cell_drawer, parent, false);
+                return new MenuHolder(itemView);
+            }
 
+            @Override
+            public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+                final MenuHolder menuHolder = (MenuHolder) holder;
+
+                final MenuData menuData = menuDataList.get(position);
+
+                menuHolder.title.setText(menuData.title);
+                menuHolder.title.setTextColor(Color.WHITE);
+
+                menuHolder.imageView.setImageResource(menuData.image);
+                menuHolder.imageView.setColorFilter(Color.WHITE);
+
+
+                menuHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        if (menuHolder.title.toString().equalsIgnoreCase(toolbar.getTitle().toString())) {
+                            return;
+                        }
+
+                        toolbar.setTitle(menuData.title);
+                        if (drawer.isDrawerOpen(GravityCompat.START)) {
+                            drawer.closeDrawer(GravityCompat.START, true);
+                        }
+
+                        switch (position) {
+                            case 0:
+                                loadEntities();
+                                break;
+                            case 1:
+                            case 2:
+                            case 3:
+                            case 4:
+                                viewPager.setCurrentItem(position);
+                                break;
+                            case 5:
+                                Intent i = new Intent(getApplicationContext(), SyncData.class);
+                                startActivity(i);
+                                break;
+                            case 6:
+                                boolean isConnected = ConnectivityReceiver.isConnected();
+
+                                if (!isConnected) {
+
+                                    if (myDB.ReceiptCount() > 0) {
+
+                                        //Toast.makeText(DashBoard.this, "Logout", Toast.LENGTH_SHORT).show();
+
+                                        MDDialog.Builder adb = new MDDialog.Builder(DashBoard.this)
+                                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                                .setTitle("LOGOUT CONFIRMATION")
+                                                .setPositiveButton("SYNC", new View.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(View v) {
+
+                                                        // syncReceipts();
+
+                                                    }
+
+                                                })
+                                                .setNegativeButton("CLOSE", null);
+
+                                        adb.setWidthMaxDp(600);
+                                        adb.setShowTitle(true);
+                                        adb.setShowButtons(true);
+                                        adb.setShowPositiveButton(false);
+                                        adb.setBackgroundCornerRadius(5);
+                                        adb.setCancelable(true);
+                                        adb.setContentTextSizeDp(16);
+                                        adb.setContentPaddingDp(10);
+                                        adb.setContentTextColor(Color.BLACK);
+                                        adb.setMessages(new CharSequence[]{"\n You have " + myDB.ReceiptCount() + " Payment Receipt Left to Sync.." + "\n \n" + "Its not Safe to Logout"});
+
+                                        MDDialog dialog = adb.create();
+                                        dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+                                        dialog.show();
+
+                                    } else {
+                                        Toast.makeText(DashBoard.this, "Sorry.. You can not Logout in offline mode.!!", Toast.LENGTH_LONG).show();
+                                    }
+                                } else {
+
+                                    if (myDB.ReceiptCount() > 0) {
+
+                                        //Toast.makeText(DashBoard.this, "Logout", Toast.LENGTH_SHORT).show();
+
+                                        MDDialog.Builder adb = new MDDialog.Builder(DashBoard.this)
+                                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                                .setTitle("LOGOUT CONFIRMATION")
+                                                .setPositiveButton("SYNC", new View.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(View v) {
+
+                                                        syncReceipts();
+
+                                                    }
+
+                                                })
+                                                .setNegativeButton("CANCEL", null);
+
+                                        adb.setWidthMaxDp(600);
+                                        adb.setShowTitle(true);
+                                        adb.setShowButtons(true);
+                                        adb.setBackgroundCornerRadius(5);
+                                        adb.setCancelable(true);
+                                        adb.setContentTextSizeDp(16);
+                                        adb.setContentTextColor(Color.BLACK);
+                                        adb.setMessages(new CharSequence[]{"\n You have " + myDB.ReceiptCount() + " Payment Receipt Left to Sync.." + "\n \n" + "Are you sure want to Logout?"});
+
+                                        MDDialog dialog = adb.create();
+                                        dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+                                        dialog.show();
+
+                                    } else {
+
+
+                                        URL = siteurl + "/UpdateAndroidDeviceId";
+                                        CallVolleyUpdateDeviceID(URL);
+
+
+                                    }
+                                }
+                                break;
+                        }
+                    }
+                });
+            }
+
+            @Override
+            public int getItemCount() {
+                return menuDataList.size();
+            }
+
+            @Override
+            public int getItemViewType(int position) {
+                return 0;
+            }
+
+            @Override
+            public long getItemId(int position) {
+                return position;
+            }
+        });
+        rv_drawer.setAdapter(menuAdapter);
 
         mFragmentManager = getSupportFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
         mFragmentTransaction.replace(R.id.containerView, new TabFragment()).commit();
 
-
         toolbar.setTitleTextColor(Color.WHITE);
-
-     /* Rcount=Badge_Remider_Alert.rcount;
-        Acount=Badge_Remider_Alert.acount;*/
-
 
         String s1 = pref.getString("SiteURL", "").toString();
         String s2 = pref.getString("Contracotrid", "").toString();
         String s3 = pref.getString("LoginStatus", "").toString();
         String s4 = pref.getString("LoginName", "").toString();
 
-        txtname.setText(s4);
+        TextView tvUserName = (TextView) findViewById(R.id.tvUserName);
+        tvUserName.setText(s4);
+        tvUserName.setTypeface(Typeface.createFromAsset(this.getAssets(), "font/pacifico.ttf"));
 
-        //Toast.makeText(DashBoard.this, s1, Toast.LENGTH_SHORT).show();
+    }
+
+    public void loadEntities() {
+        LayoutInflater li = getLayoutInflater();
+        View vd = li.inflate(R.layout.entitylist_checkbox, null);
+
+        final ListView lv = new ListView(DashBoard.this);
+        lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        lv.setDividerHeight(0);
+
+        final ArrayAdapter<String> da = new ArrayAdapter<String>(DashBoard.this, android.R.layout.simple_list_item_multiple_choice, enamelist);
+        lv.setAdapter(da);
+
+        if (sb.length() > 0) {
+            String[] animalsArray = sb.toString().split(",");
+
+            for (int i = 0; i < animalsArray.length; i++) {
+                if (animalsArray[i].equals("All Entities")) {
+                    for (int j = 0; j < lv.getCount(); j++) {
+                        lv.setItemChecked(j, true);
+                    }
+                } else {
+                    lv.setItemChecked(da.getPosition(animalsArray[i]), true);
+                }
+
+            }
+            sb.setLength(0);
+
+        }
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if (lv.getItemAtPosition(position).equals("All Entities")) {
+                    if (lv.isItemChecked(position)) {
+                        for (int i = 1; i < lv.getCount(); i++) {
+                            lv.setItemChecked(i, true);
+                        }
+                    } else {
+                        for (int i = 1; i < lv.getCount(); i++) {
+                            lv.setItemChecked(i, false);
+                        }
+                    }
+                } else {
+                    if (lv.isItemChecked(0)) {
+                        lv.setItemChecked(0, false);
+                    }
+                }
+            }
+        });
+
+        final AlertDialog.Builder builderDialog = new AlertDialog.Builder(DashBoard.this);
+        builderDialog.setView(lv);
+        builderDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(GravityCompat.START, true);
+                }
+
+                if (!isOffline) {
+
+                    String result = "";
+                    SparseBooleanArray checked = lv.getCheckedItemPositions();
+
+                    if (checked.size() == 0) {
+                        Toast.makeText(DashBoard.this, "Please Select Atleast one Entity...", Toast.LENGTH_LONG).show();
+                    } else {
+
+                        for (int i = 0; i < checked.size(); i++) {
+                            int position = checked.keyAt(i);
+
+                            if (checked.valueAt(i) && lv.isItemChecked(position)) {
+                                if (da.getItem(position).equals("All Entities")) {
+                                    //((TextView) findViewById(R.id.tvTitle)).setText(da.getItem(position));
+                                    sb.append("All Entities,");
+                                    break;
+                                } else {
+                                    if (sb.length() > 0)
+                                        sb.append(",");
+                                    sb.append(da.getItem(position));
+                                }
+
+                            }
+                        }
+
+                        if (!sb.toString().equals("All Entities,") && sb.length() > 0) {
+                            //((TextView) findViewById(R.id.tvTitle)).setText(sb.toString());
+
+                            sb1.setLength(0);
+
+                            if (sb.length() > 0) {
+                                String[] animalsArray = sb.toString().split(",");
+                                for (int i = 0; i < animalsArray.length; i++) {
+                                    if (sb1.length() > 0)
+                                        sb1.append(",");
+                                    sb1.append(eidlist.get(da.getPosition(animalsArray[i]) - 1));
+                                }
+                            }
+
+                            URL = siteurl + "/GetDashbordHomeForNewCollectionApp?contractorId=" + cid + "&loginuserId=" + uid + "&entityIds=" + sb1.toString();
+
+                            //bundle.putString("entity", sb1.toString());
+                            bundle.putString("url", URL);
+
+                            //SharedPreferences pref=getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = pref.edit();
+                            editor.remove("Entityids");
+                            editor.putString("Entityids", sb1.toString());
+                            editor.commit();
+
+                            HomeFragment hf = new HomeFragment();
+                            hf.setArguments(bundle);
+
+                            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                            ft.detach(hf);
+                            ft.attach(hf);
+                            ft.replace(R.id.containerView, new TabFragment());
+                            ft.commit();
+                        } else {
+                            sb1.setLength(0);
+
+                            for (int i = 0; i < eidlist.size(); i++) {
+                                if (sb1.length() > 0)
+                                    sb1.append(",");
+                                sb1.append(eidlist.get(i));
+                            }
+
+                            URL = siteurl + "/GetDashbordHomeForNewCollectionApp?contractorId=" + cid + "&loginuserId=" + uid + "&entityIds=" + sb1.toString();
+
+                            bundle.putString("url", URL);
+
+                            SharedPreferences.Editor editor = pref.edit();
+                            editor.remove("Entityids");
+                            editor.putString("Entityids", sb1.toString());
+                            editor.commit();
+
+                            HomeFragment hf = new HomeFragment();
+                            hf.setArguments(bundle);
+
+                            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                            ft.detach(hf);
+                            ft.attach(hf);
+                            ft.replace(R.id.containerView, new TabFragment());
+                            ft.commit();
+                        }
 
 
+                    }
+                } else {
+                    Toast.makeText(DashBoard.this, "Sorry.. You are Offline..!! ", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        builderDialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+
+        final AlertDialog alert = builderDialog.create();
+        alert.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+        alert.show();
     }
 
     public void checkAllPermissions() {
@@ -602,10 +728,8 @@ public class DashBoard extends AppCompatActivity
             }*/
     }
 
-
     @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case 1: {
 
@@ -618,29 +742,9 @@ public class DashBoard extends AppCompatActivity
                         Intent service = new Intent(DashBoard.this, TestLocationService.class);
                         startService(service);
                     }
-
-
                 }
 
-               /* // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-
-
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
-                } else if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_DENIED) {
-
-                }*/
-
-
-                return;
             }
-
-            // other 'case' lines to check for other
-            // permissions this app might request
         }
     }
 
@@ -659,25 +763,31 @@ public class DashBoard extends AppCompatActivity
         inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
     }
 
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
-
-            finishAffinity();
-
-            try {
-                trimCache(getApplicationContext()); //if trimCache is static
-            } catch (Exception e) {
-                e.printStackTrace();
+            if (doubleBackToExitPressedOnce) {
+                finishAffinity();
+                trimCache();
+                return;
             }
+            doubleBackToExitPressedOnce = true;
+            Utils.popToast(this, "Tap again to exit!");
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce = false;
+                }
+            }, 2000);
         }
     }
 
-    public void trimCache(Context con) {
+    public void trimCache() {
         try {
             File dir = getCacheDir();
             if (dir != null && dir.isDirectory()) {
@@ -687,7 +797,6 @@ public class DashBoard extends AppCompatActivity
             // TODO: handle exception
         }
     }
-
 
     public void clearApplicationData() {
         File cache = getCacheDir();
@@ -735,97 +844,6 @@ public class DashBoard extends AppCompatActivity
 
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.dash_board, menu);
-
-        //MenuItem item=menu.findItem(R.id.action_reminders);
-        //   item.getIcon().setColorFilter(Color.argb(255, 255, 255, 255), android.graphics.PorterDuff.Mode.MULTIPLY);
-       /* MenuItemCompat.setActionView(item, R.layout.feed_update_count);
-        View count = MenuItemCompat.getActionView(item);
-
-        LayoutInflater li=getLayoutInflater();
-        View v1=li.inflate(R.layout.feed_update_count,null);
-        notifCount = (Button)count.findViewById(R.id.notif_count);
-        notifCount.setText(String.valueOf(mNotifCount));*/
-
-     /*   Toast.makeText(DashBoard.this, String.valueOf(Rcount), Toast.LENGTH_SHORT).show();
-        Toast.makeText(DashBoard.this,String.valueOf(Acount) , Toast.LENGTH_SHORT).show();
-
-        mToolbarMenu = menu;
-        createCartBadge(Rcount);
-        createCartBadge_alert(Acount);*/
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-      /*  if (id == R.id.action_reminders) {
-
-            if(Rcount==0) {
-            }
-            else {
-                    Intent i = new Intent(getApplicationContext(), ReminderListActivity.class);
-                    startActivity(i);
-            }
-
-
-
-            return true;
-        }
-
-       else if (id == R.id.action_alert) {
-
-            if(Acount==0) {
-            }
-            else {
-
-                Intent i = new Intent(getApplicationContext(), AlertListActivity.class);
-                startActivity(i);
-            }
-            return true;
-        }
-
-        else if(id== R.id.action_comment)
-        {
-
-            if(CustComCount==0) {
-            }
-            else {
-
-                Intent i = new Intent(getApplicationContext(), CustomerCommentList.class);
-                startActivity(i);
-            }
-
-            return true;
-
-        }
-
-       else if(id== R.id.action_sync)
-        {
-            //Toast.makeText(DashBoard.this,"r="+ myDB.ReceiptCount(), Toast.LENGTH_SHORT).show();
-
-
-            Intent i = new Intent(getApplicationContext(), SyncData.class);
-            startActivity(i);
-
-            return true;
-        }
-*/
-        return super.onOptionsItemSelected(item);
-    }
-
-
     @Override
     public void onUserInteraction() {
         super.onUserInteraction();
@@ -843,262 +861,6 @@ public class DashBoard extends AppCompatActivity
 
         return super.onPrepareOptionsMenu(paramMenu);
 
-    }
-
-
-    /*private void startActivityWithOptions(Intent intent) {
-        ActivityOptions transitionActivity =
-                ActivityOptions.makeSceneTransitionAnimation(DashBoard.this);
-        startActivity(intent, transitionActivity.toBundle());
-    }*/
-
-
-  /*  private void createCartBadge(int paramInt) {
-        if (Build.VERSION.SDK_INT <= 15) {
-            return;
-        }
-        MenuItem cartItem = this.mToolbarMenu.findItem(R.id.action_reminders);
-        LayerDrawable localLayerDrawable=(LayerDrawable)cartItem.getIcon();
-
-        Drawable cartBadgeDrawable = localLayerDrawable
-                .findDrawableByLayerId(R.id.ic_badge);
-        BadgeDrawable badgeDrawable;
-        if ((cartBadgeDrawable != null)
-                && ((cartBadgeDrawable instanceof BadgeDrawable))
-                && (paramInt < 10)) {
-            badgeDrawable = (BadgeDrawable) cartBadgeDrawable;
-        } else {
-            badgeDrawable = new BadgeDrawable(this);
-        }
-        badgeDrawable.setCount(paramInt);
-
-        localLayerDrawable.mutate();
-        localLayerDrawable.setDrawableByLayerId(R.id.ic_badge, badgeDrawable);
-
-        cartItem.setIcon(localLayerDrawable);
-    }
-
-    private void createCartBadge_alert(int paramInt) {
-        if (Build.VERSION.SDK_INT <= 15) {
-            return;
-        }
-        MenuItem cartItem = this.mToolbarMenu.findItem(R.id.action_alert);
-        LayerDrawable localLayerDrawable=(LayerDrawable)cartItem.getIcon();
-
-        Drawable cartBadgeDrawable = localLayerDrawable
-                .findDrawableByLayerId(R.id.ic_badges);
-        BadgeDrawable badgeDrawable;
-        if ((cartBadgeDrawable != null)
-                && ((cartBadgeDrawable instanceof BadgeDrawable))
-                && (paramInt < 10)) {
-            badgeDrawable = (BadgeDrawable) cartBadgeDrawable;
-        } else {
-            badgeDrawable = new BadgeDrawable(this);
-        }
-        badgeDrawable.setCount(paramInt);
-        localLayerDrawable.mutate();
-        localLayerDrawable.setDrawableByLayerId(R.id.ic_badges, badgeDrawable);
-        cartItem.setIcon(localLayerDrawable);
-
-        RotateAnimation rotate = new RotateAnimation(0, 180, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        rotate.setDuration(5000);
-        rotate.setInterpolator(new LinearInterpolator());
-    }
-*/
-    /*public void createCartBadge_complaint(int paramInt) {
-        if (Build.VERSION.SDK_INT <= 15) {
-            return;
-        }
-        MenuItem cartItem = this.mToolbarMenu.findItem(R.id.action_complaint);
-        LayerDrawable localLayerDrawable=(LayerDrawable)cartItem.getIcon();
-
-        Drawable cartBadgeDrawable = localLayerDrawable
-                .findDrawableByLayerId(R.id.ic_badgess);
-        BadgeDrawables badgeDrawable;
-        if ((cartBadgeDrawable != null)
-                && ((cartBadgeDrawable instanceof BadgeDrawables))
-                && (paramInt < 10)) {
-            badgeDrawable = (BadgeDrawables) cartBadgeDrawable;
-        } else {
-            badgeDrawable = new BadgeDrawables(this);
-        }
-        badgeDrawable.setCount(paramInt);
-        localLayerDrawable.mutate();
-        localLayerDrawable.setDrawableByLayerId(R.id.ic_badgess, badgeDrawable);
-        cartItem.setIcon(localLayerDrawable);
-    }*/
-
-
-/*
-    public void createCartBadge_customer_comment_count(int paramInt) {
-        if (Build.VERSION.SDK_INT <= 15) {
-            return;
-        }
-        MenuItem cartItem = this.mToolbarMenu.findItem(R.id.action_comment);
-        LayerDrawable localLayerDrawable=(LayerDrawable)cartItem.getIcon();
-
-        Drawable cartBadgeDrawable = localLayerDrawable
-                .findDrawableByLayerId(R.id.ic_badgess);
-        BadgeDrawables badgeDrawable;
-        if ((cartBadgeDrawable != null)
-                && ((cartBadgeDrawable instanceof BadgeDrawables))
-                && (paramInt < 10)) {
-            badgeDrawable = (BadgeDrawables) cartBadgeDrawable;
-        } else {
-            badgeDrawable = new BadgeDrawables(this);
-        }
-        badgeDrawable.setCount(paramInt);
-        localLayerDrawable.mutate();
-        localLayerDrawable.setDrawableByLayerId(R.id.ic_badgess, badgeDrawable);
-        cartItem.setIcon(localLayerDrawable);
-    }
-*/
-
-
-    public void createCartBadge_complaint_comment(int paramInt) {
-        if (Build.VERSION.SDK_INT <= 15) {
-            return;
-        }
-        //MenuItem cartItem = this.mToolbarMenu.findItem(R.id.action_complaint);
-        LayerDrawable localLayerDrawable = (LayerDrawable) tabLayout.getTabAt(3).getIcon();
-
-        Drawable cartBadgeDrawable = localLayerDrawable
-                .findDrawableByLayerId(R.id.ic_badgess);
-        BadgeDrawabless badgeDrawable;
-        if ((cartBadgeDrawable != null)
-                && ((cartBadgeDrawable instanceof BadgeDrawables))
-                && (paramInt < 10)) {
-            badgeDrawable = (BadgeDrawabless) cartBadgeDrawable;
-        } else {
-            badgeDrawable = new BadgeDrawabless(this);
-        }
-        badgeDrawable.setCount(paramInt);
-        localLayerDrawable.mutate();
-        localLayerDrawable.setDrawableByLayerId(R.id.ic_badgess, badgeDrawable);
-        tabLayout.getTabAt(3).setIcon(localLayerDrawable);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-
-        if (id == R.id.nav_complain) {
-
-            viewPager.setCurrentItem(3);
-
-            // Handle the camera action
-        } else if (id == R.id.nav_payment) {
-
-            viewPager.setCurrentItem(1);
-
-        } else if (id == R.id.nav_collection) {
-
-            viewPager.setCurrentItem(2);
-
-        } else if (id == R.id.nav_customer) {
-
-            viewPager.setCurrentItem(4);
-
-        } else if (id == R.id.nav_sync) {
-
-            //Toast.makeText(DashBoard.this,"R="+ myDB.ReceiptCount(), Toast.LENGTH_SHORT).show();
-
-            Intent i = new Intent(getApplicationContext(), SyncData.class);
-            startActivity(i);
-
-        } else if (id == R.id.nav_logout) {
-
-            boolean isConnected = ConnectivityReceiver.isConnected();
-
-            if (!isConnected) {
-
-                if (myDB.ReceiptCount() > 0) {
-
-                    //Toast.makeText(DashBoard.this, "Logout", Toast.LENGTH_SHORT).show();
-
-                    MDDialog.Builder adb = new MDDialog.Builder(DashBoard.this)
-                            .setIcon(android.R.drawable.ic_dialog_alert)
-                            .setTitle("LOGOUT CONFIRMATION")
-                            .setPositiveButton("SYNC", new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-
-                                    // syncReceipts();
-
-                                }
-
-                            })
-                            .setNegativeButton("CLOSE", null);
-
-                    adb.setWidthMaxDp(600);
-                    adb.setShowTitle(true);
-                    adb.setShowButtons(true);
-                    adb.setShowPositiveButton(false);
-                    adb.setBackgroundCornerRadius(5);
-                    adb.setCancelable(true);
-                    adb.setContentTextSizeDp(16);
-                    adb.setContentPaddingDp(10);
-                    adb.setContentTextColor(Color.BLACK);
-                    adb.setMessages(new CharSequence[]{"\n You have " + myDB.ReceiptCount() + " Payment Receipt Left to Sync.." + "\n \n" + "Its not Safe to Logout"});
-
-                    MDDialog dialog = adb.create();
-                    dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
-                    dialog.show();
-
-                } else {
-                    Toast.makeText(DashBoard.this, "Sorry.. You can not Logout in offline mode.!!", Toast.LENGTH_LONG).show();
-                }
-            } else {
-
-                if (myDB.ReceiptCount() > 0) {
-
-                    //Toast.makeText(DashBoard.this, "Logout", Toast.LENGTH_SHORT).show();
-
-                    MDDialog.Builder adb = new MDDialog.Builder(DashBoard.this)
-                            .setIcon(android.R.drawable.ic_dialog_alert)
-                            .setTitle("LOGOUT CONFIRMATION")
-                            .setPositiveButton("SYNC", new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-
-                                    syncReceipts();
-
-                                }
-
-                            })
-                            .setNegativeButton("CANCEL", null);
-
-                    adb.setWidthMaxDp(600);
-                    adb.setShowTitle(true);
-                    adb.setShowButtons(true);
-                    adb.setBackgroundCornerRadius(5);
-                    adb.setCancelable(true);
-                    adb.setContentTextSizeDp(16);
-                    adb.setContentTextColor(Color.BLACK);
-                    adb.setMessages(new CharSequence[]{"\n You have " + myDB.ReceiptCount() + " Payment Receipt Left to Sync.." + "\n \n" + "Are you sure want to Logout?"});
-
-                    MDDialog dialog = adb.create();
-                    dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
-                    dialog.show();
-
-                } else {
-
-
-                    URL = siteurl + "/UpdateAndroidDeviceId";
-                    CallVolleyUpdateDeviceID(URL);
-
-
-                }
-            }
-
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 
     public JSONObject makeHttpRequest(String url) {
@@ -1232,13 +994,9 @@ public class DashBoard extends AppCompatActivity
         }
     }
 
-
     public void CallVolleyUpdateDeviceID(String a) {
 
-        final SpotsDialog spload;
-        spload = new SpotsDialog(DashBoard.this, R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
+        final Dialog spload = Utils.getLoader(this);
         spload.show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, a,
@@ -1252,34 +1010,21 @@ public class DashBoard extends AppCompatActivity
 
                             JSONObject response1 = new JSONObject(response);
 
-                            try {
+                            if (response1.getString("status").equalsIgnoreCase("True")) {
 
-                                if (response1.getString("status").toString().equals("True")) {
+                                //Toast.makeText(Dashboard.this, response1.getString("message").toString(), Toast.LENGTH_SHORT).show();
 
-                                    //Toast.makeText(Dashboard.this, response1.getString("message").toString(), Toast.LENGTH_SHORT).show();
+                                SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = pref.edit();
+                                editor.clear().apply();
 
-                                    SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-                                    SharedPreferences.Editor editor = pref.edit();
-                                    editor.clear().apply();
+                                myDB.ClearAllData();
 
-                                    myDB.ClearAllData();
-
-                                    stopService(new Intent(getApplicationContext(), TestLocationService.class));
-
-                                    Intent i = new Intent(getApplicationContext(), SplashScreenActivity.class);
-                                    startActivity(i);
-
-                                    finish();
-                                } else {
-                                    // Toast.makeText(Dashboard.this, "Invalid Operator Code...", Toast.LENGTH_SHORT).show();
-                                }
-
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                                //Toast.makeText(Dashboard.this, "error--" + e, Toast.LENGTH_LONG).show();
+                                stopService(new Intent(getApplicationContext(), TestLocationService.class));
+                                Intent i = new Intent(getApplicationContext(), SplashScreenActivity.class);
+                                startActivity(i);
+                                finish();
                             }
-
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -1290,6 +1035,7 @@ public class DashBoard extends AppCompatActivity
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        spload.dismiss();
                         Toast.makeText(getApplicationContext(), "Something went Wrong.. Please Try again..", Toast.LENGTH_SHORT).show();
                     }
                 }) {
@@ -1306,16 +1052,10 @@ public class DashBoard extends AppCompatActivity
         requestQueue.add(stringRequest);
     }
 
-
     public void CallVolley(String a, HashMap<String, String> map1, final String rid) {
-       /* final SpotsDialog spload;
-        spload = new SpotsDialog(CustomerSignatureActivity.this, R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();*/
 
         try {
-            //jsonobj=makeHttpRequest(params[0]);
+
 
             JsonObjectRequest obreq;
             obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map1),
@@ -1324,15 +1064,8 @@ public class DashBoard extends AppCompatActivity
                         public void onResponse(JSONObject response) {
                             try {
 
-                                //spload.dismiss();
 
-                                try {
-
-
-                                    //findViewById(R.id.llconfirm).setEnabled(true);
-                                    //  Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-
-                                    if (response.getString("status").toString().equals("True")) {
+                                if (response.getString("status").toString().equals("True")) {
                                         /*String toa = response.getString("TotalOutStandingAmount");
 
                                         Intent i = new Intent(CustomerSignatureActivity.this, TransactionStatusActivity.class);
@@ -1343,19 +1076,15 @@ public class DashBoard extends AppCompatActivity
 
                                         finish();*/
 
-                                        Toast.makeText(getApplicationContext(), "Receipt Done.!!", Toast.LENGTH_SHORT).show();
-                                        Toast.makeText(getApplicationContext(), "---", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Receipt Done.!!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "---", Toast.LENGTH_SHORT).show();
 
 
-                                        if (myDB.UpdateReceiptStatus(rid)) {
-                                            Toast.makeText(getApplicationContext(), "Status Done.!!", Toast.LENGTH_SHORT).show();
-                                        }
-
-
+                                    if (myDB.UpdateReceiptStatus(rid)) {
+                                        Toast.makeText(getApplicationContext(), "Status Done.!!", Toast.LENGTH_SHORT).show();
                                     }
 
-                                } catch (JSONException e) {
-                                    Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
+
                                 }
 
                                 // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
@@ -1367,7 +1096,6 @@ public class DashBoard extends AppCompatActivity
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-
                             Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
@@ -1385,19 +1113,11 @@ public class DashBoard extends AppCompatActivity
 
     }
 
-
     public void CallVolleys(String a) {
         JsonObjectRequest obreqs;
 
-        final SpotsDialog spload;
-        spload = new SpotsDialog(DashBoard.this, R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
+        final Dialog spload = Utils.getLoader(this);
         spload.show();
-
-        //jsonobj=makeHttpRequest(params[0]);
-        //  URL=siteurl+"/GetAreaByUserForCollectionApp?contractorId="+cid+"&userId="+uid+"&entityId="+pref.getString("Entityids","").toString();
-
 
         HashMap<String, String> map = new HashMap<>();
         map.put("userId", uid);
@@ -1406,57 +1126,45 @@ public class DashBoard extends AppCompatActivity
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        //  try {
-
-                        spload.dismiss();
 
                         try {
+                            spload.dismiss();
 
                             enamelist.clear();
-                            try {
-                               /* URL=siteurl+"/GetEntityByUser?userId="+uid;
-                                final JSONObject jsonobj = makeHttpRequest(URL);*/
-                                if (response.getString("status").toString().equals("True")) {
 
-                                    enamelist.add("All Entities");
-                                    final JSONArray entityarray = response.getJSONArray("EntityInfoList");
+                            if (response.getString("status").toString().equals("True")) {
 
-                                    for (int i = 0; i < entityarray.length(); i++) {
-                                        JSONObject e = (JSONObject) entityarray.get(i);
+                                enamelist.add("All Entities");
+                                final JSONArray entityarray = response.getJSONArray("EntityInfoList");
 
-                                        String eid = e.getString("EntityId");
-                                        String ename = e.getString("EntityName");
+                                for (int i = 0; i < entityarray.length(); i++) {
+                                    JSONObject e = (JSONObject) entityarray.get(i);
 
-                                        enamelist.add(ename);
-                                        eidlist.add(eid);
-                                    }
-                                    for (int i = 0; i < eidlist.size(); i++) {
-                                        if (sb1.length() > 0)
-                                            sb1.append(",");
-                                        sb1.append(eidlist.get(i));
-                                    }
+                                    String eid = e.getString("EntityId");
+                                    String ename = e.getString("EntityName");
 
-                                } else {
-                                    Toast.makeText(DashBoard.this, "Something Went Wrong... No data...", Toast.LENGTH_LONG).show();
+                                    enamelist.add(ename);
+                                    eidlist.add(eid);
                                 }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
+                                for (int i = 0; i < eidlist.size(); i++) {
+                                    if (sb1.length() > 0)
+                                        sb1.append(",");
+                                    sb1.append(eidlist.get(i));
+                                }
 
+                            } else {
+                                Toast.makeText(DashBoard.this, "Something Went Wrong... No data...", Toast.LENGTH_LONG).show();
+                            }
 
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-
-                           /* } catch (Exception e) {
-                                Toast.makeText(getContext(), "error--" + e, Toast.LENGTH_LONG).show();
-                            }*/
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        spload.dismiss();
                         Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }
@@ -1470,10 +1178,9 @@ public class DashBoard extends AppCompatActivity
 
     }
 
-
     public static class TabFragment extends Fragment {
-        final int[] ICONS = new int[]{R.drawable.ic_home_white_24dp, R.drawable.payment, R.drawable.collectiontab, R.drawable.badge_icon_complaincomment_count, R.drawable.ic_person_white_24dp};
 
+        final int[] ICONS = new int[]{R.drawable.ic_home_white_24dp, R.drawable.payment, R.drawable.collectiontab, R.drawable.badge_icon_complaincomment_count, R.drawable.ic_person_white_24dp};
 
         public TabFragment() {
         }
@@ -1574,7 +1281,7 @@ public class DashBoard extends AppCompatActivity
         }
 
 
-        class MyAdapter extends FragmentPagerAdapter {
+        class MyAdapter extends FragmentStatePagerAdapter {
             Bundle bundle;
 
             public MyAdapter(FragmentManager fm) {
@@ -1595,9 +1302,7 @@ public class DashBoard extends AppCompatActivity
 
                         bundle = new Bundle();
                         SharedPreferences pref = getActivity().getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-
                         HomeFragment hf = new HomeFragment();
-
 
                         if (isConnected) {
 
@@ -1623,7 +1328,6 @@ public class DashBoard extends AppCompatActivity
                     case 1:
 
                         PaymentFragment pf = new PaymentFragment();
-
                         if (isConnected) {
 
                             bundle = new Bundle();
@@ -1687,21 +1391,9 @@ public class DashBoard extends AppCompatActivity
 
                             return cmpf;
                         }
-
-                   /* bundle=new Bundle();
-                    //  pref=getActivity().getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-                    // URL=siteurl+"/GetAreaByUserForCollectionApp?contractorId="+cid+"&userId="+uid+"&entityId="+pref.getString("Entityids","").toString();
-                    bundle.putString("url","");
-
-                    ComplainFragment cmpf=new ComplainFragment();
-                    cmpf.setArguments(bundle);
-                        return cmpf;*/
-
                     case 4:
 
                         bundle = new Bundle();
-                        pref = getActivity().getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-
                         CustomerFragment cuf = new CustomerFragment();
 
                         if (isConnected) {
@@ -1765,5 +1457,17 @@ public class DashBoard extends AppCompatActivity
         }
     }
 
+    public class MenuHolder extends RecyclerView.ViewHolder {
+
+        public TextView title;
+        public MySquareImage imageView;
+
+        public MenuHolder(View view) {
+            super(view);
+
+            title = (TextView) view.findViewById(R.id.tv_menu);
+            imageView = (MySquareImage) view.findViewById(R.id.iv_menu);
+        }
+    }
 
 }

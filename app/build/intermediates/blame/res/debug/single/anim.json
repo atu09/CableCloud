@@ -1,90 +1,86 @@
 [
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\anim\\abc_popup_enter.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\rotate.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\anim\\rotate.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\progressanimation.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\anim\\progressanimation.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_up.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\anim\\slide_up.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\anim\\abc_fade_in.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\bottom_up_anim.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\anim\\bottom_up_anim.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-24.2.1.aar\\9ecd61a1ebf96aab7725bfd1d327211b\\res\\anim\\design_snackbar_in.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\069f6232cc81b36524a61973f13c70f7\\res\\anim\\design_snackbar_in.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_up.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\anim\\slide_up.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\popup_show.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\anim\\popup_show.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\bottom_up_anim.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\anim\\bottom_up_anim.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_down.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\anim\\slide_down.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_enter.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\tooltip_enter.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\anim_interpolator.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\bottom-dialog-0.0.5.aar\\212761a9d6da224a5d05366a11820f50\\res\\anim\\anim_interpolator.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_exit.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\tooltip_exit.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-24.2.1.aar\\9ecd61a1ebf96aab7725bfd1d327211b\\res\\anim\\design_snackbar_out.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\popup_hide.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\anim\\popup_hide.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\anim\\abc_fade_out.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\069f6232cc81b36524a61973f13c70f7\\res\\anim\\design_snackbar_out.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-24.2.1.aar\\9ecd61a1ebf96aab7725bfd1d327211b\\res\\anim\\design_fab_out.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\anim_interpolator.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\bottom-dialog-0.0.5.aar\\b06c6d8db80af843a57777fa193914db\\res\\anim\\anim_interpolator.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\anim\\abc_popup_exit.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\popup_hide.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\anim\\popup_hide.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\popup_show.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\anim\\popup_show.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\rotate.xml",
-        "source": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\src\\main\\res\\anim\\rotate.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_down.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\anim\\slide_down.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-24.2.1.aar\\9ecd61a1ebf96aab7725bfd1d327211b\\res\\anim\\design_fab_in.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\anim\\abc_slide_in_bottom.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.2.1.aar\\c8c5fd57cd49f84d400226bdea33d2b1\\res\\anim\\abc_slide_out_bottom.xml"
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\anim\\abc_popup_enter.xml"
     }
 ]

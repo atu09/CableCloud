@@ -1,7 +1,6 @@
 package com.mtaj.mtaj_08.cableplus_new;
 
-import android.app.Activity;
-import android.app.ProgressDialog;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -22,15 +21,13 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -49,12 +46,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 import dmax.dialog.SpotsDialog;
 
-//import com.github.silvestrpredko.dotprogressbar.DotProgressBar;
 
 public class LoginActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
@@ -75,58 +69,30 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
     static String json = "";
     static JSONArray jarr = null;
 
-    ArrayList<HashMap<String, String>> mylist = new ArrayList<>();
-
-    ArrayList<HashMap<String, String>> contractordetails = new ArrayList<>();
-
     String token = "-";
-    private ImageView imageView;
-    private EditText editText;
-    private ShowHidePasswordEditText passwordInTextInputLayout;
-    private EditText editText2;
     private CardView cardLogo;
     private CardView cardLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login_revised);
 
-
-        init();
-        initAnimation();
-
-
-    }
-
-
-    private void init() {
-        LocalBroadcastManager.getInstance(this).registerReceiver(tokenReceiver,
-                new IntentFilter("tokenReceiver"));
-
+        LocalBroadcastManager.getInstance(this).registerReceiver(tokenReceiver, new IntentFilter("tokenReceiver"));
         token = FirebaseInstanceId.getInstance().getToken();
 
-
-        //checkConnection();
-
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
         SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        //  SharedPreferences.Editor editor=pref.edit();
-
-        if (pref.getString("LoginStatus", "").toString().equals("login")) {
-            Intent i = new Intent(getApplicationContext(), DashBoard.class);
-            startActivity(i);
-
+        if (pref.getString("LoginStatus", "").equals("login")) {
+            startActivity(new Intent(getApplicationContext(), DashBoard.class));
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             finish();
+            return;
         }
 
         edtusername = (EditText) findViewById(R.id.editText);
@@ -135,6 +101,16 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         cardLogo = (CardView) findViewById(R.id.cardLogo);
         cardLogin = (CardView) findViewById(R.id.cardLogin);
         btnlogin = (Button) findViewById(R.id.btnlogin);
+
+        edtusername.setText("hjbrc");
+        edtpassword.setText("hjbrc@123");
+        edtuopcode.setText("hjbrc");
+
+        initAnimation();
+    }
+
+
+    private void init() {
 
 
         edtuopcode.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -148,8 +124,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
                     if (ValidateEdittext("Enter Username", edtusername) && ValidateEdittext("Enter Password", edtpassword) && ValidateEdittext("Enter OPCOde", edtuopcode)) {
                         new JSONAsynk().execute(new String[]{Url, edtuopcode.getText().toString(), edtusername.getText().toString(), edtpassword.getText().toString(), token});
-
-                        hideSoftKeyboard(LoginActivity.this);
+                        Utils.closeKeyboard(LoginActivity.this);
                     }
 
                     return true;
@@ -159,12 +134,9 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
             }
         });
 
-        //  edtusername.setHintTextColor(Color.BLACK);
-
         edtusername.setHintTextColor(edtusername.getHintTextColors().withAlpha(-3));
         edtpassword.setHintTextColor(edtpassword.getHintTextColors().withAlpha(-3));
         edtuopcode.setHintTextColor(edtuopcode.getHintTextColors().withAlpha(-3));
-
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -186,10 +158,8 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
     }
 
     private void initAnimation() {
-        Animation bottomUpCardLogo = AnimationUtils.loadAnimation(LoginActivity.this,
-                R.anim.bottom_up_anim);
 
-
+        Animation bottomUpCardLogo = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.bottom_up_anim);
         cardLogo.setVisibility(View.VISIBLE);
         cardLogo.startAnimation(bottomUpCardLogo);
 
@@ -202,10 +172,26 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                Animation bottomUp = AnimationUtils.loadAnimation(LoginActivity.this,
-                        R.anim.bottom_up_anim);
+                Animation bottomUp = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.bottom_up_anim);
                 cardLogin.setVisibility(View.VISIBLE);
                 cardLogin.startAnimation(bottomUp);
+
+                bottomUp.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        init();
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
             }
 
             @Override
@@ -213,6 +199,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
             }
         });
+
     }
 
     BroadcastReceiver tokenReceiver = new BroadcastReceiver() {
@@ -226,13 +213,6 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
         }
     };
-
-
-    public static void hideSoftKeyboard(Activity activity) {
-        InputMethodManager inputMethodManager = (InputMethodManager) activity
-                .getSystemService(Activity.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
-    }
 
     @Override
     protected void onResume() {
@@ -257,7 +237,6 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
         finishAffinity();
     }
 
@@ -296,7 +275,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
 
     public boolean ValidateEdittext(String error, EditText ed) {
-        if (ed.getText().toString() == null || ed.getText().toString().length() == 0) {
+        if (ed.getText().toString().isEmpty() || ed.getText().toString().length() == 0) {
             ed.setError(error);
             return false;
         } else {
@@ -380,21 +359,14 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
     private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
 
-        private ProgressDialog pDialog;
-        // public DotProgressBar dtprogoress;
-
-        SpotsDialog spload;
-
-
+        Dialog spload;
         JSONObject jsn1, jsn, jsnmain;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload = new SpotsDialog(LoginActivity.this, R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(false);
+            spload = Utils.getLoader(LoginActivity.this);
             spload.show();
 
       /* pDialog = new ProgressDialog(LoginActivity.this);
@@ -536,10 +508,8 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
                     editor.apply();
 
                     // Toast.makeText(LoginActivity.this,pref.getString("isOutstandingEditable",""), Toast.LENGTH_SHORT).show();
-
-                    Intent i = new Intent(LoginActivity.this, DashBoard.class);
-                    startActivity(i);
-
+                    startActivity(new Intent(LoginActivity.this, DashBoard.class));
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 
                 }
             } catch (JSONException ex) {

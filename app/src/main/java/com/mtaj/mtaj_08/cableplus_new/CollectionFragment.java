@@ -1,5 +1,6 @@
 package com.mtaj.mtaj_08.cableplus_new;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -25,8 +26,6 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.github.silvestrpredko.dotprogressbar.DotProgressBar;
-
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -34,6 +33,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -77,75 +77,68 @@ public class CollectionFragment extends Fragment {
 
     RequestQueue requestQueue;
 
-    TextView tvtodaycol,tvthismonthcol;
+    TextView tvtodaycol, tvthismonthcol;
 
     SwipeRefreshLayout swrefresh;
 
-    ArrayList<HashMap<String,String>> userlist=new ArrayList<>();
+    ArrayList<HashMap<String, String>> userlist = new ArrayList<>();
 
     CustomAdapter adapter;
 
     SharedPreferences pref;
 
-    String siteurl,uid,cid,aid,eid,URL;
+    String siteurl, uid, cid, aid, eid, URL;
 
     RelativeLayout rlmain;
 
     SimpleAdapter da;
 
-    String tc,toa;
+    String tc, toa;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        Context con=getActivity();
-        View vc= inflater.inflate(R.layout.collection, null);;
+        Context con = getActivity();
+        View vc;
+        pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        pref=con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-
-        if(pref.getBoolean("IsBilling",true))
-        {
-            url=getArguments().getString("url");
+        if (pref.getBoolean("IsBilling", true)) {
+            url = getArguments().getString("url");
             //Toast.makeText(getContext(), url, Toast.LENGTH_SHORT).show();
 
-           if(url.equals("-")) {
+            if (url.equals("-")) {
 
-               vc = inflater.inflate(R.layout.layout_offline, null);
-           }
-            else
-           {
-               CallVolleys(url);
-              // new JSONAsynk().execute(new String[]{url});
-               vc = inflater.inflate(R.layout.collection, null);
-           }
+                vc = inflater.inflate(R.layout.layout_offline, null);
+            } else {
+                CallVolleys(url);
+                // new JSONAsynk().execute(new String[]{url});
+                vc = inflater.inflate(R.layout.collection, null);
+            }
 
+        } else {
+            vc = inflater.inflate(R.layout.no_access_layout, null);
         }
 
-        else
-        {
-            vc= inflater.inflate(R.layout.no_access_layout,null);
-        }
-
-        return  vc;
+        return vc;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        if(pref.getBoolean("IsBilling",true) && !url.equals("-")) {
+        if (pref.getBoolean("IsBilling", true) && !url.equals("-")) {
 
             lstuser = (ListView) view.findViewById(R.id.listView);
 
             tvtodaycol = (TextView) view.findViewById(R.id.textView28);
             tvthismonthcol = (TextView) view.findViewById(R.id.textView30);
 
-            rlmain=(RelativeLayout)view.findViewById(R.id.rlmain);
+            rlmain = (RelativeLayout) view.findViewById(R.id.rlmain);
 
             swrefresh = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
 
-          //  lstuser.setAdapter(adapter);
+            //  lstuser.setAdapter(adapter);
 
             swrefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                 @Override
@@ -154,7 +147,7 @@ public class CollectionFragment extends Fragment {
                     swrefresh.setRefreshing(true);
 
                     CallVolleys(url);
-                   // new JSONAsynk().execute(new String[]{url});
+                    // new JSONAsynk().execute(new String[]{url});
 
 
                 }
@@ -182,25 +175,24 @@ public class CollectionFragment extends Fragment {
         map.put("Userthismonthcollection",uthismonthcol);*/
 
 
-
             // SimpleAdapter da=new SimpleAdapter(getContext(),userlist,R.layout.list_collection_layout,new String[]{"UserName","Usertodaycollection","Userthismonthcollection"},new int[]{R.id.textView2,R.id.textView24,R.id.textView26});
             // lstuser.setAdapter(da);
 
             lstuser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, final View view,final int position, long id) {
+                public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
 
 
-                    ImageView tv =(ImageView)view.findViewById(R.id.imageView13);
+                    ImageView tv = (ImageView) view.findViewById(R.id.imageView13);
                     if (tv != null) {
 
                         tv.setOnTouchListener(new View.OnTouchListener() {
                             @Override
                             public boolean onTouch(View v, MotionEvent event) {
 
-                                Intent i=new Intent(getContext(),MapsActivity.class);
-                                i.putExtra("UserId",userlist.get(position).get("UserId"));
-                                i.putExtra("UserName",userlist.get(position).get("UserName"));
+                                Intent i = new Intent(getContext(), MapsActivity.class);
+                                i.putExtra("UserId", userlist.get(position).get("UserId"));
+                                i.putExtra("UserName", userlist.get(position).get("UserName"));
                                 startActivity(i);
 
                                 return false;
@@ -258,7 +250,7 @@ public class CollectionFragment extends Fragment {
                             editor.commit();
 
                             Intent i = new Intent(getContext(), Collection_Area_Activity.class);
-                            i.putExtra("Userthismonthcollection",userlist.get(position).get("Userthismonthcollection"));
+                            i.putExtra("Userthismonthcollection", userlist.get(position).get("Userthismonthcollection"));
                             startActivity(i);
 
                             //Intent i = new Intent(getContext(), activity_collection_customerdetail.class);
@@ -268,13 +260,9 @@ public class CollectionFragment extends Fragment {
                     });
 
 
-
-
                 }
             });
         }
-
-
 
 
     }
@@ -283,13 +271,13 @@ public class CollectionFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Context con=getActivity();
+        Context con = getActivity();
 
-        pref=con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
         requestQueue = Volley.newRequestQueue(getContext());
 
-        adapter=new CustomAdapter(getContext(),userlist);
+        adapter = new CustomAdapter(getContext(), userlist);
 
         siteurl = pref.getString("SiteURL", "").toString();
         uid = pref.getString("Userid", "").toString();
@@ -300,21 +288,20 @@ public class CollectionFragment extends Fragment {
     }
 
 
-    public JSONObject makeHttpRequest(String url){
+    public JSONObject makeHttpRequest(String url) {
         DefaultHttpClient httpclient = new DefaultHttpClient();
-        HttpGet httppost=new HttpGet(url);
-        try{
+        HttpGet httppost = new HttpGet(url);
+        try {
             HttpResponse httpresponse = httpclient.execute(httppost);
             HttpEntity httpentity = httpresponse.getEntity();
             is = httpentity.getContent();
-        }catch (ClientProtocolException e){
+        } catch (ClientProtocolException e) {
             e.printStackTrace();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try{
-
+        try {
 
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
@@ -323,15 +310,13 @@ public class CollectionFragment extends Fragment {
 
             StringBuilder sb = new StringBuilder();
             String line = null;
-            try{
-                if(reader!=null) {
+            try {
+                if (reader != null) {
 
                     while ((line = reader.readLine()) != null) {
                         sb.append(line);
                     }
-                }
-                else
-                {
+                } else {
                     Toast.makeText(getActivity(), "No data", Toast.LENGTH_SHORT).show();
                 }
 
@@ -339,7 +324,7 @@ public class CollectionFragment extends Fragment {
                 json = sb.toString();
 
                 // json= sb.toString().substring(0, sb.toString().length()-1);
-                try{
+                try {
                     jobj = new JSONObject(json);
 
                     // JSONArray jarrays=new JSONArray(json);
@@ -350,14 +335,14 @@ public class CollectionFragment extends Fragment {
 
                     // jarr =(JSONArray)jsonparse.parse(json);
                     // jobj = jarr.getJSONObject(0);
-                }catch (JSONException e){
-                    Toast.makeText(getActivity(), "**"+e, Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
                 }
-            }catch(IOException e){
-                Toast.makeText(getActivity(), "**"+e, Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
             }
-        }catch (UnsupportedEncodingException e){
-            Toast.makeText(getActivity(), "**"+e, Toast.LENGTH_SHORT).show();
+        } catch (UnsupportedEncodingException e) {
+            Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
         }
        /* catch (ParseException e){
             Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
@@ -366,25 +351,16 @@ public class CollectionFragment extends Fragment {
     }
 
 
+    private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
 
-    private class JSONAsynk extends AsyncTask<String,String,JSONObject>
-    {
-
-        private ProgressDialog pDialog;
-       // public DotProgressBar dtprogoress;
-
-        SpotsDialog spload;
-
-
-        JSONObject jsn1,jsn,jsnmain;
+        Dialog spload;
+        JSONObject jsn1, jsn, jsnmain;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload=new SpotsDialog(getActivity(),R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
+            spload = Utils.getLoader(getActivity());
             spload.show();
 
         }
@@ -394,14 +370,14 @@ public class CollectionFragment extends Fragment {
 
             try {
 
-                jsonobj=makeHttpRequest(params[0]);
+                jsonobj = makeHttpRequest(params[0]);
 
 
             } catch (Exception e) {
-               // Toast.makeText(getActivity(), "--" + e, Toast.LENGTH_SHORT).show();
+                // Toast.makeText(getActivity(), "--" + e, Toast.LENGTH_SHORT).show();
             }
 
-            return  jsonobj;
+            return jsonobj;
 
 
         }
@@ -410,14 +386,12 @@ public class CollectionFragment extends Fragment {
         protected void onPostExecute(JSONObject json) {
             spload.dismiss();
 
-            try
-            {
+            try {
                 userlist.clear();
 
-                if(json.getString("status").toString().equals("True"))
-                {
+                if (json.getString("status").equalsIgnoreCase("True")) {
 
-                   // Toast.makeText(getContext(), json.toString(), Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(getContext(), json.toString(), Toast.LENGTH_SHORT).show();
 
                     DecimalFormat format = new DecimalFormat();
                     format.setDecimalSeparatorAlwaysShown(false);
@@ -433,12 +407,12 @@ public class CollectionFragment extends Fragment {
                         String uthismonthcol = e.getString("Userthismonthcollection");
 
 
-                        HashMap<String,String> map=new HashMap<>();
+                        HashMap<String, String> map = new HashMap<>();
 
-                        map.put("UserId",uid);
-                        map.put("UserName",uname);
-                        map.put("Usertodaycollection",format.format(Double.parseDouble(utodaycol)));
-                        map.put("Userthismonthcollection",format.format(Double.parseDouble(uthismonthcol)));
+                        map.put("UserId", uid);
+                        map.put("UserName", uname);
+                        map.put("Usertodaycollection", format.format(Double.parseDouble(utodaycol)));
+                        map.put("Userthismonthcollection", format.format(Double.parseDouble(uthismonthcol)));
 
                         userlist.add(map);
 
@@ -446,8 +420,8 @@ public class CollectionFragment extends Fragment {
 
                     adapter.notifyDataSetChanged();
 
-                    String tc=json.getString("Usertodaytotalcollection").toString();
-                    String toa=json.getString("Userthismonthtotalcollection").toString();
+                    String tc = json.getString("Usertodaytotalcollection").toString();
+                    String toa = json.getString("Userthismonthtotalcollection").toString();
 
                     tvtodaycol.setText(format.format(Double.parseDouble(tc)));
                     tvthismonthcol.setText(format.format(Double.parseDouble(toa)));
@@ -455,15 +429,11 @@ public class CollectionFragment extends Fragment {
                     swrefresh.setRefreshing(false);
 
 
-
-
                     // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show();
 
                 }
 
-            }
-            catch (JSONException e)
-            {
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
 
@@ -471,14 +441,10 @@ public class CollectionFragment extends Fragment {
 
     }
 
-    public void CallVolleys(String a)
-    {
+    public void CallVolleys(String a) {
         JsonObjectRequest obreqs;
 
-        final SpotsDialog spload;
-        spload=new SpotsDialog(getActivity(),R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(false);
+        final Dialog spload = Utils.getLoader(getActivity());
         spload.show();
 
         //URL=siteurl+"/GetUserlistforcollectionApp?contractorId="+cid+"&loginuserId="+uid+"&entityId="+pref.getString("Entityids","").toString();
@@ -487,13 +453,13 @@ public class CollectionFragment extends Fragment {
         Toast.makeText(getContext(), uid, Toast.LENGTH_SHORT).show();
         Toast.makeText(getContext(), eid, Toast.LENGTH_SHORT).show();*/
 
-        Map<String,String> maps=new HashMap<String,String>();
-        maps.put("contractorid",cid);
-        maps.put("loginuserId",uid);
-        maps.put("entityId",eid);
+        Map<String, String> maps = new HashMap<String, String>();
+        maps.put("contractorid", cid);
+        maps.put("loginuserId", uid);
+        maps.put("entityId", eid);
 
 
-        obreqs = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(maps),
+        obreqs = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(maps),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -501,68 +467,59 @@ public class CollectionFragment extends Fragment {
 
                             spload.dismiss();
 
-                            try {
-                                userlist.clear();
+                            userlist.clear();
 
-                                if (response.getString("status").toString().equals("True")) {
+                            if (response.getString("status").equalsIgnoreCase("True")) {
 
-                                    rlmain.setVisibility(View.VISIBLE);
+                                rlmain.setVisibility(View.VISIBLE);
 
-                                   // Toast.makeText(getContext(), response.toString(), Toast.LENGTH_SHORT).show();
+                                // Toast.makeText(getContext(), response.toString(), Toast.LENGTH_SHORT).show();
 
-                                    DecimalFormat format = new DecimalFormat();
-                                    format.setDecimalSeparatorAlwaysShown(false);
+                                DecimalFormat format = new DecimalFormat();
+                                format.setDecimalSeparatorAlwaysShown(false);
 
-                                    final JSONArray entityarray = response.getJSONArray("lstUserInfoCollectionApp");
+                                final JSONArray entityarray = response.getJSONArray("lstUserInfoCollectionApp");
 
-                                    for (int i = 0; i < entityarray.length(); i++) {
-                                        JSONObject e = (JSONObject) entityarray.get(i);
+                                for (int i = 0; i < entityarray.length(); i++) {
+                                    JSONObject e = (JSONObject) entityarray.get(i);
 
-                                        String uid = e.getString("UserId");
-                                        String uname = e.getString("UserName");
-                                        String utodaycol = e.getString("Usertodaycollection");
-                                        String uthismonthcol = e.getString("Userthismonthcollection");
-
-
-                                        HashMap<String, String> map = new HashMap<>();
-
-                                        map.put("UserId", uid);
-                                        map.put("UserName", uname);
-                                        map.put("Usertodaycollection", str+format.format(Double.parseDouble(utodaycol)));
-                                        map.put("Userthismonthcollection",str+ format.format(Double.parseDouble(uthismonthcol)));
-                                        map.put("Userthismonthcollection",str+ format.format(Double.parseDouble(uthismonthcol)));
-
-                                        userlist.add(map);
-
-                                    }
-
-                                    da=new SimpleAdapter(getContext(),userlist,R.layout.list_collection_layout,new String[] {"UserName","Usertodaycollection","Userthismonthcollection"},new int[] {R.id.textView2,R.id.textView24,R.id.textView26});
-                                    lstuser.setAdapter(da);
-                                    //adapter.notifyDataSetChanged();
-
-                                     tc= response.getString("Usertodaytotalcollection").toString();
-                                    toa = response.getString("Userthismonthtotalcollection").toString();
-
-                                    tvtodaycol.setText(str+format.format(Double.parseDouble(tc)));
-                                    tvthismonthcol.setText(str+format.format(Double.parseDouble(toa)));
-
-                                    swrefresh.setRefreshing(false);
+                                    String uid = e.getString("UserId");
+                                    String uname = e.getString("UserName");
+                                    String utodaycol = e.getString("Usertodaycollection");
+                                    String uthismonthcol = e.getString("Userthismonthcollection");
 
 
-                                    // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show();
+                                    HashMap<String, String> map = new HashMap<>();
+
+                                    map.put("UserId", uid);
+                                    map.put("UserName", uname);
+                                    map.put("Usertodaycollection", str + format.format(Double.parseDouble(utodaycol)));
+                                    map.put("Userthismonthcollection", str + format.format(Double.parseDouble(uthismonthcol)));
+                                    map.put("Userthismonthcollection", str + format.format(Double.parseDouble(uthismonthcol)));
+
+                                    userlist.add(map);
+
                                 }
-                                else
-                                {
-                                    Toast.makeText(getContext(), response.getString("message").toString(), Toast.LENGTH_SHORT).show();
-                                }
+
+                                da = new SimpleAdapter(getContext(), userlist, R.layout.list_collection_layout, new String[]{"UserName", "Usertodaycollection", "Userthismonthcollection"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
+                                lstuser.setAdapter(da);
+                                //adapter.notifyDataSetChanged();
+
+                                tc = response.getString("Usertodaytotalcollection").toString();
+                                toa = response.getString("Userthismonthtotalcollection").toString();
+
+                                tvtodaycol.setText(str + format.format(Double.parseDouble(tc)));
+                                tvthismonthcol.setText(str + format.format(Double.parseDouble(toa)));
+
+                                swrefresh.setRefreshing(false);
+
+
+                                // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(getContext(), response.getString("message").toString(), Toast.LENGTH_SHORT).show();
                             }
-                        catch (JSONException e)
-                        {
-                            e.printStackTrace();
-                        }
 
-                        }catch (Exception e) {
-                              //  Toast.makeText(getContext(), "error--" + e, Toast.LENGTH_LONG).show();
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
                     }
@@ -570,12 +527,7 @@ public class CollectionFragment extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
                         spload.dismiss();
-
-                        //NetworkResponse networkResponse = error.networkResponse;
-
-                       // Toast.makeText(getContext(), "errorr++"+networkResponse.statusCode, Toast.LENGTH_SHORT).show();
 
                     }
                 });

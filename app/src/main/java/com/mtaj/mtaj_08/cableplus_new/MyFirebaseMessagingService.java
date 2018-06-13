@@ -165,7 +165,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                         .setContentText(msg1)
                         .setAutoCancel(true)
                         .setSound(uri)
-                        .setLargeIcon(BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.ic_launcher))
+                        .setLargeIcon(BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.ic_launcher))
                         .setContentIntent(pendingIntent);
 
                         NotificationManager notificationManager =
