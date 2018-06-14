@@ -174,7 +174,7 @@ public class CustomerListActivity extends AppCompatActivity implements SearchVie
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Intent i = new Intent(getApplicationContext(), DashBoard.class);
+                // Intent i = new Intent(getApplicationContext(), DashBoardActivity.class);
                 //  startActivity(i);
                 onBackPressed();
             }
@@ -458,10 +458,10 @@ public class CustomerListActivity extends AppCompatActivity implements SearchVie
 
 
 
-       /* Intent intent = new Intent(this,DashBoard.class);
+       /* Intent intent = new Intent(this,DashBoardActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent)*/;
-        //startActivity(new Intent(CustomerListActivity.this, DashBoard.class));
+        //startActivity(new Intent(CustomerListActivity.this, DashBoardActivity.class));
         finish();
 
     }

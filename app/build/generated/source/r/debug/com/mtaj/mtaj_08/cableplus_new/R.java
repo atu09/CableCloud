@@ -4440,7 +4440,7 @@ containing a value of this type.
         public static final int activity_reminder_list=0x7f040039;
         public static final int activity_searchwithcustomerincomplains=0x7f04003a;
         public static final int activity_sms_log=0x7f04003b;
-        public static final int activity_splash_screen=0x7f04003c;
+        public static final int activity_splash=0x7f04003c;
         public static final int activity_sync_data=0x7f04003d;
         public static final int activity_transaction_status=0x7f04003e;
         public static final int amu_info_window=0x7f04003f;

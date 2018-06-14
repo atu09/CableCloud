@@ -90,7 +90,7 @@ public class AddCustomer_1 extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(getApplicationContext(), DashBoard.class);
+                //Intent i = new Intent(getApplicationContext(), DashBoardActivity.class);
                 //startActivity(i);
 
                 onBackPressed();

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mtaj.mtaj_08.cableplus_new.helpers.MySquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.mtaj.mtaj_08.cableplus_new.Customs.MySquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/selector_menu_cell">
@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <com.mtaj.mtaj_08.cableplus_new.helpers.MySquareImage
+        <com.mtaj.mtaj_08.cableplus_new.Customs.MySquareImage
             android:id="@+id/iv_menu"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -32,4 +32,4 @@
 
     </LinearLayout>
 
-</com.mtaj.mtaj_08.cableplus_new.helpers.MySquareLayout>
+</com.mtaj.mtaj_08.cableplus_new.Customs.MySquareLayout>

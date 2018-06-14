@@ -47,7 +47,7 @@ import java.util.regex.Pattern;
 
 public class Utils {
 
-    public static GradientDrawable getGradientDrawable(Context context, int color1, int color2, GradientDrawable.Orientation orientation) {
+    private static GradientDrawable getGradientDrawable(Context context, int color1, int color2, GradientDrawable.Orientation orientation) {
         GradientDrawable gradientDrawable = new GradientDrawable(orientation, new int[]{ContextCompat.getColor(context, color1), ContextCompat.getColor(context, color2)});
         gradientDrawable.setCornerRadius(0f);
         gradientDrawable.setGradientType(GradientDrawable.LINEAR_GRADIENT);

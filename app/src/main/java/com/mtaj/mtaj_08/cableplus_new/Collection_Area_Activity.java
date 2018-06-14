@@ -143,7 +143,7 @@ public class Collection_Area_Activity extends AppCompatActivity {
 
                 onBackPressed();
 
-                // Intent i = new Intent(getApplicationContext(), DashBoard.class);
+                // Intent i = new Intent(getApplicationContext(), DashBoardActivity.class);
                 // startActivity(i);
 
 

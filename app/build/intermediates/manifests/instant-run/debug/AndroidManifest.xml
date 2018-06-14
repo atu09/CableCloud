@@ -50,19 +50,19 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.LoginActivity"
+            android:name="com.mtaj.mtaj_08.cableplus_new.activities.LoginActivity"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.DashBoard"
+            android:name="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity"
             android:label="@string/title_activity_dash_board"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.CustomerListActivity"
-            android:parentActivityName="com.mtaj.mtaj_08.cableplus_new.DashBoard"
+            android:parentActivityName="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
@@ -93,7 +93,7 @@
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.DashBoard" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.activity_collection_customerdetail"
@@ -111,7 +111,7 @@
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.DashBoard" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.SearchWithCustomerListInComplains"
@@ -135,7 +135,7 @@
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.DashBoard" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity"
@@ -224,14 +224,14 @@
             android:windowSoftInputMode="adjustPan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.DashBoard" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.AddCustomer_2"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.DashBoard" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.AddCustomer_4"
@@ -239,14 +239,14 @@
             android:windowSoftInputMode="adjustPan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.DashBoard" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.AddCustomer_3"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.DashBoard" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.Remider_details"
@@ -290,43 +290,9 @@
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.DashBoard" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
         </activity>
         <activity android:name="com.mtaj.mtaj_08.cableplus_new.FullImageActivity" />
-
-        <!--
-        <service
-            android:name=".RegistrationIntentService"
-            android:exported="false" />
-
-        <service
-            android:name=".MyInstanceIDListenerService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.android.gms.iid.InstanceID" />
-            </intent-filter>
-        </service>
-
-        <receiver
-            android:name="com.google.android.gms.gcm.GcmReceiver"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-
-                <category android:name="com.example.mtaj_08.cableplus_new" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name=".GcmMessageHandler"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </service>
-        -->
 
         <service android:name="com.mtaj.mtaj_08.cableplus_new.MyFirebaseMessagingService" >
             <intent-filter>
@@ -366,7 +332,7 @@
         <activity android:name="com.mtaj.mtaj_08.cableplus_new.ComplainSignatureActivity" />
         <activity android:name="com.mtaj.mtaj_08.cableplus_new.Map_User_Tracking" />
         <activity android:name="com.mtaj.mtaj_08.cableplus_new.CustomerCommentList" />
-        <activity android:name="com.mtaj.mtaj_08.cableplus_new.SplashScreenActivity" >
+        <activity android:name="com.mtaj.mtaj_08.cableplus_new.activities.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

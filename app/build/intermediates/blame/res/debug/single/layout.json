@@ -1,23 +1,23 @@
 [
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\608ddc0bbd5c9d59421f4e2fb9b31672\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
         "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
         "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\layout\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\608ddc0bbd5c9d59421f4e2fb9b31672\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_customer_comments.xml",
         "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\layout\\layout_customer_comments.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_date_search.xml",
-        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\layout\\dialog_date_search.xml"
-    },
-    {
         "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_remiders_details.xml",
         "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\layout\\layout_remiders_details.xml"
+    },
+    {
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_date_search.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\layout\\dialog_date_search.xml"
     },
     {
         "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\arealist_customers.xml",
@@ -28,12 +28,12 @@
         "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_add_customer_1.xml",
-        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\layout\\activity_add_customer_1.xml"
-    },
-    {
         "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_contact_details.xml",
         "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\layout\\activity_contact_details.xml"
+    },
+    {
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_add_customer_1.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\layout\\activity_add_customer_1.xml"
     },
     {
         "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
@@ -166,6 +166,10 @@
     {
         "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\amu_info_window.xml",
         "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\android-maps-utils-0.4.4.aar\\8f171eca0d37dac21a7cc3ced3291e14\\res\\layout\\amu_info_window.xml"
+    },
+    {
+        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash.xml",
+        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
         "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\payment.xml",
@@ -602,10 +606,6 @@
     {
         "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\layout\\abc_dialog_title_material.xml"
-    },
-    {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash_screen.xml",
-        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
         "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",

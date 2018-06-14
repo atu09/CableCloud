@@ -1641,7 +1641,7 @@ int layout activity_remider_details 0x7f040038
 int layout activity_reminder_list 0x7f040039
 int layout activity_searchwithcustomerincomplains 0x7f04003a
 int layout activity_sms_log 0x7f04003b
-int layout activity_splash_screen 0x7f04003c
+int layout activity_splash 0x7f04003c
 int layout activity_sync_data 0x7f04003d
 int layout activity_transaction_status 0x7f04003e
 int layout amu_info_window 0x7f04003f

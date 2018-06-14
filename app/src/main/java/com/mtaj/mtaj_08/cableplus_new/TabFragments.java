@@ -11,6 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mtaj.mtaj_08.cableplus_new.fragments.CollectionFragment;
+import com.mtaj.mtaj_08.cableplus_new.fragments.ComplainFragment;
+import com.mtaj.mtaj_08.cableplus_new.fragments.CustomerFragment;
+import com.mtaj.mtaj_08.cableplus_new.fragments.HomeFragment;
+import com.mtaj.mtaj_08.cableplus_new.fragments.PaymentFragment;
+
 /**
  * Created by MTAJ-08 on 7/23/2016.
  */

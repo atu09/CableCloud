@@ -1,9 +1,7 @@
 package com.mtaj.mtaj_08.cableplus_new;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -23,21 +21,8 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 
         //Getting registration token
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
-
-        //Displaying token on logcat
         Log.d(TAG, "Refreshed token: " + refreshedToken);
-
-        sharedPreferences.edit().putString("Refreshed token: ", refreshedToken).apply();
-
-        final Intent intent = new Intent("tokenReceiver");
-        // You can also include some extra data.
-        final LocalBroadcastManager broadcastManager = LocalBroadcastManager.getInstance(this);
-        intent.putExtra("token", refreshedToken);
-        broadcastManager.sendBroadcast(intent);
+        sharedPreferences.edit().putString("refresh_token", refreshedToken).apply();
     }
 
-    private void sendRegistrationToServer(String token) {
-        //You can implement this method to store the token on your server
-        //Not required for current project
-    }
 }

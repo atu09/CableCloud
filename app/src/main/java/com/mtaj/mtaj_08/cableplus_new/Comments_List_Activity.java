@@ -21,6 +21,8 @@ import android.widget.Toast;
 
 //import com.github.silvestrpredko.dotprogressbar.DotProgressBar;
 
+import com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -99,7 +101,7 @@ public class Comments_List_Activity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(getApplicationContext(), DashBoard.class);
+                //Intent i = new Intent(getApplicationContext(), DashBoardActivity.class);
                 //startActivity(i);
 
                 onBackPressed();
@@ -217,7 +219,7 @@ public class Comments_List_Activity extends AppCompatActivity {
         }
         else if(from.equals("Notification"))
         {
-            Intent i=new Intent(getApplicationContext(),DashBoard.class);
+            Intent i=new Intent(getApplicationContext(),DashBoardActivity.class);
             startActivity(i);
         }
 
