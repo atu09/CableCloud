@@ -910,9 +910,9 @@ public class CustomerDetails extends AppCompatActivity {
                 areaidList.clear();
                 areanameList.clear();
 
-                //URL=siteurl+"/GetCustomersByAreaForCollectionApp?contractorId="+cid+"&userId="+uid+"&entityId="+pref.getString("Entityids","").toString()+"&startindex=0&noofrecords=1000000";
+                //URL=siteURL+"/GetCustomersByAreaForCollectionApp?contractorId="+contractorId+"&userId="+userId+"&entityId="+pref.getString("Entityids","").toString()+"&startindex=0&noofrecords=1000000";
 
-                //URL=siteurl+"/GetAllAreaForCollectionApp?contractorId="+cid;
+                //URL=siteURL+"/GetAllAreaForCollectionApp?contractorId="+contractorId;
 
                 URL = siteurl + "/GetAreaByUser?userId=" + uid;
 
@@ -1000,7 +1000,7 @@ public class CustomerDetails extends AppCompatActivity {
                     alert.setPositiveButton("Done", new DialogInterface.OnClickListener() {
 
                         @Override
-                        public void onClick(DialogInterface dialog, int which) {
+                        public void onClick(DialogInterface loader, int which) {
 
                         }
                     });

@@ -839,7 +839,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
         spload.show();
 
         //jsonobj=makeHttpRequest(params[0]);
-        //  URL=siteurl+"/GetAreaByUserForCollectionApp?contractorId="+cid+"&userId="+uid+"&entityId="+pref.getString("Entityids","").toString();
+        //  URL=siteURL+"/GetAreaByUserForCollectionApp?contractorId="+contractorId+"&userId="+userId+"&entityId="+pref.getString("Entityids","").toString();
 
         obreqs = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
                 new Response.Listener<JSONObject>() {
@@ -958,7 +958,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        //Dismissing the progress dialog
+                        //Dismissing the progress loader
                         spload.dismiss();
 
                         //Showing toast
@@ -1379,7 +1379,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
 
                             String custid = generaldetails.get(0).get("CustomerId");
 
-                            URL1 = siteurl + "/AddFileAttachmentCustomerForCollectionApp";//?customerId="+custid+"&filename="+edtfilename.getText().toString()+"&Note="+"&UploadFile="+tvfilebane.getText().toString()+"&loginUserId="+uid;
+                            URL1 = siteurl + "/AddFileAttachmentCustomerForCollectionApp";//?customerId="+custid+"&filename="+edtfilename.getText().toString()+"&Note="+"&UploadFile="+tvfilebane.getText().toString()+"&loginUserId="+userId;
 
                             HashMap<String, String> map = new HashMap<String, String>();
                             map.put("customerId", custid);
@@ -1404,7 +1404,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
 
-                        // URL1=siteurl+"/AddFileAttachmentCustomerForCollectionApp?customerId="+custid+"&filename="+edtfilename.getText().toString()+"&Note="+"&UploadFile="+tvfilebane.getText().toString()+"&loginUserId="+uid;
+                        // URL1=siteURL+"/AddFileAttachmentCustomerForCollectionApp?customerId="+custid+"&filename="+edtfilename.getText().toString()+"&Note="+"&UploadFile="+tvfilebane.getText().toString()+"&loginUserId="+userId;
 
                        /* try {
 
@@ -1458,7 +1458,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
 
                             String custid = generaldetails.get(0).get("CustomerId");
 
-                            URL1 = siteurl + "/AddFileAttachmentCustomerForCollectionApp";//?customerId="+custid+"&filename="+edtfilename.getText().toString()+"&Note="+"&UploadFile="+tvfilebane.getText().toString()+"&loginUserId="+uid;
+                            URL1 = siteurl + "/AddFileAttachmentCustomerForCollectionApp";//?customerId="+custid+"&filename="+edtfilename.getText().toString()+"&Note="+"&UploadFile="+tvfilebane.getText().toString()+"&loginUserId="+userId;
 
                             HashMap<String, String> map = new HashMap<String, String>();
                             map.put("customerId", custid);
@@ -1544,7 +1544,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
 
                                 String custid = generaldetails.get(0).get("CustomerId");
 
-                                URL1 = siteurl + "/AddFileAttachmentCustomerForCollectionApp";//?customerId="+custid+"&filename="+edtfilename.getText().toString()+"&Note="+"&UploadFile="+tvfilebane.getText().toString()+"&loginUserId="+uid;
+                                URL1 = siteurl + "/AddFileAttachmentCustomerForCollectionApp";//?customerId="+custid+"&filename="+edtfilename.getText().toString()+"&Note="+"&UploadFile="+tvfilebane.getText().toString()+"&loginUserId="+userId;
 
                                 HashMap<String, String> map = new HashMap<String, String>();
                                 map.put("customerId", custid);
@@ -1990,7 +1990,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
         spload.show();
 
         //jsonobj=makeHttpRequest(params[0]);
-        //  URL=siteurl+"/GetAreaByUserForCollectionApp?contractorId="+cid+"&userId="+uid+"&entityId="+pref.getString("Entityids","").toString();
+        //  URL=siteURL+"/GetAreaByUserForCollectionApp?contractorId="+contractorId+"&userId="+userId+"&entityId="+pref.getString("Entityids","").toString();
 
 
 
@@ -2090,7 +2090,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        //Dismissing the progress dialog
+                        //Dismissing the progress loader
                         spload.dismiss();
 
                         //Showing toast

@@ -610,7 +610,7 @@ public final class R {
         public static final int abc_textfield_search_material = 0x7f020051;
         public static final int design_fab_background = 0x7f020078;
         public static final int design_snackbar_background = 0x7f02007c;
-        public static final int notification_template_icon_bg = 0x7f0200ce;
+        public static final int notification_template_icon_bg = 0x7f0200cf;
     }
     public static final class id {
         public static final int action0 = 0x7f1101ec;
@@ -636,9 +636,9 @@ public final class R {
         public static final int background_style_static = 0x7f11003d;
         public static final int beginning = 0x7f110055;
         public static final int bottom = 0x7f11003f;
-        public static final int bottom_navigation_bar_container = 0x7f11015f;
-        public static final int bottom_navigation_bar_item_container = 0x7f110161;
-        public static final int bottom_navigation_bar_overLay = 0x7f110160;
+        public static final int bottom_navigation_bar_container = 0x7f110160;
+        public static final int bottom_navigation_bar_item_container = 0x7f110162;
+        public static final int bottom_navigation_bar_overLay = 0x7f110161;
         public static final int buttonPanel = 0x7f11007b;
         public static final int cancel_action = 0x7f1101ed;
         public static final int center = 0x7f110040;

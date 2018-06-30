@@ -66,7 +66,7 @@ public class CustomerListActivity extends AppCompatActivity implements SearchVie
 
     ArrayList<HashMap<String,String>> customerdetails=new ArrayList<>();
 
-   // SimpleAdapter da;
+   // SimpleAdapter adapter;
     CustomerListAdapter cda;
 
     RelativeLayout rv,footer;
@@ -262,7 +262,7 @@ public class CustomerListActivity extends AppCompatActivity implements SearchVie
         }
 
 
-        //da=new SimpleAdapter(CustomerListActivity.this,customerdetails,R.layout.customerlist,new String[]{"Name","TotalOutStandingAmount","AccountNo","MQNo","Address","CustCommentCount"},new int[]{R.id.textView31,R.id.textView32,R.id.textView34,R.id.textView36,R.id.textView37,R.id.textView102});
+        //adapter=new SimpleAdapter(CustomerListActivity.this,customerdetails,R.layout.customerlist,new String[]{"Name","TotalOutStandingAmount","AccountNo","MQNo","Address","CustCommentCount"},new int[]{R.id.textView31,R.id.textView32,R.id.textView34,R.id.textView36,R.id.textView37,R.id.textView102});
 
         lvcustomer.setAdapter(cda);
 
@@ -316,11 +316,11 @@ public class CustomerListActivity extends AppCompatActivity implements SearchVie
                     last=last+20;
 
                     if(from.equals("Customer") ) {
-                        URL = siteurl + "/GetAreawiseCustomerDetailsByForCollectionApp?startindex="+String.valueOf(start)+"&noofrecords="+String.valueOf(last)+"&contractorid=" + cid + "&areadId=" + aid + "&userId=" + uid + "&entityId=" + eid + "&filterCustomer=";
+                        URL = siteURL + "/GetAreawiseCustomerDetailsByForCollectionApp?startindex="+String.valueOf(start)+"&noofrecords="+String.valueOf(last)+"&contractorid=" + contractorId + "&areadId=" + aid + "&userId=" + userId + "&entityId=" + entities + "&filterCustomer=";
                     }
                     else if(from.equals("Payment") ) {
 
-                        URL = siteurl + "/GetAreawiseCustomerOutStandingByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(start)+"&noofrecords="+String.valueOf(last)+"&contractorid=" + cid + "&areadId=" + aid + "&userId=" + uid + "&entityId=" + eid + "&filterCustomer=";
+                        URL = siteURL + "/GetAreawiseCustomerOutStandingByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(start)+"&noofrecords="+String.valueOf(last)+"&contractorid=" + contractorId + "&areadId=" + aid + "&userId=" + userId + "&entityId=" + entities + "&filterCustomer=";
 
                     }
                     else if(from.equals("Search"))
@@ -554,12 +554,12 @@ public class CustomerListActivity extends AppCompatActivity implements SearchVie
 
             new JSONAsynk().execute(new String[]{URL});
 
-       /* da=new SimpleAdapter(CustomerListActivity.this,customerdetails,R.layout.customerlist,new String[]{"Name","TotalOutStandingAmount","AccountNo","MQNo","Address","CustCommentCount"},new int[]{R.id.textView31,R.id.textView32,R.id.textView34,R.id.textView36,R.id.textView37,R.id.textView102});
-        lvcustomer.setAdapter(da);*/
+       /* adapter=new SimpleAdapter(CustomerListActivity.this,customerdetails,R.layout.customerlist,new String[]{"Name","TotalOutStandingAmount","AccountNo","MQNo","Address","CustCommentCount"},new int[]{R.id.textView31,R.id.textView32,R.id.textView34,R.id.textView36,R.id.textView37,R.id.textView102});
+        lvcustomer.setAdapter(adapter);*/
 
             cda = new CustomerListAdapter(getApplicationContext(), customerdetails);
 
-            //da=new SimpleAdapter(CustomerListActivity.this,customerdetails,R.layout.customerlist,new String[]{"Name","TotalOutStandingAmount","AccountNo","MQNo","Address","CustCommentCount"},new int[]{R.id.textView31,R.id.textView32,R.id.textView34,R.id.textView36,R.id.textView37,R.id.textView102});
+            //adapter=new SimpleAdapter(CustomerListActivity.this,customerdetails,R.layout.customerlist,new String[]{"Name","TotalOutStandingAmount","AccountNo","MQNo","Address","CustCommentCount"},new int[]{R.id.textView31,R.id.textView32,R.id.textView34,R.id.textView36,R.id.textView37,R.id.textView102});
 
             lvcustomer.setAdapter(cda);
 
@@ -838,8 +838,8 @@ public class CustomerListActivity extends AppCompatActivity implements SearchVie
 
                      cda.notifyDataSetChanged();
 
-                    /*da=new SimpleAdapter(CustomerListActivity.this,customerdetails,R.layout.customerlist,new String[]{"Name","TotalOutStandingAmount","AccountNo","MQNo","Address"},new int[]{R.id.textView31,R.id.textView32,R.id.textView34,R.id.textView36,R.id.textView37});
-                    lvcustomer.setAdapter(da);*/
+                    /*adapter=new SimpleAdapter(CustomerListActivity.this,customerdetails,R.layout.customerlist,new String[]{"Name","TotalOutStandingAmount","AccountNo","MQNo","Address"},new int[]{R.id.textView31,R.id.textView32,R.id.textView34,R.id.textView36,R.id.textView37});
+                    lvcustomer.setAdapter(adapter);*/
 
 
                     String toa=json.getString("TotalOutstanding").toString();
@@ -853,7 +853,7 @@ public class CustomerListActivity extends AppCompatActivity implements SearchVie
                 {
                     Toast.makeText(getApplicationContext(), json.getString("message").toString(), Toast.LENGTH_SHORT).show();
 
-                  /*  if(da.getCount()==0) {
+                  /*  if(adapter.getCount()==0) {
 
                         txtnocustomer.setVisibility(View.VISIBLE);
                     }*/

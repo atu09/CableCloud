@@ -54,7 +54,7 @@ public class ComplainListviaCustomerActivity extends AppCompatActivity {
     String siteurl,uid,cid,aid,eid,URL,status;
     RequestQueue requestQueue;
 
-    //SimpleAdapter da;
+    //SimpleAdapter adapter;
 
     ComplainListAdapter da;
 
@@ -160,7 +160,7 @@ public class ComplainListviaCustomerActivity extends AppCompatActivity {
                 // Toast.makeText(ReminderListActivity.this,reminderdetails.get(info.position).get("ReminderId").toString(), Toast.LENGTH_SHORT).show();
                 // reminderdetails.remove(info.position);
 
-                //URL=siteurl+"/GetUpdateStatusReminderForCollectionApp";
+                //URL=siteURL+"/GetUpdateStatusReminderForCollectionApp";
                 //CallVolleys(URL,reminderdetails.get(info.position).get("ReminderId").toString());
 
                 URL=siteurl+"/GetUserlistfornewcollectionApp";

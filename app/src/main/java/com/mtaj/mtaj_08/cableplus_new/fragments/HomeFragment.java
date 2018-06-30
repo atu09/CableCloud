@@ -1,7 +1,6 @@
 package com.mtaj.mtaj_08.cableplus_new.fragments;
 
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -27,18 +26,15 @@ import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONArray;
-import org.json.JSONException;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -49,21 +45,13 @@ import java.util.HashMap;
 public class HomeFragment extends Fragment {
 
     String url;
-
-    static InputStream is = null;
-    static JSONObject jobj = null;
-    static String json = "";
-    static JSONArray jarr = null;
-
-    JSONObject jsonobj;
-
     OnCountAssignment mcount;
     SharedPreferences pref;
-    private static final String PREF_NAME = "LoginPref";
+    private static final String LOGIN_PREF = "LoginPref";
 
-    SwipeRefreshLayout swrefresh;
-    ListView lvhomelist;
-    FloatingActionButton fabtracking;
+    SwipeRefreshLayout refreshLayout;
+    ListView listView;
+    FloatingActionButton fab;
 
     ArrayList<HashMap<String, String>> homelist = new ArrayList<>();
 
@@ -71,48 +59,36 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View vc;
-
+        View view = inflater.inflate(R.layout.no_access_layout, null);
         if (pref.getBoolean("IsDashboard", true)) {
-
             url = getArguments().getString("url");
-
-            if (url.equals("-")) {
-                vc = inflater.inflate(R.layout.layout_offline, null);
+            if (url.equalsIgnoreCase("-")) {
+                view = inflater.inflate(R.layout.layout_offline, null);
             } else {
+                view = inflater.inflate(R.layout.home, null);
+                refreshLayout = view.findViewById(R.id.refresh);
 
-                new JSONAsynk().execute(new String[]{url});
-
-                vc = inflater.inflate(R.layout.home, null);
+                new JSONAsync().execute();
             }
-        } else {
-            vc = inflater.inflate(R.layout.no_access_layout, null);
         }
 
-        return vc;
+        return view;
     }
-
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
 
-        /*CardView cv=(CardView)view.findViewById(R.id.card_view);
-        cv.setCardBackgroundColor(Color.parseColor("#aa0000"));
-
-        CardView cv1=(CardView)view.findViewById(R.id.card_view1);
-        cv1.setCardBackgroundColor(Color.parseColor("#e59400"));*/
-
         if (pref.getBoolean("IsDashboard", true) && !url.equals("-")) {
 
-            lvhomelist = (ListView) view.findViewById(R.id.listView6);
+            listView = (ListView) view.findViewById(R.id.listView6);
 
-            swrefresh = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
+            refreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
 
-            fabtracking = (FloatingActionButton) view.findViewById(R.id.fabtrack);
+            fab = (FloatingActionButton) view.findViewById(R.id.fabtrack);
 
 
-            lvhomelist.setOnScrollListener(new AbsListView.OnScrollListener() {
+            listView.setOnScrollListener(new AbsListView.OnScrollListener() {
                 @Override
                 public void onScrollStateChanged(AbsListView view, int scrollState) {
 
@@ -121,29 +97,23 @@ public class HomeFragment extends Fragment {
                 @Override
                 public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
 
-                    int topRowVerticalPosition = (lvhomelist == null || lvhomelist.getChildCount() == 0) ? 0 : lvhomelist.getChildAt(0).getTop();
-                    swrefresh.setEnabled((topRowVerticalPosition >= 0));
+                    int topRowVerticalPosition = (listView == null || listView.getChildCount() == 0) ? 0 : listView.getChildAt(0).getTop();
+                    refreshLayout.setEnabled((topRowVerticalPosition >= 0));
 
                 }
             });
 
-            swrefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                 @Override
                 public void onRefresh() {
-
-                    swrefresh.setRefreshing(true);
-
-                    new JSONAsynk().execute(new String[]{url});
-
+                    new JSONAsync().execute();
                 }
             });
 
-            fabtracking.setOnClickListener(new View.OnClickListener() {
+            fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    Intent i = new Intent(getContext(), Map_User_Tracking.class);
-                    startActivity(i);
+                    startActivity(new Intent(getContext(), Map_User_Tracking.class));
 
                 }
             });
@@ -156,10 +126,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        final Context con = getActivity();
-
-        pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        pref = getContext().getSharedPreferences(LOGIN_PREF, Context.MODE_PRIVATE);
 
     }
 
@@ -168,116 +135,92 @@ public class HomeFragment extends Fragment {
     }
 
     public JSONObject makeHttpRequest(String url) {
-        DefaultHttpClient httpclient = new DefaultHttpClient();
-        HttpGet httppost = new HttpGet(url);
+
+        JSONObject jsonObject = null;
+
         try {
-            HttpResponse httpresponse = httpclient.execute(httppost);
+
+            HttpParams httpParameters = new BasicHttpParams();
+
+            int timeoutConnection = 500000;
+            HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+
+            int timeoutSocket = 500000;
+            HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+            DefaultHttpClient httpclient = new DefaultHttpClient();
+            HttpGet httpGet = new HttpGet(url);
+
+            HttpResponse httpresponse = httpclient.execute(httpGet);
             HttpEntity httpentity = httpresponse.getEntity();
-            is = httpentity.getContent();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try {
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-
-            // BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_16LE), 8);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(httpentity.getContent(), "UTF-8"));
 
             StringBuilder sb = new StringBuilder();
-            String line = null;
-            try {
-                if (reader != null) {
-
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line);
-                    }
-                } else {
-                    Toast.makeText(getActivity(), "No data", Toast.LENGTH_SHORT).show();
-                }
-
-                //is.close();
-                json = sb.toString();
-
-                try {
-                    jobj = new JSONObject(json);
-
-                } catch (JSONException e) {
-                    Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
-                }
-            } catch (IOException e) {
-                Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                sb.append(line);
             }
-        } catch (UnsupportedEncodingException e) {
-            Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
+            jsonObject = new JSONObject(sb.toString());
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-       /* catch (ParseException e){
-            Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
-        }*/
-        return jobj;
+
+        return jsonObject;
     }
 
-    private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
+    private class JSONAsync extends AsyncTask<String, String, JSONObject> {
 
-        Dialog spload;
-        JSONObject jsn1, jsn, jsnmain;
-
+        Dialog dialog;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload = Utils.getLoader(getActivity());
-            spload.show();
+            if (!refreshLayout.isRefreshing()) {
+                refreshLayout.setRefreshing(true);
+            }
+            dialog = Utils.getLoader(getActivity());
+            dialog.show();
 
         }
 
         @Override
         protected JSONObject doInBackground(String... params) {
-
-            try {
-
-                jsonobj = makeHttpRequest(params[0]);
-
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            return jsonobj;
-
-
+            Utils.checkLog("entity", url, null);
+            return makeHttpRequest(url);
         }
 
         @Override
         protected void onPostExecute(JSONObject json) {
 
-            // hideSoftKeyboard(getActivity());
-            spload.dismiss();
+            if (refreshLayout.isRefreshing()) {
+                refreshLayout.setRefreshing(false);
+            }
+            dialog.dismiss();
 
+            Utils.checkLog("entity", json, null);
             try {
                 if (json.getString("status").equalsIgnoreCase("True")) {
-                    homelist.clear();
 
+                    homelist.clear();
                     DecimalFormat format = new DecimalFormat();
                     format.setDecimalSeparatorAlwaysShown(false);
 
-                    String s1 = json.getString("TodayCollection").toString();
-                    String s2 = json.getString("CurrentMonthBill").toString();
-                    String s3 = json.getString("Lastmonthoutstandingamount").toString();
-                    String s4 = json.getString("TotalOutstanding").toString();
-                    String s9 = json.getString("ThisMonthCollection").toString();
+                    String s1 = json.getString("TodayCollection");
+                    String s2 = json.getString("CurrentMonthBill");
+                    String s3 = json.getString("Lastmonthoutstandingamount");
+                    String s4 = json.getString("TotalOutstanding");
+                    String s9 = json.getString("ThisMonthCollection");
 
 
                     Double total = Double.parseDouble(s2) + Double.parseDouble(s3);
 
 
-                    String s5 = json.getString("TodayComplain").toString();
-                    String s6 = json.getString("CurrentPendingComplain").toString();
-                    String s7 = json.getString("LastPendingComplain").toString();
-                    String s8 = json.getString("TotalComplain").toString();
+                    String s5 = json.getString("TodayComplain");
+                    String s6 = json.getString("CurrentPendingComplain");
+                    String s7 = json.getString("LastPendingComplain");
+                    String s8 = json.getString("TotalComplain");
 
                     HashMap<String, String> map = new HashMap<>();
 
@@ -306,21 +249,8 @@ public class HomeFragment extends Fragment {
 
                     mcount = (OnCountAssignment) getContext();
                     mcount.OnCountAssign(alertno, remno, Integer.parseInt(s6), commentcount, customercommentcount);
-
-                    lvhomelist.setAdapter(new HomeDataAdapter(getContext(), homelist));
-                    // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show();
-
-                      /*  tvtodaycol.setText(format.format(Double.parseDouble(s1)));
-                        tvcurmonthbill.setText(String.valueOf(format.format(Double.parseDouble(s2))));
-                        tvlastmonthoa.setText(format.format(Double.parseDouble(s3)));
-                        tvtotaloutstanding.setText(format.format(Double.parseDouble(s4)));
-
-                        tvtodaycomplain.setText(s5);
-                        tvcurmonthpend.setText(s6);
-                        tvlastmonthpend.setText(s7);
-                        tvtotalpendcomplain.setText(s8);*/
-
-                    swrefresh.setRefreshing(false);
+                    listView.setAdapter(new HomeDataAdapter(getContext(), homelist));
+                    refreshLayout.setRefreshing(false);
 
                 }
             } catch (Exception e) {

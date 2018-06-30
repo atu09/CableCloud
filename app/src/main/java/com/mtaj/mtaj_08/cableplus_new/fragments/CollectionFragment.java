@@ -173,14 +173,14 @@ public class CollectionFragment extends Fragment {
                 }
             });
 
-       /* map.put("UserId", uid);
+       /* map.put("userId", userId);
         map.put("UserName",uname);
         map.put("Usertodaycollection",utodaycol);
         map.put("Userthismonthcollection",uthismonthcol);*/
 
 
-            // SimpleAdapter da=new SimpleAdapter(getContext(),userlist,R.layout.list_collection_layout,new String[]{"UserName","Usertodaycollection","Userthismonthcollection"},new int[]{R.id.textView2,R.id.textView24,R.id.textView26});
-            // lstuser.setAdapter(da);
+            // SimpleAdapter adapter=new SimpleAdapter(getContext(),userlist,R.layout.list_collection_layout,new String[]{"UserName","Usertodaycollection","Userthismonthcollection"},new int[]{R.id.textView2,R.id.textView24,R.id.textView26});
+            // lstuser.setAdapter(adapter);
 
             lstuser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -195,7 +195,7 @@ public class CollectionFragment extends Fragment {
                             public boolean onTouch(View v, MotionEvent event) {
 
                                 Intent i = new Intent(getContext(), MapsActivity.class);
-                                i.putExtra("UserId", userlist.get(position).get("UserId"));
+                                i.putExtra("userId", userlist.get(position).get("userId"));
                                 i.putExtra("UserName", userlist.get(position).get("UserName"));
                                 startActivity(i);
 
@@ -215,7 +215,7 @@ public class CollectionFragment extends Fragment {
                             @Override
                             public void onClick(View v) {
                                 Intent i=new Intent(getContext(),MapsActivity.class);
-                                i.putExtra("UserId",userlist.get(position).get("UserId"));
+                                i.putExtra("userId",userlist.get(position).get("userId"));
                                 i.putExtra("UserName",userlist.get(position).get("UserName"));
                                 startActivity(i);
                             }
@@ -226,7 +226,7 @@ public class CollectionFragment extends Fragment {
                             public boolean onTouch(View v, MotionEvent event) {
 
                                 Intent i=new Intent(getContext(),MapsActivity.class);
-                                i.putExtra("UserId",userlist.get(position).get("UserId"));
+                                i.putExtra("userId",userlist.get(position).get("userId"));
                                 i.putExtra("UserName",userlist.get(position).get("UserName"));
                                 startActivity(i);
 
@@ -250,7 +250,7 @@ public class CollectionFragment extends Fragment {
 
                             SharedPreferences.Editor editor = pref.edit();
                             editor.putString("Name", userlist.get(position).get("UserName"));
-                            editor.putString("selected_uid", userlist.get(position).get("UserId"));
+                            editor.putString("selected_uid", userlist.get(position).get("userId"));
                             editor.commit();
 
                             Intent i = new Intent(getContext(), Collection_Area_Activity.class);
@@ -405,7 +405,7 @@ public class CollectionFragment extends Fragment {
                     for (int i = 0; i < entityarray.length(); i++) {
                         JSONObject e = (JSONObject) entityarray.get(i);
 
-                        String uid = e.getString("UserId");
+                        String uid = e.getString("userId");
                         String uname = e.getString("UserName");
                         String utodaycol = e.getString("Usertodaycollection");
                         String uthismonthcol = e.getString("Userthismonthcollection");
@@ -413,7 +413,7 @@ public class CollectionFragment extends Fragment {
 
                         HashMap<String, String> map = new HashMap<>();
 
-                        map.put("UserId", uid);
+                        map.put("userId", uid);
                         map.put("UserName", uname);
                         map.put("Usertodaycollection", format.format(Double.parseDouble(utodaycol)));
                         map.put("Userthismonthcollection", format.format(Double.parseDouble(uthismonthcol)));
@@ -451,11 +451,11 @@ public class CollectionFragment extends Fragment {
         final Dialog spload = Utils.getLoader(getActivity());
         spload.show();
 
-        //URL=siteurl+"/GetUserlistforcollectionApp?contractorId="+cid+"&loginuserId="+uid+"&entityId="+pref.getString("Entityids","").toString();
+        //URL=siteURL+"/GetUserlistforcollectionApp?contractorId="+contractorId+"&loginuserId="+userId+"&entityId="+pref.getString("Entityids","").toString();
 
-       /* Toast.makeText(getContext(), cid, Toast.LENGTH_SHORT).show();
-        Toast.makeText(getContext(), uid, Toast.LENGTH_SHORT).show();
-        Toast.makeText(getContext(), eid, Toast.LENGTH_SHORT).show();*/
+       /* Toast.makeText(getContext(), contractorId, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), userId, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), entities, Toast.LENGTH_SHORT).show();*/
 
         Map<String, String> maps = new HashMap<String, String>();
         maps.put("contractorid", cid);
@@ -487,7 +487,7 @@ public class CollectionFragment extends Fragment {
                                 for (int i = 0; i < entityarray.length(); i++) {
                                     JSONObject e = (JSONObject) entityarray.get(i);
 
-                                    String uid = e.getString("UserId");
+                                    String uid = e.getString("userId");
                                     String uname = e.getString("UserName");
                                     String utodaycol = e.getString("Usertodaycollection");
                                     String uthismonthcol = e.getString("Userthismonthcollection");
@@ -495,7 +495,7 @@ public class CollectionFragment extends Fragment {
 
                                     HashMap<String, String> map = new HashMap<>();
 
-                                    map.put("UserId", uid);
+                                    map.put("userId", uid);
                                     map.put("UserName", uname);
                                     map.put("Usertodaycollection", str + format.format(Double.parseDouble(utodaycol)));
                                     map.put("Userthismonthcollection", str + format.format(Double.parseDouble(uthismonthcol)));

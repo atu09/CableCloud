@@ -1,46 +1,90 @@
 [
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\drawable-v21\\abc_btn_colored_material.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/avd_hide_password.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/aacc6af43d8a37e79626200ea207806c/res/drawable-v21/avd_hide_password.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\82967a76c9f23501e6e00d742e8528e1\\res\\drawable-v21\\notification_action_background.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable-v21/abc_action_bar_item_background_material.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\whiteborder.xml",
-        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\whiteborder.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable-v21/abc_btn_colored_material.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\069f6232cc81b36524a61973f13c70f7\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/spot.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/spots-dialog-0.4.aar/2f32628e47d510490bbb1bb98a474cbd/res/drawable-v21/spot.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\spot.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\spots-dialog-0.4.aar\\7712f79dcf1fcf30c7837cf71a07f6fa\\res\\drawable-v21\\spot.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\069f6232cc81b36524a61973f13c70f7\\res\\drawable-v21\\design_password_eye.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\82967a76c9f23501e6e00d742e8528e1\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\069f6232cc81b36524a61973f13c70f7\\res\\drawable-v21\\avd_show_password.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/aacc6af43d8a37e79626200ea207806c/res/drawable-v21/design_bottom_navigation_item_background.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\069f6232cc81b36524a61973f13c70f7\\res\\drawable-v21\\avd_hide_password.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\whiteborder.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\whiteborder.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_complaincomment_count.xml",
-        "source": "D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\badge_icon_complaincomment_count.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/avd_show_password.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/aacc6af43d8a37e79626200ea207806c/res/drawable-v21/avd_show_password.xml"
     },
     {
-        "merged": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\drawable-v21\\abc_edit_text_material.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/badge_icon_complaincomment_count.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-v21/badge_icon_complaincomment_count.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\069f6232cc81b36524a61973f13c70f7\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\spot.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\spots-dialog-0.4.aar\\7712f79dcf1fcf30c7837cf71a07f6fa\\res\\drawable-v21\\spot.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/whiteborder.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-v21/whiteborder.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\069f6232cc81b36524a61973f13c70f7\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\069f6232cc81b36524a61973f13c70f7\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/d30091aa2e9b7598729f43dffc2148d6/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/aacc6af43d8a37e79626200ea207806c/res/drawable-v21/design_password_eye.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\069f6232cc81b36524a61973f13c70f7\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\badge_icon_complaincomment_count.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\drawable-v21\\badge_icon_complaincomment_count.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\drawable-v21\\abc_edit_text_material.xml"
     }
 ]

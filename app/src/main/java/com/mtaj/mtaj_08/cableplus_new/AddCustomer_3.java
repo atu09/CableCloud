@@ -353,7 +353,7 @@ public class AddCustomer_3 extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        //Dismissing the progress dialog
+                        //Dismissing the progress loader
                         spload.dismiss();
 
                         //Showing toast
@@ -756,7 +756,7 @@ public class AddCustomer_3 extends AppCompatActivity {
 
                             String custid = generaldetails.get(0).get("CustomerId");
 
-                            URL1 = siteurl + "/AddFileAttachmentCustomerForCollectionApp";//?customerId="+custid+"&filename="+edtfilename.getText().toString()+"&Note="+"&UploadFile="+tvfilebane.getText().toString()+"&loginUserId="+uid;
+                            URL1 = siteURL + "/AddFileAttachmentCustomerForCollectionApp";//?customerId="+custid+"&filename="+edtfilename.getText().toString()+"&Note="+"&UploadFile="+tvfilebane.getText().toString()+"&loginUserId="+userId;
 
                             HashMap<String, String> map = new HashMap<String, String>();
                             map.put("customerId", custid);
@@ -764,7 +764,7 @@ public class AddCustomer_3 extends AppCompatActivity {
                             map.put("type", ".PNG");
                             map.put("Note", "");
                             map.put("UploadFile", b64);
-                            map.put("loginUserId", uid);
+                            map.put("loginUserId", userId);
 
                             CallVolleys(URL1, map);*/
                        /* try {
@@ -794,10 +794,10 @@ public class AddCustomer_3 extends AppCompatActivity {
                     mdalert.setShowButtons(true);
                     mdalert.setBackgroundCornerRadius(5);
 
-                    MDDialog dialog = mdalert.create();
-                    dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+                    MDDialog loader = mdalert.create();
+                    loader.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
                     tvfilebane.setText(formattedDate + ".PNG");
-                    dialog.show();
+                    loader.show();
                 }
 
                 catch (Exception e) {
@@ -893,8 +893,8 @@ public class AddCustomer_3 extends AppCompatActivity {
 
                         attachlist.add(map);
 
-                        da = new SimpleAdapter(AddCustomer_3.this, attachlist, R.layout.layout_customer_attachment_list, new String[]{"filename", "displayname"}, new int[]{R.id.textView31, R.id.textView32});
-                        lvattachlist.setAdapter(da);
+                        adapter = new SimpleAdapter(AddCustomer_3.this, attachlist, R.layout.layout_customer_attachment_list, new String[]{"filename", "displayname"}, new int[]{R.id.textView31, R.id.textView32});
+                        lvattachlist.setAdapter(adapter);
                     }
                 });
                 mdalert.setNegativeButton("CANCEL", new View.OnClickListener() {
@@ -910,9 +910,9 @@ public class AddCustomer_3 extends AppCompatActivity {
                 mdalert.setBackgroundCornerRadius(5);
 
                 tvfilebane.setText(displayName);
-                MDDialog dialog = mdalert.create();
-                dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
-                dialog.show();*/
+                MDDialog loader = mdalert.create();
+                loader.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+                loader.show();*/
 
 
                /* LayoutInflater li=getLayoutInflater();

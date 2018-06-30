@@ -161,7 +161,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
 
 
-        //URL=siteurl+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&areadId="+areaid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
+        //URL=siteURL+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(page)+"&noofrecords=20&contractorid="+contractorId+"&areadId="+areaid+"&userId="+userId+"&entityId="+entities+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
 
 
         URL=siteurl+"/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
@@ -179,7 +179,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
                 mPage = mPage+1;
 
-                //URL=siteurl+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&areadId="+areaid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
+                //URL=siteURL+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(page)+"&noofrecords=20&contractorid="+contractorId+"&areadId="+areaid+"&userId="+userId+"&entityId="+entities+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
 
                 URL=siteurl+"/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
 
@@ -406,8 +406,8 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
                     toolbar.setTitle(name+" - "+json.getString("TotalCount"));
 
 
-                       /* da = new SimpleAdapter(activity_collection_customerdetail.this, customerlist, R.layout.layout_colletion_customerdetail, new String[]{"Name", "CollectinAmount", "AccountNo", "MQNo", "ReceiptDate"}, new int[]{R.id.textView31, R.id.textView49, R.id.textView43, R.id.textView47, R.id.textView52});
-                        lvcustomer.setAdapter(da);*/
+                       /* adapter = new SimpleAdapter(activity_collection_customerdetail.this, customerlist, R.layout.layout_colletion_customerdetail, new String[]{"Name", "CollectinAmount", "AccountNo", "MQNo", "ReceiptDate"}, new int[]{R.id.textView31, R.id.textView49, R.id.textView43, R.id.textView47, R.id.textView52});
+                        lvcustomer.setAdapter(adapter);*/
 
                     da.notifyDataSetChanged();
 
@@ -501,7 +501,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
                             fromdate=edtfrom.getText().toString();
                             todate=edtto.getText().toString();
 
-                            //URL=siteurl+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&areadId="+areaid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
+                            //URL=siteURL+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(page)+"&noofrecords=20&contractorid="+contractorId+"&areadId="+areaid+"&userId="+userId+"&entityId="+entities+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
                             mPage=0;
 
                             URL=siteurl+"/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
@@ -515,7 +515,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
                             fromdate=edtfrom.getText().toString();
                             todate=edtto.getText().toString();
 
-                            //URL=siteurl+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&areadId="+areaid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
+                            //URL=siteURL+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(page)+"&noofrecords=20&contractorid="+contractorId+"&areadId="+areaid+"&userId="+userId+"&entityId="+entities+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
                             mPage=0;
 
                             URL=siteurl+"/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
@@ -555,7 +555,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
                 alert.setPositiveButton("SEARCH", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface loader, int which) {
 
 
                     }
@@ -563,41 +563,41 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
                 alert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface loader, int which) {
 
                     }
                 });
 
-                AlertDialog dialog=alert.create();
+                AlertDialog loader=alert.create();
 
-                dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
-                dialog.show();*/
+                loader.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+                loader.show();*/
 
                 /*AlertDialog.Builder builder = new AlertDialog.Builder(activity_collection_customerdetail.this);
 
-                // setup your dialog here...
+                // setup your loader here...
 
                 builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(final DialogInterface dialog, final int which) {
+                    public void onClick(final DialogInterface loader, final int which) {
                         // do something
                     }
                 });
 
                 builder.setPositiveButton("SEARCH", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(final DialogInterface dialog, final int which) {
+                    public void onClick(final DialogInterface loader, final int which) {
                         // do something
                     }
                 });*/
 
-               /* final AlertDialog dialog = builder.create();
+               /* final AlertDialog loader = builder.create();
 
-                dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                loader.setOnShowListener(new DialogInterface.OnShowListener() {
                     @Override
-                    public void onShow(final DialogInterface dialog) {
-                        Button negativeButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_NEGATIVE);
-                        Button positiveButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_POSITIVE);
+                    public void onShow(final DialogInterface loader) {
+                        Button negativeButton = ((AlertDialog) loader).getButton(DialogInterface.BUTTON_NEGATIVE);
+                        Button positiveButton = ((AlertDialog) loader).getButton(DialogInterface.BUTTON_POSITIVE);
 
                         // this not working because multiplying white background (e.g. Holo Light) has no effect
                         //negativeButton.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);

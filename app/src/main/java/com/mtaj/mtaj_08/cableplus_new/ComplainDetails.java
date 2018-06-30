@@ -314,9 +314,9 @@ public class ComplainDetails extends AppCompatActivity {
 
                 ad.setOnShowListener(new DialogInterface.OnShowListener() {
                     @Override
-                    public void onShow(DialogInterface dialog) {
+                    public void onShow(DialogInterface loader) {
 
-                        //ImageView image = (ImageView) dialog.findViewById(R.id.goProDialogImage);
+                        //ImageView image = (ImageView) loader.findViewById(R.id.goProDialogImage);
                         Bitmap icon = BitmapFactory.decodeResource(getApplicationContext().getResources(),
                                 R.drawable.cableappbackground);
                         float imageWidthInPX = (float)im.getWidth();

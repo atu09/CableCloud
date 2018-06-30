@@ -200,8 +200,8 @@ public class Comments_List_Activity extends AppCompatActivity {
         }
 
 
-        SimpleAdapter da = new SimpleAdapter(Comments_List_Activity.this, commentsdetails, R.layout.layout_comments, new String[]{"name", "comments", "date"}, new int[]{R.id.textView95, R.id.textView96, R.id.textView97});
-        lvcomments.setAdapter(da);*/
+        SimpleAdapter adapter = new SimpleAdapter(Comments_List_Activity.this, commentsdetails, R.layout.layout_comments, new String[]{"name", "comments", "date"}, new int[]{R.id.textView95, R.id.textView96, R.id.textView97});
+        lvcomments.setAdapter(adapter);*/
 
     }
 

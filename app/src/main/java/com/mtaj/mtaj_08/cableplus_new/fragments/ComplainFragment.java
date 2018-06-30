@@ -111,7 +111,7 @@ public class ComplainFragment extends Fragment {
     String siteurl, uid, cid, aid, eid, URL;
     RequestQueue requestQueue;
 
-    //SimpleAdapter da;
+    //SimpleAdapter adapter;
 
     ComplainDataAdapter da;
 
@@ -132,15 +132,15 @@ public class ComplainFragment extends Fragment {
 
         View vc;
 
-         /*pref=con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+         /*pref=con.getSharedPreferences(LOGIN_PREF, Context.MODE_PRIVATE);
         requestQueue = Volley.newRequestQueue(getContext());*/
 
         url = getArguments().getString("url");
 
-       /* siteurl=pref.getString("SiteURL","").toString();
-        uid=pref.getString("Userid","").toString();
-        cid=pref.getString("Contracotrid","").toString();
-        eid=pref.getString("Entityids", "").toString();*/
+       /* siteURL=pref.getString("SiteURL","").toString();
+        userId=pref.getString("Userid","").toString();
+        contractorId=pref.getString("Contracotrid","").toString();
+        entities=pref.getString("Entityids", "").toString();*/
 
         if (url.equals("-")) {
             vc = inflater.inflate(R.layout.layout_offline, null);
@@ -218,7 +218,7 @@ public class ComplainFragment extends Fragment {
                         CallVolleys(URL);
                     }
 
-                    //  URL = siteurl + "/GetComplainListByAreaForAdminCollectionApp";
+                    //  URL = siteURL + "/GetComplainListByAreaForAdminCollectionApp";
                     // CallVolley(URL);
                 }
             });
@@ -483,7 +483,7 @@ public class ComplainFragment extends Fragment {
                         String cid = explist.get(groupPosition).getChildren().get(childPosition).getCmpid();
                         String cmid = explist.get(groupPosition).getChildren().get(childPosition).getCustid();
 
-                        //Toast.makeText(getContext(), cid, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getContext(), contractorId, Toast.LENGTH_SHORT).show();
                         // Toast.makeText(getContext(), cmid, Toast.LENGTH_SHORT).show();
 
 
@@ -689,7 +689,7 @@ public class ComplainFragment extends Fragment {
 
                           /*  HashMap<String,String> map=new HashMap<>();
 
-                            map.put("customerId",cid);
+                            map.put("customerId",contractorId);
                             map.put("Name",cname);
                             map.put("AccNo",cacno);
                             map.put("MqNo",cmqno);
@@ -913,7 +913,7 @@ public class ComplainFragment extends Fragment {
         final Dialog spload = Utils.getLoader(getActivity());
         spload.show();
 
-        //URL=siteurl+"/GetComplainListByAreaForCollectionApp?contractorId="+cid+"&loginuserId="+uid+"&entityIds="+pref.getString("Entityids","").toString();
+        //URL=siteURL+"/GetComplainListByAreaForCollectionApp?contractorId="+contractorId+"&loginuserId="+userId+"&entityIds="+pref.getString("Entityids","").toString();
 
         HashMap<String, String> map = new HashMap<>();
         map.put("contractorId", cid);

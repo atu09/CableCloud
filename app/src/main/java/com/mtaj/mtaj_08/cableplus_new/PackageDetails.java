@@ -169,7 +169,7 @@ public class PackageDetails extends AppCompatActivity {
         spload.show();
 
         //jsonobj=makeHttpRequest(params[0]);
-        //  URL=siteurl+"/GetAreaByUserForCollectionApp?contractorId="+cid+"&userId="+uid+"&entityId="+pref.getString("Entityids","").toString();
+        //  URL=siteURL+"/GetAreaByUserForCollectionApp?contractorId="+contractorId+"&userId="+userId+"&entityId="+pref.getString("Entityids","").toString();
 
 
 

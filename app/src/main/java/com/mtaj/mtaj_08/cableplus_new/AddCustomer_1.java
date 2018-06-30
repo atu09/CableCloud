@@ -136,7 +136,7 @@ public class AddCustomer_1 extends AppCompatActivity {
 
                 if (areanames.size() < 2) {
 
-                    URL1 = siteurl + "/GetAreaByUserForCollectionApp?contractorId=" + cid + "&userId=" + uid + "&entityId=" + pref.getString("Entityids", "").toString();
+                    URL1 = siteURL + "/GetAreaByUserForCollectionApp?contractorId=" + contractorId + "&userId=" + userId + "&entityId=" + pref.getString("Entityids", "").toString();
 
                     final JSONObject jsonobj1 = makeHttpRequest(URL1);
                     try {
@@ -160,17 +160,17 @@ public class AddCustomer_1 extends AppCompatActivity {
 
                             }
 
-                            ArrayAdapter<String> da = new ArrayAdapter<String>(AddCustomer_1.this, android.R.layout.simple_spinner_dropdown_item, areanames);
-                            da.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            sparea.setAdapter(da);
+                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(AddCustomer_1.this, android.R.layout.simple_spinner_dropdown_item, areanames);
+                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            sparea.setAdapter(adapter);
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 } else {
-                    ArrayAdapter<String> da = new ArrayAdapter<String>(AddCustomer_1.this, android.R.layout.simple_spinner_dropdown_item, areanames);
-                    da.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    sparea.setAdapter(da);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(AddCustomer_1.this, android.R.layout.simple_spinner_dropdown_item, areanames);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    sparea.setAdapter(adapter);
                 }
 
 
@@ -238,11 +238,11 @@ public class AddCustomer_1 extends AppCompatActivity {
 
                     final String enid=entityids.get(position-1);
 
-                    //URL1 = siteurl + "/GetAreaByUserForCollectionApp?contractorId=" + cid + "&userId=" + uid + "&entityId=" + enid;
+                    //URL1 = siteURL + "/GetAreaByUserForCollectionApp?contractorId=" + contractorId + "&userId=" + userId + "&entityId=" + enid;
 
                     //if (areanames.size() < 0) {
 
-                        //URL1 = siteurl + "/GetAreaByUserForCollectionApp?contractorId=" + cid + "&userId=" + uid + "&entityId=" + enid+"&startindex=0&noofrecords=10000";
+                        //URL1 = siteURL + "/GetAreaByUserForCollectionApp?contractorId=" + contractorId + "&userId=" + userId + "&entityId=" + enid+"&startindex=0&noofrecords=10000";
 
                     URL1 = siteurl +"/GetCustomersByAreaForCollectionApp?contractorId="+cid+"&userId="+uid+"&entityId="+enid+"&startindex=0"+"&noofrecords=10000";
 
@@ -280,9 +280,9 @@ public class AddCustomer_1 extends AppCompatActivity {
                    // }
 
                     /*else {
-                        ArrayAdapter<String> da = new ArrayAdapter<String>(AddCustomer_1.this, android.R.layout.simple_spinner_dropdown_item, areanames);
-                        da.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                        sparea.setAdapter(da);
+                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(AddCustomer_1.this, android.R.layout.simple_spinner_dropdown_item, areanames);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        sparea.setAdapter(adapter);
                     }*/
 
 
@@ -299,7 +299,7 @@ public class AddCustomer_1 extends AppCompatActivity {
             }
         });
 
-        //URL=siteurl+"/GetEntityByUser?userId="+uid;
+        //URL=siteURL+"/GetEntityByUser?userId="+userId;
        /* final JSONObject jsonobj = makeHttpRequest(URL);
 
         final JSONObject jsonobj1 = makeHttpRequest(URL1);
@@ -314,10 +314,10 @@ public class AddCustomer_1 extends AppCompatActivity {
                 for (int i = 0; i < entityarray.length(); i++) {
                     JSONObject e = (JSONObject) entityarray.get(i);
 
-                    String eid = e.getString("EntityId");
+                    String entities = e.getString("EntityId");
                     String ename = e.getString("EntityName");
 
-                    entityids.add(eid);
+                    entityids.add(entities);
                     Entityname.add(ename);
 
                 }
@@ -354,9 +354,9 @@ public class AddCustomer_1 extends AppCompatActivity {
 
 
 
-        ArrayAdapter<String> da=new ArrayAdapter<String>(AddCustomer_1.this,android.R.layout.simple_spinner_dropdown_item,areanames);
-        da.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        sparea.setAdapter(da);
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(AddCustomer_1.this,android.R.layout.simple_spinner_dropdown_item,areanames);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sparea.setAdapter(adapter);
 
         ArrayAdapter<String> da1=new ArrayAdapter<String>(AddCustomer_1.this,android.R.layout.simple_spinner_dropdown_item,Entityname);
         spentity.setAdapter(da1);*/
@@ -600,18 +600,18 @@ public class AddCustomer_1 extends AppCompatActivity {
     {
         JsonObjectRequest obreqs;
 
-        final SpotsDialog spload;
-        spload=new SpotsDialog(AddCustomer_1.this,R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(false);
-        spload.show();
+        final SpotsDialog loader;
+        loader=new SpotsDialog(AddCustomer_1.this,R.style.Custom);
+        loader.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        loader.setCancelable(false);
+        loader.show();
 
-        URL1 = siteurl + "/GetAreaByUserForCollectionApp?contractorId=" + cid + "&userId=" + uid + "&entityId=" + pref.getString("Entityids", "").toString();
+        URL1 = siteURL + "/GetAreaByUserForCollectionApp?contractorId=" + contractorId + "&userId=" + userId + "&entityId=" + pref.getString("Entityids", "").toString();
 
         HashMap<String,String> map=new HashMap<>();
-        map.put("contractorId",cid);
-        map.put("userId", uid);
-        map.put("entityId",eid);
+        map.put("contractorId",contractorId);
+        map.put("userId", userId);
+        map.put("entityId",entities);
 
 
         obreqs = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
@@ -620,7 +620,7 @@ public class AddCustomer_1 extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         //  try {
 
-                        spload.dismiss();
+                        loader.dismiss();
 
                         try {
                             areadetails.clear();
@@ -656,8 +656,8 @@ public class AddCustomer_1 extends AppCompatActivity {
 
                                 }
 
-                                // da = new SimpleAdapter(getContext(), areadetails, R.layout.arealist, new String[]{"AreaName", "Collection", "Outstanding"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
-                                // lvarealist.setAdapter(da);
+                                // adapter = new SimpleAdapter(getContext(), areadetails, R.layout.areaList, new String[]{"AreaName", "Collection", "Outstanding"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
+                                // lvarealist.setAdapter(adapter);
 
                                 //lvarealist.setAdapter(new PaymentAreaListAdapter(getContext(),areadetails));
 

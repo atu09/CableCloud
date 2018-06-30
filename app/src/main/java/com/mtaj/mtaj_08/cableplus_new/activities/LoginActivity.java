@@ -1,5 +1,6 @@
 package com.mtaj.mtaj_08.cableplus_new.activities;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mtaj.mtaj_08.cableplus_new.ConnectivityReceiver;
+import com.mtaj.mtaj_08.cableplus_new.DBHelper;
 import com.mtaj.mtaj_08.cableplus_new.MyApplication;
 import com.mtaj.mtaj_08.cableplus_new.NoConnectionActivity;
 import com.mtaj.mtaj_08.cableplus_new.R;
@@ -30,41 +32,28 @@ import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+
+import static com.mtaj.mtaj_08.cableplus_new.DBHelper.ENTITY_NAME;
+import static com.mtaj.mtaj_08.cableplus_new.DBHelper.PK_ENTITY_ID;
 
 
 public class LoginActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    private static final String PREF_NAME = "LoginPref";
-
-    final String NAMESPACE = "http://tempuri.org/";
-    final String URL = "http://cableplus.in/service.asmx";
-    final String SOAP_ACTION = "http://tempuri.org/GetContractorDetails";
-    final String METHOD_NAME = "GetContractorDetails";
-
+    private static final String LOGIN_PREF = "LoginPref";
     String Url = "http://cableplus.in/service.asmx/GetContractorDetails?OPCode=";
 
-    EditText edtusername, edtpassword, edtuopcode;
-    Button btnlogin;
-
-    static InputStream is = null;
-    static JSONObject jobj = null;
-    static String json = "";
-    static JSONArray jarr = null;
+    EditText etUsername, etPassword, etOpCode;
+    Button btnLogin;
 
     String token = "-";
     private CardView cardLogo;
@@ -81,46 +70,36 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences pref = getSharedPreferences(LOGIN_PREF, Context.MODE_PRIVATE);
 
-        token = pref.getString("refresh_token", "-");
-        edtusername = (EditText) findViewById(R.id.editText);
-        edtpassword = (EditText) findViewById(R.id.edtPassword);
-        edtuopcode = (EditText) findViewById(R.id.OpCode);
+        token = pref.getString("refresh_token", "");
+        etUsername = (EditText) findViewById(R.id.editText);
+        etPassword = (EditText) findViewById(R.id.edtPassword);
+        etOpCode = (EditText) findViewById(R.id.OpCode);
         cardLogo = (CardView) findViewById(R.id.cardLogo);
         cardLogin = (CardView) findViewById(R.id.cardLogin);
-        btnlogin = (Button) findViewById(R.id.btnlogin);
+        btnLogin = (Button) findViewById(R.id.btnlogin);
 
-        edtusername.setText("hjbrc");
-        edtpassword.setText("hjbrc@123");
-        edtuopcode.setText("hjbrc");
+        etUsername.setText("hjbrc");
+        etPassword.setText("hjbrc@123");
+        etOpCode.setText("hjbrc");
 
     }
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-
         initAnimation();
     }
 
     private void init() {
 
-
-        edtuopcode.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        etOpCode.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 
                 if (actionId == EditorInfo.IME_ACTION_GO) {
-                    // handle next button
-
-                    //s Toast.makeText(LoginActivity.this, "token-"+token, Toast.LENGTH_SHORT).show();
-
-                    if (ValidateEdittext("Enter Username", edtusername) && ValidateEdittext("Enter Password", edtpassword) && ValidateEdittext("Enter OPCOde", edtuopcode)) {
-                        new JSONAsynk().execute(new String[]{Url, edtuopcode.getText().toString(), edtusername.getText().toString(), edtpassword.getText().toString(), token});
-                        Utils.closeKeyboard(LoginActivity.this);
-                    }
-
+                    loginCall();
                     return true;
                 }
 
@@ -128,25 +107,24 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
             }
         });
 
-        edtusername.setHintTextColor(edtusername.getHintTextColors().withAlpha(-3));
-        edtpassword.setHintTextColor(edtpassword.getHintTextColors().withAlpha(-3));
-        edtuopcode.setHintTextColor(edtuopcode.getHintTextColors().withAlpha(-3));
+        etUsername.setHintTextColor(etUsername.getHintTextColors().withAlpha(-3));
+        etPassword.setHintTextColor(etPassword.getHintTextColors().withAlpha(-3));
+        etOpCode.setHintTextColor(etOpCode.getHintTextColors().withAlpha(-3));
 
-        btnlogin.setOnClickListener(new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (ValidateEdittext("Enter Username", edtusername) && ValidateEdittext("Enter Password", edtpassword) && ValidateEdittext("Enter OPCOde", edtuopcode)) {
-
-                    //Toast.makeText(LoginActivity.this, token, Toast.LENGTH_SHORT).show();
-
-                    new JSONAsynk().execute(new String[]{Url, edtuopcode.getText().toString(), edtusername.getText().toString(), edtpassword.getText().toString(), token});
-
-
-                }
-
+                loginCall();
             }
         });
+    }
+
+    void loginCall() {
+        Utils.closeKeyboard(LoginActivity.this);
+        if (ValidateEditText("Enter Username", etUsername) && ValidateEditText("Enter Password", etPassword) && ValidateEditText("Enter OPCOde", etOpCode)) {
+            String[] params = new String[]{Url, etOpCode.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), token};
+            new JSONLoginAsync().execute(params);
+        }
     }
 
     private void initAnimation() {
@@ -197,7 +175,6 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
     @Override
     protected void onResume() {
         super.onResume();
-
         MyApplication.getInstance().setConnectivityListener(this);
     }
 
@@ -213,7 +190,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         finishAffinity();
     }
 
-    public boolean ValidateEdittext(String error, EditText ed) {
+    public boolean ValidateEditText(String error, EditText ed) {
         if (ed.getText().toString().isEmpty() || ed.getText().toString().length() == 0) {
             ed.setError(error);
             return false;
@@ -222,180 +199,114 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         }
     }
 
-
     public JSONObject makeHttpRequest(String url) {
 
-        HttpParams httpParameters = new BasicHttpParams();
+        JSONObject jsonObject = null;
 
-        int timeoutConnection = 500000;
-        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
-// Set the default socket timeout (SO_TIMEOUT)
-// in milliseconds which is the timeout for waiting for data.
-        int timeoutSocket = 500000;
-        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
-
-        DefaultHttpClient httpclient = new DefaultHttpClient();
-        HttpGet httppost = new HttpGet(url);
         try {
-            HttpResponse httpresponse = httpclient.execute(httppost);
+
+            HttpParams httpParameters = new BasicHttpParams();
+
+            int timeoutConnection = 500000;
+            HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+
+            int timeoutSocket = 500000;
+            HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+            DefaultHttpClient httpclient = new DefaultHttpClient();
+            HttpGet httpGet = new HttpGet(url);
+
+            HttpResponse httpresponse = httpclient.execute(httpGet);
             HttpEntity httpentity = httpresponse.getEntity();
-            is = httpentity.getContent();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try {
-
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-
-            // BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_16LE), 8);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(httpentity.getContent(), "UTF-8"));
 
             StringBuilder sb = new StringBuilder();
-            String line = null;
-            try {
-                if (reader != null) {
-
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line);
-                    }
-                } else {
-                    Toast.makeText(LoginActivity.this, "No data", Toast.LENGTH_SHORT).show();
-                }
-
-                //is.close();
-                json = sb.toString();
-
-                // json= sb.toString().substring(0, sb.toString().length()-1);
-                try {
-                    jobj = new JSONObject(json);
-
-                    // JSONArray jarrays=new JSONArray(json);
-
-                    // jobj=jarrays.getJSONObject(0);
-
-                    //  org.json.simple.parser.JSONParser jsonparse=new org.json.simple.parser.JSONParser();
-
-                    // jarr =(JSONArray)jsonparse.parse(json);
-                    // jobj = jarr.getJSONObject(0);
-                } catch (JSONException e) {
-                    Toast.makeText(LoginActivity.this, "**" + e, Toast.LENGTH_SHORT).show();
-                }
-            } catch (IOException e) {
-                Toast.makeText(LoginActivity.this, "**" + e, Toast.LENGTH_SHORT).show();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                sb.append(line);
             }
-        } catch (UnsupportedEncodingException e) {
-            Toast.makeText(LoginActivity.this, "**" + e, Toast.LENGTH_SHORT).show();
+            jsonObject = new JSONObject(sb.toString());
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-       /* catch (ParseException e){
-            Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
-        }*/
-        return jobj;
+
+        return jsonObject;
     }
 
+    @SuppressLint("StaticFieldLeak")
+    private class JSONLoginAsync extends AsyncTask<String, String, JSONObject> {
 
-    private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
-
-        Dialog spload;
-        JSONObject jsn1, jsn, jsnmain;
+        Dialog loader;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload = Utils.getLoader(LoginActivity.this);
-            spload.show();
-
-      /* pDialog = new ProgressDialog(LoginActivity.this);
-        pDialog.setMessage("Loading...");
-        pDialog.setCancelable(false);
-        pDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        pDialog.setIndeterminate(true);
-       // pDialog.setIndeterminateDrawable(getResources().getDrawable(R.drawable.progressanimation));
-        pDialog.show();*/
+            loader = Utils.getLoader(LoginActivity.this);
+            loader.show();
 
         }
 
         @Override
         protected JSONObject doInBackground(String... params) {
 
+            JSONObject jsonObject = null;
+
             try {
+                jsonObject = makeHttpRequest(params[0] + params[1]);
+                String status = jsonObject.getString("status");
 
-                jsn = makeHttpRequest(params[0] + params[1]);
+                if (status.equalsIgnoreCase("True")) {
 
-                String s3 = jsn.getString("message");
-                String s4 = jsn.getString("status");
+                    final String siteURL = jsonObject.getString("siteURL");
+                    String contractorId = jsonObject.getString("contractorId");
 
-                if (s4.equals("True")) {
-
-                    final String s1 = jsn.getString("siteURL");
-                    String s2 = jsn.getString("contractorId");
-
-                    SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+                    SharedPreferences pref = getSharedPreferences(LOGIN_PREF, Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = pref.edit();
-                    editor.putString("SiteURL", s1);
-                    editor.putString("Contracotrid", s2);
-                    editor.commit();
+                    editor.putString("SiteURL", siteURL);
+                    editor.putString("Contracotrid", contractorId);
+                    editor.apply();
 
+                    jsonObject = makeHttpRequest(siteURL + "/ValidateUserForCollectionApp?username=" + params[2] + "&password=" + params[3] + "&contractorId=" + contractorId + "&androidDeviceId=" + params[4]);
 
-                    jsn1 = makeHttpRequest(s1 + "/ValidateUserForCollectionApp?username=" + params[2] + "&password=" + params[3] + "&contractorId=" + s2 + "&androidDeviceId=" + params[4]);
-
-                    //String msg = jsn1.getString("message");
-
-                    //Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
-
-                    jsnmain = jsn1;
-
-                } else {
-
-                    jsnmain = jsn;
-
-                    // Toast.makeText(LoginActivity.this, s3, Toast.LENGTH_SHORT).show();
                 }
 
-
-            } catch (JSONException ex) {
-                ex.printStackTrace();
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
-            return jsnmain;
-
+            return jsonObject;
 
         }
 
         @Override
         protected void onPostExecute(JSONObject json) {
 
-            spload.dismiss();
-
-            SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+            SharedPreferences pref = getSharedPreferences(LOGIN_PREF, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = pref.edit();
 
             try {
 
-                String msg = json.getString("message");
+                String message = json.getString("message");
 
-                Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
 
                 String status = json.getString("status");
 
-                if (status.equals("True")) {
+                if (status.equalsIgnoreCase("True")) {
                     String name = json.getString("Name");
-                    String uid = json.getString("UserId");
-                    String rid = json.getString("RoleId");
-                    String rname = json.getString("RoleName");
-                    String oseditable = json.getString("isOutstandingEditable");
+                    String userId = json.getString("UserId");
+                    String roleId = json.getString("RoleId");
+                    String roleName = json.getString("RoleName");
+                    String outstandingEditable = json.getString("isOutstandingEditable");
 
-                    if (rid.equals("2")) {
+                    if (roleId.equals("2")) {
                     } else {
-                        final JSONArray entityarray = json.getJSONArray("lstRole");
+                        final JSONArray entityArray = json.getJSONArray("lstRole");
 
-                        for (int i = 0; i < entityarray.length(); i++) {
-                            JSONObject e = (JSONObject) entityarray.get(i);
+                        for (int i = 0; i < entityArray.length(); i++) {
+                            JSONObject e = (JSONObject) entityArray.get(i);
 
                             String fname = e.getString("formname");
                             String selected = e.getString("isselected");
@@ -440,20 +351,90 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
                     }
                     editor.putString("LoginStatus", "login");
                     editor.putString("LoginName", name);
-                    editor.putString("Userid", uid);
-                    editor.putString("RoleId", rid);
-                    editor.putString("RoleName", rname);
-                    editor.putString("isOutstandingEditable", oseditable);
+                    editor.putString("Userid", userId);
+                    editor.putString("RoleId", roleId);
+                    editor.putString("RoleName", roleName);
+                    editor.putString("isOutstandingEditable", outstandingEditable);
                     editor.apply();
 
-                    // Toast.makeText(LoginActivity.this,pref.getString("isOutstandingEditable",""), Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(LoginActivity.this, DashBoardActivity.class));
-                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    loader.dismiss();
+
+                    new JSONEntityAsync().execute();
 
                 }
-            } catch (JSONException ex) {
-                Toast.makeText(LoginActivity.this, "**" + ex, Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
+                Toast.makeText(LoginActivity.this, "Something Went  Wrong...", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    private class JSONEntityAsync extends AsyncTask<String, String, Boolean> {
+
+        Dialog loader;
+        SharedPreferences pref;
+        DBHelper dbHelper;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            pref = getSharedPreferences(LOGIN_PREF, Context.MODE_PRIVATE);
+            dbHelper = new DBHelper(LoginActivity.this);
+            loader = Utils.getLoader(LoginActivity.this);
+            loader.show();
+
+        }
+
+        @Override
+        protected Boolean doInBackground(String... params) {
+
+            String siteURL = pref.getString("SiteURL", "");
+            String UserId = pref.getString("Userid", "");
+            String URL = siteURL + "/GetEntityByUser?userId=" + UserId;
+
+            boolean status = false;
+            try {
+                JSONObject jsonObject = makeHttpRequest(URL);
+                Utils.checkLog("login", jsonObject, null);
+                if (jsonObject.getString("status").equalsIgnoreCase("True")) {
+
+                    status = true;
+                    dbHelper.deleteEntityData();
+                    final JSONArray entityArray = jsonObject.getJSONArray("EntityInfoList");
+
+                    for (int i = 0; i < entityArray.length(); i++) {
+                        JSONObject e = (JSONObject) entityArray.get(i);
+
+                        String entityId = e.getString("EntityId");
+                        String entityName = e.getString("EntityName");
+
+                        dbHelper.insertEntity(entityId, entityName);
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            return status;
+
+        }
+
+        @Override
+        protected void onPostExecute(Boolean status) {
+
+            loader.dismiss();
+
+            if (status) {
+                startActivity(new Intent(LoginActivity.this, DashBoardActivity.class));
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            } else {
+                SharedPreferences.Editor editor = pref.edit();
+                editor.clear();
+                editor.putString("refresh_token", token);
+                editor.apply();
+
                 Toast.makeText(LoginActivity.this, "Something Went  Wrong...", Toast.LENGTH_SHORT).show();
             }
         }

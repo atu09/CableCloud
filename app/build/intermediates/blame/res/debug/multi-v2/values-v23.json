@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\90d363d5a1e8e155a1777b68bae36608\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/2f0de6a9582f4436990ca1e8ad8e134d/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -36,10 +36,10 @@
             ]
         },
         {
-            "outputFile": "D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\values-v23\\values-v23.xml",
+            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\90d363d5a1e8e155a1777b68bae36608\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/2f0de6a9582f4436990ca1e8ad8e134d/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -58,7 +58,77 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "map": [
+                {
+                    "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\90d363d5a1e8e155a1777b68bae36608\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "2646",
+                        "endLines": "39",
+                        "endColumns": "12",
+                        "endOffsets": "2791"
+                    }
+                },
+                {
+                    "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\values-v23\\values-v23.xml",
+            "map": [
+                {
+                    "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\90d363d5a1e8e155a1777b68bae36608\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "2646",
+                        "endLines": "39",
+                        "endColumns": "12",
+                        "endOffsets": "2791"
+                    }
+                },
+                {
+                    "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

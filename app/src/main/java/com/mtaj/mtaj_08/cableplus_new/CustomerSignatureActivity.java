@@ -355,12 +355,12 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
                         if (pref.getString("from", "").equals("Payment")) {
 
-                            // URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+                            // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                             displayLocation();
 
                         } else if (from.equals("Payment")) {
-                            // URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+                            // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                             displayLocation();
                         }

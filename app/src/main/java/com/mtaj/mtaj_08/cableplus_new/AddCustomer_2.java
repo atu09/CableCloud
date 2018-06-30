@@ -246,7 +246,7 @@ public class AddCustomer_2 extends AppCompatActivity {
 
                     //Toast.makeText(AddCustomer_2.this, jsonArray.toString(), Toast.LENGTH_SHORT).show();
 
-                    //URL=siteurl+"/GetpackagelistforcustomerCollectionApp?contractorId="+cid+"&loginuserId="+uid+"&customerId="+custid+"&lstpkgs="+jsonArray.toString();
+                    //URL=siteURL+"/GetpackagelistforcustomerCollectionApp?contractorId="+contractorId+"&loginuserId="+userId+"&customerId="+custid+"&lstpkgs="+jsonArray.toString();
 
                     URL = siteurl + "/GetpackagelistforcustomerCollectionApp";
 

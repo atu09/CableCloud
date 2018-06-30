@@ -21,7 +21,7 @@ public class CommentedCode {
                 @Override
                 public void onClick(View v) {
 
-                    URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+                    URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                     // GPSon(getApplicationContext());
                     //turnGpsOn(getApplicationContext());
@@ -42,9 +42,9 @@ public class CommentedCode {
             mdalert.setShowButtons(true);
             mdalert.setBackgroundCornerRadius(5);
 
-            MDDialog dialog = mdalert.create();
-            dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
-            dialog.show();*/
+            MDDialog loader = mdalert.create();
+            loader.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+            loader.show();*/
 
 
 
@@ -60,7 +60,7 @@ public class CommentedCode {
             latitude=String.valueOf(latitudes);
             longitude=String.valueOf(longitudes);
 
-            URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+            URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
             Toast.makeText(CustomerSignatureActivity.this, latitude + "--" + longitude, Toast.LENGTH_SHORT).show();
 
@@ -76,7 +76,7 @@ public class CommentedCode {
             adalert.setCancelable(true);
             adalert.setPositiveButton("SETTINGS", new DialogInterface.OnClickListener() {
                 @Override
-                public void onClick(DialogInterface dialog, int which) {
+                public void onClick(DialogInterface loader, int which) {
 
                     startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
 
@@ -84,9 +84,9 @@ public class CommentedCode {
             });
             adalert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
                 @Override
-                public void onClick(DialogInterface dialog, int which) {
+                public void onClick(DialogInterface loader, int which) {
 
-                    URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+                    URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                     // GPSon(getApplicationContext());
                     //turnGpsOn(getApplicationContext());
@@ -104,9 +104,9 @@ public class CommentedCode {
                 }
             });
 
-            AlertDialog dialog=adalert.create();
-            dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
-            dialog.show();
+            AlertDialog loader=adalert.create();
+            loader.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+            loader.show();
 
            *//* MDDialog.Builder mdalert = new MDDialog.Builder(CustomerSignatureActivity.this);
             mdalert.setTitle("Go to Settings to enable GPS");
@@ -122,7 +122,7 @@ public class CommentedCode {
                 @Override
                 public void onClick(View v) {
 
-                    URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+                    URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                     // GPSon(getApplicationContext());
                     //turnGpsOn(getApplicationContext());
@@ -143,15 +143,15 @@ public class CommentedCode {
             mdalert.setShowButtons(true);
             mdalert.setBackgroundCornerRadius(5);
 
-            MDDialog dialog = mdalert.create();
-            dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
-            dialog.show();*//*
+            MDDialog loader = mdalert.create();
+            loader.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+            loader.show();*//*
         }
 */
     // Toast.makeText(CustomerSignatureActivity.this, "Couldn't get the location. Make sure location is enabled", Toast.LENGTH_SHORT).show();
 
 
-     /*URL = siteurl + "/withdiscount";
+     /*URL = siteURL + "/withdiscount";
 
                     Toast.makeText(CustomerSignatureActivity.this, latitude + "--" + longitude, Toast.LENGTH_SHORT).show();
 
@@ -190,7 +190,7 @@ public class CommentedCode {
 
     }*/
 
-    // URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+    // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
     // GPSon(getApplicationContext());
     //turnGpsOn(getApplicationContext());
@@ -204,7 +204,7 @@ public class CommentedCode {
 
     // CallVolley(URL);
 
-    // URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+    // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
     // GPSon(getApplicationContext());
     //turnGpsOn(getApplicationContext());

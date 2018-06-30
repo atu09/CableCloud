@@ -52,7 +52,7 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
 
     private static final String PREF_NAME = "LoginPref";
 
-    //SimpleAdapter da;
+    //SimpleAdapter adapter;
 
     Customer_Complain_Adapter da;
 

@@ -184,7 +184,7 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
 
                     if (pref.getString("from", "").equals("Payment")) {
 
-                        // URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+                        // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                         // GPSon(getApplicationContext());
                         //turnGpsOn(getApplicationContext());
@@ -201,7 +201,7 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
                     }
                     else if(from.equals("Payment"))
                     {
-                        // URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+                        // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                         // GPSon(getApplicationContext());
                         //turnGpsOn(getApplicationContext());
@@ -231,7 +231,7 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
 
                     if (pref.getString("from", "").equals("Payment")) {
 
-                        // URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+                        // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                         // GPSon(getApplicationContext());
                         //turnGpsOn(getApplicationContext());
@@ -248,7 +248,7 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
                     }
                     else if(from.equals("Payment"))
                     {
-                        // URL = siteurl + "/GenerateBillReceiptForCollectionApp";
+                        // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                         // GPSon(getApplicationContext());
                         //turnGpsOn(getApplicationContext());

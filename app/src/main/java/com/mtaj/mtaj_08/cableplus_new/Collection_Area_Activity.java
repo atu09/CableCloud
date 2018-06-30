@@ -360,8 +360,8 @@ public class Collection_Area_Activity extends AppCompatActivity {
                     }
 
 
-                  /*  da=new SimpleAdapter(Collection_Area_Activity.this,areadetails,R.layout.layout_collection_area,new String[]{"AreaName","TodayCollection","Collection","Outstanding"},new int[]{R.id.textView31,R.id.textView43,R.id.textView47,R.id.textView45});
-                    lstcolarea.setAdapter(da);*/
+                  /*  adapter=new SimpleAdapter(Collection_Area_Activity.this,areadetails,R.layout.layout_collection_area,new String[]{"AreaName","TodayCollection","Collection","Outstanding"},new int[]{R.id.textView31,R.id.textView43,R.id.textView47,R.id.textView45});
+                    lstcolarea.setAdapter(adapter);*/
 
                     da.notifyDataSetChanged();
 
@@ -471,7 +471,7 @@ public class Collection_Area_Activity extends AppCompatActivity {
                             fromdate = edtfrom.getText().toString();
                             todate = edtto.getText().toString();
 
-                            //URL=siteurl+"/GetCollectionAreaByUserForCollectionApp?contractorId="+cid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate;
+                            //URL=siteURL+"/GetCollectionAreaByUserForCollectionApp?contractorId="+contractorId+"&userId="+userId+"&entityId="+entities+"&fromdate="+fromdate+"&todate="+todate;
                             mPage = 0;
                             URL = siteurl + "/GetCollectionAreaByUserForCollectionApp?contractorId=" + cid + "&userId=" + uid + "&entityId=" + eid + "&fromdate=" + fromdate + "&todate=" + todate + "&startindex=" + String.valueOf(mPage) + "&noofrecords=10";
                             new JSONAsynk().execute(new String[]{URL});
@@ -481,7 +481,7 @@ public class Collection_Area_Activity extends AppCompatActivity {
                             fromdate = edtfrom.getText().toString();
                             todate = edtto.getText().toString();
 
-                            // URL=siteurl+"/GetCollectionAreaByUserForCollectionApp?contractorId="+cid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate;
+                            // URL=siteURL+"/GetCollectionAreaByUserForCollectionApp?contractorId="+contractorId+"&userId="+userId+"&entityId="+entities+"&fromdate="+fromdate+"&todate="+todate;
                             mPage = 0;
                             URL = siteurl + "/GetCollectionAreaByUserForCollectionApp?contractorId=" + cid + "&userId=" + uid + "&entityId=" + eid + "&fromdate=" + fromdate + "&todate=" + todate + "&startindex=" + String.valueOf(mPage) + "&noofrecords=10";
                             new JSONAsynk().execute(new String[]{URL});
@@ -517,7 +517,7 @@ public class Collection_Area_Activity extends AppCompatActivity {
 
                 alert.setPositiveButton("SEARCH", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface loader, int which) {
 
 
                     }
@@ -525,41 +525,41 @@ public class Collection_Area_Activity extends AppCompatActivity {
 
                 alert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface loader, int which) {
 
                     }
                 });
 
-                AlertDialog dialog=alert.create();
-                dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+                AlertDialog loader=alert.create();
+                loader.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
 
-                dialog.show();*/
+                loader.show();*/
 
               /*  AlertDialog.Builder builder = new AlertDialog.Builder(Collection_Area_Activity.this));
 
-                // setup your dialog here...
+                // setup your loader here...
 
                 builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(final DialogInterface dialog, final int which) {
+                    public void onClick(final DialogInterface loader, final int which) {
                         // do something
                     }
                 });
 
                 builder.setPositiveButton("SEARCH", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(final DialogInterface dialog, final int which) {
+                    public void onClick(final DialogInterface loader, final int which) {
                         // do something
                     }
                 });
 
-                final AlertDialog dialog = builder.create();
+                final AlertDialog loader = builder.create();
 
-                dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                loader.setOnShowListener(new DialogInterface.OnShowListener() {
                     @Override
-                    public void onShow(final DialogInterface dialog) {
-                        Button negativeButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_NEGATIVE);
-                        Button positiveButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_POSITIVE);
+                    public void onShow(final DialogInterface loader) {
+                        Button negativeButton = ((AlertDialog) loader).getButton(DialogInterface.BUTTON_NEGATIVE);
+                        Button positiveButton = ((AlertDialog) loader).getButton(DialogInterface.BUTTON_POSITIVE);
 
                         // this not working because multiplying white background (e.g. Holo Light) has no effect
                         //negativeButton.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);

@@ -108,7 +108,7 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
                             map.put("isprint", "");
                             map.put("recptNo", recptNo);
 
-                            //URL = siteurl + "/withdiscount";
+                            //URL = siteURL + "/withdiscount";
 
                             URL=siteurl+"/withdiscountAndReceiptNo";
 
@@ -139,11 +139,11 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
                         public void onResponse(JSONObject response) {
                             try {
 
-                                //spload.dismiss();
+                                //loader.dismiss();
 
                                 try {
 
-                                      //Toast.makeText(con, response.toString(), Toast.LENGTH_SHORT).show();
+                                      //Toast.makeText(context, response.toString(), Toast.LENGTH_SHORT).show();
 
                                     if (response.getString("status").toString().equals("True")) {
 

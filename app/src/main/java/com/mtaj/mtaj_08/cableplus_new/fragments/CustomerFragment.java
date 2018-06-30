@@ -1,14 +1,9 @@
 package com.mtaj.mtaj_08.cableplus_new.fragments;
 
-import android.app.Activity;
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -20,17 +15,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.SearchView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
-//import com.github.silvestrpredko.dotprogressbar.DotProgressBar;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -40,97 +30,72 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.mtaj.mtaj_08.cableplus_new.AddCustomer_1;
-import com.mtaj.mtaj_08.cableplus_new.AreaListInCustomers;
+import com.mtaj.mtaj_08.cableplus_new.activities.AreaListInCustomers;
 import com.mtaj.mtaj_08.cableplus_new.CustomerListActivity;
 import com.mtaj.mtaj_08.cableplus_new.R;
 import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONArray;
-import org.json.JSONException;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import dmax.dialog.SpotsDialog;
 
 
 /**
  * Created by MTAJ-08 on 7/23/2016.
  */
 public class CustomerFragment extends Fragment {
-    private static final String PREF_NAME = "LoginPref";
-
-    CardView cvarea;
-
-    LinearLayout llarea;
-
-    TextView tvaddcustomer;
-
-    String url;
-
-    static InputStream is = null;
-    static JSONObject jobj = null;
-    static String json = "";
-    static JSONArray jarr = null;
-
-    JSONObject jsonobj;
-
-    TextView tvtotalarea, tvtotalcustomer;
-
-    String siteurl, uid, cid, aid, eid, URL;
-
-    SwipeRefreshLayout swrefresh;
-    EditText etsearch;
 
     SharedPreferences pref;
+    String LOGIN_PREF = "LoginPref";
+
+    CardView cvArea;
+    TextView tvAddCustomer;
+    EditText etSearch;
+
+    String url;
+    String siteURL, userId, contractorId, entities;
 
     RequestQueue requestQueue;
+    SwipeRefreshLayout refreshLayout;
+    ListView listView;
+    SimpleAdapter adapter;
 
-    ListView lvcustomer;
-
-    SimpleAdapter da;
-
-    ArrayList<HashMap<String, String>> customerdetails = new ArrayList<>();
-
+    ArrayList<HashMap<String, String>> customerDetailsMap = new ArrayList<>();
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        Context con = getActivity();
-        View vc;
-
-        final SharedPreferences pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        View view = inflater.inflate(R.layout.no_access_layout, container, false);
 
         url = getArguments().getString("url");
-
         if (pref.getBoolean("IsCustomer", true)) {
-            if (url.equals("-")) {
-                vc = inflater.inflate(R.layout.layout_offline, null);
+            if (url.equalsIgnoreCase("-")) {
+                view = inflater.inflate(R.layout.layout_offline, null);
             } else {
-                // new JSONAsynk().execute(new String[]{url});
+                view = inflater.inflate(R.layout.customers, container, false);
+
+                cvArea = (CardView) view.findViewById(R.id.card_view2);
+                tvAddCustomer = (TextView) view.findViewById(R.id.textView30);
+                listView = (ListView) view.findViewById(R.id.listView7);
+                refreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
+                etSearch = (EditText) view.findViewById(R.id.editText20);
+
                 CallVolleys(url);
-                vc = inflater.inflate(R.layout.customers, container, false);
             }
-
-        } else {
-            vc = inflater.inflate(R.layout.no_access_layout, container, false);
         }
-
-
-        return vc;
+        return view;
     }
 
 
@@ -138,45 +103,16 @@ public class CustomerFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final Context con = getActivity();
-
-        pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-
-
         if (pref.getBoolean("IsCustomer", true) && !url.equals("-")) {
 
-            cvarea = (CardView) view.findViewById(R.id.card_view2);
-
-            tvaddcustomer = (TextView) view.findViewById(R.id.textView30);
-
-            lvcustomer = (ListView) view.findViewById(R.id.listView7);
-
-            /*searchView = (SearchView) view.findViewById(R.id.searchView);
-            searchView.setQueryHint("Search Customers");
-            searchView.onActionViewExpanded();
-            searchView.setIconifiedByDefault(false);
-
-
-            int id = searchView.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
-            TextView textView = (TextView) searchView.findViewById(id);
-            textView.setTextColor(Color.WHITE);
-            textView.setHintTextColor(Color.WHITE);*/
-
-            swrefresh = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
-
-            etsearch = (EditText) view.findViewById(R.id.editText20);
-
-            swrefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                 @Override
                 public void onRefresh() {
-
-                    swrefresh.setRefreshing(true);
-                    // new JSONAsynk().execute(new String[]{url});
                     CallVolleys(url);
                 }
             });
 
-            etsearch.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            etSearch.setOnEditorActionListener(new EditText.OnEditorActionListener() {
                 @Override
                 public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 
@@ -184,13 +120,12 @@ public class CustomerFragment extends Fragment {
 
                         if (actionId == EditorInfo.IME_ACTION_SEARCH) {
 
-                            URL = siteurl + "/SearchCustomerForCollectionApp?startindex=0&noofrecords=10000000&contractorid=" + cid + "&userId=" + uid + "&entityId=" + eid + "&filterCustomer=" + URLEncoder.encode(v.getText().toString(), "UTF-8");
-
+                            String URL = siteURL + "/SearchCustomerForCollectionApp?startindex=0&noofrecords=10000000&contractorid=" + contractorId + "&userId=" + userId + "&entityId=" + entities + "&filterCustomer=" + URLEncoder.encode(v.getText().toString(), "UTF-8");
                             SharedPreferences.Editor editor = pref.edit();
                             editor.remove("from");
                             editor.putString("from", "Search");
                             editor.putString("URL", URL);
-                            editor.commit();
+                            editor.apply();
 
                             Intent i = new Intent(getContext(), CustomerListActivity.class);
                             startActivity(i);
@@ -201,52 +136,23 @@ public class CustomerFragment extends Fragment {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
-
                     return false;
                 }
             });
 
 
-           /* searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                @Override
-                public boolean onQueryTextSubmit(String query) {
-
-                    URL = siteurl + "/SearchCustomerForCollectionApp?startindex=0&noofrecords=10000000&contractorid=" + cid + "&userId=" + uid + "&entityId=" + eid + "&filterCustomer=" + query;
-
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.remove("from");
-                    editor.putString("from", "Search");
-                    editor.putString("URL", URL);
-                    editor.commit();
-
-                    Intent i = new Intent(getContext(), CustomerListActivity.class);
-                    startActivity(i);
-
-                    return false;
-                }
-
-                @Override
-                public boolean onQueryTextChange(String newText) {
-                    return false;
-                }
-            });*/
-
-
-            lvcustomer.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                     Intent i = new Intent(getContext(), AreaListInCustomers.class);
                     startActivity(i);
 
                 }
             });
 
-            tvaddcustomer.setOnClickListener(new View.OnClickListener() {
+            tvAddCustomer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     Intent i = new Intent(getContext(), AddCustomer_1.class);
                     startActivity(i);
 
@@ -259,208 +165,104 @@ public class CustomerFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //setRetainInstance(true);
-
         requestQueue = Volley.newRequestQueue(getContext());
+        pref = getActivity().getSharedPreferences(LOGIN_PREF, Context.MODE_PRIVATE);
 
-        final Context con = getActivity();
-
-        pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-
-        siteurl = pref.getString("SiteURL", "").toString();
-        uid = pref.getString("Userid", "").toString();
-        cid = pref.getString("Contracotrid", "").toString();
-        eid = pref.getString("Entityids", "").toString();
-    }
-
-
-    public static void hideSoftKeyboard(Activity activity) {
-        InputMethodManager inputMethodManager = (InputMethodManager) activity
-                .getSystemService(Activity.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+        siteURL = pref.getString("SiteURL", "");
+        userId = pref.getString("Userid", "");
+        contractorId = pref.getString("Contracotrid", "");
+        entities = pref.getString("Entityids", "");
     }
 
     public JSONObject makeHttpRequest(String url) {
-        DefaultHttpClient httpclient = new DefaultHttpClient();
-        HttpGet httppost = new HttpGet(url);
-        try {
-            HttpResponse httpresponse = httpclient.execute(httppost);
-            HttpEntity httpentity = httpresponse.getEntity();
-            is = httpentity.getContent();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
+        JSONObject jsonObject = null;
         try {
 
+            HttpParams httpParameters = new BasicHttpParams();
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"), 8);
+            int timeoutConnection = 500000;
+            HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
 
-            // BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_16LE), 8);
+            int timeoutSocket = 500000;
+            HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+            DefaultHttpClient httpclient = new DefaultHttpClient();
+            HttpGet httpGet = new HttpGet(url);
+
+            HttpResponse httpresponse = httpclient.execute(httpGet);
+            HttpEntity httpEntity = httpresponse.getEntity();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(httpEntity.getContent(), "UTF-8"));
 
             StringBuilder sb = new StringBuilder();
-            String line = null;
-            try {
-                if (reader != null) {
-
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line);
-                    }
-                } else {
-                    Toast.makeText(getActivity(), "No data", Toast.LENGTH_SHORT).show();
-                }
-
-                //is.close();
-                json = sb.toString();
-
-                // json= sb.toString().substring(0, sb.toString().length()-1);
-                try {
-                    jobj = new JSONObject(json);
-
-                    // JSONArray jarrays=new JSONArray(json);
-
-                    // jobj=jarrays.getJSONObject(0);
-
-                    //  org.json.simple.parser.JSONParser jsonparse=new org.json.simple.parser.JSONParser();
-
-                    // jarr =(JSONArray)jsonparse.parse(json);
-                    // jobj = jarr.getJSONObject(0);
-                } catch (JSONException e) {
-                    Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
-                }
-            } catch (IOException e) {
-                Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
-            }
-        } catch (UnsupportedEncodingException e) {
-            Toast.makeText(getActivity(), "**" + e, Toast.LENGTH_SHORT).show();
-        }
-       /* catch (ParseException e){
-            Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
-        }*/
-        return jobj;
-    }
-
-
-    private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
-
-        private ProgressDialog pDialog;
-        // public DotProgressBar dtprogoress;
-
-        Dialog spload;
-
-
-        JSONObject jsn1, jsn, jsnmain;
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            spload = Utils.getLoader(getActivity());
-            spload.show();
-
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... params) {
-
-            try {
-
-                jsonobj = makeHttpRequest(params[0]);
-
-
-            } catch (Exception e) {
-
-                e.printStackTrace();
-
-                //Toast.makeText(getActivity(), "--" + e, Toast.LENGTH_SHORT).show();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                sb.append(line);
             }
 
-            return jsonobj;
+            jsonObject = new JSONObject(sb.toString());
 
 
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            spload.dismiss();
-
-            try {
-
-                if (json.getString("status").toString().equals("True")) {
-
-                    ///Toast.makeText(getContext(), json.toString(), Toast.LENGTH_SHORT).show();
-
-                    String ta = json.getString("TotalArea").toString();
-                    String tc = json.getString("TotalCustomers").toString();
-
-                    // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show();
-
-                }
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-        }
-
+        return jsonObject;
     }
 
     public void CallVolleys(String a) {
-        JsonObjectRequest obreqs;
+        JsonObjectRequest request;
 
-        final Dialog spload = Utils.getLoader(getActivity());
-        spload.show();
+        final Dialog loader = Utils.getLoader(getActivity());
+        loader.show();
+
+        if (!refreshLayout.isRefreshing()) {
+            refreshLayout.setRefreshing(true);
+        }
 
         HashMap<String, String> map = new HashMap<>();
-        map.put("contractorId", cid);
-        map.put("loginuserId", uid);
-        map.put("entityIds", eid);
+        map.put("contractorId", contractorId);
+        map.put("loginuserId", userId);
+        map.put("entityIds", entities);
 
-
-        obreqs = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
+        request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+
+                        if (loader.isShowing()) {
+                            loader.dismiss();
+                        }
+
+                        if (refreshLayout.isRefreshing()) {
+                            refreshLayout.setRefreshing(false);
+                        }
+
                         try {
+                            customerDetailsMap.clear();
 
-                            spload.dismiss();
+                            if (response.getString("status").equalsIgnoreCase("True")) {
 
-                            customerdetails.clear();
-
-                            if (response.getString("status").toString().equals("True")) {
-
-                                ///Toast.makeText(getContext(), json.toString(), Toast.LENGTH_SHORT).show();
-
-                                String ta = response.getString("TotalArea").toString();
-                                String tc = response.getString("TotalCustomers").toString();
-                                String tab = response.getString("TotalAssignDevice").toString();
-                                String tuab = response.getString("TotalUnAssignDevice").toString();
+                                String ta = response.getString("TotalArea");
+                                String tc = response.getString("TotalCustomers");
+                                String tab = response.getString("TotalAssignDevice");
+                                String tuab = response.getString("TotalUnAssignDevice");
 
 
                                 HashMap<String, String> map = new HashMap<>();
-
                                 map.put("TotalArea", ta);
                                 map.put("TotalCustomers", tc);
                                 map.put("TotalAssignDevice", tab);
                                 map.put("TotalUnAssignDevice", tuab);
 
-                                customerdetails.add(map);
+                                customerDetailsMap.add(map);
 
-                                da = new SimpleAdapter(getContext(), customerdetails, R.layout.layout_customer, new String[]{"TotalArea", "TotalCustomers", "TotalAssignDevice"}, new int[]{R.id.textView65, R.id.textView8, R.id.textView10});
-
-                                lvcustomer.setAdapter(da);
-
-                                swrefresh.setRefreshing(false);
-
-
-                                // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show();
+                                adapter = new SimpleAdapter(getContext(), customerDetailsMap, R.layout.layout_customer, new String[]{"TotalArea", "TotalCustomers", "TotalAssignDevice"}, new int[]{R.id.textView65, R.id.textView8, R.id.textView10});
+                                listView.setAdapter(adapter);
 
                             }
 
                         } catch (Exception e) {
-                            // Toast.makeText(getContext(), "error--" + e, Toast.LENGTH_LONG).show();
                             e.printStackTrace();
                         }
                     }
@@ -468,18 +270,20 @@ public class CustomerFragment extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        if (loader.isShowing()) {
+                            loader.dismiss();
+                        }
 
-                        spload.dismiss();
-                        Toast.makeText(getContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
-
+                        if (refreshLayout.isRefreshing()) {
+                            refreshLayout.setRefreshing(false);
+                        }
                     }
                 });
 
-        obreqs.setRetryPolicy(new DefaultRetryPolicy(600000,
+        request.setRetryPolicy(new DefaultRetryPolicy(600000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        // Adds the JSON object request "obreq" to the request queue
-        requestQueue.add(obreqs);
+        requestQueue.add(request);
 
     }
 

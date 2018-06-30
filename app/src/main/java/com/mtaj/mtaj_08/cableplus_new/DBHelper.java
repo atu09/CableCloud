@@ -22,7 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String ENTITYTABLE = "EntityTable";
 
     public static final String PK_ENTITY_ID = "ENTITY_ID";
-    public static final String ENTITYNAME = "ENTITY_NAME";
+    public static final String ENTITY_NAME = "ENTITY_NAME";
 
     //Area Table
 
@@ -78,14 +78,11 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String IS_PRINT= "IS_PRINT";
     public static final String IS_SYNC= "IS_SYNC";
 
-    Context con;
-    //SQLiteDatabase db;
+    Context context;
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME , null, 1);
-        con=context;
-
-        //db=getWritableDatabase();
+        this.context =context;
     }
 
     @Override
@@ -97,7 +94,7 @@ public class DBHelper extends SQLiteOpenHelper {
                     "(" +
                     "ID" + " INTEGER AUTO INCREMENT," +
                     PK_ENTITY_ID + " TEXT PRIMARY KEY " + "," +
-                    ENTITYNAME + " TEXT" +
+                    ENTITY_NAME + " TEXT" +
                     ")";
 
             String CREATE_CUSTOMER_TABLE = "CREATE TABLE " + CUSTOMERTABLE +
@@ -158,13 +155,13 @@ public class DBHelper extends SQLiteOpenHelper {
             db.execSQL(CREATE_RECEIPT_TABLE);
             db.setLockingEnabled(false);
 
-           // Toast.makeText(con, "SUCCESS!!", Toast.LENGTH_LONG).show();
+           // Toast.makeText(context, "SUCCESS!!", Toast.LENGTH_LONG).show();
 
             Log.e("CABLE PLUS DB", "SUCCESS!!");
         }
         catch (Exception e)
         {
-            Toast.makeText(con, e.toString(), Toast.LENGTH_LONG).show();
+            Toast.makeText(context, e.toString(), Toast.LENGTH_LONG).show();
 
             Log.e("CABLE PLUS DB",e.toString());
         }
@@ -189,7 +186,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         ContentValues contentValues=new ContentValues();
         contentValues.put(PK_ENTITY_ID,eid);
-        contentValues.put(ENTITYNAME, ename);
+        contentValues.put(ENTITY_NAME, ename);
 
         if(db.insert(ENTITYTABLE,null,contentValues)>0)
         {

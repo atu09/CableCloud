@@ -177,7 +177,7 @@ public class PaymentFragment extends Fragment {
 
                 Cursor c = myDB.getAreas();
 
-                //swrefresh.setEnabled(false);
+                //refreshLayout.setEnabled(false);
 
                 DecimalFormat format = new DecimalFormat();
                 format.setDecimalSeparatorAlwaysShown(false);
@@ -270,7 +270,7 @@ public class PaymentFragment extends Fragment {
 
                         Cursor c = myDB.getAreas();
 
-                        //swrefresh.setEnabled(false);
+                        //refreshLayout.setEnabled(false);
 
                         DecimalFormat format = new DecimalFormat();
                         format.setDecimalSeparatorAlwaysShown(false);
@@ -344,7 +344,7 @@ public class PaymentFragment extends Fragment {
                         }
                         break;
                         case MotionEvent.ACTION_DOWN: {
-                            swrefresh.setEnabled(false);
+                            refreshLayout.setEnabled(false);
 
 
 
@@ -352,8 +352,8 @@ public class PaymentFragment extends Fragment {
                         case MotionEvent.ACTION_UP: {
                             if(lvarealist.getFirstVisiblePosition()==0)
                             {
-                                swrefresh.setEnabled(true);
-                                swrefresh.setRefreshing(true);
+                                refreshLayout.setEnabled(true);
+                                refreshLayout.setRefreshing(true);
                             }
                         }
 
@@ -378,7 +378,7 @@ public class PaymentFragment extends Fragment {
 
                     int topRowVerticalPosition = (lvarealist == null || lvarealist.getChildCount() == 0) ?
                             0 : lvarealist.getChildAt(0).getTop();
-                    swrefresh.setEnabled((topRowVerticalPosition >= 0));
+                    refreshLayout.setEnabled((topRowVerticalPosition >= 0));
 
                 }
             });
@@ -494,7 +494,7 @@ public class PaymentFragment extends Fragment {
                                                 String cid = c.getString(c.getColumnIndex(myDB.PK_CUSTOMER_IDD));
                                                 String bid = c.getString(c.getColumnIndex(myDB.BILL_ID));
 
-                                                // Toast.makeText(getContext(), name + acno + cid + bid, Toast.LENGTH_SHORT).show();
+                                                // Toast.makeText(getContext(), name + acno + contractorId + bid, Toast.LENGTH_SHORT).show();
 
                                                 Intent i = new Intent(getContext(), CustomerDetail_Offline.class);
                                                 i.putExtra("cname", name);
@@ -757,8 +757,8 @@ public class PaymentFragment extends Fragment {
 
                     }
 
-                    // da = new SimpleAdapter(getContext(), areadetails, R.layout.arealist, new String[]{"AreaName", "Collection", "Outstanding"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
-                    // lvarealist.setAdapter(da);
+                    // adapter = new SimpleAdapter(getContext(), areadetails, R.layout.arealist, new String[]{"AreaName", "Collection", "Outstanding"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
+                    // lvarealist.setAdapter(adapter);
 
                     //lvarealist.setAdapter(new PaymentAreaListAdapter(getContext(),areadetails));
 
@@ -837,8 +837,8 @@ public class PaymentFragment extends Fragment {
 
                                 }
 
-                                        /* da = new SimpleAdapter(getContext(), areadetails, R.layout.arealist, new String[]{"AreaName", "Collection", "Outstanding"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
-                                         lvarealist.setAdapter(da);*/
+                                        /* adapter = new SimpleAdapter(getContext(), areadetails, R.layout.arealist, new String[]{"AreaName", "Collection", "Outstanding"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
+                                         lvarealist.setAdapter(adapter);*/
 
                                 da.notifyDataSetChanged();
 
@@ -891,7 +891,7 @@ public class PaymentFragment extends Fragment {
     public void loadOfflineData() {
         Cursor c = myDB.getAreas();
 
-        //swrefresh.setEnabled(false);
+        //refreshLayout.setEnabled(false);
 
         DecimalFormat format = new DecimalFormat();
         format.setDecimalSeparatorAlwaysShown(false);
