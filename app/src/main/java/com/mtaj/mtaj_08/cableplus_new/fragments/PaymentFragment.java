@@ -40,7 +40,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.mtaj.mtaj_08.cableplus_new.CustomerDetail_Offline;
 import com.mtaj.mtaj_08.cableplus_new.CustomerDetails;
-import com.mtaj.mtaj_08.cableplus_new.CustomerListActivity;
+import com.mtaj.mtaj_08.cableplus_new.activities.CustomerListActivity;
 import com.mtaj.mtaj_08.cableplus_new.DBHelper;
 import com.mtaj.mtaj_08.cableplus_new.InfiniteScrollListener;
 import com.mtaj.mtaj_08.cableplus_new.PaymentAreaListAdapter;

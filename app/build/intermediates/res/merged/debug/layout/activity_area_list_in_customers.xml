@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimaryDark"
-        app:collapseIcon="@drawable/ic_arrow_back_white"
+        app:collapseIcon="@drawable/ic_back_white"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         app:titleTextAppearance="@style/Toolbar.TitleText"
         app:titleTextColor="@color/white" />

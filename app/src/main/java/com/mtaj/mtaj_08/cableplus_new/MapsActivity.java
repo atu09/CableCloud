@@ -114,7 +114,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(uname);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
+        toolbar.setNavigationIcon(R.drawable.ic_back_white);
 
         setSupportActionBar(toolbar);
 

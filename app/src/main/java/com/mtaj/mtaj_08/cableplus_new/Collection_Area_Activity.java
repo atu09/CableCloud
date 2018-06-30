@@ -132,7 +132,7 @@ public class Collection_Area_Activity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         // toolbar.setTitle(pref.getString("Name", "").toString()+" (50)");
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
+        toolbar.setNavigationIcon(R.drawable.ic_back_white);
 
         setSupportActionBar(toolbar);
 

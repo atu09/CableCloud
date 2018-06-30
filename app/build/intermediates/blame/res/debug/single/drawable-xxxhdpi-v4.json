@@ -16,6 +16,10 @@
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_back_white.png",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-xxxhdpi/ic_back_white.png"
+    },
+    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png",
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png"
     },
@@ -102,6 +106,10 @@
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_back_black.png",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-xxxhdpi/ic_back_black.png"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",

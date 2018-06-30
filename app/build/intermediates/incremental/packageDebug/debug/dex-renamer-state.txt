@@ -1,4 +1,4 @@
-#Sun Jul 01 01:42:03 IST 2018
+#Sun Jul 01 02:10:58 IST 2018
 base.0=/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/transforms/dexMerger/debug/1
 path.1=classes.dex
 renamed.1=classes2.dex

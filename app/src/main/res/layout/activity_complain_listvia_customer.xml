@@ -17,7 +17,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/ToolbarColor"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:collapseIcon="@drawable/ic_arrow_back_white" >
+            app:collapseIcon="@drawable/ic_back_white" >
             </android.support.v7.widget.Toolbar>
 
         <ListView

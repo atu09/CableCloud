@@ -33,11 +33,14 @@ public class CustomerListAdapter extends BaseAdapter {
         mylist = list;
 
         /***********  Layout inflator to call external xml layout () ***********/
-        inflater = (LayoutInflater) con.
-                getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) con.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
     }
 
+    public void addItems(ArrayList<HashMap<String, String>> list){
+        mylist.addAll(list);
+        notifyDataSetChanged();
+    }
 
     @Override
     public int getCount() {

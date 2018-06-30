@@ -466,7 +466,7 @@ public final class R {
         public static final int background_button_green_filled = 0x7f020058;
         public static final int button_filled_green = 0x7f02005c;
         public static final int button_filled_green_clicked = 0x7f02005d;
-        public static final int notification_template_icon_bg = 0x7f0200ce;
+        public static final int notification_template_icon_bg = 0x7f0200cf;
     }
     public static final class id {
         public static final int action0 = 0x7f1101ee;

@@ -1,4 +1,4 @@
-package com.mtaj.mtaj_08.cableplus_new;
+package com.mtaj.mtaj_08.cableplus_new.activities;
 
 import android.app.Dialog;
 import android.app.SearchManager;
@@ -27,6 +27,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mtaj.mtaj_08.cableplus_new.ConnectivityReceiver;
+import com.mtaj.mtaj_08.cableplus_new.CustomerDetail_Offline;
+import com.mtaj.mtaj_08.cableplus_new.CustomerDetails;
+import com.mtaj.mtaj_08.cableplus_new.CustomerListAdapter;
+import com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity;
+import com.mtaj.mtaj_08.cableplus_new.DBHelper;
+import com.mtaj.mtaj_08.cableplus_new.InfiniteScrollListener;
+import com.mtaj.mtaj_08.cableplus_new.R;
 import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.http.HttpEntity;
@@ -54,8 +62,8 @@ public class CustomerListActivity extends AppCompatActivity {
     CustomerListAdapter adapter;
     ListView listView;
     TextView tvEmpty;
-    TextView tvtotalcol, tvtotaloa;
-    LinearLayout footer;
+    TextView tvTotalCollection, tvTotalOs;
+    LinearLayout footerLayout;
 
     String siteurl, uid, cid, aid, eid, URL;
     String from;
@@ -73,10 +81,10 @@ public class CustomerListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_customer_list);
 
         listView = (ListView) findViewById(R.id.listView);
-        tvtotalcol = (TextView) findViewById(R.id.textView28);
-        tvtotaloa = (TextView) findViewById(R.id.textView30);
+        tvTotalCollection = (TextView) findViewById(R.id.textView28);
+        tvTotalOs = (TextView) findViewById(R.id.textView30);
         tvEmpty = (TextView) findViewById(R.id.textView99);
-        footer = (LinearLayout) findViewById(R.id.footer);
+        footerLayout = (LinearLayout) findViewById(R.id.footer);
 
         pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         myDB = new DBHelper(this);
@@ -88,17 +96,17 @@ public class CustomerListActivity extends AppCompatActivity {
         eid = pref.getString("Entityids", "");
         from = pref.getString("from", "");
 
-        tvtotalcol.setText(pref.getString("Collection", ""));
+        tvTotalCollection.setText(pref.getString("Collection", ""));
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(pref.getString("AreaName", ""));
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
+        toolbar.setNavigationIcon(R.drawable.ic_back_white);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if (from.equals("Customer") || from.equals("Search")) {
-            footer.setVisibility(View.GONE);
+            footerLayout.setVisibility(View.GONE);
         }
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -147,6 +155,7 @@ public class CustomerListActivity extends AppCompatActivity {
                         i.putExtra("A/cNo", ss.get("AccountNo"));
                         i.putExtra("MQno", ss.get("MQNo"));
                         startActivity(i);
+
                         finish();
 
                     }
@@ -248,10 +257,9 @@ public class CustomerListActivity extends AppCompatActivity {
             }
 
             String toa = String.valueOf(totalOs);
-            tvtotaloa.setText(str + format.format(Double.parseDouble(toa)));
+            tvTotalOs.setText(str + format.format(Double.parseDouble(toa)));
 
-            adapter = new CustomerListAdapter(getApplicationContext(), customerDetailsMaps);
-            listView.setAdapter(adapter);
+            adapter.addItems(customerDetailsMaps);
 
             if (adapter.getCount() > 0) {
                 tvEmpty.setVisibility(View.GONE);
@@ -359,8 +367,7 @@ public class CustomerListActivity extends AppCompatActivity {
                                 customerDetailsMaps.add(map);
                             }
 
-                            adapter = new CustomerListAdapter(getApplicationContext(), customerDetailsMaps);
-                            listView.setAdapter(adapter);
+                            adapter.addItems(customerDetailsMaps);
 
                             if (adapter.getCount() > 0) {
                                 tvEmpty.setVisibility(View.GONE);
@@ -452,6 +459,7 @@ public class CustomerListActivity extends AppCompatActivity {
             }
 
             try {
+                ArrayList<HashMap<String, String>> customerDetailsMaps = new ArrayList<>();
 
                 if (json.getString("status").equalsIgnoreCase("True")) {
 
@@ -461,6 +469,7 @@ public class CustomerListActivity extends AppCompatActivity {
                     format.setDecimalSeparatorAlwaysShown(false);
 
                     final JSONArray entityArray = json.getJSONArray("CustomerInfoList");
+
 
                     for (int i = 0; i < entityArray.length(); i++) {
                         JSONObject e = (JSONObject) entityArray.get(i);
@@ -502,14 +511,13 @@ public class CustomerListActivity extends AppCompatActivity {
                     }
 
                     String toa = json.getString("TotalOutstanding");
-                    tvtotaloa.setText(str + format.format(Double.parseDouble(toa)));
+                    tvTotalOs.setText(str + format.format(Double.parseDouble(toa)));
 
                 } else {
                     Toast.makeText(getApplicationContext(), json.getString("message"), Toast.LENGTH_SHORT).show();
                 }
 
-                adapter = new CustomerListAdapter(getApplicationContext(), customerDetailsMaps);
-                listView.setAdapter(adapter);
+                adapter.addItems(customerDetailsMaps);
 
                 if (adapter.getCount() > 0) {
                     tvEmpty.setVisibility(View.GONE);

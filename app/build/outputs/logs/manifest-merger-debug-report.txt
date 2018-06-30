@@ -289,7 +289,7 @@ ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:52:13-52
 	android:name
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:49:13-57
-activity#com.mtaj.mtaj_08.cableplus_new.CustomerListActivity
+activity#com.mtaj.mtaj_08.cableplus_new.activities.CustomerListActivity
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:53:9-61:20
 	android:screenOrientation
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:56:13-49
@@ -298,7 +298,7 @@ ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/
 	android:windowSoftInputMode
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:57:13-70
 	android:name
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:54:13-49
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:54:13-60
 meta-data#android.app.searchable
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:58:13-60:54
 	android:resource
@@ -314,9 +314,9 @@ ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/
 	android:name
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:63:13-44
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:66:13-68:87
+ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:66:13-68:98
 	android:value
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:68:17-84
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:68:17-95
 	android:name
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:67:17-63
 activity#com.mtaj.mtaj_08.cableplus_new.TransactionStatusActivity

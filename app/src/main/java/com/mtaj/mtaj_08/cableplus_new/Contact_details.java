@@ -93,7 +93,7 @@ public class Contact_details extends AppCompatActivity {
         final Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
+        toolbar.setNavigationIcon(R.drawable.ic_back_white);
 
         setSupportActionBar(toolbar);
 

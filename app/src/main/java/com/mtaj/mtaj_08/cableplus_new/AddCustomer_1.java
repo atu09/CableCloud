@@ -83,7 +83,7 @@ public class AddCustomer_1 extends AppCompatActivity {
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("General Details");
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
+        toolbar.setNavigationIcon(R.drawable.ic_back_white);
 
         setSupportActionBar(toolbar);
 

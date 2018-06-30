@@ -19,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mtaj.mtaj_08.cableplus_new.AddCustomer_1;
-import com.mtaj.mtaj_08.cableplus_new.CustomerListActivity;
 import com.mtaj.mtaj_08.cableplus_new.InfiniteScrollListener;
 import com.mtaj.mtaj_08.cableplus_new.R;
 import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
@@ -61,7 +60,7 @@ public class AreaListInCustomers extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Area List");
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
+        toolbar.setNavigationIcon(R.drawable.ic_back_white);
         setSupportActionBar(toolbar);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

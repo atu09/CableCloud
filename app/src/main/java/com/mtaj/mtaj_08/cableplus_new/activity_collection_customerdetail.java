@@ -139,7 +139,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
          toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(name);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
+        toolbar.setNavigationIcon(R.drawable.ic_back_white);
 
         setSupportActionBar(toolbar);
 

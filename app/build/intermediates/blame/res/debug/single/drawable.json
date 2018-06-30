@@ -92,12 +92,12 @@
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/ic_mode_edit_black.png"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/rupeeredicon.png",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/rupeeredicon.png"
-    },
-    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/ic_location_on_white.png",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/ic_location_on_white.png"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/rupeeredicon.png",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/rupeeredicon.png"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/payment.png",
@@ -136,10 +136,6 @@
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/presenter-layout-0.1.1.aar/292a15c9471fcb2bca84a43e05557dc1/res/drawable/background_button_green_filled.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/ic_arrow_back_white.png",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/ic_arrow_back_white.png"
-    },
-    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable/abc_ic_clear_material.xml"
     },
@@ -156,16 +152,16 @@
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/shape_resolvecomplain.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/tooltip_frame_light.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable/tooltip_frame_light.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable/abc_tab_indicator_material.xml"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/badge_icon_complaincomment_count.xml",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/badge_icon_complaincomment_count.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable/abc_tab_indicator_material.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/tooltip_frame_light.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/591afb95f51f6a7ad5eef0295d747919/res/drawable/tooltip_frame_light.xml"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/successfuldone.png",
