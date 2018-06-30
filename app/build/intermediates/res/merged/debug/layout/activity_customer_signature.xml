@@ -118,7 +118,7 @@
                     android:layout_margin="10dp"
                     android:padding="5dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_clear_black_24dp" />
+                    android:src="@drawable/ic_clear_black" />
 
             </android.support.v7.widget.CardView>
 
@@ -140,7 +140,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimaryDark"
-            app:collapseIcon="@drawable/ic_arrow_back_white_24dp"
+            app:collapseIcon="@drawable/ic_arrow_back_white"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
 
