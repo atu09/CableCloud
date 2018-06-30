@@ -83,10 +83,8 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 
 import cn.carbs.android.library.MDDialog;
@@ -225,7 +223,7 @@ public class CustomerDetails extends AppCompatActivity {
                 // set item width
                 deleteItem.setWidth(150);
                 // set a icon
-                deleteItem.setIcon(R.drawable.ic_done_white_18dp);
+                deleteItem.setIcon(R.drawable.ic_done_white);
                 // add to menu
                 menu.addMenuItem(deleteItem);
             }
@@ -237,7 +235,7 @@ public class CustomerDetails extends AppCompatActivity {
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
 
         setSupportActionBar(toolbar);
 
@@ -304,7 +302,7 @@ public class CustomerDetails extends AppCompatActivity {
                         JSONObject jsonobj = makeHttpRequest(URL1);
                         if (jsonobj.getString("status").toString().equals("True")) {
                             Toast.makeText(CustomerDetails.this, jsonobj.getString("message").toString(), Toast.LENGTH_SHORT).show();
-                            imadressedit.setImageResource(R.drawable.ic_mode_edit_black_24dp);
+                            imadressedit.setImageResource(R.drawable.ic_mode_edit_black);
                             isedited = false;
                             edaddress.setEnabled(false);
                         }
@@ -318,7 +316,7 @@ public class CustomerDetails extends AppCompatActivity {
                     edaddress.setEnabled(true);
                     edaddress.requestFocus();
                     showSoftKeyboard(edaddress);
-                    imadressedit.setImageResource(R.drawable.ic_done_black_24dp);
+                    imadressedit.setImageResource(R.drawable.ic_done_black);
                     isedited = true;
 
                 }
@@ -332,7 +330,7 @@ public class CustomerDetails extends AppCompatActivity {
                 //  edphone.setBackground(drawable);
                 //  edamount.setBackground(drawable);
 
-                //imphoneedit.getDrawable()==getResources().getDrawable(R.drawable.ic_done_black_24dp
+                //imphoneedit.getDrawable()==getResources().getDrawable(R.drawable.ic_done_black
 
                 if (isedited) {
                     //do work here
@@ -342,7 +340,7 @@ public class CustomerDetails extends AppCompatActivity {
                         JSONObject jsonobj = makeHttpRequest(URL1);
                         if (jsonobj.getString("status").toString().equals("True")) {
                             Toast.makeText(CustomerDetails.this, jsonobj.getString("message").toString(), Toast.LENGTH_SHORT).show();
-                            imphoneedit.setImageResource(R.drawable.ic_mode_edit_black_24dp);
+                            imphoneedit.setImageResource(R.drawable.ic_mode_edit_black);
                             isedited = false;
                             edphone.setEnabled(false);
                         }
@@ -354,7 +352,7 @@ public class CustomerDetails extends AppCompatActivity {
                     edphone.setEnabled(true);
                     edphone.requestFocus();
                     showSoftKeyboard(edphone);
-                    imphoneedit.setImageResource(R.drawable.ic_done_black_24dp);
+                    imphoneedit.setImageResource(R.drawable.ic_done_black);
                     isedited = true;
 
                 }
@@ -371,11 +369,11 @@ public class CustomerDetails extends AppCompatActivity {
 
                     edamount.setText(String.valueOf(amount));
 
-                    imdiscount.setImageResource(R.drawable.ic_mode_edit_black_24dp);
+                    imdiscount.setImageResource(R.drawable.ic_mode_edit_black);
                     isedited = false;
                     edtdiscount.setEnabled(false);
                 } else {
-                    imdiscount.setImageResource(R.drawable.ic_done_black_24dp);
+                    imdiscount.setImageResource(R.drawable.ic_done_black);
                     isedited = true;
                     edtdiscount.setEnabled(true);
                     edtdiscount.requestFocus();
@@ -396,7 +394,7 @@ public class CustomerDetails extends AppCompatActivity {
                         JSONObject jsonobj = makeHttpRequest(URL1);
                         if (jsonobj.getString("status").toString().equals("True")) {
                             Toast.makeText(CustomerDetails.this, jsonobj.getString("message").toString(), Toast.LENGTH_SHORT).show();
-                            imemailedit.setImageResource(R.drawable.ic_mode_edit_black_24dp);
+                            imemailedit.setImageResource(R.drawable.ic_mode_edit_black);
                             isedited = false;
                             edemail.setEnabled(false);
                         }
@@ -408,7 +406,7 @@ public class CustomerDetails extends AppCompatActivity {
                     edemail.setEnabled(true);
                     edemail.requestFocus();
                     showSoftKeyboard(edemail);
-                    imemailedit.setImageResource(R.drawable.ic_done_black_24dp);
+                    imemailedit.setImageResource(R.drawable.ic_done_black);
                     isedited = true;
 
                 }
@@ -426,7 +424,7 @@ public class CustomerDetails extends AppCompatActivity {
                     llosdetails.setVisibility(View.GONE);
                     tblrow.setVisibility(View.GONE);
                     lvosdetails.setVisibility(View.GONE);
-                    imdropdown.setImageResource(R.drawable.ic_arrow_drop_down_black_24dp);
+                    imdropdown.setImageResource(R.drawable.ic_arrow_drop_down_black);
 
 
                 } else {
@@ -435,7 +433,7 @@ public class CustomerDetails extends AppCompatActivity {
                     llosdetails.setVisibility(View.VISIBLE);
                     tblrow.setVisibility(View.VISIBLE);
                     lvosdetails.setVisibility(View.VISIBLE);
-                    imdropdown.setImageResource(R.drawable.ic_arrow_drop_up_white_24dp);
+                    imdropdown.setImageResource(R.drawable.ic_arrow_drop_up_white);
                 }
             }
         });

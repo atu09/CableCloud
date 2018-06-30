@@ -91,7 +91,7 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
 
         setSupportActionBar(toolbar);
 
@@ -154,7 +154,7 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
 
                 swrefresh.setRefreshing(true);
 
-                //new JSONAsynk().execute(new String[]{url});
+                //new JSONAsync().execute(new String[]{url});
 
                 if(mode.equals("User"))
                 {

@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimaryDark"
-            app:collapseIcon="@drawable/ic_arrow_back_white_24dp"
+            app:collapseIcon="@drawable/ic_arrow_back_white"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
     </RelativeLayout>
 
@@ -236,7 +236,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center_vertical"
-                                            android:src="@drawable/ic_call_black_24dp"
+                                            android:src="@drawable/ic_call_black"
                                             android:tint="@color/colorPrimaryDark" />
 
                                         <LinearLayout
@@ -275,8 +275,8 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center_vertical"
-                                            android:src="@drawable/ic_mode_edit_black_24dp"
-                                            android:tag="@drawable/ic_mode_edit_black_24dp"
+                                            android:src="@drawable/ic_mode_edit_black"
+                                            android:tag="@drawable/ic_mode_edit_black"
                                             android:tint="#000000" />
 
                                     </LinearLayout>
@@ -299,7 +299,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center_vertical"
-                                                android:src="@drawable/ic_email_black_24dp"
+                                                android:src="@drawable/ic_email_black"
                                                 android:tint="@color/colorPrimaryDark" />
 
                                             <LinearLayout
@@ -340,7 +340,7 @@
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
-                                                android:src="@drawable/ic_mode_edit_black_24dp"
+                                                android:src="@drawable/ic_mode_edit_black"
                                                 android:tint="#000000" />
 
                                         </LinearLayout>
@@ -362,7 +362,7 @@
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:layout_gravity="center_vertical"
-                                                    android:src="@drawable/ic_home_white_24dp"
+                                                    android:src="@drawable/ic_home_white"
                                                     android:tint="@color/colorPrimaryDark" />
 
                                                 <LinearLayout
@@ -402,7 +402,7 @@
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
                                                     android:layout_gravity="center_vertical"
-                                                    android:src="@drawable/ic_mode_edit_black_24dp"
+                                                    android:src="@drawable/ic_mode_edit_black"
                                                     android:tint="#000000" />
                                             </LinearLayout>
                                         </LinearLayout>
@@ -425,7 +425,7 @@
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:layout_gravity="center_vertical"
-                                                    android:src="@drawable/ic_location_on_black_24dp"
+                                                    android:src="@drawable/ic_location_on_black"
                                                     android:tint="@color/colorPrimaryDark" />
 
                                                 <LinearLayout
@@ -449,7 +449,7 @@
                                                         android:id="@+id/txtarea"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="40dp"
-                                                        android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                                                        android:drawableRight="@drawable/ic_arrow_drop_down_black"
                                                         android:ems="15"
                                                         android:gravity="center_vertical"
                                                         android:maxLines="2"
@@ -466,7 +466,7 @@
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
                                                     android:layout_gravity="center_vertical"
-                                                    android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                                                    android:src="@drawable/ic_arrow_drop_down_black"
                                                     android:tint="#000000"
                                                     android:visibility="gone" />
                                             </LinearLayout>
@@ -515,7 +515,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginRight="10dp"
-                                    android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                                    android:drawableEnd="@drawable/ic_keyboard_arrow_right_black"
                                     android:gravity="right"
                                     android:text=""
                                     android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -694,7 +694,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="10dp"
-                                        android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                                        android:src="@drawable/ic_arrow_drop_down_black"
                                         android:tint="#000000" />
 
 
@@ -813,8 +813,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_weight="1"
-                                    android:src="@drawable/ic_mode_edit_black_24dp"
-                                    android:tag="@drawable/ic_mode_edit_black_24dp"
+                                    android:src="@drawable/ic_mode_edit_black"
+                                    android:tag="@drawable/ic_mode_edit_black"
                                     android:tint="#000000" />
 
 
@@ -1005,7 +1005,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:layout_margin="@dimen/fab_margin"
-                android:src="@drawable/ic_add_white_24dp"
+                android:src="@drawable/ic_add_white"
                 android:tint="@android:color/white"
                 app:backgroundTint="@color/colorPrimaryDark"
                 app:elevation="10dp"

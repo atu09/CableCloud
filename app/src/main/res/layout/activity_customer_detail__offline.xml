@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/ToolbarColor"
-            app:collapseIcon="@drawable/ic_arrow_back_white_24dp"
+            app:collapseIcon="@drawable/ic_arrow_back_white"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
     </RelativeLayout>
 
@@ -154,7 +154,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
-                                    android:src="@drawable/ic_call_black_24dp"
+                                    android:src="@drawable/ic_call_black"
                                     android:tint="#000000" />
 
                                 <LinearLayout
@@ -194,8 +194,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
-                                    android:src="@drawable/ic_mode_edit_black_24dp"
-                                    android:tag="@drawable/ic_mode_edit_black_24dp"
+                                    android:src="@drawable/ic_mode_edit_black"
+                                    android:tag="@drawable/ic_mode_edit_black"
                                     android:tint="#000000"
                                     android:visibility="gone" />
 
@@ -219,7 +219,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_vertical"
-                                        android:src="@drawable/ic_email_black_24dp"
+                                        android:src="@drawable/ic_email_black"
                                         android:tint="#000000" />
 
                                     <LinearLayout
@@ -259,7 +259,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
-                                        android:src="@drawable/ic_mode_edit_black_24dp"
+                                        android:src="@drawable/ic_mode_edit_black"
                                         android:tint="#000000"
                                         android:visibility="gone" />
 
@@ -282,7 +282,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center_vertical"
-                                            android:src="@drawable/ic_home_white_24dp"
+                                            android:src="@drawable/ic_home_white"
                                             android:tint="#000000" />
 
                                         <LinearLayout
@@ -336,7 +336,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center_vertical"
-                                            android:src="@drawable/ic_mode_edit_black_24dp"
+                                            android:src="@drawable/ic_mode_edit_black"
                                             android:tint="#000000"
                                             android:visibility="gone" />
                                     </LinearLayout>
@@ -398,7 +398,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-                                android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                                android:src="@drawable/ic_arrow_drop_down_black"
                                 android:tint="#000000"
                                 android:visibility="gone" />
 
@@ -456,8 +456,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
-                            android:src="@drawable/ic_mode_edit_black_24dp"
-                            android:tag="@drawable/ic_mode_edit_black_24dp"
+                            android:src="@drawable/ic_mode_edit_black"
+                            android:tag="@drawable/ic_mode_edit_black"
                             android:tint="#000000" />
 
 

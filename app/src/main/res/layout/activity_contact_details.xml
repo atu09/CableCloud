@@ -14,7 +14,8 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/ToolbarColor"
         app:popupTheme="@style/AppTheme.PopupOverlay"
-        app:collapseIcon="@drawable/ic_arrow_back_white_24dp" />
+        app:collapseIcon="@drawable/ic_arrow_back_white_24dp"
+        card_view:collapseIcon="@drawable/ic_arrow_back_white" />
 
     <ScrollView
         android:layout_width="match_parent"

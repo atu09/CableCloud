@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/ToolbarColor"
-            app:collapseIcon="@drawable/ic_arrow_back_white_24dp"
+            app:collapseIcon="@drawable/ic_arrow_back_white"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
     </RelativeLayout>
 
@@ -254,7 +254,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
-                                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black"
                                 android:gravity="right"
                                 android:text=""
                                 android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -297,7 +297,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
-                                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black"
                                 android:gravity="right"
                                 android:text=""
                                 android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -340,7 +340,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
-                                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black"
                                 android:gravity="right"
                                 android:text=""
                                 android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -383,7 +383,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
-                                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black"
                                 android:gravity="right"
                                 android:text=""
                                 android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -426,7 +426,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
-                                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black"
                                 android:gravity="right"
                                 android:text=""
                                 android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -469,7 +469,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
-                                android:drawableEnd="@drawable/ic_add_black_24dp"
+                                android:drawableEnd="@drawable/ic_add_black"
                                 android:gravity="right"
                                 android:text=""
                                 android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -512,7 +512,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
-                                android:drawableEnd="@drawable/ic_attach_file_black_24dp"
+                                android:drawableEnd="@drawable/ic_attach_file_black"
                                 android:gravity="right"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="24sp" />
@@ -555,7 +555,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
-                                android:drawableEnd="@drawable/ic_sms_black_24dp"
+                                android:drawableEnd="@drawable/ic_sms_black"
                                 android:gravity="right"
                                 android:text=""
                                 android:textAppearance="?android:attr/textAppearanceLarge" />

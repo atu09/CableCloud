@@ -199,7 +199,7 @@ public class ComplainFragment extends Fragment {
             bottomNavigationBar
                     .addItem(new BottomNavigationItem(R.drawable.areaicon, "By Area").setActiveColorResource(R.color.ToolbarColor))
                     .addItem(new BottomNavigationItem(R.drawable.customericon, "By Operator").setActiveColorResource(R.color.ToolbarColor))
-                    .addItem(new BottomNavigationItem(R.drawable.ic_search_white_24dp, "Search").setActiveColorResource(R.color.ToolbarColor)).initialise();
+                    .addItem(new BottomNavigationItem(R.drawable.ic_search_white, "Search").setActiveColorResource(R.color.ToolbarColor)).initialise();
 
             hideKeyboard(lstcomplain, getContext());
 

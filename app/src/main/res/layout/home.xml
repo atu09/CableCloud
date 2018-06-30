@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_location_on_white_24dp"
+        android:src="@drawable/ic_location_on_white"
         android:visibility="gone"
         app:backgroundTint="@color/ToolbarColor"
         app:elevation="30dp"

@@ -19,21 +19,21 @@ import java.util.HashMap;
 public class CustomerListAdapter extends BaseAdapter {
 
     Context cont;
-    ArrayList<HashMap<String,String>> mylist;
-    private static LayoutInflater inflater=null;
+    ArrayList<HashMap<String, String>> mylist;
+    private static LayoutInflater inflater = null;
 
     String str = "\u20B9";
 
 
-    public CustomerListAdapter(Context con, ArrayList<HashMap<String,String>> list) {
+    public CustomerListAdapter(Context con, ArrayList<HashMap<String, String>> list) {
 
         /********** Take passed values **********/
 
-       cont=con;
-        mylist=list;
+        cont = con;
+        mylist = list;
 
         /***********  Layout inflator to call external xml layout () ***********/
-        inflater = (LayoutInflater)con.
+        inflater = (LayoutInflater) con.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
     }
@@ -59,7 +59,7 @@ public class CustomerListAdapter extends BaseAdapter {
         View vi = convertView;
         ViewHolder holder;
 
-        if(convertView==null){
+        if (convertView == null) {
 
             /****** Inflate tabitem.xml file for each row ( Defined below ) *******/
             vi = inflater.inflate(R.layout.customerlist, null);
@@ -71,48 +71,38 @@ public class CustomerListAdapter extends BaseAdapter {
             holder.textos = (TextView) vi.findViewById(R.id.textView32);
             holder.textacno = (TextView) vi.findViewById(R.id.textView34);
             holder.textmqno = (TextView) vi.findViewById(R.id.textView36);
-            holder.textaddres=(TextView)vi.findViewById(R.id.textView37);
+            holder.textaddres = (TextView) vi.findViewById(R.id.textView37);
             holder.textcount = (TextView) vi.findViewById(R.id.textView102);
-            holder.textsmartcard= (TextView) vi.findViewById(R.id.textView38);
-            holder.llcount=(LinearLayout)vi.findViewById(R.id.llcount);
+            holder.textsmartcard = (TextView) vi.findViewById(R.id.textView38);
+            holder.llcount = (LinearLayout) vi.findViewById(R.id.llcount);
 
             /************  Set holder with LayoutInflater ************/
-            vi.setTag( holder );
-        }
-        else
-            holder=(ViewHolder)vi.getTag();
+            vi.setTag(holder);
+        } else
+            holder = (ViewHolder) vi.getTag();
 
-        if(mylist.size()<=0)
-        {
-        }
-        else
-        {
+        if (mylist.size() <= 0) {
+        } else {
 
             /************  Set Model values in Holder elements ***********/
 
-            holder.textname.setText( mylist.get(position).get("Name"));
-            holder.textos.setText(str+ mylist.get(position).get("TotalOutStandingAmount"));
-            holder.textacno.setText( mylist.get(position).get("AccountNo"));
-            holder.textmqno.setText( mylist.get(position).get("MQNo"));
-            holder.textaddres.setText( mylist.get(position).get("Address"));
+            holder.textname.setText(mylist.get(position).get("Name"));
+            holder.textos.setText(str + mylist.get(position).get("TotalOutStandingAmount"));
+            holder.textacno.setText(mylist.get(position).get("AccountNo"));
+            holder.textmqno.setText(mylist.get(position).get("MQNo"));
+            holder.textaddres.setText(mylist.get(position).get("Address"));
             holder.textcount.setText(mylist.get(position).get("CustCommentCount"));
             holder.textsmartcard.setText(mylist.get(position).get("PackageName"));
 
-            if(mylist.get(position).get("CustCommentCount").equals("0"))
-            {
+            if (mylist.get(position).get("CustCommentCount").equals("0")) {
                 holder.textcount.setVisibility(View.GONE);
-            }
-            else
-            {
+                holder.textaddres.setVisibility(View.GONE);
+            } else {
                 holder.textcount.setVisibility(View.VISIBLE);
-
-                Animation anim=AnimationUtils.loadAnimation(cont,R.anim.rotate);
+                holder.textaddres.setVisibility(View.VISIBLE);
+                Animation anim = AnimationUtils.loadAnimation(cont, R.anim.rotate);
                 holder.llcount.startAnimation(anim);
-
             }
-
-
-
 
             /******** Set Item Click Listner for LayoutInflater for each row *******/
         }
@@ -121,8 +111,7 @@ public class CustomerListAdapter extends BaseAdapter {
     }
 
 
-
-    public static class ViewHolder{
+    public static class ViewHolder {
 
         public TextView textname;
         public TextView textos;
@@ -132,7 +121,6 @@ public class CustomerListAdapter extends BaseAdapter {
         public TextView textcount;
         public TextView textsmartcard;
         public LinearLayout llcount;
-
 
     }
 }

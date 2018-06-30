@@ -27,7 +27,7 @@
                 android:layout_height="50dp"
                 android:background="@android:color/transparent"
                 android:drawablePadding="10dp"
-                android:drawableStart="@drawable/ic_search_black_24dp"
+                android:drawableStart="@drawable/ic_search_black"
                 android:hint="Search Customers"
                 android:imeOptions="actionSearch"
                 android:paddingEnd="10dp"

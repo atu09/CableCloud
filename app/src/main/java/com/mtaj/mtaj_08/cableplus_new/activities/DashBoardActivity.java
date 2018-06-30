@@ -179,7 +179,7 @@ public class DashBoardActivity extends AppCompatActivity implements OnCountAssig
             }
         });
 
-        menuDataList.add(new MenuData("Home", R.drawable.ic_home_black_x24dp));
+        menuDataList.add(new MenuData("Home", R.drawable.ic_home_black));
         menuDataList.add(new MenuData("Payments", R.drawable.rupee));
         menuDataList.add(new MenuData("Collections", R.drawable.money_bag));
         menuDataList.add(new MenuData("Complaints", R.drawable.complain_call));

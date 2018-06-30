@@ -26,7 +26,7 @@ public class TabFragments extends Fragment {
     public static ViewPager viewPager;
     public static int int_items = 5;
 
-    final int[] ICONS = new int[]{R.drawable.ic_home_white_24dp, R.drawable.ic_add_alert_white_24dp, R.drawable.ic_menu_camera, R.drawable.ic_menu_gallery, R.drawable.ic_perm_identity_white_24dp};
+    final int[] ICONS = new int[]{R.drawable.ic_home_white, R.drawable.ic_add_alert_white, R.drawable.ic_menu_camera, R.drawable.ic_menu_gallery, R.drawable.ic_perm_identity_white};
 
     @Nullable
     @Override

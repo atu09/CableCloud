@@ -1,86 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:focusable="false"
-    android:focusableInTouchMode="false">
+    android:layout_height="match_parent">
 
-    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
+    <android.support.v7.widget.CardView
+        android:id="@+id/app"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:layout_marginTop="10dp"
-        android:elevation="2dp"
-        card_view:cardBackgroundColor="#ffffff"
-        card_view:contentPadding="8dp">
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardElevation="2.5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/border"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="false"
+                android:text="Customer Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize_16"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="50dp"
+                android:background="@color/colorPrimary" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:id="@+id/textView31"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:singleLine="false"
-                    android:text="customer name"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/textsize_16"
-                    android:textStyle="bold" />
-
-                <!--<TextView
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Medium Text"
-                    android:id="@+id/textView31"
-                    android:textColor="#000000"
-                   android:textStyle="bold"
-                    android:textSize="@dimen/textsize_16"
-                    android:ellipsize="end"
-                    android:singleLine="false"
-                    android:maxLines="1"
-                    />-->
-
-                <TextView
-                    android:id="@+id/textView32"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:text="Medium Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/textsize_16"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -115,7 +81,6 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -150,7 +115,6 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -177,18 +141,35 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="50dp"
+                android:background="@color/colorPrimary" />
+
             <TextView
                 android:id="@+id/textView37"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:maxLines="2"
                 android:singleLine="false"
-                android:text="Adress"
+                android:text="Address"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000000"
-                android:textSize="@dimen/textsize_16" />
+                android:textSize="@dimen/textsize_16"
+                android:visibility="gone" />
 
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="end"
+                android:text="Total Outstanding"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize_16"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -199,7 +180,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:elevation="2dp">
+        android:elevation="2.5dp"
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/textView102"
@@ -217,6 +199,5 @@
             android:textSize="12sp" />
 
     </LinearLayout>
-
 
 </FrameLayout>

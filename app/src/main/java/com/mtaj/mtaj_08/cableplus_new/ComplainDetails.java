@@ -165,7 +165,7 @@ public class ComplainDetails extends AppCompatActivity {
          toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
 
         setSupportActionBar(toolbar);
 
@@ -206,12 +206,12 @@ public class ComplainDetails extends AppCompatActivity {
 
                 if (llcdetails.isShown()) {
                     llcdetails.setVisibility(View.GONE);
-                    imdropdown.setImageResource(R.drawable.ic_arrow_drop_down_black_24dp);
+                    imdropdown.setImageResource(R.drawable.ic_arrow_drop_down_black);
 
 
                 } else {
                     llcdetails.setVisibility(View.VISIBLE);
-                    imdropdown.setImageResource(R.drawable.ic_arrow_drop_up_white_24dp);
+                    imdropdown.setImageResource(R.drawable.ic_arrow_drop_up_white);
                 }
 
             }

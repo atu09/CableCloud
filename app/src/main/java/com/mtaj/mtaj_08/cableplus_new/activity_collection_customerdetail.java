@@ -5,14 +5,10 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.app.SearchManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
-import android.os.Build;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
@@ -24,10 +20,8 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AbsListView;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
@@ -145,7 +139,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
          toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(name);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
 
         setSupportActionBar(toolbar);
 
@@ -407,7 +401,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
 
                        /* adapter = new SimpleAdapter(activity_collection_customerdetail.this, customerlist, R.layout.layout_colletion_customerdetail, new String[]{"Name", "CollectinAmount", "AccountNo", "MQNo", "ReceiptDate"}, new int[]{R.id.textView31, R.id.textView49, R.id.textView43, R.id.textView47, R.id.textView52});
-                        lvcustomer.setAdapter(adapter);*/
+                        listView.setAdapter(adapter);*/
 
                     da.notifyDataSetChanged();
 

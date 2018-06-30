@@ -69,7 +69,7 @@ public class CustomerDetail_Offline extends AppCompatActivity {
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
 
         setSupportActionBar(toolbar);
 
@@ -124,13 +124,13 @@ public class CustomerDetail_Offline extends AppCompatActivity {
 
                     edamount.setText(String.valueOf(amount));
 
-                    imdiscount.setImageResource(R.drawable.ic_mode_edit_black_24dp);
+                    imdiscount.setImageResource(R.drawable.ic_mode_edit_black);
                     isedited=false;
                     edtdiscount.setEnabled(false);
                 }
                 else
                 {
-                    imdiscount.setImageResource(R.drawable.ic_done_black_24dp);
+                    imdiscount.setImageResource(R.drawable.ic_done_black);
                     isedited=true;
                     edtdiscount.setEnabled(true);
                 }

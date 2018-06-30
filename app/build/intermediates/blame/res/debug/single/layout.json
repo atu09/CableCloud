@@ -100,16 +100,16 @@
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\presenter-layout-0.1.1.aar\\b575210edea35bfd31cd685d17534df0\\res\\layout\\view_overlapping_default_loading.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\608ddc0bbd5c9d59421f4e2fb9b31672\\res\\layout\\notification_template_media_custom.xml"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/layout_offline.xml",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/layout_offline.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\608ddc0bbd5c9d59421f4e2fb9b31672\\res\\layout\\notification_template_media_custom.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/C:\\Users\\Admin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\408cbd27a263c14165062f6162cd9ea6\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/activity_area_list_in_customers.xml",
@@ -124,12 +124,12 @@
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/D:\\AtirekProjects\\CableApp\\app\\src\\main\\res\\layout\\layout_collection_area.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/activity_customer_detail__offline.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/activity_customer_detail__offline.xml"
-    },
-    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/layout_package_details.xml",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/layout_package_details.xml"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/activity_customer_detail__offline.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/activity_customer_detail__offline.xml"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/view_overlapping_default_success.xml",

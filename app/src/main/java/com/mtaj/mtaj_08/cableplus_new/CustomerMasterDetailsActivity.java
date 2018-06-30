@@ -93,13 +93,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.text.DateFormat;
 import java.text.DecimalFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -219,7 +216,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
 
         setSupportActionBar(toolbar);
 
@@ -235,7 +232,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
 
         if(pref.getString("RoleId","").toString().equals("2"))
         {
-            Drawable image = this.getResources().getDrawable(R.drawable.ic_add_black_24dp );
+            Drawable image = this.getResources().getDrawable(R.drawable.ic_add_black);
             image.setBounds( 0, 0, image.getIntrinsicWidth(), image.getIntrinsicHeight() );
 
             tvcomplaint.setCompoundDrawablesWithIntrinsicBounds(null,null,image,null);
@@ -243,7 +240,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
         }
         else if(pref.getBoolean("IsComplain",true))
         {
-            Drawable image = this.getResources().getDrawable(R.drawable.ic_add_black_24dp );
+            Drawable image = this.getResources().getDrawable(R.drawable.ic_add_black);
             image.setBounds( 0, 0, image.getIntrinsicWidth(), image.getIntrinsicHeight() );
 
             tvcomplaint.setCompoundDrawablesWithIntrinsicBounds(null,null,image,null);
@@ -263,7 +260,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
                 // set item width
                 deleteItem.setWidth(150);
                 // set a icon
-                deleteItem.setIcon(R.drawable.ic_done_white_18dp);
+                deleteItem.setIcon(R.drawable.ic_done_white);
                 // add to menu
                 menu.addMenuItem(deleteItem);
             }

@@ -13,7 +13,7 @@
         android:textColorHint="@android:color/white"
         android:paddingLeft="5dp"
         android:textColor="@android:color/white"
-        android:drawableLeft="@drawable/ic_search_white_24dp"
+        android:drawableLeft="@drawable/ic_search_white"
         android:drawablePadding="10dp"
         android:singleLine="true"
         android:imeOptions="actionSearch"

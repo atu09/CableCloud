@@ -26,7 +26,7 @@ public final class R {
         public static final int spot = 0x7f0200c7;
     }
     public static final class id {
-        public static final int progress = 0x7f110184;
+        public static final int progress = 0x7f110183;
         public static final int title = 0x7f110015;
     }
     public static final class layout {
