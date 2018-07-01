@@ -142,7 +142,7 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
         LayoutInflater li=getLayoutInflater();
         View v=li.inflate(R.layout.customerlist, null);
 
-        CardView cv=(CardView)v.findViewById(R.id.card_view);
+        CardView cv=(CardView)v.findViewById(R.id.app);
         cv.setCardBackgroundColor(Color.parseColor("#e59400"));
 
         swrefresh = (SwipeRefreshLayout) findViewById(R.id.refresh);

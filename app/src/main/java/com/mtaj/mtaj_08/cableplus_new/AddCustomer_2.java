@@ -1,7 +1,9 @@
 package com.mtaj.mtaj_08.cableplus_new;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -36,6 +38,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.mtaj.mtaj_08.cableplus_new.Customs.MDDialog;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 //import com.github.silvestrpredko.dotprogressbar.DotProgressBar;
 
 import org.apache.http.HttpEntity;
@@ -58,8 +62,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import cn.carbs.android.library.MDDialog;
-import dmax.dialog.SpotsDialog;
 
 public class AddCustomer_2 extends AppCompatActivity {
 
@@ -67,17 +69,17 @@ public class AddCustomer_2 extends AppCompatActivity {
 
     FloatingActionButton fabadd;
 
-    TextView tvnext,tvcancel;
+    TextView tvnext, tvcancel;
 
     ListView lvpackage;
 
-    ArrayList<HashMap<String,String>> packagelist=new ArrayList<>();
+    ArrayList<HashMap<String, String>> packagelist = new ArrayList<>();
     SimpleAdapter da;
 
-    String siteurl,uid,cid,aid,eid,URL,custid;
+    String siteurl, uid, cid, aid, eid, URL, custid;
 
-    ArrayList<String> packagenames=new ArrayList<String>();
-    ArrayList<String> packageids=new ArrayList<String>();
+    ArrayList<String> packagenames = new ArrayList<String>();
+    ArrayList<String> packageids = new ArrayList<String>();
 
     static InputStream is = null;
     static JSONObject jobj = null;
@@ -88,6 +90,7 @@ public class AddCustomer_2 extends AppCompatActivity {
 
     JSONArray jsonArray = new JSONArray();
     RequestQueue requestQueue;
+    private Dialog dialog;
 
 
     @Override
@@ -95,23 +98,23 @@ public class AddCustomer_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_customer_2);
 
-        final SharedPreferences pref=getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        final SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         requestQueue = Volley.newRequestQueue(this);
 
-        siteurl=pref.getString("SiteURL","").toString();
-        uid=pref.getString("Userid","").toString();
-        cid=pref.getString("Contracotrid","").toString();
+        siteurl = pref.getString("SiteURL", "").toString();
+        uid = pref.getString("Userid", "").toString();
+        cid = pref.getString("Contracotrid", "").toString();
 
-        URL=siteurl+"/GetpackagelistforCollectionApp?contractorId="+cid;
+        URL = siteurl + "/GetpackagelistforCollectionApp?contractorId=" + cid;
 
-        Intent j=getIntent();
+        Intent j = getIntent();
 
-        custid=j.getExtras().getString("CustomerId");
+        custid = j.getExtras().getString("CustomerId");
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Package Details");
         toolbar.setTitleTextColor(Color.WHITE);
-       // toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        // toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
 
         setSupportActionBar(toolbar);
 
@@ -126,16 +129,15 @@ public class AddCustomer_2 extends AppCompatActivity {
             }
         });*/
 
-        fabadd=(FloatingActionButton)findViewById(R.id.fab);
-        tvnext=(TextView)findViewById(R.id.textView30);
-        tvcancel=(TextView)findViewById(R.id.textView28);
-        lvpackage=(ListView)findViewById(R.id.listView5);
+        fabadd = (FloatingActionButton) findViewById(R.id.fab);
+        tvnext = (TextView) findViewById(R.id.btnNext);
+        tvcancel = (TextView) findViewById(R.id.btnCancel);
+        lvpackage = (ListView) findViewById(R.id.listView5);
 
         try {
             jsonobj = makeHttpRequest(URL);
 
-            if (jsonobj.getString("status").equals("True"))
-            {
+            if (jsonobj.getString("status").equals("True")) {
                 packagenames.add(" ---- Select Package ----- ");
 
                 final JSONArray entityarray = jsonobj.getJSONArray("PackageInfoList");
@@ -148,56 +150,52 @@ public class AddCustomer_2 extends AppCompatActivity {
                 }
 
             }
-        }
-        catch (JSONException ex)
-        {
-            Toast.makeText(AddCustomer_2.this, "Error=="+ex, Toast.LENGTH_SHORT).show();
+        } catch (JSONException ex) {
+            Toast.makeText(AddCustomer_2.this, "Error==" + ex, Toast.LENGTH_SHORT).show();
         }
 
         fabadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                LayoutInflater li= getLayoutInflater();
+                LayoutInflater li = getLayoutInflater();
 
-                View vs=li.inflate(R.layout.layout_add_customer_package, null);
+                View vs = li.inflate(R.layout.layout_add_customer_package, null);
 
-                final Spinner sppackage=(Spinner)vs.findViewById(R.id.spinner3);
-                final EditText edtdno=(EditText)vs.findViewById(R.id.editText20);
-                final EditText edtmq=(EditText)vs.findViewById(R.id.editText21);
-                final CheckBox swbill=(CheckBox)vs.findViewById(R.id.checkBox);
+                final Spinner sppackage = (Spinner) vs.findViewById(R.id.spinner3);
+                final EditText edtdno = (EditText) vs.findViewById(R.id.editText20);
+                final EditText edtmq = (EditText) vs.findViewById(R.id.editText21);
+                final CheckBox swbill = (CheckBox) vs.findViewById(R.id.checkBox);
 
                 swbill.setVisibility(View.GONE);
 
 
-                ArrayAdapter<String> da1=new ArrayAdapter<String>(AddCustomer_2.this,android.R.layout.simple_spinner_dropdown_item,packagenames);
+                ArrayAdapter<String> da1 = new ArrayAdapter<String>(AddCustomer_2.this, android.R.layout.simple_spinner_dropdown_item, packagenames);
                 sppackage.setAdapter(da1);
 
 
-                MDDialog.Builder mdalert=new MDDialog.Builder(AddCustomer_2.this);
+                MDDialog.Builder mdalert = new MDDialog.Builder(AddCustomer_2.this);
                 mdalert.setContentView(vs);
                 mdalert.setTitle("Package Details");
                 mdalert.setPositiveButton("ADD", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        if(sppackage.getSelectedItemPosition()==0)
-                        {
+                        if (sppackage.getSelectedItemPosition() == 0) {
                             Toast.makeText(AddCustomer_2.this, "Select Valid Package..", Toast.LENGTH_SHORT).show();
-                        }
-                        else
-                        {
-                            HashMap<String,String> map=new HashMap<String, String>();
+                        } else {
+                            HashMap<String, String> map = new HashMap<String, String>();
 
-                            map.put("deviceno",edtdno.getText().toString());
-                            map.put("mqno",edtmq.getText().toString());
+                            map.put("deviceno", edtdno.getText().toString());
+                            map.put("mqno", edtmq.getText().toString());
                             map.put("pname", sppackage.getSelectedItem().toString());
-                            map.put("pid",packageids.get(sppackage.getSelectedItemPosition()-1));
+                            map.put("pid", packageids.get(sppackage.getSelectedItemPosition() - 1));
 
                             packagelist.add(map);
 
-                            da=new SimpleAdapter(AddCustomer_2.this,packagelist,R.layout.layout_customer_package_list,new String[]{"deviceno","mqno","pname"},new int[]{R.id.textView34,R.id.textView36,R.id.textView31});
+                            da = new SimpleAdapter(AddCustomer_2.this, packagelist, R.layout.layout_customer_package_list_revised, new String[]{"deviceno", "mqno", "pname"}, new int[]{R.id.textView34, R.id.textView36, R.id.textView31});
                             lvpackage.setAdapter(da);
+                            lvpackage.setHeaderDividersEnabled(false);
                         }
                     }
                 });
@@ -213,7 +211,8 @@ public class AddCustomer_2 extends AppCompatActivity {
                 mdalert.setBackgroundCornerRadius(5);
 
 
-                MDDialog dialog=mdalert.create();
+                final MDDialog dialog = mdalert.create();
+
                 dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
                 dialog.show();
 
@@ -227,7 +226,7 @@ public class AddCustomer_2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(packagelist.size()>0) {
+                if (packagelist.size() > 0) {
 
                     for (int i = 0; i < packagelist.size(); i++) {
                         try {
@@ -251,10 +250,8 @@ public class AddCustomer_2 extends AppCompatActivity {
                     URL = siteurl + "/GetpackagelistforcustomerCollectionApp";
 
                     CallVolley(URL);
-                }
-                else
-                {
-                    Snackbar.make(v,"No Packages To Add...",Snackbar.LENGTH_LONG).show();
+                } else {
+                    Snackbar.make(v, "No Packages To Add...", Snackbar.LENGTH_LONG).show();
                 }
 
                 //new  JSONAsynk().execute(new String[]{URL});
@@ -265,65 +262,54 @@ public class AddCustomer_2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               finish();
+                finish();
 
 
             }
         });
     }
 
-    public void CallVolley(String a)
-    {
-        final SpotsDialog spload;
-        spload=new SpotsDialog(AddCustomer_2.this,R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
-
+    public void CallVolley(String a) {
+        dialog = Utils.getLoader(AddCustomer_2.this);
+        dialog.show();
         try {
             //jsonobj=makeHttpRequest(params[0]);
 
-            HashMap<String,String> map=new HashMap<>();
-            map.put("contractorId",cid);
-            map.put("loginuserId",uid);
-            map.put("customerId",custid);
-            map.put("lstpkgs",jsonArray.toString());
+            HashMap<String, String> map = new HashMap<>();
+            map.put("contractorId", cid);
+            map.put("loginuserId", uid);
+            map.put("customerId", custid);
+            map.put("lstpkgs", jsonArray.toString());
 
             ///Log.e("MAP:",map.toString());
 
             JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
                             try {
 
-                                spload.dismiss();
+                                dialog.dismiss();
 
-                                try
-                                {
-                                    if(response.getString("status").toString().equals("True"))
-                                    {
+                                try {
+                                    if (response.getString("status").toString().equals("True")) {
                                         Toast.makeText(AddCustomer_2.this, response.getString("message").toString(), Toast.LENGTH_SHORT).show();
 
                                         Intent i = new Intent(AddCustomer_2.this, AddCustomer_3.class);
-                                        i.putExtra("CustomerId",custid);
+                                        i.putExtra("CustomerId", custid);
                                         startActivity(i);
 
                                         finish();
                                     }
 
-                                }
-                                catch (JSONException e)
-                                {
-                                    Toast.makeText(getApplicationContext(), "Error:++"+e, Toast.LENGTH_SHORT).show();
+                                } catch (JSONException e) {
+                                    Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
                                 }
 
                                 // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                            catch (Exception e)
-                            {
-                                Toast.makeText(AddCustomer_2.this, "error--"+e, Toast.LENGTH_SHORT).show();
+                            } catch (Exception e) {
+                                Toast.makeText(AddCustomer_2.this, "error--" + e, Toast.LENGTH_SHORT).show();
                             }
                         }
                     },
@@ -331,7 +317,7 @@ public class AddCustomer_2 extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
-                            Toast.makeText(AddCustomer_2.this, "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddCustomer_2.this, "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -342,8 +328,7 @@ public class AddCustomer_2 extends AppCompatActivity {
             // Adds the JSON object request "obreq" to the request queue
             requestQueue.add(obreq);
 
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Toast.makeText(AddCustomer_2.this, "--" + e, Toast.LENGTH_SHORT).show();
         }
 
@@ -351,8 +336,7 @@ public class AddCustomer_2 extends AppCompatActivity {
 
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
 
 
     }
@@ -375,12 +359,11 @@ public class AddCustomer_2 extends AppCompatActivity {
         int id = item.getItemId();
 
 
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_skip) {
 
             Intent i = new Intent(AddCustomer_2.this, AddCustomer_3.class);
-            i.putExtra("CustomerId",custid);
+            i.putExtra("CustomerId", custid);
             startActivity(i);
 
             finish();
@@ -391,7 +374,6 @@ public class AddCustomer_2 extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 
 
     @Override
@@ -420,7 +402,7 @@ public class AddCustomer_2 extends AppCompatActivity {
         }
     }
 
-    public JSONObject makeHttpRequest(String url){
+    public JSONObject makeHttpRequest(String url) {
         HttpParams httpParameters = new BasicHttpParams();
 
         int timeoutConnection = 500000;
@@ -431,19 +413,18 @@ public class AddCustomer_2 extends AppCompatActivity {
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
         DefaultHttpClient httpclient = new DefaultHttpClient(httpParameters);
-        HttpGet httppost=new HttpGet(url);
-        try{
+        HttpGet httppost = new HttpGet(url);
+        try {
             HttpResponse httpresponse = httpclient.execute(httppost);
             HttpEntity httpentity = httpresponse.getEntity();
             is = httpentity.getContent();
-        }catch (ClientProtocolException e){
+        } catch (ClientProtocolException e) {
             e.printStackTrace();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try{
-
+        try {
 
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
@@ -452,15 +433,13 @@ public class AddCustomer_2 extends AppCompatActivity {
 
             StringBuilder sb = new StringBuilder();
             String line = null;
-            try{
-                if(reader!=null) {
+            try {
+                if (reader != null) {
 
                     while ((line = reader.readLine()) != null) {
                         sb.append(line);
                     }
-                }
-                else
-                {
+                } else {
                     Toast.makeText(getApplicationContext(), "No data", Toast.LENGTH_SHORT).show();
                 }
 
@@ -468,7 +447,7 @@ public class AddCustomer_2 extends AppCompatActivity {
                 json = sb.toString();
 
                 // json= sb.toString().substring(0, sb.toString().length()-1);
-                try{
+                try {
                     jobj = new JSONObject(json);
 
                     // JSONArray jarrays=new JSONArray(json);
@@ -479,14 +458,14 @@ public class AddCustomer_2 extends AppCompatActivity {
 
                     // jarr =(JSONArray)jsonparse.parse(json);
                     // jobj = jarr.getJSONObject(0);
-                }catch (JSONException e){
-                    Toast.makeText(getApplicationContext(), "**"+e, Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
                 }
-            }catch(IOException e){
-                Toast.makeText(getApplicationContext(), "**"+e, Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
             }
-        }catch (UnsupportedEncodingException e){
-            Toast.makeText(getApplicationContext(), "**"+e, Toast.LENGTH_SHORT).show();
+        } catch (UnsupportedEncodingException e) {
+            Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
         }
        /* catch (ParseException e){
             Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
@@ -495,25 +474,20 @@ public class AddCustomer_2 extends AppCompatActivity {
     }
 
 
-    private class JSONAsynk extends AsyncTask<String,String,JSONObject>
-    {
+    private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
 
         private ProgressDialog pDialog;
         //public DotProgressBar dtprogoress;
 
-        SpotsDialog spload;
 
-
-        JSONObject jsn1,jsn,jsnmain;
+        JSONObject jsn1, jsn, jsnmain;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload=new SpotsDialog(AddCustomer_2.this,R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
-            spload.show();
+            dialog = Utils.getLoader(AddCustomer_2.this);
+            dialog.show();
 
         }
 
@@ -521,34 +495,25 @@ public class AddCustomer_2 extends AppCompatActivity {
         protected JSONObject doInBackground(String... params) {
 
 
-                jsonobj=makeHttpRequest(params[0]);
+            jsonobj = makeHttpRequest(params[0]);
 
-            return  jsonobj;
-
-
+            return jsonobj;
         }
 
         @Override
         protected void onPostExecute(JSONObject json) {
-            spload.dismiss();
+            dialog.dismiss();
 
-            try
-            {
-                if(json.getString("status").toString().equals("True"))
-                {
-
+            try {
+                if (json.getString("status").toString().equals("True")) {
 
 
                 }
 
-            }
-            catch (JSONException e)
-            {
-                Toast.makeText(AddCustomer_2.this, "Error:++"+e, Toast.LENGTH_SHORT).show();
-            }
-            catch (Exception ex)
-            {
-                Toast.makeText(AddCustomer_2.this, "Error:++"+ex, Toast.LENGTH_SHORT).show();
+            } catch (JSONException e) {
+                Toast.makeText(AddCustomer_2.this, "Error:++" + e, Toast.LENGTH_SHORT).show();
+            } catch (Exception ex) {
+                Toast.makeText(AddCustomer_2.this, "Error:++" + ex, Toast.LENGTH_SHORT).show();
             }
 
         }

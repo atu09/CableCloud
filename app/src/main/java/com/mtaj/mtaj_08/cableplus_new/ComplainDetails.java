@@ -157,7 +157,7 @@ public class ComplainDetails extends AppCompatActivity {
         tvemail=(TextView)findViewById(R.id.textView63);
         tvaddress=(TextView)findViewById(R.id.textView64);
 
-        tvresolve=(TextView)findViewById(R.id.textView30);
+        tvresolve=(TextView)findViewById(R.id.btnNext);
 
         imdropdown=(ImageView)findViewById(R.id.imageView4);
         imphone=(ImageView)findViewById(R.id.imageView2);

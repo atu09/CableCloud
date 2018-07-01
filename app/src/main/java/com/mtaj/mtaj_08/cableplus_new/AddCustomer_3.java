@@ -47,6 +47,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.commons.codec.binary.Base64;
 import org.json.JSONArray;
@@ -66,7 +67,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cn.carbs.android.library.MDDialog;
-import dmax.dialog.SpotsDialog;
 
 public class AddCustomer_3 extends AppCompatActivity {
 
@@ -74,47 +74,48 @@ public class AddCustomer_3 extends AppCompatActivity {
 
     FloatingActionButton fabadd;
 
-    public int REQUEST_CAMERA=123;
+    public int REQUEST_CAMERA = 123;
 
-    public int SELECT_IMAGE=345;
+    public int SELECT_IMAGE = 345;
 
-    public int SELECT_FILE=888;
+    public int SELECT_FILE = 888;
 
-    TextView tvnext,tvcancel;
+    TextView tvnext, tvcancel;
 
     ListView lvattachlist;
 
-    ArrayList<HashMap<String,String>> attachlist=new ArrayList<>();
+    ArrayList<HashMap<String, String>> attachlist = new ArrayList<>();
 
-     Dialog mBottomSheetDialog;
+    Dialog mBottomSheetDialog;
 
     SimpleAdapter da;
 
     JSONArray jsonArray = new JSONArray();
     RequestQueue requestQueue;
 
-    String siteurl,uid,cid,aid,eid,URL,custid,converted64;
+    String siteurl, uid, cid, aid, eid, URL, custid, converted64;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_customer_3);
 
-        final SharedPreferences pref=getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        final SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         requestQueue = Volley.newRequestQueue(this);
 
-        siteurl=pref.getString("SiteURL","").toString();
-        uid=pref.getString("Userid","").toString();
-        cid=pref.getString("Contracotrid","").toString();
+        siteurl = pref.getString("SiteURL", "").toString();
+        uid = pref.getString("Userid", "").toString();
+        cid = pref.getString("Contracotrid", "").toString();
 
-        Intent j=getIntent();
+        Intent j = getIntent();
 
-        custid=j.getExtras().getString("CustomerId");
+        custid = j.getExtras().getString("CustomerId");
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Attachments");
         toolbar.setTitleTextColor(Color.WHITE);
-       // toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        // toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
 
         setSupportActionBar(toolbar);
 
@@ -127,28 +128,28 @@ public class AddCustomer_3 extends AppCompatActivity {
             }
         });*/
 
-        fabadd=(FloatingActionButton)findViewById(R.id.fab);
-        tvnext=(TextView)findViewById(R.id.textView30);
-        tvcancel=(TextView)findViewById(R.id.textView28);
+        fabadd = (FloatingActionButton) findViewById(R.id.fab);
+        tvnext = (TextView) findViewById(R.id.btnNext);
+        tvcancel = (TextView) findViewById(R.id.btnCancel);
 
-        lvattachlist=(ListView)findViewById(R.id.listView5);
+        lvattachlist = (ListView) findViewById(R.id.listView5);
 
         fabadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                View view = getLayoutInflater ().inflate (R.layout.layout_attachment, null);
-                TextView txttakephoto = (TextView)view.findViewById( R.id.txt_backup);
-                TextView txtDetail = (TextView)view.findViewById( R.id.txt_detail);
-                TextView txtfilebrowse = (TextView)view.findViewById( R.id.txt_open);
+                View view = getLayoutInflater().inflate(R.layout.layout_attachment, null);
+                TextView txttakephoto = (TextView) view.findViewById(R.id.txt_backup);
+                TextView txtDetail = (TextView) view.findViewById(R.id.txt_detail);
+                TextView txtfilebrowse = (TextView) view.findViewById(R.id.txt_open);
 
 
-                mBottomSheetDialog = new Dialog (AddCustomer_3.this, R.style.MaterialDialogSheet);
-                mBottomSheetDialog.setContentView (view);
-                mBottomSheetDialog.setCancelable (true);
-                mBottomSheetDialog.getWindow ().setLayout (LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                mBottomSheetDialog.getWindow ().setGravity (Gravity.BOTTOM);
-                mBottomSheetDialog.show ();
+                mBottomSheetDialog = new Dialog(AddCustomer_3.this, R.style.MaterialDialogSheet);
+                mBottomSheetDialog.setContentView(view);
+                mBottomSheetDialog.setCancelable(true);
+                mBottomSheetDialog.getWindow().setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                mBottomSheetDialog.getWindow().setGravity(Gravity.BOTTOM);
+                mBottomSheetDialog.show();
 
 
                 txttakephoto.setOnClickListener(new View.OnClickListener() {
@@ -186,7 +187,7 @@ public class AddCustomer_3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(attachlist.size()>0) {
+                if (attachlist.size() > 0) {
 
                     for (int i = 0; i < attachlist.size(); i++) {
                         try {
@@ -208,10 +209,8 @@ public class AddCustomer_3 extends AppCompatActivity {
                     URL = siteurl + "/GetattachmentfileforcustomerCollectionApp";
 
                     CallVolleys(URL);
-                }
-                else
-                {
-                    Snackbar.make(v,"No Attachments to add",Snackbar.LENGTH_LONG).show();
+                } else {
+                    Snackbar.make(v, "No Attachments to add", Snackbar.LENGTH_LONG).show();
                 }
             }
         });
@@ -228,60 +227,48 @@ public class AddCustomer_3 extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
 
     }
 
 
-
-    public void CallVolley(String a)
-    {
-        final SpotsDialog spload;
-        spload=new SpotsDialog(AddCustomer_3.this,R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
+    public void CallVolley(String a) {
+        dialog = Utils.getLoader(AddCustomer_3.this);
+        dialog.show();
 
         try {
             //jsonobj=makeHttpRequest(params[0]);
 
-            HashMap<String,String> map=new HashMap<>();
-            map.put("loginuserId",uid);
-            map.put("customerId",custid);
-            map.put("lstfiles",jsonArray.toString());
+            HashMap<String, String> map = new HashMap<>();
+            map.put("loginuserId", uid);
+            map.put("customerId", custid);
+            map.put("lstfiles", jsonArray.toString());
 
-            Log.e("ATTACHMENTLOG",map.toString());
+            Log.e("ATTACHMENTLOG", map.toString());
 
             JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
                             try {
 
-                                spload.dismiss();
+                                dialog.dismiss();
 
-                                try
-                                {
-                                    if(response.getString("status").toString().equals("True"))
-                                    {
+                                try {
+                                    if (response.getString("status").toString().equals("True")) {
                                         Toast.makeText(AddCustomer_3.this, response.getString("message").toString(), Toast.LENGTH_SHORT).show();
 
                                         finish();
                                     }
 
-                                }
-                                catch (JSONException e)
-                                {
-                                    Toast.makeText(getApplicationContext(), "Error:++"+e, Toast.LENGTH_SHORT).show();
+                                } catch (JSONException e) {
+                                    Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
                                 }
 
                                 // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                            catch (Exception e)
-                            {
-                                Toast.makeText(AddCustomer_3.this, "error--"+e, Toast.LENGTH_SHORT).show();
+                            } catch (Exception e) {
+                                Toast.makeText(AddCustomer_3.this, "error--" + e, Toast.LENGTH_SHORT).show();
                             }
                         }
                     },
@@ -300,53 +287,41 @@ public class AddCustomer_3 extends AppCompatActivity {
             // Adds the JSON object request "obreq" to the request queue
             requestQueue.add(obreq);
 
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Toast.makeText(AddCustomer_3.this, "--" + e, Toast.LENGTH_SHORT).show();
         }
 
     }
 
 
-    public void CallVolleys(String a)
-    {
+    public void CallVolleys(String a) {
 
-        final SpotsDialog spload;
-        spload=new SpotsDialog(AddCustomer_3.this,R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
-
+        dialog = Utils.getLoader(AddCustomer_3.this);
+        dialog.show();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, a,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
                         try {
 
-                            spload.dismiss();
+                            dialog.dismiss();
 
-                            JSONObject response=new JSONObject(s);
+                            JSONObject response = new JSONObject(s);
 
-                            try
-                            {
-                                if(response.getString("status").toString().equals("True"))
-                                {
+                            try {
+                                if (response.getString("status").toString().equals("True")) {
                                     Toast.makeText(AddCustomer_3.this, response.getString("message").toString(), Toast.LENGTH_SHORT).show();
 
                                     finish();
                                 }
 
-                            }
-                            catch (JSONException e)
-                            {
-                                Toast.makeText(getApplicationContext(), "Error:++"+e, Toast.LENGTH_SHORT).show();
+                            } catch (JSONException e) {
+                                Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
                             }
 
                             // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                        }
-                        catch (Exception e)
-                        {
-                            Toast.makeText(AddCustomer_3.this, "error--"+e, Toast.LENGTH_SHORT).show();
+                        } catch (Exception e) {
+                            Toast.makeText(AddCustomer_3.this, "error--" + e, Toast.LENGTH_SHORT).show();
                         }
                     }
                 },
@@ -354,20 +329,20 @@ public class AddCustomer_3 extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
                         //Dismissing the progress loader
-                        spload.dismiss();
+                        dialog.dismiss();
 
                         //Showing toast
                         Toast.makeText(AddCustomer_3.this, "Something Went Wrong.. ", Toast.LENGTH_SHORT).show();
                     }
-                }){
+                }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                HashMap<String,String> map=new HashMap<>();
-                map.put("loginuserId",uid);
-                map.put("customerId",custid);
-                map.put("lstfiles",jsonArray.toString());
+                HashMap<String, String> map = new HashMap<>();
+                map.put("loginuserId", uid);
+                map.put("customerId", custid);
+                map.put("lstfiles", jsonArray.toString());
 
-                Log.e("ATTACHMENTLOG",map.toString());
+                Log.e("ATTACHMENTLOG", map.toString());
 
                 //returning parameters
                 return map;
@@ -409,35 +384,29 @@ public class AddCustomer_3 extends AppCompatActivity {
     }
 
 
-
-    private void cameraIntent()
-    {
+    private void cameraIntent() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
             int result = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE);
-            int result1= ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
-            if(result == PackageManager.PERMISSION_DENIED) {
+            if (result == PackageManager.PERMISSION_DENIED) {
                 ActivityCompat.requestPermissions(AddCustomer_3.this,
                         new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE},
                         REQUEST_CAMERA);
-            }
-            else if(result1 == PackageManager.PERMISSION_DENIED) {
+            } else if (result1 == PackageManager.PERMISSION_DENIED) {
 
                 ActivityCompat.requestPermissions(AddCustomer_3.this,
                         new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE},
                         REQUEST_CAMERA);
-            }
-            else {
+            } else {
 
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent, REQUEST_CAMERA);
             }
 
-        }
-        else
-        {
+        } else {
 
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(intent, REQUEST_CAMERA);
@@ -445,65 +414,57 @@ public class AddCustomer_3 extends AppCompatActivity {
 
     }
 
-    private void galleryIntent()
-    {
+    private void galleryIntent() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
             int result = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE);
-            int result1= ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
-            if(result == PackageManager.PERMISSION_DENIED) {
+            if (result == PackageManager.PERMISSION_DENIED) {
                 ActivityCompat.requestPermissions(AddCustomer_3.this,
                         new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE},
                         SELECT_IMAGE);
-            }
-            else if(result1 == PackageManager.PERMISSION_DENIED) {
+            } else if (result1 == PackageManager.PERMISSION_DENIED) {
 
                 ActivityCompat.requestPermissions(AddCustomer_3.this,
                         new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE},
                         SELECT_IMAGE);
-            }
-            else {
+            } else {
 
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);//
-                startActivityForResult(Intent.createChooser(intent, "Select Image"),SELECT_IMAGE);
+                startActivityForResult(Intent.createChooser(intent, "Select Image"), SELECT_IMAGE);
             }
 
-        }
-        else
-        {
+        } else {
 
             Intent intent = new Intent();
             intent.setType("image/*");
             intent.setAction(Intent.ACTION_GET_CONTENT);//
-            startActivityForResult(Intent.createChooser(intent, "Select Image"),SELECT_IMAGE);
+            startActivityForResult(Intent.createChooser(intent, "Select Image"), SELECT_IMAGE);
         }
 
     }
 
-    private void fileIntent()
-    {
+    private void fileIntent() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
             int result = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE);
-            int result1= ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
-            if(result == PackageManager.PERMISSION_DENIED) {
+            if (result == PackageManager.PERMISSION_DENIED) {
                 ActivityCompat.requestPermissions(AddCustomer_3.this,
                         new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE},
                         SELECT_FILE);
-            }
-            else if(result1 == PackageManager.PERMISSION_DENIED) {
+            } else if (result1 == PackageManager.PERMISSION_DENIED) {
 
                 ActivityCompat.requestPermissions(AddCustomer_3.this,
                         new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE},
                         SELECT_FILE);
-            }
-            else {
+            } else {
 
                 Intent intent = new Intent();
                 intent.setType("*/*");
@@ -512,9 +473,7 @@ public class AddCustomer_3 extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(intent, "Select File"), SELECT_FILE);
             }
 
-        }
-        else
-        {
+        } else {
 
             Intent intent = new Intent();
             intent.setType("*/*");
@@ -524,7 +483,6 @@ public class AddCustomer_3 extends AppCompatActivity {
         }
 
 
-
     }
 
 
@@ -532,15 +490,11 @@ public class AddCustomer_3 extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
 
-        if(requestCode == REQUEST_CAMERA )
-        {
-            if(permissions.length>0)
-            {
-                if(grantResults[0] == PackageManager.PERMISSION_DENIED){
+        if (requestCode == REQUEST_CAMERA) {
+            if (permissions.length > 0) {
+                if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
                     Toast.makeText(this, "Permission is not Granted to Perform Operation..!!", Toast.LENGTH_LONG).show();
-                }
-                else
-                {
+                } else {
                     Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                     startActivityForResult(intent, REQUEST_CAMERA);
                 }
@@ -549,35 +503,25 @@ public class AddCustomer_3 extends AppCompatActivity {
 
             return;
 
-        }
-        else if(requestCode == SELECT_IMAGE)
-        {
-            if(permissions.length>0)
-            {
-                if(grantResults[0] == PackageManager.PERMISSION_DENIED){
+        } else if (requestCode == SELECT_IMAGE) {
+            if (permissions.length > 0) {
+                if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
                     Toast.makeText(this, "Permission is not Granted to Perform Operation..!!", Toast.LENGTH_LONG).show();
-                }
-                else
-                {
+                } else {
                     Intent intent = new Intent();
                     intent.setType("image/*");
                     intent.setAction(Intent.ACTION_GET_CONTENT);//
-                    startActivityForResult(Intent.createChooser(intent, "Select Image"),SELECT_IMAGE);
+                    startActivityForResult(Intent.createChooser(intent, "Select Image"), SELECT_IMAGE);
                 }
 
             }
 
             return;
-        }
-        else if(requestCode == SELECT_FILE)
-        {
-            if(permissions.length>0)
-            {
-                if(grantResults[0] == PackageManager.PERMISSION_DENIED){
+        } else if (requestCode == SELECT_FILE) {
+            if (permissions.length > 0) {
+                if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
                     Toast.makeText(this, "Permission is not Granted to Perform Operation..!!", Toast.LENGTH_LONG).show();
-                }
-                else
-                {
+                } else {
                     Intent intent = new Intent();
                     intent.setType("*/*");
                     intent.setAction(Intent.ACTION_GET_CONTENT);//
@@ -590,7 +534,6 @@ public class AddCustomer_3 extends AppCompatActivity {
             return;
         }
     }
-
 
 
     @Override
@@ -807,8 +750,7 @@ public class AddCustomer_3 extends AppCompatActivity {
 
             else if (requestCode == SELECT_FILE) {
 
-                try
-                {
+                try {
                     Uri uri = data.getData();
                     Log.d("FILECHOOSER", "File Uri: " + uri.toString());
                     // Get the path
@@ -817,60 +759,54 @@ public class AddCustomer_3 extends AppCompatActivity {
 
                     //Toast.makeText(this, path, Toast.LENGTH_SHORT).show();
                     File yourFile = new File(path);
-                    
-                    if(yourFile.exists())
-                    {
+
+                    if (yourFile.exists()) {
                         final String encodeFileToBase64Binarys = encodeFileToBase64Binary(yourFile);
-                        
+
                         //Toast.makeText(this, encodeFileToBase64Binarys, Toast.LENGTH_SHORT).show();
 
-                                        mdalert.setPositiveButton("ADD", new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
+                        mdalert.setPositiveButton("ADD", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
 
-                                        mBottomSheetDialog.dismiss();
-
-
-                                        HashMap<String, String> map = new HashMap<String, String>();
-
-                                        map.put("filename", edtfilename.getText().toString());
-                                        map.put("displayname", tvfilebane.getText().toString());
-                                        map.put("uploadfilename", encodeFileToBase64Binarys);
-                                        map.put("type", tvfilebane.getText().toString().substring(tvfilebane.getText().toString().lastIndexOf(".")));
-
-                                        attachlist.add(map);
-
-                                        da = new SimpleAdapter(AddCustomer_3.this, attachlist, R.layout.layout_customer_attachment_list, new String[]{"filename", "displayname"}, new int[]{R.id.textView31, R.id.textView32});
-                                        lvattachlist.setAdapter(da);
-                                    }
-                                });
-                                mdalert.setNegativeButton("CANCEL", new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
+                                mBottomSheetDialog.dismiss();
 
 
-                                    }
-                                });
-                                mdalert.setWidthMaxDp(600);
-                                mdalert.setShowTitle(true);
-                                mdalert.setShowButtons(true);
-                                mdalert.setBackgroundCornerRadius(5);
+                                HashMap<String, String> map = new HashMap<String, String>();
 
-                                tvfilebane.setText(yourFile.getName());
-                                MDDialog dialog = mdalert.create();
-                                dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
-                                dialog.show();
-                    }
-                    else
-                    {
+                                map.put("filename", edtfilename.getText().toString());
+                                map.put("displayname", tvfilebane.getText().toString());
+                                map.put("uploadfilename", encodeFileToBase64Binarys);
+                                map.put("type", tvfilebane.getText().toString().substring(tvfilebane.getText().toString().lastIndexOf(".")));
+
+                                attachlist.add(map);
+
+                                da = new SimpleAdapter(AddCustomer_3.this, attachlist, R.layout.layout_customer_attachment_list, new String[]{"filename", "displayname"}, new int[]{R.id.textView31, R.id.textView32});
+                                lvattachlist.setAdapter(da);
+                            }
+                        });
+                        mdalert.setNegativeButton("CANCEL", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+
+                            }
+                        });
+                        mdalert.setWidthMaxDp(600);
+                        mdalert.setShowTitle(true);
+                        mdalert.setShowButtons(true);
+                        mdalert.setBackgroundCornerRadius(5);
+
+                        tvfilebane.setText(yourFile.getName());
+                        MDDialog dialog = mdalert.create();
+                        dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+                        dialog.show();
+                    } else {
                         Toast.makeText(this, "File Not Exist..", Toast.LENGTH_SHORT).show();
                     }
 
-                    
 
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
 
@@ -946,23 +882,22 @@ public class AddCustomer_3 extends AppCompatActivity {
         if (length > Integer.MAX_VALUE) {
             // File is too large
         }
-        byte[] bytes = new byte[(int)length];
+        byte[] bytes = new byte[(int) length];
 
         int offset = 0;
         int numRead = 0;
         while (offset < bytes.length
-                && (numRead=is.read(bytes, offset, bytes.length-offset)) >= 0) {
+                && (numRead = is.read(bytes, offset, bytes.length - offset)) >= 0) {
             offset += numRead;
         }
 
         if (offset < bytes.length) {
-            throw new IOException("Could not completely read file "+file.getName());
+            throw new IOException("Could not completely read file " + file.getName());
         }
 
         is.close();
         return bytes;
     }
-
 
 
     public String bitMapToString(Bitmap bitmap) {

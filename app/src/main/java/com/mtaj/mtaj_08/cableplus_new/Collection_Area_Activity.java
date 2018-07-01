@@ -125,8 +125,8 @@ public class Collection_Area_Activity extends AppCompatActivity {
 
         lstcolarea = (ListView) findViewById(R.id.listcollectionarea);
 
-        tvtotalcol = (TextView) findViewById(R.id.textView28);
-        tvtotaloa = (TextView) findViewById(R.id.textView30);
+        tvtotalcol = (TextView) findViewById(R.id.btnCancel);
+        tvtotaloa = (TextView) findViewById(R.id.btnNext);
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);

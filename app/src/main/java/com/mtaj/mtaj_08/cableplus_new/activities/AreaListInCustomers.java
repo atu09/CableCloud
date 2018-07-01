@@ -56,7 +56,7 @@ public class AreaListInCustomers extends AppCompatActivity {
         setContentView(R.layout.activity_area_list_in_customers);
 
         listView = (ListView) findViewById(R.id.listView);
-        tvAddCustomer = (TextView) findViewById(R.id.textView30);
+        tvAddCustomer = (TextView) findViewById(R.id.btnNext);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Area List");

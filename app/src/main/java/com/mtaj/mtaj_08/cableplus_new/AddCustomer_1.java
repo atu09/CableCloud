@@ -116,10 +116,10 @@ public class AddCustomer_1 extends AppCompatActivity {
         sparea=(Spinner)findViewById(R.id.spinner);
         spentity=(Spinner)findViewById(R.id.spinner2);
 
-        tvcancel=(TextView)findViewById(R.id.textView28);
-        tvnext=(TextView)findViewById(R.id.textView30);
+        tvcancel=(TextView)findViewById(R.id.btnCancel);
+        tvnext=(TextView)findViewById(R.id.btnNext);
 
-        areanames.add("---  Select Area ---");
+        areanames.add("--- Select Area ---");
         Entityname.add("--- Select Entity ---");
 
 

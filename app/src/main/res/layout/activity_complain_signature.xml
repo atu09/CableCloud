@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="CANCEL"
-                    android:id="@+id/textView28"
+                    android:id="@+id/btnCancel"
                     android:textColor="#ffffff"
                     android:textSize="@dimen/textsize_18"
                     android:textStyle="normal"

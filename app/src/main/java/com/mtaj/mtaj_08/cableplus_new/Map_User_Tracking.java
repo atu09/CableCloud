@@ -1,5 +1,6 @@
 package com.mtaj.mtaj_08.cableplus_new;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -39,6 +40,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -49,20 +51,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import dmax.dialog.SpotsDialog;
 
 public class Map_User_Tracking extends AppCompatActivity {
 
     private static final String PREF_NAME = "LoginPref";
-
+    private Context context;
     MapView mMapView;
     private GoogleMap mMap;
     TextView tvselectuser;
 
-    ArrayList<String> useridlist=new ArrayList<>();
-    ArrayList<String> usernamelist=new ArrayList<>();
+    ArrayList<String> useridlist = new ArrayList<>();
+    ArrayList<String> usernamelist = new ArrayList<>();
 
-    String siteurl,uid,cid,aid,eid,URL;
+    String siteurl, uid, cid, aid, eid, URL;
 
     SharedPreferences pref;
 
@@ -76,17 +77,17 @@ public class Map_User_Tracking extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map__user__tracking);
 
-        pref=getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        requestQueue= Volley.newRequestQueue(this);
+        requestQueue = Volley.newRequestQueue(this);
         geocoder = new Geocoder(this, Locale.getDefault());
 
 
-        siteurl=pref.getString("SiteURL","").toString();
-        uid=pref.getString("Userid","").toString();
-        cid=pref.getString("Contracotrid", "").toString();
+        siteurl = pref.getString("SiteURL", "").toString();
+        uid = pref.getString("Userid", "").toString();
+        cid = pref.getString("Contracotrid", "").toString();
 
-
+        context = this;
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Track User");
         toolbar.setTitleTextColor(Color.WHITE);
@@ -94,17 +95,16 @@ public class Map_User_Tracking extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        if(!checkPlayServices())
-        {
+        if (!checkPlayServices()) {
             finish();
         }
 
 
         View rootView = getWindow().getDecorView().getRootView();
 
-        Snackbar.make(rootView,"Please Select User to Track Location...",Snackbar.LENGTH_LONG).show();
+        Snackbar.make(rootView, "Please Select User to Track Location...", Snackbar.LENGTH_LONG).show();
 
-        tvselectuser=(TextView)findViewById(R.id.txtselect);
+        tvselectuser = (TextView) findViewById(R.id.txtselect);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,7 +122,7 @@ public class Map_User_Tracking extends AppCompatActivity {
                 useridlist.clear();
                 usernamelist.clear();
 
-                URL=siteurl+"/GetUserlistfornewcollectionApp";
+                URL = siteurl + "/GetUserlistfornewcollectionApp";
 
                 CallVolleyUserlist(URL);
             }
@@ -132,7 +132,7 @@ public class Map_User_Tracking extends AppCompatActivity {
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);*/
 
-        mMapView = (MapView)findViewById(R.id.mapView);
+        mMapView = (MapView) findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume(); // needed to get the map to display immediately
@@ -165,7 +165,6 @@ public class Map_User_Tracking extends AppCompatActivity {
         });
 
 
-
     }
 
     @Override
@@ -194,36 +193,29 @@ public class Map_User_Tracking extends AppCompatActivity {
     }
 
 
-    public void CallVolleyUserlist(String a)
-    {
+    public void CallVolleyUserlist(String a) {
 
-        HashMap<String,String> map=new HashMap<>();
-        map.put("contractorid",cid);
-
-        final SpotsDialog spload;
-        spload=new SpotsDialog(Map_User_Tracking.this,R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
+        HashMap<String, String> map = new HashMap<>();
+        map.put("contractorid", cid);
 
 
+        final Dialog dialog = Utils.getLoader(context);
+        dialog.show();
 
         try {
             //jsonobj=makeHttpRequest(params[0]);
 
             JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
                             try {
 
-                                spload.dismiss();
+                                dialog.dismiss();
 
-                                try
-                                {
-                                    if(response.getString("status").toString().equals("True"))
-                                    {
+                                try {
+                                    if (response.getString("status").toString().equals("True")) {
                                         final JSONArray entityarray = response.getJSONArray("lstUserInfoCollectionApp");
 
                                         for (int i = 0; i < entityarray.length(); i++) {
@@ -234,14 +226,13 @@ public class Map_User_Tracking extends AppCompatActivity {
 
                                         }
 
-                                        if(usernamelist.size()>0)
-                                        {
-                                            final ListView lv=new ListView(Map_User_Tracking.this);
+                                        if (usernamelist.size() > 0) {
+                                            final ListView lv = new ListView(Map_User_Tracking.this);
                                             lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
                                             lv.setDividerHeight(0);
 
 
-                                            final ArrayAdapter<String> da=new ArrayAdapter<String>(Map_User_Tracking.this,android.R.layout.simple_list_item_single_choice,usernamelist);
+                                            final ArrayAdapter<String> da = new ArrayAdapter<String>(Map_User_Tracking.this, android.R.layout.simple_list_item_single_choice, usernamelist);
                                             lv.setAdapter(da);
 
                                             final AlertDialog.Builder builderDialog = new AlertDialog.Builder(Map_User_Tracking.this);
@@ -250,43 +241,33 @@ public class Map_User_Tracking extends AppCompatActivity {
                                                 @Override
                                                 public void onClick(DialogInterface dialog, int which) {
 
-                                                    if (lv.getCheckedItemPosition()==-1)
-                                                    {
+                                                    if (lv.getCheckedItemPosition() == -1) {
                                                         Toast.makeText(Map_User_Tracking.this, "Please select atleast one User..!!", Toast.LENGTH_LONG).show();
-                                                    }
-                                                    else
-                                                    {
-                                                        URL=siteurl+"/GetUserlistlocationfornewcollectionApp";
+                                                    } else {
+                                                        URL = siteurl + "/GetUserlistlocationfornewcollectionApp";
 
-                                                        CallVolleyUserLocation(URL,useridlist.get(lv.getCheckedItemPosition()));
+                                                        CallVolleyUserLocation(URL, useridlist.get(lv.getCheckedItemPosition()));
                                                     }
                                                 }
                                             });
 
-                                            final AlertDialog alert=builderDialog.create();
+                                            final AlertDialog alert = builderDialog.create();
                                             alert.setTitle("Select User");
                                             alert.setCancelable(true);
                                             alert.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
                                             alert.show();
                                         }
-                                    }
-
-                                    else
-                                    {
+                                    } else {
                                         Toast.makeText(Map_User_Tracking.this, response.getString("message"), Toast.LENGTH_SHORT).show();
                                     }
 
-                                }
-                                catch (JSONException e)
-                                {
-                                    Toast.makeText(getApplicationContext(), "JSON:++"+e, Toast.LENGTH_SHORT).show();
+                                } catch (JSONException e) {
+                                    Toast.makeText(getApplicationContext(), "JSON:++" + e, Toast.LENGTH_SHORT).show();
                                 }
 
                                 // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                            catch (Exception e)
-                            {
-                                Toast.makeText(getApplicationContext(), "error--"+e, Toast.LENGTH_SHORT).show();
+                            } catch (Exception e) {
+                                Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
                             }
                         }
                     },
@@ -294,7 +275,7 @@ public class Map_User_Tracking extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
-                            Toast.makeText(getApplicationContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -305,55 +286,46 @@ public class Map_User_Tracking extends AppCompatActivity {
             // Adds the JSON object request "obreq" to the request queue
             requestQueue.add(obreq);
 
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
         }
 
     }
 
-    public void CallVolleyUserLocation(String a,String uid)
-    {
+    public void CallVolleyUserLocation(String a, String uid) {
 
-        HashMap<String,String> map=new HashMap<>();
-        map.put("contractorid",cid);
-        map.put("userid",uid);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("contractorid", cid);
+        map.put("userid", uid);
 
-        final SpotsDialog spload;
-        spload=new SpotsDialog(Map_User_Tracking.this,R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
-
+        final Dialog dialog = Utils.getLoader(context);
+        dialog.show();
 
 
         try {
             //jsonobj=makeHttpRequest(params[0]);
 
             JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
                             try {
+                                dialog.dismiss();
 
-                                spload.dismiss();
-
-                                try
-                                {
-                                    if(response.getString("status").toString().equals("True"))
-                                    {
+                                try {
+                                    if (response.getString("status").toString().equals("True")) {
                                         final JSONArray entityarray = response.getJSONArray("lstUserInfoCollectionApp");
 
                                         for (int i = 0; i < entityarray.length(); i++) {
                                             JSONObject e = (JSONObject) entityarray.get(i);
 
 
-                                            String uname=e.getString("Name");
-                                            String lat=e.getString("Latitude");
-                                            String longi=e.getString("Longitude");
+                                            String uname = e.getString("Name");
+                                            String lat = e.getString("Latitude");
+                                            String longi = e.getString("Longitude");
 
-                                            String locationSnippet=getAddress(Double.parseDouble(lat), Double.parseDouble(longi));
+                                            String locationSnippet = getAddress(Double.parseDouble(lat), Double.parseDouble(longi));
 
                                             //mMap.setMyLocationEnabled(true);
 
@@ -398,24 +370,17 @@ public class Map_User_Tracking extends AppCompatActivity {
                                             mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
                                         }
 
-                                    }
-
-                                    else
-                                    {
+                                    } else {
                                         Toast.makeText(Map_User_Tracking.this, response.getString("message"), Toast.LENGTH_SHORT).show();
                                     }
 
-                                }
-                                catch (JSONException e)
-                                {
-                                    Toast.makeText(getApplicationContext(), "JSON:++"+e, Toast.LENGTH_SHORT).show();
+                                } catch (JSONException e) {
+                                    Toast.makeText(getApplicationContext(), "JSON:++" + e, Toast.LENGTH_SHORT).show();
                                 }
 
                                 // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                            catch (Exception e)
-                            {
-                                Toast.makeText(getApplicationContext(), "error--"+e, Toast.LENGTH_SHORT).show();
+                            } catch (Exception e) {
+                                Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
                             }
                         }
                     },
@@ -423,7 +388,7 @@ public class Map_User_Tracking extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
-                            Toast.makeText(getApplicationContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -434,19 +399,16 @@ public class Map_User_Tracking extends AppCompatActivity {
             // Adds the JSON object request "obreq" to the request queue
             requestQueue.add(obreq);
 
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
         }
 
     }
 
 
-
-    public String getAddress(Double lat,Double longi)
-    {
-        String fulladdress="";
-        String address="";
+    public String getAddress(Double lat, Double longi) {
+        String fulladdress = "";
+        String address = "";
 
         try {
 
@@ -454,11 +416,10 @@ public class Map_User_Tracking extends AppCompatActivity {
 
             StringBuilder strReturnedAddress = new StringBuilder("");
 
-            for(int i=0;i<addresses.get(0).getMaxAddressLineIndex();i++)
-            {
+            for (int i = 0; i < addresses.get(0).getMaxAddressLineIndex(); i++) {
                 strReturnedAddress.append(addresses.get(0).getAddressLine(i));
             }
-            address=strReturnedAddress.toString();
+            address = strReturnedAddress.toString();
 
             /* // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
             String city = addresses.get(0).getLocality();
@@ -468,9 +429,7 @@ public class Map_User_Tracking extends AppCompatActivity {
             String knownName = addresses.get(0).getFeatureName();
 
             fulladdress=address+","+city+"-"+postalCode+","+state;*/
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

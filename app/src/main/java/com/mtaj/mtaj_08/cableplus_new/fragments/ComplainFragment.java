@@ -442,7 +442,7 @@ public class ComplainFragment extends Fragment {
 
                 //explistcomplain.setAdapter(expandableListAdapter);
 
-                tvtotalcomplaint = (TextView) view.findViewById(R.id.textView30);
+                tvtotalcomplaint = (TextView) view.findViewById(R.id.btnNext);
 
                 swrefresh = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
 

@@ -1,12 +1,9 @@
 package com.mtaj.mtaj_08.cableplus_new.fragments;
 
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -57,8 +54,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import dmax.dialog.SpotsDialog;
 
 /**
  * Created by MTAJ-08 on 7/23/2016.
@@ -135,8 +130,8 @@ public class CollectionFragment extends Fragment {
 
             lstuser = (ListView) view.findViewById(R.id.listView);
 
-            tvtodaycol = (TextView) view.findViewById(R.id.textView28);
-            tvthismonthcol = (TextView) view.findViewById(R.id.textView30);
+            tvtodaycol = (TextView) view.findViewById(R.id.btnCancel);
+            tvthismonthcol = (TextView) view.findViewById(R.id.btnNext);
 
             rlmain = (RelativeLayout) view.findViewById(R.id.rlmain);
 

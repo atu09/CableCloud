@@ -87,7 +87,7 @@ public class CustomerFragment extends Fragment {
                 view = inflater.inflate(R.layout.customers, container, false);
 
                 cvArea = (CardView) view.findViewById(R.id.card_view2);
-                tvAddCustomer = (TextView) view.findViewById(R.id.textView30);
+                tvAddCustomer = (TextView) view.findViewById(R.id.btnNext);
                 listView = (ListView) view.findViewById(R.id.listView7);
                 refreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
                 etSearch = (EditText) view.findViewById(R.id.editText20);

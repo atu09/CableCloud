@@ -162,7 +162,7 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
         requestQueue = Volley.newRequestQueue(this);
 
 
-        tvcancel = (TextView) findViewById(R.id.textView28);
+        tvcancel = (TextView) findViewById(R.id.btnCancel);
 
         SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 

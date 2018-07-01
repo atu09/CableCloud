@@ -92,7 +92,7 @@
                          android:layout_height="wrap_content"
                          android:textAppearance="?android:attr/textAppearanceMedium"
                          android:text="TOTAL COMPLAINTS: 0"
-                         android:id="@+id/textView30"
+                         android:id="@+id/btnNext"
                          android:textColor="#ffffff"
                          android:textSize="@dimen/textsize_18"
                          android:layout_gravity="center_horizontal"

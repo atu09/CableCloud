@@ -44,8 +44,8 @@ public class TransactionStatusActivity extends AppCompatActivity {
 
 
 
-        txthome=(TextView)findViewById(R.id.textView28);
-        txtnextpament=(TextView)findViewById(R.id.textView30);
+        txthome=(TextView)findViewById(R.id.btnCancel);
+        txtnextpament=(TextView)findViewById(R.id.btnNext);
         txtstatus=(TextView)findViewById(R.id.textView51);
         txtoutsatnding=(TextView)findViewById(R.id.textView52);
         txtrs=(TextView)findViewById(R.id.textView53);

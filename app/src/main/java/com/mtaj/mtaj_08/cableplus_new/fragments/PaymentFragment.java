@@ -158,8 +158,8 @@ public class PaymentFragment extends Fragment {
             lvarealist = (ListView) view.findViewById(R.id.listView);
             fabsearch = (MovableFloatingActionButton) view.findViewById(R.id.fab);
 
-            tvtotalcol = (TextView) view.findViewById(R.id.textView28);
-            tvtotaloa = (TextView) view.findViewById(R.id.textView30);
+            tvtotalcol = (TextView) view.findViewById(R.id.btnCancel);
+            tvtotaloa = (TextView) view.findViewById(R.id.btnNext);
 
             swrefresh = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
 

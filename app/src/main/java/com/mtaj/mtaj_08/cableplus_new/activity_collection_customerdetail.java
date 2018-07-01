@@ -118,8 +118,8 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
         lvcustomer=(ListView)findViewById(R.id.listcustomerdetail);
 
-        tvtotalcol=(TextView)findViewById(R.id.textView28);
-        tvtotaloa=(TextView)findViewById(R.id.textView30);
+        tvtotalcol=(TextView)findViewById(R.id.btnCancel);
+        tvtotaloa=(TextView)findViewById(R.id.btnNext);
 
         rlmain=(RelativeLayout)findViewById(R.id.content);
 

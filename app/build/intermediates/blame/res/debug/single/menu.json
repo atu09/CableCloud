@@ -1,38 +1,38 @@
 [
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/menu/menu_reminder_complete.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/menu/menu_reminder_complete.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_complain_assign1.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\src\\main\\res\\menu\\menu_complain_assign1.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/menu/menu_skip.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/menu/menu_skip.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_reminder_complete.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\src\\main\\res\\menu\\menu_reminder_complete.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/menu/search.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/menu/search.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_complains.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\src\\main\\res\\menu\\menu_complains.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/menu/menu_collection_detail.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/menu/menu_collection_detail.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_skip.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\src\\main\\res\\menu\\menu_skip.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/menu/menu_complain_assign1.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/menu/menu_complain_assign1.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_collection_detail.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\src\\main\\res\\menu\\menu_collection_detail.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/menu/menu_listview_longpress.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/menu/menu_listview_longpress.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_complain_assign.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\src\\main\\res\\menu\\menu_complain_assign.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/menu/menu_collection.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/menu/menu_collection.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\menu\\search.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\src\\main\\res\\menu\\search.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/menu/menu_complain_assign.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/menu/menu_complain_assign.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_collection.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\src\\main\\res\\menu\\menu_collection.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/menu/menu_complains.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/menu/menu_complains.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_listview_longpress.xml",
+        "source": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\src\\main\\res\\menu\\menu_listview_longpress.xml"
     }
 ]
