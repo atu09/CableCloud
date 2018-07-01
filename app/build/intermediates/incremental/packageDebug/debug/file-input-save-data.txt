@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jul 01 02:10:58 IST 2018
+#Sun Jul 01 05:27:58 IST 2018
 4.path=font/mangal.ttf
 8.set=DEX
 6.path=iconify/android-iconify-fontawesome.ttf

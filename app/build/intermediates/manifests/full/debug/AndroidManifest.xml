@@ -53,7 +53,6 @@
             android:name="com.mtaj.mtaj_08.cableplus_new.activities.LoginActivity"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity"
@@ -128,7 +127,7 @@
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.activities.AreaListInCustomers"
@@ -138,7 +137,7 @@
                 android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity"
+            android:name="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" >
             <meta-data
@@ -150,35 +149,35 @@
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.Bill_details"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.PackageDetails"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.Contact_details"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.Payment_details"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
         </activity>
 
         <receiver
@@ -253,14 +252,14 @@
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
             android:name="com.mtaj.mtaj_08.cableplus_new.Attachment_details"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity" />
+                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

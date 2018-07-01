@@ -962,6 +962,8 @@
         <item name="android:splitMotionEvents">false</item>
         <item name="android:windowEnableSplitTouch">false</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowFullscreen">true</item>
+
     </style>
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -2595,10 +2597,6 @@
     </style>
     <style name="dialog_animation">
         <item name="android:windowEnterAnimation">@anim/slide_up</item>
-
-
         <item name="android:windowExitAnimation">@anim/slide_down</item>
-
-
     </style>
 </resources>

@@ -31,7 +31,6 @@ import com.mtaj.mtaj_08.cableplus_new.ConnectivityReceiver;
 import com.mtaj.mtaj_08.cableplus_new.CustomerDetail_Offline;
 import com.mtaj.mtaj_08.cableplus_new.CustomerDetails;
 import com.mtaj.mtaj_08.cableplus_new.CustomerListAdapter;
-import com.mtaj.mtaj_08.cableplus_new.CustomerMasterDetailsActivity;
 import com.mtaj.mtaj_08.cableplus_new.DBHelper;
 import com.mtaj.mtaj_08.cableplus_new.InfiniteScrollListener;
 import com.mtaj.mtaj_08.cableplus_new.R;
@@ -67,7 +66,7 @@ public class CustomerListActivity extends AppCompatActivity {
 
     String siteurl, uid, cid, aid, eid, URL;
     String from;
-    String str = "\u20B9";
+    String inrSymbol = "\u20B9";
 
     int mPage = 0;
 
@@ -257,7 +256,7 @@ public class CustomerListActivity extends AppCompatActivity {
             }
 
             String toa = String.valueOf(totalOs);
-            tvTotalOs.setText(str + format.format(Double.parseDouble(toa)));
+            tvTotalOs.setText(inrSymbol + format.format(Double.parseDouble(toa)));
 
             adapter.addItems(customerDetailsMaps);
 

@@ -384,8 +384,8 @@ public class Collection_Area_Activity extends AppCompatActivity {
                    /* DecimalFormat format = new DecimalFormat();
                     format.setDecimalSeparatorAlwaysShown(false);
 
-                    tvtotaloa.setText(str+format.format(Double.parseDouble(toa)));
-                    tvtotalcol.setText(str+format.format(Double.parseDouble(tc)));
+                    tvtotaloa.setText(inrSymbol+format.format(Double.parseDouble(toa)));
+                    tvtotalcol.setText(inrSymbol+format.format(Double.parseDouble(tc)));
 
                     toolbar.setTitle(name+" ("+ucount+")");*/
 

@@ -21,7 +21,7 @@ public class Bill_details extends AppCompatActivity {
 
     String title;
 
-    ArrayList<HashMap<String,String>> billdetails=new ArrayList<>();
+    ArrayList<HashMap<String, String>> billdetails = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,40 +36,33 @@ public class Bill_details extends AppCompatActivity {
 
         }
 
+        lvbill = (ListView) findViewById(R.id.listView4);
 
+        Intent j = getIntent();
+        title = j.getExtras().getString("title");
+        billdetails = (ArrayList<HashMap<String, String>>) j.getSerializableExtra("billdetails");
 
-        lvbill=(ListView)findViewById(R.id.listView4);
-
-        Intent j=getIntent();
-        title=j.getExtras().getString("title");
-        billdetails=(ArrayList<HashMap<String, String>>)j.getSerializableExtra("billdetails");
-
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setNavigationIcon(R.drawable.ic_back_white);
-
         setSupportActionBar(toolbar);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  Intent i = new Intent(getApplicationContext(), CustomerMasterDetailsActivity.class);
-               // startActivity(i);
-
                 onBackPressed();
             }
         });
 
 
-        final SimpleAdapter da=new SimpleAdapter(Bill_details.this,billdetails,R.layout.layout_bill_details,new String[]{"BillMonth","CurrentOutstanding","PrevOutstanding","TotalOutstanding"},new int[]{R.id.textView31,R.id.textView34,R.id.textView36,R.id.textView38});
+        final SimpleAdapter da = new SimpleAdapter(Bill_details.this, billdetails, R.layout.layout_bill_details, new String[]{"BillMonth", "CurrentOutstanding", "PrevOutstanding", "TotalOutstanding"}, new int[]{R.id.textView31, R.id.textView34, R.id.textView36, R.id.textView38});
         lvbill.setAdapter(da);
     }
 
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
 
         finish();
     }
