@@ -19,13 +19,13 @@ public class TransactionStatusActivity extends AppCompatActivity {
 
     private static final String PREF_NAME = "LoginPref";
 
-    TextView txthome,txtnextpament,txtstatus,txtoutsatnding,txtrs;
+    TextView txthome, txtnextpament, txtstatus, txtoutsatnding, txtrs;
 
     ImageView imgstatus;
 
-    String from,oa,title;
+    String from, oa, title;
 
-    SharedPreferences pref ;
+    SharedPreferences pref;
 
 
     @Override
@@ -37,39 +37,36 @@ public class TransactionStatusActivity extends AppCompatActivity {
 
         String str = "\u20B9";
 
-        Intent j=getIntent();
-        from=j.getExtras().getString("from");
-        oa=j.getExtras().getString("Oa");
-        title=j.getExtras().getString("title");
+        Intent j = getIntent();
+        from = j.getExtras().getString("from");
+        oa = j.getExtras().getString("Oa");
+        title = j.getExtras().getString("title");
 
 
-
-        txthome=(TextView)findViewById(R.id.btnCancel);
-        txtnextpament=(TextView)findViewById(R.id.btnNext);
-        txtstatus=(TextView)findViewById(R.id.textView51);
-        txtoutsatnding=(TextView)findViewById(R.id.textView52);
-        txtrs=(TextView)findViewById(R.id.textView53);
+        txthome = (TextView) findViewById(R.id.btnCancel);
+        txtnextpament = (TextView) findViewById(R.id.btnNext);
+        txtstatus = (TextView) findViewById(R.id.textView51);
+        txtoutsatnding = (TextView) findViewById(R.id.textView52);
+        txtrs = (TextView) findViewById(R.id.textView53);
 
         DecimalFormat format = new DecimalFormat();
         format.setDecimalSeparatorAlwaysShown(false);
 
-        imgstatus=(ImageView)findViewById(R.id.imageView7);
+        imgstatus = (ImageView) findViewById(R.id.imageView7);
 
-        if(from.equals("complain"))
-        {
+        if (from.equals("complain")) {
             txtnextpament.setText("NEXT COMPLAINT");
             txtstatus.setText("SUCCESSFULLY DONE");
             txtoutsatnding.setVisibility(View.GONE);
             txtrs.setVisibility(View.GONE);
 
+        } else {
+
+            txtrs.setText(str + format.format(Double.parseDouble(oa)));
         }
-        else {
-
-            txtrs.setText(str+format.format(Double.parseDouble(oa)));
-        }
 
 
-        Animation anim1=new AlphaAnimation(0.7f,1.0f);
+        Animation anim1 = new AlphaAnimation(0.7f, 1.0f);
         anim1.setDuration(1000);
         anim1.setRepeatMode(Animation.REVERSE);
         anim1.setRepeatCount(Animation.INFINITE);
@@ -84,12 +81,7 @@ public class TransactionStatusActivity extends AppCompatActivity {
         txthome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                /*Intent i=new Intent(TransactionStatusActivity.this,DashBoardActivity.class);
-                startActivity(i);
-*/
-
-                finish();
+                onBackPressed();
             }
         });
 
@@ -97,26 +89,18 @@ public class TransactionStatusActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(from.equals("complain"))
-                {
-                   /* Intent i = new Intent(TransactionStatusActivity.this, ComplainListviaCustomerActivity.class);
-                    i.putExtra("title",title);
-                    startActivity(i);*/
+                if (from.equalsIgnoreCase("complain")) {
+                    onBackPressed();
+                } else {
 
-                    finish();
-                }
-                else {
-
-                    if (pref.getString("AreaStatus", "").toString().equals("true")) {
+                    if (pref.getString("AreaStatus", "").equalsIgnoreCase("true")) {
 
                         Intent i = new Intent(TransactionStatusActivity.this, CustomerListActivity.class);
                         startActivity(i);
 
                         finish();
-                    }
-                    else
-                    {
-                        finish();
+                    } else {
+                        onBackPressed();
 
                     }
                 }
@@ -126,8 +110,7 @@ public class TransactionStatusActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
-
+    public void onBackPressed() {
+        finish();
     }
 }

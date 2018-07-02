@@ -2,6 +2,7 @@ package com.mtaj.mtaj_08.cableplus_new;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -43,6 +44,7 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 //import com.github.silvestrpredko.dotprogressbar.DotProgressBar;
 
@@ -90,32 +92,20 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
     private static int DISPLACEMENT = 10;
 
 
-    TextView tvcancel;
+    TextView txtamount, txtOa;
 
     String from, cmpid;
 
     private static final String PREF_NAME = "LoginPref";
 
-    String billid, accno, paymode, paidamount, cheqdate = "-", cheqno = "-", bankname = "-", email, signaturestring,rdate,custid,Discount,notes;
+    String billid, accno, paymode, paidamount, cheqdate = "-", cheqno = "-", bankname = "-", email, signaturestring, rdate, custid, Discount, notes;
 
     String siteurl, uid, cid, aid, eid, URL;
 
-    static InputStream is = null;
-    static JSONObject jobj = null;
-    static String json = "";
-    static JSONArray jarr = null;
-
-    JSONObject jsonobj;
-
     Calendar calendar;
-    int year, cmonth, day;
-
     RequestQueue requestQueue;
 
-    private LocationManager locationManager;
-
-    Location location; // location
-    String latitude = "0.0"; // latitude
+    String latitude = "0.0";
     String longitude = "0.0";
 
     String areatitle;
@@ -123,9 +113,8 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
     DBHelper myDB;
 
-    boolean AllowRequest=true;
+    boolean AllowRequest = true;
 
-    // variable to track event time
     private long mLastClickTime = 0;
 
 
@@ -135,14 +124,11 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
         setContentView(R.layout.activity_customer_signature);
         String str = "\u20B9";
 
-
-        locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-
         isConnected = ConnectivityReceiver.isConnected();
-        myDB=new DBHelper(this);
+        myDB = new DBHelper(this);
 
         Intent j = getIntent();
-         areatitle= j.getExtras().getString("cname");
+        areatitle = j.getExtras().getString("cname");
         from = j.getExtras().getString("from");
         billid = j.getExtras().getString("billid");
         accno = j.getExtras().getString("acno");
@@ -153,84 +139,68 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
         bankname = j.getExtras().getString("bankname");
         email = j.getExtras().getString("email");
         cmpid = j.getExtras().getString("complainId");
-        custid=j.getExtras().getString("CustomerId");
-        Discount=j.getExtras().getString("Discount");
-        rdate=j.getExtras().getString("receiptDate");
-        notes=j.getExtras().getString("Notes");
+        custid = j.getExtras().getString("CustomerId");
+        Discount = j.getExtras().getString("Discount");
+        rdate = j.getExtras().getString("receiptDate");
+        notes = j.getExtras().getString("Notes");
 
 
         requestQueue = Volley.newRequestQueue(this);
 
 
-        tvcancel = (TextView) findViewById(R.id.btnCancel);
+        txtamount = (TextView) findViewById(R.id.txtamount);
+        txtOa = (TextView) findViewById(R.id.txtOa);
 
         SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        siteurl = pref.getString("SiteURL", "").toString();
-        uid = pref.getString("Userid", "").toString();
-        cid=pref.getString("Contracotrid","").toString();
+        siteurl = pref.getString("SiteURL", "");
+        uid = pref.getString("Userid", "");
+        cid = pref.getString("Contracotrid", "");
 
         calendar = Calendar.getInstance();
 
-        //SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm");
-        //rdate = sdf.format(calendar.getTime());
-
-        if(checkPlayServices()) {
-
+        if (checkPlayServices()) {
             buildGoogleApiClient();
             mGoogleApiClient.connect();
         }
 
         createLocationRequest();
-        // displayLocation();
 
-        if (from.equals("complain"))
-        {
-            tvcancel.setText("CANCEL");
-            tvcancel.setTextSize(22f);
-            tvcancel.setTypeface(null, Typeface.NORMAL);
+        if (from.equals("complain")) {
+            txtOa.setVisibility(View.GONE);
+            txtamount.setText("CANCEL");
+            txtamount.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onBackPressed();
 
+                }
+            });
+        } else if (pref.getString("from", "").equalsIgnoreCase("Payment")) {
+            txtamount.setText(str + paidamount);
+        } else if (from.equals("Payment")) {
+            txtamount.setText(str + paidamount);
         }
-        else if (pref.getString("from", "").equals("Payment")) {
-            tvcancel.setText(str + paidamount);
-        }
-        else if(from.equals("Payment"))
-        {
-            tvcancel.setText(str + paidamount);
-        }
 
 
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(areatitle);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setNavigationIcon(R.drawable.ic_back_white);
-
         setSupportActionBar(toolbar);
-
-        //getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 onBackPressed();
 
             }
         });
 
-        tvcancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-             onBackPressed();
-
-            }
-        });
 
         findViewById(R.id.ibtn_clear).setOnClickListener(this);
         findViewById(R.id.ibtn_clear).setVisibility(View.GONE);
-
-        findViewById(R.id.llconfirm).setOnClickListener(this);
+        findViewById(R.id.txtconfirm).setOnClickListener(this);
 
         mSignaturePad = (SignaturePad) findViewById(R.id.signature_pad);
         mSignaturePad.setOnSignedListener(new SignaturePad.OnSignedListener() {
@@ -257,7 +227,7 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
     @Override
     public void onBackPressed() {
 
-        if(isConnected) {
+        if (isConnected) {
 
             Intent i = new Intent(CustomerSignatureActivity.this, CustomerDetails.class);
             i.putExtra("cname", areatitle);
@@ -267,14 +237,12 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
             startActivity(i);
 
             finish();
-        }
-        else
-        {
+        } else {
             Intent i = new Intent(CustomerSignatureActivity.this, CustomerDetail_Offline.class);
             i.putExtra("cname", areatitle);
             i.putExtra("A/cNo", accno);
             i.putExtra("CustomerId", custid);
-            i.putExtra("billId",billid);
+            i.putExtra("billId", billid);
             startActivity(i);
 
             finish();
@@ -282,15 +250,6 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
     }
 
-    public String bitMapToString(Bitmap bitmap) {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 70, baos);
-        byte[] b = baos.toByteArray();
-        String temp = Base64.encodeToString(b, Base64.DEFAULT);
-        String img = temp.replace("\n", "%20");
-
-        return img;
-    }
 
     @Override
     public void onClick(View v) {
@@ -306,21 +265,13 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
             case R.id.ibtn_clear:
                 mSignaturePad.clear();
                 break;
-            case R.id.llconfirm:
+            case R.id.txtconfirm:
 
-                if(findViewById(R.id.llconfirm).isEnabled()) {
+                if (findViewById(R.id.txtconfirm).isEnabled()) {
 
                     if (mSignaturePad.isEmpty()) {
+                        disableView(findViewById(R.id.txtconfirm));
 
-                        //findViewById(R.id.llconfirm).setEnabled(false);
-                        //findViewById(R.id.llconfirm).setClickable(false);
-                        disableView(findViewById(R.id.llconfirm));
-
-                        //Toast.makeText(this, "Disable", Toast.LENGTH_SHORT).show();
-
-                   /* Snackbar snackbar = Snackbar
-                            .make(v, "Please enter customer signature", Snackbar.LENGTH_LONG);
-                    snackbar.show();*/
 
                         signaturestring = "-";
                         SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
@@ -340,34 +291,23 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
                             CallVolleys(URL);
                         }
 
-                        //  return;
                     } else {
 
 
-                        //findViewById(R.id.llconfirm).setEnabled(false);
-                        disableView(findViewById(R.id.llconfirm));
-
-                        //Toast.makeText(this, "Disable", Toast.LENGTH_SHORT).show();
-
+                        disableView(findViewById(R.id.txtconfirm));
                         SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
                         signaturestring = "-";
 
                         if (pref.getString("from", "").equals("Payment")) {
-
-                            // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
-
                             displayLocation();
 
                         } else if (from.equals("Payment")) {
-                            // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
-
                             displayLocation();
                         }
 
                         if (from.equals("complain")) {
                             URL = siteurl + "/ResolveComplain";
-
                             CallVolleys(URL);
                         }
 
@@ -389,162 +329,123 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
     public void CallVolley(String a) {
 
-        AllowRequest=false;
+        AllowRequest = false;
 
-        final SpotsDialog spload;
-        spload = new SpotsDialog(CustomerSignatureActivity.this, R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
+        final Dialog loader = Utils.getLoader(CustomerSignatureActivity.this);
+        loader.show();
 
-        spload.setOnCancelListener(new DialogInterface.OnCancelListener() {
+        loader.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
-
-                AllowRequest=true;
-
-                //findViewById(R.id.llconfirm).setEnabled(true);
-
-                enableView(findViewById(R.id.llconfirm));
+                AllowRequest = true;
+                enableView(findViewById(R.id.txtconfirm));
 
             }
         });
 
-        try {
-            //jsonobj=makeHttpRequest(params[0]);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("Content-Type", "application/json; charset=utf-8");
+        map.put("accountno", accno);
+        map.put("billid", billid);
+        map.put("paidamount", paidamount);
+        map.put("paymentmode", paymode);
+        map.put("chqnumber", cheqno);
+        map.put("cheqdate", cheqdate);
+        map.put("cheqbankname", bankname);
+        map.put("email", email);
+        map.put("notes", notes);
+        map.put("createdby", uid);
+        map.put("signature", signaturestring);
+        map.put("receiptdate", rdate);
+        map.put("longitude", longitude);
+        map.put("latitude", latitude);
+        map.put("discount", Discount);
+        map.put("isprint", "");
 
-            HashMap<String, String> map = new HashMap<>();
-            map.put("Content-Type", "application/json; charset=utf-8");
-            map.put("accountno", accno);
-            map.put("billid", billid);
-            map.put("paidamount", paidamount);
-            map.put("paymentmode", paymode);
-            map.put("chqnumber", cheqno);
-            map.put("cheqdate", cheqdate);
-            map.put("cheqbankname", bankname);
-            map.put("email", email);
-            map.put("notes", notes);
-            map.put("createdby", uid);
-            map.put("signature", signaturestring);
-            map.put("receiptdate", rdate);
-            map.put("longitude", longitude);
-            map.put("latitude", latitude);
-            map.put("discount",Discount);
-            map.put("isprint", "");
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
 
-            JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            try {
+                        if (loader.isShowing()) {
+                            loader.dismiss();
+                        }
 
-                                spload.dismiss();
+                        try {
 
-                                try {
+                            enableView(findViewById(R.id.txtconfirm));
+                            if (response.getString("status").equalsIgnoreCase("True")) {
+                                String toa = response.getString("TotalOutStandingAmount");
 
-                                    //findViewById(R.id.llconfirm).setEnabled(true);
-                                    enableView(findViewById(R.id.llconfirm));
+                                Intent i = new Intent(CustomerSignatureActivity.this, TransactionStatusActivity.class);
+                                i.putExtra("from", from);
+                                i.putExtra("Oa", toa);
+                                i.putExtra("title", areatitle);
+                                startActivity(i);
 
-                                    //Toast.makeText(CustomerSignatureActivity.this, "Enable", Toast.LENGTH_SHORT).show();
-
-                                  //  Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-
-                                    if (response.getString("status").toString().equals("True")) {
-                                        String toa = response.getString("TotalOutStandingAmount");
-
-                                        Intent i = new Intent(CustomerSignatureActivity.this, TransactionStatusActivity.class);
-                                        i.putExtra("from", from);
-                                        i.putExtra("Oa", toa);
-                                        i.putExtra("title",areatitle);
-                                        startActivity(i);
-
-                                        finish();
-                                    }
-
-                                } catch (JSONException e) {
-                                    Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
-                                }
-
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            } catch (Exception e) {
-                                Toast.makeText(CustomerSignatureActivity.this, "error--" + e, Toast.LENGTH_SHORT).show();
+                                finish();
                             }
+                        } catch (Exception e) {
+                            Toast.makeText(CustomerSignatureActivity.this, "error--" + e, Toast.LENGTH_SHORT).show();
                         }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
 
-                            spload.dismiss();
-
-                            //findViewById(R.id.llconfirm).setEnabled(true);
-
-                            enableView(findViewById(R.id.llconfirm));
-
-                            Toast.makeText(CustomerSignatureActivity.this, "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
-
+                        if (loader.isShowing()) {
+                            loader.dismiss();
                         }
-                    });
 
-            obreq.setRetryPolicy(new DefaultRetryPolicy(600000,
-                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            // Adds the JSON object request "obreq" to the request queue
-            requestQueue.add(obreq);
+                        enableView(findViewById(R.id.txtconfirm));
+                        Toast.makeText(CustomerSignatureActivity.this, "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
+                    }
+                });
 
+        request.setRetryPolicy(new DefaultRetryPolicy(600000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        requestQueue.add(request);
 
-        } catch (Exception e) {
-            Toast.makeText(CustomerSignatureActivity.this, "--" + e, Toast.LENGTH_SHORT).show();
-        }
 
     }
 
     public void CallVolleys(String a) {
-        final SpotsDialog spload;
-        spload = new SpotsDialog(CustomerSignatureActivity.this, R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
+
+        final Dialog loader = Utils.getLoader(CustomerSignatureActivity.this);
+        loader.show();
 
         try {
-            //jsonobj=makeHttpRequest(params[0]);
 
             HashMap<String, String> map = new HashMap<>();
             map.put("complainid", cmpid);
             map.put("usersign", signaturestring);
 
-            Log.e("MAP:",map.toString());
+            Log.e("MAP:", map.toString());
 
-            JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
+            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
+
+                            if (loader.isShowing()) {
+                                loader.dismiss();
+                            }
+
+                            enableView(findViewById(R.id.txtconfirm));
+
                             try {
+                                if (response.getString("status").equalsIgnoreCase("True")) {
+                                    Intent i = new Intent(CustomerSignatureActivity.this, TransactionStatusActivity.class);
+                                    i.putExtra("from", from);
+                                    i.putExtra("Oa", "");
+                                    startActivity(i);
 
-                                spload.dismiss();
-
-                                //findViewById(R.id.llconfirm).setEnabled(true);
-
-                                enableView(findViewById(R.id.llconfirm));
-
-                                try {
-                                    if (response.getString("status").toString().equals("True")) {
-                                        Intent i = new Intent(CustomerSignatureActivity.this, TransactionStatusActivity.class);
-                                        i.putExtra("from", from);
-                                        i.putExtra("Oa", "");
-                                        startActivity(i);
-
-                                        finish();
-                                    }
-
-                                } catch (JSONException e) {
-                                    Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
+                                    finish();
                                 }
 
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
                             } catch (Exception e) {
                                 Toast.makeText(CustomerSignatureActivity.this, "error--" + e, Toast.LENGTH_SHORT).show();
                             }
@@ -554,16 +455,21 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
+                            if (loader.isShowing()) {
+                                loader.dismiss();
+                            }
+
+                            enableView(findViewById(R.id.txtconfirm));
+
                             Toast.makeText(CustomerSignatureActivity.this, "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     });
 
-            obreq.setRetryPolicy(new DefaultRetryPolicy(600000,
+            request.setRetryPolicy(new DefaultRetryPolicy(600000,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                     DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            // Adds the JSON object request "obreq" to the request queue
-            requestQueue.add(obreq);
+            requestQueue.add(request);
 
         } catch (Exception e) {
             Toast.makeText(CustomerSignatureActivity.this, "--" + e, Toast.LENGTH_SHORT).show();
@@ -573,102 +479,59 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
     public JSONObject makeHttpRequest(String url) {
 
-        HttpParams httpParameters = new BasicHttpParams();
-
-        int timeoutConnection = 500000;
-        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
-// Set the default socket timeout (SO_TIMEOUT)
-// in milliseconds which is the timeout for waiting for data.
-        int timeoutSocket = 500000;
-        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
-
-        DefaultHttpClient httpclient = new DefaultHttpClient();
-        HttpGet httppost = new HttpGet(url);
-        try {
-            HttpResponse httpresponse = httpclient.execute(httppost);
-            HttpEntity httpentity = httpresponse.getEntity();
-            is = httpentity.getContent();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        JSONObject jsonObject = null;
         try {
 
+            HttpParams httpParameters = new BasicHttpParams();
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            int timeoutConnection = 500000;
+            HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
 
-            // BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_16LE), 8);
+            int timeoutSocket = 500000;
+            HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+            DefaultHttpClient httpclient = new DefaultHttpClient();
+            HttpGet httpGet = new HttpGet(url);
+
+            HttpResponse httpresponse = httpclient.execute(httpGet);
+            HttpEntity httpEntity = httpresponse.getEntity();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(httpEntity.getContent(), "UTF-8"));
 
             StringBuilder sb = new StringBuilder();
-            String line = null;
-            try {
-                if (reader != null) {
-
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line);
-                    }
-                } else {
-                    Toast.makeText(getApplicationContext(), "No data", Toast.LENGTH_SHORT).show();
-                }
-
-                //is.close();
-                json = sb.toString();
-
-                // json= sb.toString().substring(0, sb.toString().length()-1);
-                try {
-                    jobj = new JSONObject(json);
-
-                    // JSONArray jarrays=new JSONArray(json);
-
-                    // jobj=jarrays.getJSONObject(0);
-
-                    //  org.json.simple.parser.JSONParser jsonparse=new org.json.simple.parser.JSONParser();
-
-                    // jarr =(JSONArray)jsonparse.parse(json);
-                    // jobj = jarr.getJSONObject(0);
-                } catch (JSONException e) {
-                    Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
-                }
-            } catch (IOException e) {
-                Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                sb.append(line);
             }
-        } catch (UnsupportedEncodingException e) {
-            Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
+
+            jsonObject = new JSONObject(sb.toString());
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-       /* catch (ParseException e){
-            Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
-        }*/
-        return jobj;
+
+        return jsonObject;
     }
-
-
 
     @Override
     public void onConnected(Bundle bundle) {
-       // displayLocation();
-
+        // displayLocation();
     }
 
     @Override
     public void onConnectionSuspended(int i) {
-
         mGoogleApiClient.connect();
-
     }
 
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
-
     }
 
     public void displayLocation() {
 
-        try
-        {
-            if(isConnected) {
+        try {
+            if (isConnected) {
 
                 int result = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION);
                 if (result == PackageManager.PERMISSION_DENIED) {
@@ -691,9 +554,9 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
                         URL = siteurl + "/withdiscount";
 
-                        disableView(findViewById(R.id.llconfirm));
+                        disableView(findViewById(R.id.txtconfirm));
 
-                        if(AllowRequest) {
+                        if (AllowRequest) {
 
                             CallVolley(URL);
                         }
@@ -718,9 +581,9 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
                                 URL = siteurl + "/withdiscount";
 
-                                disableView(findViewById(R.id.llconfirm));
+                                disableView(findViewById(R.id.txtconfirm));
 
-                                if(AllowRequest) {
+                                if (AllowRequest) {
 
                                     CallVolley(URL);
 
@@ -738,19 +601,17 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
                 }
 
-            }
-            else
-            {
-                disableView(findViewById(R.id.llconfirm));
+            } else {
+                disableView(findViewById(R.id.txtconfirm));
 
-                Long tsLong = System.currentTimeMillis()/1000;
+                Long tsLong = System.currentTimeMillis() / 1000;
                 String ts = tsLong.toString();
 
-                int rnd= getRandomNumber(1,99);
+                int rnd = getRandomNumber(1, 99);
 
-                String rcptNo=cid+ts+String.valueOf(rnd);
+                String rcptNo = cid + ts + String.valueOf(rnd);
 
-                if(AllowRequest) {
+                if (AllowRequest) {
 
                     AllowRequest = false;
 
@@ -768,29 +629,21 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
                             finish();
 
                         } else {
-                            //findViewById(R.id.llconfirm).setEnabled(true);
-
-                            enableView(findViewById(R.id.llconfirm));
-
-                            //Toast.makeText(CustomerSignatureActivity.this, "Enable", Toast.LENGTH_SHORT).show();
+                            enableView(findViewById(R.id.txtconfirm));
 
                             Toast.makeText(this, "Something Went Wrong.. Go BACK & Try again..", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        //findViewById(R.id.llconfirm).setEnabled(true);
-
-                        enableView(findViewById(R.id.llconfirm));
+                        enableView(findViewById(R.id.txtconfirm));
 
                         Toast.makeText(this, "Something Went Wrong.. Go BACK & Try again..", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
 
-        }
-        catch (SecurityException e)
-        {
-            Log.e("EXCEPTION",e.toString());
-           // Toast.makeText(CustomerSignatureActivity.this, "EXCEPTION"+e.toString(), Toast.LENGTH_SHORT).show();
+        } catch (SecurityException e) {
+            Log.e("EXCEPTION", e.toString());
+            // Toast.makeText(CustomerSignatureActivity.this, "EXCEPTION"+e.toString(), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -812,14 +665,13 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
     @Override
     public void onLocationChanged(Location location) {
 
-        mLastLocation=location;
+        mLastLocation = location;
 
         //displayLocation();
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case 1: {
 
@@ -839,35 +691,23 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
                     Toast.makeText(CustomerSignatureActivity.this, latitude + "--" + longitude, Toast.LENGTH_SHORT).show();
 
-                    //findViewById(R.id.llconfirm).setEnabled(false);
+                    disableView(findViewById(R.id.txtconfirm));
 
-                    disableView(findViewById(R.id.llconfirm));
-
-                    if(AllowRequest) {
-
+                    if (AllowRequest) {
                         CallVolley(URL);
-
-                        //TestCall();
                     }
-
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
+                    
                     Toast.makeText(CustomerSignatureActivity.this, "Permission denied to access location service", Toast.LENGTH_SHORT).show();
                 }
                 return;
             }
-
-            // other 'case' lines to check for other
-            // permissions this app might request
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
         checkPlayServices();
-
     }
 
     private boolean checkPlayServices() {
@@ -889,157 +729,19 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
     }
 
 
-    private class JSONAsynk extends AsyncTask<String,String,JSONObject>
-    {
-
-        private ProgressDialog pDialog;
-       // public DotProgressBar dtprogoress;
-
-        SpotsDialog spload;
-
-
-        JSONObject jsn1,jsn,jsnmain;
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            spload=new SpotsDialog(CustomerSignatureActivity.this,R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
-            spload.show();
-
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... params) {
-
-            try {
-                //jsonobj=makeHttpRequest(params[0]);
-
-                HashMap<String,String> map=new HashMap<>();
-                map.put("accountno",accno);
-                map.put("billid",billid);
-                map.put("paidamount",paidamount);
-                map.put("paymentmode",paymode);
-                map.put("chqnumber",cheqno);
-                map.put("cheqdate",cheqdate);
-                map.put("cheqbankname",bankname);
-                map.put("email",email);
-                map.put("notes","");
-                map.put("createdby",uid);
-                map.put("signature",signaturestring);
-                map.put("receiptdate",rdate);
-                map.put("longitude",longitude);
-                map.put("latitude",latitude);
-                map.put("isprint","");
-
-                JsonObjectRequest obreq;
-                obreq = new JsonObjectRequest(Request.Method.POST,params[0],new JSONObject(map),
-                        new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-                                try {
-
-                                    spload.dismiss();
-
-                                    try
-                                    {
-                                        if(response.getString("status").toString().equals("True"))
-                                        {
-                                            String toa=response.getString("TotalOutStandingAmount");
-
-                                            Intent i = new Intent(CustomerSignatureActivity.this, TransactionStatusActivity.class);
-                                            i.putExtra("from",from);
-                                            i.putExtra("Oa", toa);
-                                            startActivity(i);
-
-
-                                        }
-
-                                    }
-                                    catch (JSONException e)
-                                    {
-                                        Toast.makeText(getApplicationContext(), "Error:++"+e, Toast.LENGTH_SHORT).show();
-                                    }
-
-                                   // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                                }
-                                catch (Exception e)
-                                {
-                                    Toast.makeText(CustomerSignatureActivity.this, "error--"+e, Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        },
-                        new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-
-                                Toast.makeText(CustomerSignatureActivity.this, "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
-
-                            }
-                        });
-
-                obreq.setRetryPolicy(new DefaultRetryPolicy(600000,
-                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-                // Adds the JSON object request "obreq" to the request queue
-                requestQueue.add(obreq);
-
-            }
-            catch (Exception e) {
-                Toast.makeText(CustomerSignatureActivity.this, "--" + e, Toast.LENGTH_SHORT).show();
-            }
-
-           return null;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject json) {
-
-
-            //Toast.makeText(CustomerSignatureActivity.this,json.toString(), Toast.LENGTH_SHORT).show();
-           /* try
-            {
-                if(jsonobj.getString("status").toString().equals("True"))
-                {
-                    String toa=jsonobj.getString("TotalOutStandingAmount");
-
-                    Intent i = new Intent(CustomerSignatureActivity.this, TransactionStatusActivity.class);
-                    i.putExtra("from",from);
-                    i.putExtra("Oa", toa);
-                    startActivity(i);
-                }
-
-            }
-            catch (JSONException e)
-            {
-                Toast.makeText(getApplicationContext(), "Error:++"+e, Toast.LENGTH_SHORT).show();
-            }
-            /*catch (Exception ex)
-            {
-                Toast.makeText(getApplicationContext(), "Error:***"+ex, Toast.LENGTH_LONG).show();
-            }*/
-
-        }
-
-    }
-
-    public void disableView(View v)
-    {
+    public void disableView(View v) {
         v.setClickable(false);
         v.setEnabled(false);
         v.setFocusable(false);
     }
 
-    public void enableView(View v)
-    {
+    public void enableView(View v) {
         v.setClickable(true);
         v.setEnabled(true);
         v.setFocusable(true);
     }
 
-    private int getRandomNumber(int min,int max) {
+    private int getRandomNumber(int min, int max) {
         return (new Random()).nextInt((max - min) + 1) + min;
     }
 }

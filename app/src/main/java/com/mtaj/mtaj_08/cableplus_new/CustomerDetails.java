@@ -4,7 +4,6 @@ package com.mtaj.mtaj_08.cableplus_new;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -43,8 +42,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.SimpleAdapter;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -64,10 +61,10 @@ import com.baoyz.swipemenulistview.SwipeMenuCreator;
 import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.mtaj.mtaj_08.cableplus_new.activities.CustomerListActivity;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
@@ -78,8 +75,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -89,23 +84,22 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 import cn.carbs.android.library.MDDialog;
-import dmax.dialog.SpotsDialog;
 
 public class CustomerDetails extends AppCompatActivity {
 
 
-    ImageView imdropdown, imphoneedit, imemailedit, imadressedit, imdiscount, imageViewdropdown;
+    ImageView imdropdown, imphoneedit, imemailedit, imadressedit, imdiscount, imageViewArea;
 
     RadioButton rbcash, rbcheque;
 
-    EditText edphone, edemail, edaddress, edamount;
+    EditText edphone, edemail, edaddress;
 
     ListView lvosdetails;
 
     ArrayList<HashMap<String, String>> months = new ArrayList<>();
     ArrayList<HashMap<String, String>> packagedetails = new ArrayList<>();
 
-    TextView txtmakepayment;
+    TextView txtmakepayment, edamount;
 
     TableRow tblrow;
     LinearLayout llosdetails;
@@ -118,31 +112,19 @@ public class CustomerDetails extends AppCompatActivity {
 
     String siteurl, cid, uid, acno, title, URL, URL1, custid, from, receiptDate = "-", isOsEditable;
 
-    static InputStream is = null;
-    static JSONObject jobj = null;
-    static String json = "";
-    static JSONArray jarr = null;
-
-    ScrollView scroll;
-
-    JSONObject jsonobj;
-
     TextView tvacno, tvmqno, tvlastbill, tvlastpayment, tvcurrentbill, tvpaydate, tvtotaloa, txtarea, txtsmartcard;
 
-    ArrayList<HashMap<String, String>> customerdetails = new ArrayList<>();
 
-    String billid, accno, paymode = "1", paidamount, cheqdate = "", cheqno = "", bankname = "", notes;
+    String billid, accno, paymode = "1", cheqdate = "", cheqno = "", bankname = "", notes;
 
     RadioGroup rgpayment;
 
     boolean isedited = false;
 
-    RelativeLayout rlmain;
 
     SharedPreferences pref;
 
     SwipeMenuListView lstcomment;
-    //SlidingUpPanelLayout splayout;
 
     DrawerLayout dl;
 
@@ -166,16 +148,13 @@ public class CustomerDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details);
 
-
-        //getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-
         pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         requestQueue = Volley.newRequestQueue(CustomerDetails.this);
 
         isOsEditable = pref.getString("isOutstandingEditable", "");
-        siteurl = pref.getString("SiteURL", "").toString();
-        uid = pref.getString("Userid", "").toString();
-        cid = pref.getString("Contracotrid", "").toString();
+        siteurl = pref.getString("SiteURL", "");
+        uid = pref.getString("Userid", "");
+        cid = pref.getString("Contracotrid", "");
 
         Intent j = getIntent();
         title = j.getExtras().getString("cname");
@@ -186,15 +165,8 @@ public class CustomerDetails extends AppCompatActivity {
 
         Init();
 
-        final Drawable drawable = edphone.getBackground(); // get current EditText drawable
+        final Drawable drawable = edphone.getBackground();
         drawable.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
-
-        // edamount.setBackground(drawable);
-
-        //splayout=(SlidingUpPanelLayout)findViewById(R.id.sliding_layout);
-
-        // splayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-
 
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
@@ -202,12 +174,6 @@ public class CustomerDetails extends AppCompatActivity {
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
         receiptDate = (cmonth + 1) + "/" + day + "/" + year;
-
-        //SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm");
-        //receiptDate = sdf.format(calendar.getTime());
-
-        // Log.e("RECIEPTDATE",receiptDate);
-
 
         URL = siteurl + "/GetCustomerPaymentDetailsNet9ForCollectionApp?customerId=" + custid;
 
@@ -243,17 +209,11 @@ public class CustomerDetails extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // Intent i = new Intent(getApplicationContext(), CustomerListActivity.class);
-                //   startActivity(i);
-
                 onBackPressed();
-
-
             }
         });
 
-        new JSONAsynk().execute(new String[]{URL});
+        new JSONAsync1().execute(new String[]{URL});
 
         registerForContextMenu(lstcomment);
 
@@ -301,16 +261,14 @@ public class CustomerDetails extends AppCompatActivity {
                         URL1 = siteurl + "/UpdateCustomerAddress?customerid=" + custid + "&createdby=" + uid + "&address=" + URLEncoder.encode(addresss, "UTF-8");
 
                         JSONObject jsonobj = makeHttpRequest(URL1);
-                        if (jsonobj.getString("status").toString().equals("True")) {
-                            Toast.makeText(CustomerDetails.this, jsonobj.getString("message").toString(), Toast.LENGTH_SHORT).show();
-                            imadressedit.setImageResource(R.drawable.ic_mode_edit_black);
+                        if (jsonobj.getString("status").equalsIgnoreCase("True")) {
+                            Toast.makeText(CustomerDetails.this, jsonobj.getString("message"), Toast.LENGTH_SHORT).show();
+                            imadressedit.setImageResource(R.drawable.ic_edit_black);
                             isedited = false;
                             edaddress.setEnabled(false);
                         }
-                    } catch (JSONException ex) {
-                        Toast.makeText(CustomerDetails.this, "Error+" + ex, Toast.LENGTH_SHORT).show();
-                    } catch (UnsupportedEncodingException ex) {
-                        Toast.makeText(CustomerDetails.this, "Error+" + ex, Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        Toast.makeText(CustomerDetails.this, "Error+" + e, Toast.LENGTH_SHORT).show();
                     }
                 } else {
 
@@ -328,20 +286,15 @@ public class CustomerDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //  edphone.setBackground(drawable);
-                //  edamount.setBackground(drawable);
-
-                //imphoneedit.getDrawable()==getResources().getDrawable(R.drawable.ic_done_black
-
                 if (isedited) {
                     //do work here
                     URL1 = siteurl + "/UpdateCustomerPhone?customerid=" + custid + "&createdby=" + uid + "&phone=" + edphone.getText().toString();
 
                     try {
                         JSONObject jsonobj = makeHttpRequest(URL1);
-                        if (jsonobj.getString("status").toString().equals("True")) {
-                            Toast.makeText(CustomerDetails.this, jsonobj.getString("message").toString(), Toast.LENGTH_SHORT).show();
-                            imphoneedit.setImageResource(R.drawable.ic_mode_edit_black);
+                        if (jsonobj.getString("status").equals("True")) {
+                            Toast.makeText(CustomerDetails.this, jsonobj.getString("message"), Toast.LENGTH_SHORT).show();
+                            imphoneedit.setImageResource(R.drawable.ic_edit_black);
                             isedited = false;
                             edphone.setEnabled(false);
                         }
@@ -370,7 +323,7 @@ public class CustomerDetails extends AppCompatActivity {
 
                     edamount.setText(String.valueOf(amount));
 
-                    imdiscount.setImageResource(R.drawable.ic_mode_edit_black);
+                    imdiscount.setImageResource(R.drawable.ic_edit_black);
                     isedited = false;
                     edtdiscount.setEnabled(false);
                 } else {
@@ -393,9 +346,9 @@ public class CustomerDetails extends AppCompatActivity {
 
                     try {
                         JSONObject jsonobj = makeHttpRequest(URL1);
-                        if (jsonobj.getString("status").toString().equals("True")) {
-                            Toast.makeText(CustomerDetails.this, jsonobj.getString("message").toString(), Toast.LENGTH_SHORT).show();
-                            imemailedit.setImageResource(R.drawable.ic_mode_edit_black);
+                        if (jsonobj.getString("status").equalsIgnoreCase("True")) {
+                            Toast.makeText(CustomerDetails.this, jsonobj.getString("message"), Toast.LENGTH_SHORT).show();
+                            imemailedit.setImageResource(R.drawable.ic_edit_black);
                             isedited = false;
                             edemail.setEnabled(false);
                         }
@@ -425,16 +378,15 @@ public class CustomerDetails extends AppCompatActivity {
                     llosdetails.setVisibility(View.GONE);
                     tblrow.setVisibility(View.GONE);
                     lvosdetails.setVisibility(View.GONE);
-                    imdropdown.setImageResource(R.drawable.ic_arrow_drop_down_black);
+                    imdropdown.setImageResource(R.drawable.ic_arrow_down);
 
 
                 } else {
-                    scroll.scrollTo(0, scroll.getMaxScrollAmount());
 
                     llosdetails.setVisibility(View.VISIBLE);
                     tblrow.setVisibility(View.VISIBLE);
                     lvosdetails.setVisibility(View.VISIBLE);
-                    imdropdown.setImageResource(R.drawable.ic_arrow_drop_up_white);
+                    imdropdown.setImageResource(R.drawable.ic_arrow_up);
                 }
             }
         });
@@ -740,8 +692,6 @@ public class CustomerDetails extends AppCompatActivity {
                             alert.setCancelable(false);
                             alert.setView(v);
 
-                            // alert.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-
                             alert.setPositiveButton("Done", new DialogInterface.OnClickListener() {
 
                                 @Override
@@ -909,15 +859,18 @@ public class CustomerDetails extends AppCompatActivity {
                 areaidList.clear();
                 areanameList.clear();
 
-                //URL=siteURL+"/GetCustomersByAreaForCollectionApp?contractorId="+contractorId+"&userId="+userId+"&entityId="+pref.getString("Entityids","").toString()+"&startindex=0&noofrecords=1000000";
-
-                //URL=siteURL+"/GetAllAreaForCollectionApp?contractorId="+contractorId;
-
                 URL = siteurl + "/GetAreaByUser?userId=" + uid;
 
-                new JSONAsynks().execute(new String[]{URL});
+                new JSONAsync2().execute(new String[]{URL});
 
 
+            }
+        });
+
+        imageViewArea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txtarea.callOnClick();
             }
         });
 
@@ -1013,16 +966,12 @@ public class CustomerDetails extends AppCompatActivity {
 
     public void Init() {
 
-        rlmain = (RelativeLayout) findViewById(R.id.rlmain);
-        scroll = (ScrollView) findViewById(R.id.scrollView);
-
         imdropdown = (ImageView) findViewById(R.id.imageView4);
         imphoneedit = (ImageView) findViewById(R.id.imageView5);
         imemailedit = (ImageView) findViewById(R.id.imageView6);
         imadressedit = (ImageView) findViewById(R.id.imageView9);
         imdiscount = (ImageView) findViewById(R.id.imageViewdis);
-        imageViewdropdown = (ImageView) findViewById(R.id.imageViewdropdown);
-
+        imageViewArea = (ImageView) findViewById(R.id.imageViewArea);
 
         lvosdetails = (ListView) findViewById(R.id.listView2);
 
@@ -1033,7 +982,7 @@ public class CustomerDetails extends AppCompatActivity {
         edphone = (EditText) findViewById(R.id.editText4);
         edemail = (EditText) findViewById(R.id.editText3);
         edaddress = (EditText) findViewById(R.id.editText9);
-        edamount = (EditText) findViewById(R.id.editText5);
+        edamount = (TextView) findViewById(R.id.textView28);
         edtdiscount = (EditText) findViewById(R.id.editText22);
 
         tvacno = (TextView) findViewById(R.id.textView34);
@@ -1101,11 +1050,6 @@ public class CustomerDetails extends AppCompatActivity {
     private DatePickerDialog.OnDateSetListener myDateListener = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker arg0, int arg1, int arg2, int arg3) {
-            // TODO Auto-generated method stub
-            // arg1 = year
-            // arg2 = month
-            // arg3 = day
-
             edtdate.setText((arg2 + 1) + "/" + arg3 + "/" + arg1);
         }
     };
@@ -1113,11 +1057,6 @@ public class CustomerDetails extends AppCompatActivity {
     private DatePickerDialog.OnDateSetListener myDateListeners = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker arg0, int arg1, int arg2, int arg3) {
-            // TODO Auto-generated method stub
-            // arg1 = year
-            // arg2 = month
-            // arg3 = day
-
             edtrdate.setText((arg2 + 1) + "/" + arg3 + "/" + arg1);
         }
     };
@@ -1191,245 +1130,41 @@ public class CustomerDetails extends AppCompatActivity {
         }
     }
 
-
     public JSONObject makeHttpRequest(String url) {
 
-        HttpParams httpParameters = new BasicHttpParams();
-
-        int timeoutConnection = 500000;
-        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
-// Set the default socket timeout (SO_TIMEOUT)
-// in milliseconds which is the timeout for waiting for data.
-        int timeoutSocket = 500000;
-        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
-
-        DefaultHttpClient httpclient = new DefaultHttpClient();
-        HttpGet httppost = new HttpGet(url);
-        try {
-            HttpResponse httpresponse = httpclient.execute(httppost);
-            HttpEntity httpentity = httpresponse.getEntity();
-            is = httpentity.getContent();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        JSONObject jsonObject = null;
         try {
 
+            HttpParams httpParameters = new BasicHttpParams();
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            int timeoutConnection = 500000;
+            HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
 
-            // BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_16LE), 8);
+            int timeoutSocket = 500000;
+            HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+            DefaultHttpClient httpclient = new DefaultHttpClient();
+            HttpGet httpGet = new HttpGet(url);
+
+            HttpResponse httpresponse = httpclient.execute(httpGet);
+            HttpEntity httpEntity = httpresponse.getEntity();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(httpEntity.getContent(), "UTF-8"));
 
             StringBuilder sb = new StringBuilder();
-            String line = null;
-            try {
-                if (reader != null) {
-
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line);
-                    }
-                } else {
-                    Toast.makeText(getApplicationContext(), "No data", Toast.LENGTH_SHORT).show();
-                }
-
-                //is.close();
-                json = sb.toString();
-
-                // json= sb.toString().substring(0, sb.toString().length()-1);
-                try {
-                    jobj = new JSONObject(json);
-
-                    // JSONArray jarrays=new JSONArray(json);
-
-                    // jobj=jarrays.getJSONObject(0);
-
-                    //  org.json.simple.parser.JSONParser jsonparse=new org.json.simple.parser.JSONParser();
-
-                    // jarr =(JSONArray)jsonparse.parse(json);
-                    // jobj = jarr.getJSONObject(0);
-                } catch (JSONException e) {
-                    Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
-                }
-            } catch (IOException e) {
-                Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                sb.append(line);
             }
-        } catch (UnsupportedEncodingException e) {
-            Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
+
+            jsonObject = new JSONObject(sb.toString());
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-       /* catch (ParseException e){
-            Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
-        }*/
-        return jobj;
+
+        return jsonObject;
     }
-
-    private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
-
-        private ProgressDialog pDialog;
-        // public DotProgressBar dtprogoress;
-
-        SpotsDialog spload;
-
-
-        JSONObject jsn1, jsn, jsnmain;
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            spload = new SpotsDialog(CustomerDetails.this, R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
-            spload.show();
-
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... params) {
-
-            try {
-
-                jsonobj = makeHttpRequest(params[0]);
-            } catch (Exception e) {
-
-                e.printStackTrace();
-                // Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
-            }
-
-            return jsonobj;
-
-
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            spload.dismiss();
-
-            String str = "\u20B9";
-            try {
-
-                Log.e("RESPONSE", json.toString());
-
-                if (json.getString("status").toString().equals("True")) {
-                    rlmain.setVisibility(View.VISIBLE);
-
-                    DecimalFormat format = new DecimalFormat();
-                    format.setDecimalSeparatorAlwaysShown(false);
-
-                    billid = json.getString("BillId");
-                    accno = json.getString("AccountNo");
-                    String mqno = json.getString("MQNo");
-                    String phone = json.getString("Phone");
-                    String email = json.getString("Email");
-                    String address = json.getString("Address");
-                    String lastbill = json.getString("PreviousOutStandingAmount");
-                    String lastpayment = json.getString("LastPayment");
-                    String currentbil = json.getString("CurrentOutStandingAmount");
-                    String paydate = json.getString("LastPaymentDate");
-                    String totaloa = json.getString("TotalOutStandingAmount");
-                    String areaname = json.getString("AreaName").toString();
-                    String deviceno = json.getString("DeviceNo").toString();
-                    String smartcardno = json.getString("SmartCardNo").toString();
-
-
-                    final JSONArray entityarray = json.getJSONArray("lstBillReceiptCustomerInfo");
-
-                    for (int i = 0; i < entityarray.length(); i++) {
-                        JSONObject e = (JSONObject) entityarray.get(i);
-
-                        HashMap<String, String> map = new HashMap<>();
-
-                        String bmonth = e.getString("BillMonth");
-                        String oa = e.getString("Outstanding");
-                        String bamount = e.getString("BillAmount");
-                        String PaidAmount = e.getString("PaidAmount");
-
-                        map.put("BillMonth", bmonth);
-                        map.put("Outstanding", str + format.format(Double.parseDouble(oa)));
-                        map.put("BillAmount", str + format.format(Double.parseDouble(bamount)));
-                        map.put("PaidAmount", str + format.format(Double.parseDouble(PaidAmount)));
-
-                        months.add(map);
-
-                    }
-
-
-                    final JSONArray entityarray2 = json.getJSONArray("lstBasePkgInfo");
-                    loadpackagedetails(entityarray2);
-
-
-                    final JSONArray entityarray1 = json.getJSONArray("lstCommentInfo");
-
-                    for (int i = 0; i < entityarray1.length(); i++) {
-                        JSONObject e = (JSONObject) entityarray1.get(i);
-
-                        String cmid = e.getString("CommentId");
-                        String comment = e.getString("Comment");
-
-                        HashMap<String, String> map = new HashMap<>();
-                        map.put("CommentId", cmid);
-                        map.put("Comment", comment);
-
-                        commentlist.add(map);
-                    }
-
-                    final SimpleAdapter das = new SimpleAdapter(CustomerDetails.this, commentlist, R.layout.layout_customer_comment, new String[]{"Comment"}, new int[]{R.id.textView96});
-                    lstcomment.setAdapter(das);
-
-
-                    tvacno.setText(acno);
-                    tvmqno.setText(deviceno);
-                    txtsmartcard.setText(smartcardno);
-                    edphone.setText(phone);
-                    edemail.setText(email);
-                    edaddress.setText(address);
-                    tvlastbill.setText(str + lastbill);
-                    tvlastpayment.setText(str + format.format(Double.parseDouble(lastpayment)));
-                    tvcurrentbill.setText(str + currentbil);
-                    tvpaydate.setText(paydate);
-                    tvtotaloa.setText(str + totaloa);
-                    txtarea.setText(areaname);
-
-                    edamount.setText(totaloa);
-
-                    final SimpleAdapter da = new SimpleAdapter(CustomerDetails.this, months, R.layout.outstandingdetaillayout, new String[]{"BillMonth", "BillAmount", "PaidAmount"}, new int[]{R.id.textView57, R.id.textView58, R.id.textView59});
-                    lvosdetails.setAdapter(da);
-
-                    setListViewHeightBasedOnChildren(lvosdetails);
-
-                    TextView tvempty = (TextView) findViewById(R.id.textView103);
-
-                    if (commentlist.size() > 0) {
-
-                        tvempty.setVisibility(View.GONE);
-
-                        dl.openDrawer(lldr);
-
-                    } else {
-
-                        lstcomment.setEmptyView(tvempty);
-
-                        tvempty.setVisibility(View.VISIBLE);
-                    }
-
-                    // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(getApplicationContext(), json.getString("message").toString(), Toast.LENGTH_SHORT).show();
-                }
-
-
-            } catch (JSONException e) {
-                Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
-            } catch (Exception ex) {
-                Toast.makeText(getApplicationContext(), "Error:++" + ex, Toast.LENGTH_SHORT).show();
-            }
-
-        }
-
-    }
-
 
     public void loadpackagedetails(JSONArray a) {
         String str = "\u20B9";
@@ -1464,11 +1199,8 @@ public class CustomerDetails extends AppCompatActivity {
     public void CallVolleys(String a, String cid, String usid) {
 
 
-        final SpotsDialog spload;
-        spload = new SpotsDialog(CustomerDetails.this, R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
+        final Dialog loader = Utils.getLoader(CustomerDetails.this);
+        loader.show();
 
         try {
 
@@ -1476,34 +1208,30 @@ public class CustomerDetails extends AppCompatActivity {
             map.put("commentId", cid);
             map.put("userId", usid);
 
-            JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
+            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
+
                             try {
 
-                                spload.dismiss();
-
-                                try {
-                                    if (response.getString("status").toString().equals("True")) {
-                                        Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
-
-                                        Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
-                                        i.putExtra("cname", title);
-                                        i.putExtra("A/cNo", acno);
-                                        i.putExtra("CustomerId", custid);
-                                        i.putExtra("from", "Payment");
-                                        startActivity(i);
-
-                                        finish();
-                                    }
-
-                                } catch (JSONException e) {
-                                    Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
+                                if (loader.isShowing()) {
+                                    loader.dismiss();
                                 }
 
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+                                if (response.getString("status").equalsIgnoreCase("True")) {
+                                    Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
+                                    i.putExtra("cname", title);
+                                    i.putExtra("A/cNo", acno);
+                                    i.putExtra("CustomerId", custid);
+                                    i.putExtra("from", "Payment");
+                                    startActivity(i);
+
+                                    finish();
+                                }
+
+                                Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
+
                             } catch (Exception e) {
                                 Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
                             }
@@ -1513,16 +1241,18 @@ public class CustomerDetails extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
+                            if (loader.isShowing()) {
+                                loader.dismiss();
+                            }
                             Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     });
 
-            obreq.setRetryPolicy(new DefaultRetryPolicy(600000,
+            request.setRetryPolicy(new DefaultRetryPolicy(600000,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                     DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            // Adds the JSON object request "obreq" to the request queue
-            requestQueue.add(obreq);
+            requestQueue.add(request);
 
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
@@ -1530,58 +1260,190 @@ public class CustomerDetails extends AppCompatActivity {
 
     }
 
-    private class JSONAsynks extends AsyncTask<String, String, JSONObject> {
+    private class JSONAsync1 extends AsyncTask<String, String, JSONObject> {
 
-        private ProgressDialog pDialog;
-        // public DotProgressBar dtprogoress;
-
-        SpotsDialog spload;
-
-
-        JSONObject jsn1, jsn, jsnmain;
+        Dialog loader;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload = new SpotsDialog(CustomerDetails.this, R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
-            spload.show();
+            loader = Utils.getLoader(CustomerDetails.this);
+            loader.show();
 
         }
 
         @Override
         protected JSONObject doInBackground(String... params) {
-
-            try {
-
-
-                jsonobj = makeHttpRequest(params[0]);
-
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            return jsonobj;
-
-
+            return makeHttpRequest(params[0]);
         }
 
         @Override
         protected void onPostExecute(JSONObject json) {
-            spload.dismiss();
+
+            if (loader.isShowing()) {
+                loader.dismiss();
+            }
+
+            String str = "\u20B9";
+            try {
+
+                Log.e("RESPONSE", json.toString());
+
+                if (json.getString("status").equalsIgnoreCase("True")) {
+
+                    DecimalFormat format = new DecimalFormat();
+                    format.setDecimalSeparatorAlwaysShown(false);
+
+                    billid = json.getString("BillId");
+                    accno = json.getString("AccountNo");
+                    String mqno = json.getString("MQNo");
+                    String phone = json.getString("Phone");
+                    String email = json.getString("Email");
+                    String address = json.getString("Address");
+                    String lastbill = json.getString("PreviousOutStandingAmount");
+                    String lastpayment = json.getString("LastPayment");
+                    String currentbil = json.getString("CurrentOutStandingAmount");
+                    String paydate = json.getString("LastPaymentDate");
+                    String totaloa = json.getString("TotalOutStandingAmount");
+                    String areaname = json.getString("AreaName");
+                    String deviceno = json.getString("DeviceNo");
+                    String smartcardno = json.getString("SmartCardNo");
+
+
+                    final JSONArray entityArray = json.getJSONArray("lstBillReceiptCustomerInfo");
+
+                    for (int i = 0; i < entityArray.length(); i++) {
+                        JSONObject e = (JSONObject) entityArray.get(i);
+
+                        HashMap<String, String> map = new HashMap<>();
+
+                        String bmonth = e.getString("BillMonth");
+                        String oa = e.getString("Outstanding");
+                        String bamount = e.getString("BillAmount");
+                        String PaidAmount = e.getString("PaidAmount");
+
+                        map.put("BillMonth", bmonth);
+                        map.put("Outstanding", str + format.format(Double.parseDouble(oa)));
+                        map.put("BillAmount", str + format.format(Double.parseDouble(bamount)));
+                        map.put("PaidAmount", str + format.format(Double.parseDouble(PaidAmount)));
+
+                        months.add(map);
+
+                    }
+
+
+                    final JSONArray entityArray2 = json.getJSONArray("lstBasePkgInfo");
+                    loadpackagedetails(entityArray2);
+
+
+                    final JSONArray entityarray1 = json.getJSONArray("lstCommentInfo");
+
+                    for (int i = 0; i < entityarray1.length(); i++) {
+                        JSONObject e = (JSONObject) entityarray1.get(i);
+
+                        String cmid = e.getString("CommentId");
+                        String comment = e.getString("Comment");
+
+                        HashMap<String, String> map = new HashMap<>();
+                        map.put("CommentId", cmid);
+                        map.put("Comment", comment);
+
+                        commentlist.add(map);
+                    }
+
+                    final SimpleAdapter das = new SimpleAdapter(CustomerDetails.this, commentlist, R.layout.layout_customer_comment, new String[]{"Comment"}, new int[]{R.id.textView96});
+                    lstcomment.setAdapter(das);
+
+
+                    tvacno.setText(acno);
+                    tvmqno.setText(deviceno);
+                    if (smartcardno != null && !smartcardno.isEmpty()) {
+                        txtsmartcard.setText(smartcardno);
+                        findViewById(R.id.view2).setVisibility(View.VISIBLE);
+                        findViewById(R.id.layout2).setVisibility(View.VISIBLE);
+                    } else {
+                        findViewById(R.id.view2).setVisibility(View.GONE);
+                        findViewById(R.id.layout2).setVisibility(View.GONE);
+                    }
+                    edphone.setText(phone);
+                    edemail.setText(email);
+                    edaddress.setText(address);
+                    tvlastbill.setText(str + lastbill);
+                    tvlastpayment.setText(str + format.format(Double.parseDouble(lastpayment)));
+                    tvcurrentbill.setText(str + currentbil);
+                    tvpaydate.setText(paydate);
+                    tvtotaloa.setText(str + totaloa);
+                    txtarea.setText(areaname);
+
+                    edamount.setText(totaloa);
+
+                    final SimpleAdapter da = new SimpleAdapter(CustomerDetails.this, months, R.layout.outstandingdetaillayout, new String[]{"BillMonth", "BillAmount", "PaidAmount"}, new int[]{R.id.textView57, R.id.textView58, R.id.textView59});
+                    lvosdetails.setAdapter(da);
+
+                    setListViewHeightBasedOnChildren(lvosdetails);
+
+                    TextView tvempty = (TextView) findViewById(R.id.textView103);
+
+                    if (commentlist.size() > 0) {
+
+                        tvempty.setVisibility(View.GONE);
+
+                        dl.openDrawer(lldr);
+
+                    } else {
+                        lstcomment.setEmptyView(tvempty);
+                        tvempty.setVisibility(View.VISIBLE);
+                    }
+
+                } else {
+                    Toast.makeText(getApplicationContext(), json.getString("message").toString(), Toast.LENGTH_SHORT).show();
+                }
+
+
+            } catch (JSONException e) {
+                Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
+            } catch (Exception ex) {
+                Toast.makeText(getApplicationContext(), "Error:++" + ex, Toast.LENGTH_SHORT).show();
+            }
+
+        }
+
+    }
+
+    private class JSONAsync2 extends AsyncTask<String, String, JSONObject> {
+
+        Dialog loader;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            loader = Utils.getLoader(CustomerDetails.this);
+            loader.show();
+
+        }
+
+        @Override
+        protected JSONObject doInBackground(String... params) {
+            return makeHttpRequest(params[0]);
+        }
+
+        @Override
+        protected void onPostExecute(JSONObject json) {
+
+            if (loader.isShowing()) {
+                loader.dismiss();
+            }
 
             try {
 
-                if (json.getString("status").toString().equals("True")) {
-                    rlmain.setVisibility(View.VISIBLE);
+                if (json.getString("status").equalsIgnoreCase("True")) {
 
-                    final JSONArray entityarray = jsonobj.getJSONArray("AreaInfoList");
+                    final JSONArray entityArray = json.getJSONArray("AreaInfoList");
 
-                    for (int i = 0; i < entityarray.length(); i++) {
-                        JSONObject e = (JSONObject) entityarray.get(i);
+                    for (int i = 0; i < entityArray.length(); i++) {
+                        JSONObject e = (JSONObject) entityArray.get(i);
 
                         String aid = e.getString("AreaId");
                         String aname = TextUtils.htmlEncode(e.getString("AreaName"));
@@ -1596,7 +1458,6 @@ public class CustomerDetails extends AppCompatActivity {
                         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
                         lv.setDividerHeight(0);
 
-
                         final ArrayAdapter<String> da = new ArrayAdapter<String>(CustomerDetails.this, android.R.layout.simple_list_item_single_choice, areanameList);
                         lv.setAdapter(da);
 
@@ -1609,7 +1470,6 @@ public class CustomerDetails extends AppCompatActivity {
                                 if (lv.getCheckedItemPosition() == -1) {
                                     Toast.makeText(CustomerDetails.this, "Please select atleast one Area..!!", Toast.LENGTH_LONG).show();
                                 } else {
-
                                     URL = siteurl + "/UpdateAreaForCollectionApp";
 
                                     HashMap<String, String> map = new HashMap<String, String>();
@@ -1617,7 +1477,6 @@ public class CustomerDetails extends AppCompatActivity {
                                     map.put("UserId", uid);
                                     map.put("CustomerId", custid);
                                     map.put("AreaId", areaidList.get(lv.getCheckedItemPosition()));
-
 
                                     CallVolleyUpdateArea(URL, map);
 
@@ -1634,7 +1493,6 @@ public class CustomerDetails extends AppCompatActivity {
 
 
                 } else {
-
                     Toast.makeText(CustomerDetails.this, json.getString("message"), Toast.LENGTH_SHORT).show();
                 }
 
@@ -1649,135 +1507,108 @@ public class CustomerDetails extends AppCompatActivity {
     public void CallVolleyUpdateArea(String a, HashMap<String, String> map) {
 
 
-        final SpotsDialog spload;
-        spload = new SpotsDialog(CustomerDetails.this, R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
+        final Dialog loader = Utils.getLoader(CustomerDetails.this);
+        loader.show();
 
-        try {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
 
-            JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            try {
+                        if (loader.isShowing()) {
+                            loader.dismiss();
+                        }
 
-                                spload.dismiss();
+                        try {
 
-                                try {
-                                    if (response.getString("status").toString().equals("True")) {
-                                        Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
-
-                                        Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
-                                        i.putExtra("cname", title);
-                                        i.putExtra("A/cNo", acno);
-                                        i.putExtra("CustomerId", custid);
-                                        i.putExtra("from", "Payment");
-                                        startActivity(i);
-
-                                        finish();
-
-                                    } else {
-                                        Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
-                                    }
-
-                                } catch (JSONException e) {
-                                    Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
-                                }
-
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            } catch (Exception e) {
-                                Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
+                            if (response.getString("status").equalsIgnoreCase("True")) {
+                                Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
+                                i.putExtra("cname", title);
+                                i.putExtra("A/cNo", acno);
+                                i.putExtra("CustomerId", custid);
+                                i.putExtra("from", "Payment");
+                                startActivity(i);
+                                finish();
                             }
+
+                            Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
+
+                        } catch (Exception e) {
+                            Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
                         }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-
-                            Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
-
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        if (loader.isShowing()) {
+                            loader.dismiss();
                         }
-                    });
+                        Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
-            obreq.setRetryPolicy(new DefaultRetryPolicy(600000,
-                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            // Adds the JSON object request "obreq" to the request queue
-            requestQueue.add(obreq);
+                    }
+                });
 
-        } catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
-        }
+        request.setRetryPolicy(new DefaultRetryPolicy(600000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        requestQueue.add(request);
+
 
     }
 
     public void CallVolleysAddComment(String a, HashMap<String, String> map) {
 
+        final Dialog loader = Utils.getLoader(CustomerDetails.this);
+        loader.show();
 
-        final SpotsDialog spload;
-        spload = new SpotsDialog(CustomerDetails.this, R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
+        JsonObjectRequest request;
+        request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
 
-        try {
-
-            JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            try {
-
-                                spload.dismiss();
-
-                                try {
-                                    if (response.getString("status").toString().equals("True")) {
-                                        Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
-
-                                        Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
-                                        i.putExtra("cname", title);
-                                        i.putExtra("A/cNo", acno);
-                                        i.putExtra("CustomerId", custid);
-                                        i.putExtra("from", "Payment");
-                                        startActivity(i);
-
-                                        finish();
-                                    } else {
-                                        Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
-                                    }
-
-                                } catch (JSONException e) {
-                                    Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
-                                }
-
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            } catch (Exception e) {
-                                Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
+                            if (loader.isShowing()) {
+                                loader.dismiss();
                             }
+
+                            if (response.getString("status").equalsIgnoreCase("True")) {
+                                Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
+
+                                Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
+                                i.putExtra("cname", title);
+                                i.putExtra("A/cNo", acno);
+                                i.putExtra("CustomerId", custid);
+                                i.putExtra("from", "Payment");
+                                startActivity(i);
+
+                                finish();
+                            } else {
+                                Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
+                            }
+
+                        } catch (Exception e) {
+                            Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
                         }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-
-                            Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
-
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        if (loader.isShowing()) {
+                            loader.dismiss();
                         }
-                    });
 
-            obreq.setRetryPolicy(new DefaultRetryPolicy(600000,
-                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            // Adds the JSON object request "obreq" to the request queue
-            requestQueue.add(obreq);
+                        Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
-        } catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
-        }
+                    }
+                });
+
+        request.setRetryPolicy(new DefaultRetryPolicy(600000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        requestQueue.add(request);
 
     }
 

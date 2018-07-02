@@ -37,8 +37,8 @@
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
                     android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
                     android:paddingRight="5dp"
                     android:text="Area Name"
                     android:textColor="#fff"
@@ -48,8 +48,8 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginLeft="0dp"
                     android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="0dp"
                     android:layout_marginRight="50dp"
                     android:layout_marginTop="5dp"
                     android:background="@android:color/white" />
@@ -536,7 +536,6 @@
             android:text="MAKE PAYMENT"
             android:textColor="#ffffff"
             android:textSize="@dimen/textsize_18" />
-        />
 
     </LinearLayout>
 

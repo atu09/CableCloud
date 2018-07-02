@@ -194,8 +194,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
-                                    android:src="@drawable/ic_mode_edit_black"
-                                    android:tag="@drawable/ic_mode_edit_black"
+                                    android:src="@drawable/ic_edit_black"
+                                    android:tag="@drawable/ic_edit_black"
                                     android:tint="#000000"
                                     android:visibility="gone" />
 
@@ -259,7 +259,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
-                                        android:src="@drawable/ic_mode_edit_black"
+                                        android:src="@drawable/ic_edit_black"
                                         android:tint="#000000"
                                         android:visibility="gone" />
 
@@ -336,7 +336,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center_vertical"
-                                            android:src="@drawable/ic_mode_edit_black"
+                                            android:src="@drawable/ic_edit_black"
                                             android:tint="#000000"
                                             android:visibility="gone" />
                                     </LinearLayout>
@@ -456,8 +456,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
-                            android:src="@drawable/ic_mode_edit_black"
-                            android:tag="@drawable/ic_mode_edit_black"
+                            android:src="@drawable/ic_edit_black"
+                            android:tag="@drawable/ic_edit_black"
                             android:tint="#000000" />
 
 

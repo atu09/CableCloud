@@ -105,8 +105,6 @@ public class PaymentFragment extends Fragment {
 
     SharedPreferences pref;
 
-    RelativeLayout rlmain;
-
     int mPage = 0;
 
     DBHelper myDB;
@@ -163,12 +161,6 @@ public class PaymentFragment extends Fragment {
 
             swrefresh = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
 
-            rlmain = (RelativeLayout) view.findViewById(R.id.rlmain);
-
-            // paymentAreaListAdapter =new PaymentAreaListAdapter(getContext(),areadetails);
-
-            //  lvarealist.setAdapter(paymentAreaListAdapter);
-
             if (url.equals("-")) {
 
                 myDB = new DBHelper(getContext());
@@ -210,23 +202,11 @@ public class PaymentFragment extends Fragment {
                         } while (c.moveToNext());
                     }
 
-                    ///Toast.makeText(getContext(),"**"+ areadetails.size(), Toast.LENGTH_SHORT).show();
-
-                    rlmain.setVisibility(View.VISIBLE);
-
                     da = new SimpleAdapter(getContext(), areadetails, R.layout.arealist, new String[]{"AreaName", "Collection", "Outstanding"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
                     lvarealist.setAdapter(da);
 
                     myDB.close();
 
-                    /*if(areadetails.size()>0)
-                    {
-                        for(int k=0;k<areadetails.size();k++)
-                        {
-                            totalos=totalos+Long.parseLong(areadetails.get(k).get("Outstanding"));
-                            totalcol=totalcol+Long.parseLong(areadetails.get(k).get("Collection"));
-                        }
-                    }*/
 
                     String tc = String.valueOf(totalcol);
                     String toa = String.valueOf(totalos);
@@ -303,21 +283,9 @@ public class PaymentFragment extends Fragment {
                                 } while (c.moveToNext());
                             }
 
-                            // Toast.makeText(getContext(), "**" + areadetails.size(), Toast.LENGTH_SHORT).show();
-
-                            rlmain.setVisibility(View.VISIBLE);
 
                             da = new SimpleAdapter(getContext(), areadetails, R.layout.arealist, new String[]{"AreaName", "Collection", "Outstanding"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
                             lvarealist.setAdapter(da);
-
-                            /*if(areadetails.size()>0)
-                            {
-                                for(int k=0;k<areadetails.size();k++)
-                                {
-                                    totalos=totalos+Long.parseLong(areadetails.get(k).get("Outstanding"));
-                                    totalcol=totalcol+Long.parseLong(areadetails.get(k).get("Collection"));
-                                }
-                            }*/
 
                             String tc = String.valueOf(totalcol);
                             String toa = String.valueOf(totalos);
@@ -332,57 +300,6 @@ public class PaymentFragment extends Fragment {
                 }
             });
 
-          /*  lvarealist.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-
-                    float y = event.getY();
-
-                    switch (event.getAction()) {
-                        case MotionEvent.ACTION_MOVE: {
-
-                        }
-                        break;
-                        case MotionEvent.ACTION_DOWN: {
-                            refreshLayout.setEnabled(false);
-
-
-
-                        }
-                        case MotionEvent.ACTION_UP: {
-                            if(lvarealist.getFirstVisiblePosition()==0)
-                            {
-                                refreshLayout.setEnabled(true);
-                                refreshLayout.setRefreshing(true);
-                            }
-                        }
-
-                    }
-
-                    return false;
-                }
-            });
-*/
-
-
-
-
-          /*  lvarealist.setOnScrollListener(new AbsListView.OnScrollListener() {
-                @Override
-                public void onScrollStateChanged(AbsListView view, int scrollState) {
-
-                }
-
-                @Override
-                public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-
-                    int topRowVerticalPosition = (lvarealist == null || lvarealist.getChildCount() == 0) ?
-                            0 : lvarealist.getChildAt(0).getTop();
-                    refreshLayout.setEnabled((topRowVerticalPosition >= 0));
-
-                }
-            });
-*/
 
             lvarealist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -401,14 +318,6 @@ public class PaymentFragment extends Fragment {
                     editor.putString("Collection", areadetails.get(position).get("Collection"));
                     editor.putString("from", "Payment");
                     editor.commit();
-
-                /*map.put("AreaId",aid);
-                map.put("AreaName",aname);
-                map.put("AreaCode",acode);
-                map.put("Outstanding",Aoa);
-                map.put("Collection",Acol);*/
-
-                    // Toast.makeText(getContext(), areadetails.get(position).get("AreaId") + "--" + areadetails.get(position).get("AreaCode"), Toast.LENGTH_SHORT).show();
 
                     Intent i = new Intent(getContext(), CustomerListActivity.class);
                     startActivity(i);
@@ -808,7 +717,6 @@ public class PaymentFragment extends Fragment {
 
                             if (response.getString("status").equalsIgnoreCase("True")) {
 
-                                rlmain.setVisibility(View.VISIBLE);
                                 DecimalFormat format = new DecimalFormat();
                                 format.setDecimalSeparatorAlwaysShown(false);
 

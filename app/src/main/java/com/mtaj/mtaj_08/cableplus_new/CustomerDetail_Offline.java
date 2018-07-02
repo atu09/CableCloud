@@ -124,7 +124,7 @@ public class CustomerDetail_Offline extends AppCompatActivity {
 
                     edamount.setText(String.valueOf(amount));
 
-                    imdiscount.setImageResource(R.drawable.ic_mode_edit_black);
+                    imdiscount.setImageResource(R.drawable.ic_edit_black);
                     isedited=false;
                     edtdiscount.setEnabled(false);
                 }
