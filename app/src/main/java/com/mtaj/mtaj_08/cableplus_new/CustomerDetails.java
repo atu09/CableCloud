@@ -99,7 +99,8 @@ public class CustomerDetails extends AppCompatActivity {
     ArrayList<HashMap<String, String>> months = new ArrayList<>();
     ArrayList<HashMap<String, String>> packagedetails = new ArrayList<>();
 
-    TextView txtmakepayment, edamount;
+    TextView txtmakepayment;
+    EditText edamount;
 
     TableRow tblrow;
     LinearLayout llosdetails;
@@ -982,7 +983,7 @@ public class CustomerDetails extends AppCompatActivity {
         edphone = (EditText) findViewById(R.id.editText4);
         edemail = (EditText) findViewById(R.id.editText3);
         edaddress = (EditText) findViewById(R.id.editText9);
-        edamount = (TextView) findViewById(R.id.textView28);
+        edamount = (EditText) findViewById(R.id.textView28);
         edtdiscount = (EditText) findViewById(R.id.editText22);
 
         tvacno = (TextView) findViewById(R.id.textView34);

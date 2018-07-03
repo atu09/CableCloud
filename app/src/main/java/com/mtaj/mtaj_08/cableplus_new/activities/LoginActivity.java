@@ -11,6 +11,7 @@ import android.os.StrictMode;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -51,7 +52,12 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
     private static final String LOGIN_PREF = "LoginPref";
     String Url = "http://cableplus.in/service.asmx/GetContractorDetails?OPCode=";
-
+    /*
+    todo: Anish: changes for base url remaining
+    String Url = "https://master.cable-cloud.com/service.asmx/GetContractorDetails?OPCode=";//new base url
+        Username - kcngda
+        Pass - kcngda#123
+        Op code - kcngda*/
     EditText etUsername, etPassword, etOpCode;
     Button btnLogin;
 
@@ -363,6 +369,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
                 }
             } catch (Exception e) {
+                Log.e("exception", "onPostExecute: " + e.getMessage());
                 Toast.makeText(LoginActivity.this, "Something Went  Wrong...", Toast.LENGTH_SHORT).show();
             }
         }

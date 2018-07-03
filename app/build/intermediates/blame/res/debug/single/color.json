@@ -1,98 +1,98 @@
 [
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_primary_text_material_light.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_tint_edittext.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_error.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\5e411922e15cf0a60d3fb566b1dbc5d6\\res\\color\\design_error.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_hint_foreground_material_light.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-10.2.0.aar\\6f3b5f5f9572eb344b43b7d5482edc75\\res\\color\\common_google_signin_btn_tint.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/5ac063d865847482c6ea218e4047dda7/res/color/common_google_signin_btn_text_dark.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_tint_edittext.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/design_error.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/eff8c610f00f943d70da55fe0a385894/res/color/design_error.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_secondary_text_material_dark.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_tint_switch_track.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_tint_btn_checkable.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_hint_foreground_material_dark.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_btn_colored_text_material.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/switch_thumb_material_dark.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_search_url_text.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_btn_colored_borderless_text_material.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_tint_default.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_hint_foreground_material_dark.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/5ac063d865847482c6ea218e4047dda7/res/color/common_google_signin_btn_text_light.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_tint_default.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-10.2.0.aar\\6f3b5f5f9572eb344b43b7d5482edc75\\res\\color\\common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_primary_text_material_dark.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\5e411922e15cf0a60d3fb566b1dbc5d6\\res\\color\\design_tint_password_toggle.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_tint_switch_track.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_secondary_text_material_light.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_tint_spinner.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_search_url_text.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\switch_thumb_material_light.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_tint_seek_thumb.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\switch_thumb_material_dark.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/switch_thumb_material_light.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-10.2.0.aar\\6f3b5f5f9572eb344b43b7d5482edc75\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/5ac063d865847482c6ea218e4047dda7/res/color/common_google_signin_btn_tint.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/color/abc_primary_text_disable_only_material_light.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_tint_spinner.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/eff8c610f00f943d70da55fe0a385894/res/color/design_tint_password_toggle.xml"
+        "merged": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\color\\abc_secondary_text_material_light.xml"
     }
 ]

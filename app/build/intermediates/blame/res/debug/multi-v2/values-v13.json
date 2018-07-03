@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/values-v13/values-v13.xml",
+            "outputFile": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\values-v13\\values-v13.xml",
             "map": [
                 {
-                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/values-v13/values-v13.xml",
+                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\values-v13\\values-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v13/values-v13.xml",
+            "outputFile": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v13\\values-v13.xml",
             "map": [
                 {
-                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/values-v13/values-v13.xml",
+                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\values-v13\\values-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

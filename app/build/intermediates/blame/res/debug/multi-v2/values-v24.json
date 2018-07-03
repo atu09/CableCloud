@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,212,347,416,480,549",
-                        "endColumns": "156,134,68,63,68,69",
-                        "endOffsets": "207,342,411,475,544,614"
-                    }
-                },
-                {
-                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/a32d7e46b604604cb54cfee3061b1d78/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\24d66b59bff9f2c17ec18fc00336b160\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -28,25 +18,25 @@
                         "startOffsets": "619,685,746,812",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "680,741,807,874"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,212,347,416,480,549",
+                        "endColumns": "156,134,68,63,68,69",
+                        "endOffsets": "207,342,411,475,544,614"
                     }
                 }
             ]
         },
         {
-            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/values-v24/values-v24.xml",
+            "outputFile": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,212,347,416,480,549",
-                        "endColumns": "156,134,68,63,68,69",
-                        "endOffsets": "207,342,411,475,544,614"
-                    }
-                },
-                {
-                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/a32d7e46b604604cb54cfee3061b1d78/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\24d66b59bff9f2c17ec18fc00336b160\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -60,6 +50,16 @@
                         "startOffsets": "619,685,746,812",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "680,741,807,874"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,212,347,416,480,549",
+                        "endColumns": "156,134,68,63,68,69",
+                        "endOffsets": "207,342,411,475,544,614"
                     }
                 }
             ]
