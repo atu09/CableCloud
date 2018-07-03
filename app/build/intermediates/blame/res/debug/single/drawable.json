@@ -88,12 +88,12 @@
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/5ac063d865847482c6ea218e4047dda7/res/drawable/common_google_signin_btn_text_light_focused.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/rupeeredicon.png",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/rupeeredicon.png"
-    },
-    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/ic_location_on_white.png",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/ic_location_on_white.png"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/rupeeredicon.png",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/rupeeredicon.png"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/payment.png",
@@ -148,16 +148,16 @@
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/shape_resolvecomplain.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/tooltip_frame_light.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/drawable/tooltip_frame_light.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/drawable/abc_tab_indicator_material.xml"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/badge_icon_complaincomment_count.xml",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable/badge_icon_complaincomment_count.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/drawable/abc_tab_indicator_material.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/tooltip_frame_light.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/drawable/tooltip_frame_light.xml"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable/successfuldone.png",

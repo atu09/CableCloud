@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_done_white.png",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-xhdpi/ic_done_white.png"
-    },
-    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_location_on_black.png",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-xhdpi/ic_location_on_black.png"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_done_white.png",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-xhdpi/ic_done_white.png"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png",

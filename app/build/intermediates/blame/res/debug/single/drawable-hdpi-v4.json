@@ -188,6 +188,10 @@
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/5ac063d865847482c6ea218e4047dda7/res/drawable-hdpi-v4/googleg_standard_color_18.png"
     },
     {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_arrow_down.png",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-hdpi/ic_arrow_down.png"
+    },
+    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -196,20 +200,16 @@
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-hdpi/ic_arrow_drop_down_white.png"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_arrow_down.png",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-hdpi/ic_arrow_down.png"
-    },
-    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png",
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_call_black.png",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/drawable-hdpi/ic_call_black.png"
+    },
+    {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_home_white.png",
