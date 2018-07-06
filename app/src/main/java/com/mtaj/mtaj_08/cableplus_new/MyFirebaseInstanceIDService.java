@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
+import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
 
 /**
  * Created by MTAJ-08 on 8/30/2016.
@@ -19,9 +20,8 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        //Getting registration token
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
-        Log.d(TAG, "Refreshed token: " + refreshedToken);
+        Utils.checkLog(TAG, "Refreshed token: " + refreshedToken, null);
         sharedPreferences.edit().putString("refresh_token", refreshedToken).apply();
     }
 

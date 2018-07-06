@@ -137,10 +137,14 @@ public class Utils {
 
     public static void checkLog(String TAG, Object data, Throwable throwable) {
         if (BuildConfig.DEBUG) {
-            if (throwable != null) {
-                Log.d(TAG + ">>", data.toString(), throwable);
+            if (data != null) {
+                if (throwable != null) {
+                    Log.d(TAG + ">>", data.toString(), throwable);
+                } else {
+                    Log.d(TAG + ">>", data.toString());
+                }
             } else {
-                Log.d(TAG + ">>", data.toString());
+                Log.d(TAG + ">>", "Null");
             }
         }
     }

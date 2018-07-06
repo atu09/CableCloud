@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\values-uk\\values-uk.xml",
+            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/values-uk/values-uk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-10.2.0.aar\\6f3b5f5f9572eb344b43b7d5482edc75\\res\\values-uk\\values.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/5ac063d865847482c6ea218e4047dda7/res/values-uk/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\values-uk\\values-uk.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/values-uk/values-uk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.2.0.aar\\cd44f321627120d1a48f37a8b3f4a2f3\\res\\values-uk\\values.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/0f8911dba7e643829982caf4ba7a9498/res/values-uk/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -57,10 +57,10 @@
             ]
         },
         {
-            "outputFile": "D:\\AndroidProjects\\CurrentProjects\\CableAppFinal\\CableCloud\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uk\\values-uk.xml",
+            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-10.2.0.aar\\6f3b5f5f9572eb344b43b7d5482edc75\\res\\values-uk\\values.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/5ac063d865847482c6ea218e4047dda7/res/values-uk/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -77,7 +77,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\37bcb1a665fea425bbc2d6a01645c6b9\\res\\values-uk\\values-uk.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1b82960294e2fea4c5ebd634c16db10b/res/values-uk/values-uk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -94,7 +94,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.2.0.aar\\cd44f321627120d1a48f37a8b3f4a2f3\\res\\values-uk\\values.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/0f8911dba7e643829982caf4ba7a9498/res/values-uk/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

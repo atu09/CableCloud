@@ -54,6 +54,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.mtaj.mtaj_08.cableplus_new.ConnectivityReceiver;
 import com.mtaj.mtaj_08.cableplus_new.DBHelper;
+import com.mtaj.mtaj_08.cableplus_new.MyApplication;
+import com.mtaj.mtaj_08.cableplus_new.NetworkUtil;
+import com.mtaj.mtaj_08.cableplus_new.NoConnectionActivity;
 import com.mtaj.mtaj_08.cableplus_new.OnCountAssignment;
 import com.mtaj.mtaj_08.cableplus_new.R;
 import com.mtaj.mtaj_08.cableplus_new.TestLocationService;
@@ -387,6 +390,13 @@ public class DashBoardActivity extends AppCompatActivity implements OnCountAssig
             checkAllPermissions();
         }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
 
     public void loadOfflineEntities() {
 
@@ -922,7 +932,11 @@ public class DashBoardActivity extends AppCompatActivity implements OnCountAssig
 
     @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
+        Utils.checkLog("network", isConnected,null);
         isOffline = !isConnected;
+        if (isOffline) {
+            startActivity(new Intent(getApplicationContext(), NoConnectionActivity.class));
+        }
     }
 
     public class MenuHolder extends RecyclerView.ViewHolder {

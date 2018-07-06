@@ -27,6 +27,7 @@ import android.widget.Toast;
 import com.mtaj.mtaj_08.cableplus_new.ConnectivityReceiver;
 import com.mtaj.mtaj_08.cableplus_new.DBHelper;
 import com.mtaj.mtaj_08.cableplus_new.MyApplication;
+import com.mtaj.mtaj_08.cableplus_new.NetworkUtil;
 import com.mtaj.mtaj_08.cableplus_new.NoConnectionActivity;
 import com.mtaj.mtaj_08.cableplus_new.R;
 import com.mtaj.mtaj_08.cableplus_new.helpers.Utils;
@@ -51,13 +52,9 @@ import static com.mtaj.mtaj_08.cableplus_new.DBHelper.PK_ENTITY_ID;
 public class LoginActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     private static final String LOGIN_PREF = "LoginPref";
-    String Url = "http://cableplus.in/service.asmx/GetContractorDetails?OPCode=";
-    /*
-    todo: Anish: changes for base url remaining
+    //String Url = "http://cableplus.in/service.asmx/GetContractorDetails?OPCode=";
     String Url = "https://master.cable-cloud.com/service.asmx/GetContractorDetails?OPCode=";//new base url
-        Username - kcngda
-        Pass - kcngda#123
-        Op code - kcngda*/
+
     EditText etUsername, etPassword, etOpCode;
     Button btnLogin;
 
@@ -86,9 +83,9 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         cardLogin = (CardView) findViewById(R.id.cardLogin);
         btnLogin = (Button) findViewById(R.id.btnlogin);
 
-        etUsername.setText("hjbrc");
-        etPassword.setText("hjbrc@123");
-        etOpCode.setText("hjbrc");
+        etUsername.setText("kcngda");
+        etPassword.setText("kcngda#123");
+        etOpCode.setText("kcngda");
 
     }
 
@@ -127,7 +124,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
     void loginCall() {
         Utils.closeKeyboard(LoginActivity.this);
-        if (ValidateEditText("Enter Username", etUsername) && ValidateEditText("Enter Password", etPassword) && ValidateEditText("Enter OPCOde", etOpCode)) {
+        if (ValidateEditText("Enter Username", etUsername) && ValidateEditText("Enter Password", etPassword) && ValidateEditText("Enter OPCode", etOpCode)) {
             String[] params = new String[]{Url, etOpCode.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), token};
             new JSONLoginAsync().execute(params);
         }
@@ -207,6 +204,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
     public JSONObject makeHttpRequest(String url) {
 
+        Utils.checkLog("URL", url, null);
         JSONObject jsonObject = null;
 
         try {
@@ -231,6 +229,8 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
             while ((line = reader.readLine()) != null) {
                 sb.append(line);
             }
+
+            Utils.checkLog("json", sb.toString(), null);
             jsonObject = new JSONObject(sb.toString());
 
         } catch (Exception e) {
@@ -288,6 +288,10 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
         @Override
         protected void onPostExecute(JSONObject json) {
+
+            if (loader.isShowing()) {
+                loader.dismiss();
+            }
 
             SharedPreferences pref = getSharedPreferences(LOGIN_PREF, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = pref.edit();
@@ -363,8 +367,6 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
                     editor.putString("isOutstandingEditable", outstandingEditable);
                     editor.apply();
 
-                    loader.dismiss();
-
                     new JSONEntityAsync().execute();
 
                 }
@@ -431,7 +433,9 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         @Override
         protected void onPostExecute(Boolean status) {
 
-            loader.dismiss();
+            if (loader.isShowing()) {
+                loader.dismiss();
+            }
 
             if (status) {
                 startActivity(new Intent(LoginActivity.this, DashBoardActivity.class));
