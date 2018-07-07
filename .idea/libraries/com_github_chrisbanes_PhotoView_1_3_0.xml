@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.github.chrisbanes:PhotoView-1.3.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/PhotoView-1.3.0.aar/07ea41a54e0807c7e546d3fd972268e5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/PhotoView-1.3.0.aar/07ea41a54e0807c7e546d3fd972268e5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/PhotoView-1.3.0.aar/a4bf58fe48bc50cdc1d959de8e56919c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/PhotoView-1.3.0.aar/a4bf58fe48bc50cdc1d959de8e56919c/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

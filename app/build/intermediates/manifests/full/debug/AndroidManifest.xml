@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mtaj.mtaj_08.cableplus_new"
+    package="com.cable.cloud"
     android:versionCode="9"
     android:versionName="3.0" >
 
@@ -23,19 +23,19 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <permission
-        android:name="com.mtaj.mtaj_08.cableplus_new.permission.C2D_MESSAGE"
+        android:name="com.cable.cloud.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.mtaj.mtaj_08.cableplus.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.cable.cloud.permission.C2D_MESSAGE" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
 
-    <uses-permission android:name="com.mtaj.mtaj_08.cableplus_new.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <application
-        android:name="com.mtaj.mtaj_08.cableplus_new.MyApplication"
+        android:name="com.cable.cloud.MyApplication"
         android:allowBackup="true"
         android:debuggable="true"
         android:hardwareAccelerated="true"
@@ -50,18 +50,17 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.activities.LoginActivity"
-            android:hardwareAccelerated="true"
+            android:name="com.cable.cloud.activities.LoginActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity"
+            android:name="com.cable.cloud.activities.DashBoardActivity"
             android:label="@string/title_activity_dash_board"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.activities.CustomerListActivity"
-            android:parentActivityName="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity"
+            android:name="com.cable.cloud.activities.CustomerListActivity"
+            android:parentActivityName="com.cable.cloud.activities.DashBoardActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
@@ -69,33 +68,35 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.CustomerDetails"
+            android:name="com.cable.cloud.CustomerDetails"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerListActivity" />
+                android:value="com.cable.cloud.activities.CustomerListActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.TransactionStatusActivity"
+            android:name="com.cable.cloud.TransactionStatusActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.CustomerSignatureActivity"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.CustomerSignatureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.CustomerDetails" />
+                android:value="com.cable.cloud.CustomerDetails" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.Collection_Area_Activity"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.Collection_Area_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
+                android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.activity_collection_customerdetail"
+            android:name="com.cable.cloud.activity_collection_customerdetail"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
@@ -103,224 +104,212 @@
                 android:resource="@xml/searchable" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.Collection_Area_Activity" />
+                android:value="com.cable.cloud.Collection_Area_Activity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.ComplainDetails"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.ComplainDetails"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
+                android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.SearchWithCustomerListInComplains"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.SearchWithCustomerListInComplains"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.AreaListInCustomers" />
+                android:value="com.cable.cloud.activities.AreaListInCustomers" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.ComplainListviaCustomerActivity"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.ComplainListviaCustomerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
+                android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.activities.AreaListInCustomers"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.activities.AreaListInCustomers"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
+                android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity"
+            android:name="com.cable.cloud.activities.CustomerMasterDetailsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.AreaListInCustomers" />
+                android:value="com.cable.cloud.activities.AreaListInCustomers" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.Sms_log"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.Sms_log"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
+                android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.Bill_details"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.Bill_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
+                android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.PackageDetails"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.PackageDetails"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
+                android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.Contact_details"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.Contact_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
+                android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.Payment_details"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.Payment_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
+                android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
 
-        <receiver
-            android:name="com.mtaj.mtaj_08.cableplus_new.ConnectivityReceiver"
-            android:enabled="true" >
+        <receiver android:name="com.cable.cloud.ConnectivityReceiver" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
             </intent-filter>
         </receiver>
-        <receiver
-            android:name="com.mtaj.mtaj_08.cableplus_new.ScreenReceiver"
-            android:enabled="true" />
-
-        <!--
-            <service
-            android:name=".TrackLocationService"
-            android:process=":tracklocation_service" />
-        -->
 
         <service
-            android:name="com.mtaj.mtaj_08.cableplus_new.TestLocationService"
+            android:name="com.cable.cloud.TestLocationService"
             android:process=":testlocation_service" />
-
-        <!--
-        <receiver
-            android:name=".MyApplication$ScreenReceiver"
-            android:enabled="true">
-            <intent-filter>
-                <action android:name="android.intent.action.SCREEN_OFF" />
-                <action android:name="android.intent.action.SCREEN_ON" />
-            </intent-filter>
-        </receiver>
-        -->
 
         <protected-broadcast android:name="android.location.GPS_ENABLED_CHANGE" />
 
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.NoConnectionActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.AddCustomer_1"
+            android:name="com.cable.cloud.NoConnectionActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
-        </activity>
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.AddCustomer_2"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
-        </activity>
-        <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.AddCustomer_4"
+            android:name="com.cable.cloud.AddCustomer_1"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" >
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
+                android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.AddCustomer_3"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.AddCustomer_2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
+                android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.Remider_details"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.AddCustomer_4"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
+                android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.Attachment_details"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.AddCustomer_3"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.CustomerMasterDetailsActivity" />
+                android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
-        -->
+        <activity
+            android:name="com.cable.cloud.Remider_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
+        </activity>
+        <activity
+            android:name="com.cable.cloud.Attachment_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
+        </activity>
 
-
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
-        -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.MapsActivity"
-            android:label="@string/title_activity_maps"
-            android:screenOrientation="portrait" >
+            android:name="com.cable.cloud.MapsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mtaj.mtaj_08.cableplus_new.activities.DashBoardActivity" />
+                android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
-        <activity android:name="com.mtaj.mtaj_08.cableplus_new.FullImageActivity" />
+        <activity
+            android:name="com.cable.cloud.FullImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
 
-        <service android:name="com.mtaj.mtaj_08.cableplus_new.MyFirebaseMessagingService" >
+        <service android:name="com.cable.cloud.helpers.MyFirebaseMessagingService" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.mtaj.mtaj_08.cableplus_new.MyFirebaseInstanceIDService" >
+        <service android:name="com.cable.cloud.helpers.MyFirebaseInstanceIDService" >
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.Comments_List_Activity"
+            android:name="com.cable.cloud.Comments_List_Activity"
             android:allowTaskReparenting="true"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:taskAffinity="" />
-        <activity android:name="com.mtaj.mtaj_08.cableplus_new.ReminderListActivity" />
-        <activity android:name="com.mtaj.mtaj_08.cableplus_new.AlertListActivity" />
-        <activity android:name="com.mtaj.mtaj_08.cableplus_new.activities.SyncDataActivity" />
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.mtaj.mtaj_08.cableplus_new.CustomerDetail_Offline"
+            android:name="com.cable.cloud.ReminderListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.cable.cloud.AlertListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.cable.cloud.activities.SyncDataActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.cable.cloud.CustomerDetail_Offline"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
 
         <receiver
-            android:name="com.mtaj.mtaj_08.cableplus_new.NetworkChangeReceiver"
+            android:name="com.cable.cloud.NetworkChangeReceiver"
             android:label="NetworkChangeReceiver" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -328,10 +317,19 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.mtaj.mtaj_08.cableplus_new.ComplainSignatureActivity" />
-        <activity android:name="com.mtaj.mtaj_08.cableplus_new.Map_User_Tracking" />
-        <activity android:name="com.mtaj.mtaj_08.cableplus_new.CustomerCommentList" />
-        <activity android:name="com.mtaj.mtaj_08.cableplus_new.activities.SplashActivity" >
+        <activity
+            android:name="com.cable.cloud.ComplainSignatureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.cable.cloud.Map_User_Tracking"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.cable.cloud.CustomerCommentList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity android:name="com.cable.cloud.activities.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -342,22 +340,8 @@
         <meta-data
             android:name="android.support.VERSION"
             android:value="26.1.0" />
-
-        <activity
-            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!--
-Service handling Google Sign-In user revocation. For apps that do not integrate with
-            Google Sign-In, this service will never be started.
-        -->
-        <service
-            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-            android:exported="true"
-            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-        <!--
- FirebaseMessagingService performs security checks at runtime,
+             FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
         -->
         <service
@@ -366,6 +350,14 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             <intent-filter android:priority="-500" >
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
         <receiver
@@ -376,6 +368,7 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
             android:enabled="true"
+            android:exported="true"
             android:permission="android.permission.INSTALL_PACKAGES" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
@@ -386,11 +379,11 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:name="com.google.android.gms.measurement.AppMeasurementService"
             android:enabled="true"
             android:exported="false" />
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
             android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
@@ -398,20 +391,12 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-                <category android:name="com.mtaj.mtaj_08.cableplus_new" />
+                <category android:name="com.cable.cloud" />
             </intent-filter>
         </receiver>
         <!--
- Internal (not exported) receiver used by the app to start its own exported services
-             without risk of being spoofed.
-        -->
-        <receiver
-            android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
-            android:exported="false" />
-        <!--
- FirebaseInstanceIdService performs security checks at runtime,
+             FirebaseInstanceIdService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
         -->
         <service
@@ -424,9 +409,14 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.mtaj.mtaj_08.cableplus_new.firebaseinitprovider"
+            android:authorities="com.cable.cloud.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <meta-data
             android:name="android.arch.lifecycle.VERSION"

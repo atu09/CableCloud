@@ -4,7 +4,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="textsize_14">12.0sp</dimen>
     <dimen name="textsize_10">10.0sp</dimen>
-    <dimen name="textsize_12">12.0sp</dimen>
     <dimen name="textsize_14.0">14.0sp</dimen>
     <dimen name="textsize_16">16.0sp</dimen>
     <dimen name="textsize_18">18.0sp</dimen>

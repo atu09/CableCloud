@@ -9,8 +9,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="title_activity_maps">Map</string>
-
     <array name="choose_image_option">
         <item>Take a Picture</item>
         <item>Choose from Gallery</item>

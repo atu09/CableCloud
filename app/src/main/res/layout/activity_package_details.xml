@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/grey_300"
     android:orientation="vertical"
-    tools:context="com.mtaj.mtaj_08.cableplus_new.Sms_log">
+    tools:context="com.cable.cloud.cableplus_new.com.cable.cloud.Sms_log">
 
 
     <android.support.v7.widget.Toolbar

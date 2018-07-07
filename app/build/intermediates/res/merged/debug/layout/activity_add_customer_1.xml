@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mtaj.mtaj_08.cableplus_new.AddCustomer_1">
+    tools:context="com.cable.cloud.cableplus_new.com.cable.cloud.AddCustomer_1">
 
     <RelativeLayout
         android:id="@+id/header"

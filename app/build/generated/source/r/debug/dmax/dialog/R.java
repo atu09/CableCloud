@@ -20,10 +20,10 @@ public final class R {
         public static final int progress_margin = 0x7f0b00bf;
         public static final int progress_width = 0x7f0b00c0;
         public static final int spot_size = 0x7f0b00d0;
-        public static final int title_margin = 0x7f0b00dc;
+        public static final int title_margin = 0x7f0b00db;
     }
     public static final class drawable {
-        public static final int spot = 0x7f0200c9;
+        public static final int spot = 0x7f0200c0;
     }
     public static final class id {
         public static final int progress = 0x7f11018a;

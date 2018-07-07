@@ -23,13 +23,13 @@
         app:tabTextAppearance="@style/MineCustomTabText"
         app:tabTextColor="@android:color/white"/>
 
-    <com.mtaj.mtaj_08.cableplus_new.NonSwipeableViewPager
+    <com.cable.cloud.NonSwipeableViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/transparent">
 
-    </com.mtaj.mtaj_08.cableplus_new.NonSwipeableViewPager>
+    </com.cable.cloud.NonSwipeableViewPager>
 
 
 </LinearLayout>

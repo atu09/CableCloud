@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.mtaj.mtaj_08.cableplus_new.ComplainDetails"
+    tools:context="com.cable.cloud.cableplus_new.com.cable.cloud.ComplainDetails"
     android:id="@+id/rlmain">
 
     <RelativeLayout
