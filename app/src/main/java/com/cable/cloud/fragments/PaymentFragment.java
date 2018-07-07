@@ -36,10 +36,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.cable.cloud.CustomerDetail_Offline;
-import com.cable.cloud.CustomerDetails;
+import com.cable.cloud.activities.CustomerOfflineDetailsActivity;
+import com.cable.cloud.activities.CustomerOnlineDetailsActivity;
 import com.cable.cloud.activities.CustomerListActivity;
-import com.cable.cloud.DBHelper;
+import com.cable.cloud.helpers.DBHelper;
 import com.cable.cloud.InfiniteScrollListener;
 import com.cable.cloud.R;
 import com.cable.cloud.customs.MovableFloatingActionButton;
@@ -340,7 +340,7 @@ public class PaymentFragment extends Fragment {
 
                                                 // Toast.makeText(getContext(), name + acno + contractorId + bid, Toast.LENGTH_SHORT).show();
 
-                                                Intent i = new Intent(getContext(), CustomerDetail_Offline.class);
+                                                Intent i = new Intent(getContext(), CustomerOfflineDetailsActivity.class);
                                                 i.putExtra("cname", name);
                                                 i.putExtra("A/cNo", acno);
                                                 i.putExtra("CustomerId", cid);
@@ -443,7 +443,7 @@ public class PaymentFragment extends Fragment {
                                         custid = e.getString("CustomerId");
                                     }
 
-                                    Intent i = new Intent(getContext(), CustomerDetails.class);
+                                    Intent i = new Intent(getContext(), CustomerOnlineDetailsActivity.class);
                                     i.putExtra("cname", title);
                                     i.putExtra("A/cNo", acno);
                                     i.putExtra("CustomerId", custid);

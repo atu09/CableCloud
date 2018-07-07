@@ -1,4 +1,4 @@
-package com.cable.cloud;
+package com.cable.cloud.helpers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,7 +25,7 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
 
     private static final String PREF_NAME = "LoginPref";
 
-    String siteUrl, uid, cid, aid, eid, URL;
+    String siteUrl, URL;
     SharedPreferences pref;
 
     RequestQueue requestQueue;
@@ -45,9 +45,7 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
         this.siteUrl = pref.getString("SiteURL", "");
 
 
-        String status = NetworkUtil.getConnectivityStatusString(context);
-
-        if (status.equalsIgnoreCase("Connected to Internet")) {
+        if (Utils.isInternetAvailable(context)) {
 
             try {
 

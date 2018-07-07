@@ -21,7 +21,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.cable.cloud.R;
+import com.cable.cloud.activities.CustomerOnlineDetailsActivity;
 import com.cable.cloud.activities.DashBoardActivity;
 
 import org.json.JSONArray;
@@ -96,7 +96,7 @@ public class CustomerCommentList extends AppCompatActivity {
 
 
 
-                Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
+                Intent i = new Intent(getApplicationContext(), CustomerOnlineDetailsActivity.class);
                 i.putExtra("cname", Commentdetails.get(position).get("customerName"));
                 i.putExtra("A/cNo", Commentdetails.get(position).get("accountNo"));
                 i.putExtra("CustomerId", Commentdetails.get(position).get("customerId"));

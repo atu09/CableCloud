@@ -84,24 +84,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     EditText edtfrom, edtto;
     String tempto = "-", tempfrom = "-";
 
-    static InputStream is = null;
-    static JSONObject jobj = null;
-    static String json = "";
-    static JSONArray jarr = null;
-
-    JSONObject jsonobj;
-
     String siteurl, uid, cid, aid, eid, URL, name;
 
     RequestQueue requestQueue;
     String fromdate, todate;
 
-    ArrayList<LatLng> latlonglist = new ArrayList<>();
-
-    LatLng lt;
-
     ArrayList<HashMap<String, String>> receiptlist = new ArrayList<>();
-    int m = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,14 +118,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         final SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        siteurl = pref.getString("SiteURL", "").toString();
-        cid = pref.getString("Contracotrid", "").toString();
+        siteurl = pref.getString("SiteURL", "");
+        cid = pref.getString("Contracotrid", "");
 
         requestQueue = Volley.newRequestQueue(this);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
         URL = siteurl + "/GetBillReceiptsForLongAndLatForCollectionApp";
@@ -147,35 +134,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(getApplicationContext(), CustomerMasterDetailsActivity.class);
-                //startActivity(i);
-
                 onBackPressed();
             }
         });
     }
 
-    private static String getScreenResolution(Context context) {
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        Display display = wm.getDefaultDisplay();
-        DisplayMetrics metrics = new DisplayMetrics();
-        display.getMetrics(metrics);
-        int width = metrics.widthPixels;
-        int height = metrics.heightPixels;
-
-        return "{" + width + "," + height + "}";
-    }
-
-
     @Override
-    public void onBackPressed()
-    {
-
+    public void onBackPressed() {
         finish();
     }
 
-    public void CallVolley(String a,String fd,String td)
-    {
+    public void CallVolley(String a,String fd,String td) {
         final SpotsDialog spload;
         spload=new SpotsDialog(MapsActivity.this,R.style.Custom);
         spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -183,7 +152,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         spload.show();
 
         try {
-            //jsonobj=makeHttpRequest(params[0]);
+
 
             HashMap<String,String> map=new HashMap<>();
             map.put("startindex","0");
@@ -446,74 +415,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    private String getDirectionsUrl(LatLng origin,LatLng dest,int from,int to){
-
-        // Origin of route
-        String str_origin = "origin="+origin.latitude+","+origin.longitude;
-
-        // Destination of route
-        String str_dest = "destination="+dest.latitude+","+dest.longitude;
-
-        // Sensor enabled
-        String sensor = "sensor=false";
-
-        String waypoints = "";
-        for(int i=from+1;i<to;i++){
-            LatLng point  = new LatLng(Double.parseDouble(receiptlist.get(i).get("latitude").toString()),Double.parseDouble(receiptlist.get(i).get("longitude").toString()));
-            if(i==1)
-                waypoints = "waypoints=";
-            waypoints += point.latitude + "," + point.longitude + "|";
-        }
-
-        // Building the parameters to the web service
-        String parameters = str_origin+"&"+str_dest+"&"+sensor+"&"+waypoints;
-
-        // Output format
-        String output = "json";
-
-        String url = "https://maps.googleapis.com/maps/api/directions/"+output+"?"+parameters;
-
-        return url;
-    }
-
-    private String downloadUrl(String strUrl) throws IOException {
-        String data = "";
-        InputStream iStream = null;
-        HttpURLConnection urlConnection = null;
-        try{
-            java.net.URL url = new URL(strUrl);
-
-            urlConnection = (HttpURLConnection) url.openConnection();
-
-            // Connecting to url
-            urlConnection.connect();
-
-            // Reading data from url
-            iStream = urlConnection.getInputStream();
-
-            BufferedReader br = new BufferedReader(new InputStreamReader(iStream));
-
-            StringBuffer sb  = new StringBuffer();
-
-            String line = "";
-            while( ( line = br.readLine())  != null){
-                sb.append(line);
-            }
-
-            data = sb.toString();
-
-            br.close();
-
-        }catch(Exception e){
-            Log.d("Exception while downloading url", e.toString());
-        }finally{
-            iStream.close();
-            urlConnection.disconnect();
-        }
-        return data;
-    }
-
-
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -769,7 +670,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             // arg1 = year
             // arg2 = month
             // arg3 = day
-
             edtfrom.setText((arg2+1)+"/"+arg3+"/"+arg1);
         }
     };
@@ -781,7 +681,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             // arg1 = year
             // arg2 = month
             // arg3 = day
-
             edtto.setText((arg2+1)+"/"+arg3+"/"+arg1);
         }
     };

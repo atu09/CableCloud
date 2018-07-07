@@ -1,4 +1,4 @@
-package com.cable.cloud;
+package com.cable.cloud.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cable.cloud.R;
-import com.cable.cloud.activities.CustomerListActivity;
 
 import java.text.DecimalFormat;
 

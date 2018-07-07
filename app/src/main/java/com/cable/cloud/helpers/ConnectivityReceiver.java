@@ -1,11 +1,10 @@
-package com.cable.cloud;
+package com.cable.cloud.helpers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 
+import com.cable.cloud.helpers.MyApplication;
 import com.cable.cloud.helpers.Utils;
 
 /**

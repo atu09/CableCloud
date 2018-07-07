@@ -1,4 +1,4 @@
-package com.cable.cloud;
+package com.cable.cloud.helpers;
 
 import android.content.Context;
 import android.support.multidex.MultiDex;

@@ -1,4 +1,4 @@
-package com.cable.cloud;
+package com.cable.cloud.activities;
 
 
 import android.annotation.SuppressLint;
@@ -60,8 +60,8 @@ import com.baoyz.swipemenulistview.SwipeMenu;
 import com.baoyz.swipemenulistview.SwipeMenuCreator;
 import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
+import com.cable.cloud.PackageDetails;
 import com.cable.cloud.R;
-import com.cable.cloud.activities.CustomerListActivity;
 import com.cable.cloud.helpers.Utils;
 
 import org.apache.http.HttpEntity;
@@ -85,7 +85,7 @@ import java.util.HashMap;
 
 import cn.carbs.android.library.MDDialog;
 
-public class CustomerDetails extends AppCompatActivity {
+public class CustomerOnlineDetailsActivity extends AppCompatActivity {
 
 
     ImageView imdropdown, imphoneedit, imemailedit, imadressedit, imdiscount, imageViewArea;
@@ -150,7 +150,7 @@ public class CustomerDetails extends AppCompatActivity {
         setContentView(R.layout.activity_customer_details);
 
         pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        requestQueue = Volley.newRequestQueue(CustomerDetails.this);
+        requestQueue = Volley.newRequestQueue(CustomerOnlineDetailsActivity.this);
 
         isOsEditable = pref.getString("isOutstandingEditable", "");
         siteurl = pref.getString("SiteURL", "");
@@ -263,13 +263,13 @@ public class CustomerDetails extends AppCompatActivity {
 
                         JSONObject jsonobj = makeHttpRequest(URL1);
                         if (jsonobj.getString("status").equalsIgnoreCase("True")) {
-                            Toast.makeText(CustomerDetails.this, jsonobj.getString("message"), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CustomerOnlineDetailsActivity.this, jsonobj.getString("message"), Toast.LENGTH_SHORT).show();
                             imadressedit.setImageResource(R.drawable.ic_edit_black);
                             isedited = false;
                             edaddress.setEnabled(false);
                         }
                     } catch (Exception e) {
-                        Toast.makeText(CustomerDetails.this, "Error+" + e, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CustomerOnlineDetailsActivity.this, "Error+" + e, Toast.LENGTH_SHORT).show();
                     }
                 } else {
 
@@ -294,13 +294,13 @@ public class CustomerDetails extends AppCompatActivity {
                     try {
                         JSONObject jsonobj = makeHttpRequest(URL1);
                         if (jsonobj.getString("status").equals("True")) {
-                            Toast.makeText(CustomerDetails.this, jsonobj.getString("message"), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CustomerOnlineDetailsActivity.this, jsonobj.getString("message"), Toast.LENGTH_SHORT).show();
                             imphoneedit.setImageResource(R.drawable.ic_edit_black);
                             isedited = false;
                             edphone.setEnabled(false);
                         }
                     } catch (JSONException ex) {
-                        Toast.makeText(CustomerDetails.this, "Error+" + ex, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CustomerOnlineDetailsActivity.this, "Error+" + ex, Toast.LENGTH_SHORT).show();
                     }
                 } else {
 
@@ -348,13 +348,13 @@ public class CustomerDetails extends AppCompatActivity {
                     try {
                         JSONObject jsonobj = makeHttpRequest(URL1);
                         if (jsonobj.getString("status").equalsIgnoreCase("True")) {
-                            Toast.makeText(CustomerDetails.this, jsonobj.getString("message"), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CustomerOnlineDetailsActivity.this, jsonobj.getString("message"), Toast.LENGTH_SHORT).show();
                             imemailedit.setImageResource(R.drawable.ic_edit_black);
                             isedited = false;
                             edemail.setEnabled(false);
                         }
                     } catch (JSONException ex) {
-                        Toast.makeText(CustomerDetails.this, "Error+" + ex, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CustomerOnlineDetailsActivity.this, "Error+" + ex, Toast.LENGTH_SHORT).show();
                     }
                 } else {
 
@@ -447,7 +447,7 @@ public class CustomerDetails extends AppCompatActivity {
                     });
 
 
-                    final AlertDialog.Builder alert = new AlertDialog.Builder(CustomerDetails.this);
+                    final AlertDialog.Builder alert = new AlertDialog.Builder(CustomerOnlineDetailsActivity.this);
                     alert.setTitle("Cheque Details");
                     alert.setCancelable(false);
                     alert.setView(v);
@@ -466,7 +466,7 @@ public class CustomerDetails extends AppCompatActivity {
                             notes = edtnotes.getText().toString();
 
                             if (bankname.equals("") || cheqno.equals("") || cheqdate.equals("")) {
-                                Toast.makeText(CustomerDetails.this, "Enter Valid Details...", Toast.LENGTH_LONG).show();
+                                Toast.makeText(CustomerOnlineDetailsActivity.this, "Enter Valid Details...", Toast.LENGTH_LONG).show();
                             }
 
                         }
@@ -548,7 +548,7 @@ public class CustomerDetails extends AppCompatActivity {
                     });
 
 
-                    final AlertDialog.Builder alert = new AlertDialog.Builder(CustomerDetails.this);
+                    final AlertDialog.Builder alert = new AlertDialog.Builder(CustomerOnlineDetailsActivity.this);
                     alert.setTitle("Date of Payment");
                     alert.setCancelable(false);
                     alert.setView(v);
@@ -688,7 +688,7 @@ public class CustomerDetails extends AppCompatActivity {
                             });
 
 
-                            final AlertDialog.Builder alert = new AlertDialog.Builder(CustomerDetails.this);
+                            final AlertDialog.Builder alert = new AlertDialog.Builder(CustomerOnlineDetailsActivity.this);
                             alert.setTitle("Cheque Details");
                             alert.setCancelable(false);
                             alert.setView(v);
@@ -705,7 +705,7 @@ public class CustomerDetails extends AppCompatActivity {
                                     notes = edtnotes.getText().toString();
 
                                     if (bankname.equals("") || cheqno.equals("") || cheqdate.equals("")) {
-                                        Toast.makeText(CustomerDetails.this, "Enter Valid Details...", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(CustomerOnlineDetailsActivity.this, "Enter Valid Details...", Toast.LENGTH_LONG).show();
                                     }
 
                                 }
@@ -775,7 +775,7 @@ public class CustomerDetails extends AppCompatActivity {
                             });
 
 
-                            final AlertDialog.Builder alert = new AlertDialog.Builder(CustomerDetails.this);
+                            final AlertDialog.Builder alert = new AlertDialog.Builder(CustomerOnlineDetailsActivity.this);
                             alert.setTitle("Date of Payment");
                             alert.setCancelable(false);
                             alert.setView(v);
@@ -807,7 +807,7 @@ public class CustomerDetails extends AppCompatActivity {
 
                             dialog.show();
                         } else {
-                            //Toast.makeText(CustomerDetails.this, receiptDate, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(CustomerOnlineDetailsActivity.this, receiptDate, Toast.LENGTH_SHORT).show();
 
 
                             Intent i = new Intent(getApplicationContext(), CustomerSignatureActivity.class);
@@ -842,7 +842,7 @@ public class CustomerDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(CustomerDetails.this, PackageDetails.class);
+                Intent i = new Intent(CustomerOnlineDetailsActivity.this, PackageDetails.class);
                 i.putExtra("title", title);
                 i.putExtra("packagedetails", packagedetails);
                 i.putExtra("CustomerId", custid);
@@ -890,7 +890,7 @@ public class CustomerDetails extends AppCompatActivity {
                 txtaccountno.setText(acno);
 
 
-                MDDialog.Builder mdalert = new MDDialog.Builder(CustomerDetails.this);
+                MDDialog.Builder mdalert = new MDDialog.Builder(CustomerOnlineDetailsActivity.this);
                 mdalert.setContentView(vs);
                 mdalert.setTitle("Add Note");
 
@@ -944,7 +944,7 @@ public class CustomerDetails extends AppCompatActivity {
                     final View v = li.inflate(R.layout.chequedialoglist, null);
 
 
-                    AlertDialog.Builder alert = new AlertDialog.Builder(CustomerDetails.this);
+                    AlertDialog.Builder alert = new AlertDialog.Builder(CustomerOnlineDetailsActivity.this);
                     alert.setTitle("Cheque Details");
                     alert.setView(v);
 
@@ -1025,7 +1025,7 @@ public class CustomerDetails extends AppCompatActivity {
 
             if (from.equals("Payment")) {
 
-                Intent i = new Intent(CustomerDetails.this, CustomerListActivity.class);
+                Intent i = new Intent(CustomerOnlineDetailsActivity.this, CustomerListActivity.class);
                 startActivity(i);
 
                 finish();
@@ -1200,7 +1200,7 @@ public class CustomerDetails extends AppCompatActivity {
     public void CallVolleys(String a, String cid, String usid) {
 
 
-        final Dialog loader = Utils.getLoader(CustomerDetails.this);
+        final Dialog loader = Utils.getLoader(CustomerOnlineDetailsActivity.this);
         loader.show();
 
         try {
@@ -1221,7 +1221,7 @@ public class CustomerDetails extends AppCompatActivity {
                                 }
 
                                 if (response.getString("status").equalsIgnoreCase("True")) {
-                                    Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
+                                    Intent i = new Intent(getApplicationContext(), CustomerOnlineDetailsActivity.class);
                                     i.putExtra("cname", title);
                                     i.putExtra("A/cNo", acno);
                                     i.putExtra("CustomerId", custid);
@@ -1231,7 +1231,7 @@ public class CustomerDetails extends AppCompatActivity {
                                     finish();
                                 }
 
-                                Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CustomerOnlineDetailsActivity.this, response.getString("message"), Toast.LENGTH_SHORT).show();
 
                             } catch (Exception e) {
                                 Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
@@ -1269,7 +1269,7 @@ public class CustomerDetails extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            loader = Utils.getLoader(CustomerDetails.this);
+            loader = Utils.getLoader(CustomerOnlineDetailsActivity.this);
             loader.show();
 
         }
@@ -1353,7 +1353,7 @@ public class CustomerDetails extends AppCompatActivity {
                         commentlist.add(map);
                     }
 
-                    final SimpleAdapter das = new SimpleAdapter(CustomerDetails.this, commentlist, R.layout.layout_customer_comment, new String[]{"Comment"}, new int[]{R.id.textView96});
+                    final SimpleAdapter das = new SimpleAdapter(CustomerOnlineDetailsActivity.this, commentlist, R.layout.layout_customer_comment, new String[]{"Comment"}, new int[]{R.id.textView96});
                     lstcomment.setAdapter(das);
 
 
@@ -1379,7 +1379,7 @@ public class CustomerDetails extends AppCompatActivity {
 
                     edamount.setText(totaloa);
 
-                    final SimpleAdapter da = new SimpleAdapter(CustomerDetails.this, months, R.layout.outstandingdetaillayout, new String[]{"BillMonth", "BillAmount", "PaidAmount"}, new int[]{R.id.textView57, R.id.textView58, R.id.textView59});
+                    final SimpleAdapter da = new SimpleAdapter(CustomerOnlineDetailsActivity.this, months, R.layout.outstandingdetaillayout, new String[]{"BillMonth", "BillAmount", "PaidAmount"}, new int[]{R.id.textView57, R.id.textView58, R.id.textView59});
                     lvosdetails.setAdapter(da);
 
                     setListViewHeightBasedOnChildren(lvosdetails);
@@ -1420,7 +1420,7 @@ public class CustomerDetails extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            loader = Utils.getLoader(CustomerDetails.this);
+            loader = Utils.getLoader(CustomerOnlineDetailsActivity.this);
             loader.show();
 
         }
@@ -1455,21 +1455,21 @@ public class CustomerDetails extends AppCompatActivity {
                     }
 
                     if (areaidList.size() > 0) {
-                        final ListView lv = new ListView(CustomerDetails.this);
+                        final ListView lv = new ListView(CustomerOnlineDetailsActivity.this);
                         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
                         lv.setDividerHeight(0);
 
-                        final ArrayAdapter<String> da = new ArrayAdapter<String>(CustomerDetails.this, android.R.layout.simple_list_item_single_choice, areanameList);
+                        final ArrayAdapter<String> da = new ArrayAdapter<String>(CustomerOnlineDetailsActivity.this, android.R.layout.simple_list_item_single_choice, areanameList);
                         lv.setAdapter(da);
 
-                        final AlertDialog.Builder builderDialog = new AlertDialog.Builder(CustomerDetails.this);
+                        final AlertDialog.Builder builderDialog = new AlertDialog.Builder(CustomerOnlineDetailsActivity.this);
                         builderDialog.setView(lv);
                         builderDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
 
                                 if (lv.getCheckedItemPosition() == -1) {
-                                    Toast.makeText(CustomerDetails.this, "Please select atleast one Area..!!", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(CustomerOnlineDetailsActivity.this, "Please select atleast one Area..!!", Toast.LENGTH_LONG).show();
                                 } else {
                                     URL = siteurl + "/UpdateAreaForCollectionApp";
 
@@ -1494,7 +1494,7 @@ public class CustomerDetails extends AppCompatActivity {
 
 
                 } else {
-                    Toast.makeText(CustomerDetails.this, json.getString("message"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CustomerOnlineDetailsActivity.this, json.getString("message"), Toast.LENGTH_SHORT).show();
                 }
 
             } catch (Exception e) {
@@ -1508,7 +1508,7 @@ public class CustomerDetails extends AppCompatActivity {
     public void CallVolleyUpdateArea(String a, HashMap<String, String> map) {
 
 
-        final Dialog loader = Utils.getLoader(CustomerDetails.this);
+        final Dialog loader = Utils.getLoader(CustomerOnlineDetailsActivity.this);
         loader.show();
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
@@ -1523,7 +1523,7 @@ public class CustomerDetails extends AppCompatActivity {
                         try {
 
                             if (response.getString("status").equalsIgnoreCase("True")) {
-                                Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
+                                Intent i = new Intent(getApplicationContext(), CustomerOnlineDetailsActivity.class);
                                 i.putExtra("cname", title);
                                 i.putExtra("A/cNo", acno);
                                 i.putExtra("CustomerId", custid);
@@ -1532,7 +1532,7 @@ public class CustomerDetails extends AppCompatActivity {
                                 finish();
                             }
 
-                            Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CustomerOnlineDetailsActivity.this, response.getString("message"), Toast.LENGTH_SHORT).show();
 
                         } catch (Exception e) {
                             Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
@@ -1560,7 +1560,7 @@ public class CustomerDetails extends AppCompatActivity {
 
     public void CallVolleysAddComment(String a, HashMap<String, String> map) {
 
-        final Dialog loader = Utils.getLoader(CustomerDetails.this);
+        final Dialog loader = Utils.getLoader(CustomerOnlineDetailsActivity.this);
         loader.show();
 
         JsonObjectRequest request;
@@ -1575,9 +1575,9 @@ public class CustomerDetails extends AppCompatActivity {
                             }
 
                             if (response.getString("status").equalsIgnoreCase("True")) {
-                                Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CustomerOnlineDetailsActivity.this, response.getString("message"), Toast.LENGTH_SHORT).show();
 
-                                Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
+                                Intent i = new Intent(getApplicationContext(), CustomerOnlineDetailsActivity.class);
                                 i.putExtra("cname", title);
                                 i.putExtra("A/cNo", acno);
                                 i.putExtra("CustomerId", custid);
@@ -1586,7 +1586,7 @@ public class CustomerDetails extends AppCompatActivity {
 
                                 finish();
                             } else {
-                                Toast.makeText(CustomerDetails.this, response.getString("message"), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CustomerOnlineDetailsActivity.this, response.getString("message"), Toast.LENGTH_SHORT).show();
                             }
 
                         } catch (Exception e) {

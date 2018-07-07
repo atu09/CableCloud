@@ -63,7 +63,6 @@ import com.cable.cloud.Attachment_details;
 import com.cable.cloud.Bill_details;
 import com.cable.cloud.ComplainListviaCustomerActivity;
 import com.cable.cloud.Contact_details;
-import com.cable.cloud.CustomerDetails;
 import com.cable.cloud.FileUtils;
 import com.cable.cloud.PackageDetails;
 import com.cable.cloud.Payment_details;
@@ -544,7 +543,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
                 String custid = generaldetails.get(0).get("CustomerId");
 
 
-                Intent i = new Intent(CustomerMasterDetailsActivity.this, CustomerDetails.class);
+                Intent i = new Intent(CustomerMasterDetailsActivity.this, CustomerOnlineDetailsActivity.class);
                 i.putExtra("cname", title);
                 i.putExtra("A/cNo", tvacno.getText().toString());
                 i.putExtra("CustomerId", custid);

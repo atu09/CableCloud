@@ -22,7 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.cable.cloud.R;
+import com.cable.cloud.activities.TransactionStatusActivity;
 import com.github.gcacace.signaturepad.views.SignaturePad;
 
 import org.json.JSONArray;

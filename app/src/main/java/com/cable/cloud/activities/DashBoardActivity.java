@@ -2,7 +2,6 @@ package com.cable.cloud.activities;
 
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -35,7 +34,6 @@ import android.view.Menu;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
@@ -52,11 +50,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.cable.cloud.ConnectivityReceiver;
-import com.cable.cloud.DBHelper;
-import com.cable.cloud.MyApplication;
-import com.cable.cloud.NetworkUtil;
-import com.cable.cloud.NoConnectionActivity;
+import com.cable.cloud.helpers.DBHelper;
 import com.cable.cloud.OnCountAssignment;
 import com.cable.cloud.R;
 import com.cable.cloud.TestLocationService;
@@ -91,8 +85,8 @@ import java.util.Map;
 
 import cn.carbs.android.library.MDDialog;
 
-import static com.cable.cloud.DBHelper.ENTITY_NAME;
-import static com.cable.cloud.DBHelper.PK_ENTITY_ID;
+import static com.cable.cloud.helpers.DBHelper.ENTITY_NAME;
+import static com.cable.cloud.helpers.DBHelper.PK_ENTITY_ID;
 
 public class DashBoardActivity extends AppCompatActivity implements OnCountAssignment {
 

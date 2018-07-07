@@ -22,11 +22,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.cable.cloud.ConnectivityReceiver;
+import com.cable.cloud.helpers.ConnectivityReceiver;
 import com.cable.cloud.CustomPriorityRequest;
-import com.cable.cloud.DBHelper;
-import com.cable.cloud.MyApplication;
-import com.cable.cloud.NetworkUtil;
+import com.cable.cloud.helpers.DBHelper;
 import com.cable.cloud.R;
 import com.cable.cloud.helpers.Utils;
 

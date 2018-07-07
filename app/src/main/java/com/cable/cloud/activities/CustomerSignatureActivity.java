@@ -1,7 +1,6 @@
-package com.cable.cloud;
+package com.cable.cloud.activities;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -20,7 +19,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +29,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.cable.cloud.helpers.ConnectivityReceiver;
+import com.cable.cloud.helpers.DBHelper;
 import com.cable.cloud.R;
 import com.github.gcacace.signaturepad.views.SignaturePad;
 import com.google.android.gms.common.ConnectionResult;
@@ -214,7 +214,7 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
         if (isConnected) {
 
-            Intent i = new Intent(CustomerSignatureActivity.this, CustomerDetails.class);
+            Intent i = new Intent(CustomerSignatureActivity.this, CustomerOnlineDetailsActivity.class);
             i.putExtra("cname", areatitle);
             i.putExtra("A/cNo", accno);
             i.putExtra("CustomerId", custid);
@@ -223,7 +223,7 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
             finish();
         } else {
-            Intent i = new Intent(CustomerSignatureActivity.this, CustomerDetail_Offline.class);
+            Intent i = new Intent(CustomerSignatureActivity.this, CustomerOfflineDetailsActivity.class);
             i.putExtra("cname", areatitle);
             i.putExtra("A/cNo", accno);
             i.putExtra("CustomerId", custid);
@@ -239,7 +239,7 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
     @Override
     public void onClick(View v) {
 
-        hideKeyboard(this);
+        Utils.closeKeyboard(this);
 
         if (SystemClock.elapsedRealtime() - mLastClickTime < 3000) {
             return;
@@ -301,15 +301,6 @@ public class CustomerSignatureActivity extends AppCompatActivity implements View
 
         }
 
-    }
-
-
-    public static void hideKeyboard(Activity activity) {
-        View view = activity.getCurrentFocus();
-        if (view != null) {
-            InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
     }
 
     public void CallVolley(String a) {

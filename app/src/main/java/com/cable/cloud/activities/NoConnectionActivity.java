@@ -1,4 +1,4 @@
-package com.cable.cloud;
+package com.cable.cloud.activities;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.cable.cloud.helpers.ConnectivityReceiver;
 import com.cable.cloud.R;
+import com.cable.cloud.helpers.MyApplication;
 
 public class NoConnectionActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 

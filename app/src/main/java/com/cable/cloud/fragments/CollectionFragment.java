@@ -49,12 +49,11 @@ import java.util.Map;
 public class CollectionFragment extends Fragment {
 
     String str = "\u20B9";
-    ListView lstuser;
+    ListView listView;
 
     private static final String PREF_NAME = "LoginPref";
 
     String url;
-
     RequestQueue requestQueue;
 
     TextView tvTodayCollection, tvMonthlyCollection;
@@ -67,11 +66,9 @@ public class CollectionFragment extends Fragment {
 
     SharedPreferences pref;
 
-    String siteurl, uid, cid, aid, eid, URL;
+    String siteUrl, uid, cid, eid;
 
-    RelativeLayout rlmain;
-
-    SimpleAdapter da;
+    SimpleAdapter simpleAdapter;
 
     String tc, toa;
 
@@ -102,12 +99,10 @@ public class CollectionFragment extends Fragment {
 
         if (pref.getBoolean("IsBilling", true) && !url.equals("-")) {
 
-            lstuser = (ListView) view.findViewById(R.id.listView);
+            listView = (ListView) view.findViewById(R.id.listView);
 
             tvTodayCollection = (TextView) view.findViewById(R.id.btnCancel);
             tvMonthlyCollection = (TextView) view.findViewById(R.id.btnNext);
-
-            rlmain = (RelativeLayout) view.findViewById(R.id.rlmain);
 
             srLayout = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
 
@@ -121,7 +116,7 @@ public class CollectionFragment extends Fragment {
                 }
             });
 
-            lstuser.setOnScrollListener(new AbsListView.OnScrollListener() {
+            listView.setOnScrollListener(new AbsListView.OnScrollListener() {
                 @Override
                 public void onScrollStateChanged(AbsListView view, int scrollState) {
 
@@ -130,15 +125,15 @@ public class CollectionFragment extends Fragment {
                 @Override
                 public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
 
-                    int topRowVerticalPosition = (lstuser == null || lstuser.getChildCount() == 0) ?
-                            0 : lstuser.getChildAt(0).getTop();
+                    int topRowVerticalPosition = (listView == null || listView.getChildCount() == 0) ?
+                            0 : listView.getChildAt(0).getTop();
                     srLayout.setEnabled((topRowVerticalPosition >= 0));
 
                 }
             });
 
 
-            lstuser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
 
@@ -206,10 +201,10 @@ public class CollectionFragment extends Fragment {
 
         adapter = new CustomAdapter(getContext(), userList);
 
-        siteurl = pref.getString("SiteURL", "").toString();
-        uid = pref.getString("Userid", "").toString();
-        cid = pref.getString("Contracotrid", "").toString();
-        eid = pref.getString("Entityids", "").toString();
+        siteUrl = pref.getString("SiteURL", "");
+        uid = pref.getString("Userid", "");
+        cid = pref.getString("Contracotrid", "");
+        eid = pref.getString("Entityids", "");
     }
 
     public void CallVolleys(String a) {
@@ -236,19 +231,19 @@ public class CollectionFragment extends Fragment {
 
                             userList.clear();
 
+                            Utils.checkLog("collection", response, null);
                             if (response.getString("status").equalsIgnoreCase("True")) {
 
-                                rlmain.setVisibility(View.VISIBLE);
 
                                 DecimalFormat format = new DecimalFormat();
                                 format.setDecimalSeparatorAlwaysShown(false);
 
-                                final JSONArray entityarray = response.getJSONArray("lstUserInfoCollectionApp");
+                                final JSONArray entityArray = response.getJSONArray("lstUserInfoCollectionApp");
 
-                                for (int i = 0; i < entityarray.length(); i++) {
-                                    JSONObject e = (JSONObject) entityarray.get(i);
+                                for (int i = 0; i < entityArray.length(); i++) {
+                                    JSONObject e = (JSONObject) entityArray.get(i);
 
-                                    String uid = e.getString("userId");
+                                    String uid = e.getString("UserId");
                                     String uname = e.getString("UserName");
                                     String utodaycol = e.getString("Usertodaycollection");
                                     String uthismonthcol = e.getString("Userthismonthcollection");
@@ -266,12 +261,11 @@ public class CollectionFragment extends Fragment {
 
                                 }
 
-                                da = new SimpleAdapter(getContext(), userList, R.layout.list_collection_layout, new String[]{"UserName", "Usertodaycollection", "Userthismonthcollection"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
-                                lstuser.setAdapter(da);
-                                //adapter.notifyDataSetChanged();
+                                simpleAdapter = new SimpleAdapter(getContext(), userList, R.layout.list_collection_layout, new String[]{"UserName", "Usertodaycollection", "Userthismonthcollection"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
+                                listView.setAdapter(simpleAdapter);
 
-                                tc = response.getString("Usertodaytotalcollection").toString();
-                                toa = response.getString("Userthismonthtotalcollection").toString();
+                                tc = response.getString("Usertodaytotalcollection");
+                                toa = response.getString("Userthismonthtotalcollection");
 
                                 tvTodayCollection.setText(str + format.format(Double.parseDouble(tc)));
                                 tvMonthlyCollection.setText(str + format.format(Double.parseDouble(toa)));
@@ -279,7 +273,7 @@ public class CollectionFragment extends Fragment {
                                 srLayout.setRefreshing(false);
 
                             } else {
-                                Toast.makeText(getContext(), response.getString("message").toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), response.getString("message"), Toast.LENGTH_SHORT).show();
                             }
 
                         } catch (Exception e) {
@@ -290,7 +284,10 @@ public class CollectionFragment extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        loader.dismiss();
+                        error.printStackTrace();
+                        if (loader.isShowing()) {
+                            loader.dismiss();
+                        }
 
                     }
                 });
@@ -298,7 +295,6 @@ public class CollectionFragment extends Fragment {
         request.setRetryPolicy(new DefaultRetryPolicy(30000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        // Adds the JSON object request "obreq" to the request queue
         requestQueue.add(request);
 
     }

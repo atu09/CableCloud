@@ -265,7 +265,7 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/atirek.pothiwala/.grad
 	android:theme
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:41:9-40
 	android:name
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:34:9-53
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:34:9-61
 meta-data#com.google.android.gms.version
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:42:9-44:69
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/955774c41a5451c19f4deae212729db3/AndroidManifest.xml:23:9-25:69
@@ -310,36 +310,36 @@ ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:63:17-51
 	android:name
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:62:17-54
-activity#com.cable.cloud.CustomerDetails
+activity#com.cable.cloud.activities.CustomerOnlineDetailsActivity
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:65:9-72:20
 	android:screenOrientation
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:67:13-49
 	android:windowSoftInputMode
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:68:13-70
 	android:name
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:66:13-59
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:66:13-84
 meta-data#android.support.PARENT_ACTIVITY
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:69:13-71:83
 	android:value
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:71:17-80
 	android:name
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:70:17-63
-activity#com.cable.cloud.TransactionStatusActivity
+activity#com.cable.cloud.activities.TransactionStatusActivity
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:73:9-76:73
 	android:screenOrientation
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:75:13-49
 	android:windowSoftInputMode
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:76:13-70
 	android:name
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:74:13-69
-activity#com.cable.cloud.CustomerSignatureActivity
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:74:13-80
+activity#com.cable.cloud.activities.CustomerSignatureActivity
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:78:9-86:20
 	android:screenOrientation
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:80:13-49
 	android:windowSoftInputMode
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:81:13-70
 	android:name
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:79:13-69
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:79:13-80
 activity#com.cable.cloud.Collection_Area_Activity
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:88:9-95:20
 	android:screenOrientation
@@ -436,10 +436,10 @@ ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:186:13-70
 	android:name
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:184:13-59
-receiver#com.cable.cloud.ConnectivityReceiver
+receiver#com.cable.cloud.helpers.ConnectivityReceiver
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:192:9-199:20
 	android:name
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:192:19-70
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:192:19-78
 intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE+action:name:android.net.wifi.WIFI_STATE_CHANGED
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:193:13-198:29
 action#android.net.conn.CONNECTIVITY_CHANGE
@@ -462,14 +462,14 @@ protected-broadcast
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:205:9-83
 	android:name
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:205:30-80
-activity#com.cable.cloud.NoConnectionActivity
+activity#com.cable.cloud.activities.NoConnectionActivity
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:207:9-210:73
 	android:screenOrientation
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:209:13-49
 	android:windowSoftInputMode
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:210:13-70
 	android:name
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:208:13-64
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:208:13-75
 activity#com.cable.cloud.AddCustomer_1
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:211:9-218:20
 	android:screenOrientation
@@ -598,20 +598,20 @@ ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:308:13-70
 	android:name
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:306:13-71
-activity#com.cable.cloud.CustomerDetail_Offline
+activity#com.cable.cloud.activities.CustomerOfflineDetailsActivity
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:309:9-312:73
 	android:screenOrientation
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:311:13-49
 	android:windowSoftInputMode
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:312:13-70
 	android:name
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:310:13-66
-receiver#com.cable.cloud.NetworkChangeReceiver
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:310:13-85
+receiver#com.cable.cloud.helpers.NetworkChangeReceiver
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:314:9-323:20
 	android:label
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:316:13-50
 	android:name
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:315:13-65
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:315:13-73
 activity#com.cable.cloud.ComplainSignatureActivity
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:325:9-328:73
 	android:screenOrientation

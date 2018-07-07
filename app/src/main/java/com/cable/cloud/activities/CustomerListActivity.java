@@ -27,11 +27,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cable.cloud.ConnectivityReceiver;
-import com.cable.cloud.CustomerDetail_Offline;
-import com.cable.cloud.CustomerDetails;
+import com.cable.cloud.helpers.ConnectivityReceiver;
 import com.cable.cloud.CustomerListAdapter;
-import com.cable.cloud.DBHelper;
+import com.cable.cloud.helpers.DBHelper;
 import com.cable.cloud.InfiniteScrollListener;
 import com.cable.cloud.R;
 import com.cable.cloud.helpers.Utils;
@@ -160,7 +158,7 @@ public class CustomerListActivity extends AppCompatActivity {
                     }
                     if (from.equals("Payment")) {
 
-                        Intent i = new Intent(getApplicationContext(), CustomerDetails.class);
+                        Intent i = new Intent(getApplicationContext(), CustomerOnlineDetailsActivity.class);
                         i.putExtra("cname", ss.get("Name"));
                         i.putExtra("A/cNo", ss.get("AccountNo"));
                         i.putExtra("CustomerId", ss.get("CustomerId"));
@@ -180,7 +178,7 @@ public class CustomerListActivity extends AppCompatActivity {
                         finish();
                     }
                 } else {
-                    Intent i = new Intent(getApplicationContext(), CustomerDetail_Offline.class);
+                    Intent i = new Intent(getApplicationContext(), CustomerOfflineDetailsActivity.class);
                     i.putExtra("cname", ss.get("Name"));
                     i.putExtra("A/cNo", ss.get("AccountNo"));
                     i.putExtra("CustomerId", ss.get("CustomerId"));

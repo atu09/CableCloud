@@ -25,10 +25,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cable.cloud.ConnectivityReceiver;
-import com.cable.cloud.DBHelper;
-import com.cable.cloud.MyApplication;
-import com.cable.cloud.NoConnectionActivity;
+import com.cable.cloud.helpers.ConnectivityReceiver;
+import com.cable.cloud.helpers.DBHelper;
+import com.cable.cloud.helpers.MyApplication;
 import com.cable.cloud.R;
 import com.cable.cloud.helpers.Utils;
 
@@ -50,7 +49,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 
     private static final String LOGIN_PREF = "LoginPref";
     //String Url = "http://cableplus.in/service.asmx/GetContractorDetails?OPCode=";
-    String Url = "https://master.cable-cloud.com/service.asmx/GetContractorDetails?OPCode=";//new base url
+    String Url = "http://master.cable-cloud.com/service.asmx/GetContractorDetails?OPCode=";//new base url
 
     EditText etUsername, etPassword, etOpCode;
     Button btnLogin;
@@ -80,8 +79,8 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         cardLogin = (CardView) findViewById(R.id.cardLogin);
         btnLogin = (Button) findViewById(R.id.btnlogin);
 
-        etUsername.setText("akshay");
-        etPassword.setText("akshay");
+        etUsername.setText("test");
+        etPassword.setText("test");
         etOpCode.setText("demo");
 
     }
