@@ -5,10 +5,10 @@
  * should not be modified by hand.
  */
 
-package com.mtaj.mtaj_08.cableplus_new;
+package com.cable.cloud;
 
 public final class Manifest {
     public static final class permission {
-        public static final String C2D_MESSAGE="com.mtaj.mtaj_08.cableplus_new.permission.C2D_MESSAGE";
+        public static final String C2D_MESSAGE="com.cable.cloud.permission.C2D_MESSAGE";
     }
 }

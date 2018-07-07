@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.mtaj.mtaj_08.cableplus_new;
+package com.cable.cloud;
 
 public final class R {
     public static final class anim {
@@ -3593,22 +3593,21 @@ containing a value of this type.
         public static final int text_size_default_title=0x7f0b00d2;
         public static final int text_size_icon_default=0x7f0b00d3;
         public static final int textsize_10=0x7f0b00d4;
-        public static final int textsize_12=0x7f0b00d5;
-        public static final int textsize_14=0x7f0b00d6;
-        public static final int textsize_14_0=0x7f0b00d7;
-        public static final int textsize_16=0x7f0b00d8;
-        public static final int textsize_18=0x7f0b00d9;
-        public static final int textsize_20=0x7f0b00da;
-        public static final int textsize_30=0x7f0b00db;
-        public static final int title_margin=0x7f0b00dc;
-        public static final int tooltip_corner_radius=0x7f0b00dd;
-        public static final int tooltip_horizontal_padding=0x7f0b00de;
-        public static final int tooltip_margin=0x7f0b00df;
-        public static final int tooltip_precise_anchor_extra_offset=0x7f0b00e0;
-        public static final int tooltip_precise_anchor_threshold=0x7f0b00e1;
-        public static final int tooltip_vertical_padding=0x7f0b00e2;
-        public static final int tooltip_y_offset_non_touch=0x7f0b00e3;
-        public static final int tooltip_y_offset_touch=0x7f0b00e4;
+        public static final int textsize_14=0x7f0b00d5;
+        public static final int textsize_14_0=0x7f0b00d6;
+        public static final int textsize_16=0x7f0b00d7;
+        public static final int textsize_18=0x7f0b00d8;
+        public static final int textsize_20=0x7f0b00d9;
+        public static final int textsize_30=0x7f0b00da;
+        public static final int title_margin=0x7f0b00db;
+        public static final int tooltip_corner_radius=0x7f0b00dc;
+        public static final int tooltip_horizontal_padding=0x7f0b00dd;
+        public static final int tooltip_margin=0x7f0b00de;
+        public static final int tooltip_precise_anchor_extra_offset=0x7f0b00df;
+        public static final int tooltip_precise_anchor_threshold=0x7f0b00e0;
+        public static final int tooltip_vertical_padding=0x7f0b00e1;
+        public static final int tooltip_y_offset_non_touch=0x7f0b00e2;
+        public static final int tooltip_y_offset_touch=0x7f0b00e3;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha=0x7f020000;
@@ -3698,148 +3697,139 @@ containing a value of this type.
         public static final int amu_bubble_shadow=0x7f020054;
         public static final int areaicon=0x7f020055;
         public static final int avd_hide_password=0x7f020056;
-        public static final int avd_hide_password_1=0x7f0200d3;
-        public static final int avd_hide_password_2=0x7f0200d4;
-        public static final int avd_hide_password_3=0x7f0200d5;
+        public static final int avd_hide_password_1=0x7f0200ca;
+        public static final int avd_hide_password_2=0x7f0200cb;
+        public static final int avd_hide_password_3=0x7f0200cc;
         public static final int avd_show_password=0x7f020057;
-        public static final int avd_show_password_1=0x7f0200d6;
-        public static final int avd_show_password_2=0x7f0200d7;
-        public static final int avd_show_password_3=0x7f0200d8;
+        public static final int avd_show_password_1=0x7f0200cd;
+        public static final int avd_show_password_2=0x7f0200ce;
+        public static final int avd_show_password_3=0x7f0200cf;
         public static final int background_button_green_filled=0x7f020058;
-        public static final int badge_icon_complaincomment_count=0x7f020059;
-        public static final int bluebackground=0x7f02005a;
-        public static final int border=0x7f02005b;
-        public static final int button_filled_green=0x7f02005c;
-        public static final int button_filled_green_clicked=0x7f02005d;
-        public static final int circletextview=0x7f02005e;
-        public static final int cloud_sync=0x7f02005f;
-        public static final int collectiontab=0x7f020060;
-        public static final int common_full_open_on_phone=0x7f020061;
-        public static final int common_google_signin_btn_icon_dark=0x7f020062;
-        public static final int common_google_signin_btn_icon_dark_focused=0x7f020063;
-        public static final int common_google_signin_btn_icon_dark_normal=0x7f020064;
-        public static final int common_google_signin_btn_icon_dark_normal_background=0x7f020065;
-        public static final int common_google_signin_btn_icon_disabled=0x7f020066;
-        public static final int common_google_signin_btn_icon_light=0x7f020067;
-        public static final int common_google_signin_btn_icon_light_focused=0x7f020068;
-        public static final int common_google_signin_btn_icon_light_normal=0x7f020069;
-        public static final int common_google_signin_btn_icon_light_normal_background=0x7f02006a;
-        public static final int common_google_signin_btn_text_dark=0x7f02006b;
-        public static final int common_google_signin_btn_text_dark_focused=0x7f02006c;
-        public static final int common_google_signin_btn_text_dark_normal=0x7f02006d;
-        public static final int common_google_signin_btn_text_dark_normal_background=0x7f02006e;
-        public static final int common_google_signin_btn_text_disabled=0x7f02006f;
-        public static final int common_google_signin_btn_text_light=0x7f020070;
-        public static final int common_google_signin_btn_text_light_focused=0x7f020071;
-        public static final int common_google_signin_btn_text_light_normal=0x7f020072;
-        public static final int common_google_signin_btn_text_light_normal_background=0x7f020073;
-        public static final int complain_call=0x7f020074;
-        public static final int customericon=0x7f020075;
-        public static final int design_bottom_navigation_item_background=0x7f020076;
-        public static final int design_fab_background=0x7f020077;
-        public static final int design_ic_visibility=0x7f020078;
-        public static final int design_ic_visibility_off=0x7f020079;
-        public static final int design_password_eye=0x7f02007a;
-        public static final int design_snackbar_background=0x7f02007b;
-        public static final int edittextborder=0x7f02007c;
-        public static final int file_browse=0x7f02007d;
-        public static final int google_map_marker=0x7f02007e;
-        public static final int googleg_disabled_color_18=0x7f02007f;
-        public static final int googleg_standard_color_18=0x7f020080;
-        public static final int gradient_blue_bg=0x7f020081;
-        public static final int group=0x7f020082;
-        public static final int ic_add_a_photo_black=0x7f020083;
-        public static final int ic_add_alert_white=0x7f020084;
-        public static final int ic_add_black=0x7f020085;
-        public static final int ic_add_document_white=0x7f020086;
-        public static final int ic_add_white=0x7f020087;
-        public static final int ic_arrow_down=0x7f020088;
-        public static final int ic_arrow_drop_down_black=0x7f020089;
-        public static final int ic_arrow_drop_down_white=0x7f02008a;
-        public static final int ic_arrow_drop_up_white=0x7f02008b;
-        public static final int ic_arrow_right_black=0x7f02008c;
-        public static final int ic_arrow_up=0x7f02008d;
-        public static final int ic_attach_file_black=0x7f02008e;
-        public static final int ic_attach_file_white=0x7f02008f;
-        public static final int ic_back_black=0x7f020090;
-        public static final int ic_back_white=0x7f020091;
-        public static final int ic_cable_cloud=0x7f020092;
-        public static final int ic_call_black=0x7f020093;
-        public static final int ic_clear_black=0x7f020094;
-        public static final int ic_date_range_white=0x7f020095;
-        public static final int ic_done_black=0x7f020096;
-        public static final int ic_done_white=0x7f020097;
-        public static final int ic_edit_black=0x7f020098;
-        public static final int ic_email_black=0x7f020099;
-        public static final int ic_file_download_white=0x7f02009a;
-        public static final int ic_home_black=0x7f02009b;
-        public static final int ic_home_white=0x7f02009c;
-        public static final int ic_keyboard_arrow_right_black=0x7f02009d;
-        public static final int ic_locate=0x7f02009e;
-        public static final int ic_location_on_black=0x7f02009f;
-        public static final int ic_location_on_white=0x7f0200a0;
-        public static final int ic_menu_camera=0x7f0200cf;
-        public static final int ic_menu_gallery=0x7f0200d0;
-        public static final int ic_perm_identity_white=0x7f0200a1;
-        public static final int ic_person_white=0x7f0200a2;
-        public static final int ic_photo_library_black=0x7f0200a3;
-        public static final int ic_search_black=0x7f0200a4;
-        public static final int ic_search_white=0x7f0200a5;
-        public static final int ic_sms_black=0x7f0200a6;
-        public static final int ic_visibility_grey_900_24dp=0x7f0200a7;
-        public static final int ic_visibility_off_grey_900_24dp=0x7f0200a8;
-        public static final int logout_icon=0x7f0200a9;
-        public static final int markericon=0x7f0200aa;
-        public static final int menu_cell_dark=0x7f0200ab;
-        public static final int menu_cell_transparent=0x7f0200ac;
-        public static final int money_bag=0x7f0200ad;
-        public static final int navigation_empty_icon=0x7f0200ae;
-        public static final int noaccess=0x7f0200af;
-        public static final int notification_action_background=0x7f0200b0;
-        public static final int notification_bg=0x7f0200b1;
-        public static final int notification_bg_low=0x7f0200b2;
-        public static final int notification_bg_low_normal=0x7f0200b3;
-        public static final int notification_bg_low_pressed=0x7f0200b4;
-        public static final int notification_bg_normal=0x7f0200b5;
-        public static final int notification_bg_normal_pressed=0x7f0200b6;
-        public static final int notification_icon_background=0x7f0200b7;
-        public static final int notification_template_icon_bg=0x7f0200d1;
-        public static final int notification_template_icon_low_bg=0x7f0200d2;
-        public static final int notification_tile_bg=0x7f0200b8;
-        public static final int notify_panel_notification_icon_bg=0x7f0200b9;
-        public static final int offline_icon=0x7f0200ba;
-        public static final int orange_cableplus=0x7f0200bb;
-        public static final int payment=0x7f0200bc;
-        public static final int payment_black=0x7f0200bd;
-        public static final int rounded_corners_btn=0x7f0200be;
-        public static final int rounded_corners_button=0x7f0200bf;
-        public static final int roundshape=0x7f0200c0;
-        public static final int rupee=0x7f0200c1;
-        public static final int rupeeredicon=0x7f0200c2;
-        public static final int selector_menu_cell=0x7f0200c3;
-        public static final int shadow=0x7f0200c4;
-        public static final int shape_activecomplain=0x7f0200c5;
-        public static final int shape_highcomplains=0x7f0200c6;
-        public static final int shape_newcomplain=0x7f0200c7;
-        public static final int shape_resolvecomplain=0x7f0200c8;
-        public static final int spot=0x7f0200c9;
-        public static final int successfuldone=0x7f0200ca;
-        public static final int sync_icon=0x7f0200cb;
-        public static final int tooltip_frame_dark=0x7f0200cc;
-        public static final int tooltip_frame_light=0x7f0200cd;
-        public static final int whiteborder=0x7f0200ce;
+        public static final int bluebackground=0x7f020059;
+        public static final int border=0x7f02005a;
+        public static final int button_filled_green=0x7f02005b;
+        public static final int button_filled_green_clicked=0x7f02005c;
+        public static final int circletextview=0x7f02005d;
+        public static final int cloud_sync=0x7f02005e;
+        public static final int common_full_open_on_phone=0x7f02005f;
+        public static final int common_google_signin_btn_icon_dark=0x7f020060;
+        public static final int common_google_signin_btn_icon_dark_focused=0x7f020061;
+        public static final int common_google_signin_btn_icon_dark_normal=0x7f020062;
+        public static final int common_google_signin_btn_icon_dark_normal_background=0x7f020063;
+        public static final int common_google_signin_btn_icon_disabled=0x7f020064;
+        public static final int common_google_signin_btn_icon_light=0x7f020065;
+        public static final int common_google_signin_btn_icon_light_focused=0x7f020066;
+        public static final int common_google_signin_btn_icon_light_normal=0x7f020067;
+        public static final int common_google_signin_btn_icon_light_normal_background=0x7f020068;
+        public static final int common_google_signin_btn_text_dark=0x7f020069;
+        public static final int common_google_signin_btn_text_dark_focused=0x7f02006a;
+        public static final int common_google_signin_btn_text_dark_normal=0x7f02006b;
+        public static final int common_google_signin_btn_text_dark_normal_background=0x7f02006c;
+        public static final int common_google_signin_btn_text_disabled=0x7f02006d;
+        public static final int common_google_signin_btn_text_light=0x7f02006e;
+        public static final int common_google_signin_btn_text_light_focused=0x7f02006f;
+        public static final int common_google_signin_btn_text_light_normal=0x7f020070;
+        public static final int common_google_signin_btn_text_light_normal_background=0x7f020071;
+        public static final int complain_call=0x7f020072;
+        public static final int customericon=0x7f020073;
+        public static final int design_bottom_navigation_item_background=0x7f020074;
+        public static final int design_fab_background=0x7f020075;
+        public static final int design_ic_visibility=0x7f020076;
+        public static final int design_ic_visibility_off=0x7f020077;
+        public static final int design_password_eye=0x7f020078;
+        public static final int design_snackbar_background=0x7f020079;
+        public static final int edittextborder=0x7f02007a;
+        public static final int file_browse=0x7f02007b;
+        public static final int googleg_disabled_color_18=0x7f02007c;
+        public static final int googleg_standard_color_18=0x7f02007d;
+        public static final int gradient_blue_bg=0x7f02007e;
+        public static final int group=0x7f02007f;
+        public static final int ic_add_a_photo_black=0x7f020080;
+        public static final int ic_add_alert_white=0x7f020081;
+        public static final int ic_add_black=0x7f020082;
+        public static final int ic_add_document_white=0x7f020083;
+        public static final int ic_add_white=0x7f020084;
+        public static final int ic_arrow_down=0x7f020085;
+        public static final int ic_arrow_drop_down_black=0x7f020086;
+        public static final int ic_arrow_drop_down_white=0x7f020087;
+        public static final int ic_arrow_drop_up_white=0x7f020088;
+        public static final int ic_arrow_right_black=0x7f020089;
+        public static final int ic_arrow_up=0x7f02008a;
+        public static final int ic_attach_file_black=0x7f02008b;
+        public static final int ic_attach_file_white=0x7f02008c;
+        public static final int ic_back_white=0x7f02008d;
+        public static final int ic_cable_cloud=0x7f02008e;
+        public static final int ic_call_black=0x7f02008f;
+        public static final int ic_clear_black=0x7f020090;
+        public static final int ic_date_range_white=0x7f020091;
+        public static final int ic_done_black=0x7f020092;
+        public static final int ic_done_white=0x7f020093;
+        public static final int ic_edit_black=0x7f020094;
+        public static final int ic_email_black=0x7f020095;
+        public static final int ic_file_download_white=0x7f020096;
+        public static final int ic_home_black=0x7f020097;
+        public static final int ic_home_white=0x7f020098;
+        public static final int ic_keyboard_arrow_right_black=0x7f020099;
+        public static final int ic_locate=0x7f02009a;
+        public static final int ic_location_on_black=0x7f02009b;
+        public static final int ic_location_on_white=0x7f02009c;
+        public static final int ic_menu_camera=0x7f0200c6;
+        public static final int ic_menu_gallery=0x7f0200c7;
+        public static final int ic_perm_identity_white=0x7f02009d;
+        public static final int ic_photo_library_black=0x7f02009e;
+        public static final int ic_search_black=0x7f02009f;
+        public static final int ic_search_white=0x7f0200a0;
+        public static final int ic_sms_black=0x7f0200a1;
+        public static final int ic_visibility_grey_900_24dp=0x7f0200a2;
+        public static final int ic_visibility_off_grey_900_24dp=0x7f0200a3;
+        public static final int logout_icon=0x7f0200a4;
+        public static final int markericon=0x7f0200a5;
+        public static final int menu_cell_dark=0x7f0200a6;
+        public static final int menu_cell_transparent=0x7f0200a7;
+        public static final int money_bag=0x7f0200a8;
+        public static final int navigation_empty_icon=0x7f0200a9;
+        public static final int noaccess=0x7f0200aa;
+        public static final int notification_action_background=0x7f0200ab;
+        public static final int notification_bg=0x7f0200ac;
+        public static final int notification_bg_low=0x7f0200ad;
+        public static final int notification_bg_low_normal=0x7f0200ae;
+        public static final int notification_bg_low_pressed=0x7f0200af;
+        public static final int notification_bg_normal=0x7f0200b0;
+        public static final int notification_bg_normal_pressed=0x7f0200b1;
+        public static final int notification_icon_background=0x7f0200b2;
+        public static final int notification_template_icon_bg=0x7f0200c8;
+        public static final int notification_template_icon_low_bg=0x7f0200c9;
+        public static final int notification_tile_bg=0x7f0200b3;
+        public static final int notify_panel_notification_icon_bg=0x7f0200b4;
+        public static final int offline_icon=0x7f0200b5;
+        public static final int payment_black=0x7f0200b6;
+        public static final int rounded_corners_btn=0x7f0200b7;
+        public static final int rounded_corners_button=0x7f0200b8;
+        public static final int roundshape=0x7f0200b9;
+        public static final int rupee=0x7f0200ba;
+        public static final int selector_menu_cell=0x7f0200bb;
+        public static final int shape_activecomplain=0x7f0200bc;
+        public static final int shape_highcomplains=0x7f0200bd;
+        public static final int shape_newcomplain=0x7f0200be;
+        public static final int shape_resolvecomplain=0x7f0200bf;
+        public static final int spot=0x7f0200c0;
+        public static final int successfuldone=0x7f0200c1;
+        public static final int sync_icon=0x7f0200c2;
+        public static final int tooltip_frame_dark=0x7f0200c3;
+        public static final int tooltip_frame_light=0x7f0200c4;
+        public static final int whiteborder=0x7f0200c5;
     }
     public static final class id {
         public static final int ALT=0x7f11005c;
         public static final int CTRL=0x7f11005d;
         public static final int FUNCTION=0x7f11005e;
         public static final int META=0x7f11005f;
-        public static final int New_count=0x7f1101b2;
+        public static final int New_count=0x7f1101b1;
         public static final int OpCode=0x7f11014e;
         public static final int SHIFT=0x7f110060;
         public static final int SYM=0x7f110061;
-        public static final int action0=0x7f1101f2;
-        public static final int action_assign=0x7f11021c;
+        public static final int action0=0x7f1101f1;
+        public static final int action_assign=0x7f110219;
         public static final int action_bar=0x7f110094;
         public static final int action_bar_activity_content=0x7f110000;
         public static final int action_bar_container=0x7f110093;
@@ -3847,22 +3837,22 @@ containing a value of this type.
         public static final int action_bar_spinner=0x7f110001;
         public static final int action_bar_subtitle=0x7f110073;
         public static final int action_bar_title=0x7f110072;
-        public static final int action_complete=0x7f11021f;
-        public static final int action_container=0x7f1101ef;
+        public static final int action_complete=0x7f11021c;
+        public static final int action_container=0x7f1101ee;
         public static final int action_context_bar=0x7f110095;
-        public static final int action_datefilters=0x7f11021a;
-        public static final int action_delete=0x7f11021e;
-        public static final int action_divider=0x7f1101f6;
-        public static final int action_image=0x7f1101f0;
+        public static final int action_datefilters=0x7f110217;
+        public static final int action_delete=0x7f11021b;
+        public static final int action_divider=0x7f1101f5;
+        public static final int action_image=0x7f1101ef;
         public static final int action_menu_divider=0x7f110002;
         public static final int action_menu_presenter=0x7f110003;
         public static final int action_mode_bar=0x7f110091;
         public static final int action_mode_bar_stub=0x7f110090;
         public static final int action_mode_close_button=0x7f110074;
-        public static final int action_skip=0x7f110220;
-        public static final int action_text=0x7f1101f1;
-        public static final int actions=0x7f1101fe;
-        public static final int active_count=0x7f1101ba;
+        public static final int action_skip=0x7f11021d;
+        public static final int action_text=0x7f1101f0;
+        public static final int actions=0x7f1101fd;
+        public static final int active_count=0x7f1101b9;
         public static final int activity_chooser_view_content=0x7f110075;
         public static final int activity_map__user__tracking=0x7f110150;
         public static final int add=0x7f110035;
@@ -3871,16 +3861,16 @@ containing a value of this type.
         public static final int alertTitle=0x7f110088;
         public static final int all=0x7f11004f;
         public static final int always=0x7f110062;
-        public static final int amountCurrentMonthBill=0x7f1101cd;
-        public static final int amountCurrentPending=0x7f1101db;
-        public static final int amountLastMonthOutstanding=0x7f1101cf;
-        public static final int amountLastMonthPending=0x7f1101dd;
-        public static final int amountRemainingOutStanding=0x7f1101d5;
-        public static final int amountThisMonthCollection=0x7f1101d3;
-        public static final int amountTodayCollection=0x7f1101cb;
-        public static final int amountTodayComplain=0x7f1101d9;
-        public static final int amountTotalOutStanding=0x7f1101d1;
-        public static final int amountTotalPendingComplaints=0x7f1101df;
+        public static final int amountCurrentMonthBill=0x7f1101cc;
+        public static final int amountCurrentPending=0x7f1101da;
+        public static final int amountLastMonthOutstanding=0x7f1101ce;
+        public static final int amountLastMonthPending=0x7f1101dc;
+        public static final int amountRemainingOutStanding=0x7f1101d4;
+        public static final int amountThisMonthCollection=0x7f1101d2;
+        public static final int amountTodayCollection=0x7f1101ca;
+        public static final int amountTodayComplain=0x7f1101d8;
+        public static final int amountTotalOutStanding=0x7f1101d0;
+        public static final int amountTotalPendingComplaints=0x7f1101de;
         public static final int amu_text=0x7f110004;
         public static final int app=0x7f110164;
         public static final int async=0x7f110051;
@@ -3897,18 +3887,18 @@ containing a value of this type.
         public static final int bottom_navigation_bar_overLay=0x7f110166;
         public static final int btnCancel=0x7f1100a7;
         public static final int btnNext=0x7f1100a9;
-        public static final int btnTrackUser=0x7f1101e0;
-        public static final int btn_no=0x7f1101e8;
-        public static final int btn_yes=0x7f1101e7;
+        public static final int btnTrackUser=0x7f1101df;
+        public static final int btn_no=0x7f1101e7;
+        public static final int btn_yes=0x7f1101e6;
         public static final int btnlogin=0x7f11014f;
         public static final int button2=0x7f1100cb;
         public static final int button3=0x7f110156;
         public static final int button4=0x7f11015c;
         public static final int button5=0x7f110194;
         public static final int buttonPanel=0x7f11007b;
-        public static final int cancel_action=0x7f1101f3;
-        public static final int cardLabelCollection=0x7f1101c9;
-        public static final int cardLabelComplaints=0x7f1101d7;
+        public static final int cancel_action=0x7f1101f2;
+        public static final int cardLabelCollection=0x7f1101c8;
+        public static final int cardLabelComplaints=0x7f1101d6;
         public static final int cardLogin=0x7f110147;
         public static final int cardLogo=0x7f110146;
         public static final int card_customer_information=0x7f1100eb;
@@ -3926,9 +3916,9 @@ containing a value of this type.
         public static final int center=0x7f110040;
         public static final int center_horizontal=0x7f110041;
         public static final int center_vertical=0x7f110042;
-        public static final int checkBox=0x7f1101a3;
+        public static final int checkBox=0x7f1101a2;
         public static final int checkbox=0x7f11008b;
-        public static final int chronometer=0x7f1101fb;
+        public static final int chronometer=0x7f1101fa;
         public static final int clip_horizontal=0x7f11004b;
         public static final int clip_vertical=0x7f11004c;
         public static final int collapseActionView=0x7f110063;
@@ -3964,7 +3954,7 @@ containing a value of this type.
         public static final int editText19=0x7f1100b6;
         public static final int editText2=0x7f1100ae;
         public static final int editText20=0x7f110174;
-        public static final int editText21=0x7f1101a1;
+        public static final int editText21=0x7f1101a0;
         public static final int editText22=0x7f11010c;
         public static final int editText23=0x7f110173;
         public static final int editText3=0x7f1100af;
@@ -3979,7 +3969,7 @@ containing a value of this type.
         public static final int edtfromdate=0x7f1100c9;
         public static final int edttodate=0x7f1100ca;
         public static final int end=0x7f110043;
-        public static final int end_padder=0x7f110201;
+        public static final int end_padder=0x7f110200;
         public static final int enterAlways=0x7f11002b;
         public static final int enterAlwaysCollapsed=0x7f11002c;
         public static final int error=0x7f110067;
@@ -3991,22 +3981,22 @@ containing a value of this type.
         public static final int expanded_menu=0x7f11008a;
         public static final int fab=0x7f1100bb;
         public static final int fabcomment=0x7f110125;
-        public static final int fabtrack=0x7f11019b;
+        public static final int fabtrack=0x7f11019a;
         public static final int fill=0x7f11004d;
         public static final int fill_horizontal=0x7f11004e;
         public static final int fill_vertical=0x7f110044;
         public static final int fixed=0x7f110070;
-        public static final int fixed_bottom_navigation_badge=0x7f110198;
-        public static final int fixed_bottom_navigation_container=0x7f110196;
-        public static final int fixed_bottom_navigation_icon=0x7f110197;
-        public static final int fixed_bottom_navigation_title=0x7f110199;
+        public static final int fixed_bottom_navigation_badge=0x7f110197;
+        public static final int fixed_bottom_navigation_container=0x7f110195;
+        public static final int fixed_bottom_navigation_icon=0x7f110196;
+        public static final int fixed_bottom_navigation_title=0x7f110198;
         public static final int footer=0x7f1100a5;
         public static final int forever=0x7f110053;
-        public static final int frame_layout_child_container=0x7f110203;
-        public static final int frame_layout_overlapping_views_container=0x7f110204;
+        public static final int frame_layout_child_container=0x7f110202;
+        public static final int frame_layout_overlapping_views_container=0x7f110203;
         public static final int ghost_view=0x7f110005;
         public static final int header=0x7f1100a3;
-        public static final int high_count=0x7f1101b6;
+        public static final int high_count=0x7f1101b5;
         public static final int hintOPCode=0x7f11014d;
         public static final int hintPassword=0x7f11014b;
         public static final int hintUserName=0x7f110149;
@@ -4014,22 +4004,20 @@ containing a value of this type.
         public static final int homeAsUp=0x7f110025;
         public static final int hybrid=0x7f110059;
         public static final int ibtn_clear=0x7f1100ee;
-        public static final int ic_badgess=0x7f110217;
-        public static final int ic_complaint=0x7f110216;
         public static final int icon=0x7f11007a;
-        public static final int icon_button_success=0x7f110215;
-        public static final int icon_group=0x7f1101ff;
+        public static final int icon_button_success=0x7f110214;
+        public static final int icon_group=0x7f1101fe;
         public static final int icon_only=0x7f11006b;
-        public static final int icon_text_view_error_icon=0x7f11020d;
-        public static final int icon_text_view_loading=0x7f11020f;
-        public static final int icon_text_view_no_connection_icon=0x7f110211;
-        public static final int icon_text_view_success=0x7f110214;
+        public static final int icon_text_view_error_icon=0x7f11020c;
+        public static final int icon_text_view_loading=0x7f11020e;
+        public static final int icon_text_view_no_connection_icon=0x7f110210;
+        public static final int icon_text_view_success=0x7f110213;
         public static final int ifRoom=0x7f110064;
         public static final int image=0x7f110077;
         public static final int imageView11=0x7f110154;
         public static final int imageView12=0x7f110145;
-        public static final int imageView13=0x7f1101ed;
-        public static final int imageView14=0x7f1101ee;
+        public static final int imageView13=0x7f1101ec;
+        public static final int imageView14=0x7f1101ed;
         public static final int imageView15=0x7f110159;
         public static final int imageView2=0x7f1100de;
         public static final int imageView3=0x7f1100e1;
@@ -4043,7 +4031,7 @@ containing a value of this type.
         public static final int imageViewdis=0x7f11010d;
         public static final int imageViewloc=0x7f110119;
         public static final int img_btn_add_file=0x7f110191;
-        public static final int info=0x7f1101fc;
+        public static final int info=0x7f1101fb;
         public static final int italic=0x7f110054;
         public static final int item_touch_helper_previous_elevation=0x7f110007;
         public static final int iv66=0x7f11012a;
@@ -4056,7 +4044,7 @@ containing a value of this type.
         public static final int iv80=0x7f110139;
         public static final int ivShow=0x7f110100;
         public static final int iv_menu=0x7f110169;
-        public static final int iv_title=0x7f1101e3;
+        public static final int iv_title=0x7f1101e2;
         public static final int labelEditText23=0x7f110172;
         public static final int labelEditText6=0x7f11016b;
         public static final int labelEditText7=0x7f11016d;
@@ -4066,32 +4054,31 @@ containing a value of this type.
         public static final int largeLabel=0x7f11017d;
         public static final int layout=0x7f110168;
         public static final int layout2=0x7f110115;
-        public static final int layoutCurrentMonthBill=0x7f1101cc;
-        public static final int layoutCurrentPending=0x7f1101da;
+        public static final int layoutCurrentMonthBill=0x7f1101cb;
+        public static final int layoutCurrentPending=0x7f1101d9;
         public static final int layoutDetails=0x7f1100f9;
-        public static final int layoutLastMonthOutstanding=0x7f1101ce;
-        public static final int layoutLastMonthPending=0x7f1101dc;
-        public static final int layoutRemainingOutStanding=0x7f1101d4;
-        public static final int layoutSectionCollection=0x7f1101c8;
-        public static final int layoutSectionComplaints=0x7f1101d6;
+        public static final int layoutLastMonthOutstanding=0x7f1101cd;
+        public static final int layoutLastMonthPending=0x7f1101db;
+        public static final int layoutRemainingOutStanding=0x7f1101d3;
+        public static final int layoutSectionCollection=0x7f1101c7;
+        public static final int layoutSectionComplaints=0x7f1101d5;
         public static final int layoutShow=0x7f1100fe;
-        public static final int layoutThisMonthCollection=0x7f1101d2;
-        public static final int layoutTodayCollection=0x7f1101ca;
-        public static final int layoutTodayComplain=0x7f1101d8;
-        public static final int layoutTotalOutStanding=0x7f1101d0;
-        public static final int layoutTotalPendingComplaint=0x7f1101de;
+        public static final int layoutThisMonthCollection=0x7f1101d1;
+        public static final int layoutTodayCollection=0x7f1101c9;
+        public static final int layoutTodayComplain=0x7f1101d7;
+        public static final int layoutTotalOutStanding=0x7f1101cf;
+        public static final int layoutTotalPendingComplaint=0x7f1101dd;
         public static final int left=0x7f110045;
         public static final int light=0x7f11006f;
         public static final int line1=0x7f110008;
         public static final int line3=0x7f110009;
-        public static final int linear_layout_view_container=0x7f11020c;
+        public static final int linear_layout_view_container=0x7f11020b;
         public static final int listMode=0x7f110021;
         public static final int listView=0x7f1100c2;
         public static final int listView2=0x7f110121;
-        public static final int listView3=0x7f110195;
         public static final int listView4=0x7f1100c1;
         public static final int listView5=0x7f1100ba;
-        public static final int listView6=0x7f11019a;
+        public static final int listView6=0x7f110199;
         public static final int listView7=0x7f11017b;
         public static final int listView8=0x7f110123;
         public static final int list_item=0x7f110079;
@@ -4099,32 +4086,32 @@ containing a value of this type.
         public static final int listcomplainbycustomer=0x7f1100e9;
         public static final int listcustomerdetail=0x7f1100ab;
         public static final int listcustomerincomplains=0x7f110157;
-        public static final int ll_container=0x7f1101e1;
-        public static final int ll_content=0x7f1101e5;
-        public static final int llactive=0x7f1101b9;
-        public static final int llactivecount=0x7f1101bb;
-        public static final int llarea=0x7f1101c1;
+        public static final int ll_container=0x7f1101e0;
+        public static final int ll_content=0x7f1101e4;
+        public static final int llactive=0x7f1101b8;
+        public static final int llactivecount=0x7f1101ba;
+        public static final int llarea=0x7f1101c0;
         public static final int llcdetails=0x7f1100dd;
         public static final int llconfirm=0x7f1100ea;
         public static final int llcount=0x7f1100d9;
         public static final int lldatesearch=0x7f1100c6;
-        public static final int llhigh=0x7f1101b5;
-        public static final int llhighcount=0x7f1101b7;
+        public static final int llhigh=0x7f1101b4;
+        public static final int llhighcount=0x7f1101b6;
         public static final int llmarkresolve=0x7f1100e8;
-        public static final int llnew=0x7f1101b1;
-        public static final int llnewcount=0x7f1101b3;
+        public static final int llnew=0x7f1101b0;
+        public static final int llnewcount=0x7f1101b2;
         public static final int llosdetails=0x7f11011e;
         public static final int llphoto=0x7f1100e7;
-        public static final int llresolvecount=0x7f1101bf;
-        public static final int llresolved=0x7f1101bd;
+        public static final int llresolvecount=0x7f1101be;
+        public static final int llresolved=0x7f1101bc;
         public static final int loader=0x7f11018c;
         public static final int loading=0x7f110068;
         public static final int lstCommentList=0x7f110102;
         public static final int map=0x7f110153;
         public static final int mapView=0x7f110152;
-        public static final int masked=0x7f110219;
-        public static final int media_actions=0x7f1101f5;
-        public static final int message=0x7f11020b;
+        public static final int masked=0x7f110216;
+        public static final int media_actions=0x7f1101f4;
+        public static final int message=0x7f11020a;
         public static final int middle=0x7f110056;
         public static final int mini=0x7f110050;
         public static final int mode_default=0x7f110038;
@@ -4137,14 +4124,14 @@ containing a value of this type.
         public static final int no_connection=0x7f110069;
         public static final int none=0x7f110026;
         public static final int normal=0x7f110022;
-        public static final int notification_background=0x7f1101fd;
-        public static final int notification_main_column=0x7f1101f8;
-        public static final int notification_main_column_container=0x7f1101f7;
+        public static final int notification_background=0x7f1101fc;
+        public static final int notification_main_column=0x7f1101f7;
+        public static final int notification_main_column_container=0x7f1101f6;
         public static final int parallax=0x7f110049;
         public static final int parentPanel=0x7f11007d;
         public static final int parent_matrix=0x7f11000a;
         public static final int pin=0x7f11004a;
-        public static final int popup_window=0x7f1101a8;
+        public static final int popup_window=0x7f1101a7;
         public static final int progress=0x7f11018a;
         public static final int progress_circular=0x7f11000b;
         public static final int progress_horizontal=0x7f11000c;
@@ -4153,12 +4140,12 @@ containing a value of this type.
         public static final int radioButton2=0x7f110111;
         public static final int radiogroup1=0x7f11010f;
         public static final int refresh=0x7f110101;
-        public static final int resolved_count=0x7f1101be;
+        public static final int resolved_count=0x7f1101bd;
         public static final int right=0x7f110046;
-        public static final int right_icon=0x7f110200;
-        public static final int right_side=0x7f1101f9;
-        public static final int rl_buttons=0x7f1101e6;
-        public static final int rl_title=0x7f1101e2;
+        public static final int right_icon=0x7f1101ff;
+        public static final int right_side=0x7f1101f8;
+        public static final int rl_buttons=0x7f1101e5;
+        public static final int rl_title=0x7f1101e1;
         public static final int rlmain=0x7f1100c3;
         public static final int rv_navigationDrawer=0x7f110144;
         public static final int satellite=0x7f11005a;
@@ -4171,7 +4158,7 @@ containing a value of this type.
         public static final int scrollIndicatorUp=0x7f11007f;
         public static final int scrollView=0x7f110080;
         public static final int scrollable=0x7f110071;
-        public static final int search=0x7f110221;
+        public static final int search=0x7f11021e;
         public static final int search_badge=0x7f110098;
         public static final int search_bar=0x7f110097;
         public static final int search_button=0x7f110099;
@@ -4182,13 +4169,13 @@ containing a value of this type.
         public static final int search_plate=0x7f11009c;
         public static final int search_src_text=0x7f11009d;
         public static final int search_voice_btn=0x7f1100a1;
-        public static final int searchcollection=0x7f11021b;
-        public static final int searchcomplain=0x7f11021d;
+        public static final int searchcollection=0x7f110218;
+        public static final int searchcomplain=0x7f11021a;
         public static final int select_dialog_listview=0x7f1100a2;
-        public static final int shifting_bottom_navigation_badge=0x7f110207;
-        public static final int shifting_bottom_navigation_container=0x7f110205;
-        public static final int shifting_bottom_navigation_icon=0x7f110206;
-        public static final int shifting_bottom_navigation_title=0x7f110208;
+        public static final int shifting_bottom_navigation_badge=0x7f110206;
+        public static final int shifting_bottom_navigation_container=0x7f110204;
+        public static final int shifting_bottom_navigation_icon=0x7f110205;
+        public static final int shifting_bottom_navigation_title=0x7f110207;
         public static final int shortcut=0x7f11008c;
         public static final int showCustom=0x7f110027;
         public static final int showHome=0x7f110028;
@@ -4201,7 +4188,7 @@ containing a value of this type.
         public static final int spacer=0x7f11007c;
         public static final int spinner=0x7f1100ad;
         public static final int spinner2=0x7f1100ac;
-        public static final int spinner3=0x7f1101a2;
+        public static final int spinner3=0x7f1101a1;
         public static final int spinner4=0x7f1100bd;
         public static final int spinner5=0x7f1100be;
         public static final int split_action_bar=0x7f110010;
@@ -4210,13 +4197,13 @@ containing a value of this type.
         public static final int src_over=0x7f110034;
         public static final int standard=0x7f11006c;
         public static final int start=0x7f110047;
-        public static final int status_bar_latest_event_content=0x7f1101f4;
+        public static final int status_bar_latest_event_content=0x7f1101f3;
         public static final int submenuarrow=0x7f11008e;
         public static final int submit_area=0x7f11009f;
         public static final int success=0x7f11006a;
         public static final int switch1=0x7f1100c0;
         public static final int tabMode=0x7f110023;
-        public static final int tabs=0x7f110209;
+        public static final int tabs=0x7f110208;
         public static final int tblrow=0x7f11011f;
         public static final int terrain=0x7f11005b;
         public static final int text=0x7f110011;
@@ -4229,12 +4216,12 @@ containing a value of this type.
         public static final int textView101=0x7f11010b;
         public static final int textView102=0x7f1100da;
         public static final int textView103=0x7f110124;
-        public static final int textView104=0x7f1101e9;
+        public static final int textView104=0x7f1101e8;
         public static final int textView105=0x7f11015a;
         public static final int textView106=0x7f11015b;
-        public static final int textView109=0x7f11019c;
-        public static final int textView110=0x7f11019e;
-        public static final int textView15=0x7f1101a0;
+        public static final int textView109=0x7f11019b;
+        public static final int textView110=0x7f11019d;
+        public static final int textView15=0x7f11019f;
         public static final int textView2=0x7f110129;
         public static final int textView23=0x7f110160;
         public static final int textView24=0x7f110161;
@@ -4264,7 +4251,7 @@ containing a value of this type.
         public static final int textView47=0x7f1100fc;
         public static final int textView48=0x7f1100fd;
         public static final int textView49=0x7f1100db;
-        public static final int textView5=0x7f1101c2;
+        public static final int textView5=0x7f1101c1;
         public static final int textView50=0x7f1100ef;
         public static final int textView51=0x7f1100f0;
         public static final int textView52=0x7f1100f1;
@@ -4273,7 +4260,7 @@ containing a value of this type.
         public static final int textView55=0x7f1100f5;
         public static final int textView56=0x7f1100f3;
         public static final int textView57=0x7f1100f4;
-        public static final int textView58=0x7f110202;
+        public static final int textView58=0x7f110201;
         public static final int textView59=0x7f1100f8;
         public static final int textView60=0x7f1100ed;
         public static final int textView61=0x7f1100d3;
@@ -4283,44 +4270,44 @@ containing a value of this type.
         public static final int textView65=0x7f1100f6;
         public static final int textView66=0x7f1100f7;
         public static final int textView68=0x7f11011d;
-        public static final int textView7=0x7f1101c3;
+        public static final int textView7=0x7f1101c2;
         public static final int textView70=0x7f11012c;
         public static final int textView72=0x7f11012f;
         public static final int textView74=0x7f110132;
         public static final int textView76=0x7f110135;
         public static final int textView78=0x7f11013b;
-        public static final int textView8=0x7f1101c4;
+        public static final int textView8=0x7f1101c3;
         public static final int textView80=0x7f110138;
-        public static final int textView82=0x7f1101ea;
-        public static final int textView83=0x7f1101eb;
-        public static final int textView84=0x7f1101ec;
+        public static final int textView82=0x7f1101e9;
+        public static final int textView83=0x7f1101ea;
+        public static final int textView84=0x7f1101eb;
         public static final int textView85=0x7f110155;
         public static final int textView86=0x7f1100bc;
         public static final int textView87=0x7f1100bf;
-        public static final int textView88=0x7f1101a4;
-        public static final int textView89=0x7f1101a5;
-        public static final int textView9=0x7f1101c5;
-        public static final int textView90=0x7f1101ac;
-        public static final int textView91=0x7f1101a7;
-        public static final int textView92=0x7f1101c6;
-        public static final int textView93=0x7f1101c7;
+        public static final int textView88=0x7f1101a3;
+        public static final int textView89=0x7f1101a4;
+        public static final int textView9=0x7f1101c4;
+        public static final int textView90=0x7f1101ab;
+        public static final int textView91=0x7f1101a6;
+        public static final int textView92=0x7f1101c5;
+        public static final int textView93=0x7f1101c6;
         public static final int textView94=0x7f1100d8;
-        public static final int textView95=0x7f1101ad;
-        public static final int textView96=0x7f1101ae;
-        public static final int textView97=0x7f1101af;
-        public static final int textView98=0x7f1101b0;
+        public static final int textView95=0x7f1101ac;
+        public static final int textView96=0x7f1101ad;
+        public static final int textView97=0x7f1101ae;
+        public static final int textView98=0x7f1101af;
         public static final int textView99=0x7f110127;
         public static final int text_input_password_toggle=0x7f110189;
-        public static final int text_view_error_text=0x7f11020e;
-        public static final int text_view_loading=0x7f110210;
-        public static final int text_view_no_connection_text=0x7f110212;
-        public static final int text_view_success=0x7f110213;
-        public static final int textadress=0x7f1101a6;
+        public static final int text_view_error_text=0x7f11020d;
+        public static final int text_view_loading=0x7f11020f;
+        public static final int text_view_no_connection_text=0x7f110211;
+        public static final int text_view_success=0x7f110212;
+        public static final int textadress=0x7f1101a5;
         public static final int textinput_counter=0x7f110013;
         public static final int textinput_error=0x7f110014;
         public static final int til_message=0x7f11018f;
         public static final int til_subject=0x7f11018d;
-        public static final int time=0x7f1101fa;
+        public static final int time=0x7f1101f9;
         public static final int title=0x7f110015;
         public static final int titleDividerNoCustom=0x7f110089;
         public static final int title_template=0x7f110087;
@@ -4337,26 +4324,26 @@ containing a value of this type.
         public static final int tvShow=0x7f1100ff;
         public static final int tvUserName=0x7f110143;
         public static final int tv_menu=0x7f11016a;
-        public static final int tv_title=0x7f1101e4;
+        public static final int tv_title=0x7f1101e3;
         public static final int txtAnimate=0x7f110158;
         public static final int txtOa=0x7f11013d;
-        public static final int txt_backup=0x7f1101a9;
-        public static final int txt_detail=0x7f1101aa;
+        public static final int txt_backup=0x7f1101a8;
+        public static final int txt_detail=0x7f1101a9;
         public static final int txt_error=0x7f110193;
         public static final int txt_file_name=0x7f110192;
-        public static final int txt_open=0x7f1101ab;
-        public static final int txtaccountno=0x7f11019f;
-        public static final int txtactivecount=0x7f1101bc;
+        public static final int txt_open=0x7f1101aa;
+        public static final int txtaccountno=0x7f11019e;
+        public static final int txtactivecount=0x7f1101bb;
         public static final int txtaddress=0x7f110107;
         public static final int txtamount=0x7f11013e;
         public static final int txtarea=0x7f11011a;
         public static final int txtconfirm=0x7f11013f;
         public static final int txtemail=0x7f110105;
-        public static final int txthighcount=0x7f1101b8;
-        public static final int txtname=0x7f11019d;
-        public static final int txtnewcount=0x7f1101b4;
+        public static final int txthighcount=0x7f1101b7;
+        public static final int txtname=0x7f11019c;
+        public static final int txtnewcount=0x7f1101b3;
         public static final int txtphone=0x7f110103;
-        public static final int txtresolvecount=0x7f1101c0;
+        public static final int txtresolvecount=0x7f1101bf;
         public static final int txtselect=0x7f110151;
         public static final int uniform=0x7f110036;
         public static final int up=0x7f11001b;
@@ -4369,8 +4356,8 @@ containing a value of this type.
         public static final int view_overlapping_default_loading=0x7f11001e;
         public static final int view_overlapping_default_no_connection=0x7f11001f;
         public static final int view_overlapping_default_success=0x7f110020;
-        public static final int viewpager=0x7f11020a;
-        public static final int visible=0x7f110218;
+        public static final int viewpager=0x7f110209;
+        public static final int visible=0x7f110215;
         public static final int webview=0x7f11015f;
         public static final int wide=0x7f11006d;
         public static final int window=0x7f11015e;
@@ -4486,70 +4473,68 @@ containing a value of this type.
         public static final int dialog_date_search=0x7f04005c;
         public static final int dialog_loader=0x7f04005d;
         public static final int dialog_new_complaint=0x7f04005e;
-        public static final int entitylist_checkbox=0x7f04005f;
-        public static final int fixed_bottom_navigation_item=0x7f040060;
-        public static final int home=0x7f040061;
-        public static final int layout_add_comment=0x7f040062;
-        public static final int layout_add_customer_package=0x7f040063;
-        public static final int layout_alert=0x7f040064;
-        public static final int layout_attach_file_displaydesign=0x7f040065;
-        public static final int layout_attachment=0x7f040066;
-        public static final int layout_attachment_details=0x7f040067;
-        public static final int layout_bill_details=0x7f040068;
-        public static final int layout_collection_area=0x7f040069;
-        public static final int layout_colletion_customerdetail=0x7f04006a;
-        public static final int layout_comments=0x7f04006b;
-        public static final int layout_complainbycustomer=0x7f04006c;
-        public static final int layout_complainlist=0x7f04006d;
-        public static final int layout_customer=0x7f04006e;
-        public static final int layout_customer_attachment_list=0x7f04006f;
-        public static final int layout_customer_comment=0x7f040070;
-        public static final int layout_customer_comments=0x7f040071;
-        public static final int layout_customer_package_list=0x7f040072;
-        public static final int layout_customer_package_list_revised=0x7f040073;
-        public static final int layout_customerlist=0x7f040074;
-        public static final int layout_list_header=0x7f040075;
-        public static final int layout_list_home_revised=0x7f040076;
-        public static final int layout_mddialog=0x7f040077;
-        public static final int layout_offline=0x7f040078;
-        public static final int layout_outstanding_update=0x7f040079;
-        public static final int layout_package_details=0x7f04007a;
-        public static final int layout_payment_details=0x7f04007b;
-        public static final int layout_remiders_details=0x7f04007c;
-        public static final int layout_sms_design=0x7f04007d;
-        public static final int layput_dialog_search_payment=0x7f04007e;
-        public static final int list_collection_layout=0x7f04007f;
-        public static final int no_access_layout=0x7f040080;
-        public static final int notification_action=0x7f040081;
-        public static final int notification_action_tombstone=0x7f040082;
-        public static final int notification_media_action=0x7f040083;
-        public static final int notification_media_cancel_action=0x7f040084;
-        public static final int notification_template_big_media=0x7f040085;
-        public static final int notification_template_big_media_custom=0x7f040086;
-        public static final int notification_template_big_media_narrow=0x7f040087;
-        public static final int notification_template_big_media_narrow_custom=0x7f040088;
-        public static final int notification_template_custom_big=0x7f040089;
-        public static final int notification_template_icon_group=0x7f04008a;
-        public static final int notification_template_lines_media=0x7f04008b;
-        public static final int notification_template_media=0x7f04008c;
-        public static final int notification_template_media_custom=0x7f04008d;
-        public static final int notification_template_part_chronometer=0x7f04008e;
-        public static final int notification_template_part_time=0x7f04008f;
-        public static final int outstandingdetaillayout=0x7f040090;
-        public static final int payment=0x7f040091;
-        public static final int presenter_layout=0x7f040092;
-        public static final int reminder_dialog=0x7f040093;
-        public static final int select_dialog_item_material=0x7f040094;
-        public static final int select_dialog_multichoice_material=0x7f040095;
-        public static final int select_dialog_singlechoice_material=0x7f040096;
-        public static final int shifting_bottom_navigation_item=0x7f040097;
-        public static final int support_simple_spinner_dropdown_item=0x7f040098;
-        public static final int tablayout=0x7f040099;
-        public static final int tooltip=0x7f04009a;
-        public static final int view_overlapping_default_error=0x7f04009b;
-        public static final int view_overlapping_default_loading=0x7f04009c;
-        public static final int view_overlapping_default_no_connection=0x7f04009d;
-        public static final int view_overlapping_default_success=0x7f04009e;
+        public static final int fixed_bottom_navigation_item=0x7f04005f;
+        public static final int home=0x7f040060;
+        public static final int layout_add_comment=0x7f040061;
+        public static final int layout_add_customer_package=0x7f040062;
+        public static final int layout_alert=0x7f040063;
+        public static final int layout_attach_file_displaydesign=0x7f040064;
+        public static final int layout_attachment=0x7f040065;
+        public static final int layout_attachment_details=0x7f040066;
+        public static final int layout_bill_details=0x7f040067;
+        public static final int layout_collection_area=0x7f040068;
+        public static final int layout_colletion_customerdetail=0x7f040069;
+        public static final int layout_comments=0x7f04006a;
+        public static final int layout_complainbycustomer=0x7f04006b;
+        public static final int layout_complainlist=0x7f04006c;
+        public static final int layout_customer=0x7f04006d;
+        public static final int layout_customer_attachment_list=0x7f04006e;
+        public static final int layout_customer_comment=0x7f04006f;
+        public static final int layout_customer_comments=0x7f040070;
+        public static final int layout_customer_package_list_revised=0x7f040071;
+        public static final int layout_customerlist=0x7f040072;
+        public static final int layout_list_header=0x7f040073;
+        public static final int layout_list_home_revised=0x7f040074;
+        public static final int layout_mddialog=0x7f040075;
+        public static final int layout_offline=0x7f040076;
+        public static final int layout_outstanding_update=0x7f040077;
+        public static final int layout_package_details=0x7f040078;
+        public static final int layout_payment_details=0x7f040079;
+        public static final int layout_remiders_details=0x7f04007a;
+        public static final int layout_sms_design=0x7f04007b;
+        public static final int layput_dialog_search_payment=0x7f04007c;
+        public static final int list_collection_layout=0x7f04007d;
+        public static final int no_access_layout=0x7f04007e;
+        public static final int notification_action=0x7f04007f;
+        public static final int notification_action_tombstone=0x7f040080;
+        public static final int notification_media_action=0x7f040081;
+        public static final int notification_media_cancel_action=0x7f040082;
+        public static final int notification_template_big_media=0x7f040083;
+        public static final int notification_template_big_media_custom=0x7f040084;
+        public static final int notification_template_big_media_narrow=0x7f040085;
+        public static final int notification_template_big_media_narrow_custom=0x7f040086;
+        public static final int notification_template_custom_big=0x7f040087;
+        public static final int notification_template_icon_group=0x7f040088;
+        public static final int notification_template_lines_media=0x7f040089;
+        public static final int notification_template_media=0x7f04008a;
+        public static final int notification_template_media_custom=0x7f04008b;
+        public static final int notification_template_part_chronometer=0x7f04008c;
+        public static final int notification_template_part_time=0x7f04008d;
+        public static final int outstandingdetaillayout=0x7f04008e;
+        public static final int payment=0x7f04008f;
+        public static final int presenter_layout=0x7f040090;
+        public static final int reminder_dialog=0x7f040091;
+        public static final int select_dialog_item_material=0x7f040092;
+        public static final int select_dialog_multichoice_material=0x7f040093;
+        public static final int select_dialog_singlechoice_material=0x7f040094;
+        public static final int shifting_bottom_navigation_item=0x7f040095;
+        public static final int support_simple_spinner_dropdown_item=0x7f040096;
+        public static final int tablayout=0x7f040097;
+        public static final int tooltip=0x7f040098;
+        public static final int view_overlapping_default_error=0x7f040099;
+        public static final int view_overlapping_default_loading=0x7f04009a;
+        public static final int view_overlapping_default_no_connection=0x7f04009b;
+        public static final int view_overlapping_default_success=0x7f04009c;
     }
     public static final class menu {
         public static final int menu_collection=0x7f120000;
@@ -4598,18 +4583,18 @@ containing a value of this type.
         public static final int abc_activitychooserview_choose_application=0x7f0a0007;
         public static final int abc_capital_off=0x7f0a0008;
         public static final int abc_capital_on=0x7f0a0009;
-        public static final int abc_font_family_body_1_material=0x7f0a0026;
-        public static final int abc_font_family_body_2_material=0x7f0a0027;
-        public static final int abc_font_family_button_material=0x7f0a0028;
-        public static final int abc_font_family_caption_material=0x7f0a0029;
-        public static final int abc_font_family_display_1_material=0x7f0a002a;
-        public static final int abc_font_family_display_2_material=0x7f0a002b;
-        public static final int abc_font_family_display_3_material=0x7f0a002c;
-        public static final int abc_font_family_display_4_material=0x7f0a002d;
-        public static final int abc_font_family_headline_material=0x7f0a002e;
-        public static final int abc_font_family_menu_material=0x7f0a002f;
-        public static final int abc_font_family_subhead_material=0x7f0a0030;
-        public static final int abc_font_family_title_material=0x7f0a0031;
+        public static final int abc_font_family_body_1_material=0x7f0a0028;
+        public static final int abc_font_family_body_2_material=0x7f0a0029;
+        public static final int abc_font_family_button_material=0x7f0a002a;
+        public static final int abc_font_family_caption_material=0x7f0a002b;
+        public static final int abc_font_family_display_1_material=0x7f0a002c;
+        public static final int abc_font_family_display_2_material=0x7f0a002d;
+        public static final int abc_font_family_display_3_material=0x7f0a002e;
+        public static final int abc_font_family_display_4_material=0x7f0a002f;
+        public static final int abc_font_family_headline_material=0x7f0a0030;
+        public static final int abc_font_family_menu_material=0x7f0a0031;
+        public static final int abc_font_family_subhead_material=0x7f0a0032;
+        public static final int abc_font_family_title_material=0x7f0a0033;
         public static final int abc_search_hint=0x7f0a000a;
         public static final int abc_searchview_description_clear=0x7f0a000b;
         public static final int abc_searchview_description_query=0x7f0a000c;
@@ -4619,80 +4604,82 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f0a0010;
         public static final int abc_shareactionprovider_share_with_application=0x7f0a0011;
         public static final int abc_toolbar_collapse_description=0x7f0a0012;
-        public static final int app_name=0x7f0a0032;
-        public static final int appbar_scrolling_view_behavior=0x7f0a0033;
-        public static final int assign=0x7f0a0034;
-        public static final int bottom_sheet_behavior=0x7f0a0035;
-        public static final int character_counter_pattern=0x7f0a0036;
+        public static final int app_name=0x7f0a0034;
+        public static final int appbar_scrolling_view_behavior=0x7f0a0035;
+        public static final int assign=0x7f0a0036;
+        public static final int bottom_sheet_behavior=0x7f0a0037;
+        public static final int character_counter_pattern=0x7f0a0038;
         public static final int common_google_play_services_enable_button=0x7f0a0013;
         public static final int common_google_play_services_enable_text=0x7f0a0014;
         public static final int common_google_play_services_enable_title=0x7f0a0015;
         public static final int common_google_play_services_install_button=0x7f0a0016;
         public static final int common_google_play_services_install_text=0x7f0a0017;
         public static final int common_google_play_services_install_title=0x7f0a0018;
-        public static final int common_google_play_services_notification_ticker=0x7f0a0019;
-        public static final int common_google_play_services_unknown_issue=0x7f0a001a;
-        public static final int common_google_play_services_unsupported_text=0x7f0a001b;
-        public static final int common_google_play_services_update_button=0x7f0a001c;
-        public static final int common_google_play_services_update_text=0x7f0a001d;
-        public static final int common_google_play_services_update_title=0x7f0a001e;
-        public static final int common_google_play_services_updating_text=0x7f0a001f;
-        public static final int common_google_play_services_wear_update_text=0x7f0a0020;
-        public static final int common_open_on_phone=0x7f0a0021;
-        public static final int common_signin_button_text=0x7f0a0022;
-        public static final int common_signin_button_text_long=0x7f0a0023;
-        public static final int default_web_client_id=0x7f0a0037;
-        public static final int define_bottomdialog=0x7f0a0038;
-        public static final int define_showhidepasswordedittext=0x7f0a0039;
-        public static final int firebase_database_url=0x7f0a003a;
-        public static final int gcm_defaultSenderId=0x7f0a003b;
-        public static final int google_api_key=0x7f0a003c;
-        public static final int google_app_id=0x7f0a003d;
-        public static final int google_crash_reporting_api_key=0x7f0a003e;
-        public static final int google_maps_key=0x7f0a003f;
-        public static final int google_storage_bucket=0x7f0a0040;
-        public static final int icon=0x7f0a0041;
-        public static final int icon_fa_check_circle=0x7f0a0042;
-        public static final int icon_fa_plug=0x7f0a0043;
-        public static final int icon_fa_refresh_spin=0x7f0a0044;
-        public static final int icon_fa_times_circle=0x7f0a0045;
-        public static final int library_bottomdialog_author=0x7f0a0046;
-        public static final int library_bottomdialog_authorWebsite=0x7f0a0047;
-        public static final int library_bottomdialog_isOpenSource=0x7f0a0048;
-        public static final int library_bottomdialog_libraryDescription=0x7f0a0049;
-        public static final int library_bottomdialog_libraryName=0x7f0a004a;
-        public static final int library_bottomdialog_libraryVersion=0x7f0a004b;
-        public static final int library_bottomdialog_libraryWebsite=0x7f0a004c;
-        public static final int library_bottomdialog_licenseId=0x7f0a004d;
-        public static final int library_bottomdialog_owner=0x7f0a004e;
-        public static final int library_bottomdialog_repositoryLink=0x7f0a004f;
-        public static final int library_bottomdialog_year=0x7f0a0050;
-        public static final int library_showhidepasswordedittext_author=0x7f0a0051;
-        public static final int library_showhidepasswordedittext_authorWebsite=0x7f0a0052;
-        public static final int library_showhidepasswordedittext_classPath=0x7f0a0053;
-        public static final int library_showhidepasswordedittext_isOpenSource=0x7f0a0054;
-        public static final int library_showhidepasswordedittext_libraryDescription=0x7f0a0055;
-        public static final int library_showhidepasswordedittext_libraryName=0x7f0a0056;
-        public static final int library_showhidepasswordedittext_libraryVersion=0x7f0a0057;
-        public static final int library_showhidepasswordedittext_libraryWebsite=0x7f0a0058;
-        public static final int library_showhidepasswordedittext_licenseId=0x7f0a0059;
-        public static final int library_showhidepasswordedittext_repositoryLink=0x7f0a005a;
-        public static final int navigation_drawer_close=0x7f0a005b;
-        public static final int navigation_drawer_open=0x7f0a005c;
-        public static final int password_toggle_content_description=0x7f0a005d;
-        public static final int path_password_eye=0x7f0a005e;
-        public static final int path_password_eye_mask_strike_through=0x7f0a005f;
-        public static final int path_password_eye_mask_visible=0x7f0a0060;
-        public static final int path_password_strike_through=0x7f0a0061;
-        public static final int search_menu_title=0x7f0a0024;
-        public static final int status_bar_notification_info_overflow=0x7f0a0025;
-        public static final int text_error_occurred=0x7f0a0062;
-        public static final int text_loading_wait=0x7f0a0063;
-        public static final int text_no_connection=0x7f0a0064;
-        public static final int text_okay=0x7f0a0065;
-        public static final int text_success=0x7f0a0066;
-        public static final int title_activity_dash_board=0x7f0a0067;
-        public static final int title_activity_maps=0x7f0a0068;
+        public static final int common_google_play_services_notification_channel_name=0x7f0a0019;
+        public static final int common_google_play_services_notification_ticker=0x7f0a001a;
+        public static final int common_google_play_services_unknown_issue=0x7f0a001b;
+        public static final int common_google_play_services_unsupported_text=0x7f0a001c;
+        public static final int common_google_play_services_update_button=0x7f0a001d;
+        public static final int common_google_play_services_update_text=0x7f0a001e;
+        public static final int common_google_play_services_update_title=0x7f0a001f;
+        public static final int common_google_play_services_updating_text=0x7f0a0020;
+        public static final int common_google_play_services_wear_update_text=0x7f0a0021;
+        public static final int common_open_on_phone=0x7f0a0022;
+        public static final int common_signin_button_text=0x7f0a0023;
+        public static final int common_signin_button_text_long=0x7f0a0024;
+        public static final int default_web_client_id=0x7f0a0039;
+        public static final int define_bottomdialog=0x7f0a003a;
+        public static final int define_showhidepasswordedittext=0x7f0a003b;
+        public static final int fcm_fallback_notification_channel_label=0x7f0a0025;
+        public static final int firebase_database_url=0x7f0a003c;
+        public static final int gcm_defaultSenderId=0x7f0a003d;
+        public static final int google_api_key=0x7f0a003e;
+        public static final int google_app_id=0x7f0a003f;
+        public static final int google_crash_reporting_api_key=0x7f0a0040;
+        public static final int google_maps_key=0x7f0a0041;
+        public static final int google_storage_bucket=0x7f0a0042;
+        public static final int icon=0x7f0a0043;
+        public static final int icon_fa_check_circle=0x7f0a0044;
+        public static final int icon_fa_plug=0x7f0a0045;
+        public static final int icon_fa_refresh_spin=0x7f0a0046;
+        public static final int icon_fa_times_circle=0x7f0a0047;
+        public static final int library_bottomdialog_author=0x7f0a0048;
+        public static final int library_bottomdialog_authorWebsite=0x7f0a0049;
+        public static final int library_bottomdialog_isOpenSource=0x7f0a004a;
+        public static final int library_bottomdialog_libraryDescription=0x7f0a004b;
+        public static final int library_bottomdialog_libraryName=0x7f0a004c;
+        public static final int library_bottomdialog_libraryVersion=0x7f0a004d;
+        public static final int library_bottomdialog_libraryWebsite=0x7f0a004e;
+        public static final int library_bottomdialog_licenseId=0x7f0a004f;
+        public static final int library_bottomdialog_owner=0x7f0a0050;
+        public static final int library_bottomdialog_repositoryLink=0x7f0a0051;
+        public static final int library_bottomdialog_year=0x7f0a0052;
+        public static final int library_showhidepasswordedittext_author=0x7f0a0053;
+        public static final int library_showhidepasswordedittext_authorWebsite=0x7f0a0054;
+        public static final int library_showhidepasswordedittext_classPath=0x7f0a0055;
+        public static final int library_showhidepasswordedittext_isOpenSource=0x7f0a0056;
+        public static final int library_showhidepasswordedittext_libraryDescription=0x7f0a0057;
+        public static final int library_showhidepasswordedittext_libraryName=0x7f0a0058;
+        public static final int library_showhidepasswordedittext_libraryVersion=0x7f0a0059;
+        public static final int library_showhidepasswordedittext_libraryWebsite=0x7f0a005a;
+        public static final int library_showhidepasswordedittext_licenseId=0x7f0a005b;
+        public static final int library_showhidepasswordedittext_repositoryLink=0x7f0a005c;
+        public static final int navigation_drawer_close=0x7f0a005d;
+        public static final int navigation_drawer_open=0x7f0a005e;
+        public static final int password_toggle_content_description=0x7f0a005f;
+        public static final int path_password_eye=0x7f0a0060;
+        public static final int path_password_eye_mask_strike_through=0x7f0a0061;
+        public static final int path_password_eye_mask_visible=0x7f0a0062;
+        public static final int path_password_strike_through=0x7f0a0063;
+        public static final int project_id=0x7f0a0064;
+        public static final int search_menu_title=0x7f0a0026;
+        public static final int status_bar_notification_info_overflow=0x7f0a0027;
+        public static final int text_error_occurred=0x7f0a0065;
+        public static final int text_loading_wait=0x7f0a0066;
+        public static final int text_no_connection=0x7f0a0067;
+        public static final int text_okay=0x7f0a0068;
+        public static final int text_success=0x7f0a0069;
+        public static final int title_activity_dash_board=0x7f0a006a;
     }
     public static final class style {
         public static final int AVLoadingIndicatorView=0x7f0c00ad;
@@ -4705,17 +4692,16 @@ containing a value of this type.
         public static final int Animation_AppCompat_Tooltip=0x7f0c00b4;
         public static final int Animation_Design_BottomSheetDialog=0x7f0c00b5;
         public static final int AppTheme=0x7f0c00b6;
-        public static final int AppTheme_NoActionBar=0x7f0c00b7;
-        public static final int AppTheme_PopupOverlay=0x7f0c00b8;
-        public static final int BadgeText=0x7f0c00b9;
-        public static final int Base_AlertDialog_AppCompat=0x7f0c00ba;
-        public static final int Base_AlertDialog_AppCompat_Light=0x7f0c00bb;
-        public static final int Base_Animation_AppCompat_Dialog=0x7f0c00bc;
-        public static final int Base_Animation_AppCompat_DropDownUp=0x7f0c00bd;
-        public static final int Base_Animation_AppCompat_Tooltip=0x7f0c00be;
-        public static final int Base_CardView=0x7f0c00bf;
-        public static final int Base_DialogWindowTitle_AppCompat=0x7f0c00c0;
-        public static final int Base_DialogWindowTitleBackground_AppCompat=0x7f0c00c1;
+        public static final int AppTheme_PopupOverlay=0x7f0c00b7;
+        public static final int BadgeText=0x7f0c00b8;
+        public static final int Base_AlertDialog_AppCompat=0x7f0c00b9;
+        public static final int Base_AlertDialog_AppCompat_Light=0x7f0c00ba;
+        public static final int Base_Animation_AppCompat_Dialog=0x7f0c00bb;
+        public static final int Base_Animation_AppCompat_DropDownUp=0x7f0c00bc;
+        public static final int Base_Animation_AppCompat_Tooltip=0x7f0c00bd;
+        public static final int Base_CardView=0x7f0c00be;
+        public static final int Base_DialogWindowTitle_AppCompat=0x7f0c00bf;
+        public static final int Base_DialogWindowTitleBackground_AppCompat=0x7f0c00c0;
         public static final int Base_TextAppearance_AppCompat=0x7f0c003a;
         public static final int Base_TextAppearance_AppCompat_Body1=0x7f0c003b;
         public static final int Base_TextAppearance_AppCompat_Body2=0x7f0c003c;
@@ -4734,7 +4720,7 @@ containing a value of this type.
         public static final int Base_TextAppearance_AppCompat_Medium=0x7f0c0046;
         public static final int Base_TextAppearance_AppCompat_Medium_Inverse=0x7f0c000e;
         public static final int Base_TextAppearance_AppCompat_Menu=0x7f0c0047;
-        public static final int Base_TextAppearance_AppCompat_SearchResult=0x7f0c00c2;
+        public static final int Base_TextAppearance_AppCompat_SearchResult=0x7f0c00c1;
         public static final int Base_TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0c0048;
         public static final int Base_TextAppearance_AppCompat_SearchResult_Title=0x7f0c0049;
         public static final int Base_TextAppearance_AppCompat_Small=0x7f0c004a;
@@ -4743,7 +4729,7 @@ containing a value of this type.
         public static final int Base_TextAppearance_AppCompat_Subhead_Inverse=0x7f0c0010;
         public static final int Base_TextAppearance_AppCompat_Title=0x7f0c004c;
         public static final int Base_TextAppearance_AppCompat_Title_Inverse=0x7f0c0011;
-        public static final int Base_TextAppearance_AppCompat_Tooltip=0x7f0c00c3;
+        public static final int Base_TextAppearance_AppCompat_Tooltip=0x7f0c00c2;
         public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0c009c;
         public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0c004d;
         public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0c004e;
@@ -4755,42 +4741,42 @@ containing a value of this type.
         public static final int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f0c00a4;
         public static final int Base_TextAppearance_AppCompat_Widget_Button_Colored=0x7f0c00a5;
         public static final int Base_TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0c009d;
-        public static final int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f0c00c4;
+        public static final int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f0c00c3;
         public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f0c0054;
         public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0c0055;
         public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0c0056;
         public static final int Base_TextAppearance_AppCompat_Widget_Switch=0x7f0c0057;
         public static final int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0c0058;
-        public static final int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0c00c5;
+        public static final int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0c00c4;
         public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0c0059;
         public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0c005a;
         public static final int Base_Theme_AppCompat=0x7f0c005b;
-        public static final int Base_Theme_AppCompat_CompactMenu=0x7f0c00c6;
+        public static final int Base_Theme_AppCompat_CompactMenu=0x7f0c00c5;
         public static final int Base_Theme_AppCompat_Dialog=0x7f0c0012;
         public static final int Base_Theme_AppCompat_Dialog_Alert=0x7f0c0013;
-        public static final int Base_Theme_AppCompat_Dialog_FixedSize=0x7f0c00c7;
+        public static final int Base_Theme_AppCompat_Dialog_FixedSize=0x7f0c00c6;
         public static final int Base_Theme_AppCompat_Dialog_MinWidth=0x7f0c0014;
         public static final int Base_Theme_AppCompat_DialogWhenLarge=0x7f0c0002;
         public static final int Base_Theme_AppCompat_Light=0x7f0c005c;
-        public static final int Base_Theme_AppCompat_Light_DarkActionBar=0x7f0c00c8;
+        public static final int Base_Theme_AppCompat_Light_DarkActionBar=0x7f0c00c7;
         public static final int Base_Theme_AppCompat_Light_Dialog=0x7f0c0015;
         public static final int Base_Theme_AppCompat_Light_Dialog_Alert=0x7f0c0016;
-        public static final int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f0c00c9;
+        public static final int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f0c00c8;
         public static final int Base_Theme_AppCompat_Light_Dialog_MinWidth=0x7f0c0017;
         public static final int Base_Theme_AppCompat_Light_DialogWhenLarge=0x7f0c0003;
-        public static final int Base_ThemeOverlay_AppCompat=0x7f0c00ca;
-        public static final int Base_ThemeOverlay_AppCompat_ActionBar=0x7f0c00cb;
-        public static final int Base_ThemeOverlay_AppCompat_Dark=0x7f0c00cc;
-        public static final int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0c00cd;
+        public static final int Base_ThemeOverlay_AppCompat=0x7f0c00c9;
+        public static final int Base_ThemeOverlay_AppCompat_ActionBar=0x7f0c00ca;
+        public static final int Base_ThemeOverlay_AppCompat_Dark=0x7f0c00cb;
+        public static final int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0c00cc;
         public static final int Base_ThemeOverlay_AppCompat_Dialog=0x7f0c0018;
         public static final int Base_ThemeOverlay_AppCompat_Dialog_Alert=0x7f0c0019;
-        public static final int Base_ThemeOverlay_AppCompat_Light=0x7f0c00ce;
+        public static final int Base_ThemeOverlay_AppCompat_Light=0x7f0c00cd;
         public static final int Base_V11_Theme_AppCompat_Dialog=0x7f0c001a;
         public static final int Base_V11_Theme_AppCompat_Light_Dialog=0x7f0c001b;
         public static final int Base_V11_ThemeOverlay_AppCompat_Dialog=0x7f0c001c;
         public static final int Base_V12_Widget_AppCompat_AutoCompleteTextView=0x7f0c0024;
         public static final int Base_V12_Widget_AppCompat_EditText=0x7f0c0025;
-        public static final int Base_V14_Widget_Design_AppBarLayout=0x7f0c00cf;
+        public static final int Base_V14_Widget_Design_AppBarLayout=0x7f0c00ce;
         public static final int Base_V21_Theme_AppCompat=0x7f0c005d;
         public static final int Base_V21_Theme_AppCompat_Dialog=0x7f0c005e;
         public static final int Base_V21_Theme_AppCompat_Light=0x7f0c005f;
@@ -4805,82 +4791,81 @@ containing a value of this type.
         public static final int Base_V26_Theme_AppCompat_Light=0x7f0c00a9;
         public static final int Base_V26_Widget_AppCompat_Toolbar=0x7f0c00aa;
         public static final int Base_V26_Widget_Design_AppBarLayout=0x7f0c00ab;
-        public static final int Base_V7_Theme_AppCompat=0x7f0c00d0;
-        public static final int Base_V7_Theme_AppCompat_Dialog=0x7f0c00d1;
-        public static final int Base_V7_Theme_AppCompat_Light=0x7f0c00d2;
-        public static final int Base_V7_Theme_AppCompat_Light_Dialog=0x7f0c00d3;
-        public static final int Base_V7_ThemeOverlay_AppCompat_Dialog=0x7f0c00d4;
-        public static final int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f0c00d5;
-        public static final int Base_V7_Widget_AppCompat_EditText=0x7f0c00d6;
-        public static final int Base_V7_Widget_AppCompat_Toolbar=0x7f0c00d7;
-        public static final int Base_Widget_AppCompat_ActionBar=0x7f0c00d8;
-        public static final int Base_Widget_AppCompat_ActionBar_Solid=0x7f0c00d9;
-        public static final int Base_Widget_AppCompat_ActionBar_TabBar=0x7f0c00da;
+        public static final int Base_V7_Theme_AppCompat=0x7f0c00cf;
+        public static final int Base_V7_Theme_AppCompat_Dialog=0x7f0c00d0;
+        public static final int Base_V7_Theme_AppCompat_Light=0x7f0c00d1;
+        public static final int Base_V7_Theme_AppCompat_Light_Dialog=0x7f0c00d2;
+        public static final int Base_V7_ThemeOverlay_AppCompat_Dialog=0x7f0c00d3;
+        public static final int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f0c00d4;
+        public static final int Base_V7_Widget_AppCompat_EditText=0x7f0c00d5;
+        public static final int Base_V7_Widget_AppCompat_Toolbar=0x7f0c00d6;
+        public static final int Base_Widget_AppCompat_ActionBar=0x7f0c00d7;
+        public static final int Base_Widget_AppCompat_ActionBar_Solid=0x7f0c00d8;
+        public static final int Base_Widget_AppCompat_ActionBar_TabBar=0x7f0c00d9;
         public static final int Base_Widget_AppCompat_ActionBar_TabText=0x7f0c0063;
         public static final int Base_Widget_AppCompat_ActionBar_TabView=0x7f0c0064;
         public static final int Base_Widget_AppCompat_ActionButton=0x7f0c0065;
         public static final int Base_Widget_AppCompat_ActionButton_CloseMode=0x7f0c0066;
         public static final int Base_Widget_AppCompat_ActionButton_Overflow=0x7f0c0067;
-        public static final int Base_Widget_AppCompat_ActionMode=0x7f0c00db;
-        public static final int Base_Widget_AppCompat_ActivityChooserView=0x7f0c00dc;
+        public static final int Base_Widget_AppCompat_ActionMode=0x7f0c00da;
+        public static final int Base_Widget_AppCompat_ActivityChooserView=0x7f0c00db;
         public static final int Base_Widget_AppCompat_AutoCompleteTextView=0x7f0c0026;
         public static final int Base_Widget_AppCompat_Button=0x7f0c0068;
         public static final int Base_Widget_AppCompat_Button_Borderless=0x7f0c0069;
         public static final int Base_Widget_AppCompat_Button_Borderless_Colored=0x7f0c006a;
-        public static final int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0c00dd;
+        public static final int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0c00dc;
         public static final int Base_Widget_AppCompat_Button_Colored=0x7f0c00a0;
         public static final int Base_Widget_AppCompat_Button_Small=0x7f0c006b;
         public static final int Base_Widget_AppCompat_ButtonBar=0x7f0c006c;
-        public static final int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f0c00de;
+        public static final int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f0c00dd;
         public static final int Base_Widget_AppCompat_CompoundButton_CheckBox=0x7f0c006d;
         public static final int Base_Widget_AppCompat_CompoundButton_RadioButton=0x7f0c006e;
-        public static final int Base_Widget_AppCompat_CompoundButton_Switch=0x7f0c00df;
+        public static final int Base_Widget_AppCompat_CompoundButton_Switch=0x7f0c00de;
         public static final int Base_Widget_AppCompat_DrawerArrowToggle=0x7f0c0000;
-        public static final int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f0c00e0;
+        public static final int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f0c00df;
         public static final int Base_Widget_AppCompat_DropDownItem_Spinner=0x7f0c006f;
         public static final int Base_Widget_AppCompat_EditText=0x7f0c0027;
         public static final int Base_Widget_AppCompat_ImageButton=0x7f0c0070;
-        public static final int Base_Widget_AppCompat_Light_ActionBar=0x7f0c00e1;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f0c00e2;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f0c00e3;
+        public static final int Base_Widget_AppCompat_Light_ActionBar=0x7f0c00e0;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f0c00e1;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f0c00e2;
         public static final int Base_Widget_AppCompat_Light_ActionBar_TabText=0x7f0c0071;
         public static final int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0c0072;
         public static final int Base_Widget_AppCompat_Light_ActionBar_TabView=0x7f0c0073;
         public static final int Base_Widget_AppCompat_Light_PopupMenu=0x7f0c0074;
         public static final int Base_Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0c0075;
-        public static final int Base_Widget_AppCompat_ListMenuView=0x7f0c00e4;
+        public static final int Base_Widget_AppCompat_ListMenuView=0x7f0c00e3;
         public static final int Base_Widget_AppCompat_ListPopupWindow=0x7f0c0076;
         public static final int Base_Widget_AppCompat_ListView=0x7f0c0077;
         public static final int Base_Widget_AppCompat_ListView_DropDown=0x7f0c0078;
         public static final int Base_Widget_AppCompat_ListView_Menu=0x7f0c0079;
         public static final int Base_Widget_AppCompat_PopupMenu=0x7f0c007a;
         public static final int Base_Widget_AppCompat_PopupMenu_Overflow=0x7f0c007b;
-        public static final int Base_Widget_AppCompat_PopupWindow=0x7f0c00e5;
+        public static final int Base_Widget_AppCompat_PopupWindow=0x7f0c00e4;
         public static final int Base_Widget_AppCompat_ProgressBar=0x7f0c001d;
         public static final int Base_Widget_AppCompat_ProgressBar_Horizontal=0x7f0c001e;
         public static final int Base_Widget_AppCompat_RatingBar=0x7f0c007c;
         public static final int Base_Widget_AppCompat_RatingBar_Indicator=0x7f0c00a1;
         public static final int Base_Widget_AppCompat_RatingBar_Small=0x7f0c00a2;
-        public static final int Base_Widget_AppCompat_SearchView=0x7f0c00e6;
-        public static final int Base_Widget_AppCompat_SearchView_ActionBar=0x7f0c00e7;
+        public static final int Base_Widget_AppCompat_SearchView=0x7f0c00e5;
+        public static final int Base_Widget_AppCompat_SearchView_ActionBar=0x7f0c00e6;
         public static final int Base_Widget_AppCompat_SeekBar=0x7f0c007d;
-        public static final int Base_Widget_AppCompat_SeekBar_Discrete=0x7f0c00e8;
+        public static final int Base_Widget_AppCompat_SeekBar_Discrete=0x7f0c00e7;
         public static final int Base_Widget_AppCompat_Spinner=0x7f0c007e;
         public static final int Base_Widget_AppCompat_Spinner_Underlined=0x7f0c0004;
         public static final int Base_Widget_AppCompat_TextView_SpinnerItem=0x7f0c007f;
         public static final int Base_Widget_AppCompat_Toolbar=0x7f0c00ac;
         public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0c0080;
         public static final int Base_Widget_Design_AppBarLayout=0x7f0c0081;
-        public static final int Base_Widget_Design_TabLayout=0x7f0c00e9;
+        public static final int Base_Widget_Design_TabLayout=0x7f0c00e8;
         public static final int CardView=0x7f0c00a3;
-        public static final int CardView_Dark=0x7f0c00ea;
-        public static final int CardView_Light=0x7f0c00eb;
-        public static final int Custom=0x7f0c00ec;
-        public static final int DialogAnimation=0x7f0c00ed;
-        public static final int DrawerArrowStyle=0x7f0c00ee;
-        public static final int MaterialDialogSheet=0x7f0c00ef;
-        public static final int MaterialDialogSheetAnimation=0x7f0c00f0;
-        public static final int MineCustomTabText=0x7f0c00f1;
+        public static final int CardView_Dark=0x7f0c00e9;
+        public static final int CardView_Light=0x7f0c00ea;
+        public static final int Custom=0x7f0c00eb;
+        public static final int DialogAnimation=0x7f0c00ec;
+        public static final int MaterialDialogSheet=0x7f0c00ed;
+        public static final int MaterialDialogSheetAnimation=0x7f0c00ee;
+        public static final int MineCustomTabText=0x7f0c00ef;
         public static final int Platform_AppCompat=0x7f0c001f;
         public static final int Platform_AppCompat_Light=0x7f0c0020;
         public static final int Platform_ThemeOverlay_AppCompat=0x7f0c0082;
@@ -4910,86 +4895,86 @@ containing a value of this type.
         public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f0c0038;
         public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f0c0039;
         public static final int SpotsDialogDefault=0x7f0c0087;
-        public static final int TextAppearance_AppCompat=0x7f0c00f2;
-        public static final int TextAppearance_AppCompat_Body1=0x7f0c00f3;
-        public static final int TextAppearance_AppCompat_Body2=0x7f0c00f4;
-        public static final int TextAppearance_AppCompat_Button=0x7f0c00f5;
-        public static final int TextAppearance_AppCompat_Caption=0x7f0c00f6;
-        public static final int TextAppearance_AppCompat_Display1=0x7f0c00f7;
-        public static final int TextAppearance_AppCompat_Display2=0x7f0c00f8;
-        public static final int TextAppearance_AppCompat_Display3=0x7f0c00f9;
-        public static final int TextAppearance_AppCompat_Display4=0x7f0c00fa;
-        public static final int TextAppearance_AppCompat_Headline=0x7f0c00fb;
-        public static final int TextAppearance_AppCompat_Inverse=0x7f0c00fc;
-        public static final int TextAppearance_AppCompat_Large=0x7f0c00fd;
-        public static final int TextAppearance_AppCompat_Large_Inverse=0x7f0c00fe;
-        public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f0c00ff;
-        public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f0c0100;
-        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0c0101;
-        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0c0102;
-        public static final int TextAppearance_AppCompat_Medium=0x7f0c0103;
-        public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f0c0104;
-        public static final int TextAppearance_AppCompat_Menu=0x7f0c0105;
+        public static final int TextAppearance_AppCompat=0x7f0c00f0;
+        public static final int TextAppearance_AppCompat_Body1=0x7f0c00f1;
+        public static final int TextAppearance_AppCompat_Body2=0x7f0c00f2;
+        public static final int TextAppearance_AppCompat_Button=0x7f0c00f3;
+        public static final int TextAppearance_AppCompat_Caption=0x7f0c00f4;
+        public static final int TextAppearance_AppCompat_Display1=0x7f0c00f5;
+        public static final int TextAppearance_AppCompat_Display2=0x7f0c00f6;
+        public static final int TextAppearance_AppCompat_Display3=0x7f0c00f7;
+        public static final int TextAppearance_AppCompat_Display4=0x7f0c00f8;
+        public static final int TextAppearance_AppCompat_Headline=0x7f0c00f9;
+        public static final int TextAppearance_AppCompat_Inverse=0x7f0c00fa;
+        public static final int TextAppearance_AppCompat_Large=0x7f0c00fb;
+        public static final int TextAppearance_AppCompat_Large_Inverse=0x7f0c00fc;
+        public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f0c00fd;
+        public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f0c00fe;
+        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0c00ff;
+        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0c0100;
+        public static final int TextAppearance_AppCompat_Medium=0x7f0c0101;
+        public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f0c0102;
+        public static final int TextAppearance_AppCompat_Menu=0x7f0c0103;
         public static final int TextAppearance_AppCompat_Notification=0x7f0c0088;
         public static final int TextAppearance_AppCompat_Notification_Info=0x7f0c0089;
         public static final int TextAppearance_AppCompat_Notification_Info_Media=0x7f0c008a;
-        public static final int TextAppearance_AppCompat_Notification_Line2=0x7f0c0106;
-        public static final int TextAppearance_AppCompat_Notification_Line2_Media=0x7f0c0107;
+        public static final int TextAppearance_AppCompat_Notification_Line2=0x7f0c0104;
+        public static final int TextAppearance_AppCompat_Notification_Line2_Media=0x7f0c0105;
         public static final int TextAppearance_AppCompat_Notification_Media=0x7f0c008b;
         public static final int TextAppearance_AppCompat_Notification_Time=0x7f0c008c;
         public static final int TextAppearance_AppCompat_Notification_Time_Media=0x7f0c008d;
         public static final int TextAppearance_AppCompat_Notification_Title=0x7f0c008e;
         public static final int TextAppearance_AppCompat_Notification_Title_Media=0x7f0c008f;
-        public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0c0108;
-        public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f0c0109;
-        public static final int TextAppearance_AppCompat_Small=0x7f0c010a;
-        public static final int TextAppearance_AppCompat_Small_Inverse=0x7f0c010b;
-        public static final int TextAppearance_AppCompat_Subhead=0x7f0c010c;
-        public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f0c010d;
-        public static final int TextAppearance_AppCompat_Title=0x7f0c010e;
-        public static final int TextAppearance_AppCompat_Title_Inverse=0x7f0c010f;
+        public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0c0106;
+        public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f0c0107;
+        public static final int TextAppearance_AppCompat_Small=0x7f0c0108;
+        public static final int TextAppearance_AppCompat_Small_Inverse=0x7f0c0109;
+        public static final int TextAppearance_AppCompat_Subhead=0x7f0c010a;
+        public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f0c010b;
+        public static final int TextAppearance_AppCompat_Title=0x7f0c010c;
+        public static final int TextAppearance_AppCompat_Title_Inverse=0x7f0c010d;
         public static final int TextAppearance_AppCompat_Tooltip=0x7f0c002b;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0c0110;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0c0111;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0c0112;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0c0113;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0c0114;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0c0115;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f0c0116;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0c0117;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f0c0118;
-        public static final int TextAppearance_AppCompat_Widget_Button=0x7f0c0119;
-        public static final int TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f0c011a;
-        public static final int TextAppearance_AppCompat_Widget_Button_Colored=0x7f0c011b;
-        public static final int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0c011c;
-        public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f0c011d;
-        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f0c011e;
-        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0c011f;
-        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0c0120;
-        public static final int TextAppearance_AppCompat_Widget_Switch=0x7f0c0121;
-        public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0c0122;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0c010e;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0c010f;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0c0110;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0c0111;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0c0112;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0c0113;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f0c0114;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0c0115;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f0c0116;
+        public static final int TextAppearance_AppCompat_Widget_Button=0x7f0c0117;
+        public static final int TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f0c0118;
+        public static final int TextAppearance_AppCompat_Widget_Button_Colored=0x7f0c0119;
+        public static final int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0c011a;
+        public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f0c011b;
+        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f0c011c;
+        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0c011d;
+        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0c011e;
+        public static final int TextAppearance_AppCompat_Widget_Switch=0x7f0c011f;
+        public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0c0120;
         public static final int TextAppearance_Compat_Notification=0x7f0c0090;
         public static final int TextAppearance_Compat_Notification_Info=0x7f0c0091;
         public static final int TextAppearance_Compat_Notification_Info_Media=0x7f0c0092;
-        public static final int TextAppearance_Compat_Notification_Line2=0x7f0c0123;
-        public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f0c0124;
+        public static final int TextAppearance_Compat_Notification_Line2=0x7f0c0121;
+        public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f0c0122;
         public static final int TextAppearance_Compat_Notification_Media=0x7f0c0093;
         public static final int TextAppearance_Compat_Notification_Time=0x7f0c0094;
         public static final int TextAppearance_Compat_Notification_Time_Media=0x7f0c0095;
         public static final int TextAppearance_Compat_Notification_Title=0x7f0c0096;
         public static final int TextAppearance_Compat_Notification_Title_Media=0x7f0c0097;
-        public static final int TextAppearance_Design_CollapsingToolbar_Expanded=0x7f0c0125;
-        public static final int TextAppearance_Design_Counter=0x7f0c0126;
-        public static final int TextAppearance_Design_Counter_Overflow=0x7f0c0127;
-        public static final int TextAppearance_Design_Error=0x7f0c0128;
-        public static final int TextAppearance_Design_Hint=0x7f0c0129;
-        public static final int TextAppearance_Design_Snackbar_Message=0x7f0c012a;
-        public static final int TextAppearance_Design_Tab=0x7f0c012b;
-        public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0c012c;
-        public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0c012d;
-        public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0c012e;
-        public static final int Theme_AppCompat=0x7f0c012f;
-        public static final int Theme_AppCompat_CompactMenu=0x7f0c0130;
+        public static final int TextAppearance_Design_CollapsingToolbar_Expanded=0x7f0c0123;
+        public static final int TextAppearance_Design_Counter=0x7f0c0124;
+        public static final int TextAppearance_Design_Counter_Overflow=0x7f0c0125;
+        public static final int TextAppearance_Design_Error=0x7f0c0126;
+        public static final int TextAppearance_Design_Hint=0x7f0c0127;
+        public static final int TextAppearance_Design_Snackbar_Message=0x7f0c0128;
+        public static final int TextAppearance_Design_Tab=0x7f0c0129;
+        public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0c012a;
+        public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0c012b;
+        public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0c012c;
+        public static final int Theme_AppCompat=0x7f0c012d;
+        public static final int Theme_AppCompat_CompactMenu=0x7f0c012e;
         public static final int Theme_AppCompat_DayNight=0x7f0c0005;
         public static final int Theme_AppCompat_DayNight_DarkActionBar=0x7f0c0006;
         public static final int Theme_AppCompat_DayNight_Dialog=0x7f0c0007;
@@ -4997,123 +4982,123 @@ containing a value of this type.
         public static final int Theme_AppCompat_DayNight_Dialog_MinWidth=0x7f0c0009;
         public static final int Theme_AppCompat_DayNight_DialogWhenLarge=0x7f0c000a;
         public static final int Theme_AppCompat_DayNight_NoActionBar=0x7f0c000b;
-        public static final int Theme_AppCompat_Dialog=0x7f0c0131;
-        public static final int Theme_AppCompat_Dialog_Alert=0x7f0c0132;
-        public static final int Theme_AppCompat_Dialog_MinWidth=0x7f0c0133;
-        public static final int Theme_AppCompat_DialogWhenLarge=0x7f0c0134;
-        public static final int Theme_AppCompat_Light=0x7f0c0135;
-        public static final int Theme_AppCompat_Light_DarkActionBar=0x7f0c0136;
-        public static final int Theme_AppCompat_Light_Dialog=0x7f0c0137;
-        public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f0c0138;
-        public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0c0139;
-        public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0c013a;
-        public static final int Theme_AppCompat_Light_NoActionBar=0x7f0c013b;
-        public static final int Theme_AppCompat_NoActionBar=0x7f0c013c;
-        public static final int Theme_Design=0x7f0c013d;
-        public static final int Theme_Design_BottomSheetDialog=0x7f0c013e;
-        public static final int Theme_Design_Light=0x7f0c013f;
-        public static final int Theme_Design_Light_BottomSheetDialog=0x7f0c0140;
-        public static final int Theme_Design_Light_NoActionBar=0x7f0c0141;
-        public static final int Theme_Design_NoActionBar=0x7f0c0142;
-        public static final int ThemeOverlay_AppCompat=0x7f0c0143;
-        public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0c0144;
-        public static final int ThemeOverlay_AppCompat_Dark=0x7f0c0145;
-        public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0c0146;
-        public static final int ThemeOverlay_AppCompat_Dialog=0x7f0c0147;
-        public static final int ThemeOverlay_AppCompat_Dialog_Alert=0x7f0c0148;
-        public static final int ThemeOverlay_AppCompat_Light=0x7f0c0149;
-        public static final int Toolbar_TitleText=0x7f0c014a;
-        public static final int Widget_AppCompat_ActionBar=0x7f0c014b;
-        public static final int Widget_AppCompat_ActionBar_Solid=0x7f0c014c;
-        public static final int Widget_AppCompat_ActionBar_TabBar=0x7f0c014d;
-        public static final int Widget_AppCompat_ActionBar_TabText=0x7f0c014e;
-        public static final int Widget_AppCompat_ActionBar_TabView=0x7f0c014f;
-        public static final int Widget_AppCompat_ActionButton=0x7f0c0150;
-        public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f0c0151;
-        public static final int Widget_AppCompat_ActionButton_Overflow=0x7f0c0152;
-        public static final int Widget_AppCompat_ActionMode=0x7f0c0153;
-        public static final int Widget_AppCompat_ActivityChooserView=0x7f0c0154;
-        public static final int Widget_AppCompat_AutoCompleteTextView=0x7f0c0155;
-        public static final int Widget_AppCompat_Button=0x7f0c0156;
-        public static final int Widget_AppCompat_Button_Borderless=0x7f0c0157;
-        public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f0c0158;
-        public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0c0159;
-        public static final int Widget_AppCompat_Button_Colored=0x7f0c015a;
-        public static final int Widget_AppCompat_Button_Small=0x7f0c015b;
-        public static final int Widget_AppCompat_ButtonBar=0x7f0c015c;
-        public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f0c015d;
-        public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f0c015e;
-        public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f0c015f;
-        public static final int Widget_AppCompat_CompoundButton_Switch=0x7f0c0160;
-        public static final int Widget_AppCompat_DrawerArrowToggle=0x7f0c0161;
-        public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f0c0162;
-        public static final int Widget_AppCompat_EditText=0x7f0c0163;
-        public static final int Widget_AppCompat_ImageButton=0x7f0c0164;
-        public static final int Widget_AppCompat_Light_ActionBar=0x7f0c0165;
-        public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f0c0166;
-        public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f0c0167;
-        public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f0c0168;
-        public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f0c0169;
-        public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f0c016a;
-        public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0c016b;
-        public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f0c016c;
-        public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f0c016d;
-        public static final int Widget_AppCompat_Light_ActionButton=0x7f0c016e;
-        public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f0c016f;
-        public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f0c0170;
-        public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f0c0171;
-        public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f0c0172;
-        public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f0c0173;
-        public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f0c0174;
-        public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f0c0175;
-        public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f0c0176;
-        public static final int Widget_AppCompat_Light_PopupMenu=0x7f0c0177;
-        public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0c0178;
-        public static final int Widget_AppCompat_Light_SearchView=0x7f0c0179;
-        public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f0c017a;
-        public static final int Widget_AppCompat_ListMenuView=0x7f0c017b;
-        public static final int Widget_AppCompat_ListPopupWindow=0x7f0c017c;
-        public static final int Widget_AppCompat_ListView=0x7f0c017d;
-        public static final int Widget_AppCompat_ListView_DropDown=0x7f0c017e;
-        public static final int Widget_AppCompat_ListView_Menu=0x7f0c017f;
-        public static final int Widget_AppCompat_PopupMenu=0x7f0c0180;
-        public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f0c0181;
-        public static final int Widget_AppCompat_PopupWindow=0x7f0c0182;
-        public static final int Widget_AppCompat_ProgressBar=0x7f0c0183;
-        public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0c0184;
-        public static final int Widget_AppCompat_RatingBar=0x7f0c0185;
-        public static final int Widget_AppCompat_RatingBar_Indicator=0x7f0c0186;
-        public static final int Widget_AppCompat_RatingBar_Small=0x7f0c0187;
-        public static final int Widget_AppCompat_SearchView=0x7f0c0188;
-        public static final int Widget_AppCompat_SearchView_ActionBar=0x7f0c0189;
-        public static final int Widget_AppCompat_SeekBar=0x7f0c018a;
-        public static final int Widget_AppCompat_SeekBar_Discrete=0x7f0c018b;
-        public static final int Widget_AppCompat_Spinner=0x7f0c018c;
-        public static final int Widget_AppCompat_Spinner_DropDown=0x7f0c018d;
-        public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0c018e;
-        public static final int Widget_AppCompat_Spinner_Underlined=0x7f0c018f;
-        public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f0c0190;
-        public static final int Widget_AppCompat_Toolbar=0x7f0c0191;
-        public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0c0192;
+        public static final int Theme_AppCompat_Dialog=0x7f0c012f;
+        public static final int Theme_AppCompat_Dialog_Alert=0x7f0c0130;
+        public static final int Theme_AppCompat_Dialog_MinWidth=0x7f0c0131;
+        public static final int Theme_AppCompat_DialogWhenLarge=0x7f0c0132;
+        public static final int Theme_AppCompat_Light=0x7f0c0133;
+        public static final int Theme_AppCompat_Light_DarkActionBar=0x7f0c0134;
+        public static final int Theme_AppCompat_Light_Dialog=0x7f0c0135;
+        public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f0c0136;
+        public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0c0137;
+        public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0c0138;
+        public static final int Theme_AppCompat_Light_NoActionBar=0x7f0c0139;
+        public static final int Theme_AppCompat_NoActionBar=0x7f0c013a;
+        public static final int Theme_Design=0x7f0c013b;
+        public static final int Theme_Design_BottomSheetDialog=0x7f0c013c;
+        public static final int Theme_Design_Light=0x7f0c013d;
+        public static final int Theme_Design_Light_BottomSheetDialog=0x7f0c013e;
+        public static final int Theme_Design_Light_NoActionBar=0x7f0c013f;
+        public static final int Theme_Design_NoActionBar=0x7f0c0140;
+        public static final int ThemeOverlay_AppCompat=0x7f0c0141;
+        public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0c0142;
+        public static final int ThemeOverlay_AppCompat_Dark=0x7f0c0143;
+        public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0c0144;
+        public static final int ThemeOverlay_AppCompat_Dialog=0x7f0c0145;
+        public static final int ThemeOverlay_AppCompat_Dialog_Alert=0x7f0c0146;
+        public static final int ThemeOverlay_AppCompat_Light=0x7f0c0147;
+        public static final int Toolbar_TitleText=0x7f0c0148;
+        public static final int Widget_AppCompat_ActionBar=0x7f0c0149;
+        public static final int Widget_AppCompat_ActionBar_Solid=0x7f0c014a;
+        public static final int Widget_AppCompat_ActionBar_TabBar=0x7f0c014b;
+        public static final int Widget_AppCompat_ActionBar_TabText=0x7f0c014c;
+        public static final int Widget_AppCompat_ActionBar_TabView=0x7f0c014d;
+        public static final int Widget_AppCompat_ActionButton=0x7f0c014e;
+        public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f0c014f;
+        public static final int Widget_AppCompat_ActionButton_Overflow=0x7f0c0150;
+        public static final int Widget_AppCompat_ActionMode=0x7f0c0151;
+        public static final int Widget_AppCompat_ActivityChooserView=0x7f0c0152;
+        public static final int Widget_AppCompat_AutoCompleteTextView=0x7f0c0153;
+        public static final int Widget_AppCompat_Button=0x7f0c0154;
+        public static final int Widget_AppCompat_Button_Borderless=0x7f0c0155;
+        public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f0c0156;
+        public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0c0157;
+        public static final int Widget_AppCompat_Button_Colored=0x7f0c0158;
+        public static final int Widget_AppCompat_Button_Small=0x7f0c0159;
+        public static final int Widget_AppCompat_ButtonBar=0x7f0c015a;
+        public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f0c015b;
+        public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f0c015c;
+        public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f0c015d;
+        public static final int Widget_AppCompat_CompoundButton_Switch=0x7f0c015e;
+        public static final int Widget_AppCompat_DrawerArrowToggle=0x7f0c015f;
+        public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f0c0160;
+        public static final int Widget_AppCompat_EditText=0x7f0c0161;
+        public static final int Widget_AppCompat_ImageButton=0x7f0c0162;
+        public static final int Widget_AppCompat_Light_ActionBar=0x7f0c0163;
+        public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f0c0164;
+        public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f0c0165;
+        public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f0c0166;
+        public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f0c0167;
+        public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f0c0168;
+        public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0c0169;
+        public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f0c016a;
+        public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f0c016b;
+        public static final int Widget_AppCompat_Light_ActionButton=0x7f0c016c;
+        public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f0c016d;
+        public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f0c016e;
+        public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f0c016f;
+        public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f0c0170;
+        public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f0c0171;
+        public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f0c0172;
+        public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f0c0173;
+        public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f0c0174;
+        public static final int Widget_AppCompat_Light_PopupMenu=0x7f0c0175;
+        public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0c0176;
+        public static final int Widget_AppCompat_Light_SearchView=0x7f0c0177;
+        public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f0c0178;
+        public static final int Widget_AppCompat_ListMenuView=0x7f0c0179;
+        public static final int Widget_AppCompat_ListPopupWindow=0x7f0c017a;
+        public static final int Widget_AppCompat_ListView=0x7f0c017b;
+        public static final int Widget_AppCompat_ListView_DropDown=0x7f0c017c;
+        public static final int Widget_AppCompat_ListView_Menu=0x7f0c017d;
+        public static final int Widget_AppCompat_PopupMenu=0x7f0c017e;
+        public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f0c017f;
+        public static final int Widget_AppCompat_PopupWindow=0x7f0c0180;
+        public static final int Widget_AppCompat_ProgressBar=0x7f0c0181;
+        public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0c0182;
+        public static final int Widget_AppCompat_RatingBar=0x7f0c0183;
+        public static final int Widget_AppCompat_RatingBar_Indicator=0x7f0c0184;
+        public static final int Widget_AppCompat_RatingBar_Small=0x7f0c0185;
+        public static final int Widget_AppCompat_SearchView=0x7f0c0186;
+        public static final int Widget_AppCompat_SearchView_ActionBar=0x7f0c0187;
+        public static final int Widget_AppCompat_SeekBar=0x7f0c0188;
+        public static final int Widget_AppCompat_SeekBar_Discrete=0x7f0c0189;
+        public static final int Widget_AppCompat_Spinner=0x7f0c018a;
+        public static final int Widget_AppCompat_Spinner_DropDown=0x7f0c018b;
+        public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0c018c;
+        public static final int Widget_AppCompat_Spinner_Underlined=0x7f0c018d;
+        public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f0c018e;
+        public static final int Widget_AppCompat_Toolbar=0x7f0c018f;
+        public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0c0190;
         public static final int Widget_Compat_NotificationActionContainer=0x7f0c0098;
         public static final int Widget_Compat_NotificationActionText=0x7f0c0099;
-        public static final int Widget_Design_AppBarLayout=0x7f0c0193;
-        public static final int Widget_Design_BottomNavigationView=0x7f0c0194;
-        public static final int Widget_Design_BottomSheet_Modal=0x7f0c0195;
-        public static final int Widget_Design_CollapsingToolbar=0x7f0c0196;
-        public static final int Widget_Design_CoordinatorLayout=0x7f0c0197;
-        public static final int Widget_Design_FloatingActionButton=0x7f0c0198;
-        public static final int Widget_Design_NavigationView=0x7f0c0199;
-        public static final int Widget_Design_ScrimInsetsFrameLayout=0x7f0c019a;
-        public static final int Widget_Design_Snackbar=0x7f0c019b;
+        public static final int Widget_Design_AppBarLayout=0x7f0c0191;
+        public static final int Widget_Design_BottomNavigationView=0x7f0c0192;
+        public static final int Widget_Design_BottomSheet_Modal=0x7f0c0193;
+        public static final int Widget_Design_CollapsingToolbar=0x7f0c0194;
+        public static final int Widget_Design_CoordinatorLayout=0x7f0c0195;
+        public static final int Widget_Design_FloatingActionButton=0x7f0c0196;
+        public static final int Widget_Design_NavigationView=0x7f0c0197;
+        public static final int Widget_Design_ScrimInsetsFrameLayout=0x7f0c0198;
+        public static final int Widget_Design_Snackbar=0x7f0c0199;
         public static final int Widget_Design_TabLayout=0x7f0c0001;
-        public static final int Widget_Design_TextInputLayout=0x7f0c019c;
-        public static final int amu_Bubble_TextAppearance_Dark=0x7f0c019d;
-        public static final int amu_Bubble_TextAppearance_Light=0x7f0c019e;
-        public static final int amu_ClusterIcon_TextAppearance=0x7f0c019f;
-        public static final int customActionBar=0x7f0c01a0;
-        public static final int dialog=0x7f0c01a1;
-        public static final int dialog_animation=0x7f0c01a2;
+        public static final int Widget_Design_TextInputLayout=0x7f0c019a;
+        public static final int amu_Bubble_TextAppearance_Dark=0x7f0c019b;
+        public static final int amu_Bubble_TextAppearance_Light=0x7f0c019c;
+        public static final int amu_ClusterIcon_TextAppearance=0x7f0c019d;
+        public static final int customActionBar=0x7f0c019e;
+        public static final int dialog=0x7f0c019f;
+        public static final int dialog_animation=0x7f0c01a0;
     }
     public static final class transition {
         public static final int slide_right=0x7f070000;
@@ -5128,12 +5113,12 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AVLoadingIndicatorView_indicatorColor com.mtaj.mtaj_08.cableplus_new:indicatorColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AVLoadingIndicatorView_indicatorName com.mtaj.mtaj_08.cableplus_new:indicatorName}</code></td><td></td></tr>
-           <tr><td><code>{@link #AVLoadingIndicatorView_maxHeight com.mtaj.mtaj_08.cableplus_new:maxHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #AVLoadingIndicatorView_maxWidth com.mtaj.mtaj_08.cableplus_new:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #AVLoadingIndicatorView_minHeight com.mtaj.mtaj_08.cableplus_new:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #AVLoadingIndicatorView_minWidth com.mtaj.mtaj_08.cableplus_new:minWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #AVLoadingIndicatorView_indicatorColor com.cable.cloud:indicatorColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AVLoadingIndicatorView_indicatorName com.cable.cloud:indicatorName}</code></td><td></td></tr>
+           <tr><td><code>{@link #AVLoadingIndicatorView_maxHeight com.cable.cloud:maxHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AVLoadingIndicatorView_maxWidth com.cable.cloud:maxWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #AVLoadingIndicatorView_minHeight com.cable.cloud:minHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AVLoadingIndicatorView_minWidth com.cable.cloud:minWidth}</code></td><td></td></tr>
            </table>
            @see #AVLoadingIndicatorView_indicatorColor
            @see #AVLoadingIndicatorView_indicatorName
@@ -5147,7 +5132,7 @@ containing a value of this type.
             0x7f010008, 0x7f010009
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#indicatorColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#indicatorColor}
           attribute's value can be found in the {@link #AVLoadingIndicatorView} array.
 
 
@@ -5158,11 +5143,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:indicatorColor
+          @attr name com.cable.cloud:indicatorColor
         */
         public static final int AVLoadingIndicatorView_indicatorColor = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#indicatorName}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#indicatorName}
           attribute's value can be found in the {@link #AVLoadingIndicatorView} array.
 
 
@@ -5172,11 +5157,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:indicatorName
+          @attr name com.cable.cloud:indicatorName
         */
         public static final int AVLoadingIndicatorView_indicatorName = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#maxHeight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#maxHeight}
           attribute's value can be found in the {@link #AVLoadingIndicatorView} array.
 
 
@@ -5188,11 +5173,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:maxHeight
+          @attr name com.cable.cloud:maxHeight
         */
         public static final int AVLoadingIndicatorView_maxHeight = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#maxWidth}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#maxWidth}
           attribute's value can be found in the {@link #AVLoadingIndicatorView} array.
 
 
@@ -5204,11 +5189,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:maxWidth
+          @attr name com.cable.cloud:maxWidth
         */
         public static final int AVLoadingIndicatorView_maxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#minHeight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#minHeight}
           attribute's value can be found in the {@link #AVLoadingIndicatorView} array.
 
 
@@ -5220,11 +5205,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:minHeight
+          @attr name com.cable.cloud:minHeight
         */
         public static final int AVLoadingIndicatorView_minHeight = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#minWidth}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#minWidth}
           attribute's value can be found in the {@link #AVLoadingIndicatorView} array.
 
 
@@ -5236,7 +5221,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:minWidth
+          @attr name com.cable.cloud:minWidth
         */
         public static final int AVLoadingIndicatorView_minWidth = 0;
         /** Attributes that can be used with a ActionBar.
@@ -5245,35 +5230,35 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background com.mtaj.mtaj_08.cableplus_new:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit com.mtaj.mtaj_08.cableplus_new:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked com.mtaj.mtaj_08.cableplus_new:backgroundStacked}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEnd com.mtaj.mtaj_08.cableplus_new:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEndWithActions com.mtaj.mtaj_08.cableplus_new:contentInsetEndWithActions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetLeft com.mtaj.mtaj_08.cableplus_new:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetRight com.mtaj.mtaj_08.cableplus_new:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStart com.mtaj.mtaj_08.cableplus_new:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStartWithNavigation com.mtaj.mtaj_08.cableplus_new:contentInsetStartWithNavigation}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout com.mtaj.mtaj_08.cableplus_new:customNavigationLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions com.mtaj.mtaj_08.cableplus_new:displayOptions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_divider com.mtaj.mtaj_08.cableplus_new:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_elevation com.mtaj.mtaj_08.cableplus_new:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_height com.mtaj.mtaj_08.cableplus_new:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.mtaj.mtaj_08.cableplus_new:hideOnContentScroll}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.mtaj.mtaj_08.cableplus_new:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout com.mtaj.mtaj_08.cableplus_new:homeLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_icon com.mtaj.mtaj_08.cableplus_new:icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.mtaj.mtaj_08.cableplus_new:indeterminateProgressStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding com.mtaj.mtaj_08.cableplus_new:itemPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_logo com.mtaj.mtaj_08.cableplus_new:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode com.mtaj.mtaj_08.cableplus_new:navigationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_popupTheme com.mtaj.mtaj_08.cableplus_new:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding com.mtaj.mtaj_08.cableplus_new:progressBarPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle com.mtaj.mtaj_08.cableplus_new:progressBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle com.mtaj.mtaj_08.cableplus_new:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.mtaj.mtaj_08.cableplus_new:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_title com.mtaj.mtaj_08.cableplus_new:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle com.mtaj.mtaj_08.cableplus_new:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_background com.cable.cloud:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit com.cable.cloud:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked com.cable.cloud:backgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEnd com.cable.cloud:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEndWithActions com.cable.cloud:contentInsetEndWithActions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetLeft com.cable.cloud:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetRight com.cable.cloud:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStart com.cable.cloud:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStartWithNavigation com.cable.cloud:contentInsetStartWithNavigation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout com.cable.cloud:customNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions com.cable.cloud:displayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_divider com.cable.cloud:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_elevation com.cable.cloud:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_height com.cable.cloud:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.cable.cloud:hideOnContentScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.cable.cloud:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout com.cable.cloud:homeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_icon com.cable.cloud:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.cable.cloud:indeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding com.cable.cloud:itemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_logo com.cable.cloud:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode com.cable.cloud:navigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_popupTheme com.cable.cloud:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding com.cable.cloud:progressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle com.cable.cloud:progressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle com.cable.cloud:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.cable.cloud:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_title com.cable.cloud:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle com.cable.cloud:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -5316,17 +5301,17 @@ containing a value of this type.
             0x7f01006e
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#background}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:background
+          @attr name com.cable.cloud:background
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5334,11 +5319,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:backgroundSplit
+          @attr name com.cable.cloud:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5346,11 +5331,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:backgroundStacked
+          @attr name com.cable.cloud:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5362,11 +5347,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetEnd
+          @attr name com.cable.cloud:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 21;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetEndWithActions}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetEndWithActions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5378,11 +5363,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetEndWithActions
+          @attr name com.cable.cloud:contentInsetEndWithActions
         */
         public static final int ActionBar_contentInsetEndWithActions = 25;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5394,11 +5379,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetLeft
+          @attr name com.cable.cloud:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 22;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5410,11 +5395,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetRight
+          @attr name com.cable.cloud:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 23;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5426,11 +5411,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetStart
+          @attr name com.cable.cloud:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 20;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetStartWithNavigation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetStartWithNavigation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5442,21 +5427,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetStartWithNavigation
+          @attr name com.cable.cloud:contentInsetStartWithNavigation
         */
         public static final int ActionBar_contentInsetStartWithNavigation = 24;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:customNavigationLayout
+          @attr name com.cable.cloud:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5474,21 +5459,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:displayOptions
+          @attr name com.cable.cloud:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:divider
+          @attr name com.cable.cloud:divider
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#elevation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5500,11 +5485,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:elevation
+          @attr name com.cable.cloud:elevation
         */
         public static final int ActionBar_elevation = 26;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#height}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5516,11 +5501,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:height
+          @attr name com.cable.cloud:height
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#hideOnContentScroll}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#hideOnContentScroll}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5530,51 +5515,51 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:hideOnContentScroll
+          @attr name com.cable.cloud:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 19;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:homeAsUpIndicator
+          @attr name com.cable.cloud:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 28;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:homeLayout
+          @attr name com.cable.cloud:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#icon}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:icon
+          @attr name com.cable.cloud:icon
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:indeterminateProgressStyle
+          @attr name com.cable.cloud:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5586,21 +5571,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:itemPadding
+          @attr name com.cable.cloud:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:logo
+          @attr name com.cable.cloud:logo
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5614,21 +5599,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>listMode</code></td><td>1</td><td></td></tr>
 <tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:navigationMode
+          @attr name com.cable.cloud:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#popupTheme}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:popupTheme
+          @attr name com.cable.cloud:popupTheme
         */
         public static final int ActionBar_popupTheme = 27;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5640,21 +5625,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:progressBarPadding
+          @attr name com.cable.cloud:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:progressBarStyle
+          @attr name com.cable.cloud:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5664,21 +5649,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:subtitle
+          @attr name com.cable.cloud:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:subtitleTextStyle
+          @attr name com.cable.cloud:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#title}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -5688,17 +5673,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:title
+          @attr name com.cable.cloud:title
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleTextStyle
+          @attr name com.cable.cloud:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /** Attributes that can be used with a ActionBarLayout.
@@ -5750,12 +5735,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background com.mtaj.mtaj_08.cableplus_new:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit com.mtaj.mtaj_08.cableplus_new:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_closeItemLayout com.mtaj.mtaj_08.cableplus_new:closeItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_height com.mtaj.mtaj_08.cableplus_new:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.mtaj.mtaj_08.cableplus_new:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle com.mtaj.mtaj_08.cableplus_new:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_background com.cable.cloud:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit com.cable.cloud:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_closeItemLayout com.cable.cloud:closeItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_height com.cable.cloud:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.cable.cloud:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle com.cable.cloud:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -5769,17 +5754,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010014, 0x7f010024
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#background}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:background
+          @attr name com.cable.cloud:background
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -5787,21 +5772,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:backgroundSplit
+          @attr name com.cable.cloud:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#closeItemLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#closeItemLayout}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:closeItemLayout
+          @attr name com.cable.cloud:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#height}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -5813,27 +5798,27 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:height
+          @attr name com.cable.cloud:height
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:subtitleTextStyle
+          @attr name com.cable.cloud:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleTextStyle
+          @attr name com.cable.cloud:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /** Attributes that can be used with a ActivityChooserView.
@@ -5842,8 +5827,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.mtaj.mtaj_08.cableplus_new:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.mtaj.mtaj_08.cableplus_new:initialActivityCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.cable.cloud:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.cable.cloud:initialActivityCount}</code></td><td></td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -5852,17 +5837,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010025, 0x7f010026
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:expandActivityOverflowButtonDrawable
+          @attr name com.cable.cloud:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -5872,7 +5857,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:initialActivityCount
+          @attr name com.cable.cloud:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AlertDialog.
@@ -5882,12 +5867,12 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.mtaj.mtaj_08.cableplus_new:buttonPanelSideLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listItemLayout com.mtaj.mtaj_08.cableplus_new:listItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listLayout com.mtaj.mtaj_08.cableplus_new:listLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.mtaj.mtaj_08.cableplus_new:multiChoiceItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_showTitle com.mtaj.mtaj_08.cableplus_new:showTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.mtaj.mtaj_08.cableplus_new:singleChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.cable.cloud:buttonPanelSideLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listItemLayout com.cable.cloud:listItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listLayout com.cable.cloud:listLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.cable.cloud:multiChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_showTitle com.cable.cloud:showTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.cable.cloud:singleChoiceItemLayout}</code></td><td></td></tr>
            </table>
            @see #AlertDialog_android_layout
            @see #AlertDialog_buttonPanelSideLayout
@@ -5908,47 +5893,47 @@ containing a value of this type.
         */
         public static final int AlertDialog_android_layout = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonPanelSideLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonPanelSideLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonPanelSideLayout
+          @attr name com.cable.cloud:buttonPanelSideLayout
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listItemLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:listItemLayout
+          @attr name com.cable.cloud:listItemLayout
         */
         public static final int AlertDialog_listItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:listLayout
+          @attr name com.cable.cloud:listLayout
         */
         public static final int AlertDialog_listLayout = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#multiChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#multiChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:multiChoiceItemLayout
+          @attr name com.cable.cloud:multiChoiceItemLayout
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#showTitle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#showTitle}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
@@ -5958,17 +5943,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:showTitle
+          @attr name com.cable.cloud:showTitle
         */
         public static final int AlertDialog_showTitle = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#singleChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#singleChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:singleChoiceItemLayout
+          @attr name com.cable.cloud:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
         /** Attributes that can be used with a AppBarLayout.
@@ -5980,8 +5965,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #AppBarLayout_android_background android:background}</code></td><td></td></tr>
            <tr><td><code>{@link #AppBarLayout_android_keyboardNavigationCluster android:keyboardNavigationCluster}</code></td><td></td></tr>
            <tr><td><code>{@link #AppBarLayout_android_touchscreenBlocksFocus android:touchscreenBlocksFocus}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppBarLayout_elevation com.mtaj.mtaj_08.cableplus_new:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppBarLayout_expanded com.mtaj.mtaj_08.cableplus_new:expanded}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_elevation com.cable.cloud:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_expanded com.cable.cloud:expanded}</code></td><td></td></tr>
            </table>
            @see #AppBarLayout_android_background
            @see #AppBarLayout_android_keyboardNavigationCluster
@@ -6012,7 +5997,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppBarLayout_android_touchscreenBlocksFocus = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#elevation}
           attribute's value can be found in the {@link #AppBarLayout} array.
 
 
@@ -6024,11 +6009,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:elevation
+          @attr name com.cable.cloud:elevation
         */
         public static final int AppBarLayout_elevation = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#expanded}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#expanded}
           attribute's value can be found in the {@link #AppBarLayout} array.
 
 
@@ -6038,7 +6023,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:expanded
+          @attr name com.cable.cloud:expanded
         */
         public static final int AppBarLayout_expanded = 4;
         /** Attributes that can be used with a AppBarLayoutStates.
@@ -6047,8 +6032,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AppBarLayoutStates_state_collapsed com.mtaj.mtaj_08.cableplus_new:state_collapsed}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppBarLayoutStates_state_collapsible com.mtaj.mtaj_08.cableplus_new:state_collapsible}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayoutStates_state_collapsed com.cable.cloud:state_collapsed}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayoutStates_state_collapsible com.cable.cloud:state_collapsible}</code></td><td></td></tr>
            </table>
            @see #AppBarLayoutStates_state_collapsed
            @see #AppBarLayoutStates_state_collapsible
@@ -6057,7 +6042,7 @@ containing a value of this type.
             0x7f01002e, 0x7f01002f
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#state_collapsed}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#state_collapsed}
           attribute's value can be found in the {@link #AppBarLayoutStates} array.
 
 
@@ -6067,11 +6052,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:state_collapsed
+          @attr name com.cable.cloud:state_collapsed
         */
         public static final int AppBarLayoutStates_state_collapsed = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#state_collapsible}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#state_collapsible}
           attribute's value can be found in the {@link #AppBarLayoutStates} array.
 
 
@@ -6081,7 +6066,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:state_collapsible
+          @attr name com.cable.cloud:state_collapsible
         */
         public static final int AppBarLayoutStates_state_collapsible = 1;
         /** Attributes that can be used with a AppBarLayout_Layout.
@@ -6090,8 +6075,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AppBarLayout_Layout_layout_scrollFlags com.mtaj.mtaj_08.cableplus_new:layout_scrollFlags}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppBarLayout_Layout_layout_scrollInterpolator com.mtaj.mtaj_08.cableplus_new:layout_scrollInterpolator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_Layout_layout_scrollFlags com.cable.cloud:layout_scrollFlags}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_Layout_layout_scrollInterpolator com.cable.cloud:layout_scrollInterpolator}</code></td><td></td></tr>
            </table>
            @see #AppBarLayout_Layout_layout_scrollFlags
            @see #AppBarLayout_Layout_layout_scrollInterpolator
@@ -6100,7 +6085,7 @@ containing a value of this type.
             0x7f010030, 0x7f010031
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout_scrollFlags}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout_scrollFlags}
           attribute's value can be found in the {@link #AppBarLayout_Layout} array.
 
 
@@ -6116,17 +6101,17 @@ containing a value of this type.
 <tr><td><code>enterAlwaysCollapsed</code></td><td>0x8</td><td></td></tr>
 <tr><td><code>snap</code></td><td>0x10</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout_scrollFlags
+          @attr name com.cable.cloud:layout_scrollFlags
         */
         public static final int AppBarLayout_Layout_layout_scrollFlags = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout_scrollInterpolator}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout_scrollInterpolator}
           attribute's value can be found in the {@link #AppBarLayout_Layout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout_scrollInterpolator
+          @attr name com.cable.cloud:layout_scrollInterpolator
         */
         public static final int AppBarLayout_Layout_layout_scrollInterpolator = 1;
         /** Attributes that can be used with a AppCompatImageView.
@@ -6136,9 +6121,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatImageView_android_src android:src}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatImageView_srcCompat com.mtaj.mtaj_08.cableplus_new:srcCompat}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatImageView_tint com.mtaj.mtaj_08.cableplus_new:tint}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatImageView_tintMode com.mtaj.mtaj_08.cableplus_new:tintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatImageView_srcCompat com.cable.cloud:srcCompat}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatImageView_tint com.cable.cloud:tint}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatImageView_tintMode com.cable.cloud:tintMode}</code></td><td></td></tr>
            </table>
            @see #AppCompatImageView_android_src
            @see #AppCompatImageView_srcCompat
@@ -6155,17 +6140,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatImageView_android_src = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#srcCompat}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#srcCompat}
           attribute's value can be found in the {@link #AppCompatImageView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:srcCompat
+          @attr name com.cable.cloud:srcCompat
         */
         public static final int AppCompatImageView_srcCompat = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tint}
           attribute's value can be found in the {@link #AppCompatImageView} array.
 
 
@@ -6176,11 +6161,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tint
+          @attr name com.cable.cloud:tint
         */
         public static final int AppCompatImageView_tint = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tintMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tintMode}
           attribute's value can be found in the {@link #AppCompatImageView} array.
 
 
@@ -6196,7 +6181,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:tintMode
+          @attr name com.cable.cloud:tintMode
         */
         public static final int AppCompatImageView_tintMode = 3;
         /** Attributes that can be used with a AppCompatSeekBar.
@@ -6206,9 +6191,9 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatSeekBar_android_thumb android:thumb}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatSeekBar_tickMark com.mtaj.mtaj_08.cableplus_new:tickMark}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatSeekBar_tickMarkTint com.mtaj.mtaj_08.cableplus_new:tickMarkTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatSeekBar_tickMarkTintMode com.mtaj.mtaj_08.cableplus_new:tickMarkTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatSeekBar_tickMark com.cable.cloud:tickMark}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatSeekBar_tickMarkTint com.cable.cloud:tickMarkTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatSeekBar_tickMarkTintMode com.cable.cloud:tickMarkTintMode}</code></td><td></td></tr>
            </table>
            @see #AppCompatSeekBar_android_thumb
            @see #AppCompatSeekBar_tickMark
@@ -6225,17 +6210,17 @@ containing a value of this type.
         */
         public static final int AppCompatSeekBar_android_thumb = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tickMark}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tickMark}
           attribute's value can be found in the {@link #AppCompatSeekBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:tickMark
+          @attr name com.cable.cloud:tickMark
         */
         public static final int AppCompatSeekBar_tickMark = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tickMarkTint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tickMarkTint}
           attribute's value can be found in the {@link #AppCompatSeekBar} array.
 
 
@@ -6246,11 +6231,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tickMarkTint
+          @attr name com.cable.cloud:tickMarkTint
         */
         public static final int AppCompatSeekBar_tickMarkTint = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tickMarkTintMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tickMarkTintMode}
           attribute's value can be found in the {@link #AppCompatSeekBar} array.
 
 
@@ -6267,7 +6252,7 @@ containing a value of this type.
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 <tr><td><code>add</code></td><td>16</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:tickMarkTintMode
+          @attr name com.cable.cloud:tickMarkTintMode
         */
         public static final int AppCompatSeekBar_tickMarkTintMode = 3;
         /** Attributes that can be used with a AppCompatTextHelper.
@@ -6345,13 +6330,13 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_autoSizeMaxTextSize com.mtaj.mtaj_08.cableplus_new:autoSizeMaxTextSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_autoSizeMinTextSize com.mtaj.mtaj_08.cableplus_new:autoSizeMinTextSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_autoSizePresetSizes com.mtaj.mtaj_08.cableplus_new:autoSizePresetSizes}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_autoSizeStepGranularity com.mtaj.mtaj_08.cableplus_new:autoSizeStepGranularity}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_autoSizeTextType com.mtaj.mtaj_08.cableplus_new:autoSizeTextType}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_fontFamily com.mtaj.mtaj_08.cableplus_new:fontFamily}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.mtaj.mtaj_08.cableplus_new:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_autoSizeMaxTextSize com.cable.cloud:autoSizeMaxTextSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_autoSizeMinTextSize com.cable.cloud:autoSizeMinTextSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_autoSizePresetSizes com.cable.cloud:autoSizePresetSizes}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_autoSizeStepGranularity com.cable.cloud:autoSizeStepGranularity}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_autoSizeTextType com.cable.cloud:autoSizeTextType}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_fontFamily com.cable.cloud:fontFamily}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.cable.cloud:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #AppCompatTextView_android_textAppearance
            @see #AppCompatTextView_autoSizeMaxTextSize
@@ -6373,7 +6358,7 @@ containing a value of this type.
         */
         public static final int AppCompatTextView_android_textAppearance = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#autoSizeMaxTextSize}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#autoSizeMaxTextSize}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
@@ -6385,11 +6370,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:autoSizeMaxTextSize
+          @attr name com.cable.cloud:autoSizeMaxTextSize
         */
         public static final int AppCompatTextView_autoSizeMaxTextSize = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#autoSizeMinTextSize}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#autoSizeMinTextSize}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
@@ -6401,21 +6386,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:autoSizeMinTextSize
+          @attr name com.cable.cloud:autoSizeMinTextSize
         */
         public static final int AppCompatTextView_autoSizeMinTextSize = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#autoSizePresetSizes}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#autoSizePresetSizes}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:autoSizePresetSizes
+          @attr name com.cable.cloud:autoSizePresetSizes
         */
         public static final int AppCompatTextView_autoSizePresetSizes = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#autoSizeStepGranularity}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#autoSizeStepGranularity}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
@@ -6427,11 +6412,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:autoSizeStepGranularity
+          @attr name com.cable.cloud:autoSizeStepGranularity
         */
         public static final int AppCompatTextView_autoSizeStepGranularity = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#autoSizeTextType}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#autoSizeTextType}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
@@ -6444,11 +6429,11 @@ containing a value of this type.
 <tr><td><code>none</code></td><td>0</td><td></td></tr>
 <tr><td><code>uniform</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:autoSizeTextType
+          @attr name com.cable.cloud:autoSizeTextType
         */
         public static final int AppCompatTextView_autoSizeTextType = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fontFamily}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fontFamily}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
@@ -6458,18 +6443,18 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:fontFamily
+          @attr name com.cable.cloud:fontFamily
         */
         public static final int AppCompatTextView_fontFamily = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textAllCaps}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textAllCaps
+          @attr name com.cable.cloud:textAllCaps
         */
         public static final int AppCompatTextView_textAllCaps = 1;
         /** Attributes that can be used with a AppCompatTheme.
@@ -6478,125 +6463,125 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.mtaj.mtaj_08.cableplus_new:actionBarDivider}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.mtaj.mtaj_08.cableplus_new:actionBarItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.mtaj.mtaj_08.cableplus_new:actionBarPopupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarSize com.mtaj.mtaj_08.cableplus_new:actionBarSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.mtaj.mtaj_08.cableplus_new:actionBarSplitStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.mtaj.mtaj_08.cableplus_new:actionBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.mtaj.mtaj_08.cableplus_new:actionBarTabBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.mtaj.mtaj_08.cableplus_new:actionBarTabStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.mtaj.mtaj_08.cableplus_new:actionBarTabTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.mtaj.mtaj_08.cableplus_new:actionBarTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.mtaj.mtaj_08.cableplus_new:actionBarWidgetTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.mtaj.mtaj_08.cableplus_new:actionButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.mtaj.mtaj_08.cableplus_new:actionDropDownStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.mtaj.mtaj_08.cableplus_new:actionMenuTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.mtaj.mtaj_08.cableplus_new:actionMenuTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.mtaj.mtaj_08.cableplus_new:actionModeBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.mtaj.mtaj_08.cableplus_new:actionModeCloseButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.mtaj.mtaj_08.cableplus_new:actionModeCloseDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.mtaj.mtaj_08.cableplus_new:actionModeCopyDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.mtaj.mtaj_08.cableplus_new:actionModeCutDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.mtaj.mtaj_08.cableplus_new:actionModeFindDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.mtaj.mtaj_08.cableplus_new:actionModePasteDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.mtaj.mtaj_08.cableplus_new:actionModePopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.mtaj.mtaj_08.cableplus_new:actionModeSelectAllDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.mtaj.mtaj_08.cableplus_new:actionModeShareDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.mtaj.mtaj_08.cableplus_new:actionModeSplitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.mtaj.mtaj_08.cableplus_new:actionModeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.mtaj.mtaj_08.cableplus_new:actionModeWebSearchDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.mtaj.mtaj_08.cableplus_new:actionOverflowButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.mtaj.mtaj_08.cableplus_new:actionOverflowMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.mtaj.mtaj_08.cableplus_new:activityChooserViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.mtaj.mtaj_08.cableplus_new:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.mtaj.mtaj_08.cableplus_new:alertDialogCenterButtons}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.mtaj.mtaj_08.cableplus_new:alertDialogStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.mtaj.mtaj_08.cableplus_new:alertDialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.cable.cloud:actionBarDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.cable.cloud:actionBarItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.cable.cloud:actionBarPopupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarSize com.cable.cloud:actionBarSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.cable.cloud:actionBarSplitStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.cable.cloud:actionBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.cable.cloud:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.cable.cloud:actionBarTabStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.cable.cloud:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.cable.cloud:actionBarTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.cable.cloud:actionBarWidgetTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.cable.cloud:actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.cable.cloud:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.cable.cloud:actionMenuTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.cable.cloud:actionMenuTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.cable.cloud:actionModeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.cable.cloud:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.cable.cloud:actionModeCloseDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.cable.cloud:actionModeCopyDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.cable.cloud:actionModeCutDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.cable.cloud:actionModeFindDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.cable.cloud:actionModePasteDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.cable.cloud:actionModePopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.cable.cloud:actionModeSelectAllDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.cable.cloud:actionModeShareDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.cable.cloud:actionModeSplitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.cable.cloud:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.cable.cloud:actionModeWebSearchDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.cable.cloud:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.cable.cloud:actionOverflowMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.cable.cloud:activityChooserViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.cable.cloud:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.cable.cloud:alertDialogCenterButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.cable.cloud:alertDialogStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.cable.cloud:alertDialogTheme}</code></td><td></td></tr>
            <tr><td><code>{@link #AppCompatTheme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #AppCompatTheme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.mtaj.mtaj_08.cableplus_new:autoCompleteTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.mtaj.mtaj_08.cableplus_new:borderlessButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.mtaj.mtaj_08.cableplus_new:buttonBarButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.mtaj.mtaj_08.cableplus_new:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.mtaj.mtaj_08.cableplus_new:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.mtaj.mtaj_08.cableplus_new:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.mtaj.mtaj_08.cableplus_new:buttonBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonStyle com.mtaj.mtaj_08.cableplus_new:buttonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.mtaj.mtaj_08.cableplus_new:buttonStyleSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.mtaj.mtaj_08.cableplus_new:checkboxStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.mtaj.mtaj_08.cableplus_new:checkedTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorAccent com.mtaj.mtaj_08.cableplus_new:colorAccent}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.mtaj.mtaj_08.cableplus_new:colorBackgroundFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.mtaj.mtaj_08.cableplus_new:colorButtonNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.mtaj.mtaj_08.cableplus_new:colorControlActivated}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.mtaj.mtaj_08.cableplus_new:colorControlHighlight}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.mtaj.mtaj_08.cableplus_new:colorControlNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorError com.mtaj.mtaj_08.cableplus_new:colorError}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorPrimary com.mtaj.mtaj_08.cableplus_new:colorPrimary}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.mtaj.mtaj_08.cableplus_new:colorPrimaryDark}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.mtaj.mtaj_08.cableplus_new:colorSwitchThumbNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_controlBackground com.mtaj.mtaj_08.cableplus_new:controlBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.mtaj.mtaj_08.cableplus_new:dialogPreferredPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dialogTheme com.mtaj.mtaj_08.cableplus_new:dialogTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.mtaj.mtaj_08.cableplus_new:dividerHorizontal}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dividerVertical com.mtaj.mtaj_08.cableplus_new:dividerVertical}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.mtaj.mtaj_08.cableplus_new:dropDownListViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.mtaj.mtaj_08.cableplus_new:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_editTextBackground com.mtaj.mtaj_08.cableplus_new:editTextBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_editTextColor com.mtaj.mtaj_08.cableplus_new:editTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_editTextStyle com.mtaj.mtaj_08.cableplus_new:editTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.mtaj.mtaj_08.cableplus_new:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.mtaj.mtaj_08.cableplus_new:imageButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.mtaj.mtaj_08.cableplus_new:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.mtaj.mtaj_08.cableplus_new:listDividerAlertDialog}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listMenuViewStyle com.mtaj.mtaj_08.cableplus_new:listMenuViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.mtaj.mtaj_08.cableplus_new:listPopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.mtaj.mtaj_08.cableplus_new:listPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.mtaj.mtaj_08.cableplus_new:listPreferredItemHeightLarge}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.mtaj.mtaj_08.cableplus_new:listPreferredItemHeightSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.mtaj.mtaj_08.cableplus_new:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.mtaj.mtaj_08.cableplus_new:listPreferredItemPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_panelBackground com.mtaj.mtaj_08.cableplus_new:panelBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.mtaj.mtaj_08.cableplus_new:panelMenuListTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.mtaj.mtaj_08.cableplus_new:panelMenuListWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.mtaj.mtaj_08.cableplus_new:popupMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.mtaj.mtaj_08.cableplus_new:popupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.mtaj.mtaj_08.cableplus_new:radioButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.mtaj.mtaj_08.cableplus_new:ratingBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.mtaj.mtaj_08.cableplus_new:ratingBarStyleIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.mtaj.mtaj_08.cableplus_new:ratingBarStyleSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.mtaj.mtaj_08.cableplus_new:searchViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.mtaj.mtaj_08.cableplus_new:seekBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.mtaj.mtaj_08.cableplus_new:selectableItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.mtaj.mtaj_08.cableplus_new:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.mtaj.mtaj_08.cableplus_new:spinnerDropDownItemStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.mtaj.mtaj_08.cableplus_new:spinnerStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_switchStyle com.mtaj.mtaj_08.cableplus_new:switchStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.mtaj.mtaj_08.cableplus_new:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.mtaj.mtaj_08.cableplus_new:textAppearanceListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSecondary com.mtaj.mtaj_08.cableplus_new:textAppearanceListItemSecondary}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.mtaj.mtaj_08.cableplus_new:textAppearanceListItemSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearancePopupMenuHeader com.mtaj.mtaj_08.cableplus_new:textAppearancePopupMenuHeader}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.mtaj.mtaj_08.cableplus_new:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.mtaj.mtaj_08.cableplus_new:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.mtaj.mtaj_08.cableplus_new:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.mtaj.mtaj_08.cableplus_new:textColorAlertDialogListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.mtaj.mtaj_08.cableplus_new:textColorSearchUrl}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.mtaj.mtaj_08.cableplus_new:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.mtaj.mtaj_08.cableplus_new:toolbarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_tooltipForegroundColor com.mtaj.mtaj_08.cableplus_new:tooltipForegroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_tooltipFrameBackground com.mtaj.mtaj_08.cableplus_new:tooltipFrameBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowActionBar com.mtaj.mtaj_08.cableplus_new:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.mtaj.mtaj_08.cableplus_new:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.mtaj.mtaj_08.cableplus_new:windowActionModeOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.mtaj.mtaj_08.cableplus_new:windowFixedHeightMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.mtaj.mtaj_08.cableplus_new:windowFixedHeightMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.mtaj.mtaj_08.cableplus_new:windowFixedWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.mtaj.mtaj_08.cableplus_new:windowFixedWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.mtaj.mtaj_08.cableplus_new:windowMinWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.mtaj.mtaj_08.cableplus_new:windowMinWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.mtaj.mtaj_08.cableplus_new:windowNoTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.cable.cloud:autoCompleteTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.cable.cloud:borderlessButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.cable.cloud:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.cable.cloud:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.cable.cloud:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.cable.cloud:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.cable.cloud:buttonBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonStyle com.cable.cloud:buttonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.cable.cloud:buttonStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.cable.cloud:checkboxStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.cable.cloud:checkedTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorAccent com.cable.cloud:colorAccent}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.cable.cloud:colorBackgroundFloating}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.cable.cloud:colorButtonNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.cable.cloud:colorControlActivated}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.cable.cloud:colorControlHighlight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.cable.cloud:colorControlNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorError com.cable.cloud:colorError}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorPrimary com.cable.cloud:colorPrimary}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.cable.cloud:colorPrimaryDark}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.cable.cloud:colorSwitchThumbNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_controlBackground com.cable.cloud:controlBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.cable.cloud:dialogPreferredPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dialogTheme com.cable.cloud:dialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.cable.cloud:dividerHorizontal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dividerVertical com.cable.cloud:dividerVertical}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.cable.cloud:dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.cable.cloud:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_editTextBackground com.cable.cloud:editTextBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_editTextColor com.cable.cloud:editTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_editTextStyle com.cable.cloud:editTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.cable.cloud:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.cable.cloud:imageButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.cable.cloud:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.cable.cloud:listDividerAlertDialog}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listMenuViewStyle com.cable.cloud:listMenuViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.cable.cloud:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.cable.cloud:listPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.cable.cloud:listPreferredItemHeightLarge}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.cable.cloud:listPreferredItemHeightSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.cable.cloud:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.cable.cloud:listPreferredItemPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_panelBackground com.cable.cloud:panelBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.cable.cloud:panelMenuListTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.cable.cloud:panelMenuListWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.cable.cloud:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.cable.cloud:popupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.cable.cloud:radioButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.cable.cloud:ratingBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.cable.cloud:ratingBarStyleIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.cable.cloud:ratingBarStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.cable.cloud:searchViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.cable.cloud:seekBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.cable.cloud:selectableItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.cable.cloud:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.cable.cloud:spinnerDropDownItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.cable.cloud:spinnerStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_switchStyle com.cable.cloud:switchStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.cable.cloud:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.cable.cloud:textAppearanceListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSecondary com.cable.cloud:textAppearanceListItemSecondary}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.cable.cloud:textAppearanceListItemSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearancePopupMenuHeader com.cable.cloud:textAppearancePopupMenuHeader}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.cable.cloud:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.cable.cloud:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.cable.cloud:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.cable.cloud:textColorAlertDialogListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.cable.cloud:textColorSearchUrl}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.cable.cloud:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.cable.cloud:toolbarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_tooltipForegroundColor com.cable.cloud:tooltipForegroundColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_tooltipFrameBackground com.cable.cloud:tooltipFrameBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowActionBar com.cable.cloud:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.cable.cloud:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.cable.cloud:windowActionModeOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.cable.cloud:windowFixedHeightMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.cable.cloud:windowFixedHeightMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.cable.cloud:windowFixedWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.cable.cloud:windowFixedWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.cable.cloud:windowMinWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.cable.cloud:windowMinWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.cable.cloud:windowNoTitle}</code></td><td></td></tr>
            </table>
            @see #AppCompatTheme_actionBarDivider
            @see #AppCompatTheme_actionBarItemBackground
@@ -6751,37 +6736,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100b1, 0x7f0100b2, 0x7f0100b3
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarDivider}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarDivider}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarDivider
+          @attr name com.cable.cloud:actionBarDivider
         */
         public static final int AppCompatTheme_actionBarDivider = 23;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarItemBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarItemBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarItemBackground
+          @attr name com.cable.cloud:actionBarItemBackground
         */
         public static final int AppCompatTheme_actionBarItemBackground = 24;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarPopupTheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarPopupTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarPopupTheme
+          @attr name com.cable.cloud:actionBarPopupTheme
         */
         public static final int AppCompatTheme_actionBarPopupTheme = 17;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarSize}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarSize}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -6801,111 +6786,111 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarSize
+          @attr name com.cable.cloud:actionBarSize
         */
         public static final int AppCompatTheme_actionBarSize = 22;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarSplitStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarSplitStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarSplitStyle
+          @attr name com.cable.cloud:actionBarSplitStyle
         */
         public static final int AppCompatTheme_actionBarSplitStyle = 19;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarStyle
+          @attr name com.cable.cloud:actionBarStyle
         */
         public static final int AppCompatTheme_actionBarStyle = 18;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarTabBarStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarTabBarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarTabBarStyle
+          @attr name com.cable.cloud:actionBarTabBarStyle
         */
         public static final int AppCompatTheme_actionBarTabBarStyle = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarTabStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarTabStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarTabStyle
+          @attr name com.cable.cloud:actionBarTabStyle
         */
         public static final int AppCompatTheme_actionBarTabStyle = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarTabTextStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarTabTextStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarTabTextStyle
+          @attr name com.cable.cloud:actionBarTabTextStyle
         */
         public static final int AppCompatTheme_actionBarTabTextStyle = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarTheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarTheme
+          @attr name com.cable.cloud:actionBarTheme
         */
         public static final int AppCompatTheme_actionBarTheme = 20;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionBarWidgetTheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionBarWidgetTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionBarWidgetTheme
+          @attr name com.cable.cloud:actionBarWidgetTheme
         */
         public static final int AppCompatTheme_actionBarWidgetTheme = 21;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionButtonStyle
+          @attr name com.cable.cloud:actionButtonStyle
         */
         public static final int AppCompatTheme_actionButtonStyle = 50;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionDropDownStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionDropDownStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionDropDownStyle
+          @attr name com.cable.cloud:actionDropDownStyle
         */
         public static final int AppCompatTheme_actionDropDownStyle = 46;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionMenuTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionMenuTextAppearance}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionMenuTextAppearance
+          @attr name com.cable.cloud:actionMenuTextAppearance
         */
         public static final int AppCompatTheme_actionMenuTextAppearance = 25;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionMenuTextColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionMenuTextColor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -6913,181 +6898,181 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionMenuTextColor
+          @attr name com.cable.cloud:actionMenuTextColor
         */
         public static final int AppCompatTheme_actionMenuTextColor = 26;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeBackground
+          @attr name com.cable.cloud:actionModeBackground
         */
         public static final int AppCompatTheme_actionModeBackground = 29;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeCloseButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeCloseButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeCloseButtonStyle
+          @attr name com.cable.cloud:actionModeCloseButtonStyle
         */
         public static final int AppCompatTheme_actionModeCloseButtonStyle = 28;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeCloseDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeCloseDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeCloseDrawable
+          @attr name com.cable.cloud:actionModeCloseDrawable
         */
         public static final int AppCompatTheme_actionModeCloseDrawable = 31;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeCopyDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeCopyDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeCopyDrawable
+          @attr name com.cable.cloud:actionModeCopyDrawable
         */
         public static final int AppCompatTheme_actionModeCopyDrawable = 33;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeCutDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeCutDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeCutDrawable
+          @attr name com.cable.cloud:actionModeCutDrawable
         */
         public static final int AppCompatTheme_actionModeCutDrawable = 32;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeFindDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeFindDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeFindDrawable
+          @attr name com.cable.cloud:actionModeFindDrawable
         */
         public static final int AppCompatTheme_actionModeFindDrawable = 37;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModePasteDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModePasteDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModePasteDrawable
+          @attr name com.cable.cloud:actionModePasteDrawable
         */
         public static final int AppCompatTheme_actionModePasteDrawable = 34;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModePopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModePopupWindowStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModePopupWindowStyle
+          @attr name com.cable.cloud:actionModePopupWindowStyle
         */
         public static final int AppCompatTheme_actionModePopupWindowStyle = 39;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeSelectAllDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeSelectAllDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeSelectAllDrawable
+          @attr name com.cable.cloud:actionModeSelectAllDrawable
         */
         public static final int AppCompatTheme_actionModeSelectAllDrawable = 35;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeShareDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeShareDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeShareDrawable
+          @attr name com.cable.cloud:actionModeShareDrawable
         */
         public static final int AppCompatTheme_actionModeShareDrawable = 36;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeSplitBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeSplitBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeSplitBackground
+          @attr name com.cable.cloud:actionModeSplitBackground
         */
         public static final int AppCompatTheme_actionModeSplitBackground = 30;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeStyle
+          @attr name com.cable.cloud:actionModeStyle
         */
         public static final int AppCompatTheme_actionModeStyle = 27;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionModeWebSearchDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionModeWebSearchDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionModeWebSearchDrawable
+          @attr name com.cable.cloud:actionModeWebSearchDrawable
         */
         public static final int AppCompatTheme_actionModeWebSearchDrawable = 38;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionOverflowButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionOverflowButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionOverflowButtonStyle
+          @attr name com.cable.cloud:actionOverflowButtonStyle
         */
         public static final int AppCompatTheme_actionOverflowButtonStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionOverflowMenuStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionOverflowMenuStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionOverflowMenuStyle
+          @attr name com.cable.cloud:actionOverflowMenuStyle
         */
         public static final int AppCompatTheme_actionOverflowMenuStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#activityChooserViewStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#activityChooserViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:activityChooserViewStyle
+          @attr name com.cable.cloud:activityChooserViewStyle
         */
         public static final int AppCompatTheme_activityChooserViewStyle = 58;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#alertDialogButtonGroupStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#alertDialogButtonGroupStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:alertDialogButtonGroupStyle
+          @attr name com.cable.cloud:alertDialogButtonGroupStyle
         */
         public static final int AppCompatTheme_alertDialogButtonGroupStyle = 95;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#alertDialogCenterButtons}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#alertDialogCenterButtons}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7097,27 +7082,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:alertDialogCenterButtons
+          @attr name com.cable.cloud:alertDialogCenterButtons
         */
         public static final int AppCompatTheme_alertDialogCenterButtons = 96;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#alertDialogStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#alertDialogStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:alertDialogStyle
+          @attr name com.cable.cloud:alertDialogStyle
         */
         public static final int AppCompatTheme_alertDialogStyle = 94;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#alertDialogTheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#alertDialogTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:alertDialogTheme
+          @attr name com.cable.cloud:alertDialogTheme
         */
         public static final int AppCompatTheme_alertDialogTheme = 97;
         /**
@@ -7133,117 +7118,117 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatTheme_android_windowIsFloating = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#autoCompleteTextViewStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#autoCompleteTextViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:autoCompleteTextViewStyle
+          @attr name com.cable.cloud:autoCompleteTextViewStyle
         */
         public static final int AppCompatTheme_autoCompleteTextViewStyle = 102;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#borderlessButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#borderlessButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:borderlessButtonStyle
+          @attr name com.cable.cloud:borderlessButtonStyle
         */
         public static final int AppCompatTheme_borderlessButtonStyle = 55;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonBarButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonBarButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonBarButtonStyle
+          @attr name com.cable.cloud:buttonBarButtonStyle
         */
         public static final int AppCompatTheme_buttonBarButtonStyle = 52;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonBarNegativeButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonBarNegativeButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonBarNegativeButtonStyle
+          @attr name com.cable.cloud:buttonBarNegativeButtonStyle
         */
         public static final int AppCompatTheme_buttonBarNegativeButtonStyle = 100;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonBarNeutralButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonBarNeutralButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonBarNeutralButtonStyle
+          @attr name com.cable.cloud:buttonBarNeutralButtonStyle
         */
         public static final int AppCompatTheme_buttonBarNeutralButtonStyle = 101;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonBarPositiveButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonBarPositiveButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonBarPositiveButtonStyle
+          @attr name com.cable.cloud:buttonBarPositiveButtonStyle
         */
         public static final int AppCompatTheme_buttonBarPositiveButtonStyle = 99;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonBarStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonBarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonBarStyle
+          @attr name com.cable.cloud:buttonBarStyle
         */
         public static final int AppCompatTheme_buttonBarStyle = 51;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonStyle
+          @attr name com.cable.cloud:buttonStyle
         */
         public static final int AppCompatTheme_buttonStyle = 103;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonStyleSmall}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonStyleSmall}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonStyleSmall
+          @attr name com.cable.cloud:buttonStyleSmall
         */
         public static final int AppCompatTheme_buttonStyleSmall = 104;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#checkboxStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#checkboxStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:checkboxStyle
+          @attr name com.cable.cloud:checkboxStyle
         */
         public static final int AppCompatTheme_checkboxStyle = 105;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#checkedTextViewStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#checkedTextViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:checkedTextViewStyle
+          @attr name com.cable.cloud:checkedTextViewStyle
         */
         public static final int AppCompatTheme_checkedTextViewStyle = 106;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorAccent}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorAccent}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7254,11 +7239,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorAccent
+          @attr name com.cable.cloud:colorAccent
         */
         public static final int AppCompatTheme_colorAccent = 86;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorBackgroundFloating}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorBackgroundFloating}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7269,11 +7254,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorBackgroundFloating
+          @attr name com.cable.cloud:colorBackgroundFloating
         */
         public static final int AppCompatTheme_colorBackgroundFloating = 93;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorButtonNormal}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorButtonNormal}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7284,11 +7269,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorButtonNormal
+          @attr name com.cable.cloud:colorButtonNormal
         */
         public static final int AppCompatTheme_colorButtonNormal = 90;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorControlActivated}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorControlActivated}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7299,11 +7284,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorControlActivated
+          @attr name com.cable.cloud:colorControlActivated
         */
         public static final int AppCompatTheme_colorControlActivated = 88;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorControlHighlight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorControlHighlight}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7314,11 +7299,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorControlHighlight
+          @attr name com.cable.cloud:colorControlHighlight
         */
         public static final int AppCompatTheme_colorControlHighlight = 89;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorControlNormal}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorControlNormal}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7329,11 +7314,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorControlNormal
+          @attr name com.cable.cloud:colorControlNormal
         */
         public static final int AppCompatTheme_colorControlNormal = 87;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorError}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorError}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7341,11 +7326,11 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorError
+          @attr name com.cable.cloud:colorError
         */
         public static final int AppCompatTheme_colorError = 118;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorPrimary}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorPrimary}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7356,11 +7341,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorPrimary
+          @attr name com.cable.cloud:colorPrimary
         */
         public static final int AppCompatTheme_colorPrimary = 84;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorPrimaryDark}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorPrimaryDark}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7371,11 +7356,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorPrimaryDark
+          @attr name com.cable.cloud:colorPrimaryDark
         */
         public static final int AppCompatTheme_colorPrimaryDark = 85;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorSwitchThumbNormal}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorSwitchThumbNormal}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7386,21 +7371,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorSwitchThumbNormal
+          @attr name com.cable.cloud:colorSwitchThumbNormal
         */
         public static final int AppCompatTheme_colorSwitchThumbNormal = 91;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#controlBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#controlBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:controlBackground
+          @attr name com.cable.cloud:controlBackground
         */
         public static final int AppCompatTheme_controlBackground = 92;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#dialogPreferredPadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#dialogPreferredPadding}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7412,51 +7397,51 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:dialogPreferredPadding
+          @attr name com.cable.cloud:dialogPreferredPadding
         */
         public static final int AppCompatTheme_dialogPreferredPadding = 44;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#dialogTheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#dialogTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:dialogTheme
+          @attr name com.cable.cloud:dialogTheme
         */
         public static final int AppCompatTheme_dialogTheme = 43;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#dividerHorizontal}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#dividerHorizontal}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:dividerHorizontal
+          @attr name com.cable.cloud:dividerHorizontal
         */
         public static final int AppCompatTheme_dividerHorizontal = 57;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#dividerVertical}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#dividerVertical}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:dividerVertical
+          @attr name com.cable.cloud:dividerVertical
         */
         public static final int AppCompatTheme_dividerVertical = 56;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#dropDownListViewStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#dropDownListViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:dropDownListViewStyle
+          @attr name com.cable.cloud:dropDownListViewStyle
         */
         public static final int AppCompatTheme_dropDownListViewStyle = 75;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#dropdownListPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#dropdownListPreferredItemHeight}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7468,21 +7453,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:dropdownListPreferredItemHeight
+          @attr name com.cable.cloud:dropdownListPreferredItemHeight
         */
         public static final int AppCompatTheme_dropdownListPreferredItemHeight = 47;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#editTextBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#editTextBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:editTextBackground
+          @attr name com.cable.cloud:editTextBackground
         */
         public static final int AppCompatTheme_editTextBackground = 64;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#editTextColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#editTextColor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7490,81 +7475,81 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:editTextColor
+          @attr name com.cable.cloud:editTextColor
         */
         public static final int AppCompatTheme_editTextColor = 63;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#editTextStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#editTextStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:editTextStyle
+          @attr name com.cable.cloud:editTextStyle
         */
         public static final int AppCompatTheme_editTextStyle = 107;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:homeAsUpIndicator
+          @attr name com.cable.cloud:homeAsUpIndicator
         */
         public static final int AppCompatTheme_homeAsUpIndicator = 49;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#imageButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#imageButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:imageButtonStyle
+          @attr name com.cable.cloud:imageButtonStyle
         */
         public static final int AppCompatTheme_imageButtonStyle = 65;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listChoiceBackgroundIndicator}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listChoiceBackgroundIndicator}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:listChoiceBackgroundIndicator
+          @attr name com.cable.cloud:listChoiceBackgroundIndicator
         */
         public static final int AppCompatTheme_listChoiceBackgroundIndicator = 83;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listDividerAlertDialog}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listDividerAlertDialog}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:listDividerAlertDialog
+          @attr name com.cable.cloud:listDividerAlertDialog
         */
         public static final int AppCompatTheme_listDividerAlertDialog = 45;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listMenuViewStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listMenuViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:listMenuViewStyle
+          @attr name com.cable.cloud:listMenuViewStyle
         */
         public static final int AppCompatTheme_listMenuViewStyle = 115;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listPopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listPopupWindowStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:listPopupWindowStyle
+          @attr name com.cable.cloud:listPopupWindowStyle
         */
         public static final int AppCompatTheme_listPopupWindowStyle = 76;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listPreferredItemHeight}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7576,11 +7561,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:listPreferredItemHeight
+          @attr name com.cable.cloud:listPreferredItemHeight
         */
         public static final int AppCompatTheme_listPreferredItemHeight = 70;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listPreferredItemHeightLarge}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listPreferredItemHeightLarge}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7592,11 +7577,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:listPreferredItemHeightLarge
+          @attr name com.cable.cloud:listPreferredItemHeightLarge
         */
         public static final int AppCompatTheme_listPreferredItemHeightLarge = 72;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listPreferredItemHeightSmall}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listPreferredItemHeightSmall}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7608,11 +7593,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:listPreferredItemHeightSmall
+          @attr name com.cable.cloud:listPreferredItemHeightSmall
         */
         public static final int AppCompatTheme_listPreferredItemHeightSmall = 71;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listPreferredItemPaddingLeft}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listPreferredItemPaddingLeft}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7624,11 +7609,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:listPreferredItemPaddingLeft
+          @attr name com.cable.cloud:listPreferredItemPaddingLeft
         */
         public static final int AppCompatTheme_listPreferredItemPaddingLeft = 73;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#listPreferredItemPaddingRight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#listPreferredItemPaddingRight}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7640,31 +7625,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:listPreferredItemPaddingRight
+          @attr name com.cable.cloud:listPreferredItemPaddingRight
         */
         public static final int AppCompatTheme_listPreferredItemPaddingRight = 74;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#panelBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#panelBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:panelBackground
+          @attr name com.cable.cloud:panelBackground
         */
         public static final int AppCompatTheme_panelBackground = 80;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#panelMenuListTheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#panelMenuListTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:panelMenuListTheme
+          @attr name com.cable.cloud:panelMenuListTheme
         */
         public static final int AppCompatTheme_panelMenuListTheme = 82;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#panelMenuListWidth}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#panelMenuListWidth}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7676,221 +7661,221 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:panelMenuListWidth
+          @attr name com.cable.cloud:panelMenuListWidth
         */
         public static final int AppCompatTheme_panelMenuListWidth = 81;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#popupMenuStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#popupMenuStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:popupMenuStyle
+          @attr name com.cable.cloud:popupMenuStyle
         */
         public static final int AppCompatTheme_popupMenuStyle = 61;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#popupWindowStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#popupWindowStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:popupWindowStyle
+          @attr name com.cable.cloud:popupWindowStyle
         */
         public static final int AppCompatTheme_popupWindowStyle = 62;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#radioButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#radioButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:radioButtonStyle
+          @attr name com.cable.cloud:radioButtonStyle
         */
         public static final int AppCompatTheme_radioButtonStyle = 108;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#ratingBarStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#ratingBarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:ratingBarStyle
+          @attr name com.cable.cloud:ratingBarStyle
         */
         public static final int AppCompatTheme_ratingBarStyle = 109;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#ratingBarStyleIndicator}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#ratingBarStyleIndicator}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:ratingBarStyleIndicator
+          @attr name com.cable.cloud:ratingBarStyleIndicator
         */
         public static final int AppCompatTheme_ratingBarStyleIndicator = 110;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#ratingBarStyleSmall}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#ratingBarStyleSmall}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:ratingBarStyleSmall
+          @attr name com.cable.cloud:ratingBarStyleSmall
         */
         public static final int AppCompatTheme_ratingBarStyleSmall = 111;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#searchViewStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#searchViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:searchViewStyle
+          @attr name com.cable.cloud:searchViewStyle
         */
         public static final int AppCompatTheme_searchViewStyle = 69;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#seekBarStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#seekBarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:seekBarStyle
+          @attr name com.cable.cloud:seekBarStyle
         */
         public static final int AppCompatTheme_seekBarStyle = 112;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#selectableItemBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#selectableItemBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:selectableItemBackground
+          @attr name com.cable.cloud:selectableItemBackground
         */
         public static final int AppCompatTheme_selectableItemBackground = 53;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#selectableItemBackgroundBorderless}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#selectableItemBackgroundBorderless}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:selectableItemBackgroundBorderless
+          @attr name com.cable.cloud:selectableItemBackgroundBorderless
         */
         public static final int AppCompatTheme_selectableItemBackgroundBorderless = 54;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#spinnerDropDownItemStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#spinnerDropDownItemStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:spinnerDropDownItemStyle
+          @attr name com.cable.cloud:spinnerDropDownItemStyle
         */
         public static final int AppCompatTheme_spinnerDropDownItemStyle = 48;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#spinnerStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#spinnerStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:spinnerStyle
+          @attr name com.cable.cloud:spinnerStyle
         */
         public static final int AppCompatTheme_spinnerStyle = 113;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#switchStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#switchStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:switchStyle
+          @attr name com.cable.cloud:switchStyle
         */
         public static final int AppCompatTheme_switchStyle = 114;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textAppearanceLargePopupMenu}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textAppearanceLargePopupMenu}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textAppearanceLargePopupMenu
+          @attr name com.cable.cloud:textAppearanceLargePopupMenu
         */
         public static final int AppCompatTheme_textAppearanceLargePopupMenu = 40;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textAppearanceListItem}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textAppearanceListItem}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textAppearanceListItem
+          @attr name com.cable.cloud:textAppearanceListItem
         */
         public static final int AppCompatTheme_textAppearanceListItem = 77;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textAppearanceListItemSecondary}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textAppearanceListItemSecondary}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textAppearanceListItemSecondary
+          @attr name com.cable.cloud:textAppearanceListItemSecondary
         */
         public static final int AppCompatTheme_textAppearanceListItemSecondary = 78;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textAppearanceListItemSmall}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textAppearanceListItemSmall}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textAppearanceListItemSmall
+          @attr name com.cable.cloud:textAppearanceListItemSmall
         */
         public static final int AppCompatTheme_textAppearanceListItemSmall = 79;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textAppearancePopupMenuHeader}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textAppearancePopupMenuHeader}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textAppearancePopupMenuHeader
+          @attr name com.cable.cloud:textAppearancePopupMenuHeader
         */
         public static final int AppCompatTheme_textAppearancePopupMenuHeader = 42;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textAppearanceSearchResultSubtitle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textAppearanceSearchResultSubtitle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textAppearanceSearchResultSubtitle
+          @attr name com.cable.cloud:textAppearanceSearchResultSubtitle
         */
         public static final int AppCompatTheme_textAppearanceSearchResultSubtitle = 67;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textAppearanceSearchResultTitle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textAppearanceSearchResultTitle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textAppearanceSearchResultTitle
+          @attr name com.cable.cloud:textAppearanceSearchResultTitle
         */
         public static final int AppCompatTheme_textAppearanceSearchResultTitle = 66;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textAppearanceSmallPopupMenu}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textAppearanceSmallPopupMenu}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textAppearanceSmallPopupMenu
+          @attr name com.cable.cloud:textAppearanceSmallPopupMenu
         */
         public static final int AppCompatTheme_textAppearanceSmallPopupMenu = 41;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textColorAlertDialogListItem}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textColorAlertDialogListItem}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7898,11 +7883,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textColorAlertDialogListItem
+          @attr name com.cable.cloud:textColorAlertDialogListItem
         */
         public static final int AppCompatTheme_textColorAlertDialogListItem = 98;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textColorSearchUrl}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textColorSearchUrl}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7910,31 +7895,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textColorSearchUrl
+          @attr name com.cable.cloud:textColorSearchUrl
         */
         public static final int AppCompatTheme_textColorSearchUrl = 68;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#toolbarNavigationButtonStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#toolbarNavigationButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:toolbarNavigationButtonStyle
+          @attr name com.cable.cloud:toolbarNavigationButtonStyle
         */
         public static final int AppCompatTheme_toolbarNavigationButtonStyle = 60;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#toolbarStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#toolbarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:toolbarStyle
+          @attr name com.cable.cloud:toolbarStyle
         */
         public static final int AppCompatTheme_toolbarStyle = 59;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tooltipForegroundColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tooltipForegroundColor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7942,21 +7927,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:tooltipForegroundColor
+          @attr name com.cable.cloud:tooltipForegroundColor
         */
         public static final int AppCompatTheme_tooltipForegroundColor = 117;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tooltipFrameBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tooltipFrameBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:tooltipFrameBackground
+          @attr name com.cable.cloud:tooltipFrameBackground
         */
         public static final int AppCompatTheme_tooltipFrameBackground = 116;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#windowActionBar}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7966,11 +7951,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:windowActionBar
+          @attr name com.cable.cloud:windowActionBar
         */
         public static final int AppCompatTheme_windowActionBar = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7980,11 +7965,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:windowActionBarOverlay
+          @attr name com.cable.cloud:windowActionBarOverlay
         */
         public static final int AppCompatTheme_windowActionBarOverlay = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#windowActionModeOverlay}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#windowActionModeOverlay}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -7994,11 +7979,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:windowActionModeOverlay
+          @attr name com.cable.cloud:windowActionModeOverlay
         */
         public static final int AppCompatTheme_windowActionModeOverlay = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#windowFixedHeightMajor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#windowFixedHeightMajor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -8013,11 +7998,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:windowFixedHeightMajor
+          @attr name com.cable.cloud:windowFixedHeightMajor
         */
         public static final int AppCompatTheme_windowFixedHeightMajor = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#windowFixedHeightMinor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#windowFixedHeightMinor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -8032,11 +8017,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:windowFixedHeightMinor
+          @attr name com.cable.cloud:windowFixedHeightMinor
         */
         public static final int AppCompatTheme_windowFixedHeightMinor = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#windowFixedWidthMajor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#windowFixedWidthMajor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -8051,11 +8036,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:windowFixedWidthMajor
+          @attr name com.cable.cloud:windowFixedWidthMajor
         */
         public static final int AppCompatTheme_windowFixedWidthMajor = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#windowFixedWidthMinor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#windowFixedWidthMinor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -8070,11 +8055,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:windowFixedWidthMinor
+          @attr name com.cable.cloud:windowFixedWidthMinor
         */
         public static final int AppCompatTheme_windowFixedWidthMinor = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#windowMinWidthMajor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#windowMinWidthMajor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -8089,11 +8074,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:windowMinWidthMajor
+          @attr name com.cable.cloud:windowMinWidthMajor
         */
         public static final int AppCompatTheme_windowMinWidthMajor = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#windowMinWidthMinor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#windowMinWidthMinor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -8108,11 +8093,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:windowMinWidthMinor
+          @attr name com.cable.cloud:windowMinWidthMinor
         */
         public static final int AppCompatTheme_windowMinWidthMinor = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#windowNoTitle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#windowNoTitle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -8122,7 +8107,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:windowNoTitle
+          @attr name com.cable.cloud:windowNoTitle
         */
         public static final int AppCompatTheme_windowNoTitle = 3;
         /** Attributes that can be used with a BottomNavigationBar.
@@ -8131,14 +8116,14 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #BottomNavigationBar_bnbActiveColor com.mtaj.mtaj_08.cableplus_new:bnbActiveColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationBar_bnbAnimationDuration com.mtaj.mtaj_08.cableplus_new:bnbAnimationDuration}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationBar_bnbAutoHideEnabled com.mtaj.mtaj_08.cableplus_new:bnbAutoHideEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationBar_bnbBackgroundColor com.mtaj.mtaj_08.cableplus_new:bnbBackgroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationBar_bnbBackgroundStyle com.mtaj.mtaj_08.cableplus_new:bnbBackgroundStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationBar_bnbElevation com.mtaj.mtaj_08.cableplus_new:bnbElevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationBar_bnbInactiveColor com.mtaj.mtaj_08.cableplus_new:bnbInactiveColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationBar_bnbMode com.mtaj.mtaj_08.cableplus_new:bnbMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationBar_bnbActiveColor com.cable.cloud:bnbActiveColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationBar_bnbAnimationDuration com.cable.cloud:bnbAnimationDuration}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationBar_bnbAutoHideEnabled com.cable.cloud:bnbAutoHideEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationBar_bnbBackgroundColor com.cable.cloud:bnbBackgroundColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationBar_bnbBackgroundStyle com.cable.cloud:bnbBackgroundStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationBar_bnbElevation com.cable.cloud:bnbElevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationBar_bnbInactiveColor com.cable.cloud:bnbInactiveColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationBar_bnbMode com.cable.cloud:bnbMode}</code></td><td></td></tr>
            </table>
            @see #BottomNavigationBar_bnbActiveColor
            @see #BottomNavigationBar_bnbAnimationDuration
@@ -8154,7 +8139,7 @@ containing a value of this type.
             0x7f0100b8, 0x7f0100b9, 0x7f0100ba, 0x7f0100bb
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#bnbActiveColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#bnbActiveColor}
           attribute's value can be found in the {@link #BottomNavigationBar} array.
 
 
@@ -8165,11 +8150,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:bnbActiveColor
+          @attr name com.cable.cloud:bnbActiveColor
         */
         public static final int BottomNavigationBar_bnbActiveColor = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#bnbAnimationDuration}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#bnbAnimationDuration}
           attribute's value can be found in the {@link #BottomNavigationBar} array.
 
 
@@ -8179,11 +8164,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:bnbAnimationDuration
+          @attr name com.cable.cloud:bnbAnimationDuration
         */
         public static final int BottomNavigationBar_bnbAnimationDuration = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#bnbAutoHideEnabled}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#bnbAutoHideEnabled}
           attribute's value can be found in the {@link #BottomNavigationBar} array.
 
 
@@ -8193,11 +8178,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:bnbAutoHideEnabled
+          @attr name com.cable.cloud:bnbAutoHideEnabled
         */
         public static final int BottomNavigationBar_bnbAutoHideEnabled = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#bnbBackgroundColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#bnbBackgroundColor}
           attribute's value can be found in the {@link #BottomNavigationBar} array.
 
 
@@ -8208,11 +8193,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:bnbBackgroundColor
+          @attr name com.cable.cloud:bnbBackgroundColor
         */
         public static final int BottomNavigationBar_bnbBackgroundColor = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#bnbBackgroundStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#bnbBackgroundStyle}
           attribute's value can be found in the {@link #BottomNavigationBar} array.
 
 
@@ -8226,11 +8211,11 @@ containing a value of this type.
 <tr><td><code>background_style_static</code></td><td>1</td><td></td></tr>
 <tr><td><code>background_style_ripple</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:bnbBackgroundStyle
+          @attr name com.cable.cloud:bnbBackgroundStyle
         */
         public static final int BottomNavigationBar_bnbBackgroundStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#bnbElevation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#bnbElevation}
           attribute's value can be found in the {@link #BottomNavigationBar} array.
 
 
@@ -8242,11 +8227,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:bnbElevation
+          @attr name com.cable.cloud:bnbElevation
         */
         public static final int BottomNavigationBar_bnbElevation = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#bnbInactiveColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#bnbInactiveColor}
           attribute's value can be found in the {@link #BottomNavigationBar} array.
 
 
@@ -8257,11 +8242,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:bnbInactiveColor
+          @attr name com.cable.cloud:bnbInactiveColor
         */
         public static final int BottomNavigationBar_bnbInactiveColor = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#bnbMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#bnbMode}
           attribute's value can be found in the {@link #BottomNavigationBar} array.
 
 
@@ -8275,7 +8260,7 @@ containing a value of this type.
 <tr><td><code>mode_fixed</code></td><td>1</td><td></td></tr>
 <tr><td><code>mode_shifting</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:bnbMode
+          @attr name com.cable.cloud:bnbMode
         */
         public static final int BottomNavigationBar_bnbMode = 5;
         /** Attributes that can be used with a BottomNavigationView.
@@ -8284,11 +8269,11 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #BottomNavigationView_elevation com.mtaj.mtaj_08.cableplus_new:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationView_itemBackground com.mtaj.mtaj_08.cableplus_new:itemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationView_itemIconTint com.mtaj.mtaj_08.cableplus_new:itemIconTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationView_itemTextColor com.mtaj.mtaj_08.cableplus_new:itemTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomNavigationView_menu com.mtaj.mtaj_08.cableplus_new:menu}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationView_elevation com.cable.cloud:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationView_itemBackground com.cable.cloud:itemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationView_itemIconTint com.cable.cloud:itemIconTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationView_itemTextColor com.cable.cloud:itemTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomNavigationView_menu com.cable.cloud:menu}</code></td><td></td></tr>
            </table>
            @see #BottomNavigationView_elevation
            @see #BottomNavigationView_itemBackground
@@ -8301,7 +8286,7 @@ containing a value of this type.
             0x7f010136
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#elevation}
           attribute's value can be found in the {@link #BottomNavigationView} array.
 
 
@@ -8313,21 +8298,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:elevation
+          @attr name com.cable.cloud:elevation
         */
         public static final int BottomNavigationView_elevation = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#itemBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#itemBackground}
           attribute's value can be found in the {@link #BottomNavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:itemBackground
+          @attr name com.cable.cloud:itemBackground
         */
         public static final int BottomNavigationView_itemBackground = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#itemIconTint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#itemIconTint}
           attribute's value can be found in the {@link #BottomNavigationView} array.
 
 
@@ -8338,11 +8323,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:itemIconTint
+          @attr name com.cable.cloud:itemIconTint
         */
         public static final int BottomNavigationView_itemIconTint = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#itemTextColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#itemTextColor}
           attribute's value can be found in the {@link #BottomNavigationView} array.
 
 
@@ -8353,17 +8338,17 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:itemTextColor
+          @attr name com.cable.cloud:itemTextColor
         */
         public static final int BottomNavigationView_itemTextColor = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#menu}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#menu}
           attribute's value can be found in the {@link #BottomNavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:menu
+          @attr name com.cable.cloud:menu
         */
         public static final int BottomNavigationView_menu = 1;
         /** Attributes that can be used with a BottomSheetBehavior_Layout.
@@ -8372,9 +8357,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #BottomSheetBehavior_Layout_behavior_hideable com.mtaj.mtaj_08.cableplus_new:behavior_hideable}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomSheetBehavior_Layout_behavior_peekHeight com.mtaj.mtaj_08.cableplus_new:behavior_peekHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #BottomSheetBehavior_Layout_behavior_skipCollapsed com.mtaj.mtaj_08.cableplus_new:behavior_skipCollapsed}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomSheetBehavior_Layout_behavior_hideable com.cable.cloud:behavior_hideable}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomSheetBehavior_Layout_behavior_peekHeight com.cable.cloud:behavior_peekHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomSheetBehavior_Layout_behavior_skipCollapsed com.cable.cloud:behavior_skipCollapsed}</code></td><td></td></tr>
            </table>
            @see #BottomSheetBehavior_Layout_behavior_hideable
            @see #BottomSheetBehavior_Layout_behavior_peekHeight
@@ -8384,7 +8369,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100bc, 0x7f0100bd, 0x7f0100be
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#behavior_hideable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#behavior_hideable}
           attribute's value can be found in the {@link #BottomSheetBehavior_Layout} array.
 
 
@@ -8394,11 +8379,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:behavior_hideable
+          @attr name com.cable.cloud:behavior_hideable
         */
         public static final int BottomSheetBehavior_Layout_behavior_hideable = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#behavior_peekHeight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#behavior_peekHeight}
           attribute's value can be found in the {@link #BottomSheetBehavior_Layout} array.
 
 
@@ -8418,11 +8403,11 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>auto</code></td><td>-1</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:behavior_peekHeight
+          @attr name com.cable.cloud:behavior_peekHeight
         */
         public static final int BottomSheetBehavior_Layout_behavior_peekHeight = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#behavior_skipCollapsed}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#behavior_skipCollapsed}
           attribute's value can be found in the {@link #BottomSheetBehavior_Layout} array.
 
 
@@ -8432,7 +8417,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:behavior_skipCollapsed
+          @attr name com.cable.cloud:behavior_skipCollapsed
         */
         public static final int BottomSheetBehavior_Layout_behavior_skipCollapsed = 2;
         /** Attributes that can be used with a ButtonBarLayout.
@@ -8441,7 +8426,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ButtonBarLayout_allowStacking com.mtaj.mtaj_08.cableplus_new:allowStacking}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarLayout_allowStacking com.cable.cloud:allowStacking}</code></td><td></td></tr>
            </table>
            @see #ButtonBarLayout_allowStacking
          */
@@ -8449,7 +8434,7 @@ containing a value of this type.
             0x7f0100bf
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#allowStacking}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#allowStacking}
           attribute's value can be found in the {@link #ButtonBarLayout} array.
 
 
@@ -8459,7 +8444,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:allowStacking
+          @attr name com.cable.cloud:allowStacking
         */
         public static final int ButtonBarLayout_allowStacking = 0;
         /** Attributes that can be used with a CardView.
@@ -8470,17 +8455,17 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #CardView_android_minHeight android:minHeight}</code></td><td></td></tr>
            <tr><td><code>{@link #CardView_android_minWidth android:minWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardBackgroundColor com.mtaj.mtaj_08.cableplus_new:cardBackgroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardCornerRadius com.mtaj.mtaj_08.cableplus_new:cardCornerRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardElevation com.mtaj.mtaj_08.cableplus_new:cardElevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardMaxElevation com.mtaj.mtaj_08.cableplus_new:cardMaxElevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardPreventCornerOverlap com.mtaj.mtaj_08.cableplus_new:cardPreventCornerOverlap}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_cardUseCompatPadding com.mtaj.mtaj_08.cableplus_new:cardUseCompatPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_contentPadding com.mtaj.mtaj_08.cableplus_new:contentPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_contentPaddingBottom com.mtaj.mtaj_08.cableplus_new:contentPaddingBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_contentPaddingLeft com.mtaj.mtaj_08.cableplus_new:contentPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_contentPaddingRight com.mtaj.mtaj_08.cableplus_new:contentPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #CardView_contentPaddingTop com.mtaj.mtaj_08.cableplus_new:contentPaddingTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardBackgroundColor com.cable.cloud:cardBackgroundColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardCornerRadius com.cable.cloud:cardCornerRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardElevation com.cable.cloud:cardElevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardMaxElevation com.cable.cloud:cardMaxElevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardPreventCornerOverlap com.cable.cloud:cardPreventCornerOverlap}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_cardUseCompatPadding com.cable.cloud:cardUseCompatPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_contentPadding com.cable.cloud:contentPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingBottom com.cable.cloud:contentPaddingBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingLeft com.cable.cloud:contentPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingRight com.cable.cloud:contentPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingTop com.cable.cloud:contentPaddingTop}</code></td><td></td></tr>
            </table>
            @see #CardView_android_minHeight
            @see #CardView_android_minWidth
@@ -8515,7 +8500,7 @@ containing a value of this type.
         */
         public static final int CardView_android_minWidth = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cardBackgroundColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cardBackgroundColor}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8526,11 +8511,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cardBackgroundColor
+          @attr name com.cable.cloud:cardBackgroundColor
         */
         public static final int CardView_cardBackgroundColor = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cardCornerRadius}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cardCornerRadius}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8542,11 +8527,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cardCornerRadius
+          @attr name com.cable.cloud:cardCornerRadius
         */
         public static final int CardView_cardCornerRadius = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cardElevation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cardElevation}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8558,11 +8543,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cardElevation
+          @attr name com.cable.cloud:cardElevation
         */
         public static final int CardView_cardElevation = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cardMaxElevation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cardMaxElevation}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8574,11 +8559,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cardMaxElevation
+          @attr name com.cable.cloud:cardMaxElevation
         */
         public static final int CardView_cardMaxElevation = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cardPreventCornerOverlap}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cardPreventCornerOverlap}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8588,11 +8573,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cardPreventCornerOverlap
+          @attr name com.cable.cloud:cardPreventCornerOverlap
         */
         public static final int CardView_cardPreventCornerOverlap = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cardUseCompatPadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cardUseCompatPadding}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8602,11 +8587,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cardUseCompatPadding
+          @attr name com.cable.cloud:cardUseCompatPadding
         */
         public static final int CardView_cardUseCompatPadding = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentPadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentPadding}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8618,11 +8603,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentPadding
+          @attr name com.cable.cloud:contentPadding
         */
         public static final int CardView_contentPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentPaddingBottom}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentPaddingBottom}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8634,11 +8619,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentPaddingBottom
+          @attr name com.cable.cloud:contentPaddingBottom
         */
         public static final int CardView_contentPaddingBottom = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentPaddingLeft}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentPaddingLeft}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8650,11 +8635,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentPaddingLeft
+          @attr name com.cable.cloud:contentPaddingLeft
         */
         public static final int CardView_contentPaddingLeft = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentPaddingRight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentPaddingRight}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8666,11 +8651,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentPaddingRight
+          @attr name com.cable.cloud:contentPaddingRight
         */
         public static final int CardView_contentPaddingRight = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentPaddingTop}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentPaddingTop}
           attribute's value can be found in the {@link #CardView} array.
 
 
@@ -8682,7 +8667,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentPaddingTop
+          @attr name com.cable.cloud:contentPaddingTop
         */
         public static final int CardView_contentPaddingTop = 11;
         /** Attributes that can be used with a CircleImageView.
@@ -8691,10 +8676,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CircleImageView_civ_border_color com.mtaj.mtaj_08.cableplus_new:civ_border_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircleImageView_civ_border_overlay com.mtaj.mtaj_08.cableplus_new:civ_border_overlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircleImageView_civ_border_width com.mtaj.mtaj_08.cableplus_new:civ_border_width}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircleImageView_civ_fill_color com.mtaj.mtaj_08.cableplus_new:civ_fill_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_border_color com.cable.cloud:civ_border_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_border_overlay com.cable.cloud:civ_border_overlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_border_width com.cable.cloud:civ_border_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_fill_color com.cable.cloud:civ_fill_color}</code></td><td></td></tr>
            </table>
            @see #CircleImageView_civ_border_color
            @see #CircleImageView_civ_border_overlay
@@ -8705,7 +8690,7 @@ containing a value of this type.
             0x7f0100cb, 0x7f0100cc, 0x7f0100cd, 0x7f0100ce
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#civ_border_color}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#civ_border_color}
           attribute's value can be found in the {@link #CircleImageView} array.
 
 
@@ -8716,11 +8701,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:civ_border_color
+          @attr name com.cable.cloud:civ_border_color
         */
         public static final int CircleImageView_civ_border_color = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#civ_border_overlay}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#civ_border_overlay}
           attribute's value can be found in the {@link #CircleImageView} array.
 
 
@@ -8730,11 +8715,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:civ_border_overlay
+          @attr name com.cable.cloud:civ_border_overlay
         */
         public static final int CircleImageView_civ_border_overlay = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#civ_border_width}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#civ_border_width}
           attribute's value can be found in the {@link #CircleImageView} array.
 
 
@@ -8746,11 +8731,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:civ_border_width
+          @attr name com.cable.cloud:civ_border_width
         */
         public static final int CircleImageView_civ_border_width = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#civ_fill_color}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#civ_fill_color}
           attribute's value can be found in the {@link #CircleImageView} array.
 
 
@@ -8761,7 +8746,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:civ_fill_color
+          @attr name com.cable.cloud:civ_fill_color
         */
         public static final int CircleImageView_civ_fill_color = 3;
         /** Attributes that can be used with a CollapsingToolbarLayout.
@@ -8770,22 +8755,22 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleGravity com.mtaj.mtaj_08.cableplus_new:collapsedTitleGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleTextAppearance com.mtaj.mtaj_08.cableplus_new:collapsedTitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_contentScrim com.mtaj.mtaj_08.cableplus_new:contentScrim}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleGravity com.mtaj.mtaj_08.cableplus_new:expandedTitleGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMargin com.mtaj.mtaj_08.cableplus_new:expandedTitleMargin}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginBottom com.mtaj.mtaj_08.cableplus_new:expandedTitleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginEnd com.mtaj.mtaj_08.cableplus_new:expandedTitleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginStart com.mtaj.mtaj_08.cableplus_new:expandedTitleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginTop com.mtaj.mtaj_08.cableplus_new:expandedTitleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleTextAppearance com.mtaj.mtaj_08.cableplus_new:expandedTitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_scrimAnimationDuration com.mtaj.mtaj_08.cableplus_new:scrimAnimationDuration}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_scrimVisibleHeightTrigger com.mtaj.mtaj_08.cableplus_new:scrimVisibleHeightTrigger}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_statusBarScrim com.mtaj.mtaj_08.cableplus_new:statusBarScrim}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_title com.mtaj.mtaj_08.cableplus_new:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_titleEnabled com.mtaj.mtaj_08.cableplus_new:titleEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_toolbarId com.mtaj.mtaj_08.cableplus_new:toolbarId}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleGravity com.cable.cloud:collapsedTitleGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleTextAppearance com.cable.cloud:collapsedTitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_contentScrim com.cable.cloud:contentScrim}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleGravity com.cable.cloud:expandedTitleGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMargin com.cable.cloud:expandedTitleMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginBottom com.cable.cloud:expandedTitleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginEnd com.cable.cloud:expandedTitleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginStart com.cable.cloud:expandedTitleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginTop com.cable.cloud:expandedTitleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleTextAppearance com.cable.cloud:expandedTitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_scrimAnimationDuration com.cable.cloud:scrimAnimationDuration}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_scrimVisibleHeightTrigger com.cable.cloud:scrimVisibleHeightTrigger}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_statusBarScrim com.cable.cloud:statusBarScrim}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_title com.cable.cloud:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_titleEnabled com.cable.cloud:titleEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_toolbarId com.cable.cloud:toolbarId}</code></td><td></td></tr>
            </table>
            @see #CollapsingToolbarLayout_collapsedTitleGravity
            @see #CollapsingToolbarLayout_collapsedTitleTextAppearance
@@ -8811,7 +8796,7 @@ containing a value of this type.
             0x7f0100da, 0x7f0100db, 0x7f0100dc, 0x7f0100dd
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#collapsedTitleGravity}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#collapsedTitleGravity}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -8832,21 +8817,21 @@ containing a value of this type.
 <tr><td><code>start</code></td><td>0x00800003</td><td></td></tr>
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:collapsedTitleGravity
+          @attr name com.cable.cloud:collapsedTitleGravity
         */
         public static final int CollapsingToolbarLayout_collapsedTitleGravity = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#collapsedTitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#collapsedTitleTextAppearance}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:collapsedTitleTextAppearance
+          @attr name com.cable.cloud:collapsedTitleTextAppearance
         */
         public static final int CollapsingToolbarLayout_collapsedTitleTextAppearance = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentScrim}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentScrim}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -8857,11 +8842,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentScrim
+          @attr name com.cable.cloud:contentScrim
         */
         public static final int CollapsingToolbarLayout_contentScrim = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#expandedTitleGravity}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#expandedTitleGravity}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -8882,11 +8867,11 @@ containing a value of this type.
 <tr><td><code>start</code></td><td>0x00800003</td><td></td></tr>
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:expandedTitleGravity
+          @attr name com.cable.cloud:expandedTitleGravity
         */
         public static final int CollapsingToolbarLayout_expandedTitleGravity = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#expandedTitleMargin}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#expandedTitleMargin}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -8898,11 +8883,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:expandedTitleMargin
+          @attr name com.cable.cloud:expandedTitleMargin
         */
         public static final int CollapsingToolbarLayout_expandedTitleMargin = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#expandedTitleMarginBottom}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#expandedTitleMarginBottom}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -8914,11 +8899,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:expandedTitleMarginBottom
+          @attr name com.cable.cloud:expandedTitleMarginBottom
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginBottom = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#expandedTitleMarginEnd}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#expandedTitleMarginEnd}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -8930,11 +8915,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:expandedTitleMarginEnd
+          @attr name com.cable.cloud:expandedTitleMarginEnd
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginEnd = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#expandedTitleMarginStart}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#expandedTitleMarginStart}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -8946,11 +8931,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:expandedTitleMarginStart
+          @attr name com.cable.cloud:expandedTitleMarginStart
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginStart = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#expandedTitleMarginTop}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#expandedTitleMarginTop}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -8962,21 +8947,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:expandedTitleMarginTop
+          @attr name com.cable.cloud:expandedTitleMarginTop
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginTop = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#expandedTitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#expandedTitleTextAppearance}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:expandedTitleTextAppearance
+          @attr name com.cable.cloud:expandedTitleTextAppearance
         */
         public static final int CollapsingToolbarLayout_expandedTitleTextAppearance = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#scrimAnimationDuration}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#scrimAnimationDuration}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -8986,11 +8971,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:scrimAnimationDuration
+          @attr name com.cable.cloud:scrimAnimationDuration
         */
         public static final int CollapsingToolbarLayout_scrimAnimationDuration = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#scrimVisibleHeightTrigger}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#scrimVisibleHeightTrigger}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -9002,11 +8987,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:scrimVisibleHeightTrigger
+          @attr name com.cable.cloud:scrimVisibleHeightTrigger
         */
         public static final int CollapsingToolbarLayout_scrimVisibleHeightTrigger = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#statusBarScrim}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#statusBarScrim}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -9017,11 +9002,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:statusBarScrim
+          @attr name com.cable.cloud:statusBarScrim
         */
         public static final int CollapsingToolbarLayout_statusBarScrim = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#title}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#title}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -9031,11 +9016,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:title
+          @attr name com.cable.cloud:title
         */
         public static final int CollapsingToolbarLayout_title = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleEnabled}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleEnabled}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -9045,17 +9030,17 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleEnabled
+          @attr name com.cable.cloud:titleEnabled
         */
         public static final int CollapsingToolbarLayout_titleEnabled = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#toolbarId}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#toolbarId}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:toolbarId
+          @attr name com.cable.cloud:toolbarId
         */
         public static final int CollapsingToolbarLayout_toolbarId = 10;
         /** Attributes that can be used with a CollapsingToolbarLayout_Layout.
@@ -9064,8 +9049,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_Layout_layout_collapseMode com.mtaj.mtaj_08.cableplus_new:layout_collapseMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier com.mtaj.mtaj_08.cableplus_new:layout_collapseParallaxMultiplier}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_Layout_layout_collapseMode com.cable.cloud:layout_collapseMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier com.cable.cloud:layout_collapseParallaxMultiplier}</code></td><td></td></tr>
            </table>
            @see #CollapsingToolbarLayout_Layout_layout_collapseMode
            @see #CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier
@@ -9074,7 +9059,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100de, 0x7f0100df
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout_collapseMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout_collapseMode}
           attribute's value can be found in the {@link #CollapsingToolbarLayout_Layout} array.
 
 
@@ -9088,11 +9073,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>pin</code></td><td>1</td><td></td></tr>
 <tr><td><code>parallax</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout_collapseMode
+          @attr name com.cable.cloud:layout_collapseMode
         */
         public static final int CollapsingToolbarLayout_Layout_layout_collapseMode = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout_collapseParallaxMultiplier}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout_collapseParallaxMultiplier}
           attribute's value can be found in the {@link #CollapsingToolbarLayout_Layout} array.
 
 
@@ -9102,7 +9087,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout_collapseParallaxMultiplier
+          @attr name com.cable.cloud:layout_collapseParallaxMultiplier
         */
         public static final int CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = 1;
         /** Attributes that can be used with a ColorStateListItem.
@@ -9111,7 +9096,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ColorStateListItem_alpha com.mtaj.mtaj_08.cableplus_new:alpha}</code></td><td></td></tr>
+           <tr><td><code>{@link #ColorStateListItem_alpha com.cable.cloud:alpha}</code></td><td></td></tr>
            <tr><td><code>{@link #ColorStateListItem_android_alpha android:alpha}</code></td><td></td></tr>
            <tr><td><code>{@link #ColorStateListItem_android_color android:color}</code></td><td></td></tr>
            </table>
@@ -9123,7 +9108,7 @@ containing a value of this type.
             0x010101a5, 0x0101031f, 0x7f0100e0
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#alpha}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#alpha}
           attribute's value can be found in the {@link #ColorStateListItem} array.
 
 
@@ -9133,7 +9118,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:alpha
+          @attr name com.cable.cloud:alpha
         */
         public static final int ColorStateListItem_alpha = 2;
         /**
@@ -9155,8 +9140,8 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #CompoundButton_android_button android:button}</code></td><td></td></tr>
-           <tr><td><code>{@link #CompoundButton_buttonTint com.mtaj.mtaj_08.cableplus_new:buttonTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #CompoundButton_buttonTintMode com.mtaj.mtaj_08.cableplus_new:buttonTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompoundButton_buttonTint com.cable.cloud:buttonTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompoundButton_buttonTintMode com.cable.cloud:buttonTintMode}</code></td><td></td></tr>
            </table>
            @see #CompoundButton_android_button
            @see #CompoundButton_buttonTint
@@ -9172,7 +9157,7 @@ containing a value of this type.
         */
         public static final int CompoundButton_android_button = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonTint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonTint}
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
@@ -9183,11 +9168,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonTint
+          @attr name com.cable.cloud:buttonTint
         */
         public static final int CompoundButton_buttonTint = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonTintMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonTintMode}
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
@@ -9203,7 +9188,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonTintMode
+          @attr name com.cable.cloud:buttonTintMode
         */
         public static final int CompoundButton_buttonTintMode = 2;
         /** Attributes that can be used with a CoordinatorLayout.
@@ -9212,8 +9197,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CoordinatorLayout_keylines com.mtaj.mtaj_08.cableplus_new:keylines}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.mtaj.mtaj_08.cableplus_new:statusBarBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_keylines com.cable.cloud:keylines}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.cable.cloud:statusBarBackground}</code></td><td></td></tr>
            </table>
            @see #CoordinatorLayout_keylines
            @see #CoordinatorLayout_statusBarBackground
@@ -9222,23 +9207,23 @@ containing a value of this type.
             0x7f0100e3, 0x7f0100e4
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#keylines}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#keylines}
           attribute's value can be found in the {@link #CoordinatorLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:keylines
+          @attr name com.cable.cloud:keylines
         */
         public static final int CoordinatorLayout_keylines = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#statusBarBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#statusBarBackground}
           attribute's value can be found in the {@link #CoordinatorLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:statusBarBackground
+          @attr name com.cable.cloud:statusBarBackground
         */
         public static final int CoordinatorLayout_statusBarBackground = 1;
         /** Attributes that can be used with a CoordinatorLayout_Layout.
@@ -9248,12 +9233,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #CoordinatorLayout_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.mtaj.mtaj_08.cableplus_new:layout_anchor}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.mtaj.mtaj_08.cableplus_new:layout_anchorGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.mtaj.mtaj_08.cableplus_new:layout_behavior}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.mtaj.mtaj_08.cableplus_new:layout_dodgeInsetEdges}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.mtaj.mtaj_08.cableplus_new:layout_insetEdge}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.mtaj.mtaj_08.cableplus_new:layout_keyline}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.cable.cloud:layout_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.cable.cloud:layout_anchorGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.cable.cloud:layout_behavior}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.cable.cloud:layout_dodgeInsetEdges}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.cable.cloud:layout_insetEdge}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.cable.cloud:layout_keyline}</code></td><td></td></tr>
            </table>
            @see #CoordinatorLayout_Layout_android_layout_gravity
            @see #CoordinatorLayout_Layout_layout_anchor
@@ -9274,17 +9259,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int CoordinatorLayout_Layout_android_layout_gravity = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout_anchor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout_anchor}
           attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout_anchor
+          @attr name com.cable.cloud:layout_anchor
         */
         public static final int CoordinatorLayout_Layout_layout_anchor = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout_anchorGravity}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout_anchorGravity}
           attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
 
 
@@ -9309,11 +9294,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>start</code></td><td>0x00800003</td><td></td></tr>
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout_anchorGravity
+          @attr name com.cable.cloud:layout_anchorGravity
         */
         public static final int CoordinatorLayout_Layout_layout_anchorGravity = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout_behavior}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout_behavior}
           attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
 
 
@@ -9323,11 +9308,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout_behavior
+          @attr name com.cable.cloud:layout_behavior
         */
         public static final int CoordinatorLayout_Layout_layout_behavior = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout_dodgeInsetEdges}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout_dodgeInsetEdges}
           attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
 
 
@@ -9346,11 +9331,11 @@ containing a value of this type.
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 <tr><td><code>all</code></td><td>0x77</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout_dodgeInsetEdges
+          @attr name com.cable.cloud:layout_dodgeInsetEdges
         */
         public static final int CoordinatorLayout_Layout_layout_dodgeInsetEdges = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout_insetEdge}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout_insetEdge}
           attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
 
 
@@ -9368,11 +9353,11 @@ containing a value of this type.
 <tr><td><code>start</code></td><td>0x00800003</td><td></td></tr>
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout_insetEdge
+          @attr name com.cable.cloud:layout_insetEdge
         */
         public static final int CoordinatorLayout_Layout_layout_insetEdge = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout_keyline}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout_keyline}
           attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
 
 
@@ -9382,7 +9367,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout_keyline
+          @attr name com.cable.cloud:layout_keyline
         */
         public static final int CoordinatorLayout_Layout_layout_keyline = 3;
         /** Attributes that can be used with a DesignTheme.
@@ -9391,9 +9376,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DesignTheme_bottomSheetDialogTheme com.mtaj.mtaj_08.cableplus_new:bottomSheetDialogTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #DesignTheme_bottomSheetStyle com.mtaj.mtaj_08.cableplus_new:bottomSheetStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #DesignTheme_textColorError com.mtaj.mtaj_08.cableplus_new:textColorError}</code></td><td></td></tr>
+           <tr><td><code>{@link #DesignTheme_bottomSheetDialogTheme com.cable.cloud:bottomSheetDialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #DesignTheme_bottomSheetStyle com.cable.cloud:bottomSheetStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #DesignTheme_textColorError com.cable.cloud:textColorError}</code></td><td></td></tr>
            </table>
            @see #DesignTheme_bottomSheetDialogTheme
            @see #DesignTheme_bottomSheetStyle
@@ -9403,27 +9388,27 @@ containing a value of this type.
             0x7f0100eb, 0x7f0100ec, 0x7f0100ed
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#bottomSheetDialogTheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#bottomSheetDialogTheme}
           attribute's value can be found in the {@link #DesignTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:bottomSheetDialogTheme
+          @attr name com.cable.cloud:bottomSheetDialogTheme
         */
         public static final int DesignTheme_bottomSheetDialogTheme = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#bottomSheetStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#bottomSheetStyle}
           attribute's value can be found in the {@link #DesignTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:bottomSheetStyle
+          @attr name com.cable.cloud:bottomSheetStyle
         */
         public static final int DesignTheme_bottomSheetStyle = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textColorError}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textColorError}
           attribute's value can be found in the {@link #DesignTheme} array.
 
 
@@ -9431,7 +9416,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textColorError
+          @attr name com.cable.cloud:textColorError
         */
         public static final int DesignTheme_textColorError = 2;
         /** Attributes that can be used with a Dialog.
@@ -9440,10 +9425,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Dialog_DialogSpotColor com.mtaj.mtaj_08.cableplus_new:DialogSpotColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dialog_DialogSpotCount com.mtaj.mtaj_08.cableplus_new:DialogSpotCount}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dialog_DialogTitleAppearance com.mtaj.mtaj_08.cableplus_new:DialogTitleAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dialog_DialogTitleText com.mtaj.mtaj_08.cableplus_new:DialogTitleText}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dialog_DialogSpotColor com.cable.cloud:DialogSpotColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dialog_DialogSpotCount com.cable.cloud:DialogSpotCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dialog_DialogTitleAppearance com.cable.cloud:DialogTitleAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dialog_DialogTitleText com.cable.cloud:DialogTitleText}</code></td><td></td></tr>
            </table>
            @see #Dialog_DialogSpotColor
            @see #Dialog_DialogSpotCount
@@ -9454,7 +9439,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100ee, 0x7f0100ef, 0x7f0100f0, 0x7f0100f1
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#DialogSpotColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#DialogSpotColor}
           attribute's value can be found in the {@link #Dialog} array.
 
 
@@ -9462,11 +9447,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:DialogSpotColor
+          @attr name com.cable.cloud:DialogSpotColor
         */
         public static final int Dialog_DialogSpotColor = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#DialogSpotCount}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#DialogSpotCount}
           attribute's value can be found in the {@link #Dialog} array.
 
 
@@ -9476,28 +9461,28 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:DialogSpotCount
+          @attr name com.cable.cloud:DialogSpotCount
         */
         public static final int Dialog_DialogSpotCount = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#DialogTitleAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#DialogTitleAppearance}
           attribute's value can be found in the {@link #Dialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:DialogTitleAppearance
+          @attr name com.cable.cloud:DialogTitleAppearance
         */
         public static final int Dialog_DialogTitleAppearance = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#DialogTitleText}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#DialogTitleText}
           attribute's value can be found in the {@link #Dialog} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-          @attr name com.mtaj.mtaj_08.cableplus_new:DialogTitleText
+          @attr name com.cable.cloud:DialogTitleText
         */
         public static final int Dialog_DialogTitleText = 1;
         /** Attributes that can be used with a DrawerArrowToggle.
@@ -9506,14 +9491,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.mtaj.mtaj_08.cableplus_new:arrowHeadLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.mtaj.mtaj_08.cableplus_new:arrowShaftLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_barLength com.mtaj.mtaj_08.cableplus_new:barLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_color com.mtaj.mtaj_08.cableplus_new:color}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.mtaj.mtaj_08.cableplus_new:drawableSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.mtaj.mtaj_08.cableplus_new:gapBetweenBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.mtaj.mtaj_08.cableplus_new:spinBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_thickness com.mtaj.mtaj_08.cableplus_new:thickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.cable.cloud:arrowHeadLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.cable.cloud:arrowShaftLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_barLength com.cable.cloud:barLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_color com.cable.cloud:color}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.cable.cloud:drawableSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.cable.cloud:gapBetweenBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.cable.cloud:spinBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_thickness com.cable.cloud:thickness}</code></td><td></td></tr>
            </table>
            @see #DrawerArrowToggle_arrowHeadLength
            @see #DrawerArrowToggle_arrowShaftLength
@@ -9529,7 +9514,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100f6, 0x7f0100f7, 0x7f0100f8, 0x7f0100f9
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#arrowHeadLength}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#arrowHeadLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -9541,11 +9526,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:arrowHeadLength
+          @attr name com.cable.cloud:arrowHeadLength
         */
         public static final int DrawerArrowToggle_arrowHeadLength = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#arrowShaftLength}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#arrowShaftLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -9557,11 +9542,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:arrowShaftLength
+          @attr name com.cable.cloud:arrowShaftLength
         */
         public static final int DrawerArrowToggle_arrowShaftLength = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#barLength}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#barLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -9573,11 +9558,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:barLength
+          @attr name com.cable.cloud:barLength
         */
         public static final int DrawerArrowToggle_barLength = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#color}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#color}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -9588,11 +9573,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:color
+          @attr name com.cable.cloud:color
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#drawableSize}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#drawableSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -9604,11 +9589,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:drawableSize
+          @attr name com.cable.cloud:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#gapBetweenBars}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#gapBetweenBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -9620,11 +9605,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:gapBetweenBars
+          @attr name com.cable.cloud:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#spinBars}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#spinBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -9634,11 +9619,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:spinBars
+          @attr name com.cable.cloud:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#thickness}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#thickness}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -9650,7 +9635,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:thickness
+          @attr name com.cable.cloud:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /** Attributes that can be used with a FloatingActionButton.
@@ -9659,14 +9644,14 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FloatingActionButton_backgroundTint com.mtaj.mtaj_08.cableplus_new:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.mtaj.mtaj_08.cableplus_new:backgroundTintMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_borderWidth com.mtaj.mtaj_08.cableplus_new:borderWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_elevation com.mtaj.mtaj_08.cableplus_new:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fabSize com.mtaj.mtaj_08.cableplus_new:fabSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_pressedTranslationZ com.mtaj.mtaj_08.cableplus_new:pressedTranslationZ}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_rippleColor com.mtaj.mtaj_08.cableplus_new:rippleColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_useCompatPadding com.mtaj.mtaj_08.cableplus_new:useCompatPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_backgroundTint com.cable.cloud:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.cable.cloud:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_borderWidth com.cable.cloud:borderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_elevation com.cable.cloud:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fabSize com.cable.cloud:fabSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_pressedTranslationZ com.cable.cloud:pressedTranslationZ}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_rippleColor com.cable.cloud:rippleColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_useCompatPadding com.cable.cloud:useCompatPadding}</code></td><td></td></tr>
            </table>
            @see #FloatingActionButton_backgroundTint
            @see #FloatingActionButton_backgroundTintMode
@@ -9682,7 +9667,7 @@ containing a value of this type.
             0x7f0100fd, 0x7f0100fe, 0x7f0101a2, 0x7f0101a3
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#backgroundTint}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -9693,11 +9678,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:backgroundTint
+          @attr name com.cable.cloud:backgroundTint
         */
         public static final int FloatingActionButton_backgroundTint = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -9713,11 +9698,11 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:backgroundTintMode
+          @attr name com.cable.cloud:backgroundTintMode
         */
         public static final int FloatingActionButton_backgroundTintMode = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#borderWidth}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#borderWidth}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -9729,11 +9714,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:borderWidth
+          @attr name com.cable.cloud:borderWidth
         */
         public static final int FloatingActionButton_borderWidth = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#elevation}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -9745,11 +9730,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:elevation
+          @attr name com.cable.cloud:elevation
         */
         public static final int FloatingActionButton_elevation = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fabSize}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fabSize}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -9763,11 +9748,11 @@ containing a value of this type.
 <tr><td><code>normal</code></td><td>0</td><td></td></tr>
 <tr><td><code>mini</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:fabSize
+          @attr name com.cable.cloud:fabSize
         */
         public static final int FloatingActionButton_fabSize = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#pressedTranslationZ}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#pressedTranslationZ}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -9779,11 +9764,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:pressedTranslationZ
+          @attr name com.cable.cloud:pressedTranslationZ
         */
         public static final int FloatingActionButton_pressedTranslationZ = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#rippleColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#rippleColor}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -9794,11 +9779,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:rippleColor
+          @attr name com.cable.cloud:rippleColor
         */
         public static final int FloatingActionButton_rippleColor = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#useCompatPadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#useCompatPadding}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -9808,7 +9793,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:useCompatPadding
+          @attr name com.cable.cloud:useCompatPadding
         */
         public static final int FloatingActionButton_useCompatPadding = 5;
         /** Attributes that can be used with a FloatingActionButton_Behavior_Layout.
@@ -9817,7 +9802,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FloatingActionButton_Behavior_Layout_behavior_autoHide com.mtaj.mtaj_08.cableplus_new:behavior_autoHide}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_Behavior_Layout_behavior_autoHide com.cable.cloud:behavior_autoHide}</code></td><td></td></tr>
            </table>
            @see #FloatingActionButton_Behavior_Layout_behavior_autoHide
          */
@@ -9825,7 +9810,7 @@ containing a value of this type.
             0x7f0100ff
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#behavior_autoHide}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#behavior_autoHide}
           attribute's value can be found in the {@link #FloatingActionButton_Behavior_Layout} array.
 
 
@@ -9835,7 +9820,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:behavior_autoHide
+          @attr name com.cable.cloud:behavior_autoHide
         */
         public static final int FloatingActionButton_Behavior_Layout_behavior_autoHide = 0;
         /** Attributes that can be used with a FontFamily.
@@ -9844,12 +9829,12 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FontFamily_fontProviderAuthority com.mtaj.mtaj_08.cableplus_new:fontProviderAuthority}</code></td><td></td></tr>
-           <tr><td><code>{@link #FontFamily_fontProviderCerts com.mtaj.mtaj_08.cableplus_new:fontProviderCerts}</code></td><td></td></tr>
-           <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.mtaj.mtaj_08.cableplus_new:fontProviderFetchStrategy}</code></td><td></td></tr>
-           <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.mtaj.mtaj_08.cableplus_new:fontProviderFetchTimeout}</code></td><td></td></tr>
-           <tr><td><code>{@link #FontFamily_fontProviderPackage com.mtaj.mtaj_08.cableplus_new:fontProviderPackage}</code></td><td></td></tr>
-           <tr><td><code>{@link #FontFamily_fontProviderQuery com.mtaj.mtaj_08.cableplus_new:fontProviderQuery}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontFamily_fontProviderAuthority com.cable.cloud:fontProviderAuthority}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontFamily_fontProviderCerts com.cable.cloud:fontProviderCerts}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.cable.cloud:fontProviderFetchStrategy}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.cable.cloud:fontProviderFetchTimeout}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontFamily_fontProviderPackage com.cable.cloud:fontProviderPackage}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontFamily_fontProviderQuery com.cable.cloud:fontProviderQuery}</code></td><td></td></tr>
            </table>
            @see #FontFamily_fontProviderAuthority
            @see #FontFamily_fontProviderCerts
@@ -9863,7 +9848,7 @@ containing a value of this type.
             0x7f010104, 0x7f010105
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fontProviderAuthority}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fontProviderAuthority}
           attribute's value can be found in the {@link #FontFamily} array.
 
 
@@ -9873,21 +9858,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:fontProviderAuthority
+          @attr name com.cable.cloud:fontProviderAuthority
         */
         public static final int FontFamily_fontProviderAuthority = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fontProviderCerts}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fontProviderCerts}
           attribute's value can be found in the {@link #FontFamily} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:fontProviderCerts
+          @attr name com.cable.cloud:fontProviderCerts
         */
         public static final int FontFamily_fontProviderCerts = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fontProviderFetchStrategy}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fontProviderFetchStrategy}
           attribute's value can be found in the {@link #FontFamily} array.
 
 
@@ -9900,11 +9885,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>blocking</code></td><td>0</td><td></td></tr>
 <tr><td><code>async</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:fontProviderFetchStrategy
+          @attr name com.cable.cloud:fontProviderFetchStrategy
         */
         public static final int FontFamily_fontProviderFetchStrategy = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fontProviderFetchTimeout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fontProviderFetchTimeout}
           attribute's value can be found in the {@link #FontFamily} array.
 
 
@@ -9922,11 +9907,11 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>forever</code></td><td>-1</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:fontProviderFetchTimeout
+          @attr name com.cable.cloud:fontProviderFetchTimeout
         */
         public static final int FontFamily_fontProviderFetchTimeout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fontProviderPackage}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fontProviderPackage}
           attribute's value can be found in the {@link #FontFamily} array.
 
 
@@ -9936,11 +9921,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:fontProviderPackage
+          @attr name com.cable.cloud:fontProviderPackage
         */
         public static final int FontFamily_fontProviderPackage = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fontProviderQuery}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fontProviderQuery}
           attribute's value can be found in the {@link #FontFamily} array.
 
 
@@ -9950,7 +9935,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:fontProviderQuery
+          @attr name com.cable.cloud:fontProviderQuery
         */
         public static final int FontFamily_fontProviderQuery = 2;
         /** Attributes that can be used with a FontFamilyFont.
@@ -9959,9 +9944,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FontFamilyFont_font com.mtaj.mtaj_08.cableplus_new:font}</code></td><td></td></tr>
-           <tr><td><code>{@link #FontFamilyFont_fontStyle com.mtaj.mtaj_08.cableplus_new:fontStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #FontFamilyFont_fontWeight com.mtaj.mtaj_08.cableplus_new:fontWeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontFamilyFont_font com.cable.cloud:font}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontFamilyFont_fontStyle com.cable.cloud:fontStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontFamilyFont_fontWeight com.cable.cloud:fontWeight}</code></td><td></td></tr>
            </table>
            @see #FontFamilyFont_font
            @see #FontFamilyFont_fontStyle
@@ -9971,17 +9956,17 @@ containing a value of this type.
             0x7f010106, 0x7f010107, 0x7f010108
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#font}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#font}
           attribute's value can be found in the {@link #FontFamilyFont} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:font
+          @attr name com.cable.cloud:font
         */
         public static final int FontFamilyFont_font = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fontStyle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fontStyle}
           attribute's value can be found in the {@link #FontFamilyFont} array.
 
 
@@ -9994,11 +9979,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>normal</code></td><td>0</td><td></td></tr>
 <tr><td><code>italic</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:fontStyle
+          @attr name com.cable.cloud:fontStyle
         */
         public static final int FontFamilyFont_fontStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fontWeight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fontWeight}
           attribute's value can be found in the {@link #FontFamilyFont} array.
 
 
@@ -10008,7 +9993,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:fontWeight
+          @attr name com.cable.cloud:fontWeight
         */
         public static final int FontFamilyFont_fontWeight = 2;
         /** Attributes that can be used with a ForegroundLinearLayout.
@@ -10019,7 +10004,7 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #ForegroundLinearLayout_android_foreground android:foreground}</code></td><td></td></tr>
            <tr><td><code>{@link #ForegroundLinearLayout_android_foregroundGravity android:foregroundGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #ForegroundLinearLayout_foregroundInsidePadding com.mtaj.mtaj_08.cableplus_new:foregroundInsidePadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ForegroundLinearLayout_foregroundInsidePadding com.cable.cloud:foregroundInsidePadding}</code></td><td></td></tr>
            </table>
            @see #ForegroundLinearLayout_android_foreground
            @see #ForegroundLinearLayout_android_foregroundGravity
@@ -10041,7 +10026,7 @@ containing a value of this type.
         */
         public static final int ForegroundLinearLayout_android_foregroundGravity = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#foregroundInsidePadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#foregroundInsidePadding}
           attribute's value can be found in the {@link #ForegroundLinearLayout} array.
 
 
@@ -10051,7 +10036,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:foregroundInsidePadding
+          @attr name com.cable.cloud:foregroundInsidePadding
         */
         public static final int ForegroundLinearLayout_foregroundInsidePadding = 2;
         /** Attributes that can be used with a LinearLayoutCompat.
@@ -10065,10 +10050,10 @@ containing a value of this type.
            <tr><td><code>{@link #LinearLayoutCompat_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_divider com.mtaj.mtaj_08.cableplus_new:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.mtaj.mtaj_08.cableplus_new:dividerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.mtaj.mtaj_08.cableplus_new:measureWithLargestChild}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.mtaj.mtaj_08.cableplus_new:showDividers}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_divider com.cable.cloud:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.cable.cloud:dividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.cable.cloud:measureWithLargestChild}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.cable.cloud:showDividers}</code></td><td></td></tr>
            </table>
            @see #LinearLayoutCompat_android_baselineAligned
            @see #LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -10116,17 +10101,17 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_android_weightSum = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:divider
+          @attr name com.cable.cloud:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -10138,11 +10123,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:dividerPadding
+          @attr name com.cable.cloud:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#measureWithLargestChild}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#measureWithLargestChild}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -10152,11 +10137,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:measureWithLargestChild
+          @attr name com.cable.cloud:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -10171,7 +10156,7 @@ containing a value of this type.
 <tr><td><code>middle</code></td><td>2</td><td></td></tr>
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:showDividers
+          @attr name com.cable.cloud:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
         /** Attributes that can be used with a LinearLayoutCompat_Layout.
@@ -10250,9 +10235,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LoadingImageView_circleCrop com.mtaj.mtaj_08.cableplus_new:circleCrop}</code></td><td></td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.mtaj.mtaj_08.cableplus_new:imageAspectRatio}</code></td><td></td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.mtaj.mtaj_08.cableplus_new:imageAspectRatioAdjust}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_circleCrop com.cable.cloud:circleCrop}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.cable.cloud:imageAspectRatio}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.cable.cloud:imageAspectRatioAdjust}</code></td><td></td></tr>
            </table>
            @see #LoadingImageView_circleCrop
            @see #LoadingImageView_imageAspectRatio
@@ -10262,7 +10247,7 @@ containing a value of this type.
             0x7f01010d, 0x7f01010e, 0x7f01010f
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#circleCrop}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#circleCrop}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -10272,11 +10257,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:circleCrop
+          @attr name com.cable.cloud:circleCrop
         */
         public static final int LoadingImageView_circleCrop = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#imageAspectRatio}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#imageAspectRatio}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -10286,11 +10271,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:imageAspectRatio
+          @attr name com.cable.cloud:imageAspectRatio
         */
         public static final int LoadingImageView_imageAspectRatio = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#imageAspectRatioAdjust}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#imageAspectRatioAdjust}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -10304,7 +10289,7 @@ containing a value of this type.
 <tr><td><code>adjust_width</code></td><td>1</td><td></td></tr>
 <tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:imageAspectRatioAdjust
+          @attr name com.cable.cloud:imageAspectRatioAdjust
         */
         public static final int LoadingImageView_imageAspectRatioAdjust = 0;
         /** Attributes that can be used with a MapAttrs.
@@ -10313,29 +10298,29 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_ambientEnabled com.mtaj.mtaj_08.cableplus_new:ambientEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing com.mtaj.mtaj_08.cableplus_new:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraMaxZoomPreference com.mtaj.mtaj_08.cableplus_new:cameraMaxZoomPreference}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraMinZoomPreference com.mtaj.mtaj_08.cableplus_new:cameraMinZoomPreference}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.mtaj.mtaj_08.cableplus_new:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.mtaj.mtaj_08.cableplus_new:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt com.mtaj.mtaj_08.cableplus_new:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom com.mtaj.mtaj_08.cableplus_new:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_latLngBoundsNorthEastLatitude com.mtaj.mtaj_08.cableplus_new:latLngBoundsNorthEastLatitude}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_latLngBoundsNorthEastLongitude com.mtaj.mtaj_08.cableplus_new:latLngBoundsNorthEastLongitude}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_latLngBoundsSouthWestLatitude com.mtaj.mtaj_08.cableplus_new:latLngBoundsSouthWestLatitude}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_latLngBoundsSouthWestLongitude com.mtaj.mtaj_08.cableplus_new:latLngBoundsSouthWestLongitude}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_liteMode com.mtaj.mtaj_08.cableplus_new:liteMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType com.mtaj.mtaj_08.cableplus_new:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass com.mtaj.mtaj_08.cableplus_new:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiMapToolbar com.mtaj.mtaj_08.cableplus_new:uiMapToolbar}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.mtaj.mtaj_08.cableplus_new:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.mtaj.mtaj_08.cableplus_new:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.mtaj.mtaj_08.cableplus_new:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls com.mtaj.mtaj_08.cableplus_new:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.mtaj.mtaj_08.cableplus_new:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.mtaj.mtaj_08.cableplus_new:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.mtaj.mtaj_08.cableplus_new:zOrderOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_ambientEnabled com.cable.cloud:ambientEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.cable.cloud:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraMaxZoomPreference com.cable.cloud:cameraMaxZoomPreference}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraMinZoomPreference com.cable.cloud:cameraMinZoomPreference}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.cable.cloud:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.cable.cloud:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.cable.cloud:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.cable.cloud:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_latLngBoundsNorthEastLatitude com.cable.cloud:latLngBoundsNorthEastLatitude}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_latLngBoundsNorthEastLongitude com.cable.cloud:latLngBoundsNorthEastLongitude}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_latLngBoundsSouthWestLatitude com.cable.cloud:latLngBoundsSouthWestLatitude}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_latLngBoundsSouthWestLongitude com.cable.cloud:latLngBoundsSouthWestLongitude}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_liteMode com.cable.cloud:liteMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.cable.cloud:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.cable.cloud:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiMapToolbar com.cable.cloud:uiMapToolbar}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.cable.cloud:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.cable.cloud:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.cable.cloud:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.cable.cloud:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.cable.cloud:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.cable.cloud:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.cable.cloud:zOrderOnTop}</code></td><td></td></tr>
            </table>
            @see #MapAttrs_ambientEnabled
            @see #MapAttrs_cameraBearing
@@ -10370,7 +10355,7 @@ containing a value of this type.
             0x7f010124, 0x7f010125, 0x7f010126
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#ambientEnabled}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#ambientEnabled}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10380,11 +10365,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:ambientEnabled
+          @attr name com.cable.cloud:ambientEnabled
         */
         public static final int MapAttrs_ambientEnabled = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10394,11 +10379,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cameraBearing
+          @attr name com.cable.cloud:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cameraMaxZoomPreference}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cameraMaxZoomPreference}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10408,11 +10393,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cameraMaxZoomPreference
+          @attr name com.cable.cloud:cameraMaxZoomPreference
         */
         public static final int MapAttrs_cameraMaxZoomPreference = 18;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cameraMinZoomPreference}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cameraMinZoomPreference}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10422,11 +10407,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cameraMinZoomPreference
+          @attr name com.cable.cloud:cameraMinZoomPreference
         */
         public static final int MapAttrs_cameraMinZoomPreference = 17;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10436,11 +10421,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cameraTargetLat
+          @attr name com.cable.cloud:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10450,11 +10435,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cameraTargetLng
+          @attr name com.cable.cloud:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10464,11 +10449,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cameraTilt
+          @attr name com.cable.cloud:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10478,11 +10463,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:cameraZoom
+          @attr name com.cable.cloud:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#latLngBoundsNorthEastLatitude}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#latLngBoundsNorthEastLatitude}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10492,11 +10477,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:latLngBoundsNorthEastLatitude
+          @attr name com.cable.cloud:latLngBoundsNorthEastLatitude
         */
         public static final int MapAttrs_latLngBoundsNorthEastLatitude = 21;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#latLngBoundsNorthEastLongitude}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#latLngBoundsNorthEastLongitude}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10506,11 +10491,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:latLngBoundsNorthEastLongitude
+          @attr name com.cable.cloud:latLngBoundsNorthEastLongitude
         */
         public static final int MapAttrs_latLngBoundsNorthEastLongitude = 22;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#latLngBoundsSouthWestLatitude}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#latLngBoundsSouthWestLatitude}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10520,11 +10505,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:latLngBoundsSouthWestLatitude
+          @attr name com.cable.cloud:latLngBoundsSouthWestLatitude
         */
         public static final int MapAttrs_latLngBoundsSouthWestLatitude = 19;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#latLngBoundsSouthWestLongitude}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#latLngBoundsSouthWestLongitude}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10534,11 +10519,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:latLngBoundsSouthWestLongitude
+          @attr name com.cable.cloud:latLngBoundsSouthWestLongitude
         */
         public static final int MapAttrs_latLngBoundsSouthWestLongitude = 20;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#liteMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#liteMode}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10548,11 +10533,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:liteMode
+          @attr name com.cable.cloud:liteMode
         */
         public static final int MapAttrs_liteMode = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#mapType}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10568,11 +10553,11 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:mapType
+          @attr name com.cable.cloud:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10582,11 +10567,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:uiCompass
+          @attr name com.cable.cloud:uiCompass
         */
         public static final int MapAttrs_uiCompass = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#uiMapToolbar}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#uiMapToolbar}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10596,11 +10581,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:uiMapToolbar
+          @attr name com.cable.cloud:uiMapToolbar
         */
         public static final int MapAttrs_uiMapToolbar = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10610,11 +10595,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:uiRotateGestures
+          @attr name com.cable.cloud:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10624,11 +10609,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:uiScrollGestures
+          @attr name com.cable.cloud:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10638,11 +10623,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:uiTiltGestures
+          @attr name com.cable.cloud:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10652,11 +10637,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:uiZoomControls
+          @attr name com.cable.cloud:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10666,11 +10651,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:uiZoomGestures
+          @attr name com.cable.cloud:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10680,11 +10665,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:useViewLifecycle
+          @attr name com.cable.cloud:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -10694,7 +10679,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:zOrderOnTop
+          @attr name com.cable.cloud:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 14;
         /** Attributes that can be used with a MenuGroup.
@@ -10763,10 +10748,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout com.mtaj.mtaj_08.cableplus_new:actionLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass com.mtaj.mtaj_08.cableplus_new:actionProviderClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass com.mtaj.mtaj_08.cableplus_new:actionViewClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_alphabeticModifiers com.mtaj.mtaj_08.cableplus_new:alphabeticModifiers}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionLayout com.cable.cloud:actionLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass com.cable.cloud:actionProviderClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionViewClass com.cable.cloud:actionViewClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_alphabeticModifiers com.cable.cloud:alphabeticModifiers}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
@@ -10780,12 +10765,12 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_contentDescription com.mtaj.mtaj_08.cableplus_new:contentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_iconTint com.mtaj.mtaj_08.cableplus_new:iconTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_iconTintMode com.mtaj.mtaj_08.cableplus_new:iconTintMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_numericModifiers com.mtaj.mtaj_08.cableplus_new:numericModifiers}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction com.mtaj.mtaj_08.cableplus_new:showAsAction}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_tooltipText com.mtaj.mtaj_08.cableplus_new:tooltipText}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_contentDescription com.cable.cloud:contentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_iconTint com.cable.cloud:iconTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_iconTintMode com.cable.cloud:iconTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_numericModifiers com.cable.cloud:numericModifiers}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction com.cable.cloud:showAsAction}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_tooltipText com.cable.cloud:tooltipText}</code></td><td></td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -10820,17 +10805,17 @@ containing a value of this type.
             0x7f01012e, 0x7f01012f, 0x7f010130
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionLayout
+          @attr name com.cable.cloud:actionLayout
         */
         public static final int MenuItem_actionLayout = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -10840,11 +10825,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionProviderClass
+          @attr name com.cable.cloud:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 18;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -10854,11 +10839,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:actionViewClass
+          @attr name com.cable.cloud:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 17;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#alphabeticModifiers}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#alphabeticModifiers}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -10875,7 +10860,7 @@ containing a value of this type.
 <tr><td><code>SYM</code></td><td>0x4</td><td></td></tr>
 <tr><td><code>FUNCTION</code></td><td>0x8</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:alphabeticModifiers
+          @attr name com.cable.cloud:alphabeticModifiers
         */
         public static final int MenuItem_alphabeticModifiers = 13;
         /**
@@ -10957,7 +10942,7 @@ containing a value of this type.
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentDescription}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentDescription}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -10967,11 +10952,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentDescription
+          @attr name com.cable.cloud:contentDescription
         */
         public static final int MenuItem_contentDescription = 19;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#iconTint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#iconTint}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -10982,11 +10967,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:iconTint
+          @attr name com.cable.cloud:iconTint
         */
         public static final int MenuItem_iconTint = 21;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#iconTintMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#iconTintMode}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -11003,11 +10988,11 @@ containing a value of this type.
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 <tr><td><code>add</code></td><td>16</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:iconTintMode
+          @attr name com.cable.cloud:iconTintMode
         */
         public static final int MenuItem_iconTintMode = 22;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#numericModifiers}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#numericModifiers}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -11024,11 +11009,11 @@ containing a value of this type.
 <tr><td><code>SYM</code></td><td>0x4</td><td></td></tr>
 <tr><td><code>FUNCTION</code></td><td>0x8</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:numericModifiers
+          @attr name com.cable.cloud:numericModifiers
         */
         public static final int MenuItem_numericModifiers = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -11044,11 +11029,11 @@ containing a value of this type.
 <tr><td><code>withText</code></td><td>4</td><td></td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:showAsAction
+          @attr name com.cable.cloud:showAsAction
         */
         public static final int MenuItem_showAsAction = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tooltipText}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tooltipText}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -11058,7 +11043,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tooltipText
+          @attr name com.cable.cloud:tooltipText
         */
         public static final int MenuItem_tooltipText = 20;
         /** Attributes that can be used with a MenuView.
@@ -11074,8 +11059,8 @@ containing a value of this type.
            <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuView_preserveIconSpacing com.mtaj.mtaj_08.cableplus_new:preserveIconSpacing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuView_subMenuArrow com.mtaj.mtaj_08.cableplus_new:subMenuArrow}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuView_preserveIconSpacing com.cable.cloud:preserveIconSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuView_subMenuArrow com.cable.cloud:subMenuArrow}</code></td><td></td></tr>
            </table>
            @see #MenuView_android_headerBackground
            @see #MenuView_android_horizontalDivider
@@ -11135,7 +11120,7 @@ containing a value of this type.
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#preserveIconSpacing}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#preserveIconSpacing}
           attribute's value can be found in the {@link #MenuView} array.
 
 
@@ -11145,17 +11130,17 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:preserveIconSpacing
+          @attr name com.cable.cloud:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#subMenuArrow}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#subMenuArrow}
           attribute's value can be found in the {@link #MenuView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:subMenuArrow
+          @attr name com.cable.cloud:subMenuArrow
         */
         public static final int MenuView_subMenuArrow = 8;
         /** Attributes that can be used with a NavigationView.
@@ -11167,13 +11152,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #NavigationView_android_background android:background}</code></td><td></td></tr>
            <tr><td><code>{@link #NavigationView_android_fitsSystemWindows android:fitsSystemWindows}</code></td><td></td></tr>
            <tr><td><code>{@link #NavigationView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_elevation com.mtaj.mtaj_08.cableplus_new:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_headerLayout com.mtaj.mtaj_08.cableplus_new:headerLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemBackground com.mtaj.mtaj_08.cableplus_new:itemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemIconTint com.mtaj.mtaj_08.cableplus_new:itemIconTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemTextAppearance com.mtaj.mtaj_08.cableplus_new:itemTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemTextColor com.mtaj.mtaj_08.cableplus_new:itemTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_menu com.mtaj.mtaj_08.cableplus_new:menu}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_elevation com.cable.cloud:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_headerLayout com.cable.cloud:headerLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemBackground com.cable.cloud:itemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemIconTint com.cable.cloud:itemIconTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemTextAppearance com.cable.cloud:itemTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemTextColor com.cable.cloud:itemTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_menu com.cable.cloud:menu}</code></td><td></td></tr>
            </table>
            @see #NavigationView_android_background
            @see #NavigationView_android_fitsSystemWindows
@@ -11210,7 +11195,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int NavigationView_android_maxWidth = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#elevation}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
@@ -11222,31 +11207,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:elevation
+          @attr name com.cable.cloud:elevation
         */
         public static final int NavigationView_elevation = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#headerLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#headerLayout}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:headerLayout
+          @attr name com.cable.cloud:headerLayout
         */
         public static final int NavigationView_headerLayout = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#itemBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#itemBackground}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:itemBackground
+          @attr name com.cable.cloud:itemBackground
         */
         public static final int NavigationView_itemBackground = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#itemIconTint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#itemIconTint}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
@@ -11257,21 +11242,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:itemIconTint
+          @attr name com.cable.cloud:itemIconTint
         */
         public static final int NavigationView_itemIconTint = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#itemTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#itemTextAppearance}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:itemTextAppearance
+          @attr name com.cable.cloud:itemTextAppearance
         */
         public static final int NavigationView_itemTextAppearance = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#itemTextColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#itemTextColor}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
@@ -11282,17 +11267,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:itemTextColor
+          @attr name com.cable.cloud:itemTextColor
         */
         public static final int NavigationView_itemTextColor = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#menu}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#menu}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:menu
+          @attr name com.cable.cloud:menu
         */
         public static final int NavigationView_menu = 4;
         /** Attributes that can be used with a PopupWindow.
@@ -11303,7 +11288,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #PopupWindow_android_popupAnimationStyle android:popupAnimationStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #PopupWindow_overlapAnchor com.mtaj.mtaj_08.cableplus_new:overlapAnchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindow_overlapAnchor com.cable.cloud:overlapAnchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindow_android_popupAnimationStyle
            @see #PopupWindow_android_popupBackground
@@ -11325,7 +11310,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int PopupWindow_android_popupBackground = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#overlapAnchor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#overlapAnchor}
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
@@ -11335,7 +11320,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:overlapAnchor
+          @attr name com.cable.cloud:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 2;
         /** Attributes that can be used with a PopupWindowBackgroundState.
@@ -11344,7 +11329,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.mtaj.mtaj_08.cableplus_new:state_above_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.cable.cloud:state_above_anchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindowBackgroundState_state_above_anchor
          */
@@ -11352,7 +11337,7 @@ containing a value of this type.
             0x7f01013a
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#state_above_anchor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#state_above_anchor}
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
@@ -11362,7 +11347,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:state_above_anchor
+          @attr name com.cable.cloud:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
         /** Attributes that can be used with a PresenterLayout.
@@ -11371,9 +11356,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PresenterLayout_background_color_overlapping com.mtaj.mtaj_08.cableplus_new:background_color_overlapping}</code></td><td></td></tr>
-           <tr><td><code>{@link #PresenterLayout_inflate_default_views com.mtaj.mtaj_08.cableplus_new:inflate_default_views}</code></td><td></td></tr>
-           <tr><td><code>{@link #PresenterLayout_show_initial_view com.mtaj.mtaj_08.cableplus_new:show_initial_view}</code></td><td></td></tr>
+           <tr><td><code>{@link #PresenterLayout_background_color_overlapping com.cable.cloud:background_color_overlapping}</code></td><td></td></tr>
+           <tr><td><code>{@link #PresenterLayout_inflate_default_views com.cable.cloud:inflate_default_views}</code></td><td></td></tr>
+           <tr><td><code>{@link #PresenterLayout_show_initial_view com.cable.cloud:show_initial_view}</code></td><td></td></tr>
            </table>
            @see #PresenterLayout_background_color_overlapping
            @see #PresenterLayout_inflate_default_views
@@ -11383,7 +11368,7 @@ containing a value of this type.
             0x7f01013b, 0x7f01013c, 0x7f01013d
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#background_color_overlapping}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#background_color_overlapping}
           attribute's value can be found in the {@link #PresenterLayout} array.
 
 
@@ -11391,11 +11376,11 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:background_color_overlapping
+          @attr name com.cable.cloud:background_color_overlapping
         */
         public static final int PresenterLayout_background_color_overlapping = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#inflate_default_views}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#inflate_default_views}
           attribute's value can be found in the {@link #PresenterLayout} array.
 
 
@@ -11405,11 +11390,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:inflate_default_views
+          @attr name com.cable.cloud:inflate_default_views
         */
         public static final int PresenterLayout_inflate_default_views = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#show_initial_view}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#show_initial_view}
           attribute's value can be found in the {@link #PresenterLayout} array.
 
 
@@ -11424,7 +11409,7 @@ containing a value of this type.
 <tr><td><code>error</code></td><td>2</td><td></td></tr>
 <tr><td><code>no_connection</code></td><td>3</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:show_initial_view
+          @attr name com.cable.cloud:show_initial_view
         */
         public static final int PresenterLayout_show_initial_view = 1;
         /** Attributes that can be used with a RecycleListView.
@@ -11433,8 +11418,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #RecycleListView_paddingBottomNoButtons com.mtaj.mtaj_08.cableplus_new:paddingBottomNoButtons}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecycleListView_paddingTopNoTitle com.mtaj.mtaj_08.cableplus_new:paddingTopNoTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecycleListView_paddingBottomNoButtons com.cable.cloud:paddingBottomNoButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecycleListView_paddingTopNoTitle com.cable.cloud:paddingTopNoTitle}</code></td><td></td></tr>
            </table>
            @see #RecycleListView_paddingBottomNoButtons
            @see #RecycleListView_paddingTopNoTitle
@@ -11443,7 +11428,7 @@ containing a value of this type.
             0x7f01013e, 0x7f01013f
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#paddingBottomNoButtons}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#paddingBottomNoButtons}
           attribute's value can be found in the {@link #RecycleListView} array.
 
 
@@ -11455,11 +11440,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:paddingBottomNoButtons
+          @attr name com.cable.cloud:paddingBottomNoButtons
         */
         public static final int RecycleListView_paddingBottomNoButtons = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#paddingTopNoTitle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#paddingTopNoTitle}
           attribute's value can be found in the {@link #RecycleListView} array.
 
 
@@ -11471,7 +11456,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:paddingTopNoTitle
+          @attr name com.cable.cloud:paddingTopNoTitle
         */
         public static final int RecycleListView_paddingTopNoTitle = 1;
         /** Attributes that can be used with a RecyclerView.
@@ -11482,15 +11467,15 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #RecyclerView_android_descendantFocusability android:descendantFocusability}</code></td><td></td></tr>
            <tr><td><code>{@link #RecyclerView_android_orientation android:orientation}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_fastScrollEnabled com.mtaj.mtaj_08.cableplus_new:fastScrollEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_fastScrollHorizontalThumbDrawable com.mtaj.mtaj_08.cableplus_new:fastScrollHorizontalThumbDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_fastScrollHorizontalTrackDrawable com.mtaj.mtaj_08.cableplus_new:fastScrollHorizontalTrackDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_fastScrollVerticalThumbDrawable com.mtaj.mtaj_08.cableplus_new:fastScrollVerticalThumbDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_fastScrollVerticalTrackDrawable com.mtaj.mtaj_08.cableplus_new:fastScrollVerticalTrackDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_layoutManager com.mtaj.mtaj_08.cableplus_new:layoutManager}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_reverseLayout com.mtaj.mtaj_08.cableplus_new:reverseLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_spanCount com.mtaj.mtaj_08.cableplus_new:spanCount}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_stackFromEnd com.mtaj.mtaj_08.cableplus_new:stackFromEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_fastScrollEnabled com.cable.cloud:fastScrollEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_fastScrollHorizontalThumbDrawable com.cable.cloud:fastScrollHorizontalThumbDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_fastScrollHorizontalTrackDrawable com.cable.cloud:fastScrollHorizontalTrackDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_fastScrollVerticalThumbDrawable com.cable.cloud:fastScrollVerticalThumbDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_fastScrollVerticalTrackDrawable com.cable.cloud:fastScrollVerticalTrackDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_layoutManager com.cable.cloud:layoutManager}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_reverseLayout com.cable.cloud:reverseLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_spanCount com.cable.cloud:spanCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_stackFromEnd com.cable.cloud:stackFromEnd}</code></td><td></td></tr>
            </table>
            @see #RecyclerView_android_descendantFocusability
            @see #RecyclerView_android_orientation
@@ -11522,7 +11507,7 @@ containing a value of this type.
         */
         public static final int RecyclerView_android_orientation = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fastScrollEnabled}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fastScrollEnabled}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -11532,51 +11517,51 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:fastScrollEnabled
+          @attr name com.cable.cloud:fastScrollEnabled
         */
         public static final int RecyclerView_fastScrollEnabled = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fastScrollHorizontalThumbDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fastScrollHorizontalThumbDrawable}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:fastScrollHorizontalThumbDrawable
+          @attr name com.cable.cloud:fastScrollHorizontalThumbDrawable
         */
         public static final int RecyclerView_fastScrollHorizontalThumbDrawable = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fastScrollHorizontalTrackDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fastScrollHorizontalTrackDrawable}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:fastScrollHorizontalTrackDrawable
+          @attr name com.cable.cloud:fastScrollHorizontalTrackDrawable
         */
         public static final int RecyclerView_fastScrollHorizontalTrackDrawable = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fastScrollVerticalThumbDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fastScrollVerticalThumbDrawable}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:fastScrollVerticalThumbDrawable
+          @attr name com.cable.cloud:fastScrollVerticalThumbDrawable
         */
         public static final int RecyclerView_fastScrollVerticalThumbDrawable = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fastScrollVerticalTrackDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fastScrollVerticalTrackDrawable}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:fastScrollVerticalTrackDrawable
+          @attr name com.cable.cloud:fastScrollVerticalTrackDrawable
         */
         public static final int RecyclerView_fastScrollVerticalTrackDrawable = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layoutManager}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layoutManager}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -11586,11 +11571,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:layoutManager
+          @attr name com.cable.cloud:layoutManager
         */
         public static final int RecyclerView_layoutManager = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#reverseLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#reverseLayout}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -11600,11 +11585,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:reverseLayout
+          @attr name com.cable.cloud:reverseLayout
         */
         public static final int RecyclerView_reverseLayout = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#spanCount}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#spanCount}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -11614,11 +11599,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:spanCount
+          @attr name com.cable.cloud:spanCount
         */
         public static final int RecyclerView_spanCount = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#stackFromEnd}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#stackFromEnd}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -11628,7 +11613,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:stackFromEnd
+          @attr name com.cable.cloud:stackFromEnd
         */
         public static final int RecyclerView_stackFromEnd = 5;
         /** Attributes that can be used with a ScrimInsetsFrameLayout.
@@ -11637,7 +11622,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ScrimInsetsFrameLayout_insetForeground com.mtaj.mtaj_08.cableplus_new:insetForeground}</code></td><td></td></tr>
+           <tr><td><code>{@link #ScrimInsetsFrameLayout_insetForeground com.cable.cloud:insetForeground}</code></td><td></td></tr>
            </table>
            @see #ScrimInsetsFrameLayout_insetForeground
          */
@@ -11645,7 +11630,7 @@ containing a value of this type.
             0x7f010149
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#insetForeground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#insetForeground}
           attribute's value can be found in the {@link #ScrimInsetsFrameLayout} array.
 
 
@@ -11653,7 +11638,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:insetForeground
+          @attr name com.cable.cloud:insetForeground
         */
         public static final int ScrimInsetsFrameLayout_insetForeground = 0;
         /** Attributes that can be used with a ScrollingViewBehavior_Layout.
@@ -11662,7 +11647,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ScrollingViewBehavior_Layout_behavior_overlapTop com.mtaj.mtaj_08.cableplus_new:behavior_overlapTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #ScrollingViewBehavior_Layout_behavior_overlapTop com.cable.cloud:behavior_overlapTop}</code></td><td></td></tr>
            </table>
            @see #ScrollingViewBehavior_Layout_behavior_overlapTop
          */
@@ -11670,7 +11655,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01014a
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#behavior_overlapTop}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#behavior_overlapTop}
           attribute's value can be found in the {@link #ScrollingViewBehavior_Layout} array.
 
 
@@ -11682,7 +11667,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:behavior_overlapTop
+          @attr name com.cable.cloud:behavior_overlapTop
         */
         public static final int ScrollingViewBehavior_Layout_behavior_overlapTop = 0;
         /** Attributes that can be used with a SearchView.
@@ -11695,19 +11680,19 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_closeIcon com.mtaj.mtaj_08.cableplus_new:closeIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_commitIcon com.mtaj.mtaj_08.cableplus_new:commitIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_defaultQueryHint com.mtaj.mtaj_08.cableplus_new:defaultQueryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_goIcon com.mtaj.mtaj_08.cableplus_new:goIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault com.mtaj.mtaj_08.cableplus_new:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_layout com.mtaj.mtaj_08.cableplus_new:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryBackground com.mtaj.mtaj_08.cableplus_new:queryBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryHint com.mtaj.mtaj_08.cableplus_new:queryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchHintIcon com.mtaj.mtaj_08.cableplus_new:searchHintIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchIcon com.mtaj.mtaj_08.cableplus_new:searchIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_submitBackground com.mtaj.mtaj_08.cableplus_new:submitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_suggestionRowLayout com.mtaj.mtaj_08.cableplus_new:suggestionRowLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_voiceIcon com.mtaj.mtaj_08.cableplus_new:voiceIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_closeIcon com.cable.cloud:closeIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_commitIcon com.cable.cloud:commitIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_defaultQueryHint com.cable.cloud:defaultQueryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_goIcon com.cable.cloud:goIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault com.cable.cloud:iconifiedByDefault}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_layout com.cable.cloud:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryBackground com.cable.cloud:queryBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryHint com.cable.cloud:queryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchHintIcon com.cable.cloud:searchHintIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchIcon com.cable.cloud:searchIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_submitBackground com.cable.cloud:submitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_suggestionRowLayout com.cable.cloud:suggestionRowLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_voiceIcon com.cable.cloud:voiceIcon}</code></td><td></td></tr>
            </table>
            @see #SearchView_android_focusable
            @see #SearchView_android_imeOptions
@@ -11759,27 +11744,27 @@ containing a value of this type.
         */
         public static final int SearchView_android_maxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#closeIcon}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#closeIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:closeIcon
+          @attr name com.cable.cloud:closeIcon
         */
         public static final int SearchView_closeIcon = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#commitIcon}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#commitIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:commitIcon
+          @attr name com.cable.cloud:commitIcon
         */
         public static final int SearchView_commitIcon = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#defaultQueryHint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#defaultQueryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -11789,21 +11774,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:defaultQueryHint
+          @attr name com.cable.cloud:defaultQueryHint
         */
         public static final int SearchView_defaultQueryHint = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#goIcon}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#goIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:goIcon
+          @attr name com.cable.cloud:goIcon
         */
         public static final int SearchView_goIcon = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -11813,31 +11798,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:iconifiedByDefault
+          @attr name com.cable.cloud:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#layout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#layout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:layout
+          @attr name com.cable.cloud:layout
         */
         public static final int SearchView_layout = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#queryBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#queryBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:queryBackground
+          @attr name com.cable.cloud:queryBackground
         */
         public static final int SearchView_queryBackground = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -11847,57 +11832,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:queryHint
+          @attr name com.cable.cloud:queryHint
         */
         public static final int SearchView_queryHint = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#searchHintIcon}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#searchHintIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:searchHintIcon
+          @attr name com.cable.cloud:searchHintIcon
         */
         public static final int SearchView_searchHintIcon = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#searchIcon}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#searchIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:searchIcon
+          @attr name com.cable.cloud:searchIcon
         */
         public static final int SearchView_searchIcon = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#submitBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#submitBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:submitBackground
+          @attr name com.cable.cloud:submitBackground
         */
         public static final int SearchView_submitBackground = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#suggestionRowLayout}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#suggestionRowLayout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:suggestionRowLayout
+          @attr name com.cable.cloud:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#voiceIcon}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#voiceIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:voiceIcon
+          @attr name com.cable.cloud:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
         /** Attributes that can be used with a ShowHidePasswordEditText.
@@ -11906,10 +11891,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ShowHidePasswordEditText_additionalTouchTargetSize com.mtaj.mtaj_08.cableplus_new:additionalTouchTargetSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #ShowHidePasswordEditText_drawable_hide com.mtaj.mtaj_08.cableplus_new:drawable_hide}</code></td><td></td></tr>
-           <tr><td><code>{@link #ShowHidePasswordEditText_drawable_show com.mtaj.mtaj_08.cableplus_new:drawable_show}</code></td><td></td></tr>
-           <tr><td><code>{@link #ShowHidePasswordEditText_tint_color com.mtaj.mtaj_08.cableplus_new:tint_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #ShowHidePasswordEditText_additionalTouchTargetSize com.cable.cloud:additionalTouchTargetSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #ShowHidePasswordEditText_drawable_hide com.cable.cloud:drawable_hide}</code></td><td></td></tr>
+           <tr><td><code>{@link #ShowHidePasswordEditText_drawable_show com.cable.cloud:drawable_show}</code></td><td></td></tr>
+           <tr><td><code>{@link #ShowHidePasswordEditText_tint_color com.cable.cloud:tint_color}</code></td><td></td></tr>
            </table>
            @see #ShowHidePasswordEditText_additionalTouchTargetSize
            @see #ShowHidePasswordEditText_drawable_hide
@@ -11920,7 +11905,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010158, 0x7f010159, 0x7f01015a, 0x7f01015b
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#additionalTouchTargetSize}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#additionalTouchTargetSize}
           attribute's value can be found in the {@link #ShowHidePasswordEditText} array.
 
 
@@ -11932,11 +11917,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:additionalTouchTargetSize
+          @attr name com.cable.cloud:additionalTouchTargetSize
         */
         public static final int ShowHidePasswordEditText_additionalTouchTargetSize = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#drawable_hide}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#drawable_hide}
           attribute's value can be found in the {@link #ShowHidePasswordEditText} array.
 
 
@@ -11946,11 +11931,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:drawable_hide
+          @attr name com.cable.cloud:drawable_hide
         */
         public static final int ShowHidePasswordEditText_drawable_hide = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#drawable_show}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#drawable_show}
           attribute's value can be found in the {@link #ShowHidePasswordEditText} array.
 
 
@@ -11960,11 +11945,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:drawable_show
+          @attr name com.cable.cloud:drawable_show
         */
         public static final int ShowHidePasswordEditText_drawable_show = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tint_color}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tint_color}
           attribute's value can be found in the {@link #ShowHidePasswordEditText} array.
 
 
@@ -11975,7 +11960,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tint_color
+          @attr name com.cable.cloud:tint_color
         */
         public static final int ShowHidePasswordEditText_tint_color = 2;
         /** Attributes that can be used with a SignInButton.
@@ -11984,9 +11969,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SignInButton_buttonSize com.mtaj.mtaj_08.cableplus_new:buttonSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #SignInButton_colorScheme com.mtaj.mtaj_08.cableplus_new:colorScheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #SignInButton_scopeUris com.mtaj.mtaj_08.cableplus_new:scopeUris}</code></td><td></td></tr>
+           <tr><td><code>{@link #SignInButton_buttonSize com.cable.cloud:buttonSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #SignInButton_colorScheme com.cable.cloud:colorScheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #SignInButton_scopeUris com.cable.cloud:scopeUris}</code></td><td></td></tr>
            </table>
            @see #SignInButton_buttonSize
            @see #SignInButton_colorScheme
@@ -11996,7 +11981,7 @@ containing a value of this type.
             0x7f01015c, 0x7f01015d, 0x7f01015e
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonSize}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonSize}
           attribute's value can be found in the {@link #SignInButton} array.
 
 
@@ -12012,11 +11997,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>wide</code></td><td>1</td><td></td></tr>
 <tr><td><code>icon_only</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonSize
+          @attr name com.cable.cloud:buttonSize
         */
         public static final int SignInButton_buttonSize = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#colorScheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#colorScheme}
           attribute's value can be found in the {@link #SignInButton} array.
 
 
@@ -12032,18 +12017,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>light</code></td><td>1</td><td></td></tr>
 <tr><td><code>auto</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:colorScheme
+          @attr name com.cable.cloud:colorScheme
         */
         public static final int SignInButton_colorScheme = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#scopeUris}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#scopeUris}
           attribute's value can be found in the {@link #SignInButton} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-          @attr name com.mtaj.mtaj_08.cableplus_new:scopeUris
+          @attr name com.cable.cloud:scopeUris
         */
         public static final int SignInButton_scopeUris = 2;
         /** Attributes that can be used with a SignaturePad.
@@ -12052,11 +12037,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SignaturePad_clearOnDoubleClick com.mtaj.mtaj_08.cableplus_new:clearOnDoubleClick}</code></td><td></td></tr>
-           <tr><td><code>{@link #SignaturePad_penColor com.mtaj.mtaj_08.cableplus_new:penColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #SignaturePad_penMaxWidth com.mtaj.mtaj_08.cableplus_new:penMaxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SignaturePad_penMinWidth com.mtaj.mtaj_08.cableplus_new:penMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SignaturePad_velocityFilterWeight com.mtaj.mtaj_08.cableplus_new:velocityFilterWeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #SignaturePad_clearOnDoubleClick com.cable.cloud:clearOnDoubleClick}</code></td><td></td></tr>
+           <tr><td><code>{@link #SignaturePad_penColor com.cable.cloud:penColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #SignaturePad_penMaxWidth com.cable.cloud:penMaxWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SignaturePad_penMinWidth com.cable.cloud:penMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SignaturePad_velocityFilterWeight com.cable.cloud:velocityFilterWeight}</code></td><td></td></tr>
            </table>
            @see #SignaturePad_clearOnDoubleClick
            @see #SignaturePad_penColor
@@ -12069,7 +12054,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010163
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#clearOnDoubleClick}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#clearOnDoubleClick}
           attribute's value can be found in the {@link #SignaturePad} array.
 
 
@@ -12079,11 +12064,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:clearOnDoubleClick
+          @attr name com.cable.cloud:clearOnDoubleClick
         */
         public static final int SignaturePad_clearOnDoubleClick = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#penColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#penColor}
           attribute's value can be found in the {@link #SignaturePad} array.
 
 
@@ -12094,11 +12079,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:penColor
+          @attr name com.cable.cloud:penColor
         */
         public static final int SignaturePad_penColor = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#penMaxWidth}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#penMaxWidth}
           attribute's value can be found in the {@link #SignaturePad} array.
 
 
@@ -12110,11 +12095,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:penMaxWidth
+          @attr name com.cable.cloud:penMaxWidth
         */
         public static final int SignaturePad_penMaxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#penMinWidth}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#penMinWidth}
           attribute's value can be found in the {@link #SignaturePad} array.
 
 
@@ -12126,11 +12111,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:penMinWidth
+          @attr name com.cable.cloud:penMinWidth
         */
         public static final int SignaturePad_penMinWidth = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#velocityFilterWeight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#velocityFilterWeight}
           attribute's value can be found in the {@link #SignaturePad} array.
 
 
@@ -12140,7 +12125,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:velocityFilterWeight
+          @attr name com.cable.cloud:velocityFilterWeight
         */
         public static final int SignaturePad_velocityFilterWeight = 3;
         /** Attributes that can be used with a SnackbarLayout.
@@ -12150,8 +12135,8 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #SnackbarLayout_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SnackbarLayout_elevation com.mtaj.mtaj_08.cableplus_new:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #SnackbarLayout_maxActionInlineWidth com.mtaj.mtaj_08.cableplus_new:maxActionInlineWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SnackbarLayout_elevation com.cable.cloud:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #SnackbarLayout_maxActionInlineWidth com.cable.cloud:maxActionInlineWidth}</code></td><td></td></tr>
            </table>
            @see #SnackbarLayout_android_maxWidth
            @see #SnackbarLayout_elevation
@@ -12167,7 +12152,7 @@ containing a value of this type.
         */
         public static final int SnackbarLayout_android_maxWidth = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#elevation}
           attribute's value can be found in the {@link #SnackbarLayout} array.
 
 
@@ -12179,11 +12164,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:elevation
+          @attr name com.cable.cloud:elevation
         */
         public static final int SnackbarLayout_elevation = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#maxActionInlineWidth}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#maxActionInlineWidth}
           attribute's value can be found in the {@link #SnackbarLayout} array.
 
 
@@ -12195,7 +12180,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:maxActionInlineWidth
+          @attr name com.cable.cloud:maxActionInlineWidth
         */
         public static final int SnackbarLayout_maxActionInlineWidth = 2;
         /** Attributes that can be used with a Spinner.
@@ -12208,7 +12193,7 @@ containing a value of this type.
            <tr><td><code>{@link #Spinner_android_entries android:entries}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_prompt android:prompt}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_popupTheme com.mtaj.mtaj_08.cableplus_new:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_popupTheme com.cable.cloud:popupTheme}</code></td><td></td></tr>
            </table>
            @see #Spinner_android_dropDownWidth
            @see #Spinner_android_entries
@@ -12245,13 +12230,13 @@ containing a value of this type.
         */
         public static final int Spinner_android_prompt = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#popupTheme}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:popupTheme
+          @attr name com.cable.cloud:popupTheme
         */
         public static final int Spinner_popupTheme = 4;
         /** Attributes that can be used with a SwitchCompat.
@@ -12263,17 +12248,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_showText com.mtaj.mtaj_08.cableplus_new:showText}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_splitTrack com.mtaj.mtaj_08.cableplus_new:splitTrack}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.mtaj.mtaj_08.cableplus_new:switchMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchPadding com.mtaj.mtaj_08.cableplus_new:switchPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.mtaj.mtaj_08.cableplus_new:switchTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.mtaj.mtaj_08.cableplus_new:thumbTextPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTint com.mtaj.mtaj_08.cableplus_new:thumbTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTintMode com.mtaj.mtaj_08.cableplus_new:thumbTintMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_track com.mtaj.mtaj_08.cableplus_new:track}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_trackTint com.mtaj.mtaj_08.cableplus_new:trackTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_trackTintMode com.mtaj.mtaj_08.cableplus_new:trackTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_showText com.cable.cloud:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_splitTrack com.cable.cloud:splitTrack}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.cable.cloud:switchMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchPadding com.cable.cloud:switchPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.cable.cloud:switchTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.cable.cloud:thumbTextPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTint com.cable.cloud:thumbTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTintMode com.cable.cloud:thumbTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_track com.cable.cloud:track}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_trackTint com.cable.cloud:trackTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_trackTintMode com.cable.cloud:trackTintMode}</code></td><td></td></tr>
            </table>
            @see #SwitchCompat_android_textOff
            @see #SwitchCompat_android_textOn
@@ -12315,7 +12300,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompat_android_thumb = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#showText}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#showText}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -12325,11 +12310,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:showText
+          @attr name com.cable.cloud:showText
         */
         public static final int SwitchCompat_showText = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#splitTrack}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#splitTrack}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -12339,11 +12324,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:splitTrack
+          @attr name com.cable.cloud:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#switchMinWidth}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#switchMinWidth}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -12355,11 +12340,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:switchMinWidth
+          @attr name com.cable.cloud:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#switchPadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#switchPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -12371,21 +12356,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:switchPadding
+          @attr name com.cable.cloud:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#switchTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#switchTextAppearance}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:switchTextAppearance
+          @attr name com.cable.cloud:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#thumbTextPadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#thumbTextPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -12397,11 +12382,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:thumbTextPadding
+          @attr name com.cable.cloud:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#thumbTint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#thumbTint}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -12412,11 +12397,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:thumbTint
+          @attr name com.cable.cloud:thumbTint
         */
         public static final int SwitchCompat_thumbTint = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#thumbTintMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#thumbTintMode}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -12433,21 +12418,21 @@ containing a value of this type.
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 <tr><td><code>add</code></td><td>16</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:thumbTintMode
+          @attr name com.cable.cloud:thumbTintMode
         */
         public static final int SwitchCompat_thumbTintMode = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#track}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#track}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:track
+          @attr name com.cable.cloud:track
         */
         public static final int SwitchCompat_track = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#trackTint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#trackTint}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -12458,11 +12443,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:trackTint
+          @attr name com.cable.cloud:trackTint
         */
         public static final int SwitchCompat_trackTint = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#trackTintMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#trackTintMode}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -12479,7 +12464,7 @@ containing a value of this type.
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 <tr><td><code>add</code></td><td>16</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:trackTintMode
+          @attr name com.cable.cloud:trackTintMode
         */
         public static final int SwitchCompat_trackTintMode = 7;
         /** Attributes that can be used with a TabItem.
@@ -12523,22 +12508,22 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #TabLayout_tabBackground com.mtaj.mtaj_08.cableplus_new:tabBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabContentStart com.mtaj.mtaj_08.cableplus_new:tabContentStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabGravity com.mtaj.mtaj_08.cableplus_new:tabGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabIndicatorColor com.mtaj.mtaj_08.cableplus_new:tabIndicatorColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabIndicatorHeight com.mtaj.mtaj_08.cableplus_new:tabIndicatorHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabMaxWidth com.mtaj.mtaj_08.cableplus_new:tabMaxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabMinWidth com.mtaj.mtaj_08.cableplus_new:tabMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabMode com.mtaj.mtaj_08.cableplus_new:tabMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPadding com.mtaj.mtaj_08.cableplus_new:tabPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingBottom com.mtaj.mtaj_08.cableplus_new:tabPaddingBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingEnd com.mtaj.mtaj_08.cableplus_new:tabPaddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingStart com.mtaj.mtaj_08.cableplus_new:tabPaddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingTop com.mtaj.mtaj_08.cableplus_new:tabPaddingTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabSelectedTextColor com.mtaj.mtaj_08.cableplus_new:tabSelectedTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabTextAppearance com.mtaj.mtaj_08.cableplus_new:tabTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabTextColor com.mtaj.mtaj_08.cableplus_new:tabTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabBackground com.cable.cloud:tabBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabContentStart com.cable.cloud:tabContentStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabGravity com.cable.cloud:tabGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabIndicatorColor com.cable.cloud:tabIndicatorColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabIndicatorHeight com.cable.cloud:tabIndicatorHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMaxWidth com.cable.cloud:tabMaxWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMinWidth com.cable.cloud:tabMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMode com.cable.cloud:tabMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPadding com.cable.cloud:tabPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingBottom com.cable.cloud:tabPaddingBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingEnd com.cable.cloud:tabPaddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingStart com.cable.cloud:tabPaddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingTop com.cable.cloud:tabPaddingTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabSelectedTextColor com.cable.cloud:tabSelectedTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabTextAppearance com.cable.cloud:tabTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabTextColor com.cable.cloud:tabTextColor}</code></td><td></td></tr>
            </table>
            @see #TabLayout_tabBackground
            @see #TabLayout_tabContentStart
@@ -12564,17 +12549,17 @@ containing a value of this type.
             0x7f01017c, 0x7f01017d, 0x7f01017e, 0x7f01017f
         };
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabBackground}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabBackground}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabBackground
+          @attr name com.cable.cloud:tabBackground
         */
         public static final int TabLayout_tabBackground = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabContentStart}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabContentStart}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12586,11 +12571,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabContentStart
+          @attr name com.cable.cloud:tabContentStart
         */
         public static final int TabLayout_tabContentStart = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabGravity}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabGravity}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12603,11 +12588,11 @@ containing a value of this type.
 <tr><td><code>fill</code></td><td>0</td><td></td></tr>
 <tr><td><code>center</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabGravity
+          @attr name com.cable.cloud:tabGravity
         */
         public static final int TabLayout_tabGravity = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabIndicatorColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabIndicatorColor}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12618,11 +12603,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabIndicatorColor
+          @attr name com.cable.cloud:tabIndicatorColor
         */
         public static final int TabLayout_tabIndicatorColor = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabIndicatorHeight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabIndicatorHeight}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12634,11 +12619,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabIndicatorHeight
+          @attr name com.cable.cloud:tabIndicatorHeight
         */
         public static final int TabLayout_tabIndicatorHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabMaxWidth}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabMaxWidth}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12650,11 +12635,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabMaxWidth
+          @attr name com.cable.cloud:tabMaxWidth
         */
         public static final int TabLayout_tabMaxWidth = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabMinWidth}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabMinWidth}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12666,11 +12651,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabMinWidth
+          @attr name com.cable.cloud:tabMinWidth
         */
         public static final int TabLayout_tabMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabMode}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12683,11 +12668,11 @@ containing a value of this type.
 <tr><td><code>scrollable</code></td><td>0</td><td></td></tr>
 <tr><td><code>fixed</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabMode
+          @attr name com.cable.cloud:tabMode
         */
         public static final int TabLayout_tabMode = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabPadding}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabPadding}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12699,11 +12684,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabPadding
+          @attr name com.cable.cloud:tabPadding
         */
         public static final int TabLayout_tabPadding = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabPaddingBottom}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabPaddingBottom}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12715,11 +12700,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabPaddingBottom
+          @attr name com.cable.cloud:tabPaddingBottom
         */
         public static final int TabLayout_tabPaddingBottom = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabPaddingEnd}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabPaddingEnd}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12731,11 +12716,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabPaddingEnd
+          @attr name com.cable.cloud:tabPaddingEnd
         */
         public static final int TabLayout_tabPaddingEnd = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabPaddingStart}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabPaddingStart}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12747,11 +12732,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabPaddingStart
+          @attr name com.cable.cloud:tabPaddingStart
         */
         public static final int TabLayout_tabPaddingStart = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabPaddingTop}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabPaddingTop}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12763,11 +12748,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabPaddingTop
+          @attr name com.cable.cloud:tabPaddingTop
         */
         public static final int TabLayout_tabPaddingTop = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabSelectedTextColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabSelectedTextColor}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12778,21 +12763,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabSelectedTextColor
+          @attr name com.cable.cloud:tabSelectedTextColor
         */
         public static final int TabLayout_tabSelectedTextColor = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabTextAppearance}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabTextAppearance
+          @attr name com.cable.cloud:tabTextAppearance
         */
         public static final int TabLayout_tabTextAppearance = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#tabTextColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#tabTextColor}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -12803,7 +12788,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:tabTextColor
+          @attr name com.cable.cloud:tabTextColor
         */
         public static final int TabLayout_tabTextColor = 9;
         /** Attributes that can be used with a TextAppearance.
@@ -12823,8 +12808,8 @@ containing a value of this type.
            <tr><td><code>{@link #TextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_textStyle android:textStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_typeface android:typeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextAppearance_fontFamily com.mtaj.mtaj_08.cableplus_new:fontFamily}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextAppearance_textAllCaps com.mtaj.mtaj_08.cableplus_new:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextAppearance_fontFamily com.cable.cloud:fontFamily}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextAppearance_textAllCaps com.cable.cloud:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #TextAppearance_android_fontFamily
            @see #TextAppearance_android_shadowColor
@@ -12913,7 +12898,7 @@ containing a value of this type.
         */
         public static final int TextAppearance_android_typeface = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#fontFamily}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#fontFamily}
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
@@ -12923,18 +12908,18 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:fontFamily
+          @attr name com.cable.cloud:fontFamily
         */
         public static final int TextAppearance_fontFamily = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#textAllCaps}
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:textAllCaps
+          @attr name com.cable.cloud:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 11;
         /** Attributes that can be used with a TextInputLayout.
@@ -12945,20 +12930,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #TextInputLayout_android_hint android:hint}</code></td><td></td></tr>
            <tr><td><code>{@link #TextInputLayout_android_textColorHint android:textColorHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_counterEnabled com.mtaj.mtaj_08.cableplus_new:counterEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_counterMaxLength com.mtaj.mtaj_08.cableplus_new:counterMaxLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_counterOverflowTextAppearance com.mtaj.mtaj_08.cableplus_new:counterOverflowTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_counterTextAppearance com.mtaj.mtaj_08.cableplus_new:counterTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_errorEnabled com.mtaj.mtaj_08.cableplus_new:errorEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_errorTextAppearance com.mtaj.mtaj_08.cableplus_new:errorTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_hintAnimationEnabled com.mtaj.mtaj_08.cableplus_new:hintAnimationEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_hintEnabled com.mtaj.mtaj_08.cableplus_new:hintEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_hintTextAppearance com.mtaj.mtaj_08.cableplus_new:hintTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_passwordToggleContentDescription com.mtaj.mtaj_08.cableplus_new:passwordToggleContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_passwordToggleDrawable com.mtaj.mtaj_08.cableplus_new:passwordToggleDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_passwordToggleEnabled com.mtaj.mtaj_08.cableplus_new:passwordToggleEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_passwordToggleTint com.mtaj.mtaj_08.cableplus_new:passwordToggleTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_passwordToggleTintMode com.mtaj.mtaj_08.cableplus_new:passwordToggleTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterEnabled com.cable.cloud:counterEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterMaxLength com.cable.cloud:counterMaxLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterOverflowTextAppearance com.cable.cloud:counterOverflowTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterTextAppearance com.cable.cloud:counterTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_errorEnabled com.cable.cloud:errorEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_errorTextAppearance com.cable.cloud:errorTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_hintAnimationEnabled com.cable.cloud:hintAnimationEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_hintEnabled com.cable.cloud:hintEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_hintTextAppearance com.cable.cloud:hintTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_passwordToggleContentDescription com.cable.cloud:passwordToggleContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_passwordToggleDrawable com.cable.cloud:passwordToggleDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_passwordToggleEnabled com.cable.cloud:passwordToggleEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_passwordToggleTint com.cable.cloud:passwordToggleTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_passwordToggleTintMode com.cable.cloud:passwordToggleTintMode}</code></td><td></td></tr>
            </table>
            @see #TextInputLayout_android_hint
            @see #TextInputLayout_android_textColorHint
@@ -12996,7 +12981,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int TextInputLayout_android_textColorHint = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#counterEnabled}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#counterEnabled}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -13006,11 +12991,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:counterEnabled
+          @attr name com.cable.cloud:counterEnabled
         */
         public static final int TextInputLayout_counterEnabled = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#counterMaxLength}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#counterMaxLength}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -13020,31 +13005,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:counterMaxLength
+          @attr name com.cable.cloud:counterMaxLength
         */
         public static final int TextInputLayout_counterMaxLength = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#counterOverflowTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#counterOverflowTextAppearance}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:counterOverflowTextAppearance
+          @attr name com.cable.cloud:counterOverflowTextAppearance
         */
         public static final int TextInputLayout_counterOverflowTextAppearance = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#counterTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#counterTextAppearance}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:counterTextAppearance
+          @attr name com.cable.cloud:counterTextAppearance
         */
         public static final int TextInputLayout_counterTextAppearance = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#errorEnabled}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#errorEnabled}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -13054,21 +13039,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:errorEnabled
+          @attr name com.cable.cloud:errorEnabled
         */
         public static final int TextInputLayout_errorEnabled = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#errorTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#errorTextAppearance}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:errorTextAppearance
+          @attr name com.cable.cloud:errorTextAppearance
         */
         public static final int TextInputLayout_errorTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#hintAnimationEnabled}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#hintAnimationEnabled}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -13078,11 +13063,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:hintAnimationEnabled
+          @attr name com.cable.cloud:hintAnimationEnabled
         */
         public static final int TextInputLayout_hintAnimationEnabled = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#hintEnabled}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#hintEnabled}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -13092,21 +13077,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:hintEnabled
+          @attr name com.cable.cloud:hintEnabled
         */
         public static final int TextInputLayout_hintEnabled = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#hintTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#hintTextAppearance}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:hintTextAppearance
+          @attr name com.cable.cloud:hintTextAppearance
         */
         public static final int TextInputLayout_hintTextAppearance = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#passwordToggleContentDescription}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#passwordToggleContentDescription}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -13116,21 +13101,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:passwordToggleContentDescription
+          @attr name com.cable.cloud:passwordToggleContentDescription
         */
         public static final int TextInputLayout_passwordToggleContentDescription = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#passwordToggleDrawable}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#passwordToggleDrawable}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:passwordToggleDrawable
+          @attr name com.cable.cloud:passwordToggleDrawable
         */
         public static final int TextInputLayout_passwordToggleDrawable = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#passwordToggleEnabled}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#passwordToggleEnabled}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -13140,11 +13125,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:passwordToggleEnabled
+          @attr name com.cable.cloud:passwordToggleEnabled
         */
         public static final int TextInputLayout_passwordToggleEnabled = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#passwordToggleTint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#passwordToggleTint}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -13155,11 +13140,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:passwordToggleTint
+          @attr name com.cable.cloud:passwordToggleTint
         */
         public static final int TextInputLayout_passwordToggleTint = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#passwordToggleTintMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#passwordToggleTintMode}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -13175,7 +13160,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:passwordToggleTintMode
+          @attr name com.cable.cloud:passwordToggleTintMode
         */
         public static final int TextInputLayout_passwordToggleTintMode = 15;
         /** Attributes that can be used with a Toolbar.
@@ -13186,33 +13171,33 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_buttonGravity com.mtaj.mtaj_08.cableplus_new:buttonGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseContentDescription com.mtaj.mtaj_08.cableplus_new:collapseContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseIcon com.mtaj.mtaj_08.cableplus_new:collapseIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEnd com.mtaj.mtaj_08.cableplus_new:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEndWithActions com.mtaj.mtaj_08.cableplus_new:contentInsetEndWithActions}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetLeft com.mtaj.mtaj_08.cableplus_new:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetRight com.mtaj.mtaj_08.cableplus_new:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStart com.mtaj.mtaj_08.cableplus_new:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStartWithNavigation com.mtaj.mtaj_08.cableplus_new:contentInsetStartWithNavigation}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_logo com.mtaj.mtaj_08.cableplus_new:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_logoDescription com.mtaj.mtaj_08.cableplus_new:logoDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_maxButtonHeight com.mtaj.mtaj_08.cableplus_new:maxButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationContentDescription com.mtaj.mtaj_08.cableplus_new:navigationContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationIcon com.mtaj.mtaj_08.cableplus_new:navigationIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_popupTheme com.mtaj.mtaj_08.cableplus_new:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitle com.mtaj.mtaj_08.cableplus_new:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.mtaj.mtaj_08.cableplus_new:subtitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextColor com.mtaj.mtaj_08.cableplus_new:subtitleTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_title com.mtaj.mtaj_08.cableplus_new:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargin com.mtaj.mtaj_08.cableplus_new:titleMargin}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginBottom com.mtaj.mtaj_08.cableplus_new:titleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginEnd com.mtaj.mtaj_08.cableplus_new:titleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginStart com.mtaj.mtaj_08.cableplus_new:titleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginTop com.mtaj.mtaj_08.cableplus_new:titleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargins com.mtaj.mtaj_08.cableplus_new:titleMargins}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextAppearance com.mtaj.mtaj_08.cableplus_new:titleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextColor com.mtaj.mtaj_08.cableplus_new:titleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_buttonGravity com.cable.cloud:buttonGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseContentDescription com.cable.cloud:collapseContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseIcon com.cable.cloud:collapseIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEnd com.cable.cloud:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEndWithActions com.cable.cloud:contentInsetEndWithActions}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetLeft com.cable.cloud:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetRight com.cable.cloud:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStart com.cable.cloud:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStartWithNavigation com.cable.cloud:contentInsetStartWithNavigation}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_logo com.cable.cloud:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_logoDescription com.cable.cloud:logoDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_maxButtonHeight com.cable.cloud:maxButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationContentDescription com.cable.cloud:navigationContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationIcon com.cable.cloud:navigationIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_popupTheme com.cable.cloud:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitle com.cable.cloud:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.cable.cloud:subtitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextColor com.cable.cloud:subtitleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_title com.cable.cloud:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargin com.cable.cloud:titleMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginBottom com.cable.cloud:titleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginEnd com.cable.cloud:titleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginStart com.cable.cloud:titleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginTop com.cable.cloud:titleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargins com.cable.cloud:titleMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextAppearance com.cable.cloud:titleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextColor com.cable.cloud:titleTextColor}</code></td><td></td></tr>
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
@@ -13267,7 +13252,7 @@ containing a value of this type.
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#buttonGravity}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#buttonGravity}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13280,11 +13265,11 @@ containing a value of this type.
 <tr><td><code>top</code></td><td>0x30</td><td></td></tr>
 <tr><td><code>bottom</code></td><td>0x50</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:buttonGravity
+          @attr name com.cable.cloud:buttonGravity
         */
         public static final int Toolbar_buttonGravity = 21;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#collapseContentDescription}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13294,21 +13279,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:collapseContentDescription
+          @attr name com.cable.cloud:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 23;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:collapseIcon
+          @attr name com.cable.cloud:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 22;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13320,11 +13305,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetEnd
+          @attr name com.cable.cloud:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetEndWithActions}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetEndWithActions}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13336,11 +13321,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetEndWithActions
+          @attr name com.cable.cloud:contentInsetEndWithActions
         */
         public static final int Toolbar_contentInsetEndWithActions = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13352,11 +13337,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetLeft
+          @attr name com.cable.cloud:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13368,11 +13353,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetRight
+          @attr name com.cable.cloud:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13384,11 +13369,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetStart
+          @attr name com.cable.cloud:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#contentInsetStartWithNavigation}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#contentInsetStartWithNavigation}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13400,21 +13385,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:contentInsetStartWithNavigation
+          @attr name com.cable.cloud:contentInsetStartWithNavigation
         */
         public static final int Toolbar_contentInsetStartWithNavigation = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#logo}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:logo
+          @attr name com.cable.cloud:logo
         */
         public static final int Toolbar_logo = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#logoDescription}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#logoDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13424,11 +13409,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:logoDescription
+          @attr name com.cable.cloud:logoDescription
         */
         public static final int Toolbar_logoDescription = 26;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13440,11 +13425,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:maxButtonHeight
+          @attr name com.cable.cloud:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 20;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#navigationContentDescription}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#navigationContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13454,31 +13439,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:navigationContentDescription
+          @attr name com.cable.cloud:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 25;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#navigationIcon}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#navigationIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:navigationIcon
+          @attr name com.cable.cloud:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 24;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#popupTheme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:popupTheme
+          @attr name com.cable.cloud:popupTheme
         */
         public static final int Toolbar_popupTheme = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#subtitle}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13488,21 +13473,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:subtitle
+          @attr name com.cable.cloud:subtitle
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:subtitleTextAppearance
+          @attr name com.cable.cloud:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#subtitleTextColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#subtitleTextColor}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13513,11 +13498,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:subtitleTextColor
+          @attr name com.cable.cloud:subtitleTextColor
         */
         public static final int Toolbar_subtitleTextColor = 28;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#title}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13527,11 +13512,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:title
+          @attr name com.cable.cloud:title
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleMargin}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleMargin}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13543,11 +13528,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleMargin
+          @attr name com.cable.cloud:titleMargin
         */
         public static final int Toolbar_titleMargin = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13559,11 +13544,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleMarginBottom
+          @attr name com.cable.cloud:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 18;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13575,11 +13560,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleMarginEnd
+          @attr name com.cable.cloud:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13591,11 +13576,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleMarginStart
+          @attr name com.cable.cloud:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13607,11 +13592,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleMarginTop
+          @attr name com.cable.cloud:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 17;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13623,21 +13608,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleMargins
+          @attr name com.cable.cloud:titleMargins
         */
         public static final int Toolbar_titleMargins = 19;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleTextAppearance
+          @attr name com.cable.cloud:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#titleTextColor}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#titleTextColor}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -13648,7 +13633,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:titleTextColor
+          @attr name com.cable.cloud:titleTextColor
         */
         public static final int Toolbar_titleTextColor = 27;
         /** Attributes that can be used with a View.
@@ -13659,9 +13644,9 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
            <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingEnd com.mtaj.mtaj_08.cableplus_new:paddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingStart com.mtaj.mtaj_08.cableplus_new:paddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_theme com.mtaj.mtaj_08.cableplus_new:theme}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingEnd com.cable.cloud:paddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingStart com.cable.cloud:paddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_theme com.cable.cloud:theme}</code></td><td></td></tr>
            </table>
            @see #View_android_focusable
            @see #View_android_theme
@@ -13686,7 +13671,7 @@ containing a value of this type.
         */
         public static final int View_android_theme = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -13698,11 +13683,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:paddingEnd
+          @attr name com.cable.cloud:paddingEnd
         */
         public static final int View_paddingEnd = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -13714,17 +13699,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:paddingStart
+          @attr name com.cable.cloud:paddingStart
         */
         public static final int View_paddingStart = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#theme}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#theme}
           attribute's value can be found in the {@link #View} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mtaj.mtaj_08.cableplus_new:theme
+          @attr name com.cable.cloud:theme
         */
         public static final int View_theme = 4;
         /** Attributes that can be used with a ViewBackgroundHelper.
@@ -13734,8 +13719,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.mtaj.mtaj_08.cableplus_new:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.mtaj.mtaj_08.cableplus_new:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.cable.cloud:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.cable.cloud:backgroundTintMode}</code></td><td></td></tr>
            </table>
            @see #ViewBackgroundHelper_android_background
            @see #ViewBackgroundHelper_backgroundTint
@@ -13751,7 +13736,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ViewBackgroundHelper_android_background = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#backgroundTint}
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
@@ -13762,11 +13747,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mtaj.mtaj_08.cableplus_new:backgroundTint
+          @attr name com.cable.cloud:backgroundTint
         */
         public static final int ViewBackgroundHelper_backgroundTint = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mtaj.mtaj_08.cableplus_new.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link com.cable.cloud.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
@@ -13782,7 +13767,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.mtaj.mtaj_08.cableplus_new:backgroundTintMode
+          @attr name com.cable.cloud:backgroundTintMode
         */
         public static final int ViewBackgroundHelper_backgroundTintMode = 2;
         /** Attributes that can be used with a ViewStubCompat.
