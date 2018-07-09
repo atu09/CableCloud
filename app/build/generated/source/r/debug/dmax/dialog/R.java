@@ -30,7 +30,7 @@ public final class R {
         public static final int title = 0x7f110015;
     }
     public static final class layout {
-        public static final int dialog = 0x7f04005b;
+        public static final int dialog = 0x7f04005d;
     }
     public static final class style {
         public static final int SpotsDialogDefault = 0x7f0c0087;

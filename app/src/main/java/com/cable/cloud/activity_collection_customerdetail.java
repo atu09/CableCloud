@@ -31,6 +31,8 @@ import android.widget.Toast;
 //import com.github.silvestrpredko.dotprogressbar.DotProgressBar;
 
 import com.cable.cloud.R;
+import com.cable.cloud.customs.MDDialog;
+import com.cable.cloud.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -55,7 +57,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
-import cn.carbs.android.library.MDDialog;
 import dmax.dialog.SpotsDialog;
 
 public class activity_collection_customerdetail extends AppCompatActivity implements SearchView.OnQueryTextListener {
@@ -65,15 +66,15 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
     ListView lvcustomer;
 
-    ArrayList<HashMap<String,String>> customerlist=new ArrayList<>();
+    ArrayList<HashMap<String, String>> customerlist = new ArrayList<>();
 
     SimpleAdapter da;
 
     private Calendar calendar;
     private int year, cmonth, day;
 
-    EditText edtfrom,edtto;
-
+    EditText edtfrom, edtto;
+    private Context context;
     static InputStream is = null;
     static JSONObject jobj = null;
     static String json = "";
@@ -81,49 +82,51 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
     JSONObject jsonobj;
 
-    String siteurl,uid,cid,aid,eid,URL,tc,toa,areaid,name;
+    String siteurl, uid, cid, aid, eid, URL, tc, toa, areaid, name;
 
-    TextView tvtotalcol,tvtotaloa;
+    TextView tvtotalcol, tvtotaloa;
 
-    String tempto="-",tempfrom="-";
+    String tempto = "-", tempfrom = "-";
 
     RelativeLayout rlmain;
 
-    String fromdate,todate;
+    String fromdate, todate;
 
-    int mPage=0;
+    int mPage = 0;
 
     Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity_collection_customerdetail);
+        setContentView(R.layout.activity_collection_customerdetail_rev);
+
+        context = this;
 
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
         cmonth = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        fromdate=(cmonth + 1) + "/" + "1" + "/" + year;
-        todate=(cmonth + 1) + "/" + day + "/" + year;
+        fromdate = (cmonth + 1) + "/" + "1" + "/" + year;
+        todate = (cmonth + 1) + "/" + day + "/" + year;
 
         final SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        name=pref.getString("Name", "").toString();
+        name = pref.getString("Name", "").toString();
 
-        siteurl=pref.getString("SiteURL","").toString();
-        uid=pref.getString("selected_uid","").toString();
-        cid=pref.getString("Contracotrid","").toString();
-        aid=pref.getString("AreaId","").toString();
-        eid=pref.getString("Entityids","").toString();
+        siteurl = pref.getString("SiteURL", "").toString();
+        uid = pref.getString("selected_uid", "").toString();
+        cid = pref.getString("Contracotrid", "").toString();
+        aid = pref.getString("AreaId", "").toString();
+        eid = pref.getString("Entityids", "").toString();
 
-        lvcustomer=(ListView)findViewById(R.id.listcustomerdetail);
+        lvcustomer = (ListView) findViewById(R.id.listcustomerdetail);
 
-        tvtotalcol=(TextView)findViewById(R.id.btnCancel);
-        tvtotaloa=(TextView)findViewById(R.id.btnNext);
+        tvtotalcol = (TextView) findViewById(R.id.btnCancel);
+        tvtotaloa = (TextView) findViewById(R.id.btnNext);
 
-        rlmain=(RelativeLayout)findViewById(R.id.content);
+        rlmain = (RelativeLayout) findViewById(R.id.content);
 
 
        /* Intent j=getIntent();
@@ -138,7 +141,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
         //tvtotaloa.setText(toa);
         //tvtotalcol.setText(tc);
 
-         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(name);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setNavigationIcon(R.drawable.ic_back_white);
@@ -156,11 +159,10 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
         });
 
 
-
         //URL=siteURL+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(page)+"&noofrecords=20&contractorid="+contractorId+"&areadId="+areaid+"&userId="+userId+"&entityId="+entities+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
 
 
-        URL=siteurl+"/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
+        URL = siteurl + "/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex=" + String.valueOf(mPage) + "&noofrecords=20&contractorid=" + cid + "&userId=" + uid + "&entityId=" + eid + "&fromdate=" + fromdate + "&todate=" + todate + "&filterCustomer=";
 
         new JSONAsynk().execute(new String[]{URL});
 
@@ -173,11 +175,11 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
             @Override
             public void loadMore(int page, int totalItemsCount) {
 
-                mPage = mPage+1;
+                mPage = mPage + 1;
 
                 //URL=siteURL+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(page)+"&noofrecords=20&contractorid="+contractorId+"&areadId="+areaid+"&userId="+userId+"&entityId="+entities+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
 
-                URL=siteurl+"/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
+                URL = siteurl + "/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex=" + String.valueOf(mPage) + "&noofrecords=20&contractorid=" + cid + "&userId=" + uid + "&entityId=" + eid + "&fromdate=" + fromdate + "&todate=" + todate + "&filterCustomer=";
 
                 new JSONAsynk().execute(new String[]{URL});
 
@@ -192,8 +194,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
 
         finish();
     }
@@ -210,7 +211,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
         searchView.setSearchableInfo(searchManager.
                 getSearchableInfo(getComponentName()));
-        ((EditText)searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text))
+        ((EditText) searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text))
                 .setHintTextColor(Color.WHITE);
 
         searchView.setFocusable(false);
@@ -238,7 +239,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
         return true;
     }
 
-    public JSONObject makeHttpRequest(String url){
+    public JSONObject makeHttpRequest(String url) {
         HttpParams httpParameters = new BasicHttpParams();
 
         int timeoutConnection = 500000;
@@ -249,19 +250,18 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
         DefaultHttpClient httpclient = new DefaultHttpClient(httpParameters);
-        HttpGet httppost=new HttpGet(url);
-        try{
+        HttpGet httppost = new HttpGet(url);
+        try {
             HttpResponse httpresponse = httpclient.execute(httppost);
             HttpEntity httpentity = httpresponse.getEntity();
             is = httpentity.getContent();
-        }catch (ClientProtocolException e){
+        } catch (ClientProtocolException e) {
             e.printStackTrace();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try{
-
+        try {
 
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
@@ -270,15 +270,13 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
             StringBuilder sb = new StringBuilder();
             String line = null;
-            try{
-                if(reader!=null) {
+            try {
+                if (reader != null) {
 
                     while ((line = reader.readLine()) != null) {
                         sb.append(line);
                     }
-                }
-                else
-                {
+                } else {
                     Toast.makeText(getApplicationContext(), "No data", Toast.LENGTH_SHORT).show();
                 }
 
@@ -286,7 +284,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
                 json = sb.toString();
 
                 // json= sb.toString().substring(0, sb.toString().length()-1);
-                try{
+                try {
                     jobj = new JSONObject(json);
 
                     // JSONArray jarrays=new JSONArray(json);
@@ -297,14 +295,14 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
                     // jarr =(JSONArray)jsonparse.parse(json);
                     // jobj = jarr.getJSONObject(0);
-                }catch (JSONException e){
-                    Toast.makeText(getApplicationContext(), "**"+e, Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
                 }
-            }catch(IOException e){
-                Toast.makeText(getApplicationContext(), "**"+e, Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
             }
-        }catch (UnsupportedEncodingException e){
-            Toast.makeText(getApplicationContext(), "**"+e, Toast.LENGTH_SHORT).show();
+        } catch (UnsupportedEncodingException e) {
+            Toast.makeText(getApplicationContext(), "**" + e, Toast.LENGTH_SHORT).show();
         }
        /* catch (ParseException e){
             Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
@@ -313,26 +311,22 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
     }
 
 
-
-    private class JSONAsynk extends AsyncTask<String,String,JSONObject>
-    {
-
-        private ProgressDialog pDialog;
-       // public DotProgressBar dtprogoress;
-
-        SpotsDialog spload;
+    private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
 
 
-        JSONObject jsn1,jsn,jsnmain;
+        // public DotProgressBar dtprogoress;
+
+        Dialog dialog = Utils.getLoader(context);
+
+
+        JSONObject jsn1, jsn, jsnmain;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload=new SpotsDialog(activity_collection_customerdetail.this,R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
-            spload.show();
+
+            dialog.show();
 
         }
 
@@ -341,28 +335,26 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
 
             try {
 
-                jsonobj=makeHttpRequest(params[0]);
+                jsonobj = makeHttpRequest(params[0]);
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
-            return  jsonobj;
+            return jsonobj;
 
 
         }
 
         @Override
         protected void onPostExecute(JSONObject json) {
-            spload.dismiss();
+            dialog.dismiss();
 
-            try
-            {
+            try {
                 //  Toast.makeText(CustomerListActivity.this, json.toString(), Toast.LENGTH_SHORT).show();
-                if(json.getString("status").toString().equals("True"))
-                {
+                if (json.getString("status").toString().equals("True")) {
 
-                   // Toast.makeText(getApplicationContext(), json.toString(), Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(getApplicationContext(), json.toString(), Toast.LENGTH_SHORT).show();
 
                     rlmain.setVisibility(View.VISIBLE);
 
@@ -376,7 +368,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
                     for (int i = 0; i < entityarray.length(); i++) {
                         JSONObject e = (JSONObject) entityarray.get(i);
 
-                        HashMap<String,String> map=new HashMap<>();
+                        HashMap<String, String> map = new HashMap<>();
 
                         String cid = e.getString("CustomerId");
                         String cname = e.getString("Name");
@@ -385,21 +377,21 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
                         String ccolamt = e.getString("CollectinAmount");
                         String crcptdate = e.getString("ReceiptDate");
 
-                        map.put("CustomerId",cid);
-                        map.put("Name",cname);
-                        map.put("AccountNo",caccno);
-                        map.put("MQNo",cmqno);
-                        map.put("CollectinAmount",str+format.format(Double.parseDouble(ccolamt)));
-                        map.put("ReceiptDate",crcptdate);
+                        map.put("CustomerId", cid);
+                        map.put("Name", cname);
+                        map.put("AccountNo", caccno);
+                        map.put("MQNo", cmqno);
+                        map.put("CollectinAmount", str + format.format(Double.parseDouble(ccolamt)));
+                        map.put("ReceiptDate", crcptdate);
 
                         customerlist.add(map);
 
                     }
 
-                    tvtotaloa.setText(str+format.format(Double.parseDouble(json.getString("TotalOutstanding"))));
-                    tvtotalcol.setText(str+format.format(Double.parseDouble(json.getString("TotalCollection"))));
+                    tvtotaloa.setText(str + format.format(Double.parseDouble(json.getString("TotalOutstanding"))));
+                    tvtotalcol.setText(str + format.format(Double.parseDouble(json.getString("TotalCollection"))));
 
-                    toolbar.setTitle(name+" - "+json.getString("TotalCount"));
+                    toolbar.setTitle(name + " - " + json.getString("TotalCount"));
 
 
                        /* adapter = new SimpleAdapter(activity_collection_customerdetail.this, customerlist, R.layout.layout_colletion_customerdetail, new String[]{"Name", "CollectinAmount", "AccountNo", "MQNo", "ReceiptDate"}, new int[]{R.id.textView31, R.id.textView49, R.id.textView43, R.id.textView47, R.id.textView52});
@@ -408,30 +400,22 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
                     da.notifyDataSetChanged();
 
                     // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show()
-                }
-                else
-                {
+                } else {
                     da.notifyDataSetChanged();
 
                     Toast.makeText(getApplicationContext(), json.getString("message").toString(), Toast.LENGTH_SHORT).show();
                 }
 
 
-            }
-            catch (JSONException e)
-            {
-                Toast.makeText(activity_collection_customerdetail.this, "JSON:++"+e, Toast.LENGTH_SHORT).show();
-            }
-            catch (Exception ex)
-            {
-                Toast.makeText(activity_collection_customerdetail.this, "Error:++"+ex, Toast.LENGTH_SHORT).show();
+            } catch (JSONException e) {
+                Toast.makeText(activity_collection_customerdetail.this, "JSON:++" + e, Toast.LENGTH_SHORT).show();
+            } catch (Exception ex) {
+                Toast.makeText(activity_collection_customerdetail.this, "Error:++" + ex, Toast.LENGTH_SHORT).show();
             }
 
         }
 
     }
-
-
 
 
     @Override
@@ -442,15 +426,13 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
                 LayoutInflater li = getLayoutInflater();
                 final View v = li.inflate(R.layout.dialog_date_search, null);
 
-                edtfrom=(EditText)v.findViewById(R.id.edtfromdate);
-                edtto=(EditText)v.findViewById(R.id.edttodate);
+                edtfrom = (EditText) v.findViewById(R.id.edtfromdate);
+                edtto = (EditText) v.findViewById(R.id.edttodate);
 
-                if(!tempfrom.equals("-") && !tempto.equals("-")) {
+                if (!tempfrom.equals("-") && !tempto.equals("-")) {
                     edtto.setText(tempto);
                     edtfrom.setText(tempfrom);
-                }
-                else
-                {
+                } else {
                     edtto.setText(todate);
                     edtfrom.setText(fromdate);
                 }
@@ -477,49 +459,44 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
                 });
 
 
-                MDDialog.Builder mdalert=new MDDialog.Builder(activity_collection_customerdetail.this);
+                MDDialog.Builder mdalert = new MDDialog.Builder(activity_collection_customerdetail.this);
                 mdalert.setContentView(v);
                 mdalert.setTitle("Filter By Date");
                 mdalert.setPositiveButton("SEARCH", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        Date to=new Date(edtto.getText().toString());
-                        Date from=new Date(edtfrom.getText().toString());
+                        Date to = new Date(edtto.getText().toString());
+                        Date from = new Date(edtfrom.getText().toString());
 
-                        tempfrom=edtfrom.getText().toString();
-                        tempto=edtto.getText().toString();
+                        tempfrom = edtfrom.getText().toString();
+                        tempto = edtto.getText().toString();
 
-                        if(to.after(from))
-                        {
+                        if (to.after(from)) {
                             customerlist.clear();
 
-                            fromdate=edtfrom.getText().toString();
-                            todate=edtto.getText().toString();
+                            fromdate = edtfrom.getText().toString();
+                            todate = edtto.getText().toString();
 
                             //URL=siteURL+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(page)+"&noofrecords=20&contractorid="+contractorId+"&areadId="+areaid+"&userId="+userId+"&entityId="+entities+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
-                            mPage=0;
+                            mPage = 0;
 
-                            URL=siteurl+"/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
+                            URL = siteurl + "/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex=" + String.valueOf(mPage) + "&noofrecords=20&contractorid=" + cid + "&userId=" + uid + "&entityId=" + eid + "&fromdate=" + fromdate + "&todate=" + todate + "&filterCustomer=";
 
                             new JSONAsynk().execute(new String[]{URL});
-                        }
-                        else if(to.equals(from))
-                        {
+                        } else if (to.equals(from)) {
                             customerlist.clear();
 
-                            fromdate=edtfrom.getText().toString();
-                            todate=edtto.getText().toString();
+                            fromdate = edtfrom.getText().toString();
+                            todate = edtto.getText().toString();
 
                             //URL=siteURL+"/GetAreawiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(page)+"&noofrecords=20&contractorid="+contractorId+"&areadId="+areaid+"&userId="+userId+"&entityId="+entities+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
-                            mPage=0;
+                            mPage = 0;
 
-                            URL=siteurl+"/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex="+String.valueOf(mPage)+"&noofrecords=20&contractorid="+cid+"&userId="+uid+"&entityId="+eid+"&fromdate="+fromdate+"&todate="+todate+"&filterCustomer=";
+                            URL = siteurl + "/GetUserwiseCustomerCollectinByUserNEntityIdsForCollectionApp?startindex=" + String.valueOf(mPage) + "&noofrecords=20&contractorid=" + cid + "&userId=" + uid + "&entityId=" + eid + "&fromdate=" + fromdate + "&todate=" + todate + "&filterCustomer=";
 
                             new JSONAsynk().execute(new String[]{URL});
-                        }
-                        else
-                        {
+                        } else {
                             Toast.makeText(activity_collection_customerdetail.this, "Enter Valid Filter Dates..", Toast.LENGTH_SHORT).show();
                         }
 
@@ -537,7 +514,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
                 mdalert.setBackgroundCornerRadius(5);
 
 
-                MDDialog dialog=mdalert.create();
+                MDDialog dialog = mdalert.create();
                 dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
                 dialog.show();
 
@@ -645,8 +622,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
         if (id == 999) {
             return new DatePickerDialog(this, myDateListener, year, cmonth, day);
         }
-        if(id==888)
-        {
+        if (id == 888) {
             return new DatePickerDialog(this, myDateListeners, year, cmonth, day);
         }
         return null;
@@ -660,7 +636,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
             // arg2 = month
             // arg3 = day
 
-            edtfrom.setText((arg2+1)+"/"+arg3+"/"+arg1);
+            edtfrom.setText((arg2 + 1) + "/" + arg3 + "/" + arg1);
         }
     };
 
@@ -672,7 +648,7 @@ public class activity_collection_customerdetail extends AppCompatActivity implem
             // arg2 = month
             // arg3 = day
 
-            edtto.setText((arg2+1)+"/"+arg3+"/"+arg1);
+            edtto.setText((arg2 + 1) + "/" + arg3 + "/" + arg1);
         }
     };
 

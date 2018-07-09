@@ -11,6 +11,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -30,7 +31,8 @@ import android.widget.Toast;
 
 //import com.github.silvestrpredko.dotprogressbar.DotProgressBar;
 
-import com.cable.cloud.R;
+import com.cable.cloud.customs.MDDialog;
+import com.cable.cloud.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -55,7 +57,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
-import cn.carbs.android.library.MDDialog;
 import dmax.dialog.SpotsDialog;
 
 public class Collection_Area_Activity extends AppCompatActivity {
@@ -100,7 +101,7 @@ public class Collection_Area_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_collection__area_);
+        setContentView(R.layout.activity_collection_area_revised);
 
         Intent j = getIntent();
         totalcollection = j.getExtras().getString("Userthismonthcollection");
@@ -282,8 +283,8 @@ public class Collection_Area_Activity extends AppCompatActivity {
 
         private ProgressDialog pDialog;
         //public DotProgressBar dtprogoress;
+        Dialog dialog= Utils.getLoader(Collection_Area_Activity.this);
 
-        SpotsDialog spload;
 
 
         JSONObject jsn1, jsn, jsnmain;
@@ -292,10 +293,8 @@ public class Collection_Area_Activity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload = new SpotsDialog(Collection_Area_Activity.this, R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
-            spload.show();
+
+            dialog.show();
 
 
         }
@@ -319,7 +318,7 @@ public class Collection_Area_Activity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(JSONObject json) {
-            spload.dismiss();
+            dialog.dismiss();
 
             try {
                 String ucount = "0", tc = "0", toa = "0";
