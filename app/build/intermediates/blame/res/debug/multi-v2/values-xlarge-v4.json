@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\d5d3bfe78dafc5df9412bed364903370\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6004e45fad3d1a469e91c7054fc7acbf/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\values-xlarge-v4\\values-xlarge-v4.xml",
+            "outputFile": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\d5d3bfe78dafc5df9412bed364903370\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6004e45fad3d1a469e91c7054fc7acbf/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

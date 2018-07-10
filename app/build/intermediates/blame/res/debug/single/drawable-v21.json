@@ -1,38 +1,38 @@
 [
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\spot.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\spots-dialog-0.4.aar\\527a9459cccb8646389e9517aa423b19\\res\\drawable-v21\\spot.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/avd_hide_password.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/11f1516c32b45fbf06ae3ef784711076/res/drawable-v21/avd_hide_password.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\db5e158aa63e165b504deeb2f84da7e1\\res\\drawable-v21\\avd_hide_password.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6004e45fad3d1a469e91c7054fc7acbf/res/drawable-v21/abc_action_bar_item_background_material.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\db5e158aa63e165b504deeb2f84da7e1\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6004e45fad3d1a469e91c7054fc7acbf/res/drawable-v21/abc_btn_colored_material.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\d5d3bfe78dafc5df9412bed364903370\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/spot.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/spots-dialog-0.4.aar/299434f861190e77dd4a1af41d401230/res/drawable-v21/spot.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\d5d3bfe78dafc5df9412bed364903370\\res\\drawable-v21\\abc_edit_text_material.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/11f1516c32b45fbf06ae3ef784711076/res/drawable-v21/design_bottom_navigation_item_background.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\d5d3bfe78dafc5df9412bed364903370\\res\\drawable-v21\\abc_btn_colored_material.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/avd_show_password.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/11f1516c32b45fbf06ae3ef784711076/res/drawable-v21/avd_show_password.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\db5e158aa63e165b504deeb2f84da7e1\\res\\drawable-v21\\design_password_eye.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/564b054b52934793a6e026f9c5097e95/res/drawable-v21/notification_action_background.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\db5e158aa63e165b504deeb2f84da7e1\\res\\drawable-v21\\avd_show_password.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/11f1516c32b45fbf06ae3ef784711076/res/drawable-v21/design_password_eye.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\4da1e3c932099103382a5c11dcb7059d\\res\\drawable-v21\\notification_action_background.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6004e45fad3d1a469e91c7054fc7acbf/res/drawable-v21/abc_edit_text_material.xml"
     }
 ]

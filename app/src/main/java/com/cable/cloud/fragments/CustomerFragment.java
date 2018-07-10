@@ -30,22 +30,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.cable.cloud.AddCustomer_1;
-import com.cable.cloud.activities.AreaListInCustomers;
+import com.cable.cloud.activities.AreaListInCustomersActivity;
 import com.cable.cloud.activities.CustomerListActivity;
 import com.cable.cloud.R;
 import com.cable.cloud.helpers.Utils;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -143,7 +134,7 @@ public class CustomerFragment extends Fragment {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent i = new Intent(getContext(), AreaListInCustomers.class);
+                    Intent i = new Intent(getContext(), AreaListInCustomersActivity.class);
                     startActivity(i);
 
                 }

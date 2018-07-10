@@ -136,7 +136,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter
 
             row.setTag(holder);*/
 
-           // convertView = inflater.inflate(R.layout.customerlist, parentView, false);
+           // convertView = inflater.inflate(R.layout.customerList, parentView, false);
 
             // Get childrow.xml file elements and set values
 

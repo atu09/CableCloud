@@ -88,7 +88,7 @@
                 android:value="com.cable.cloud.activities.CustomerOnlineDetailsActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.Collection_Area_Activity"
+            android:name="com.cable.cloud.CollectionAreaActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
             <meta-data
@@ -104,7 +104,7 @@
                 android:resource="@xml/searchable" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.cable.cloud.Collection_Area_Activity" />
+                android:value="com.cable.cloud.CollectionAreaActivity" />
         </activity>
         <activity
             android:name="com.cable.cloud.ComplainDetails"

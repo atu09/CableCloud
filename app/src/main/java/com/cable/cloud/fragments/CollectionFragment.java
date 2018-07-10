@@ -10,14 +10,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,7 +27,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.cable.cloud.Collection_Area_Activity;
+import com.cable.cloud.activities.CollectionAreaActivity;
 import com.cable.cloud.CustomAdapter;
 import com.cable.cloud.MapsActivity;
 import com.cable.cloud.R;
@@ -138,26 +136,16 @@ public class CollectionFragment extends Fragment {
                 public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
 
 
-                    ImageView tv = (ImageView) view.findViewById(R.id.imageView13);
-                    if (tv != null) {
-
-                        tv.setOnTouchListener(new View.OnTouchListener() {
-                            @Override
-                            public boolean onTouch(View v, MotionEvent event) {
-
-                                Intent i = new Intent(getContext(), MapsActivity.class);
-                                i.putExtra("userId", userList.get(position).get("userId"));
-                                i.putExtra("UserName", userList.get(position).get("UserName"));
-                                startActivity(i);
-
-                                return false;
-                            }
-                        });
-
-
-                    } else {
-                    }
-
+                    ImageView ivMap = (ImageView) view.findViewById(R.id.imageView13);
+                    ivMap.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getContext(), MapsActivity.class);
+                            i.putExtra("userId", userList.get(position).get("userId"));
+                            i.putExtra("UserName", userList.get(position).get("UserName"));
+                            startActivity(i);
+                        }
+                    });
 
                     CardView cv = (CardView) view.findViewById(R.id.card_view);
 
@@ -172,9 +160,9 @@ public class CollectionFragment extends Fragment {
                             SharedPreferences.Editor editor = pref.edit();
                             editor.putString("Name", userList.get(position).get("UserName"));
                             editor.putString("selected_uid", userList.get(position).get("userId"));
-                            editor.commit();
+                            editor.apply();
 
-                            Intent i = new Intent(getContext(), Collection_Area_Activity.class);
+                            Intent i = new Intent(getContext(), CollectionAreaActivity.class);
                             i.putExtra("Userthismonthcollection", userList.get(position).get("Userthismonthcollection"));
                             startActivity(i);
 

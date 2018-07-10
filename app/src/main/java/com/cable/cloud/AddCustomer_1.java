@@ -625,7 +625,7 @@ public class AddCustomer_1 extends AppCompatActivity {
                         loader.dismiss();
 
                         try {
-                            areadetails.clear();
+                            areaDetails.clear();
 
                             //  Toast.makeText(getContext(), response.toString(), Toast.LENGTH_SHORT).show();
 
@@ -654,14 +654,14 @@ public class AddCustomer_1 extends AppCompatActivity {
                                     map.put("Outstanding", format.format(Double.parseDouble(Aoa)));
                                     map.put("Collection", format.format(Double.parseDouble(Acol)));
 
-                                    areadetails.add(map);
+                                    areaDetails.add(map);
 
                                 }
 
-                                // adapter = new SimpleAdapter(getContext(), areadetails, R.layout.areaList, new String[]{"AreaName", "Collection", "Outstanding"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
+                                // adapter = new SimpleAdapter(getContext(), areaDetails, R.layout.areaList, new String[]{"AreaName", "Collection", "Outstanding"}, new int[]{R.id.textView2, R.id.textView24, R.id.textView26});
                                 // lvarealist.setAdapter(adapter);
 
-                                //lvarealist.setAdapter(new PaymentAreaListAdapter(getContext(),areadetails));
+                                //lvarealist.setAdapter(new PaymentAreaListAdapter(getContext(),areaDetails));
 
 
                                 paymentAreaListAdapter.notifyDataSetChanged();
