@@ -1,11 +1,11 @@
 package com.cable.cloud;
 
+import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +19,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -34,34 +33,30 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.cable.cloud.R;
+import com.cable.cloud.helpers.Utils;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import dmax.dialog.SpotsDialog;
 
 public class SearchWithCustomerListInComplains extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     ListView lvcustomerincomplain;
 
-    ArrayList<HashMap<String,String>> customerdetails=new ArrayList<>();
+    ArrayList<HashMap<String, String>> customerdetails = new ArrayList<>();
 
     private static final String PREF_NAME = "LoginPref";
 
-    //SimpleAdapter adapter;
-
     Customer_Complain_Adapter da;
 
-    String mode,title,id,status;
+    String mode, title, id, status;
 
     MenuItem searchMenuItem;
 
-    String siteurl,uid,cid,aid,eid,URL;
+    String siteurl, uid, cid, aid, eid, URL;
     RequestQueue requestQueue;
 
     SwipeRefreshLayout swrefresh;
@@ -71,22 +66,20 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_searchwithcustomerincomplains);
 
-        final SharedPreferences pref=getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        final SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         requestQueue = Volley.newRequestQueue(this);
 
 
-        siteurl=pref.getString("SiteURL","").toString();
-        uid=pref.getString("Userid","").toString();
-        cid=pref.getString("Contracotrid","").toString();
-        eid=pref.getString("Entityids", "").toString();
+        siteurl = pref.getString("SiteURL", "");
+        uid = pref.getString("Userid", "");
+        cid = pref.getString("Contracotrid", "");
+        eid = pref.getString("Entityids", "");
 
-        Intent j=getIntent();
-        mode=j.getExtras().getString("Mode");
-        title=j.getExtras().getString("title");
-        id=j.getExtras().getString("Id");
-        status=j.getExtras().getString("status");
-
-
+        Intent j = getIntent();
+        mode = j.getExtras().getString("Mode");
+        title = j.getExtras().getString("title");
+        id = j.getExtras().getString("Id");
+        status = j.getExtras().getString("status");
 
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -96,54 +89,49 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
 
         setSupportActionBar(toolbar);
 
-        lvcustomerincomplain=(ListView)findViewById(R.id.listcustomerincomplains);
+        lvcustomerincomplain = (ListView) findViewById(R.id.listcustomerincomplains);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(getApplicationContext(), CustomerMasterDetailsActivity.class);
-                //startActivity(i);
-
                 onBackPressed();
             }
         });
 
-        if(mode.equals("User"))
-        {
-            URL=siteurl+"/CustomercomplainlistbyuserforAdminCollectionApp";
+        if (mode.equals("User")) {
+            URL = siteurl + "/CustomercomplainlistbyuserforAdminCollectionApp";
 
-            HashMap<String,String> map=new HashMap<>();
+            HashMap<String, String> map = new HashMap<>();
             map.put("startindex", "0");
-            map.put("noofrecords","10000");
-            map.put("contractorid",cid);
-            map.put("entityId",eid);
-            map.put("userId",id);
-            map.put("status",status);
-            map.put("filterCustomer","");
-
-            CallVolley(URL,map);
-        }
-
-        if(mode.equals("Area"))
-        {
-            URL=siteurl+"/CustomercomplainlistbyareaforAdminCollectionApp";
-
-            HashMap<String,String> map=new HashMap<>();
-            map.put("startindex","0");
-            map.put("noofrecords","10000");
-            map.put("contractorid",cid);
-            map.put("entityId",eid);
-            map.put("areadId",id);
-            map.put("status",status);
-            map.put("filterCustomer","");
+            map.put("noofrecords", "10000");
+            map.put("contractorid", cid);
+            map.put("entityId", eid);
+            map.put("userId", id);
+            map.put("status", status);
+            map.put("filterCustomer", "");
 
             CallVolley(URL, map);
         }
 
-        LayoutInflater li=getLayoutInflater();
-        View v=li.inflate(R.layout.customerlist, null);
+        if (mode.equals("Area")) {
+            URL = siteurl + "/CustomercomplainlistbyareaforAdminCollectionApp";
 
-        CardView cv=(CardView)v.findViewById(R.id.app);
+            HashMap<String, String> map = new HashMap<>();
+            map.put("startindex", "0");
+            map.put("noofrecords", "10000");
+            map.put("contractorid", cid);
+            map.put("entityId", eid);
+            map.put("areadId", id);
+            map.put("status", status);
+            map.put("filterCustomer", "");
+
+            CallVolley(URL, map);
+        }
+
+        LayoutInflater li = getLayoutInflater();
+        View v = li.inflate(R.layout.customerlist, null);
+
+        CardView cv = (CardView) v.findViewById(R.id.app);
         cv.setCardBackgroundColor(Color.parseColor("#e59400"));
 
         swrefresh = (SwipeRefreshLayout) findViewById(R.id.refresh);
@@ -155,45 +143,39 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
 
                 swrefresh.setRefreshing(true);
 
-                //new JSONAsync().execute(new String[]{url});
+                if (mode.equals("User")) {
+                    URL = siteurl + "/CustomercomplainlistbyuserforAdminCollectionApp";
 
-                if(mode.equals("User"))
-                {
-                    URL=siteurl+"/CustomercomplainlistbyuserforAdminCollectionApp";
+                    HashMap<String, String> map = new HashMap<>();
+                    map.put("startindex", "0");
+                    map.put("noofrecords", "10000");
+                    map.put("contractorid", cid);
+                    map.put("entityId", eid);
+                    map.put("userId", id);
+                    map.put("status", status);
+                    map.put("filterCustomer", "");
 
-                    HashMap<String,String> map=new HashMap<>();
-                    map.put("startindex","0");
-                    map.put("noofrecords","10000");
-                    map.put("contractorid",cid);
-                    map.put("entityId",eid);
-                    map.put("userId",id);
-                    map.put("status",status);
-                    map.put("filterCustomer","");
-
-                    CallVolley(URL,map);
+                    CallVolley(URL, map);
                 }
 
-                if(mode.equals("Area"))
-                {
-                    URL=siteurl+"/CustomercomplainlistbyareaforAdminCollectionApp";
+                if (mode.equals("Area")) {
+                    URL = siteurl + "/CustomercomplainlistbyareaforAdminCollectionApp";
 
-                    HashMap<String,String> map=new HashMap<>();
-                    map.put("startindex","0");
-                    map.put("noofrecords","10000");
-                    map.put("contractorid",cid);
-                    map.put("entityId",eid);
-                    map.put("areadId",id);
-                    map.put("status",status);
-                    map.put("filterCustomer","");
+                    HashMap<String, String> map = new HashMap<>();
+                    map.put("startindex", "0");
+                    map.put("noofrecords", "10000");
+                    map.put("contractorid", cid);
+                    map.put("entityId", eid);
+                    map.put("areadId", id);
+                    map.put("status", status);
+                    map.put("filterCustomer", "");
 
                     CallVolley(URL, map);
                 }
 
 
-
             }
         });
-
 
 
         lvcustomerincomplain.setOnScrollListener(new AbsListView.OnScrollListener() {
@@ -216,13 +198,13 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                HashMap<String,String> ss=(HashMap<String,String>)da.getItem(position);
+                HashMap<String, String> ss = (HashMap<String, String>) da.getItem(position);
 
-                Intent i=new Intent(getApplicationContext(),ComplainListviaCustomerActivity.class);
-                i.putExtra("title",ss.get("Name"));
-                i.putExtra("CustomerId",ss.get("CustomerId"));
-                i.putExtra("Mode","Complaint");
-                i.putExtra("status",status);
+                Intent i = new Intent(getApplicationContext(), ComplainListviaCustomerActivity.class);
+                i.putExtra("title", ss.get("Name"));
+                i.putExtra("CustomerId", ss.get("CustomerId"));
+                i.putExtra("Mode", "Complaint");
+                i.putExtra("status", status);
                 startActivity(i);
 
             }
@@ -230,8 +212,7 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         finish();
     }
 
@@ -240,8 +221,7 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_complains, menu);
 
-        SearchManager searchManager = (SearchManager)
-                getSystemService(Context.SEARCH_SERVICE);
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         searchMenuItem = menu.findItem(R.id.searchcomplain);
 
         SearchView searchView = (SearchView) searchMenuItem.getActionView();
@@ -250,11 +230,9 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
         searchView.setLayoutParams(params);
         searchView.setMaxWidth(Integer.MAX_VALUE);
 
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
-        searchView.setSearchableInfo(searchManager.
-                getSearchableInfo(getComponentName()));
-
-        ((EditText)searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text)).setHintTextColor(Color.WHITE);
+        ((EditText) searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text)).setHintTextColor(Color.WHITE);
 
         changeSearchViewTextColor(searchView);
 
@@ -265,12 +243,11 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
         searchView.setSubmitButtonEnabled(true);
         searchView.setOnQueryTextListener(this);
 
-        if(mode.equals("Search"))
-        {
+        if (mode.equals("Search")) {
             searchMenuItem.expandActionView();
             searchView.requestFocus();
-            showSoftKeyboard(searchView);
 
+            Utils.closeKeyboard(this);
         }
 
         return true;
@@ -293,12 +270,12 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
     @Override
     public boolean onQueryTextSubmit(String query) {
 
-       // Toast.makeText(SearchWithCustomerListInComplains.this, "Query Submitted..", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(SearchWithCustomerListInComplains.this, "Query Submitted..", Toast.LENGTH_SHORT).show();
 
         URL = siteurl + "/SearchCustomerForCollectionApp";
 
         CallVolleys(URL, query);
-        
+
         return false;
     }
 
@@ -308,220 +285,164 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
         return false;
     }
 
-    public void showSoftKeyboard(View view) {
-        if (view.requestFocus()) {
-            InputMethodManager imm = (InputMethodManager)
-                    getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
-        }
-    }
 
-    public void CallVolley(String a,HashMap<String,String> map)
-    {
+    public void CallVolley(String a, HashMap<String, String> map) {
 
 
-        final SpotsDialog spload;
-        spload=new SpotsDialog(SearchWithCustomerListInComplains.this,R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
+        final Dialog loader = Utils.getLoader(this);
+        loader.show();
 
-        try {
-            //jsonobj=makeHttpRequest(params[0]);
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
 
-            JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            try {
+                        if (loader.isShowing()) {
+                            loader.dismiss();
+                        }
 
-                                spload.dismiss();
+                        try {
 
+                            customerdetails.clear();
 
-                                try
-                                {
-                                    customerdetails.clear();
+                            String commentcount = "0";
 
-                                    String commentcount="0";
+                            if (response.getString("status").equals("True")) {
 
-                                    if(response.getString("status").toString().equals("True"))
-                                    {
+                                final JSONArray entityarray = response.getJSONArray("CustomerInfoList");
 
-                                        final JSONArray entityarray = response.getJSONArray("CustomerInfoList");
+                                for (int i = 0; i < entityarray.length(); i++) {
+                                    JSONObject e = (JSONObject) entityarray.get(i);
 
-                                        for (int i = 0; i < entityarray.length(); i++) {
-                                            JSONObject e = (JSONObject) entityarray.get(i);
+                                    commentcount = e.getString("CustCommentCount");
 
-                                            commentcount=e.getString("CustCommentCount").toString();
+                                    HashMap<String, String> map = new HashMap<>();
 
-                                            HashMap<String,String> map=new HashMap<>();
+                                    map.put("CustomerId", e.getString("CustomerId"));
+                                    map.put("Name", e.getString("Name"));
+                                    map.put("Address", e.getString("Address"));
+                                    map.put("AccountNo", e.getString("AccountNo"));
+                                    map.put("MQNo", e.getString("MQNo"));
+                                    map.put("CustCommentCount", commentcount);
 
-                                            map.put("CustomerId",e.getString("CustomerId").toString());
-                                            map.put("Name",e.getString("Name").toString());
-                                            map.put("Address", e.getString("Address").toString());
-                                            map.put("AccountNo",e.getString("AccountNo").toString());
-                                            map.put("MQNo",e.getString("MQNo").toString());
-                                            map.put("CustCommentCount",commentcount);
-
-                                            customerdetails.add(map);
-
-                                        }
-
-                                        LayoutInflater li=getLayoutInflater();
-                                        View vs=li.inflate(R.layout.customerlist, null);
-
-                                        vs.findViewById(R.id.textView32).setVisibility(View.GONE);
-
-                                        da=new Customer_Complain_Adapter(SearchWithCustomerListInComplains.this,customerdetails);
-                                        lvcustomerincomplain.setAdapter(da);
-                                        lvcustomerincomplain.setTextFilterEnabled(true);
-
-                                        swrefresh.setRefreshing(false);
-
-
-                                    }
-
-                                    else
-                                    {
-                                        Toast.makeText(SearchWithCustomerListInComplains.this, response.getString("message"), Toast.LENGTH_SHORT).show();
-                                    }
+                                    customerdetails.add(map);
 
                                 }
-                                catch (JSONException e)
-                                {
-                                    Toast.makeText(getApplicationContext(), "JSON:++"+e, Toast.LENGTH_SHORT).show();
-                                }
 
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+                                LayoutInflater li = getLayoutInflater();
+                                View vs = li.inflate(R.layout.customerlist, null);
+
+                                vs.findViewById(R.id.textView32).setVisibility(View.GONE);
+
+                                da = new Customer_Complain_Adapter(SearchWithCustomerListInComplains.this, customerdetails);
+                                lvcustomerincomplain.setAdapter(da);
+                                lvcustomerincomplain.setTextFilterEnabled(true);
+
+                                swrefresh.setRefreshing(false);
+
+
+                            } else {
+                                Toast.makeText(SearchWithCustomerListInComplains.this, response.getString("message"), Toast.LENGTH_SHORT).show();
                             }
-                            catch (Exception e)
-                            {
-                                Toast.makeText(getApplicationContext(), "error--"+e, Toast.LENGTH_SHORT).show();
-                            }
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
 
-                            Toast.makeText(getApplicationContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
-
+                        if (loader.isShowing()) {
+                            loader.dismiss();
                         }
-                    });
+                        error.printStackTrace();
 
-            obreq.setRetryPolicy(new DefaultRetryPolicy(600000,
-                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            // Adds the JSON object request "obreq" to the request queue
-            requestQueue.add(obreq);
+                    }
+                });
 
-        }
-        catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
-        }
+        request.setRetryPolicy(new DefaultRetryPolicy(30000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        requestQueue.add(request);
 
     }
 
-
-    public void CallVolleys(String a,String text)
-    {
+    public void CallVolleys(String a, String text) {
 
 
-        final SpotsDialog spload;
-        spload=new SpotsDialog(SearchWithCustomerListInComplains.this,R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
+        final Dialog loader = Utils.getLoader(this);
+        loader.show();
 
-        try {
-            //jsonobj=makeHttpRequest(params[0]);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("startindex", "0");
+        map.put("noofrecords", "10000");
+        map.put("contractorid", cid);
+        map.put("userId", uid);
+        map.put("entityId", eid);
+        map.put("filterCustomer", text);
 
-            HashMap<String,String> map=new HashMap<>();
-            map.put("startindex","0");
-            map.put("noofrecords","10000");
-            map.put("contractorid",cid);
-            map.put("userId",uid);
-            map.put("entityId",eid);
-            map.put("filterCustomer",text);
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
 
-            JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            try {
 
-                                spload.dismiss();
-
-                                try
-                                {
-                                    customerdetails.clear();
-
-                                    if(response.getString("status").toString().equals("True"))
-                                    {
-                                        String title=null,acno=null,custid=null;
-                                        String commentcount="0";
-                                        final JSONArray entityarray = response.getJSONArray("CustomerInfoList");
-
-                                        for (int i = 0; i < entityarray.length(); i++) {
-                                            JSONObject e = (JSONObject) entityarray.get(i);
-
-                                            HashMap<String,String> map=new HashMap<>();
-
-                                            map.put("CustomerId",e.getString("CustomerId").toString());
-                                            map.put("Name",e.getString("Name").toString());
-                                            map.put("Address", e.getString("Address").toString());
-                                            map.put("AccountNo",e.getString("AccountNo").toString());
-                                            map.put("MQNo",e.getString("MQNo").toString());
-                                            map.put("CustCommentCount",commentcount);
-
-                                            customerdetails.add(map);
-                                        }
-                                        da=new Customer_Complain_Adapter(SearchWithCustomerListInComplains.this,customerdetails);
-                                        lvcustomerincomplain.setAdapter(da);
-                                        lvcustomerincomplain.setTextFilterEnabled(true);
-
-                                    }
-
-                                    else
-                                    {
-                                        Toast.makeText(SearchWithCustomerListInComplains.this, response.getString("message"), Toast.LENGTH_SHORT).show();
-                                    }
-
-                                }
-                                catch (JSONException e)
-                                {
-                                    Toast.makeText(getApplicationContext(), "Error:++"+e, Toast.LENGTH_SHORT).show();
-                                }
-
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                            catch (Exception e)
-                            {
-                                Toast.makeText(getApplicationContext(), "error--"+e, Toast.LENGTH_SHORT).show();
-                            }
+                        if (loader.isShowing()) {
+                            loader.dismiss();
                         }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
 
-                            Toast.makeText(getApplicationContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                        try {
+                            customerdetails.clear();
 
+                            if (response.getString("status").equalsIgnoreCase("True")) {
+
+                                String commentcount = "0";
+                                final JSONArray entityArray = response.getJSONArray("CustomerInfoList");
+
+                                for (int i = 0; i < entityArray.length(); i++) {
+                                    JSONObject e = (JSONObject) entityArray.get(i);
+
+                                    HashMap<String, String> map = new HashMap<>();
+
+                                    map.put("CustomerId", e.getString("CustomerId"));
+                                    map.put("Name", e.getString("Name"));
+                                    map.put("Address", e.getString("Address"));
+                                    map.put("AccountNo", e.getString("AccountNo"));
+                                    map.put("MQNo", e.getString("MQNo"));
+                                    map.put("CustCommentCount", commentcount);
+
+                                    customerdetails.add(map);
+                                }
+                                da = new Customer_Complain_Adapter(SearchWithCustomerListInComplains.this, customerdetails);
+                                lvcustomerincomplain.setAdapter(da);
+                                lvcustomerincomplain.setTextFilterEnabled(true);
+
+                            } else {
+                                Toast.makeText(SearchWithCustomerListInComplains.this, response.getString("message"), Toast.LENGTH_SHORT).show();
+                            }
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
-                    });
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        if (loader.isShowing()) {
+                            loader.dismiss();
+                        }
+                        error.printStackTrace();
+                    }
+                });
 
-            obreq.setRetryPolicy(new DefaultRetryPolicy(600000,
-                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            // Adds the JSON object request "obreq" to the request queue
-            requestQueue.add(obreq);
+        request.setRetryPolicy(new DefaultRetryPolicy(30000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        requestQueue.add(request);
 
-        }
-        catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
-        }
 
     }
 
