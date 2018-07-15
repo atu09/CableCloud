@@ -165,7 +165,6 @@ public class CustomerFragment extends Fragment {
     }
 
     public void CallVolleys(String a) {
-        JsonObjectRequest request;
 
         final Dialog loader = Utils.getLoader(getActivity());
         loader.show();
@@ -179,7 +178,7 @@ public class CustomerFragment extends Fragment {
         map.put("loginuserId", userId);
         map.put("entityIds", entities);
 
-        request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {

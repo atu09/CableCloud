@@ -29,7 +29,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.cable.cloud.activities.CollectionAreaActivity;
 import com.cable.cloud.CustomAdapter;
-import com.cable.cloud.MapsActivity;
+import com.cable.cloud.activities.MapsActivity;
 import com.cable.cloud.R;
 import com.cable.cloud.helpers.Utils;
 
@@ -135,7 +135,6 @@ public class CollectionFragment extends Fragment {
                 @Override
                 public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
 
-
                     ImageView ivMap = (ImageView) view.findViewById(R.id.imageView13);
                     ivMap.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -147,16 +146,14 @@ public class CollectionFragment extends Fragment {
                         }
                     });
 
-                    CardView cv = (CardView) view.findViewById(R.id.card_view);
+                    CardView cardView = (CardView) view.findViewById(R.id.card_view);
 
-                    cv.setOnClickListener(new View.OnClickListener() {
+                    cardView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
 
-                            Context con = getActivity();
-
-                            SharedPreferences pref = con.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-
+                            Context context = getActivity();
+                            SharedPreferences pref = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = pref.edit();
                             editor.putString("Name", userList.get(position).get("UserName"));
                             editor.putString("selected_uid", userList.get(position).get("userId"));

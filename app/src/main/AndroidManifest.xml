@@ -149,7 +149,7 @@
                 android:value="com.cable.cloud.activities.AreaListInCustomersActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.Sms_log"
+            android:name="com.cable.cloud.activities.SmsLogActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -262,7 +262,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.cable.cloud.MapsActivity"
+            android:name="com.cable.cloud.activities.MapsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
 

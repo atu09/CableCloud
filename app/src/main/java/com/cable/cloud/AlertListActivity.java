@@ -147,8 +147,8 @@ public class AlertListActivity extends AppCompatActivity {
 
                                         lstalert.setAdapter(new CustomAdapter(AlertListActivity.this,alertdetails));
 
-                                        /*final SimpleAdapter adapter=new SimpleAdapter(AlertListActivity.this,reminderdetails,R.layout.layout_remiders_details,new String[]{"ReminderDate","Status","Note"},new int[]{R.id.textView88,R.id.textView89,R.id.textView90});
-                                        lstreminder.setAdapter(adapter);*/
+                                        /*final SimpleAdapter adapter=new SimpleAdapter(AlertListActivity.this,reminderDetails,R.layout.layout_remiders_details,new String[]{"ReminderDate","Status","Note"},new int[]{R.id.textView88,R.id.textView89,R.id.textView90});
+                                        listView.setAdapter(adapter);*/
 
                                     }
 

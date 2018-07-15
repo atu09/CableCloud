@@ -64,10 +64,6 @@
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/layout_comments.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/activity_activity_collection_customerdetail.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/activity_activity_collection_customerdetail.xml"
-    },
-    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/11f1516c32b45fbf06ae3ef784711076/res/layout/design_text_input_password_icon.xml"
     },
@@ -280,10 +276,6 @@
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/layout_add_customer_package.xml"
     },
     {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/activity_collection__area_.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/activity_collection__area_.xml"
-    },
-    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/amu_text_bubble.xml",
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/bd1bc4fe024a1c38ae2ea993c54adab8/res/layout/amu_text_bubble.xml"
     },
@@ -478,10 +470,6 @@
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/collection.xml",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/collection.xml"
-    },
-    {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/tablayout.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/tablayout.xml"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/dialog_new_complaint.xml",

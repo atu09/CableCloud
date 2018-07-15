@@ -90,8 +90,7 @@ public class AreaListInCustomersActivity extends AppCompatActivity {
                 editor.putString("from", "Customer");
                 editor.apply();
 
-                Intent i = new Intent(getApplicationContext(), CustomerListActivity.class);
-                startActivity(i);
+                startActivity(new Intent(getApplicationContext(), CustomerListActivity.class));
 
                 finish();
             }

@@ -46,7 +46,6 @@ public class TrackLocationService extends Service implements GpsStatus.Listener 
     private GpsStatus mStatus;
 
     RequestQueue requestQueue;
-    protected static final int REQUEST_CHECK_SETTINGS = 0x1;
 
     private class LocationListener implements android.location.LocationListener {
         Location mLastLocation;
@@ -60,8 +59,6 @@ public class TrackLocationService extends Service implements GpsStatus.Listener 
         public void onLocationChanged(Location location) {
             Log.e(TAG, "onLocationChanged: " + location);
             mLastLocation.set(location);
-
-            Toast.makeText(getApplicationContext(), location.getLatitude() + "--" + location.getLongitude(), Toast.LENGTH_SHORT).show();
 
             HashMap<String, String> map = new HashMap<>();
             map.put("userId", uid);
@@ -103,9 +100,6 @@ public class TrackLocationService extends Service implements GpsStatus.Listener 
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.e(TAG, "onStartCommand");
         super.onStartCommand(intent, flags, startId);
-
-        //initializeLocationManager();
-
         return START_STICKY;
     }
 
@@ -119,9 +113,9 @@ public class TrackLocationService extends Service implements GpsStatus.Listener 
 
             requestQueue = Volley.newRequestQueue(this);
 
-            siteurl = pref.getString("SiteURL", "").toString();
-            uid = pref.getString("Userid", "").toString();
-            cid = pref.getString("Contracotrid", "").toString();
+            siteurl = pref.getString("SiteURL", "");
+            uid = pref.getString("Userid", "");
+            cid = pref.getString("Contracotrid", "");
 
             mLocationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
             mLocationManager.addGpsStatusListener(this);
@@ -144,31 +138,17 @@ public class TrackLocationService extends Service implements GpsStatus.Listener 
     private void initializeLocationManager() {
         Log.e(TAG, "initializeLocationManager");
         if (mLocationManager == null) {
-            try {
-                mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_INTERVAL, LOCATION_DISTANCE, mLocationListeners[0]);
-
-            } catch (java.lang.SecurityException ex) {
-                Log.i(TAG, "fail to request location update, ignore", ex);
-            } catch (IllegalArgumentException ex) {
-                Log.d(TAG, "gps provider does not exist " + ex.getMessage());
+            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                return;
             }
+            mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_INTERVAL, LOCATION_DISTANCE, mLocationListeners[0]);
         }
     }
 
     public void CallVolleyUpdateLocation(String a, HashMap<String, String> map) {
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                    }
-                });
+                null, null);
 
         request.setRetryPolicy(new DefaultRetryPolicy(30000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -182,48 +162,20 @@ public class TrackLocationService extends Service implements GpsStatus.Listener 
     public void onGpsStatusChanged(int event) {
 
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         mStatus = mLocationManager.getGpsStatus(mStatus);
 
         switch (event) {
             case GpsStatus.GPS_EVENT_STARTED:
-                // Do Something with mStatus info
-
-                //Toast.makeText(this, "gps started..", Toast.LENGTH_SHORT).show();
-
                 initializeLocationManager();
-
                 break;
-
             case GpsStatus.GPS_EVENT_STOPPED:
-                // Do Something with mStatus info
-
-                //Toast.makeText(this, "gps stopped..", Toast.LENGTH_SHORT).show();
-
                 break;
-
             case GpsStatus.GPS_EVENT_FIRST_FIX:
-                // Do Something with mStatus info
-
-                //Toast.makeText(this, "gps first fix..", Toast.LENGTH_SHORT).show();
-
                 initializeLocationManager();
-
                 break;
-
             case GpsStatus.GPS_EVENT_SATELLITE_STATUS:
-                // Do Something with mStatus info
-
-                //Toast.makeText(this, "gps satelite..", Toast.LENGTH_SHORT).show();
-
                 break;
         }
 

@@ -27,7 +27,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.cable.cloud.R;
 import com.cable.cloud.activities.DashBoardActivity;
 
 import org.json.JSONArray;
@@ -44,13 +43,13 @@ public class ReminderListActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     private static final String PREF_NAME = "LoginPref";
 
-    String siteurl,uid,cid,aid,eid,URL;
+    String siteUrl, uid, cid, aid, eid, URL;
 
     SharedPreferences pref;
 
-    ListView lstreminder;
+    ListView listView;
 
-    ArrayList<HashMap<String,String>> reminderdetails=new ArrayList<>();
+    ArrayList<HashMap<String, String>> reminderDetails = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +57,7 @@ public class ReminderListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reminder_list);
 
         if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-
-            Transition transitionSlideRight =
-                    TransitionInflater.from(ReminderListActivity.this).inflateTransition(R.transition.slide_right);
+            Transition transitionSlideRight = TransitionInflater.from(ReminderListActivity.this).inflateTransition(R.transition.slide_right);
             getWindow().setEnterTransition(transitionSlideRight);
 
         }
@@ -69,12 +66,12 @@ public class ReminderListActivity extends AppCompatActivity {
 
         pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        siteurl = pref.getString("SiteURL", "").toString();
-        uid = pref.getString("Userid", "").toString();
-        cid = pref.getString("Contracotrid", "").toString();
-        eid = pref.getString("Entityids", "").toString();
+        siteUrl = pref.getString("SiteURL", "");
+        uid = pref.getString("Userid", "");
+        cid = pref.getString("Contracotrid", "");
+        eid = pref.getString("Entityids", "");
 
-        lstreminder=(ListView)findViewById(R.id.listView4);
+        listView = (ListView) findViewById(R.id.listView4);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Reminders");
@@ -91,11 +88,11 @@ public class ReminderListActivity extends AppCompatActivity {
             }
         });
 
-        URL=siteurl+"/GetReminderDetailsForCollectionApp";
+        URL = siteUrl + "/GetReminderDetailsForCollectionApp";
 
         CallVolley(URL);
 
-        registerForContextMenu(lstreminder);
+        registerForContextMenu(listView);
 
     }
 
@@ -120,43 +117,34 @@ public class ReminderListActivity extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item
-                .getMenuInfo();
-        switch (item.getItemId()) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
 
-            case R.id.action_complete:
-
-               // Toast.makeText(ReminderListActivity.this,reminderdetails.get(info.position).get("ReminderId").toString(), Toast.LENGTH_SHORT).show();
-               // reminderdetails.remove(info.position);
-
-                URL=siteurl+"/GetUpdateStatusReminderForCollectionApp";
-                CallVolleys(URL,reminderdetails.get(info.position).get("ReminderId").toString());
-
-                return true;
-            default:
-                return super.onContextItemSelected(item);
+        if (item.getItemId() == R.id.action_complete) {
+            URL = siteUrl + "/GetUpdateStatusReminderForCollectionApp";
+            CallVolleys(URL, reminderDetails.get(info.position).get("ReminderId"));
+            return true;
         }
+        return super.onContextItemSelected(item);
     }
 
-    public void CallVolley(String a)
-    {
+    public void CallVolley(String a) {
 
 
         final SpotsDialog spload;
-        spload=new SpotsDialog(ReminderListActivity.this,R.style.Custom);
+        spload = new SpotsDialog(ReminderListActivity.this, R.style.Custom);
         spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         spload.setCancelable(true);
         spload.show();
 
         try {
 
-            HashMap<String,String> map=new HashMap<>();
-            map.put("contractorId",cid);
-            map.put("userId",uid);
-            map.put("entityIds",eid);
+            HashMap<String, String> map = new HashMap<>();
+            map.put("contractorId", cid);
+            map.put("userId", uid);
+            map.put("entityIds", eid);
 
             JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
@@ -164,45 +152,39 @@ public class ReminderListActivity extends AppCompatActivity {
 
                                 spload.dismiss();
 
-                                try
-                                {
-                                    if(response.getString("status").toString().equals("True"))
-                                    {
+                                try {
+                                    if (response.getString("status").toString().equals("True")) {
                                         final JSONArray entityarray = response.getJSONArray("lstReminderInfo");
 
                                         for (int i = 0; i < entityarray.length(); i++) {
                                             JSONObject e = (JSONObject) entityarray.get(i);
 
-                                          String rid=e.getString("ReminderId");
-                                            String rdate=e.getString("ReminderDate");
-                                            String note=e.getString("Note");
-                                            String status=e.getString("Status");
+                                            String rid = e.getString("ReminderId");
+                                            String rdate = e.getString("ReminderDate");
+                                            String note = e.getString("Note");
+                                            String status = e.getString("Status");
 
-                                            HashMap<String,String> map=new HashMap<>();
-                                            map.put("ReminderId",rid);
-                                            map.put("ReminderDate",rdate);
-                                            map.put("Note",note);
-                                            map.put("Status",status);
+                                            HashMap<String, String> map = new HashMap<>();
+                                            map.put("ReminderId", rid);
+                                            map.put("ReminderDate", rdate);
+                                            map.put("Note", note);
+                                            map.put("Status", status);
 
-                                            reminderdetails.add(map);
+                                            reminderDetails.add(map);
                                         }
 
-                                        final SimpleAdapter da=new SimpleAdapter(ReminderListActivity.this,reminderdetails,R.layout.layout_remiders_details,new String[]{"ReminderDate","Status","Note"},new int[]{R.id.textView88,R.id.textView89,R.id.textView90});
-                                        lstreminder.setAdapter(da);
+                                        final SimpleAdapter da = new SimpleAdapter(ReminderListActivity.this, reminderDetails, R.layout.layout_remiders_details, new String[]{"ReminderDate", "Status", "Note"}, new int[]{R.id.textView88, R.id.textView89, R.id.textView90});
+                                        listView.setAdapter(da);
 
                                     }
 
-                                }
-                                catch (JSONException e)
-                                {
+                                } catch (JSONException e) {
                                     Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
                                 }
 
                                 // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                            catch (Exception e)
-                            {
-                                Toast.makeText(getApplicationContext(), "error--"+e, Toast.LENGTH_SHORT).show();
+                            } catch (Exception e) {
+                                Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
                             }
                         }
                     },
@@ -210,7 +192,7 @@ public class ReminderListActivity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
-                            Toast.makeText(getApplicationContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -221,31 +203,29 @@ public class ReminderListActivity extends AppCompatActivity {
             // Adds the JSON object request "obreq" to the request queue
             requestQueue.add(obreq);
 
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
         }
 
     }
 
-    public void CallVolleys(String a,String id)
-    {
+    public void CallVolleys(String a, String id) {
 
 
         final SpotsDialog spload;
-        spload=new SpotsDialog(ReminderListActivity.this,R.style.Custom);
+        spload = new SpotsDialog(ReminderListActivity.this, R.style.Custom);
         spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         spload.setCancelable(true);
         spload.show();
 
         try {
 
-            HashMap<String,String> map=new HashMap<>();
-            map.put("userId",uid);
-            map.put("reminderId",id);
+            HashMap<String, String> map = new HashMap<>();
+            map.put("userId", uid);
+            map.put("reminderId", id);
 
             JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
@@ -253,27 +233,21 @@ public class ReminderListActivity extends AppCompatActivity {
 
                                 spload.dismiss();
 
-                                try
-                                {
-                                    if(response.getString("status").toString().equals("True"))
-                                    {
+                                try {
+                                    if (response.getString("status").toString().equals("True")) {
                                         Toast.makeText(ReminderListActivity.this, response.getString("message"), Toast.LENGTH_SHORT).show();
 
-                                        Intent i=new Intent(getApplicationContext(),ReminderListActivity.class);
+                                        Intent i = new Intent(getApplicationContext(), ReminderListActivity.class);
                                         startActivity(i);
                                     }
 
-                                }
-                                catch (JSONException e)
-                                {
+                                } catch (JSONException e) {
                                     Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
                                 }
 
                                 // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                            catch (Exception e)
-                            {
-                                Toast.makeText(getApplicationContext(), "error--"+e, Toast.LENGTH_SHORT).show();
+                            } catch (Exception e) {
+                                Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_SHORT).show();
                             }
                         }
                     },
@@ -281,7 +255,7 @@ public class ReminderListActivity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
-                            Toast.makeText(getApplicationContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -292,8 +266,7 @@ public class ReminderListActivity extends AppCompatActivity {
             // Adds the JSON object request "obreq" to the request queue
             requestQueue.add(obreq);
 
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
         }
 

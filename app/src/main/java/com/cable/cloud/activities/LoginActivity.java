@@ -79,8 +79,8 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         cardLogin = (CardView) findViewById(R.id.cardLogin);
         btnLogin = (Button) findViewById(R.id.btnlogin);
 
-        etUsername.setText("test");
-        etPassword.setText("test");
+        etUsername.setText("demo123");
+        etPassword.setText("demo123");
         etOpCode.setText("demo");
 
     }

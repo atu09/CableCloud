@@ -158,11 +158,11 @@ public class ComplainListviaCustomerActivity extends AppCompatActivity {
 
             case R.id.action_assign:
 
-                // Toast.makeText(ReminderListActivity.this,reminderdetails.get(info.position).get("ReminderId").toString(), Toast.LENGTH_SHORT).show();
-                // reminderdetails.remove(info.position);
+                // Toast.makeText(ReminderListActivity.this,reminderDetails.get(info.position).get("ReminderId").toString(), Toast.LENGTH_SHORT).show();
+                // reminderDetails.remove(info.position);
 
                 //URL=siteURL+"/GetUpdateStatusReminderForCollectionApp";
-                //CallVolleys(URL,reminderdetails.get(info.position).get("ReminderId").toString());
+                //CallVolleys(URL,reminderDetails.get(info.position).get("ReminderId").toString());
 
                 URL=siteurl+"/GetUserlistfornewcollectionApp";
 

@@ -68,7 +68,6 @@ import com.cable.cloud.PackageDetails;
 import com.cable.cloud.Payment_details;
 import com.cable.cloud.R;
 import com.cable.cloud.Remider_details;
-import com.cable.cloud.Sms_log;
 import com.cable.cloud.helpers.Utils;
 
 import org.apache.commons.codec.binary.Base64;
@@ -267,7 +266,7 @@ public class CustomerMasterDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(getApplicationContext(), Sms_log.class);
+                Intent i = new Intent(getApplicationContext(), SmsLogActivity.class);
                 i.putExtra("title", title);
                 i.putExtra("smsdetails", smsdetails);
                 startActivityWithOptions(i);
