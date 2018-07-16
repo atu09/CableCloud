@@ -18,22 +18,23 @@ import java.util.HashMap;
 /**
  * Created by MTAJ-08 on 9/4/2016.
  */
-public class ComplainDataAdapter  extends BaseAdapter {
+public class ComplainDataAdapter extends BaseAdapter {
 
     Context context;
-    private static LayoutInflater inflater=null;
-    ArrayList<HashMap<String,String>> arealist=new ArrayList<>();
+    private static LayoutInflater inflater = null;
+    ArrayList<HashMap<String, String>> arealist = new ArrayList<>();
 
 
-    public ComplainDataAdapter(Context con,ArrayList<HashMap<String,String>> u) {
+    public ComplainDataAdapter(Context con, ArrayList<HashMap<String, String>> u) {
         // TODO Auto-generated constructor stub
 
-        context=con;
-        arealist=u;
+        context = con;
+        arealist = u;
 
-        inflater = ( LayoutInflater )context.
+        inflater = (LayoutInflater) context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
+
     @Override
     public int getCount() {        // TODO Auto-generated method stub
         return arealist.size();
@@ -51,13 +52,13 @@ public class ComplainDataAdapter  extends BaseAdapter {
         return position;
     }
 
-    public class Holder
-    {
-        TextView tvareaname,tvnew,tvhigh,tvactive,tvresolve,tvnewcount,tvhighcount,tvactivecount,tvresolvecount;
-        LinearLayout llnewcount,llhighcount,llactivecount,llresolvecount;
+    public class Holder {
+        TextView tvareaname, tvnew, tvhigh, tvactive, tvresolve, tvnewcount, tvhighcount, tvactivecount, tvresolvecount;
+        LinearLayout llnewcount, llhighcount, llactivecount, llresolvecount;
 
 
     }
+
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
@@ -68,7 +69,7 @@ public class ComplainDataAdapter  extends BaseAdapter {
 
         if (convertView == null) {
 
-            vi = inflater.inflate(R.layout.layout_complainlist, null);
+            vi = inflater.inflate(R.layout.layout_complainlist_revised, null);
 
             holder = new Holder();
 
@@ -78,33 +79,28 @@ public class ComplainDataAdapter  extends BaseAdapter {
             holder.tvactive = (TextView) vi.findViewById(R.id.active_count);
             holder.tvresolve = (TextView) vi.findViewById(R.id.resolved_count);
 
-            holder.tvnewcount=(TextView)vi.findViewById(R.id.txtnewcount);
-            holder.tvhighcount=(TextView)vi.findViewById(R.id.txthighcount);
-            holder.tvactivecount=(TextView)vi.findViewById(R.id.txtactivecount);
-            holder.tvresolvecount=(TextView)vi.findViewById(R.id.txtresolvecount);
+            holder.tvnewcount = (TextView) vi.findViewById(R.id.txtnewcount);
+            holder.tvhighcount = (TextView) vi.findViewById(R.id.txthighcount);
+            holder.tvactivecount = (TextView) vi.findViewById(R.id.txtactivecount);
+            holder.tvresolvecount = (TextView) vi.findViewById(R.id.txtresolvecount);
 
-            holder.llnewcount=(LinearLayout)vi.findViewById(R.id.llnewcount);
-            holder.llhighcount=(LinearLayout)vi.findViewById(R.id.llhighcount);
-            holder.llactivecount=(LinearLayout)vi.findViewById(R.id.llactivecount);
-            holder.llresolvecount=(LinearLayout)vi.findViewById(R.id.llresolvecount);
+            holder.llnewcount = (LinearLayout) vi.findViewById(R.id.llnewcount);
+            holder.llhighcount = (LinearLayout) vi.findViewById(R.id.llhighcount);
+            holder.llactivecount = (LinearLayout) vi.findViewById(R.id.llactivecount);
+            holder.llresolvecount = (LinearLayout) vi.findViewById(R.id.llresolvecount);
 
             vi.setTag(holder);
 
-        }
-        else {
+        } else {
             holder = (Holder) vi.getTag();
         }
 
-        if(arealist.size()<=0) {
-        }
-        else {
+        if (arealist.size() <= 0) {
+        } else {
 
-            if(arealist.get(position).get("type").equals("Area"))
-            {
+            if (arealist.get(position).get("type").equals("Area")) {
                 holder.tvareaname.setText(arealist.get(position).get("areaname"));
-            }
-            else if(arealist.get(position).get("type").equals("User"))
-            {
+            } else if (arealist.get(position).get("type").equals("User")) {
                 holder.tvareaname.setText(arealist.get(position).get("userName"));
             }
 
@@ -113,66 +109,53 @@ public class ComplainDataAdapter  extends BaseAdapter {
             holder.tvactive.setText(arealist.get(position).get("activecomplaincount"));
             holder.tvresolve.setText(arealist.get(position).get("resolvecomplaincount"));
 
-            if(arealist.get(position).get("newcomplaincommentcount").equals("0"))
-            {
+            if (arealist.get(position).get("newcomplaincommentcount").equals("0")) {
                 holder.tvnewcount.setVisibility(View.GONE);
-            }
-            else
-            {
+            } else {
                 holder.tvnewcount.setText(arealist.get(position).get("newcomplaincommentcount"));
 
                 holder.tvnewcount.setVisibility(View.VISIBLE);
 
-                Animation anim= AnimationUtils.loadAnimation(context, R.anim.rotate);
+                Animation anim = AnimationUtils.loadAnimation(context, R.anim.rotate);
                 holder.llnewcount.startAnimation(anim);
 
             }
 
-            if(arealist.get(position).get("highcomplaincommentcount").equals("0"))
-            {
+            if (arealist.get(position).get("highcomplaincommentcount").equals("0")) {
                 holder.tvhighcount.setVisibility(View.GONE);
-            }
-            else
-            {
+            } else {
                 holder.tvhighcount.setText(arealist.get(position).get("highcomplaincommentcount"));
 
                 holder.tvhighcount.setVisibility(View.VISIBLE);
 
-                Animation anim= AnimationUtils.loadAnimation(context, R.anim.rotate);
+                Animation anim = AnimationUtils.loadAnimation(context, R.anim.rotate);
                 holder.llhighcount.startAnimation(anim);
 
             }
 
-            if(arealist.get(position).get("activecomplaincommentcount").equals("0"))
-            {
+            if (arealist.get(position).get("activecomplaincommentcount").equals("0")) {
                 holder.tvactivecount.setVisibility(View.GONE);
-            }
-            else
-            {
+            } else {
                 holder.tvactivecount.setText(arealist.get(position).get("activecomplaincommentcount"));
 
                 holder.tvactivecount.setVisibility(View.VISIBLE);
 
-                Animation anim= AnimationUtils.loadAnimation(context, R.anim.rotate);
+                Animation anim = AnimationUtils.loadAnimation(context, R.anim.rotate);
                 holder.llactivecount.startAnimation(anim);
 
             }
 
-            if(arealist.get(position).get("resolvecomplaincommentcount").equals("0"))
-            {
+            if (arealist.get(position).get("resolvecomplaincommentcount").equals("0")) {
                 holder.tvresolvecount.setVisibility(View.GONE);
-            }
-            else
-            {
+            } else {
                 holder.tvresolvecount.setText(arealist.get(position).get("resolvecomplaincommentcount"));
 
                 holder.tvresolvecount.setVisibility(View.VISIBLE);
 
-                Animation anim= AnimationUtils.loadAnimation(context, R.anim.rotate);
+                Animation anim = AnimationUtils.loadAnimation(context, R.anim.rotate);
                 holder.llresolvecount.startAnimation(anim);
 
             }
-
 
 
         }

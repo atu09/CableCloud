@@ -16,7 +16,7 @@ public final class R {
         public static final int minWidth = 0x7f010004;
     }
     public static final class string {
-        public static final int app_name = 0x7f0a0034;
+        public static final int app_name = 0x7f0a0035;
     }
     public static final class style {
         public static final int AVLoadingIndicatorView = 0x7f0c00ad;

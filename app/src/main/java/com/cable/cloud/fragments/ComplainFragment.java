@@ -228,10 +228,10 @@ public class ComplainFragment extends Fragment {
                 public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 
                     TextView tvareaname = (TextView) view.findViewById(R.id.textView31);
-                    LinearLayout tvnew = (LinearLayout) view.findViewById(R.id.llnew);
-                    LinearLayout tvhigh = (LinearLayout) view.findViewById(R.id.llhigh);
-                    LinearLayout tvactive = (LinearLayout) view.findViewById(R.id.llactive);
-                    LinearLayout tvresolve = (LinearLayout) view.findViewById(R.id.llresolved);
+                    LinearLayout tvnew = (LinearLayout) view.findViewById(R.id.layout_new);
+                    LinearLayout tvhigh = (LinearLayout) view.findViewById(R.id.layout_high_count);
+                    LinearLayout tvactive = (LinearLayout) view.findViewById(R.id.layout_active_count);
+                    LinearLayout tvresolve = (LinearLayout) view.findViewById(R.id.layout_resolved_count);
 
                     tvnew.setOnClickListener(new View.OnClickListener() {
                         @Override
