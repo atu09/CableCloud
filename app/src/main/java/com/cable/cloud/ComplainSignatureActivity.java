@@ -1,19 +1,16 @@
 package com.cable.cloud;
 
-import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -23,17 +20,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.cable.cloud.activities.TransactionStatusActivity;
+import com.cable.cloud.helpers.Utils;
 import com.github.gcacace.signaturepad.views.SignaturePad;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.InputStream;
-import java.util.Calendar;
 import java.util.HashMap;
-
-import dmax.dialog.SpotsDialog;
 
 public class ComplainSignatureActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -41,23 +33,13 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
 
     TextView tvcancel;
 
-    String from, cmpid,areatitle;
+    String from, cmpid, areatitle;
 
     private static final String PREF_NAME = "LoginPref";
 
-    String billid, accno, paymode, paidamount, cheqdate = "-", cheqno = "-", bankname = "-", email, signaturestring, rdate,custid,Discount;
+    String billid, accno, paymode, paidamount, cheqdate = "-", cheqno = "-", bankname = "-", email, signaturestring, rdate, custid, Discount;
 
     String siteurl, uid, cid, aid, eid, URL;
-
-    static InputStream is = null;
-    static JSONObject jobj = null;
-    static String json = "";
-    static JSONArray jarr = null;
-
-    JSONObject jsonobj;
-
-    Calendar calendar;
-    int year, cmonth, day;
 
     RequestQueue requestQueue;
 
@@ -70,8 +52,8 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
         Intent j = getIntent();
         cmpid = j.getExtras().getString("complainId");
         from = j.getExtras().getString("from");
-        areatitle= j.getExtras().getString("cname");
-        custid=j.getExtras().getString("CustomerId");
+        areatitle = j.getExtras().getString("cname");
+        custid = j.getExtras().getString("CustomerId");
 
         requestQueue = Volley.newRequestQueue(this);
 
@@ -80,21 +62,15 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
 
         SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        siteurl = pref.getString("SiteURL", "").toString();
-        uid = pref.getString("Userid", "").toString();
+        siteurl = pref.getString("SiteURL", "");
+        uid = pref.getString("Userid", "");
 
-        if (from.equals("complain"))
-        {
+        if (from.equals("complain")) {
             tvcancel.setText("CANCEL");
-            //tvcancel.setTextSize(22f);
-            //tvcancel.setTypeface(null, Typeface.NORMAL);
 
-        }
-        else if (pref.getString("from", "").equals("Payment")) {
-            tvcancel.setText( paidamount);
-        }
-        else if(from.equals("Payment"))
-        {
+        } else if (pref.getString("from", "").equals("Payment")) {
+            tvcancel.setText(paidamount);
+        } else if (from.equals("Payment")) {
             tvcancel.setText(paidamount);
         }
 
@@ -102,15 +78,11 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
         toolbar.setTitle(areatitle);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setNavigationIcon(R.drawable.ic_back_white);
-
         setSupportActionBar(toolbar);
-
-        //getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 onBackPressed();
 
             }
@@ -119,7 +91,6 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
         tvcancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 onBackPressed();
 
             }
@@ -128,7 +99,7 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
         findViewById(R.id.ibtn_clear).setOnClickListener(this);
         findViewById(R.id.ibtn_clear).setVisibility(View.GONE);
 
-        findViewById(R.id.llconfirm).setOnClickListener(this);
+        findViewById(R.id.textView29).setOnClickListener(this);
 
         mSignaturePad = (SignaturePad) findViewById(R.id.signature_pad);
         mSignaturePad.setOnSignedListener(new SignaturePad.OnSignedListener() {
@@ -156,8 +127,8 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
     public void onBackPressed() {
         Intent i = new Intent(getApplicationContext(), ComplainDetails.class);
         i.putExtra("title", areatitle);
-        i.putExtra("customerId",custid);
-        i.putExtra("complainId",cmpid);
+        i.putExtra("customerId", custid);
+        i.putExtra("complainId", cmpid);
         startActivity(i);
 
         finish();
@@ -166,21 +137,16 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
     @Override
     public void onClick(View v) {
 
-        //hideKeyboard(this);
         switch (v.getId()) {
             case R.id.ibtn_clear:
                 mSignaturePad.clear();
                 break;
-            case R.id.llconfirm:
+            case R.id.textView29:
                 if (mSignaturePad.isEmpty()) {
 
-                    findViewById(R.id.llconfirm).setEnabled(false);
+                    findViewById(R.id.textView29).setEnabled(false);
 
-                   /* Snackbar snackbar = Snackbar
-                            .make(v, "Please enter customer signature", Snackbar.LENGTH_LONG);
-                    snackbar.show();*/
-
-                    signaturestring="-";
+                    signaturestring = "-";
                     SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
                     if (pref.getString("from", "").equals("Payment")) {
@@ -199,9 +165,7 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
 
 
                         // CallVolley(URL);
-                    }
-                    else if(from.equals("Payment"))
-                    {
+                    } else if (from.equals("Payment")) {
                         // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                         // GPSon(getApplicationContext());
@@ -228,7 +192,7 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
                 } else {
                     SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-                    signaturestring="-";
+                    signaturestring = "-";
 
                     if (pref.getString("from", "").equals("Payment")) {
 
@@ -246,9 +210,7 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
 
 
                         // CallVolley(URL);
-                    }
-                    else if(from.equals("Payment"))
-                    {
+                    } else if (from.equals("Payment")) {
                         // URL = siteURL + "/GenerateBillReceiptForCollectionApp";
 
                         // GPSon(getApplicationContext());
@@ -278,79 +240,59 @@ public class ComplainSignatureActivity extends AppCompatActivity implements View
     }
 
     public void CallVolleys(String a) {
-        final SpotsDialog spload;
-        spload = new SpotsDialog(ComplainSignatureActivity.this, R.style.Custom);
-        spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spload.setCancelable(true);
-        spload.show();
 
-        try {
-            //jsonobj=makeHttpRequest(params[0]);
+        final Dialog loader = Utils.getLoader(this);
+        loader.show();
 
-            HashMap<String, String> map = new HashMap<>();
-            map.put("complainid", cmpid);
-            map.put("usersign", signaturestring);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("complainid", cmpid);
+        map.put("usersign", signaturestring);
 
-            Log.e("MAP:", map.toString());
+        Log.e("MAP:", map.toString());
 
-            JsonObjectRequest obreq;
-            obreq = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            try {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
 
-                                spload.dismiss();
+                        if (loader.isShowing()) {
+                            loader.dismiss();
+                        }
 
-                                findViewById(R.id.llconfirm).setEnabled(true);
+                        try {
 
-                                try {
-                                    if (response.getString("status").toString().equals("True")) {
-                                        Intent i = new Intent(ComplainSignatureActivity.this, TransactionStatusActivity.class);
-                                        i.putExtra("from", from);
-                                        i.putExtra("Oa", "");
-                                        startActivity(i);
+                            findViewById(R.id.textView29).setEnabled(true);
 
-                                        finish();
-                                    }
+                            if (response.getString("status").equalsIgnoreCase("True")) {
+                                Intent i = new Intent(ComplainSignatureActivity.this, TransactionStatusActivity.class);
+                                i.putExtra("from", from);
+                                i.putExtra("Oa", "");
+                                startActivity(i);
 
-                                } catch (JSONException e) {
-                                    Toast.makeText(getApplicationContext(), "Error:++" + e, Toast.LENGTH_SHORT).show();
-                                }
-
-                                // Toast.makeText(CustomerSignatureActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                            } catch (Exception e) {
-                                Toast.makeText(ComplainSignatureActivity.this, "error--" + e, Toast.LENGTH_SHORT).show();
+                                finish();
                             }
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-
-                            Toast.makeText(ComplainSignatureActivity.this, "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
-
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        if (loader.isShowing()) {
+                            loader.dismiss();
                         }
-                    });
+                        error.printStackTrace();
 
-            obreq.setRetryPolicy(new DefaultRetryPolicy(600000,
-                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            // Adds the JSON object request "obreq" to the request queue
-            requestQueue.add(obreq);
+                    }
+                });
 
-        } catch (Exception e) {
-            Toast.makeText(ComplainSignatureActivity.this, "--" + e, Toast.LENGTH_SHORT).show();
-        }
+        request.setRetryPolicy(new DefaultRetryPolicy(30000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        requestQueue.add(request);
 
     }
 
-
-    public static void hideKeyboard(Activity activity) {
-        View view = activity.getCurrentFocus();
-        if (view != null) {
-            InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-    }
 }

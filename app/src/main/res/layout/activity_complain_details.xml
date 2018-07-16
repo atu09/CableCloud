@@ -377,7 +377,7 @@
             android:gravity="center"
             android:text="VIEW PHOTO"
             android:textColor="#ffffff"
-            android:textSize="@dimen/textsize_18" />
+            android:textSize="@dimen/textsize_16" />
 
 
         <View
@@ -396,7 +396,7 @@
             android:gravity="center"
             android:text="MARK AS RESOLVE"
             android:textColor="#ffffff"
-            android:textSize="@dimen/textsize_18" />
+            android:textSize="@dimen/textsize_16" />
 
     </LinearLayout>
 

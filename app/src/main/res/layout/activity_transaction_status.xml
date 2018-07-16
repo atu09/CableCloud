@@ -72,7 +72,7 @@
             android:padding="14dp"
             android:text="HOME"
             android:textColor="#ffffff"
-            android:textSize="@dimen/textsize_18" />
+            android:textSize="@dimen/textsize_16" />
 
         <View
             android:layout_width="1dp"
@@ -90,7 +90,7 @@
             android:padding="14dp"
             android:text="NEXT PAYMENT"
             android:textColor="#ffffff"
-            android:textSize="@dimen/textsize_18" />
+            android:textSize="@dimen/textsize_16" />
 
     </LinearLayout>
 

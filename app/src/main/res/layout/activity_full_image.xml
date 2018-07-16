@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.cable.cloud.bolsmart.activities.FullImageActivity">
+    android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/ivBack"
+        android:src="@drawable/ic_back_white"
+        android:tint="@color/colorBlack"
+        android:scaleType="center"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ImageView
+        android:id="@+id/imageView12"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView12" />
+        android:layout_height="match_parent" />
+
 </RelativeLayout>

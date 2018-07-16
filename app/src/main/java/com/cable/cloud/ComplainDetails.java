@@ -76,8 +76,6 @@ public class ComplainDetails extends AppCompatActivity {
 
     ArrayList<HashMap<String, String>> Complaindetails = new ArrayList<>();
 
-    SimpleAdapter adapter;
-
     TextView tvacno, tvmqno, tvcid, tvcsub, tvdesc, tvphone, tvemail, tvaddress, tvcount;
 
     TextView tvresolve, tvphoto;
