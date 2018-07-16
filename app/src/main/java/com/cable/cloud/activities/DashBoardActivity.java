@@ -83,7 +83,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cn.carbs.android.library.MDDialog;
+import com.cable.cloud.customs.MDDialog;
 
 import static com.cable.cloud.helpers.DBHelper.ENTITY_NAME;
 import static com.cable.cloud.helpers.DBHelper.PK_ENTITY_ID;

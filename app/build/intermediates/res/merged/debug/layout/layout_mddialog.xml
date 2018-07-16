@@ -29,12 +29,12 @@
             android:gravity="center_vertical|left"
             android:paddingLeft="@dimen/md_dialog_title_textview_padding"
             android:singleLine="true"
-            android:text="示例"
+            android:text="Title"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/md_dialog_title_textview_textsize" />
 
         <View
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="@dimen/md_dialog_margin"
@@ -64,7 +64,7 @@
             android:layout_marginRight="@dimen/md_dialog_title_button_margin_right"
             android:gravity="center"
             android:padding="@dimen/md_dialog_bottom_button_padding"
-            android:text="确定"
+            android:text="Yes"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/md_dialog_bottom_button_textsize" />
 
@@ -76,7 +76,7 @@
             android:layout_toLeftOf="@id/btn_yes"
             android:gravity="center"
             android:padding="@dimen/md_dialog_bottom_button_padding"
-            android:text="取消"
+            android:text="No"
             android:textColor="@color/md_dialog_gray_dark"
             android:textSize="@dimen/md_dialog_bottom_button_textsize" />
     </RelativeLayout>

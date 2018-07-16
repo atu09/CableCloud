@@ -15,15 +15,14 @@
     <color name="grey_500">#9E9E9E</color>
     <color name="grey_600">#757575</color>
     <color name="grey_900">#212121</color>
-
-
-    <!--Anish-->
     <color name="green">#51A351</color>
 
-<!--
-    android:centerColor="#89C34A"
-    android:endColor="#669F36"
-    android:startColor="#d3f4af"
--->
+    <color name="md_dialog_black_light">#aa111111</color>
+    <color name="md_dialog_divider_dark">#66999999</color>
+    <color name="md_dialog_divider_light">#44999999</color>
+    <color name="md_dialog_gray_dark">#99666666</color>
+    <color name="md_dialog_green_dark">#ff2ca99f</color>
+    <color name="md_dialog_green_light">#ff4bd1c8</color>
+    <color name="md_dialog_trans">#00000000</color>
 
 </resources>

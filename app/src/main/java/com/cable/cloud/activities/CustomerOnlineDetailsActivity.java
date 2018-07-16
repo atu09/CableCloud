@@ -83,7 +83,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 
-import cn.carbs.android.library.MDDialog;
+import com.cable.cloud.customs.MDDialog;
 
 public class CustomerOnlineDetailsActivity extends AppCompatActivity {
 

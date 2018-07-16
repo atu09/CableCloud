@@ -32,7 +32,6 @@
 
         </android.support.v4.widget.SwipeRefreshLayout>
 
-
         <com.cable.cloud.customs.MovableFloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
@@ -41,6 +40,7 @@
             android:layout_margin="@dimen/fab_margin"
             android:src="@android:drawable/ic_search_category_default"
             android:tint="@android:color/white"
+            app:backgroundTint="@android:color/holo_red_dark"
             app:elevation="6dp"
             app:fabSize="normal" />
 

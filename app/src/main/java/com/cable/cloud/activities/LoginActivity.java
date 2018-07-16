@@ -30,6 +30,7 @@ import com.cable.cloud.helpers.DBHelper;
 import com.cable.cloud.helpers.MyApplication;
 import com.cable.cloud.R;
 import com.cable.cloud.helpers.Utils;
+import com.skyfishjy.library.RippleBackground;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -55,8 +56,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
     Button btnLogin;
 
     String token = "-";
-    private CardView cardLogo;
-    private CardView cardLogin;
+    RippleBackground loader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,8 +75,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         etUsername = (EditText) findViewById(R.id.editText);
         etPassword = (EditText) findViewById(R.id.edtPassword);
         etOpCode = (EditText) findViewById(R.id.OpCode);
-        cardLogo = (CardView) findViewById(R.id.cardLogo);
-        cardLogin = (CardView) findViewById(R.id.cardLogin);
+        loader = (RippleBackground) findViewById(R.id.loader);
         btnLogin = (Button) findViewById(R.id.btnlogin);
 
         etUsername.setText("demo123");
@@ -88,7 +87,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        initAnimation();
+        init();
     }
 
     private void init() {
@@ -126,55 +125,23 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         }
     }
 
-    private void initAnimation() {
-
-        Animation bottomUpCardLogo = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.bottom_up_anim);
-        cardLogo.setVisibility(View.VISIBLE);
-        cardLogo.startAnimation(bottomUpCardLogo);
-
-        bottomUpCardLogo.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                Animation bottomUp = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.bottom_up_anim);
-                cardLogin.setVisibility(View.VISIBLE);
-                cardLogin.startAnimation(bottomUp);
-
-                bottomUp.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        init();
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
-
-                    }
-                });
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
         MyApplication.getInstance().setConnectivityListener(this);
+
+        if (!loader.isRippleAnimationRunning()){
+            loader.startRippleAnimation();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if (loader.isRippleAnimationRunning()){
+            loader.stopRippleAnimation();
+        }
     }
 
     @Override

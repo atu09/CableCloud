@@ -98,7 +98,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.carbs.android.library.MDDialog;
+import com.cable.cloud.customs.MDDialog;
 
 public class CustomerMasterDetailsActivity extends AppCompatActivity {
 

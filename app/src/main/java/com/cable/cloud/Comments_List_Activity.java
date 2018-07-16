@@ -1,13 +1,14 @@
 package com.cable.cloud;
 
-import android.app.ProgressDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
-import android.support.design.widget.FloatingActionButton;
+
+import com.cable.cloud.customs.MovableFloatingActionButton;
+
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,77 +20,60 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
-//import com.github.silvestrpredko.dotprogressbar.DotProgressBar;
-
-import com.cable.cloud.R;
 import com.cable.cloud.activities.DashBoardActivity;
+import com.cable.cloud.helpers.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import cn.carbs.android.library.MDDialog;
-import dmax.dialog.SpotsDialog;
+import com.cable.cloud.customs.MDDialog;
 
 public class Comments_List_Activity extends AppCompatActivity {
 
     private static final String PREF_NAME = "LoginPref";
 
-    ListView lvcomments;
+    ListView listView;
 
-    ArrayList<HashMap<String,String>> commentsdetails=new ArrayList<>();
+    ArrayList<HashMap<String, String>> commentsDetails = new ArrayList<>();
 
-    FloatingActionButton fabadd;
+    MovableFloatingActionButton fabadd;
 
-    String siteurl,URL,URL1,uid;
+    String siteUrl, URL, URL1, uid;
 
-     InputStream is = null;
-     JSONObject jobj = null;
-    String json = "";
-     JSONArray jarr = null;
-
-    JSONObject jsonObjectadd;
-
-    JSONObject jsonobj;
-
-    SimpleAdapter da;
-    String tag,cmpid,custid,title,from;
+    SimpleAdapter adapter;
+    String tag, cmpid, custid, title, from;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comments__list_);
 
-        final SharedPreferences pref=getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        final SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        siteurl=pref.getString("SiteURL","").toString();
-        uid=pref.getString("Userid","").toString();
+        siteUrl = pref.getString("SiteURL", "");
+        uid = pref.getString("Userid", "");
 
-        lvcomments=(ListView)findViewById(R.id.listView5);
-        fabadd=(FloatingActionButton)findViewById(R.id.fab);
+        listView = (ListView) findViewById(R.id.listView5);
+        fabadd = (MovableFloatingActionButton) findViewById(R.id.fab);
 
-        Intent j=getIntent();
-        cmpid=j.getExtras().getString("Complainid");
-        from=j.getExtras().getString("From");
-        title=j.getExtras().getString("title");
-        custid=j.getExtras().getString("CustomerId");
+        Intent j = getIntent();
+        cmpid = j.getExtras().getString("Complainid");
+        from = j.getExtras().getString("From");
+        title = j.getExtras().getString("title");
+        custid = j.getExtras().getString("CustomerId");
 
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -102,25 +86,19 @@ public class Comments_List_Activity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(getApplicationContext(), DashBoardActivity.class);
-                //startActivity(i);
-
                 onBackPressed();
 
             }
         });
 
-        if(pref.getString("RoleId", "").toString().equals("2"))
-        {
-            tag="Web";
-        }
-        else
-        {
-            tag="AssignUser";
+        if (pref.getString("RoleId", "").equals("2")) {
+            tag = "Web";
+        } else {
+            tag = "AssignUser";
         }
 
 
-        URL=siteurl+"/withtag?complainId="+cmpid+"&commentTag="+tag;
+        URL = siteUrl + "/withtag?complainId=" + cmpid + "&commentTag=" + tag;
 
         new JSONAsynk().execute(new String[]{URL});
 
@@ -129,36 +107,31 @@ public class Comments_List_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                LayoutInflater li=getLayoutInflater();
+                LayoutInflater li = getLayoutInflater();
 
-                View vs=li.inflate(R.layout.comments_dialog, null);
+                View vs = li.inflate(R.layout.comments_dialog, null);
 
-               final  EditText edtcomment=(EditText)vs.findViewById(R.id.editText20);
+                final EditText edtcomment = (EditText) vs.findViewById(R.id.editText20);
 
-                MDDialog.Builder mdalert=new MDDialog.Builder(Comments_List_Activity.this);
+                MDDialog.Builder mdalert = new MDDialog.Builder(Comments_List_Activity.this);
                 mdalert.setContentView(vs);
                 mdalert.setPositiveButton("POST", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        try{
-                            if(edtcomment.getText().toString().length()>0) {
+                        try {
+                            if (edtcomment.getText().toString().length() > 0) {
 
-                                String text=edtcomment.getText().toString();
+                                String text = edtcomment.getText().toString();
 
-                                URL1 = siteurl + "/AddComplainCommentForCollectionApp?loginuserId=" + uid + "&complainId=" + cmpid + "&comment=" + URLEncoder.encode(text, "UTF-8");
+                                URL1 = siteUrl + "/AddComplainCommentForCollectionApp?loginuserId=" + uid + "&complainId=" + cmpid + "&comment=" + URLEncoder.encode(text, "UTF-8");
 
                                 new JSONAsynks().execute(new String[]{URL1});
 
+                            } else {
+                                Snackbar.make(v, "Please Enter Comment", Snackbar.LENGTH_LONG).show();
                             }
-
-                            else
-                            {
-                                Snackbar.make(v,"Please Enter Comment",Snackbar.LENGTH_LONG).show();
-                            }
-                        }
-                        catch (Exception e)
-                        {
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
                     }
@@ -169,40 +142,18 @@ public class Comments_List_Activity extends AppCompatActivity {
 
                     }
                 });
+                mdalert.setTitle("Add Comment");
                 mdalert.setWidthMaxDp(600);
                 mdalert.setShowTitle(true);
                 mdalert.setShowButtons(true);
                 mdalert.setBackgroundCornerRadius(5);
 
 
-                MDDialog dialog=mdalert.create();
+                MDDialog dialog = mdalert.create();
                 dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
                 dialog.show();
             }
         });
-
-       /* String[] data1=new String[]{"By Rahul Shah","By Kiran","By Umesh","By Technician"};
-        String[] data2=new String[]{"jshfjlbskhgfkdsh","sljhvsfhdlflsdl","sljhfljsdh","ljdnbjvldfhnlhn"};
-        String[] data3=new String[]{"8/29/2016 08:10","8/27/2016 18:10","8/29/2016 23:10","8/27/2016 01:10"};
-
-
-        for(int i=0;i<data1.length;i++)
-        {
-            HashMap<String,String> map=new HashMap<>();
-
-
-            map.put("name",data1[i]);
-            map.put("comments",data2[i]);
-            map.put("date",data3[i]);
-
-
-            commentsdetails.add(map);
-
-        }
-
-
-        SimpleAdapter adapter = new SimpleAdapter(Comments_List_Activity.this, commentsdetails, R.layout.layout_comments, new String[]{"name", "comments", "date"}, new int[]{R.id.textView95, R.id.textView96, R.id.textView97});
-        lvcomments.setAdapter(adapter);*/
 
     }
 
@@ -210,17 +161,14 @@ public class Comments_List_Activity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
 
-        if(from.equals("Details"))
-        {
-            Intent i=new Intent(getApplicationContext(),ComplainDetails.class);
+        if (from.equals("Details")) {
+            Intent i = new Intent(getApplicationContext(), ComplainDetails.class);
             i.putExtra("title", title);
-            i.putExtra("customerId",custid);
-            i.putExtra("complainId",cmpid);
+            i.putExtra("customerId", custid);
+            i.putExtra("complainId", cmpid);
             startActivity(i);
-        }
-        else if(from.equals("Notification"))
-        {
-            Intent i=new Intent(getApplicationContext(),DashBoardActivity.class);
+        } else if (from.equals("Notification")) {
+            Intent i = new Intent(getApplicationContext(), DashBoardActivity.class);
             startActivity(i);
         }
 
@@ -228,234 +176,152 @@ public class Comments_List_Activity extends AppCompatActivity {
 
     }
 
-    public JSONObject makeHttpRequest(String url){
-        HttpParams httpParameters = new BasicHttpParams();
+    public JSONObject makeHttpRequest(String url) {
 
-        int timeoutConnection = 500000;
-        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
-// Set the default socket timeout (SO_TIMEOUT)
-// in milliseconds which is the timeout for waiting for data.
-        int timeoutSocket = 50000;
-        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+        JSONObject jsonObject = null;
+        try {
 
-        DefaultHttpClient httpclient = new DefaultHttpClient(httpParameters);
-        HttpGet httppost=new HttpGet(url);
-        try{
-            HttpResponse httpresponse = httpclient.execute(httppost);
-            HttpEntity httpentity = httpresponse.getEntity();
-            is = httpentity.getContent();
-        }catch (ClientProtocolException e){
-            e.printStackTrace();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+            HttpParams httpParameters = new BasicHttpParams();
 
-        try{
+            int timeoutConnection = 500000;
+            HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
 
+            int timeoutSocket = 500000;
+            HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
+            DefaultHttpClient httpclient = new DefaultHttpClient();
+            HttpGet httpGet = new HttpGet(url);
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-
-            // BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_16LE), 8);
+            HttpResponse httpresponse = httpclient.execute(httpGet);
+            HttpEntity httpEntity = httpresponse.getEntity();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(httpEntity.getContent(), "UTF-8"));
 
             StringBuilder sb = new StringBuilder();
-            String line = null;
-            try{
-                if(reader!=null) {
-
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line);
-                    }
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "No data", Toast.LENGTH_SHORT).show();
-                }
-
-                //is.close();
-                json = sb.toString();
-
-                // json= sb.toString().substring(0, sb.toString().length()-1);
-                try{
-                    jobj = new JSONObject(json);
-
-                }catch (JSONException e){
-                    Toast.makeText(getApplicationContext(), "**"+e, Toast.LENGTH_SHORT).show();
-                }
-            }catch(IOException e){
-                Toast.makeText(getApplicationContext(), "**"+e, Toast.LENGTH_SHORT).show();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                sb.append(line);
             }
-        }catch (UnsupportedEncodingException e){
-            Toast.makeText(getApplicationContext(), "**"+e, Toast.LENGTH_SHORT).show();
+
+            jsonObject = new JSONObject(sb.toString());
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-       /* catch (ParseException e){
-            Toast.makeText(MainActivity.this, "**"+e, Toast.LENGTH_SHORT).show();
-        }*/
-        return jobj;
+
+        return jsonObject;
     }
 
+    private class JSONAsynk extends AsyncTask<String, String, JSONObject> {
 
-
-    private class JSONAsynk extends AsyncTask<String,String,JSONObject>
-    {
-
-        private ProgressDialog pDialog;
-       // public DotProgressBar dtprogoress;
-
-        SpotsDialog spload;
-
+        Dialog loader;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            spload=new SpotsDialog(Comments_List_Activity.this,R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(true);
-            spload.show();
+            loader = Utils.getLoader(Comments_List_Activity.this);
+            loader.show();
 
         }
 
         @Override
         protected JSONObject doInBackground(String... params) {
-
-            try {
-                //jobj=new JSONObject();
-                jsonobj=makeHttpRequest(params[0]);
-
-            } catch (Exception e) {
-               e.printStackTrace();
-            }
-
-            return  jsonobj;
+            return makeHttpRequest(params[0]);
 
 
         }
 
         @Override
-        protected void onPostExecute(JSONObject e) {
-            spload.dismiss();
-
-            try
-            {
-               // Toast.makeText(Comments_List_Activity.this, e.getString("message").toString(), Toast.LENGTH_SHORT).show();
+        protected void onPostExecute(JSONObject jsonObject) {
 
 
-                if(e.getString("status").toString().equals("True"))
-                {
+            if (loader.isShowing()) {
+                loader.dismiss();
+            }
 
-                    final JSONArray entityarray = e.getJSONArray("lstcomp");
+            try {
 
-                    for (int i = 0; i < entityarray.length(); i++) {
-                        JSONObject s = (JSONObject) entityarray.get(i);
 
-                        String uname=s.getString("username");
-                        String  comment=s.getString("comment");
-                        String date=s.getString("date");
+                if (jsonObject.getString("status").equalsIgnoreCase("True")) {
 
-                        HashMap<String,String> map=new HashMap<>();
+                    final JSONArray entityArray = jsonObject.getJSONArray("lstcomp");
 
-                        map.put("username",uname);
-                        map.put("comment",comment);
-                        map.put("date",date);
+                    for (int i = 0; i < entityArray.length(); i++) {
+                        JSONObject s = (JSONObject) entityArray.get(i);
 
-                        commentsdetails.add(map);
+                        String uname = s.getString("username");
+                        String comment = s.getString("comment");
+                        String date = s.getString("date");
+
+                        HashMap<String, String> map = new HashMap<>();
+
+                        map.put("username", uname);
+                        map.put("comment", comment);
+                        map.put("date", date);
+
+                        commentsDetails.add(map);
 
                     }
 
-                    da = new SimpleAdapter(Comments_List_Activity.this, commentsdetails, R.layout.layout_comments, new String[]{"username", "comment", "date"}, new int[]{R.id.textView95, R.id.textView96, R.id.textView97});
-                    lvcomments.setAdapter(da);
+                    adapter = new SimpleAdapter(Comments_List_Activity.this, commentsDetails, R.layout.layout_comments, new String[]{"username", "comment", "date"}, new int[]{R.id.textView95, R.id.textView96, R.id.textView97});
+                    listView.setAdapter(adapter);
 
+                } else {
+                    Toast.makeText(Comments_List_Activity.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                 }
-
-                // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show();
-
-            }
-            catch (JSONException ex)
-            {
-                Toast.makeText(Comments_List_Activity.this, "Error:++"+ex, Toast.LENGTH_SHORT).show();
-            }
-            catch (Exception ex)
-            {
-                Toast.makeText(Comments_List_Activity.this, "Error:++"+ex, Toast.LENGTH_SHORT).show();
-            }
-
-        }
-
-    }
-
-    private class JSONAsynks extends AsyncTask<String,String,JSONObject>
-    {
-
-        private ProgressDialog pDialog;
-       // public DotProgressBar dtprogoress;
-
-        SpotsDialog spload;
-
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            spload=new SpotsDialog(Comments_List_Activity.this,R.style.Custom);
-            spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            spload.setCancelable(false);
-            spload.show();
-
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... params) {
-
-            try {
-
-                jsonObjectadd=new JSONObject();
-
-                json="";
-
-                jsonObjectadd=makeHttpRequest(params[0]);
 
             } catch (Exception e) {
                 e.printStackTrace();
-               // Toast.makeText(getApplicationContext(), "--" + e, Toast.LENGTH_SHORT).show();
             }
 
-            return  jsonObjectadd;
+        }
 
+    }
+
+    private class JSONAsynks extends AsyncTask<String, String, JSONObject> {
+
+        Dialog loader;
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            loader = Utils.getLoader(Comments_List_Activity.this);
+            loader.show();
 
         }
 
         @Override
-        protected void onPostExecute(JSONObject e) {
-            spload.dismiss();
+        protected JSONObject doInBackground(String... params) {
+            return makeHttpRequest(params[0]);
+        }
 
-            try
-            {
+        @Override
+        protected void onPostExecute(JSONObject jsonObject) {
 
-                Toast.makeText(Comments_List_Activity.this, e.getString("message").toString(), Toast.LENGTH_SHORT).show();
+            if (loader.isShowing()) {
+                loader.dismiss();
+            }
 
-                if(e.getString("status").toString().equals("True"))
-                {
-                    Intent i=new Intent(getApplicationContext(),Comments_List_Activity.class);
-                    i.putExtra("Complainid",cmpid);
-                    i.putExtra("title",title);
-                    i.putExtra("CustomerId",custid);
-                    i.putExtra("From",from);
+            try {
+
+                if (jsonObject.getString("status").equalsIgnoreCase("True")) {
+                    Intent i = new Intent(getApplicationContext(), Comments_List_Activity.class);
+                    i.putExtra("Complainid", cmpid);
+                    i.putExtra("title", title);
+                    i.putExtra("CustomerId", custid);
+                    i.putExtra("From", from);
                     startActivity(i);
 
                     finish();
+                } else {
+                    Toast.makeText(Comments_List_Activity.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                 }
 
-                // Toast.makeText(getContext(),s1+"--"+s2+"--"+s3+"--"+s4+"--"+s5+"--"+s6+"--"+s7+"--"+s8, Toast.LENGTH_SHORT).show();
-
-            }
-            catch (JSONException ex)
-            {
-                Toast.makeText(Comments_List_Activity.this, "Error:++"+ex, Toast.LENGTH_SHORT).show();
-            }
-            catch (Exception ex)
-            {
-                Toast.makeText(Comments_List_Activity.this, "Error:++"+ex, Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
 
         }

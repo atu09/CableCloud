@@ -42,7 +42,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import cn.carbs.android.library.MDDialog;
+import com.cable.cloud.customs.MDDialog;
 import dmax.dialog.SpotsDialog;
 
 public class PackageDetails extends AppCompatActivity {

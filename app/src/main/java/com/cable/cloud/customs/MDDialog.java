@@ -35,7 +35,6 @@ import com.cable.cloud.R;
  */
 public class MDDialog extends Dialog implements View.OnClickListener {
 
-    private static final String TAG = MDDialog.class.getSimpleName();
     //views
     private RelativeLayout rl_title;
     private RelativeLayout rl_buttons;
@@ -164,8 +163,7 @@ public class MDDialog extends Dialog implements View.OnClickListener {
             tv.setText(wrapper.messages[i]);
             tv.setTextSize(wrapper.contentTextSizeDp);
             tv.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
-            tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT));
+            tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             tv.setOnClickListener(this);
             tv.setClickable(wrapper.contentViewClickable);
             tv.setTextColor(wrapper.contentTextColor);
