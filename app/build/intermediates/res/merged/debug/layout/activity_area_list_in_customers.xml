@@ -33,6 +33,6 @@
         android:textAllCaps="true"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#ffffff"
-        android:textSize="@dimen/textsize_18" />
+        android:textSize="@dimen/textsize_16" />
 
 </LinearLayout>

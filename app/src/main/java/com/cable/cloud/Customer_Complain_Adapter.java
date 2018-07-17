@@ -53,58 +53,51 @@ public class Customer_Complain_Adapter extends BaseAdapter {
 
 
         if (convertView == null) {
-              //  R.id.textView31, R.id.textView34, R.id.textView36, R.id.textView37
+            //  R.id.textView31, R.id.textView34, R.id.textView36, R.id.textView37
 
-                holder = new ViewHolder();
-                convertView = inflater.inflate(R.layout.layout_customerlist, parent, false);
-                holder.textname = (TextView) convertView.findViewById(R.id.textView31);
-                holder.textacno = (TextView) convertView.findViewById(R.id.textView34);
-                holder.textmqno = (TextView) convertView.findViewById(R.id.textView36);
-                holder.textaddres= (TextView) convertView.findViewById(R.id.textView37);
-                holder.tvcommentcount=(TextView)convertView.findViewById(R.id.textView102);
-
-                holder.llcount=(LinearLayout)convertView.findViewById(R.id.llcount);
+            holder = new ViewHolder();
+            convertView = inflater.inflate(R.layout.layout_customerlist, parent, false);
+            holder.textname = (TextView) convertView.findViewById(R.id.textView31);
+            holder.textacno = (TextView) convertView.findViewById(R.id.textView34);
+            holder.textmqno = (TextView) convertView.findViewById(R.id.textView36);
+            holder.textaddres = (TextView) convertView.findViewById(R.id.textView37);
+            holder.tvcommentcount = (TextView) convertView.findViewById(R.id.textView102);
 
 
-                convertView.setTag(holder);
-            }
-            else{
-                holder = (ViewHolder) convertView.getTag();
-            }
-
-            holder.textname.setText(customerlist.get(position).get("Name"));
-            holder.textacno.setText(customerlist.get(position).get("AccountNo"));
-            holder.textmqno.setText(customerlist.get(position).get("MQNo"));
-            holder.textaddres.setText(customerlist.get(position).get("Address"));
-
-            if(customerlist.get(position).get("CustCommentCount").equals("0"))
-            {
-                holder.tvcommentcount.setVisibility(View.GONE);
-            }
-            else
-            {
-                holder.tvcommentcount.setText(customerlist.get(position).get("CustCommentCount"));
-
-                holder.tvcommentcount.setVisibility(View.VISIBLE);
-
-                Animation anim= AnimationUtils.loadAnimation(cont, R.anim.rotate);
-                holder.llcount.startAnimation(anim);
-
-            }
-            return convertView;
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
+
+        holder.textname.setText(customerlist.get(position).get("Name"));
+        holder.textacno.setText(customerlist.get(position).get("AccountNo"));
+        holder.textmqno.setText(customerlist.get(position).get("MQNo"));
+        holder.textaddres.setText(customerlist.get(position).get("Address"));
+
+        if (customerlist.get(position).get("CustCommentCount").equals("0")) {
+            holder.tvcommentcount.setVisibility(View.GONE);
+        } else {
+            holder.tvcommentcount.setText(customerlist.get(position).get("CustCommentCount"));
+
+            holder.tvcommentcount.setVisibility(View.VISIBLE);
+
+            Animation anim = AnimationUtils.loadAnimation(cont, R.anim.rotate);
+            holder.tvcommentcount.startAnimation(anim);
+
+        }
+        return convertView;
+    }
+
     class ViewHolder {
         TextView textname;
         TextView textacno;
         TextView textmqno;
         TextView textaddres;
         TextView tvcommentcount;
-        LinearLayout llcount;
-
 
     }
 
-    }
+}
 
 
 

@@ -344,7 +344,7 @@
                             android:layout_marginLeft="10dp"
                             android:background="@drawable/circletextview"
                             android:gravity="center"
-                            android:text="5"
+                            android:text="0"
                             android:textColor="@android:color/white"
                             android:textSize="14sp"
                             android:textStyle="bold"

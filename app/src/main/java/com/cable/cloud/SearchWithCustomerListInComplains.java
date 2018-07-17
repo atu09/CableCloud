@@ -269,11 +269,7 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
 
     @Override
     public boolean onQueryTextSubmit(String query) {
-
-        // Toast.makeText(SearchWithCustomerListInComplains.this, "Query Submitted..", Toast.LENGTH_SHORT).show();
-
         URL = siteurl + "/SearchCustomerForCollectionApp";
-
         CallVolleys(URL, query);
 
         return false;
@@ -281,7 +277,6 @@ public class SearchWithCustomerListInComplains extends AppCompatActivity impleme
 
     @Override
     public boolean onQueryTextChange(String newText) {
-
         return false;
     }
 

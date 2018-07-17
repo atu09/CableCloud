@@ -1,7 +1,7 @@
-#Tue Jul 17 03:52:45 IST 2018
-base.0=D\:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+#Tue Jul 17 14:43:40 IST 2018
+base.0=/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/transforms/dexMerger/debug/1
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=D\:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+base.1=/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/transforms/dexMerger/debug/3

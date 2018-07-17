@@ -1,18 +1,18 @@
 [
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\25c5dcc3470bdbef6816a70e0ca5e25d\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/564b054b52934793a6e026f9c5097e95/res/layout-v21/notification_template_icon_group.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\25c5dcc3470bdbef6816a70e0ca5e25d\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/564b054b52934793a6e026f9c5097e95/res/layout-v21/notification_action_tombstone.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\25c5dcc3470bdbef6816a70e0ca5e25d\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/564b054b52934793a6e026f9c5097e95/res/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\25c5dcc3470bdbef6816a70e0ca5e25d\\res\\layout-v21\\notification_action.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/564b054b52934793a6e026f9c5097e95/res/layout-v21/notification_action.xml"
     }
 ]

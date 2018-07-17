@@ -1,10 +1,10 @@
 [
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\157895c60ed2276c4030e41e87fcc500\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/11f1516c32b45fbf06ae3ef784711076/res/anim-v21/design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\CableCloud\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\Anish\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\157895c60ed2276c4030e41e87fcc500\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/11f1516c32b45fbf06ae3ef784711076/res/anim-v21/design_bottom_sheet_slide_in.xml"
     }
 ]

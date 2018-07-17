@@ -125,11 +125,10 @@ public class ComplainFragment extends Fragment {
             tvEmpty = (TextView) view.findViewById(R.id.textView100);
 
             bottomNavigationBar = (BottomNavigationBar) view.findViewById(R.id.bottom_navigation_bar);
-
             bottomNavigationBar
-                    .addItem(new BottomNavigationItem(R.drawable.areaicon, "By Area").setActiveColorResource(R.color.ToolbarColor))
-                    .addItem(new BottomNavigationItem(R.drawable.customericon, "By Operator").setActiveColorResource(R.color.ToolbarColor))
-                    .addItem(new BottomNavigationItem(R.drawable.ic_search_white, "Search").setActiveColorResource(R.color.ToolbarColor)).initialise();
+                    .addItem(new BottomNavigationItem(R.drawable.areaicon, "By Area").setActiveColorResource(R.color.colorBlack).setInActiveColorResource(R.color.grey_600))
+                    .addItem(new BottomNavigationItem(R.drawable.customericon, "By Operator").setActiveColorResource(R.color.colorBlack).setInActiveColorResource(R.color.grey_600))
+                    .addItem(new BottomNavigationItem(R.drawable.ic_search_white, "Search").setActiveColorResource(R.color.colorBlack).setInActiveColorResource(R.color.grey_600)).initialise();
 
             Utils.closeKeyboard(getContext());
 

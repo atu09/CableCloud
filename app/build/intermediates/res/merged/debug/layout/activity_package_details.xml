@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_300"
-    android:orientation="vertical"
-    tools:context="com.cable.cloud.cableplus_new.com.cable.cloud.Sms_log">
+    android:orientation="vertical">
 
 
     <android.support.v7.widget.Toolbar
@@ -15,14 +13,13 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimaryDark"
         app:collapseIcon="@drawable/ic_back_white"
-        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
 
 
     <ListView
         android:id="@+id/listView4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:divider="@null"
         android:dividerHeight="1dp" />
 </LinearLayout>

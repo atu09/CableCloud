@@ -18,7 +18,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
@@ -31,18 +30,17 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.cable.cloud.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.cable.cloud.customs.MDDialog;
+
 import dmax.dialog.SpotsDialog;
 
 public class PackageDetails extends AppCompatActivity {
@@ -51,34 +49,21 @@ public class PackageDetails extends AppCompatActivity {
 
     ListView lvpackage;
 
-    ImageView imdno,immqno;
+    EditText edtdno, edtmqno;
 
-    EditText edtdno,edtmqno;
+    ArrayList<HashMap<String, String>> packagedetails = new ArrayList<>();
 
-    ArrayList<HashMap<String,String>> packagelist=new ArrayList<>();
-
-    ArrayList<HashMap<String,String>> packagedetails=new ArrayList<>();
-
-    String siteurl,uid,cid,aid,eid,URL,custid,acno;
+    String siteurl, uid, cid, aid, eid, URL, custid, acno;
     String title;
 
     RequestQueue requestQueue;
 
     SimpleAdapter da;
 
-    static InputStream is = null;
-    static JSONObject jobj = null;
-    static String json = "";
-    static JSONArray jarr = null;
+    ArrayList<String> packagenames = new ArrayList<String>();
+    ArrayList<String> packageids = new ArrayList<String>();
 
-    JSONObject jsonobj;
-
-    JSONArray jsonArray = new JSONArray();
-
-    ArrayList<String> packagenames=new ArrayList<String>();
-    ArrayList<String> packageids=new ArrayList<String>();
-
-    boolean isGenerateBill=false;
+    boolean isGenerateBill = false;
     SharedPreferences pref;
 
 
@@ -87,24 +72,24 @@ public class PackageDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_package_details);
 
-        pref=getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
 
-        siteurl=pref.getString("SiteURL","").toString();
-        uid=pref.getString("Userid","").toString();
-        cid=pref.getString("Contracotrid","").toString();
+        siteurl = pref.getString("SiteURL", "").toString();
+        uid = pref.getString("Userid", "").toString();
+        cid = pref.getString("Contracotrid", "").toString();
 
         requestQueue = Volley.newRequestQueue(this);
 
-        lvpackage=(ListView)findViewById(R.id.listView4);
+        lvpackage = (ListView) findViewById(R.id.listView4);
 
-        edtdno=(EditText)findViewById(R.id.editText4);
-        edtmqno=(EditText)findViewById(R.id.editText5);
+        edtdno = (EditText) findViewById(R.id.editText4);
+        edtmqno = (EditText) findViewById(R.id.editText5);
 
-        Intent j=getIntent();
-        title=j.getExtras().getString("title");
-        packagedetails=(ArrayList<HashMap<String, String>>)j.getSerializableExtra("packagedetails");
-        custid=j.getExtras().getString("CustomerId");
-        acno=j.getExtras().getString("A/cNo");
+        Intent j = getIntent();
+        title = j.getExtras().getString("title");
+        packagedetails = (ArrayList<HashMap<String, String>>) j.getSerializableExtra("packagedetails");
+        custid = j.getExtras().getString("CustomerId");
+        acno = j.getExtras().getString("A/cNo");
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
@@ -116,17 +101,13 @@ public class PackageDetails extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent i = new Intent(getApplicationContext(), CustomerMasterDetailsActivity.class);
-                //startActivity(i);
-
                 onBackPressed();
 
             }
         });
 
 
-
-        da=new SimpleAdapter(PackageDetails.this,packagedetails,R.layout.layout_package_details,new String[]{"PkgName","Price","DeviceNo","SmartCardNo"},new int[]{R.id.textView31,R.id.textView32,R.id.textView34,R.id.textView36});
+        da = new SimpleAdapter(PackageDetails.this, packagedetails, R.layout.layout_package_details, new String[]{"PkgName", "Price", "DeviceNo", "SmartCardNo"}, new int[]{R.id.textView31, R.id.textView32, R.id.textView34, R.id.textView36});
         lvpackage.setAdapter(da);
 
 
@@ -135,12 +116,12 @@ public class PackageDetails extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
 
 
-                URL=siteurl+"/GetpackagelistforCollectionApp";
+                URL = siteurl + "/GetpackagelistforCollectionApp";
 
-                HashMap<String,String> map=new HashMap<String, String>();
-                map.put("contractorId",cid);
+                HashMap<String, String> map = new HashMap<String, String>();
+                map.put("contractorId", cid);
 
-                CallVolleysGetPackage(URL,map,position);
+                CallVolleysGetPackage(URL, map, position);
 
                 return false;
             }
@@ -158,13 +139,11 @@ public class PackageDetails extends AppCompatActivity {
     }
 
 
-
-    public void CallVolleys(String a,HashMap<String,String> map)
-    {
+    public void CallVolleys(String a, HashMap<String, String> map) {
         JsonObjectRequest obreqs;
 
         final SpotsDialog spload;
-        spload=new SpotsDialog(PackageDetails.this,R.style.Custom);
+        spload = new SpotsDialog(PackageDetails.this, R.style.Custom);
         spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         spload.setCancelable(true);
         spload.show();
@@ -173,8 +152,7 @@ public class PackageDetails extends AppCompatActivity {
         //  URL=siteURL+"/GetAreaByUserForCollectionApp?contractorId="+contractorId+"&userId="+userId+"&entityId="+pref.getString("Entityids","").toString();
 
 
-
-        obreqs = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+        obreqs = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -185,7 +163,6 @@ public class PackageDetails extends AppCompatActivity {
                         try {
 
 
-
                             if (response.getString("status").toString().equals("True")) {
 
                                 packagedetails.clear();
@@ -193,12 +170,10 @@ public class PackageDetails extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), response.getString("message").toString(), Toast.LENGTH_SHORT).show();
 
                                 final JSONArray entityarray1 = response.getJSONArray("lstPackages");
-                                loadpackagedetails(entityarray1);
+                                loadPackageDetails(entityarray1);
 
                                 da.notifyDataSetChanged();
-                            }
-                            else
-                            {
+                            } else {
                                 Toast.makeText(getApplicationContext(), response.getString("message").toString(), Toast.LENGTH_SHORT).show();
                             }
 
@@ -218,7 +193,7 @@ public class PackageDetails extends AppCompatActivity {
 
                         spload.dismiss();
 
-                        Toast.makeText(getApplicationContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
 
                     }
@@ -232,23 +207,22 @@ public class PackageDetails extends AppCompatActivity {
 
     }
 
-    public void loadpackagedetails(JSONArray a)
-    {
+    public void loadPackageDetails(JSONArray a) {
         String str = "\u20B9";
 
         DecimalFormat format = new DecimalFormat();
         format.setDecimalSeparatorAlwaysShown(false);
 
-        if(a.length()>0) {
+        if (a.length() > 0) {
             try {
                 for (int i = 0; i < a.length(); i++) {
                     JSONObject e = (JSONObject) a.get(i);
 
                     HashMap<String, String> map = new HashMap<>();
 
-                    map.put("PkgId",e.getString("PkgId"));
+                    map.put("PkgId", e.getString("PkgId"));
                     map.put("PkgName", e.getString("PkgName"));
-                    map.put("Price",str+format.format(Double.parseDouble(e.getString("Price"))));
+                    map.put("Price", str + format.format(Double.parseDouble(e.getString("Price"))));
                     map.put("DeviceNo", e.getString("DeviceNo"));
                     map.put("MQNo", e.getString("MQNo"));
                     map.put("Ptype", e.getString("Ptype"));
@@ -263,26 +237,23 @@ public class PackageDetails extends AppCompatActivity {
 
     }
 
-
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
 
         finish();
     }
 
-    public void CallVolleysGetPackage(String a,HashMap<String,String> map,final int position)
-    {
+    public void CallVolleysGetPackage(String a, HashMap<String, String> map, final int position) {
         JsonObjectRequest obreqs;
 
         final SpotsDialog spload;
-        spload=new SpotsDialog(PackageDetails.this,R.style.Custom);
+        spload = new SpotsDialog(PackageDetails.this, R.style.Custom);
         spload.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         spload.setCancelable(true);
         spload.show();
 
 
-        obreqs = new JsonObjectRequest(Request.Method.POST,a,new JSONObject(map),
+        obreqs = new JsonObjectRequest(Request.Method.POST, a, new JSONObject(map),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -292,8 +263,7 @@ public class PackageDetails extends AppCompatActivity {
 
                         try {
 
-                            if (response.getString("status").equals("True"))
-                            {
+                            if (response.getString("status").equals("True")) {
                                 packagenames.add(" ---- Select Package ----- ");
 
                                 final JSONArray entityarray = response.getJSONArray("PackageInfoList");
@@ -306,7 +276,6 @@ public class PackageDetails extends AppCompatActivity {
                                 }
 
 
-
                                 LayoutInflater li = getLayoutInflater();
 
                                 View vs = li.inflate(R.layout.layout_add_customer_package, null);
@@ -315,7 +284,7 @@ public class PackageDetails extends AppCompatActivity {
                                 final EditText edtdno = (EditText) vs.findViewById(R.id.editText20);
                                 final EditText edtmq = (EditText) vs.findViewById(R.id.editText21);
 
-                                final CheckBox swbill=(CheckBox)vs.findViewById(R.id.checkBox);
+                                final CheckBox swbill = (CheckBox) vs.findViewById(R.id.checkBox);
 
                                 //sppackage.setVisibility(View.GONE);
                                 //edtmq.setVisibility(View.GONE);
@@ -347,11 +316,11 @@ public class PackageDetails extends AppCompatActivity {
                                             map.put("custId", custid);
                                             map.put("custpkgid", packagedetails.get(position).get("PkgId"));
                                             map.put("deviceNo", edtdno.getText().toString());
-                                            map.put("smartcardno",edtmq.getText().toString());
-                                            map.put("pkgId",packageids.get(sppackage.getSelectedItemPosition()-1));
-                                            map.put("Isgenertabill",String.valueOf(isGenerateBill));
+                                            map.put("smartcardno", edtmq.getText().toString());
+                                            map.put("pkgId", packageids.get(sppackage.getSelectedItemPosition() - 1));
+                                            map.put("Isgenertabill", String.valueOf(isGenerateBill));
 
-                                            Log.e("MAP:",map.toString());
+                                            Log.e("MAP:", map.toString());
 
                                             CallVolleys(URL, map);
                                         }
@@ -391,17 +360,13 @@ public class PackageDetails extends AppCompatActivity {
                                 });*/
 
                             }
-                        }
-                        catch (JSONException ex)
-                        {
-                            Log.e("JSONERROR:",ex.toString());
+                        } catch (JSONException ex) {
+                            Log.e("JSONERROR:", ex.toString());
 
                             //Toast.makeText(PackageDetails.this, "Error=="+ex, Toast.LENGTH_SHORT).show();
-                        }
+                        } catch (Exception e) {
 
-                        catch (Exception e) {
-
-                            Log.e("ERROR:",e.toString());
+                            Log.e("ERROR:", e.toString());
 
                             //Toast.makeText(getApplicationContext(), "error--" + e, Toast.LENGTH_LONG).show();
                         }
@@ -415,7 +380,7 @@ public class PackageDetails extends AppCompatActivity {
 
                         spload.dismiss();
 
-                        Toast.makeText(getApplicationContext(), "errorr++"+error.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "errorr++" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
 
                     }

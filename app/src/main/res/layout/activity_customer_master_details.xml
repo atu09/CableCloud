@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_300"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -129,7 +130,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
                     android:orientation="vertical"
                     android:paddingBottom="10dp">
 
@@ -137,9 +137,9 @@
                         android:id="@+id/card_view1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="5dp"
                         app:contentPadding="10dp">
 
                         <LinearLayout
@@ -176,9 +176,9 @@
                         android:id="@+id/card_view2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="5dp"
                         app:contentPadding="10dp">
 
                         <LinearLayout
@@ -215,9 +215,9 @@
                         android:id="@+id/card_view3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="5dp"
                         app:contentPadding="10dp">
 
                         <LinearLayout
@@ -254,9 +254,9 @@
                         android:id="@+id/card_view4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="5dp"
                         app:contentPadding="10dp">
 
                         <LinearLayout
@@ -293,9 +293,9 @@
                         android:id="@+id/card_view5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="5dp"
                         app:contentPadding="10dp">
 
                         <LinearLayout
@@ -332,9 +332,9 @@
                         android:id="@+id/card_view6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="5dp"
                         app:contentPadding="10dp">
 
                         <LinearLayout
@@ -371,9 +371,9 @@
                         android:id="@+id/card_view7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="5dp"
                         app:contentPadding="10dp">
 
                         <LinearLayout
@@ -410,9 +410,9 @@
                         android:id="@+id/card_view8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="5dp"
                         app:contentPadding="10dp">
 
                         <LinearLayout
