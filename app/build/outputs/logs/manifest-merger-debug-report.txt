@@ -29,6 +29,9 @@ MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Us
 MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/4508e64ca2b0a6194c268a1c97737ce1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/f50fc2c1c73455cd67972e84a36c9456/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/955774c41a5451c19f4deae212729db3/AndroidManifest.xml:17:1-28:12
+MERGED from [com.github.gcacace:signature-pad:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/signature-pad-1.2.1.aar/35d98030a2f958cea3b77f81bb1cc188/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.databinding:adapters:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/adapters-1.2.1.aar/42b7f138a67c396bdd6dd6a09ed9031e/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.databinding:library:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/library-1.2.1.aar/0ea8f3a30fbee431eecf522941cd034c/AndroidManifest.xml:17:1-26:12
 MERGED from [com.joanzapata.iconify:android-iconify-fontawesome:2.2.2] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/android-iconify-fontawesome-2.2.2.aar/0d66f2ee6d354aeafb3e687fd62279ad/AndroidManifest.xml:2:1-8:12
 MERGED from [com.joanzapata.iconify:android-iconify:2.2.2] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/android-iconify-2.2.2.aar/11046ab6208b004405d73a1d43da717e/AndroidManifest.xml:2:1-8:12
 MERGED from [com.android.support:transition:26.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/60535f4b2ef62e64403d1c44dfa544e5/AndroidManifest.xml:17:1-28:12
@@ -36,9 +39,7 @@ MERGED from [com.android.support:support-v4:26.1.0] /Users/atirek.pothiwala/.gra
 MERGED from [com.android.support:cardview-v7:26.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/15791d06b3f487019e4c379981dc74de/AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/bd1bc4fe024a1c38ae2ea993c54adab8/AndroidManifest.xml:2:1-13:12
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/15b5336077fd0f95e1cff7b16fde1bb1/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.gcacace:signature-pad:1.2.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/signature-pad-1.2.0.aar/00dbad335f841085e9d1f216566de43c/AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.d-max:spots-dialog:0.4] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/spots-dialog-0.4.aar/299434f861190e77dd4a1af41d401230/AndroidManifest.xml:2:1-14:12
-MERGED from [com.skyfishjy.ripplebackground:library:1.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/library-1.0.1.aar/0da80c3d119008d427613fcde6002ade/AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:multidex:1.0.3] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/869e161f4a6ea949eec7ebac16b5f667/AndroidManifest.xml:17:1-22:12
 MERGED from [com.wang.avi:library:2.1.3] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/library-2.1.3.aar/8fca552451593170a8549ac7543d0746/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/3fa1268bae6ebae9808a9f6cc001b7c4/AndroidManifest.xml:17:1-28:12
@@ -214,6 +215,8 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /Users/
 MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/f50fc2c1c73455cd67972e84a36c9456/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/955774c41a5451c19f4deae212729db3/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/955774c41a5451c19f4deae212729db3/AndroidManifest.xml:22:5-26:19
+MERGED from [com.github.gcacace:signature-pad:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/signature-pad-1.2.1.aar/35d98030a2f958cea3b77f81bb1cc188/AndroidManifest.xml:11:5-20
+MERGED from [com.github.gcacace:signature-pad:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/signature-pad-1.2.1.aar/35d98030a2f958cea3b77f81bb1cc188/AndroidManifest.xml:11:5-20
 MERGED from [com.android.support:transition:26.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/60535f4b2ef62e64403d1c44dfa544e5/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:transition:26.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/60535f4b2ef62e64403d1c44dfa544e5/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-v4:26.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/02895d018c351f8fcd39f981eacaba3e/AndroidManifest.xml:25:5-29:19
@@ -224,12 +227,8 @@ MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/atirek.pothi
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/bd1bc4fe024a1c38ae2ea993c54adab8/AndroidManifest.xml:7:5-11:19
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/15b5336077fd0f95e1cff7b16fde1bb1/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/15b5336077fd0f95e1cff7b16fde1bb1/AndroidManifest.xml:9:5-20
-MERGED from [com.github.gcacace:signature-pad:1.2.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/signature-pad-1.2.0.aar/00dbad335f841085e9d1f216566de43c/AndroidManifest.xml:11:5-20
-MERGED from [com.github.gcacace:signature-pad:1.2.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/signature-pad-1.2.0.aar/00dbad335f841085e9d1f216566de43c/AndroidManifest.xml:11:5-20
 MERGED from [com.github.d-max:spots-dialog:0.4] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/spots-dialog-0.4.aar/299434f861190e77dd4a1af41d401230/AndroidManifest.xml:12:5-20
 MERGED from [com.github.d-max:spots-dialog:0.4] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/spots-dialog-0.4.aar/299434f861190e77dd4a1af41d401230/AndroidManifest.xml:12:5-20
-MERGED from [com.skyfishjy.ripplebackground:library:1.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/library-1.0.1.aar/0da80c3d119008d427613fcde6002ade/AndroidManifest.xml:11:5-20
-MERGED from [com.skyfishjy.ripplebackground:library:1.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/library-1.0.1.aar/0da80c3d119008d427613fcde6002ade/AndroidManifest.xml:11:5-20
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/3fa1268bae6ebae9808a9f6cc001b7c4/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/3fa1268bae6ebae9808a9f6cc001b7c4/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ea8e7d9e6bdd03cbb095ab91fb97b1c6/AndroidManifest.xml:22:5-26:19
@@ -704,6 +703,12 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /Users/
 MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/f50fc2c1c73455cd67972e84a36c9456/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/955774c41a5451c19f4deae212729db3/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/955774c41a5451c19f4deae212729db3/AndroidManifest.xml:20:5-44
+MERGED from [com.github.gcacace:signature-pad:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/signature-pad-1.2.1.aar/35d98030a2f958cea3b77f81bb1cc188/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.gcacace:signature-pad:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/signature-pad-1.2.1.aar/35d98030a2f958cea3b77f81bb1cc188/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.databinding:adapters:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/adapters-1.2.1.aar/42b7f138a67c396bdd6dd6a09ed9031e/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:adapters:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/adapters-1.2.1.aar/42b7f138a67c396bdd6dd6a09ed9031e/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/library-1.2.1.aar/0ea8f3a30fbee431eecf522941cd034c/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.2.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/library-1.2.1.aar/0ea8f3a30fbee431eecf522941cd034c/AndroidManifest.xml:22:5-24:41
 MERGED from [com.joanzapata.iconify:android-iconify-fontawesome:2.2.2] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/android-iconify-fontawesome-2.2.2.aar/0d66f2ee6d354aeafb3e687fd62279ad/AndroidManifest.xml:6:5-43
 MERGED from [com.joanzapata.iconify:android-iconify-fontawesome:2.2.2] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/android-iconify-fontawesome-2.2.2.aar/0d66f2ee6d354aeafb3e687fd62279ad/AndroidManifest.xml:6:5-43
 MERGED from [com.joanzapata.iconify:android-iconify:2.2.2] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/android-iconify-2.2.2.aar/11046ab6208b004405d73a1d43da717e/AndroidManifest.xml:6:5-43
@@ -718,12 +723,8 @@ MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/atirek.pothi
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/bd1bc4fe024a1c38ae2ea993c54adab8/AndroidManifest.xml:5:5-43
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/15b5336077fd0f95e1cff7b16fde1bb1/AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/15b5336077fd0f95e1cff7b16fde1bb1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.gcacace:signature-pad:1.2.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/signature-pad-1.2.0.aar/00dbad335f841085e9d1f216566de43c/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.gcacace:signature-pad:1.2.0] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/signature-pad-1.2.0.aar/00dbad335f841085e9d1f216566de43c/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.d-max:spots-dialog:0.4] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/spots-dialog-0.4.aar/299434f861190e77dd4a1af41d401230/AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.d-max:spots-dialog:0.4] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/spots-dialog-0.4.aar/299434f861190e77dd4a1af41d401230/AndroidManifest.xml:8:5-10:41
-MERGED from [com.skyfishjy.ripplebackground:library:1.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/library-1.0.1.aar/0da80c3d119008d427613fcde6002ade/AndroidManifest.xml:7:5-9:41
-MERGED from [com.skyfishjy.ripplebackground:library:1.0.1] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/library-1.0.1.aar/0da80c3d119008d427613fcde6002ade/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:multidex:1.0.3] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/869e161f4a6ea949eec7ebac16b5f667/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:multidex:1.0.3] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/869e161f4a6ea949eec7ebac16b5f667/AndroidManifest.xml:20:5-43
 MERGED from [com.wang.avi:library:2.1.3] /Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/library-2.1.3.aar/8fca552451593170a8549ac7543d0746/AndroidManifest.xml:7:5-9:41

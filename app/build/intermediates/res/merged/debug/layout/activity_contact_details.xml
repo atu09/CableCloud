@@ -41,7 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="A/C No."
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -49,7 +49,7 @@
                         android:id="@+id/textView34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1234567890"
+                        android:text="-"
                         android:textColor="#000"
                         android:textSize="@dimen/textsize_16" />
                 </LinearLayout>
@@ -71,7 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Account Entity"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -79,7 +79,7 @@
                         android:id="@+id/textView36"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kiran Mehta"
+                        android:text="-"
                         android:textColor="#000"
                         android:textSize="@dimen/textsize_16" />
 
@@ -113,7 +113,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="CAF No."
-                            android:textColor="#555"
+                            android:textColor="#000"
                             android:textSize="@dimen/textsize_14.0"
                             android:textStyle="bold" />
 
@@ -121,7 +121,7 @@
                             android:id="@+id/textView51"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1234567890"
+                            android:text="-"
                             android:textColor="#000"
                             android:textSize="@dimen/textsize_16" />
 
@@ -144,7 +144,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Discount in Next Bill"
-                            android:textColor="#555"
+                            android:textColor="#000"
                             android:textSize="@dimen/textsize_14.0"
                             android:textStyle="bold" />
 
@@ -152,7 +152,7 @@
                             android:id="@+id/textView53"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0.00"
+                            android:text="-"
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:textColor="#000"
                             android:textSize="@dimen/textsize_16" />
@@ -173,7 +173,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Next Bill Month"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -182,7 +182,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
-                        android:text="September 2016"
+                        android:text="-"
                         android:textColor="#000"
                         android:textSize="@dimen/textsize_16" />
 
@@ -199,7 +199,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Outstanding Amount"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -208,7 +208,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
-                        android:text="850.00"
+                        android:text="0"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/textsize_20"
                         android:textStyle="bold" />
@@ -240,7 +240,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Account Status"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -267,7 +267,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pay Term"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -299,7 +299,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Conn.Start Date"
-                            android:textColor="#555"
+                            android:textColor="#000"
                             android:textSize="@dimen/textsize_14.0"
                             android:textStyle="bold" />
 
@@ -307,7 +307,7 @@
                             android:id="@+id/textView60"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="110-10-2003"
+                            android:text="-"
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:textColor="#000"
                             android:textSize="@dimen/textsize_16" />
@@ -331,7 +331,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Conn. End Date"
-                            android:textColor="#555"
+                            android:textColor="#000"
                             android:textSize="@dimen/textsize_14.0"
                             android:textStyle="bold" />
 
@@ -339,7 +339,7 @@
                             android:id="@+id/textView62"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=" - "
+                            android:text="-"
                             android:textColor="#000"
                             android:textSize="@dimen/textsize_16" />
 
@@ -376,7 +376,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Phone"
-                            android:textColor="#555"
+                            android:textColor="#000"
                             android:textSize="@dimen/textsize_14.0"
                             android:textStyle="bold" />
 
@@ -384,7 +384,7 @@
                             android:id="@+id/textView40"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1234567890"
+                            android:text="-"
                             android:textColor="#000"
                             android:textSize="@dimen/textsize_16" />
 
@@ -407,7 +407,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Email"
-                            android:textColor="#555"
+                            android:textColor="#000"
                             android:textSize="@dimen/textsize_14.0"
                             android:textStyle="bold" />
 
@@ -417,7 +417,7 @@
                             android:layout_height="wrap_content"
                             android:maxLines="2"
                             android:singleLine="false"
-                            android:text="abc@example.com"
+                            android:text="-"
                             android:textColor="#000"
                             android:textSize="@dimen/textsize_16" />
 
@@ -436,7 +436,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Area"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -444,7 +444,7 @@
                         android:id="@+id/textView44"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="SONERIMAHEL, NANOBHAIWAD"
+                        android:text="-"
                         android:textColor="#000"
                         android:textSize="@dimen/textsize_16" />
 
@@ -461,7 +461,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Address"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -469,7 +469,7 @@
                         android:id="@+id/textView46"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="SONERIMAHEL, NANOBHAIWAD, Vadodara - 390019"
+                        android:text="-"
                         android:textColor="#000"
                         android:textSize="@dimen/textsize_16" />
 
@@ -486,7 +486,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Birth Date"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -494,7 +494,7 @@
                         android:id="@+id/textView48"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="10-10-1991"
+                        android:text="-"
                         android:textColor="#000"
                         android:textSize="@dimen/textsize_16" />
 
@@ -517,6 +517,7 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:gravity="center"
+                    android:textColor="#000"
                     android:text="Show Customer Details"
                     android:textStyle="bold" />
 

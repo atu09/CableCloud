@@ -417,7 +417,7 @@
                                         android:layout_height="wrap_content"
                                         android:text="Last Bill"
                                         android:textColor="#000"
-                                        android:textSize="12sp" />
+                                        android:textSize="14sp" />
 
                                     <TextView
                                         android:id="@+id/textView43"
@@ -442,7 +442,7 @@
                                         android:layout_height="wrap_content"
                                         android:text="Current Bill"
                                         android:textColor="#000"
-                                        android:textSize="12sp" />
+                                        android:textSize="14sp" />
 
                                     <TextView
                                         android:id="@+id/textView47"
@@ -484,7 +484,7 @@
                                         android:layout_height="wrap_content"
                                         android:text="Last Payment"
                                         android:textColor="#000"
-                                        android:textSize="12sp" />
+                                        android:textSize="14sp" />
 
                                     <TextView
                                         android:id="@+id/textView45"
