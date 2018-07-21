@@ -34,7 +34,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginEnd="50dp"
-                android:layout_marginTop="5dp"
                 android:background="@color/colorPrimary" />
 
             <LinearLayout
@@ -46,13 +45,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView42"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="Today's Collection"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
@@ -60,10 +59,10 @@
 
                     <TextView
                         android:id="@+id/textView43"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:text="1000"
+                        android:gravity="end"
+                        android:text="0"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textSize="@dimen/textsize_14.0"
@@ -73,13 +72,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView46"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="Total Collection"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
@@ -87,10 +87,10 @@
 
                     <TextView
                         android:id="@+id/textView47"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:text="600"
+                        android:gravity="end"
+                        android:text="0"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textSize="@dimen/textsize_14.0"
@@ -101,13 +101,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView44"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="Area Outstanding"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
@@ -115,10 +116,10 @@
 
                     <TextView
                         android:id="@+id/textView45"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:text="1000"
+                        android:gravity="end"
+                        android:text="0"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textSize="@dimen/textsize_14.0"

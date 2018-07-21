@@ -41,7 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="A/C No."
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -71,7 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Account Entity"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -113,7 +113,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="CAF No."
-                            android:textColor="#555"
+                            android:textColor="#000"
                             android:textSize="@dimen/textsize_14.0"
                             android:textStyle="bold" />
 
@@ -144,7 +144,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Discount in Next Bill"
-                            android:textColor="#555"
+                            android:textColor="#000"
                             android:textSize="@dimen/textsize_14.0"
                             android:textStyle="bold" />
 
@@ -173,7 +173,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Next Bill Month"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -199,7 +199,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Outstanding Amount"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -240,7 +240,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Account Status"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -267,7 +267,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pay Term"
-                        android:textColor="#555"
+                        android:textColor="#000"
                         android:textSize="@dimen/textsize_14.0"
                         android:textStyle="bold" />
 
@@ -299,7 +299,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Conn.Start Date"
-                            android:textColor="#555"
+                            android:textColor="#000"
                             android:textSize="@dimen/textsize_14.0"
                             android:textStyle="bold" />
 
@@ -331,7 +331,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Conn. End Date"
-                            android:textColor="#555"
+                            android:textColor="#000"
                             android:textSize="@dimen/textsize_14.0"
                             android:textStyle="bold" />
 
@@ -517,6 +517,7 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:gravity="center"
+                    android:textColor="#000"
                     android:text="Show Customer Details"
                     android:textStyle="bold" />
 
