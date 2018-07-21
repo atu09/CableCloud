@@ -56,9 +56,7 @@ public class Payment_details extends AppCompatActivity {
         lvpay.setAdapter(da);
 
         if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-
-            Transition transitionSlideRight =
-                    TransitionInflater.from(Payment_details.this).inflateTransition(R.transition.slide_right);
+            Transition transitionSlideRight = TransitionInflater.from(Payment_details.this).inflateTransition(R.transition.slide_right);
             getWindow().setEnterTransition(transitionSlideRight);
         }
 
