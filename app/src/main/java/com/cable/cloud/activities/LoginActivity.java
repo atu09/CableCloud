@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         //loader = (RippleBackground) findViewById(R.id.loader);
         btnLogin = (Button) findViewById(R.id.btnlogin);
 
-        etUsername.setText("demo123");
+        etUsername.setText("demo");
         etPassword.setText("demo123");
         etOpCode.setText("demo");
 
