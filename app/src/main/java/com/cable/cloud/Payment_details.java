@@ -21,7 +21,7 @@ public class Payment_details extends AppCompatActivity {
 
     ListView lvpay;
 
-    ArrayList<HashMap<String,String>> paydetails=new ArrayList<>();
+    ArrayList<HashMap<String, String>> paydetails = new ArrayList<>();
 
     String title;
 
@@ -30,11 +30,11 @@ public class Payment_details extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_details);
 
-        Intent j=getIntent();
-        title=j.getExtras().getString("title");
-        paydetails=(ArrayList<HashMap<String, String>>)j.getSerializableExtra("paymnetdetails");
+        Intent j = getIntent();
+        title = j.getExtras().getString("title");
+        paydetails = (ArrayList<HashMap<String, String>>) j.getSerializableExtra("paymnetdetails");
 
-        lvpay=(ListView)findViewById(R.id.listView4);
+        lvpay = (ListView) findViewById(R.id.listView4);
 
         final Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
@@ -46,17 +46,13 @@ public class Payment_details extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(getApplicationContext(), CustomerMasterDetailsActivity.class);
-                //startActivity(i);
-
                 onBackPressed();
 
             }
         });
 
 
-
-        final SimpleAdapter da=new SimpleAdapter(Payment_details.this,paydetails,R.layout.layout_payment_details,new String[]{"Receiptno","ReceiptDate","BillMonth","PaidAmount","PayMode"},new int[]{R.id.textView34,R.id.textView36,R.id.textView38,R.id.textView40,R.id.textView42});
+        final SimpleAdapter da = new SimpleAdapter(Payment_details.this, paydetails, R.layout.layout_payment_details, new String[]{"Receiptno", "ReceiptDate", "BillMonth", "PaidAmount", "PayMode"}, new int[]{R.id.textView34, R.id.textView36, R.id.textView38, R.id.textView40, R.id.textView42});
         lvpay.setAdapter(da);
 
         if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
@@ -70,8 +66,7 @@ public class Payment_details extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
 
         finish();
     }
