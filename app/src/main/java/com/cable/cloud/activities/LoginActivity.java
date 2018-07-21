@@ -30,7 +30,6 @@ import com.cable.cloud.helpers.DBHelper;
 import com.cable.cloud.helpers.MyApplication;
 import com.cable.cloud.R;
 import com.cable.cloud.helpers.Utils;
-import com.skyfishjy.library.RippleBackground;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
