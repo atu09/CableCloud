@@ -25,26 +25,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
-                android:textSize="@dimen/textsize_14.0" />
+                android:text="Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/textsize_16" />
 
             <TextView
                 android:id="@+id/textView96"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
                 android:maxLines="5"
-                android:singleLine="false"
+                android:text="Comment"
                 android:textColor="#000"
-                android:textSize="@dimen/textsize_16"
-                android:textStyle="bold" />
+                android:textSize="@dimen/textsize_14.0" />
 
             <TextView
                 android:id="@+id/textView97"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="end"
+                android:text="Date"
                 android:textColor="@color/grey_600"
-                android:textSize="12sp" />
+                android:textSize="@dimen/textsize_14" />
 
         </LinearLayout>
 

@@ -5,5 +5,5 @@ package com.cable.cloud;
  */
 public interface OnCountAssignment {
 
-    public void OnCountAssign(int acount,int rcount,int ccount,int comcount,int custcomcount);
+    void OnCountAssign(int acount,int rcount,int ccount,int comcount,int custcomcount);
 }

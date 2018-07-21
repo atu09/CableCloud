@@ -19,7 +19,7 @@ public class Remider_details extends AppCompatActivity {
 
     String title;
 
-    ArrayList<HashMap<String,String>> reminderdetails=new ArrayList<>();
+    ArrayList<HashMap<String, String>> reminderdetails = new ArrayList<>();
 
 
     @Override
@@ -27,11 +27,11 @@ public class Remider_details extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_remider_details);
 
-        lvremider=(ListView)findViewById(R.id.listView4);
+        lvremider = (ListView) findViewById(R.id.listView4);
 
-        Intent j=getIntent();
-        title=j.getExtras().getString("title");
-        reminderdetails=(ArrayList<HashMap<String, String>>)j.getSerializableExtra("remiderdetails");
+        Intent j = getIntent();
+        title = j.getExtras().getString("title");
+        reminderdetails = (ArrayList<HashMap<String, String>>) j.getSerializableExtra("remiderdetails");
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
@@ -50,13 +50,12 @@ public class Remider_details extends AppCompatActivity {
             }
         });
 
-        final SimpleAdapter da=new SimpleAdapter(Remider_details.this,reminderdetails,R.layout.layout_remiders_details,new String[]{"ReminderDate","Status","Note"},new int[]{R.id.textView88,R.id.textView89,R.id.textView90});
+        final SimpleAdapter da = new SimpleAdapter(Remider_details.this, reminderdetails, R.layout.layout_remiders_details, new String[]{"ReminderDate", "Status", "Note"}, new int[]{R.id.textView88, R.id.textView89, R.id.textView90});
         lvremider.setAdapter(da);
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
 
         finish();
     }

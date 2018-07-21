@@ -4280,8 +4280,8 @@ containing a value of this type.
         public static final int textView8=0x7f1101c7;
         public static final int textView80=0x7f110131;
         public static final int textView82=0x7f1101ed;
-        public static final int textView83=0x7f1101ee;
-        public static final int textView84=0x7f1101ef;
+        public static final int textView83=0x7f1101ef;
+        public static final int textView84=0x7f1101ee;
         public static final int textView85=0x7f11014f;
         public static final int textView86=0x7f1100bd;
         public static final int textView87=0x7f1100c0;
