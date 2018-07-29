@@ -454,12 +454,12 @@ action#android.net.wifi.WIFI_STATE_CHANGED
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:197:17-78
 	android:name
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:197:25-75
-service#com.cable.cloud.TestLocationService
+service#com.cable.cloud.helpers.LocationService
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:201:9-203:55
 	android:process
 		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:203:13-52
 	android:name
-		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:202:13-63
+		ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:202:13-67
 protected-broadcast
 ADDED from /Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/AndroidManifest.xml:205:9-83
 	android:name

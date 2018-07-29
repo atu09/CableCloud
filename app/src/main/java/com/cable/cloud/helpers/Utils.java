@@ -16,6 +16,7 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextPaint;
@@ -33,6 +34,13 @@ import android.widget.Toast;
 import com.cable.cloud.BuildConfig;
 import com.cable.cloud.R;
 import com.wang.avi.AVLoadingIndicatorView;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
 
 /**
  * Created by atirek.pothiwala on 29/03/18.
@@ -202,4 +210,36 @@ public class Utils {
         return loaderDialog;
     }
 
+    public static boolean isExpired(String date) {
+
+        try {
+
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+
+            Calendar currentCalendar = Calendar.getInstance(TimeZone.getDefault(), Locale.getDefault());
+            Date currentDate = format.parse(format.format(new Date()));
+            currentCalendar.setTime(currentDate);
+
+            Calendar targetCalendar = Calendar.getInstance(TimeZone.getDefault(), Locale.getDefault());
+            Date targetDate = format.parse(date);
+            targetCalendar.setTime(targetDate);
+
+            return currentCalendar.after(targetCalendar);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return true;
+    }
+
+    public static AlertDialog.Builder popEmptyDialog(Context context, String title, String message) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setCancelable(false);
+
+        return builder;
+    }
 }
