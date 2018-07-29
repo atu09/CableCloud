@@ -11,14 +11,11 @@ import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
@@ -77,9 +74,11 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         loader = (RippleBackground) findViewById(R.id.loader);
         btnLogin = (Button) findViewById(R.id.btnlogin);
 
+/*
         etUsername.setText("demo");
         etPassword.setText("demo123");
         etOpCode.setText("demo");
+*/
 
     }
 
