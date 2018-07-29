@@ -30,6 +30,7 @@ import com.cable.cloud.helpers.DBHelper;
 import com.cable.cloud.helpers.MyApplication;
 import com.cable.cloud.R;
 import com.cable.cloud.helpers.Utils;
+import com.skyfishjy.library.RippleBackground;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -48,14 +49,13 @@ import java.io.InputStreamReader;
 public class LoginActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     private static final String LOGIN_PREF = "LoginPref";
-    //String Url = "http://cableplus.in/service.asmx/GetContractorDetails?OPCode=";
-    String Url = "http://master.cable-cloud.com/service.asmx/GetContractorDetails?OPCode=";//new base url
+    String Url = "http://master.cable-cloud.com/service.asmx/GetContractorDetails?OPCode=";
 
     EditText etUsername, etPassword, etOpCode;
     Button btnLogin;
 
     String token = "-";
-    //RippleBackground loader;
+    RippleBackground loader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         etUsername = (EditText) findViewById(R.id.editText);
         etPassword = (EditText) findViewById(R.id.edtPassword);
         etOpCode = (EditText) findViewById(R.id.OpCode);
-        //loader = (RippleBackground) findViewById(R.id.loader);
+        loader = (RippleBackground) findViewById(R.id.loader);
         btnLogin = (Button) findViewById(R.id.btnlogin);
 
         etUsername.setText("demo");
@@ -129,22 +129,18 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         super.onResume();
         MyApplication.getInstance().setConnectivityListener(this);
 
-/*
         if (!loader.isRippleAnimationRunning()){
             loader.startRippleAnimation();
         }
-*/
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-/*
         if (loader.isRippleAnimationRunning()){
             loader.stopRippleAnimation();
         }
-*/
     }
 
     @Override

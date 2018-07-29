@@ -199,7 +199,7 @@
         </receiver>
 
         <service
-            android:name="com.cable.cloud.TestLocationService"
+            android:name="com.cable.cloud.helpers.LocationService"
             android:process=":testlocation_service" />
 
         <protected-broadcast android:name="android.location.GPS_ENABLED_CHANGE" />

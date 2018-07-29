@@ -53,7 +53,7 @@ import com.android.volley.toolbox.Volley;
 import com.cable.cloud.helpers.DBHelper;
 import com.cable.cloud.OnCountAssignment;
 import com.cable.cloud.R;
-import com.cable.cloud.TestLocationService;
+import com.cable.cloud.helpers.LocationService;
 import com.cable.cloud.fragments.CollectionFragment;
 import com.cable.cloud.fragments.ComplainFragment;
 import com.cable.cloud.fragments.CustomerFragment;
@@ -543,7 +543,7 @@ public class DashBoardActivity extends AppCompatActivity implements OnCountAssig
         if (result == PackageManager.PERMISSION_DENIED) {
             ActivityCompat.requestPermissions(DashBoardActivity.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         } else if (result == PackageManager.PERMISSION_GRANTED) {
-            Intent service = new Intent(DashBoardActivity.this, TestLocationService.class);
+            Intent service = new Intent(DashBoardActivity.this, LocationService.class);
             startService(service);
         }
     }
@@ -559,7 +559,7 @@ public class DashBoardActivity extends AppCompatActivity implements OnCountAssig
                             || grantResults[4] == PackageManager.PERMISSION_DENIED)*/ {
                         Toast.makeText(this, "Permission is not Granted to Perform Operation..!!", Toast.LENGTH_LONG).show();
                     } else {
-                        Intent service = new Intent(DashBoardActivity.this, TestLocationService.class);
+                        Intent service = new Intent(DashBoardActivity.this, LocationService.class);
                         startService(service);
                     }
                 }
@@ -777,7 +777,7 @@ public class DashBoardActivity extends AppCompatActivity implements OnCountAssig
                                 editor.clear().apply();
                                 dbHelper.ClearAllData();
 
-                                stopService(new Intent(getApplicationContext(), TestLocationService.class));
+                                stopService(new Intent(getApplicationContext(), LocationService.class));
                                 Utils.restartApp(getApplicationContext());
                             }
 
