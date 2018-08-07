@@ -68,6 +68,10 @@
         "source": "/Users/atirek.pothiwala/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/11f1516c32b45fbf06ae3ef784711076/res/layout/design_text_input_password_icon.xml"
     },
     {
+        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/activity_login.xml"
+    },
+    {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/activity_package_details.xml",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/activity_package_details.xml"
     },
@@ -590,10 +594,6 @@
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/layout_sms_design.xml",
         "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/layout_sms_design.xml"
-    },
-    {
-        "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/activity_login_revised.xml",
-        "source": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/src/main/res/layout/activity_login_revised.xml"
     },
     {
         "merged": "/Users/atirek.pothiwala/Desktop/Android/Freelance/CableCloud/app/build/intermediates/res/merged/debug/layout/layout_outstanding_update.xml",

@@ -14,7 +14,6 @@
     <uses-permission
         android:name="android.permission.WRITE_SECURE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -31,7 +30,7 @@
     <uses-permission android:name="com.cable.cloud.permission.C2D_MESSAGE" />
 
     <application
-        android:name="com.cable.cloud.helpers.MyApplication"
+        android:name=".helpers.MyApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -44,18 +43,17 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="com.cable.cloud.activities.LoginActivity"
+            android:name=".activities.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
-
         <activity
-            android:name="com.cable.cloud.activities.DashBoardActivity"
+            android:name=".activities.DashBoardActivity"
             android:label="@string/title_activity_dash_board"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.cable.cloud.activities.CustomerListActivity"
-            android:parentActivityName="com.cable.cloud.activities.DashBoardActivity"
+            android:name=".activities.CustomerListActivity"
+            android:parentActivityName=".activities.DashBoardActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -63,7 +61,7 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name="com.cable.cloud.activities.CustomerOnlineDetailsActivity"
+            android:name=".activities.CustomerOnlineDetailsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -71,31 +69,27 @@
                 android:value="com.cable.cloud.activities.CustomerListActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.activities.TransactionStatusActivity"
+            android:name=".activities.TransactionStatusActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
-
         <activity
-            android:name="com.cable.cloud.activities.CustomerSignatureActivity"
+            android:name=".activities.CustomerSignatureActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cable.cloud.activities.CustomerOnlineDetailsActivity" />
         </activity>
-
         <activity
-            android:name="com.cable.cloud.activities.CollectionAreaActivity"
+            android:name=".activities.CollectionAreaActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
-
         <activity
-            android:name="com.cable.cloud.activities.CollectionCustomerDetailsActivity"
+            android:name=".activities.CollectionCustomerDetailsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -106,7 +100,7 @@
                 android:value="com.cable.cloud.activities.CollectionAreaActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.ComplainDetails"
+            android:name=".ComplainDetails"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -114,7 +108,7 @@
                 android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.SearchWithCustomerListInComplains"
+            android:name=".SearchWithCustomerListInComplains"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -125,7 +119,7 @@
                 android:value="com.cable.cloud.activities.AreaListInCustomersActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.ComplainListviaCustomerActivity"
+            android:name=".ComplainListviaCustomerActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -133,7 +127,7 @@
                 android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.activities.AreaListInCustomersActivity"
+            android:name=".activities.AreaListInCustomersActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -141,7 +135,7 @@
                 android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.activities.CustomerMasterDetailsActivity"
+            android:name=".activities.CustomerMasterDetailsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
             <meta-data
@@ -149,7 +143,7 @@
                 android:value="com.cable.cloud.activities.AreaListInCustomersActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.activities.SmsLogActivity"
+            android:name=".activities.SmsLogActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -157,7 +151,7 @@
                 android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.Bill_details"
+            android:name=".Bill_details"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -165,7 +159,7 @@
                 android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.PackageDetails"
+            android:name=".PackageDetails"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -173,7 +167,7 @@
                 android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.Contact_details"
+            android:name=".Contact_details"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -181,7 +175,7 @@
                 android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.Payment_details"
+            android:name=".Payment_details"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -189,7 +183,7 @@
                 android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
 
-        <receiver android:name="com.cable.cloud.helpers.ConnectivityReceiver">
+        <receiver android:name=".helpers.ConnectivityReceiver">
             <intent-filter>
                 <action
                     android:name="android.net.conn.CONNECTIVITY_CHANGE"
@@ -199,17 +193,17 @@
         </receiver>
 
         <service
-            android:name="com.cable.cloud.helpers.LocationService"
+            android:name=".helpers.LocationService"
             android:process=":testlocation_service" />
 
         <protected-broadcast android:name="android.location.GPS_ENABLED_CHANGE" />
 
         <activity
-            android:name="com.cable.cloud.activities.NoConnectionActivity"
+            android:name=".activities.NoConnectionActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.cable.cloud.AddCustomer_1"
+            android:name=".AddCustomer_1"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -217,7 +211,7 @@
                 android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.AddCustomer_2"
+            android:name=".AddCustomer_2"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -225,7 +219,7 @@
                 android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.AddCustomer_4"
+            android:name=".AddCustomer_4"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -233,7 +227,7 @@
                 android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.AddCustomer_3"
+            android:name=".AddCustomer_3"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -241,7 +235,7 @@
                 android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.Remider_details"
+            android:name=".Remider_details"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -249,7 +243,7 @@
                 android:value="com.cable.cloud.activities.CustomerMasterDetailsActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.Attachment_details"
+            android:name=".Attachment_details"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
@@ -262,57 +256,55 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.cable.cloud.activities.MapsActivity"
+            android:name=".activities.MapsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cable.cloud.activities.DashBoardActivity" />
         </activity>
         <activity
-            android:name="com.cable.cloud.FullImageActivity"
+            android:name=".FullImageActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
 
-        <service android:name="com.cable.cloud.helpers.MyFirebaseMessagingService">
+        <service android:name=".helpers.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.cable.cloud.helpers.MyFirebaseInstanceIDService">
+        <service android:name=".helpers.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
         <activity
-            android:name="com.cable.cloud.Comments_List_Activity"
+            android:name=".Comments_List_Activity"
             android:allowTaskReparenting="true"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
-
         <activity
-            android:name="com.cable.cloud.ReminderListActivity"
+            android:name=".ReminderListActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.cable.cloud.AlertListActivity"
+            android:name=".AlertListActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.cable.cloud.activities.SyncDataActivity"
+            android:name=".activities.SyncDataActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.cable.cloud.activities.CustomerOfflineDetailsActivity"
+            android:name=".activities.CustomerOfflineDetailsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
 
         <receiver
-            android:name="com.cable.cloud.helpers.NetworkChangeReceiver"
+            android:name=".helpers.NetworkChangeReceiver"
             android:label="NetworkChangeReceiver">
             <intent-filter>
                 <action
@@ -323,25 +315,25 @@
         </receiver>
 
         <activity
-            android:name="com.cable.cloud.ComplainSignatureActivity"
+            android:name=".ComplainSignatureActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.cable.cloud.Map_User_Tracking"
+            android:name=".Map_User_Tracking"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.cable.cloud.CustomerCommentList"
+            android:name=".CustomerCommentList"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
-
-        <activity android:name="com.cable.cloud.activities.SplashActivity">
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

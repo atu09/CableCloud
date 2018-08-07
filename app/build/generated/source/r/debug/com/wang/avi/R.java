@@ -8,12 +8,12 @@ package com.wang.avi;
 
 public final class R {
     public static final class attr {
-        public static final int indicatorColor = 0x7f010009;
-        public static final int indicatorName = 0x7f010008;
-        public static final int maxHeight = 0x7f010007;
-        public static final int maxWidth = 0x7f010005;
-        public static final int minHeight = 0x7f010006;
-        public static final int minWidth = 0x7f010004;
+        public static final int indicatorColor = 0x7f010042;
+        public static final int indicatorName = 0x7f010041;
+        public static final int maxHeight = 0x7f010040;
+        public static final int maxWidth = 0x7f01003e;
+        public static final int minHeight = 0x7f01003f;
+        public static final int minWidth = 0x7f01003d;
     }
     public static final class string {
         public static final int app_name = 0x7f0a0035;
@@ -24,7 +24,7 @@ public final class R {
         public static final int AVLoadingIndicatorView_Small = 0x7f0c00af;
     }
     public static final class styleable {
-        public static final int[] AVLoadingIndicatorView = { 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009 };
+        public static final int[] AVLoadingIndicatorView = { 0x7f01003d, 0x7f01003e, 0x7f01003f, 0x7f010040, 0x7f010041, 0x7f010042 };
         public static final int AVLoadingIndicatorView_minWidth = 0;
         public static final int AVLoadingIndicatorView_maxWidth = 1;
         public static final int AVLoadingIndicatorView_minHeight = 2;

@@ -49,8 +49,8 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
 
-                if (Utils.isExpired("2018-08-09")) {
-                    Utils.popEmptyDialog(SplashActivity.this, getString(R.string.app_name), "You have exhausted your 7 days trial period.").show();
+                if (Utils.isExpired("2018-08-30")) {
+                    Utils.popEmptyDialog(SplashActivity.this, getString(R.string.app_name), "You have exhausted your 30 days trial period.").show();
                 } else {
                     SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
                     if (pref.getString("LoginStatus", "").equals("login")) {

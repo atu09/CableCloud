@@ -8,11 +8,11 @@ package com.github.gcacace.signaturepad;
 
 public final class R {
     public static final class attr {
-        public static final int clearOnDoubleClick = 0x7f010163;
-        public static final int penColor = 0x7f010161;
-        public static final int penMaxWidth = 0x7f010160;
-        public static final int penMinWidth = 0x7f01015f;
-        public static final int velocityFilterWeight = 0x7f010162;
+        public static final int clearOnDoubleClick = 0x7f01019c;
+        public static final int penColor = 0x7f01019a;
+        public static final int penMaxWidth = 0x7f010199;
+        public static final int penMinWidth = 0x7f010198;
+        public static final int velocityFilterWeight = 0x7f01019b;
     }
     public static final class id {
         public static final int dataBinding = 0x7f110005;
@@ -21,7 +21,7 @@ public final class R {
         public static final int textWatcher = 0x7f110016;
     }
     public static final class styleable {
-        public static final int[] SignaturePad = { 0x7f01015f, 0x7f010160, 0x7f010161, 0x7f010162, 0x7f010163 };
+        public static final int[] SignaturePad = { 0x7f010198, 0x7f010199, 0x7f01019a, 0x7f01019b, 0x7f01019c };
         public static final int SignaturePad_penMinWidth = 0;
         public static final int SignaturePad_penMaxWidth = 1;
         public static final int SignaturePad_penColor = 2;

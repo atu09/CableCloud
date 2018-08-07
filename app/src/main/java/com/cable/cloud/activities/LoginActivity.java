@@ -6,11 +6,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -22,10 +21,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cable.cloud.R;
 import com.cable.cloud.helpers.ConnectivityReceiver;
 import com.cable.cloud.helpers.DBHelper;
 import com.cable.cloud.helpers.MyApplication;
-import com.cable.cloud.R;
 import com.cable.cloud.helpers.Utils;
 
 import org.apache.http.HttpEntity;
@@ -41,7 +40,6 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-
 public class LoginActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     private static final String LOGIN_PREF = "LoginPref";
@@ -51,15 +49,18 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
     Button btnLogin;
 
     String token = "-";
+
     //RippleBackground loader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_login_revised);
+        setContentView(R.layout.activity_login);
+
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -70,24 +71,14 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         etUsername = (EditText) findViewById(R.id.editText);
         etPassword = (EditText) findViewById(R.id.edtPassword);
         etOpCode = (EditText) findViewById(R.id.OpCode);
-        //loader = (RippleBackground) findViewById(R.id.loader);
         btnLogin = (Button) findViewById(R.id.btnlogin);
+        //loader = (RippleBackground) findViewById(R.id.loader);
 
 /*
         etUsername.setText("demo");
         etPassword.setText("demo123");
         etOpCode.setText("demo");
 */
-
-    }
-
-    @Override
-    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        init();
-    }
-
-    private void init() {
 
         etOpCode.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -125,6 +116,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
     @Override
     protected void onResume() {
         super.onResume();
+
         MyApplication.getInstance().setConnectivityListener(this);
 
 /*
@@ -145,18 +137,6 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
 */
     }
 
-    @Override
-    public void onNetworkConnectionChanged(boolean isConnected) {
-        if (!isConnected) {
-            startActivity(new Intent(getApplicationContext(), NoConnectionActivity.class));
-        }
-    }
-
-    @Override
-    public void onBackPressed() {
-        finishAffinity();
-    }
-
     public boolean ValidateEditText(String error, EditText ed) {
         if (ed.getText().toString().isEmpty() || ed.getText().toString().length() == 0) {
             ed.setError(error);
@@ -164,6 +144,11 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         } else {
             return true;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
     }
 
     public JSONObject makeHttpRequest(String url) {
@@ -202,6 +187,13 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         }
 
         return jsonObject;
+    }
+
+    @Override
+    public void onNetworkConnectionChanged(boolean isConnected) {
+        if (!isConnected) {
+            startActivity(new Intent(getApplicationContext(), NoConnectionActivity.class));
+        }
     }
 
     @SuppressLint("StaticFieldLeak")
@@ -331,7 +323,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
                     editor.putString("isOutstandingEditable", outstandingEditable);
                     editor.apply();
 
-                    new JSONEntityAsync().execute();
+                    new LoginActivity.JSONEntityAsync().execute();
 
                 }
             } catch (Exception e) {
@@ -415,4 +407,5 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         }
 
     }
+    
 }

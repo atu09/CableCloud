@@ -387,7 +387,6 @@ public class DashBoardActivity extends AppCompatActivity implements OnCountAssig
         }
     }
 
-
     public void loadOfflineEntities() {
 
         entityNameList.clear();
