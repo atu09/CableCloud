@@ -325,7 +325,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="4dp"
                                 android:gravity="center_vertical"
-                                android:text="Current Month Bill"
+                                android:text="Current Month Pending"
                                 android:textSize="14sp" />
 
                             <TextView
