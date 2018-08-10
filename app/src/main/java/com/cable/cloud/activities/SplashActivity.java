@@ -49,17 +49,19 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
 
+/*
                 if (Utils.isExpired("2018-08-30")) {
                     Utils.popEmptyDialog(SplashActivity.this, getString(R.string.app_name), "You have exhausted your 30 days trial period.").show();
                 } else {
-                    SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-                    if (pref.getString("LoginStatus", "").equals("login")) {
-                        startActivity(new Intent(getApplicationContext(), DashBoardActivity.class));
-                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                    } else {
-                        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                        overridePendingTransition(R.anim.slide_up, R.anim.slide_down);
-                    }
+*/
+                SharedPreferences pref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+                if (pref.getString("LoginStatus", "").equals("login")) {
+                    startActivity(new Intent(getApplicationContext(), DashBoardActivity.class));
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                } else {
+                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                    overridePendingTransition(R.anim.slide_up, R.anim.slide_down);
+//                    }
                 }
             }
 

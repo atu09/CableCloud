@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity implements ConnectivityRece
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
 
         token = pref.getString("refresh_token", "demo");
-        etUsername = (EditText) findViewById(R.id.editText);
+        etUsername = (EditText) findViewById(R.id.edtUserName);
         etPassword = (EditText) findViewById(R.id.edtPassword);
         etOpCode = (EditText) findViewById(R.id.OpCode);
         btnLogin = (Button) findViewById(R.id.btnlogin);

@@ -18,7 +18,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            app:cardBackgroundColor="@color/white"
+            app:cardBackgroundColor="@android:color/white"
             app:cardCornerRadius="50dp"
             app:cardElevation="6dp">
 
@@ -66,7 +66,6 @@
         -->
 
 
-
     </FrameLayout>
 
     <android.support.v7.widget.CardView
@@ -76,82 +75,87 @@
         android:layout_gravity="bottom"
         android:layout_margin="@dimen/dimen_16_dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp">
+            android:orientation="vertical"
+            android:padding="25dp">
 
             <TextView
                 android:id="@+id/labelLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
                 android:text="Login"
                 android:textColor="@color/colorBlack"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/hintUserName"
+            <EditText
+                android:id="@+id/edtUserName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/labelLogin"
-                android:layout_marginTop="@dimen/dimen_8_dp">
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:hint="Username"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:lines="1"
+                android:padding="8dp"
+                android:textColorHint="@color/grey_400"
+                android:textSize="@dimen/textsize_14.0" />
 
-                <EditText
-                    android:id="@+id/editText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Username"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:lines="1" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@color/grey_400" />
 
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/hintPassword"
+            <EditText
+                android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/hintUserName"
-                android:layout_marginTop="@dimen/dimen_8_dp">
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:hint="Password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:padding="8dp"
+                android:textColorHint="@color/grey_400"
+                android:textSize="@dimen/textsize_14.0" />
 
-                <EditText
-                    android:id="@+id/edtPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableTint="@color/colorPrimaryDark"
-                    android:hint="Password"
-                    android:imeOptions="actionNext"
-                    android:inputType="textPassword"
-                    android:lines="1" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@color/grey_400" />
 
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/hintOPCode"
+            <EditText
+                android:id="@+id/OpCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/hintPassword"
-                android:layout_marginTop="@dimen/dimen_8_dp">
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:hint="OP Code"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:lines="1"
+                android:padding="8dp"
+                android:textColorHint="@color/grey_400"
+                android:textSize="@dimen/textsize_14.0" />
 
-                <EditText
-                    android:id="@+id/OpCode"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="OP Code"
-                    android:imeOptions="actionDone"
-                    android:inputType="text"
-                    android:lines="1" />
-
-            </android.support.design.widget.TextInputLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@color/grey_400" />
 
             <Button
                 android:id="@+id/btnlogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/hintOPCode"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="25dp"
                 android:background="@drawable/rounded_corners_button"
                 android:bottomRightRadius="10dp"
                 android:text="Go !"
@@ -159,7 +163,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </android.support.v7.widget.CardView>
 
