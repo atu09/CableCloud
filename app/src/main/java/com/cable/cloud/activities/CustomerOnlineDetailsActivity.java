@@ -113,7 +113,7 @@ public class CustomerOnlineDetailsActivity extends AppCompatActivity {
 
     String siteurl, cid, uid, acno, title, URL, URL1, custid, from, receiptDate = "-", isOsEditable;
 
-    TextView tvacno, tvmqno, tvlastbill, tvlastpayment, tvcurrentbill, tvpaydate, tvtotaloa, txtarea, txtsmartcard;
+    TextView tvacno, tvmqno, tvlastbill, tvlastpayment, tvcurrentbill, tvpaydate, tvtotaloa, txtarea, txtsmartcard, tvamount;
 
 
     String billid, accno, paymode = "1", cheqdate = "", cheqno = "", bankname = "", notes;
@@ -142,6 +142,8 @@ public class CustomerOnlineDetailsActivity extends AppCompatActivity {
     private TextInputLayout labelEditText8;
     private TextInputLayout labelEditText6;
     private TextInputLayout labelEditText7;
+
+    LinearLayout layoutAmount;
 
 
     @Override
@@ -990,6 +992,7 @@ public class CustomerOnlineDetailsActivity extends AppCompatActivity {
         tvmqno = (TextView) findViewById(R.id.textView36);
         txtsmartcard = (TextView) findViewById(R.id.textView10);
 
+        tvamount = (TextView) findViewById(R.id.textView27);
         tvlastbill = (TextView) findViewById(R.id.textView43);
         tvlastpayment = (TextView) findViewById(R.id.textView45);
         tvcurrentbill = (TextView) findViewById(R.id.textView47);
@@ -1012,6 +1015,20 @@ public class CustomerOnlineDetailsActivity extends AppCompatActivity {
         cvpackage = (CardView) findViewById(R.id.card_viewpackage);
 
         fabcomment = (FloatingActionButton) findViewById(R.id.fabcomment);
+
+        layoutAmount = (LinearLayout) findViewById(R.id.layoutAmount);
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!edamount.isFocused()){
+                    edamount.requestFocus();
+                }
+                showSoftKeyboard(edamount);
+            }
+        };
+        layoutAmount.setOnClickListener(listener);
+        tvamount.setOnClickListener(listener);
 
     }
 
