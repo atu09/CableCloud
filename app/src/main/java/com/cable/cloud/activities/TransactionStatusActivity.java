@@ -3,6 +3,7 @@ package com.cable.cloud.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -55,27 +56,39 @@ public class TransactionStatusActivity extends AppCompatActivity {
         imgstatus = (ImageView) findViewById(R.id.imageView7);
 
         if (from.equals("complain")) {
-            txtnextpament.setText("NEXT COMPLAINT");
-            txtstatus.setText("SUCCESSFULLY DONE");
+            txtnextpament.setText("Next Complaint");
+            txtstatus.setText("Successfully Done");
+
+            imgstatus.setImageResource(R.drawable.ic_success);
+            imgstatus.setBackgroundResource(R.drawable.circle_pay);
             txtoutsatnding.setVisibility(View.GONE);
             txtrs.setVisibility(View.GONE);
 
         } else {
-
+            txtnextpament.setText("Next Payment");
+            txtstatus.setText("Payment Received");
             txtrs.setText(str + format.format(Double.parseDouble(oa)));
+
+            imgstatus.setImageResource(R.drawable.ic_wallet);
+            imgstatus.setBackgroundColor(Color.TRANSPARENT);
+            txtoutsatnding.setVisibility(View.VISIBLE);
+            txtrs.setVisibility(View.VISIBLE);
         }
+        imgstatus.setColorFilter(Color.WHITE);
 
 
-        Animation anim1 = new AlphaAnimation(0.7f, 1.0f);
+        Animation anim1 = new AlphaAnimation(1.0f, 0.6f);
         anim1.setDuration(1000);
         anim1.setRepeatMode(Animation.REVERSE);
         anim1.setRepeatCount(Animation.INFINITE);
         imgstatus.setAnimation(anim1);
 
 
-        final Animation animation2 = new AlphaAnimation(1.0f, 0.5f);
-        animation2.setDuration(1000);
-        animation2.setStartOffset(2000);
+        Animation anim2 = new AlphaAnimation(1.0f, 0.6f);
+        anim2.setDuration(1000);
+        anim2.setRepeatMode(Animation.REVERSE);
+        anim2.setRepeatCount(Animation.INFINITE);
+        txtstatus.setAnimation(anim2);
 
 
         txthome.setOnClickListener(new View.OnClickListener() {

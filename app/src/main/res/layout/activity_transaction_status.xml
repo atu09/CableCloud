@@ -14,29 +14,32 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/successfuldone" />
+            android:scaleType="fitCenter"
+            android:tint="@color/white"
+            android:background="@drawable/circle_pay"
+            android:src="@drawable/ic_success" />
 
         <TextView
             android:id="@+id/textView51"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:text="PAYMENT SUCCESSFULL"
+            android:layout_marginTop="10dp"
+            android:text="Payment Received"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/white"
-            android:textSize="@dimen/textsize_20" />
+            android:textStyle="italic"
+            android:textSize="@dimen/textsize_30" />
 
         <TextView
             android:id="@+id/textView52"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
             android:text="Outstanding Amount"
             android:textAppearance="?android:attr/textAppearanceLarge"
